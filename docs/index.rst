@@ -13,6 +13,7 @@ Contents:
    :maxdepth: 1
 
    intro.rst
+   ideas.rst
    server-inrichting.rst
    contact.rst
    links.rst

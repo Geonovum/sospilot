@@ -5,6 +5,12 @@ Links
 
 Below links relevant to the project.
 
+Education
+---------
+
+* Geonovum Course Sensor_Web_Enablement (SWE) - http://geostandards.geonovum.nl/index.php?title=5_Sensor_Web_Enablement
+* OGC SWE Architecture: http://docs.opengeospatial.org/wp/07-165r1/
+* Wikipedia Sensor Web http://en.wikipedia.org/wiki/Sensor_web
 
 Data
 ----
