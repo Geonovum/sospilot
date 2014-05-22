@@ -19,6 +19,7 @@ Support Technologie
 #. code en doc: GitHub: account Geonovum?, in ieder geval waar we beiden direct op kunnen committen ipv via PRs?  *DONE*
 #. documentatie: Sphynx+ReadTheDocs, gebruik bij bijv Stetl en OGG: http://stetl.org, werkt via GH Post Commit, dus bij iedere commit is docu weer synced en online en er is export naar PDF *DONE*
 #. ETL: Python, GDAL, SQL, evt Stetl?
+#. website: sensors.geonovum.nl, simpele Bootstrap site, auto deploy via: https://gist.github.com/oodavid/1809044
 
 Inrichten Linux Server
 ----------------------
