@@ -44,7 +44,7 @@ Omdat de meeste toepassingen gebruik maken van Apache Virtual Hosts met een pref
 bijvoorbeeld `inspire.sensors <http://inspire.sensors>`_ is hier ook een conventie op zijn plaats:
 
  * ``/etc/apache2/sites-available/sensors.geonovum.nl.conf`` bevat de Apache configuratie
- * ``/var/www/sensors.geonovum.nl.conf`` bevat de website content (HTML etc)
+ * ``/var/www/sensors.geonovum.nl`` bevat de website content (HTML etc)
 
 Systeem
 -------
@@ -179,7 +179,7 @@ Website: ``/var/www/sensors.geonovum.nl`` ::
     $ mkdir /var/www/sensors.geonovum.nl/webapps  java servers (.war deploy)
 
 
-De config in ``/etc/apache2/sites-available/sensors.geonovum.nl.conf`` ::
+De uiteindelijke config in ``/etc/apache2/sites-available/sensors.geonovum.nl.conf`` ::
 
     <VirtualHost sensors:80>
         ServerName sensors.geonovum.nl
@@ -196,7 +196,7 @@ De config in ``/etc/apache2/sites-available/sensors.geonovum.nl.conf`` ::
 
         ServerAdmin just@justobjects.nl
 
-        DirectoryIndex index.html index.jsp
+        DirectoryIndex index.html index.php index.jsp
 
         Alias /sadm "/var/www/sensors.geonovum.nl/sadm"
        <Directory "/var/www/sensors.geonovum.nl/sadm">
@@ -211,6 +211,21 @@ De config in ``/etc/apache2/sites-available/sensors.geonovum.nl.conf`` ::
             Allow from all
 
         </Directory>
+
+        <Location /tomcat/examples>
+          ProxyPass ajp://sensors:8009/examples
+          ProxyPassReverse http://sensors/examples
+        </Location>
+
+        <Location /gs>
+          ProxyPass ajp://sensors:8009/gs
+          ProxyPassReverse http://sensors/gs
+        </Location>
+
+        <Location /sos>
+          ProxyPass ajp://sensors:8009/sos
+          ProxyPassReverse http://sensors/sos
+        </Location>
 
         LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" combined
         CustomLog /var/log/apache2/sensors.geonovum.nl-access.log combined
@@ -388,15 +403,6 @@ Toevoegen in ``/etc/apache2/sites-available/sensors.geonovum.nl.conf`` ::
 
 Logfiles volgen van Tomcat: ``tail -f /var/log/tomcat7/catalina.out``.
 
-XSLT Processor
---------------
-
-Zie `<http://en.wikipedia.org/wiki/XSLT>`_. *XSLT (XSL Transformations) is a declarative,
-XML-based language used for the transformation of XML documents into other XML documents.*
-
-Installatie van XSLT processor voor commandline. o.a. gebruikt voor INSPIRE GML transformaties. ::
-
-  apt-get install xsltproc
 
 Server Software - Geo
 =====================
@@ -552,15 +558,6 @@ Bijv.  ::
 	 SRID=28992;POINT(118514.126 476795.241 0)
 
 
-ImageMagick
------------
-
-Handig voor alllerlei image conversies, oa in gebruik bij NLExtract en MapFish Print. ::
-
-    apt-get install imagemagick
-
-    # 8:6.7.7.10-5ubuntu3
-
 GeoServer
 ---------
 
@@ -651,6 +648,25 @@ Verdere gegevens:
 
 Installatie - ETL Tools
 =======================
+
+ImageMagick
+-----------
+
+Handig voor alllerlei image conversies, oa in gebruik bij NLExtract en MapFish Print. ::
+
+    apt-get install imagemagick
+
+    # 8:6.7.7.10-5ubuntu3
+
+XSLT Processor
+--------------
+
+Zie `<http://en.wikipedia.org/wiki/XSLT>`_. *XSLT (XSL Transformations) is a declarative,
+XML-based language used for the transformation of XML documents into other XML documents.*
+
+Installatie van XSLT processor voor commandline. o.a. gebruikt voor INSPIRE GML transformaties. ::
+
+  apt-get install xsltproc
 
 GDAL/OGR
 --------
@@ -784,7 +800,7 @@ Tot hier gekomen op 25.5.2014
 TODO
 ====
 
-Onderstaande alleen indien noodzakelijk.
+Onderstaande alleen installeren indien nodig.
 
 Sphinx - Documentatie
 ---------------------
