@@ -120,6 +120,38 @@ Er draait elke nacht (om 01:41 , zie crontab -l) een backup   ::
 Config onder ``/etc/cloudvps/``, maar edit deze via ``/root/cloudvps-backup-installer.sh``.
 Logfiles staan onder: ``/var/log/backups/``.
 
+Disk Gebruik
+------------
+
+Op 25.5.14, na install alle support tools en server software, zonder data. ::
+
+    $ df -h
+    Filesystem      Size  Used Avail Use% Mounted on
+    /dev/xvda1      237G  4.5G  220G   2% /
+    none            4.0K     0  4.0K   0% /sys/fs/cgroup
+    udev            3.9G  4.0K  3.9G   1% /dev
+    tmpfs           788M  204K  787M   1% /run
+    none            5.0M     0  5.0M   0% /run/lock
+    none            3.9G     0  3.9G   0% /run/shm
+    none            100M     0  100M   0% /run/user
+
+Java Monitor
+------------
+
+Zie `<http://java-monitor.com>`_. Hiermee wordt voortdurend de status/gezondheid
+van de Tomcat Java server gemonitored. Indien er een probleem is wordt email
+gestuurd. ::
+
+  # download probe
+  # unpack in /opt/java-monitor.com
+  # drop war in /var/www/sensors.geonovum.nl/webapps
+
+
+.. figure:: _static/java-monitor.jpg
+   :align: center
+
+   *Figure 1 - Java Monitor*
+
 Server Software - Algemeen
 ==========================
 
@@ -617,12 +649,29 @@ Verdere gegevens:
 
   * Logfile: /var/lib/tomcat7/logs/52n-sos-webapp.log
 
+Installatie - ETL Tools
+=======================
 
-Tot hier gekomen op 20.5.2014
-=============================
+GDAL/OGR
+--------
 
-TODO
-====
+Volgens de website `<www.gdal.org>`_.
+
+*GDAL is a translator library for raster geospatial data
+formats that is released under an X/MIT style Open Source license by the
+Open Source Geospatial Foundation. The related OGR library (which lives within the GDAL source tree)
+provides a similar capability for simple features vector data.*
+
+Installatie is simpel via APT. ::
+
+    $ apt-get install gdal-bin python-gdal
+
+    0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+    Inst gdal-bin (1.10.1+dfsg-5ubuntu1 Ubuntu:14.04/trusty [amd64])
+    Conf gdal-bin (1.10.1+dfsg-5ubuntu1 Ubuntu:14.04/trusty [amd64])
+    Setting up python-numpy (1:1.8.1-1ubuntu1) ...
+    Setting up python-gdal (1.10.1+dfsg-5ubuntu1) ...
+
 
 Stetl - Streaming ETL
 ---------------------
@@ -633,40 +682,50 @@ Eerst alle dependencies!  ::
 
 	apt-get install python-pip
 	apt-get install python-lxml
-	apt-get install postgresql-server-dev-9.1
+	apt-get install postgresql-server-dev-9.3
 	apt-get install python-gdal libgdal-dev
 	apt-get install python-psycopg2
-	pip install stetl
+
+Normaal doen we ``pip install stetl`` maar nu even install uit Git vanwege
+te verwachten updates.Install vanuit GitHub versie onder ``/opt/stetl/git``. ::
+
+    $ mkdir /opt/stetl
+    $ cd /opt/stetl
+    $ git clone https://github.com/justb4/stetl.git git
+    $ cd git
+    $ python setup.py install
 
     $ stetl -h
-    # 2013-12-12 16:42:45,817 util INFO running with lxml.etree, good!
-    # 2013-12-12 16:42:45,818 util INFO running with cStringIO, fabulous!
-    # 2013-12-12 16:42:45,830 main INFO Stetl version = 1.0.4
-    # usage: stetl [-h] -c  CONFIG_FILE [-s  CONFIG_SECTION] [-a  CONFIG_ARGS]
-
-    # Kopie van oude sensors server. GitHub versie onder ``/opt/stetl/git``.
-
-Testen. ::
-
-	cd /opt/stetl/git/examples/basics
-	./runall.sh
-	# vreemd lxml foutje (te fixen...)
-	# verder werkt 't
-
-NLExtract - NL ETL
-------------------
-
-Kopie van oude sensors server. GitHub versie  onder ``/opt/nlextract/git``.
-
-Werkt, bijv ::
-
-    git clone https://github.com/opengeogroep/NLExtract.git git
-    cd /opt/nlextract/git/bag/test
-    ./runtests.sh
+    # 2014-05-25 13:43:40,930 util INFO running with lxml.etree, good!
+    # 2014-05-25 13:43:40,931 util INFO running with cStringIO, fabulous!
+    # 2014-05-25 13:43:40,936 main INFO Stetl version = 1.0.5
 
 
-Installatie - Ontwikkel
-=======================
+Installatie Testen. ::
+
+    $ which stetl
+    # /usr/local/bin/stetl
+
+    cd /opt/stetl/git/examples/basics
+    ./runall.sh
+    # OK!
+
+Installatie - Project Software
+==============================
+
+Software en documentatie voor project zit in Geonovum GitHub: https://github.com/Geonovum/sospilot
+
+We installeren deze onder ``/opt/geonovum/sospilot`` ::
+
+    cd /opt/geonovum/sospilot
+    git clone https://github.com/Geonovum/sospilot.git git
+
+NB alle documentatie (Sphinx) wordt automatisch gepubliceerd naar ReadTheDocs.org:
+http://sospilot.readthedocs.org via een GitHub Post-commit hook.
+
+
+Installatie - Ontwikkeltools
+============================
 
 Hieronder de installaties voor de verschillende tools mbt software ontwikkelen.
 
@@ -687,6 +746,8 @@ Installatie::
 
 Maven - Lifecycle Tool
 ----------------------
+
+*NOG EVEN NIET: alleen indien nodig, bijv SOS server custom build.*
 
 Volgens de `Maven website <http://maven.apache.org/>`_.
 
@@ -717,6 +778,14 @@ apt-get install git-core
 Zie https://help.ubuntu.com/13.10/serverguide/git.html
 
 
+Tot hier gekomen op 25.5.2014
+=============================
+
+TODO
+====
+
+Onderstaande alleen indien noodzakelijk.
+
 Sphinx - Documentatie
 ---------------------
 
@@ -737,34 +806,10 @@ Tutorial `<http://matplotlib.sourceforge.net/sampledoc>`_. PDF generation instal
 
   apt-get  install texlive-full
 
-Aardig Vol
-----------
-
-Met deze basis installs zitten we al op 64%, dus de sensors server wel meer schijf geven. ::
-
-    $ df -h
-    Filesystem      Size  Used Avail Use% Mounted on
-    /dev/vda3        14G  8.4G  4.8G  64% /
-    none            4.0K     0  4.0K   0% /sys/fs/cgroup
-    udev            488M  4.0K  488M   1% /dev
-    tmpfs           100M  392K  100M   1% /run
-    none            5.0M     0  5.0M   0% /run/lock
-    none            498M     0  498M   0% /run/shm
-    none            100M     0  100M   0% /run/user
-    /dev/vda1       844M   48M  754M   6% /boot
 
 
 Installatie - Beheer
 ====================
-
-Nieuwe ontwikkelaar toevoegen
------------------------------
-
-Dit heeft betrekking wanneer we een ontwikkelaar toegang willen geven tot de ontwikkelstraat.
-Voorbeeld hier voor Bart. User "bart" aan Linux toevoegen ::
-
-  $ adduser bart
-  (vul alleen wachtwoord in)
 
 IPTables Firewall
 -----------------
@@ -978,16 +1023,6 @@ Om deblokkeren, zie. Data files staan onder `/var/lib`:
 http://www.cyberciti.biz/faq/linux-unix-delete-remove-ip-address-that-denyhosts-blocked/
 
 
-Java Monitor
-------------
-
-Zie `<http://java-monitor.com>`_. Hiermee wordt voortdurend de status/gezondheid
-van de Tomcat Java server gemonitored. Indien er een probleem is wordt email
-gestuurs. ::
-
-  # download probe to /opt/download
-  # unpack in /opt/java-monitor
-  # drop war in /var/www/sensors/webapps
 
 
 Optimaliseren van Java
@@ -1075,56 +1110,6 @@ Commands ::
     fc-cache -f -v
 
 *All that remains is to restart any Java processes you have running, and the new fonts should be available.*
-
-GDAL/OGR
---------
-
-Volgens de website `<www.gdal.org>`_.
-
-*GDAL s a translator library for raster geospatial data
-formats that is released under an X/MIT style Open Source license by the
-Open Source Geospatial Foundation. The related OGR library (which lives within the GDAL source tree)
-provides a similar capability for simple features vector data.*
-
-Installatie is simpel via APT. ::
-
-  apt-get install gdal-bin
-  # Conf libgeos-3.3.8 (3.3.8-2~saucy1 ubuntugis-unstable:13.10/saucy [amd64])
-  # Conf gdal-bin (1.9.0-3.1ubuntu4 Ubuntu:13.10/saucy [amd64])
-  # Conf proj-bin (4.8.0-4~saucy2 ubuntugis-unstable:13.10/saucy [amd64])
-
-3.3.14 GDAL tbv GeoPackage ::
-
-    cd /opt/gdal
-    git clone https://github.com/OSGeo/gdal.git git
-    cd git
-    ./configure
-    make
-    make install
-
-    installs in /usr/local/bin
-
-    problem
-    - libxerces-c28 not found: apt-get install libxerces-c28
-
-    apt-get install sqlite3
-
-    sqlite3 output/gmlcities.gpkg
-    SQLite version 3.7.17 2013-05-20 00:56:22
-    Enter ".help" for instructions
-    Enter SQL statements terminated with a ";"
-    sqlite> .tables
-    City                   gpkg_geometry_columns
-    gpkg_contents          gpkg_spatial_ref_sys
-    sqlite> select * from City;
-    1|GP|Amsterdam
-    2|GP|Bonn
-    3|GP|Rome
-    sqlite> select * from gpkg_geometry_columns;
-    City|geom|POINT|4326|0|0
-    sqlite> select * from gpkg_contents;
-    City|features|City||2014-03-03T22:43:18.000Z|4.9|41.9|12.5|52.4|4326
-    sqlite>
 
 UMN MapServer
 -------------
