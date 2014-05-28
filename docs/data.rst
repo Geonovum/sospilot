@@ -123,7 +123,22 @@ tables.
 Need to tables: Stations and Metingen. This is a 1:1 transformation from the raw XML.
 Station id's are foreign keys in the Metingen table.
 
-Stations: station info is available from
+**Stations**
+
+Station info is available from Eionet as a CSV file. Coordinates are in EPSG:4258 (also used in INSPIRE).
+To create "clean" version of eionet RIVM stations understood by ogr2ogr:
+
+* remove excess quotes, e.g. """
+- replace in CSV header "Pos" with Y,X
+- replace space between coordinates with comma: e.g ,51.566389 4.932792, becomes ,51.566389,4.932792,
+
+Test first by uploading and viewing in a  geoviewer, for example in http://kadviewer.kademo.nl
+See result.
+
+.. figure:: _static/rivm-eionet-stations.jpg
+   :align: center
+
+   *Figure - RIVM Eionet Stations uploaded/viewed in Heron-based Viewer*
 
 ETL Step 3 - SOS ready Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
