@@ -64,7 +64,7 @@ ETL Step 1. - Harvester
 The RIVM data server provides measurements of the past month in a collection
 of XML files served by an Apache HTTP server. See figure below.
 
-.. figure:: _static/lml-raw-file-listing.jpg
+.. figure:: _static/lml-raw-file-listing-xml.jpg
    :align: center
 
    *Figure - Apache Server Raw File Listing*
@@ -72,13 +72,46 @@ of XML files served by an Apache HTTP server. See figure below.
 The LML Harvester will continuously read these XML files and store
 these in the DB as XML Blobs with their filename.
 
-.. figure:: _static/lml-raw-file-record.jpg
+.. figure:: _static/lml-raw-file-record-xml.jpg
    :align: center
 
    *Figure - Raw File Record Harvested into DB*
 
 This can be effected by a simple Stetl process activated every 30 mins via the linux
 ``cron`` service.
+
+Note: there are two data streams with AQ Data from RIVM: "XML" oriented and "SOS" oriented. We will use the "XML" oriented
+as the file format is simpler to process and less redundant with station info. The URL is
+http://test.lml.rivm.nl/xml, later to become http://lml.rivm.nl/xml.
+
+For completeness, the "SOS" oriented are identical
+in measurements, though not rounded, but that should be within error range:
+http://test.lml.rivm.nl/sos, later to become http://lml.rivm.nl/sos.
+
+There also seem to be differences, for example "SOS": ::
+
+    <ROW>
+        <OPST_OPDR_ORGA_CODE>RIVM</OPST_OPDR_ORGA_CODE>
+        <STAT_NUMMER>633</STAT_NUMMER>
+        <STAT_NAAM>Zegveld-Oude Meije</STAT_NAAM>
+        <MCLA_CODE>regio achtergr</MCLA_CODE>
+        <MWAA_WAARDE>-999</MWAA_WAARDE>
+        <MWAA_BEGINDATUMTIJD>20140527120000</MWAA_BEGINDATUMTIJD>
+        <MWAA_EINDDATUMTIJD>20140527130000</MWAA_EINDDATUMTIJD>
+    </ROW>
+
+vs "XML": ::
+
+    <meting>
+        <datum>27/05/2014</datum>
+        <tijd>13</tijd>
+        <station>633</station>
+        <component>CO</component>
+        <eenheid>ug/m3</eenheid>
+        <waarde>223</waarde>
+        <gevalideerd>0</gevalideerd>
+    </meting>
+
 
 
 ETL Step 2 - Raw Measurements
@@ -89,6 +122,8 @@ tables.
 
 Need to tables: Stations and Metingen. This is a 1:1 transformation from the raw XML.
 Station id's are foreign keys in the Metingen table.
+
+Stations: station info is available from
 
 ETL Step 3 - SOS ready Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
