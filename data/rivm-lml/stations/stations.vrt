@@ -1,0 +1,23 @@
+<!-- OGR VRT file to map eionet CSV station file to any target OGR data type (GML, PostGIS etc). -->
+<OGRVRTDataSource>
+    <OGRVRTLayer name="stations">
+        <SrcDataSource>stations.csv</SrcDataSource>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>EPSG:4326</LayerSRS>
+        <!--
+        Mapped from CSV header:
+        GMLID,LocalId,Namespace,Version,NatlStationCode,Name,Municipality,EUStationCode,ActivityBegin,ActivityEnd,Lat,Lon,SRSName,Altitude,AltitudeUnit,AreaClassification,BelongsTo -->
+        <Field name="local_id" src="LocalId" type="String" />
+        <Field name="natl_station_code" src="NatlStationCode" type="Integer" />
+        <Field name="eu_station_code" src="EUStationCode" type="String" />
+        <Field name="municipality" src="Municipality" type="String" />
+        <Field name="altitude" src="Altitude" type="Integer" />
+        <Field name="altitude_unit" src="AltitudeUnit" type="String" />
+        <Field name="area_classification" src="AreaClassification" type="String" />
+        <Field name="activity_begin" src="ActivityBegin" type="String" />
+        <Field name="activity_end" src="ActivityEnd" type="String" />
+        <Field name="version" src="Version" type="String" />
+        <Field name="belongs_to" src="BelongsTo" type="String" />
+        <GeometryField encoding="PointFromColumns" x="Lon" y="Lat"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>
