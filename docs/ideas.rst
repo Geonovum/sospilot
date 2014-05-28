@@ -83,7 +83,25 @@ OWS Client
 
 
 * WFS Filter Client met Download: voorbeeld: http://lib.heron-mc.org/heron/latest/examples/multisearchcenternl/ (“Build your own searches” optie)
-* TimeSlider (WMS-Time)  voorbeeld:  http://lib.heron-mc.org/heron/latest/examples/timeslider/ en http://www.eea.europa.eu/themes/air/interactive/pm10-interpolated-maps
+
+.. figure:: _static/heron-wfs-querybuilder.jpg
+   :align: center
+
+   *Figure - Heron WFS Query Builder*
+
+* TimeSlider (WMS-Time)  Heron voorbeeld:  http://lib.heron-mc.org/heron/latest/examples/timeslider
+
+.. figure:: _static/heron-timeslider-gasbevingen.jpg
+   :align: center
+
+   *Figure - Heron Timeslider in Gasbevingen Portaal*
+
+* EEA voorbeeld: http://www.eea.europa.eu/themes/air/interactive/pm10-interpolated-maps
+
+.. figure:: _static/eea-map-timeslider.jpg
+   :align: center
+
+   *Figure - eea.europa.eu pm10-interpolated-map*
 
 SOS Inrichting
 --------------
