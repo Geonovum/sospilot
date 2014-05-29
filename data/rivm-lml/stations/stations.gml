@@ -1455,7 +1455,7 @@
     <ogr:stations fid="stations.90">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.35527754,51.86610794</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00485</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>HGV</ogr:natl_station_code>
       <ogr:eu_station_code>NL00485</ogr:eu_station_code>
       <ogr:municipality></ogr:municipality>
       <ogr:altitude>1</ogr:altitude>
@@ -1471,7 +1471,7 @@
     <ogr:stations fid="stations.91">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.401389,51.921111</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00494</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>SDM</ogr:natl_station_code>
       <ogr:eu_station_code>NL00494</ogr:eu_station_code>
       <ogr:municipality></ogr:municipality>
       <ogr:altitude>3</ogr:altitude>
@@ -1487,7 +1487,7 @@
     <ogr:stations fid="stations.92">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.77083302,51.92805862</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00470</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>BAM</ogr:natl_station_code>
       <ogr:eu_station_code>NL00470</ogr:eu_station_code>
       <ogr:municipality>Bergambacht</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1503,7 +1503,7 @@
     <ogr:stations fid="stations.93">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.27750015,51.76305389</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00471</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>KSL</ogr:natl_station_code>
       <ogr:eu_station_code>NL00471</ogr:eu_station_code>
       <ogr:municipality>Korendijk</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1519,7 +1519,7 @@
     <ogr:stations fid="stations.94">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.85222197,52.16611099</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00472</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>NKP</ogr:natl_station_code>
       <ogr:eu_station_code>NL00472</ogr:eu_station_code>
       <ogr:municipality>Nieuwkoop</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1535,7 +1535,7 @@
     <ogr:stations fid="stations.95">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.07416677,51.89500046</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00473</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>ROC</ogr:natl_station_code>
       <ogr:eu_station_code>NL00473</ogr:eu_station_code>
       <ogr:municipality>Westvoorne</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1551,7 +1551,7 @@
     <ogr:stations fid="stations.96">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.084167,51.91694641</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00474</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>OST</ogr:natl_station_code>
       <ogr:eu_station_code>NL00474</ogr:eu_station_code>
       <ogr:municipality></ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1567,7 +1567,7 @@
     <ogr:stations fid="stations.97">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.34027815,51.9011116</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00475</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>VLE</ogr:natl_station_code>
       <ogr:eu_station_code>NL00475</ogr:eu_station_code>
       <ogr:municipality></ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1583,7 +1583,7 @@
     <ogr:stations fid="stations.98">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.31777763,51.9011116</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00476</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>VLT</ogr:natl_station_code>
       <ogr:eu_station_code>NL00476</ogr:eu_station_code>
       <ogr:municipality>Vlaardingen</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1599,7 +1599,7 @@
     <ogr:stations fid="stations.99">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.29638863,51.91111374</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00477</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>VLZ</ogr:natl_station_code>
       <ogr:eu_station_code>NL00477</ogr:eu_station_code>
       <ogr:municipality>Vlaardingen</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1615,7 +1615,7 @@
     <ogr:stations fid="stations.100">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.30472231,51.89889145</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00478</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>VLG</ogr:natl_station_code>
       <ogr:eu_station_code>NL00478</ogr:eu_station_code>
       <ogr:municipality>Vlaardingen</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1631,7 +1631,7 @@
     <ogr:stations fid="stations.101">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.14166641,51.97194672</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00479</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>HVH</ogr:natl_station_code>
       <ogr:eu_station_code>NL00479</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1647,7 +1647,7 @@
     <ogr:stations fid="stations.102">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.09000015,51.96111298</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00482</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>MRK</ogr:natl_station_code>
       <ogr:eu_station_code>NL00482</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1663,7 +1663,7 @@
     <ogr:stations fid="stations.103">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.31972218,51.86999893</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00483</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>A15</ogr:natl_station_code>
       <ogr:eu_station_code>NL00483</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1679,7 +1679,7 @@
     <ogr:stations fid="stations.104">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.3125,51.88888931</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00484</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>BOT</ogr:natl_station_code>
       <ogr:eu_station_code>NL00484</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1695,7 +1695,7 @@
     <ogr:stations fid="stations.105">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.38888884,51.88805771</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00486</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>PNS</ogr:natl_station_code>
       <ogr:eu_station_code>NL00486</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1711,7 +1711,7 @@
     <ogr:stations fid="stations.106">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.48111105,51.89111328</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00487</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>RPW</ogr:natl_station_code>
       <ogr:eu_station_code>NL00487</ogr:eu_station_code>
       <ogr:municipality></ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1727,7 +1727,7 @@
     <ogr:stations fid="stations.107">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.48749971,51.89389038</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00488</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>RZW</ogr:natl_station_code>
       <ogr:eu_station_code>NL00488</ogr:eu_station_code>
       <ogr:municipality></ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1743,7 +1743,7 @@
     <ogr:stations fid="stations.108">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.57472229,51.86888885</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00489</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>RID</ogr:natl_station_code>
       <ogr:eu_station_code>NL00489</ogr:eu_station_code>
       <ogr:municipality></ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1759,7 +1759,7 @@
     <ogr:stations fid="stations.109">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.51388884,51.91805649</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00490</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>RMB</ogr:natl_station_code>
       <ogr:eu_station_code>NL00490</ogr:eu_station_code>
       <ogr:municipality></ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1775,7 +1775,7 @@
     <ogr:stations fid="stations.110">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.43111086,51.93805695</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00491</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>RDO</ogr:natl_station_code>
       <ogr:eu_station_code>NL00491</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1791,7 +1791,7 @@
     <ogr:stations fid="stations.111">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.48000002,51.91389084</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00492</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>RDM</ogr:natl_station_code>
       <ogr:eu_station_code>NL00492</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1807,7 +1807,7 @@
     <ogr:stations fid="stations.112">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.46166658,51.92694473</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00493</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>RDS</ogr:natl_station_code>
       <ogr:eu_station_code>NL00493</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1823,7 +1823,7 @@
     <ogr:stations fid="stations.113">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.22777796,51.9319458</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00495</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>MSL</ogr:natl_station_code>
       <ogr:eu_station_code>NL00495</ogr:eu_station_code>
       <ogr:municipality>Maassluis</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>
@@ -1839,7 +1839,7 @@
     <ogr:stations fid="stations.114">
       <ogr:geometryProperty><gml:Point srsName="EPSG:4326"><gml:coordinates>4.12138891,51.97805786</gml:coordinates></gml:Point></ogr:geometryProperty>
       <ogr:local_id>STA-NL00496</ogr:local_id>
-      <ogr:natl_station_code>0</ogr:natl_station_code>
+      <ogr:natl_station_code>HHB</ogr:natl_station_code>
       <ogr:eu_station_code>NL00496</ogr:eu_station_code>
       <ogr:municipality>Rotterdam</ogr:municipality>
       <ogr:altitude>0</ogr:altitude>

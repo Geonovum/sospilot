@@ -8,7 +8,7 @@
         Mapped from CSV header:
         GMLID,LocalId,Namespace,Version,NatlStationCode,Name,Municipality,EUStationCode,ActivityBegin,ActivityEnd,Lat,Lon,SRSName,Altitude,AltitudeUnit,AreaClassification,BelongsTo -->
         <Field name="local_id" src="LocalId" type="String" />
-        <Field name="natl_station_code" src="NatlStationCode" type="Integer" />
+        <Field name="natl_station_code" src="NatlStationCode" type="String" />
         <Field name="eu_station_code" src="EUStationCode" type="String" />
         <Field name="municipality" src="Municipality" type="String" />
         <Field name="altitude" src="Altitude" type="Integer" />

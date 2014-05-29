@@ -14,20 +14,29 @@ log = Util.get_log("LmlApacheDirInput")
 
 class LmlApacheDirInput(ApacheDirInput):
     """
-    RIVM LML version for ApacheDirInput: check for each file is already in DB.
+    RIVM LML version for ApacheDirInput: adds check for each file if it is already in DB.
     """
     def __init__(self, configdict, section, produces=FORMAT.record):
         ApacheDirInput.__init__(self, configdict, section, produces)
         self.query = self.cfg.get('query')
         self.db = None
 
+    def init(self):
+        # Connect only once to DB
+        log.info('Init: connect to DB')
+        self.db = PostGIS(self.cfg.get_dict())
+        self.db.connect()
+
+        # Let superclass read file list from Apache URL
+        ApacheDirInput.init(self)
+
+    def exit(self):
+        # Disconnect from DB when done
+        log.info('Exit: disconnect from DB')
+        self.db.disconnect()
+
     def no_more_files(self):
-        done = self.file_index == len(self.file_list) - 1
-
-        if done is True and self.db is not None:
-            self.db.disconnect()
-
-        return done
+        return self.file_index == len(self.file_list) - 1
 
     def filter_file(self, file_name):
         """
@@ -38,12 +47,7 @@ class LmlApacheDirInput(ApacheDirInput):
         if file_name is None:
             return None
 
-        # Only connect once to DB
-        if self.db is None:
-            self.db = PostGIS(self.cfg.get_dict())
-            self.db.connect()
-
-        # Create and execure SELECT query for file_name
+        # Populate and execute SELECT query for file_name
         query = self.query % file_name
         rowcount = self.db.execute(query)
         if rowcount > 0:

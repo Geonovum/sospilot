@@ -24,8 +24,7 @@
         </xs:element>
         <xs:element name="natl_station_code" nillable="true" minOccurs="0" maxOccurs="1">
           <xs:simpleType>
-            <xs:restriction base="xs:integer">
-              <xs:totalDigits value="16"/>
+            <xs:restriction base="xs:string">
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
