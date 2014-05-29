@@ -3,25 +3,25 @@
  <body>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01483</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>36</waarde>
+   <waarde>35</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01485</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>29</waarde>
+   <waarde>28</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01487</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -30,7 +30,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01488</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -39,16 +39,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01489</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>23</waarde>
+   <waarde>22</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01491</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -57,7 +57,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01493</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -66,7 +66,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01494</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -75,16 +75,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01495</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>24</waarde>
+   <waarde>23</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01496</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -93,34 +93,34 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49007</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>22</waarde>
+   <waarde>23</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49012</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>15</waarde>
+   <waarde>16</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49014</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>13</waarde>
+   <waarde>14</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49016</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -129,16 +129,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49017</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>13</waarde>
+   <waarde>14</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49701</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -147,7 +147,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49703</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -156,25 +156,25 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49704</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>15</waarde>
+   <waarde>16</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>547</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>13</waarde>
+   <waarde>14</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>549</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -183,62 +183,8 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>247</station>
-   <component>PM10</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>243</station>
-   <component>PM10</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>24</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>244</station>
-   <component>PM10</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>20</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>246</station>
-   <component>PM10</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>27</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49546</station>
-   <component>PM10</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>10</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49551</station>
-   <component>PM10</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>16</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49553</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
    <waarde>12</waarde>
@@ -246,16 +192,70 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49556</station>
+   <tijd>15</tijd>
+   <station>243</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>16</waarde>
+   <waarde>23</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>244</station>
+   <component>PM10</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>19</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>246</station>
+   <component>PM10</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>25</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49546</station>
+   <component>PM10</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>11</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49551</station>
+   <component>PM10</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>17</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49553</station>
+   <component>PM10</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>13</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49556</station>
+   <component>PM10</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>17</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>NL49561</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -264,7 +264,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49564</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -273,34 +273,34 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49565</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>12</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49570</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>8</waarde>
+   <waarde>9</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49573</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>20</waarde>
+   <waarde>19</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>319</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -309,7 +309,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>131</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -318,25 +318,25 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>133</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>21</waarde>
+   <waarde>22</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>136</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>21</waarde>
+   <waarde>22</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>138</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -345,7 +345,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>230</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -354,16 +354,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>235</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>28</waarde>
+   <waarde>24</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>236</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -372,34 +372,34 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>237</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>240</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>34</waarde>
+   <waarde>32</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>241</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>20</waarde>
+   <waarde>17</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>318</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -408,7 +408,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>404</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -417,52 +417,52 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>418</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
+   <waarde>12</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>433</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>437</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>25</waarde>
+   <waarde>20</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>442</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>15</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>444</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>16</waarde>
+   <waarde>17</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>445</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -471,7 +471,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>446</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -480,16 +480,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>447</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>19</waarde>
+   <waarde>18</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>537</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -498,7 +498,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>538</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -507,7 +507,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>545</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -516,16 +516,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>631</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>633</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -534,26 +534,8 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>636</station>
-   <component>PM10</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>15</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>639</station>
-   <component>PM10</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>15</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>641</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
    <waarde>13</waarde>
@@ -561,16 +543,34 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>644</station>
+   <tijd>15</tijd>
+   <station>639</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>16</waarde>
+   <waarde>14</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>641</station>
+   <component>PM10</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>12</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>644</station>
+   <component>PM10</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>15</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>722</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -579,16 +579,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>738</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>741</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -597,7 +597,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>807</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -606,16 +606,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>818</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>13</waarde>
+   <waarde>15</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>918</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
@@ -624,152 +624,62 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>929</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>12</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>934</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>937</station>
    <component>PM10</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>15</waarde>
+   <waarde>16</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01483</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>45</waarde>
+   <waarde>53</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01485</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>62</waarde>
+   <waarde>60</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01486</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>47</waarde>
+   <waarde>56</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01487</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>102</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01488</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>46</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01489</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>89</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01491</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>78</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01493</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>82</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01494</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>39</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01495</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>33</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01496</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>15</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49002</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>34</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49003</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>9</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49007</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
    <waarde>110</waarde>
@@ -777,16 +687,106 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49012</station>
+   <tijd>15</tijd>
+   <station>NL01488</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>27</waarde>
+   <waarde>43</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>NL01489</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>67</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01491</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>74</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01493</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>82</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01494</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>45</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01495</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>28</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01496</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>10</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49002</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>111</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49003</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>15</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49007</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>136</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49012</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>63</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>NL49014</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
@@ -795,152 +795,17 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49017</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>73</waarde>
+   <waarde>46</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49019</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>25</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49020</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>40</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49021</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>11</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49022</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>16</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49701</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>12</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49704</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>9</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>547</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>33</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>549</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>13</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>247</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>11</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>246</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>29</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49546</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>11</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49551</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>25</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49553</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>11</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49561</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>32</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49564</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>25</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49565</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
    <waarde>37</waarde>
@@ -948,8 +813,26 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>107</station>
+   <tijd>15</tijd>
+   <station>NL49020</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>79</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49021</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>13</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49022</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
    <waarde>23</waarde>
@@ -957,35 +840,8 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>131</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>22</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>133</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>136</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>33</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>138</station>
+   <tijd>15</tijd>
+   <station>NL49701</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
    <waarde>16</waarde>
@@ -993,62 +849,44 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>230</station>
+   <tijd>15</tijd>
+   <station>NL49704</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>24</waarde>
+   <waarde>25</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>235</station>
+   <tijd>15</tijd>
+   <station>547</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
+   <waarde>47</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>236</station>
+   <tijd>15</tijd>
+   <station>549</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>62</waarde>
+   <waarde>26</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>237</station>
+   <tijd>15</tijd>
+   <station>247</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>65</waarde>
+   <waarde>8</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>240</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>30</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>241</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>24</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>301</station>
+   <tijd>15</tijd>
+   <station>246</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
    <waarde>38</waarde>
@@ -1056,8 +894,53 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>318</station>
+   <tijd>15</tijd>
+   <station>NL49546</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>33</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49551</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>49</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49553</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>10</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49564</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>35</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL49565</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>36</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>107</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
    <waarde>21</waarde>
@@ -1065,16 +948,115 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>404</station>
+   <tijd>15</tijd>
+   <station>133</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>43</waarde>
+   <waarde>15</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>136</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>41</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>138</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>21</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>230</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>30</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>235</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>12</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>236</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>50</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>237</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>63</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>240</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>38</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>241</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>27</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>301</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>24</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>318</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>23</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>404</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>51</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>418</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
@@ -1083,34 +1065,34 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>433</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>63</waarde>
+   <waarde>66</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>437</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>27</waarde>
+   <waarde>45</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>442</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>42</waarde>
+   <waarde>41</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>444</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
@@ -1119,16 +1101,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>445</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>62</waarde>
+   <waarde>57</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>446</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
@@ -1137,43 +1119,43 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>537</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>50</waarde>
+   <waarde>60</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>538</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>7</waarde>
+   <waarde>8</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>631</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>7</waarde>
+   <waarde>9</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>633</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>20</waarde>
+   <waarde>13</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>636</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
@@ -1182,70 +1164,79 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>639</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>43</waarde>
+   <waarde>51</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>641</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>40</waarde>
+   <waarde>84</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>643</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>29</waarde>
+   <waarde>25</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>644</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>22</waarde>
+   <waarde>21</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>722</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>14</waarde>
+   <waarde>12</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>738</station>
+   <component>NO2</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>17</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>741</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>62</waarde>
+   <waarde>80</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>742</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>33</waarde>
+   <waarde>32</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>807</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
@@ -1254,16 +1245,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>818</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>6</waarde>
+   <waarde>9</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>918</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
@@ -1272,35 +1263,8 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>929</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>10</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>934</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>12</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>937</station>
-   <component>NO2</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>34</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>938</station>
    <component>NO2</component>
    <eenheid>ug/m3</eenheid>
    <waarde>9</waarde>
@@ -1308,79 +1272,106 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01483</station>
-   <component>NO</component>
+   <tijd>15</tijd>
+   <station>934</station>
+   <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>12</waarde>
+   <waarde>8</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01485</station>
-   <component>NO</component>
+   <tijd>15</tijd>
+   <station>937</station>
+   <component>NO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>16</waarde>
+   <waarde>37</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01486</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>7</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01487</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>67</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL01488</station>
-   <component>NO</component>
+   <tijd>15</tijd>
+   <station>938</station>
+   <component>NO2</component>
    <eenheid>ug/m3</eenheid>
    <waarde>6</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>NL01483</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>14</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01485</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>14</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01486</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>9</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01487</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>77</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>NL01488</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>5</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>NL01489</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>61</waarde>
+   <waarde>17</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01491</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>34</waarde>
+   <waarde>31</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01493</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>102</waarde>
+   <waarde>84</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01494</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
@@ -1389,35 +1380,17 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01495</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>6</waarde>
+   <waarde>4</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01496</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>2</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>547</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>16</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>549</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
    <waarde>1</waarde>
@@ -1425,7 +1398,25 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>547</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>21</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>549</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>3</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>247</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
@@ -1434,7 +1425,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>246</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
@@ -1443,260 +1434,8 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>107</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>8</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>131</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>4</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>133</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>2</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>136</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>16</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>138</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>3</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>230</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>2</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>235</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>1</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>236</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>37</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>237</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>29</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>240</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>8</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>241</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>2</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>301</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>7</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>318</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>2</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>404</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>10</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>418</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>9</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>433</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>50</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>437</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>3</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>442</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>7</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>444</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>1</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>445</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>37</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>446</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>10</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>537</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>26</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>538</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>1</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>631</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>1</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>633</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>3</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>636</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>3</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>639</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>18</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>641</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>20</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>643</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
    <waarde>6</waarde>
@@ -1704,17 +1443,8 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>644</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>3</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>722</station>
+   <tijd>15</tijd>
+   <station>133</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
    <waarde>2</waarde>
@@ -1722,17 +1452,161 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>741</station>
+   <tijd>15</tijd>
+   <station>136</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>58</waarde>
+   <waarde>23</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>742</station>
+   <tijd>15</tijd>
+   <station>138</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>3</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>230</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>3</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>235</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>1</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>236</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>24</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>237</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>27</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>240</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>5</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>241</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>2</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>301</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>1</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>318</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>2</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>404</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>13</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>418</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>8</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>433</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>55</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>437</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>5</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>442</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>6</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>444</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>1</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>445</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>39</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>446</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
    <waarde>7</waarde>
@@ -1740,26 +1614,17 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>807</station>
+   <tijd>15</tijd>
+   <station>537</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>3</waarde>
+   <waarde>35</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>818</station>
-   <component>NO</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>1</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>918</station>
+   <tijd>15</tijd>
+   <station>538</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
    <waarde>1</waarde>
@@ -1767,8 +1632,8 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>929</station>
+   <tijd>15</tijd>
+   <station>631</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
    <waarde>1</waarde>
@@ -1776,8 +1641,53 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>934</station>
+   <tijd>15</tijd>
+   <station>633</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>1</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>636</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>5</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>639</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>26</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>641</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>66</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>643</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>5</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>644</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
    <waarde>4</waarde>
@@ -1785,17 +1695,17 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>937</station>
+   <tijd>15</tijd>
+   <station>722</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>22</waarde>
+   <waarde>1</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>938</station>
+   <tijd>15</tijd>
+   <station>738</station>
    <component>NO</component>
    <eenheid>ug/m3</eenheid>
    <waarde>2</waarde>
@@ -1803,332 +1713,152 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>741</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>69</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>742</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>4</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>807</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>2</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>818</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>0</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>918</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>1</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>929</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>0</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>934</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>2</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>937</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>21</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>938</station>
+   <component>NO</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>1</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>NL01485</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>28</waarde>
+   <waarde>38</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01489</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>8</waarde>
+   <waarde>35</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01493</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>11</waarde>
+   <waarde>17</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01494</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>45</waarde>
+   <waarde>41</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01495</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>52</waarde>
+   <waarde>63</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL01496</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>53</waarde>
+   <waarde>61</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49003</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>67</waarde>
+   <waarde>57</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>NL49012</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>60</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49014</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>71</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49701</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>78</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>NL49564</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>59</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>107</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>27</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>131</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>45</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>133</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>52</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>138</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>54</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>230</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>50</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>235</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>41</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>236</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>34</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>241</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>41</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>247</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>65</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>301</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>33</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>318</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>49</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>404</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>44</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>418</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>48</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>433</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>24</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>437</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>53</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>442</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>36</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>444</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>53</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>446</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>30</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>537</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>30</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>538</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>67</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>631</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>74</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>633</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>45</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>639</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>24</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>641</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>37</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>643</station>
-   <component>O3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>29</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>644</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
    <waarde>40</waarde>
@@ -2136,35 +1866,98 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>722</station>
+   <tijd>15</tijd>
+   <station>NL49014</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>37</waarde>
+   <waarde>55</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>742</station>
+   <tijd>15</tijd>
+   <station>NL49701</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>37</waarde>
+   <waarde>81</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>807</station>
+   <tijd>15</tijd>
+   <station>NL49564</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>74</waarde>
+   <waarde>44</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>818</station>
+   <tijd>15</tijd>
+   <station>107</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>49</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>133</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>53</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>138</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>52</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>230</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>41</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>235</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>57</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>236</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>41</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>241</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>61</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>247</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
    <waarde>82</waarde>
@@ -2172,7 +1965,205 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>301</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>59</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>318</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>48</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>404</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>43</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>418</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>56</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>433</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>30</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>437</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>54</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>442</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>58</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>444</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>60</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>446</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>34</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>537</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>33</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>538</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>68</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>631</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>61</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>633</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>59</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>639</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>31</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>641</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>18</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>643</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>39</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>644</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>49</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>722</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>48</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>738</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>48</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>742</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>49</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>807</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>62</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
+   <station>818</station>
+   <component>O3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>62</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>918</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
@@ -2181,61 +2172,52 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>929</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>83</waarde>
+   <waarde>82</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>934</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>64</waarde>
+   <waarde>96</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>938</station>
    <component>O3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>69</waarde>
+   <waarde>92</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>243</station>
    <component>NH3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>37</waarde>
+   <waarde>33</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>244</station>
    <component>NH3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>35</waarde>
+   <waarde>34</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
-   <station>131</station>
-   <component>NH3</component>
-   <eenheid>ug/m3</eenheid>
-   <waarde>20</waarde>
-   <gevalideerd>0</gevalideerd>
-  </meting>
-  <meting>
-   <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>444</station>
    <component>NH3</component>
    <eenheid>ug/m3</eenheid>
@@ -2244,16 +2226,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>538</station>
    <component>NH3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>10</waarde>
+   <waarde>12</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>633</station>
    <component>NH3</component>
    <eenheid>ug/m3</eenheid>
@@ -2262,52 +2244,61 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
+   <station>738</station>
+   <component>NH3</component>
+   <eenheid>ug/m3</eenheid>
+   <waarde>14</waarde>
+   <gevalideerd>0</gevalideerd>
+  </meting>
+  <meting>
+   <datum>27/05/2014</datum>
+   <tijd>15</tijd>
    <station>929</station>
    <component>NH3</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>7</waarde>
+   <waarde>4</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>633</station>
    <component>CO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>223</waarde>
+   <waarde>214</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>644</station>
    <component>CO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>219</waarde>
+   <waarde>177</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>741</station>
    <component>CO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>546</waarde>
+   <waarde>690</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>742</station>
    <component>CO</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>291</waarde>
+   <waarde>250</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>133</station>
    <component>SO2</component>
    <eenheid>ug/m3</eenheid>
@@ -2316,7 +2307,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>318</station>
    <component>SO2</component>
    <eenheid>ug/m3</eenheid>
@@ -2325,16 +2316,16 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>444</station>
    <component>SO2</component>
    <eenheid>ug/m3</eenheid>
-   <waarde>1</waarde>
+   <waarde>2</waarde>
    <gevalideerd>0</gevalideerd>
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>644</station>
    <component>SO2</component>
    <eenheid>ug/m3</eenheid>
@@ -2343,7 +2334,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>722</station>
    <component>SO2</component>
    <eenheid>ug/m3</eenheid>
@@ -2352,7 +2343,7 @@
   </meting>
   <meting>
    <datum>27/05/2014</datum>
-   <tijd>13</tijd>
+   <tijd>15</tijd>
    <station>934</station>
    <component>SO2</component>
    <eenheid>ug/m3</eenheid>

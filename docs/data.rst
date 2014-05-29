@@ -1,5 +1,6 @@
 .. _data:
 
+===============
 Data Management
 ===============
 
@@ -13,7 +14,7 @@ as mentioned here is all related to LML RIVM data, i.e. Dutch Air Quality Data.
 Source code for data management and ETL can be found in GitHub: https://github.com/Geonovum/sospilot/tree/master/src
 
 Architecture
-------------
+============
 
 Figure 1 sketches the overall SOSPilot architecture with emphasis on the flow of data (arrows).
 Circles depict harvesting/ETL processes. Server-instances are in rectangles. Datastores
@@ -26,7 +27,7 @@ the "DB"-icons.
 
 
 ETL Design
-----------
+==========
 
 Three main ETL steps with three datastores:
 
@@ -59,7 +60,7 @@ Advantages of this approach:
 * OWS server (WMS/WFS evt WCS) can directly use op Core OM DB (possibly via Measurements/Stations JOIN VIEW evt, see below)
 
 ETL Step 1. - Harvester
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 The RIVM data server provides measurements of the past month in a collection
 of XML files served by an Apache HTTP server. See figure below.
@@ -113,9 +114,8 @@ vs "XML": ::
     </meting>
 
 
-
 ETL Step 2 - Raw Measurements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 This step produces raw AQ measurements from raw source (file) data into Postgres/PostGIS
 tables.
@@ -123,23 +123,25 @@ tables.
 Need to tables: Stations and Metingen. This is a 1:1 transformation from the raw XML.
 Station id's are foreign keys in the Metingen table.
 
-**Stations**
+Stations
+~~~~~~~~
 
 Station info is available from Eionet as a CSV file. Coordinates are in EPSG:4258 (also used in INSPIRE).
-To create "clean" version of eionet RIVM stations understood by ogr2ogr:
 
 To create "clean" version of eionet RIVM stations understood by ogr2ogr to read into PostGIS:
 
 * download CSV from http://cdr.eionet.europa.eu/Converters/run_conversion?file=nl/eu/aqd/d/envurreqq/REP_D-NL_RIVM_20131220_D-001.xml&conv=450&source=remote
-* this file saves as REP_D-NL_RIVM_20131220_D-001
+* this file saves as ``REP_D-NL_RIVM_20131220_D-001.csv``
 * copy to stations.csv for cleaning
 * stations.csv: remove excess quotes, e.g. """
-* stations.csv: replace in CSV header "Pos" with Lat,Lon
-* stations.csv: replace space between coordinates with comma: e.g ,51.566389 4.932792, becomes ,51.566389,4.932792,
+* stations.csv: replace in CSV header ``Pos`` with ``Lat,Lon``
+* stations.csv: replace space between coordinates with comma: e.g ``,51.566389 4.932792,`` becomes ``,51.566389,4.932792,``
 * test result stations.csv by uploading in e.g. Geoviewer: http://kadviewer.kademo.nl
-* create or update stations.vrt for OGR mapping
+* create or update ``stations.vrt`` for OGR mapping
 * use stations2postgis.sh to map to PostGIS table
 * use stations2gml.sh to map to GML file
+
+See details in GitHub: https://github.com/Geonovum/sospilot/tree/master/data/rivm-lml/stations
 
 Test first by uploading and viewing in a  geoviewer, for example in http://kadviewer.kademo.nl
 See result.
@@ -157,7 +159,7 @@ Reading into PostGIS
    *Figure - RIVM Eionet Stations Read into Postgres/PostGIS*
 
 ETL Step 3 - SOS ready Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 In this step the Raw Measurements data (see Step 2) is transformed to "SOS Ready Data",
 i.e. data that can be handled by the 52North SOS server. Two options:
