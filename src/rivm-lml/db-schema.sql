@@ -33,6 +33,11 @@ CREATE TABLE measurements (
   PRIMARY KEY (gid)
 );
 
+DROP INDEX IF EXISTS sample_id_idx;
+
+-- File may only occur once in table, error if trying to insert multiple times
+CREATE UNIQUE INDEX sample_id_idx ON measurements USING btree (sample_id) ;
+
 -- ETL progres tabel, houdt bij voor ieder ETL proces ("worker") wat het
 -- laatst verwerkte record id is van hun bron tabel.
 DROP TABLE IF EXISTS etl_progress;

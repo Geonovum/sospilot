@@ -41,8 +41,8 @@ class LmlFileDbInput(Input):
         Used to update last id of processed file record.
         """
         log.info('Updating progress table with last_id= %d' % self.last_id)
-        # self.db.execute(self.progress_update % self.last_id)
-        # self.db.commit(close=False)
+        self.db.execute(self.progress_update % self.last_id)
+        self.db.commit(close=False)
         log.info('Update progress table ok')
         return True
 
@@ -62,10 +62,11 @@ class LmlFileDbInput(Input):
         # No more records to process?
         if lml_file_recs_len == 0:
             packet.set_end_of_stream()
-            log.info('all file_records done')
+            log.info('Nothing to do. All file_records done')
             return packet
 
         # Process lml_files records and create recordlist
+        record_list = []
         for file_rec in lml_file_recs:
             log.info('process: file_rec gid=%d file=%s' % (file_rec[0], file_rec[2]))
             self.last_id = file_rec[0]
@@ -74,7 +75,6 @@ class LmlFileDbInput(Input):
             # Parse file data and create a record
             xml_doc = etree.fromstring(file_data)
             measurements = xml_doc.xpath('/message/body/*')
-            record_list = []
             for measurement in measurements:
                 record = dict()
                 # Measurement data XML structue
@@ -107,9 +107,8 @@ class LmlFileDbInput(Input):
 
                 # Create a unique id for the sample station-component-time
                 record['sample_id'] = record['station_id'] + '-' + record['component'] + '-' + dt_str
-                print(str(record))
                 record_list.append(record)
 
-        packet.set_end_of_stream()
+        packet.data = record_list
 
         return packet
