@@ -111,4 +111,7 @@ class LmlFileDbInput(Input):
 
         packet.data = record_list
 
+        # Always stop after batch, otherwise we would continue forever
+        packet.set_end_of_stream()
+
         return packet
