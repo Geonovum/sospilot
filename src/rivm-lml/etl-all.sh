@@ -4,7 +4,7 @@
 #
 
 # Usually required in order to have Python find your package
-PYTHONPATH=.:$PYTHONPATH
+export PYTHONPATH=.:$PYTHONPATH
 
 options="database=sensors host=localhost user=postgres password=postgres schema=rivm_lml"
 

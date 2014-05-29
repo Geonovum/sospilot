@@ -44,7 +44,7 @@ class LmlApacheDirInput(ApacheDirInput):
         :param file_name:
         :return string or None:
         """
-        if file_name is None:
+        if file_name is None or file_name is 'actueel.xml':
             return None
 
         # Populate and execute SELECT query for file_name
