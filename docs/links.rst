@@ -43,6 +43,7 @@ Tools and Libs
 --------------
 
 .. [GDALOGR] GDAL/OGR, http://gdal.org
+.. [Stetl] Stetl, Open Source ETL in Python, http://www.stetl.org
 .. [PythonBeautifulSoup] Python Beautiful Soup : om HTML docs (bijv index.html Apache) uit te parsen: http://www.crummy.com/software/BeautifulSoup
 .. [lxml] lxml, http://lxml.de
 .. [Deegree] Deegree, http://www.deegree.org

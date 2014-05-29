@@ -10,14 +10,11 @@ CREATE TABLE lml_files (
   PRIMARY KEY (gid)
 );
 
-DROP INDEX IF EXISTS lml_files_idx;
-
 -- File may only occur once in table, error if trying to insert multiple times
+DROP INDEX IF EXISTS lml_files_idx;
 CREATE UNIQUE INDEX lml_files_idx ON lml_files USING btree (file_name) ;
 
--- TODO
-
--- Raw measurements table - data from lml_files transformed via ETL (TBD)
+-- Raw measurements table - data from lml_files transformed via ETL
 DROP TABLE IF EXISTS measurements;
 CREATE TABLE measurements (
   gid serial,
@@ -33,12 +30,11 @@ CREATE TABLE measurements (
   PRIMARY KEY (gid)
 );
 
+-- Measurement may only occur once in table, error if trying to insert multiple times
 DROP INDEX IF EXISTS sample_id_idx;
-
--- File may only occur once in table, error if trying to insert multiple times
 CREATE UNIQUE INDEX sample_id_idx ON measurements USING btree (sample_id) ;
 
--- ETL progres tabel, houdt bij voor ieder ETL proces ("worker") wat het
+-- ETL progress tabel, houdt bij voor ieder ETL proces ("worker") wat het
 -- laatst verwerkte record id is van hun bron tabel.
 DROP TABLE IF EXISTS etl_progress;
 CREATE TABLE etl_progress (
@@ -50,6 +46,7 @@ CREATE TABLE etl_progress (
   PRIMARY KEY (gid)
 );
 
+-- Define workers
 INSERT INTO etl_progress (worker, source_table, last_id, last_update)
         VALUES ('files2measurements', 'lml_files', -1, current_timestamp);
 INSERT INTO etl_progress (worker, source_table, last_id, last_update)

@@ -59,6 +59,8 @@ Advantages of this approach:
 * prepared for op IPR/INSPIRE ETL (source is Core OM DB)
 * OWS server (WMS/WFS evt WCS) can directly use op Core OM DB (possibly via Measurements/Stations JOIN VIEW evt, see below)
 
+The Open Source ETL tool `Stetl, Streaming ETL <http://www.stetl.org>`_  , is used for most of the transformation steps.
+
 ETL Step 1. - Harvester
 -----------------------
 
@@ -79,7 +81,9 @@ these in the DB as XML Blobs with their filename.
    *Figure - Raw File Record Harvested into DB*
 
 This can be effected by a simple Stetl process activated every 30 mins via the linux
-``cron`` service.
+``cron`` service. Stetl has a built-in module for Apache dir listing reading.
+Only a derived version needed to be developed in order to track which files have been
+read already. This is implemented in the file https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/apachedirinput.py.
 
 Note: there are two data streams with AQ Data from RIVM: "XML" oriented and "SOS" oriented. We will use the "XML" oriented
 as the file format is simpler to process and less redundant with station info. The URL is
@@ -113,6 +117,7 @@ vs "XML": ::
         <gevalideerd>0</gevalideerd>
     </meting>
 
+Gotcha: there is a file called ``actueel.xml``. This file has to be skipped to avoid double records.
 
 ETL Step 2 - Raw Measurements
 -----------------------------
@@ -157,6 +162,37 @@ Reading into PostGIS
    :align: center
 
    *Figure - RIVM Eionet Stations Read into Postgres/PostGIS*
+
+Measurements
+~~~~~~~~~~~~
+
+Reading raw measurements from the files stored in the ``lml_files`` table is done with a ``Stetl``
+process. A specific Stetl Input module was developed to effect reading and parsing the files
+and tracking the last id of the file processed.
+https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/lmlfiledbinput.py
+
+The Stetl process is defined in
+https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/files2measurements.cfg
+
+The invokation of that Stetl process is via shell script:
+https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/files2measurements.sh
+
+The data is stored in the ``measurements`` table, as below. ``station_id`` is a foreign key
+into the ``stations`` table.
+
+.. figure:: _static/lml-measurements-records.jpg
+   :align: center
+
+   *Figure - LML raw measurements stored in Postgres*
+
+Tracking ETL progress for the worker ``files2measurements`` is done in the ``etl_progress`` table.
+The ``last_id`` field is the identifier of the last record in the ``lml_files`` table
+processed. On each new run the ETL process starts from new records since that last record.
+
+.. figure:: _static/lml-etl-progress-records.jpg
+   :align: center
+
+   *Figure - LML ETL Progress Tracked in Postgres*
 
 ETL Step 3 - SOS ready Data
 ---------------------------
