@@ -61,6 +61,9 @@ Advantages of this approach:
 
 The Open Source ETL tool `Stetl, Streaming ETL <http://www.stetl.org>`_  , is used for most of the transformation steps.
 
+The Postgres tables, except the ``stations`` table is defined in an SQL file:
+https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/db-schema.sql
+
 ETL Step 1. - Harvester
 -----------------------
 
@@ -73,7 +76,8 @@ of XML files served by an Apache HTTP server. See figure below.
    *Figure - Apache Server Raw File Listing*
 
 The LML Harvester will continuously read these XML files and store
-these in the DB as XML Blobs with their filename.
+these in the DB as XML Blobs with their filename in the Postgres
+table ``lml_files``.
 
 .. figure:: _static/lml-raw-file-record-xml.jpg
    :align: center
@@ -122,11 +126,12 @@ Gotcha: there is a file called ``actueel.xml``. This file has to be skipped to a
 ETL Step 2 - Raw Measurements
 -----------------------------
 
-This step produces raw AQ measurements from raw source (file) data into Postgres/PostGIS
-tables.
+This step produces raw AQ measurements, "AQ ETL" in Figure 1, from raw source (file) data harvested
+in the table ``lml_files`` (see Step 1).
 
-Need to tables: Stations and Metingen. This is a 1:1 transformation from the raw XML.
-Station id's are foreign keys in the Metingen table.
+Two tables: ``stations`` and ``measurements``. This is a 1:1 transformation from the raw XML.
+The ``measurements`` refers to the ``stations`` by a FK ``station_id``. The table ``etl_progress`` is
+used to track the last file processed from ``lml_files``.
 
 Stations
 ~~~~~~~~
