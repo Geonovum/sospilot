@@ -92,7 +92,20 @@ interoperable web based interface."
 
 Installatie van de INSPIRE version of SOS server from 52North.
 
+REST API
+--------
+
+Using the REST-API seems the most reasonable/efficient way to go.
+
+Documentation: http://52north.org/files/sensorweb/docs/sos/restful/restful_sos_documentation.pdf
 URL: http://sensors.geonovum.nl/sos
+
+REST Main URL: http://sensors.geonovum.nl/sos/service/rest (gives capabilities)
+
+GET features: http://sensors.geonovum.nl/sos/service/rest/features
+GET a feature http://sensors.geonovum.nl/sos/service/rest/features/http://www.52north.org/test/featureOfInterest/1
+
+etc
 
 
 

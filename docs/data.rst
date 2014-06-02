@@ -253,12 +253,24 @@ ETL Step 3 - SOS ready Data
 ---------------------------
 
 In this step the Raw Measurements data (see Step 2) is transformed to "SOS Ready Data",
-i.e. data that can be handled by the 52North SOS server. Two options:
+i.e. data that can be handled by the 52North SOS server. Three options:
 
-#. direct transforma into the SOS database of the 52NSOS server
-#. via WFS publishing
-#. via REST ?
+#. direct transform into the SOS database of the 52NSOS server
+#. via "SOS Transactions" i.e. publishing via SOS-protocol (ala WFS-T)
+#. via REST
 
+Discussion:
+
+#. Direct publication into the SOS DB seems to be cumbersome and error prone and not future-proof
+#. via "SOS Transactions" is an option
+#. Using the REST-API seems the most reasonable/efficient way to go.
+
+REST API
+~~~~~~~~
+
+Documentation REST API: http://52north.org/files/sensorweb/docs/sos/restful/restful_sos_documentation.pdf
+
+REST root URL: http://sensors.geonovum.nl/sos/service/rest
 
 
 
