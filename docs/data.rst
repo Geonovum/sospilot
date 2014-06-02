@@ -263,7 +263,7 @@ Discussion:
 
 #. Direct publication into the SOS DB seems to be cumbersome and error prone and not future-proof
 #. via "SOS Transactions" is an option
-#. Using the REST-API seems the most reasonable/efficient way to go.
+#. Using the REST-API seems the quickest/most efficient way to go.
 
 REST API
 ~~~~~~~~
@@ -271,6 +271,20 @@ REST API
 Documentation REST API: http://52north.org/files/sensorweb/docs/sos/restful/restful_sos_documentation.pdf
 
 REST root URL: http://sensors.geonovum.nl/sos/service/rest
+
+From the documentation the mapping seems to make sense as follows:
+
+``sensor-create``  - to create new sensor resources --> map from ``stations`` table
+``observation-create``  - to create observation resources --> map from ``measurements`` table
+
+Design:
+
+* use Stetl: input Postgres Query, output SOS-REST module
+* similar to ETL step 2
+* track progress in ``etl_progress`` table
+* new Stetl output, similar to WFS-T and deegree-publisher
+* use Python XML templates for the requests
+* problem: make SML, Sensor per Station, or Sensor per Station-Component ?
 
 
 
