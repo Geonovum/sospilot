@@ -199,6 +199,56 @@ processed. On each new run the ETL process starts from new records since that la
 
    *Figure - LML ETL Progress Tracked in Postgres*
 
+Database Queries and VIEWs
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Having all data (stations, measurements) stored PostgreSQL tables gives rise to many possibilities
+for selection. Not just via standard SQL queries, but also via PostgreSQL VIEWs. A VIEW is basically
+a query but presented as a database table. This way data selections can be provided permanently.
+
+One appearent VIEW is to combine the ``measurements`` and ``stations`` tables into a new ``measurements_stations``
+table by means of a JOIN query. This allows for example to build a WFS or a WMS-Time service on top of the
+``measurements_stations`` VIEW. See the Services section of this document.
+The definition is as follows (``rivm_lml`` is the schema name): ::
+
+    CREATE VIEW rivm_lml.measurements_stations AS
+      SELECT m.gid, m.station_id, s.municipality, m.component, m.sample_time, m.sample_value, s.point, m.validated,
+             m.file_name, m.insert_time, m.sample_id,
+             s.local_id, s.eu_station_code, s.altitude, s.area_classification,
+             s.activity_begin, s.activity_end
+             FROM rivm_lml.measurements as m
+               INNER JOIN rivm_lml.stations as s ON m.station_id = s.natl_station_code;
+
+The data can now be viewed as rows in this table:
+
+
+.. figure:: _static/lml-measurements-stations-records.jpg
+   :align: center
+
+   *Figure - LML Postgres VIEW of combined measurements and stations*
+
+The advantage of VIEWs is that they always stay uptodate with the original tables.
+Additional VIEWs can be thought, like:
+
+* per-component measurements+stations
+* current/latest measurements for all or per component
+* averages
+* even Voronoi-data can be derived, though that may be expensive: http://smathermather.wordpress.com/2013/12/21/voronoi-in-postgis
+
+Some query examples: ::
+
+    -- Laatste 24 uur aan metingen voor station en component
+    SELECT  * FROM  rivm_lml.measurements
+       WHERE sample_time >  current_timestamp::timestamp without time zone - '1 day'::INTERVAL
+          AND component = 'NO' AND station_id = '136' order by sample_time desc;
+
+    -- Laatste meting voor station en component
+     SELECT  * FROM  rivm_lml.measurements
+       WHERE sample_time >  current_timestamp::timestamp without time zone - '1 day'::INTERVAL
+          AND component = 'NO' AND station_id = '136' order by sample_time desc limit 1;
+
+
+
 ETL Step 3 - SOS ready Data
 ---------------------------
 
