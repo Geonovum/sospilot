@@ -73,8 +73,7 @@ Measurements Layer
 
 This layer is created from the ``measurements-stations`` VIEW described above.
 
-A WFS query can be as follows: ::
-
+A WFS query can be as follows:
 
 .. figure:: _static/lml-measurements-stations-wfsreq.jpg
    :align: center
