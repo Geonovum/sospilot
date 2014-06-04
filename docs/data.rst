@@ -328,7 +328,33 @@ Discussion:
 
 #. Direct publication into the SOS DB (39 tables!) seems to be cumbersome and error prone and not future-proof
 #. via "SOS Transactions" is an option
-#. Using the REST-API seems the quickest/most efficient way to go.
+#. Using the REST-API seems the quickest/most efficient way to go, but the status of the REST implementation is unsure.
+
+SOS Transaction
+~~~~~~~~~~~~~~~
+
+A small PoC using the available requests and sensor ML as example is quite promising.
+Created JSON ``insert-sensor`` and ``insert-observation`` requests and executed these
+in the Admin SOS webclient. Each Sensor denotes a single station with Input just "Air" and one
+Output for each chemical Component (here O3, MO, NO2, PM10). These files can serve as templates
+for the ETL. The ``insert-sensor`` needs to be done once per Station. The ``insert-observation``
+per measurement, though we may consider using an ``insert-result-template`` and then ``insert-result`` for efficiency.
+
+See the images below.
+
+.. figure:: _static/sos-insert-sensor-req-rsp.jpg
+   :align: center
+
+   *Figure - Inserting a Station as sensor definition using SOS via 52N SOS Admin webclient*
+
+And the observation insert below.
+
+
+.. figure:: _static/sos-insert-observation-req-rsp.jpg
+   :align: center
+
+   *Figure - Inserting a single measured value (O3) as an Observation as using SOS via 52N SOS Admin webclient*
+
 
 REST API
 ~~~~~~~~
