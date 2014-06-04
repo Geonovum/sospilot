@@ -1,9 +1,9 @@
 .. _geolinuxserver:
 
 
-***********************
-Linux Server Inrichting
-***********************
+*****************
+Server Inrichting
+*****************
 
 Hier staat de inrichting beschreven voor de Linux Server (Ubuntu) met FOSS geo-toepassingen.
 Dit betreft een Ubuntu-server waarop allerlei basis en geo-gerelateerde packages zijn toegevoegd.

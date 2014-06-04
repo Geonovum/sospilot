@@ -320,13 +320,13 @@ ETL Step 3 - SOS ready Data
 In this step the Raw Measurements data (see Step 2) is transformed to "SOS Ready Data",
 i.e. data that can be handled by the 52North SOS server. Three options:
 
-#. direct transform into the SOS database of the 52NSOS server
+#. direct transform into the SOS database of the 52N SOS server
 #. via "SOS Transactions" i.e. publishing via SOS-protocol (ala WFS-T)
 #. via REST
 
 Discussion:
 
-#. Direct publication into the SOS DB seems to be cumbersome and error prone and not future-proof
+#. Direct publication into the SOS DB (39 tables!) seems to be cumbersome and error prone and not future-proof
 #. via "SOS Transactions" is an option
 #. Using the REST-API seems the quickest/most efficient way to go.
 
@@ -339,8 +339,8 @@ REST root URL: http://sensors.geonovum.nl/sos/service/rest
 
 From the documentation the mapping seems to make sense as follows:
 
-``sensor-create``  - to create new sensor resources --> map from ``stations`` table
-``observation-create``  - to create observation resources --> map from ``measurements`` table
+* ``sensor-create``  - to create new sensor resources --> map from ``stations`` table
+* ``observation-create``  - to create observation resources --> map from ``measurements`` table
 
 Design:
 
