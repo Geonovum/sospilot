@@ -330,6 +330,8 @@ Discussion:
 #. via "SOS Transactions" is an option
 #. Using the REST-API seems the quickest/most efficient way to go, but the status of the REST implementation is unsure.
 
+To clean DB: reinstall PG schema and remove ``/var/www/sensors.geonovum.nl/webapps/sos/cache.tmp``.
+
 SOS Transaction
 ~~~~~~~~~~~~~~~
 

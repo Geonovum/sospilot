@@ -1,0 +1,63 @@
+{
+  "request": "InsertResultTemplate",
+  "service": "SOS",
+  "version": "2.0.0",
+  "identifier": "urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-807/template/1",
+  "offering": "http://sensors.geonovum.nl/rivm-lml/offering/lml/807",
+  "observationTemplate": {
+    "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+    "procedure": "urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-807",
+    "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/O3",
+    "featureOfInterest": {
+      "identifier": {
+        "value": "http://sensors.geonovum.nl/rivm-lml/featureOfInterest/807",
+        "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+      },
+      "name": [
+        {
+          "value": "Hellendoorn",
+          "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+        }
+      ],
+      "sampledFeature": [
+        "http://sensors.geonovum.nl/rivm-lml/featureOfInterest/world"
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          52.38916779,
+          6.40361404
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:4326"
+          }
+        }
+      }
+    },
+    "phenomenonTime": "template",
+    "resultTime": "template",
+    "result": ""
+  },
+  "resultStructure": {
+    "fields": [
+      {
+        "type": "time",
+        "name": "phenomenonTime",
+        "definition": "http://www.opengis.net/def/property/OGC/0/PhenomenonTime",
+        "uom": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+      },
+      {
+        "type": "quantity",
+        "name": "observable_property_9",
+        "definition": "http://sensors.geonovum.nl/rivm-lml/observableProperty/O3",
+        "uom": "test_unit_9"
+      }
+    ]
+  },
+  "resultEncoding": {
+    "tokenSeparator": ",",
+    "blockSeparator": "#"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "request": "InsertResultTemplate",
+  "service": "SOS",
+  "version": "2.0.0",
+  "identifier": "http://www.52north.org/test/procedure/9/template/1",
+  "offering": "http://www.52north.org/test/offering/9",
+  "observationTemplate": {
+    "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+    "procedure": "http://www.52north.org/test/procedure/9",
+    "observedProperty": "http://www.52north.org/test/observableProperty/9_3",
+    "featureOfInterest": {
+      "identifier": {
+        "value": "http://www.52north.org/test/featureOfInterest/9",
+        "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+      },
+      "name": [
+        {
+          "value": "52°North",
+          "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+        }
+      ],
+      "sampledFeature": [
+        "http://www.52north.org/test/featureOfInterest/world"
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51.935101100104916,
+          7.651968812254194
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:4326"
+          }
+        }
+      }
+    },
+    "phenomenonTime": "template",
+    "resultTime": "template",
+    "result": ""
+  },
+  "resultStructure": {
+    "fields": [
+      {
+        "type": "time",
+        "name": "phenomenonTime",
+        "definition": "http://www.opengis.net/def/property/OGC/0/PhenomenonTime",
+        "uom": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+      },
+      {
+        "type": "quantity",
+        "name": "observable_property_9",
+        "definition": "http://www.52north.org/test/observableProperty/9_3",
+        "uom": "test_unit_9"
+      }
+    ]
+  },
+  "resultEncoding": {
+    "tokenSeparator": ",",
+    "blockSeparator": "#"
+  }
+}
