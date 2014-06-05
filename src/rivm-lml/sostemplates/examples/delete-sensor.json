@@ -1,6 +1,0 @@
-{
-  "request": "DeleteSensor",
-  "service": "SOS",
-  "version": "2.0.0",
-  "procedure": "urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-807"
-}
