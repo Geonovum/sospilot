@@ -25,6 +25,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.40361404</ogr:lon>
+      <ogr:lat>52.38916779</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -41,6 +43,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.01806974</ogr:lon>
+      <ogr:lat>52.65500259</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -57,6 +61,8 @@
       <ogr:activity_end>2002-04-02T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.799458</ogr:lon>
+      <ogr:lat>53.144722</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -73,6 +79,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.57349157</ogr:lon>
+      <ogr:lat>52.91691589</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -89,6 +97,8 @@
       <ogr:activity_end>2000-02-08T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.669725</ogr:lon>
+      <ogr:lat>52.813611</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -105,6 +115,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.27750874</ogr:lon>
+      <ogr:lat>53.33166504</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -121,6 +133,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.85361385</ogr:lon>
+      <ogr:lat>51.54111099</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -137,6 +151,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.882236</ogr:lon>
+      <ogr:lat>50.9030571</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -153,6 +169,8 @@
       <ogr:activity_end>2013-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.761917</ogr:lon>
+      <ogr:lat>50.90545</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -169,6 +187,8 @@
       <ogr:activity_end>2013-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.561678</ogr:lon>
+      <ogr:lat>51.2675</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -185,6 +205,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.14890242</ogr:lon>
+      <ogr:lat>51.51944351</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -201,6 +223,8 @@
       <ogr:activity_end>2013-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.932792</ogr:lon>
+      <ogr:lat>51.566389</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -217,6 +241,8 @@
       <ogr:activity_end>2002-04-02T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.662233</ogr:lon>
+      <ogr:lat>51.641667</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -233,6 +259,8 @@
       <ogr:activity_end>1999-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.388336</ogr:lon>
+      <ogr:lat>51.366389</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -249,6 +277,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.36028624</ogr:lon>
+      <ogr:lat>51.43500137</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -265,6 +295,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.47278357</ogr:lon>
+      <ogr:lat>51.46972275</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -281,6 +313,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.4289</ogr:lon>
+      <ogr:lat>51.44528</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -297,6 +331,8 @@
       <ogr:activity_end>2002-09-02T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.502781</ogr:lon>
+      <ogr:lat>51.430556</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -313,6 +349,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>3.91694736</ogr:lon>
+      <ogr:lat>51.63555908</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -329,6 +367,8 @@
       <ogr:activity_end>1999-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>3.800842</ogr:lon>
+      <ogr:lat>51.213056</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -345,6 +385,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>3.74945831</ogr:lon>
+      <ogr:lat>51.29527664</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -361,6 +403,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.28917217</ogr:lon>
+      <ogr:lat>52.07805634</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -377,6 +421,8 @@
       <ogr:activity_end>2013-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.280569</ogr:lon>
+      <ogr:lat>51.994722</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -393,6 +439,8 @@
       <ogr:activity_end>2010-01-06T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.259175</ogr:lon>
+      <ogr:lat>51.914722</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -409,6 +457,8 @@
       <ogr:activity_end>2013-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.357228</ogr:lon>
+      <ogr:lat>51.9175</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -425,6 +475,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.48028898</ogr:lon>
+      <ogr:lat>51.91500092</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -441,6 +493,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.32695293</ogr:lon>
+      <ogr:lat>51.91139221</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -457,6 +511,8 @@
       <ogr:activity_end>2013-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.443342</ogr:lon>
+      <ogr:lat>51.953889</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -473,6 +529,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.45084143</ogr:lon>
+      <ogr:lat>51.78749847</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -489,6 +547,8 @@
       <ogr:activity_end>2010-11-16T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.668911</ogr:lon>
+      <ogr:lat>51.805278</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -505,6 +565,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.80361414</ogr:lon>
+      <ogr:lat>52.38472366</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -521,6 +583,8 @@
       <ogr:activity_end>2013-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.917294</ogr:lon>
+      <ogr:lat>52.390931</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -537,6 +601,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.04306364</ogr:lon>
+      <ogr:lat>51.1202774</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -553,6 +619,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.64806938</ogr:lon>
+      <ogr:lat>52.38166428</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -569,6 +637,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.05084181</ogr:lon>
+      <ogr:lat>52.80472183</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -585,6 +655,8 @@
       <ogr:activity_end>2011-12-31T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.926397</ogr:lon>
+      <ogr:lat>51.971389</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -601,6 +673,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.195567</ogr:lon>
+      <ogr:lat>52.120833</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -617,6 +691,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.177789</ogr:lon>
+      <ogr:lat>52.100833</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -633,6 +709,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.61915016</ogr:lon>
+      <ogr:lat>52.44850159</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -649,6 +727,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.838336</ogr:lon>
+      <ogr:lat>52.138889</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -665,6 +745,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.125286</ogr:lon>
+      <ogr:lat>52.106111</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -681,6 +763,8 @@
       <ogr:activity_end>2004-10-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.125286</ogr:lon>
+      <ogr:lat>52.095833</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -697,6 +781,8 @@
       <ogr:activity_end>2013-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.103058</ogr:lon>
+      <ogr:lat>52.093889</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -713,6 +799,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.121114</ogr:lon>
+      <ogr:lat>52.068889</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -729,6 +817,8 @@
       <ogr:activity_end>2005-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.125286</ogr:lon>
+      <ogr:lat>52.095556</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -745,6 +835,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.605839</ogr:lon>
+      <ogr:lat>52.0925</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -761,6 +853,8 @@
       <ogr:activity_end>2003-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.647514</ogr:lon>
+      <ogr:lat>51.973056</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -777,6 +871,8 @@
       <ogr:activity_end>2002-04-03T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.953614</ogr:lon>
+      <ogr:lat>52.223056</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -793,6 +889,8 @@
       <ogr:activity_end>2013-07-16T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.966719</ogr:lon>
+      <ogr:lat>52.213964</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -809,6 +907,8 @@
       <ogr:activity_end>2002-04-02T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.962789</ogr:lon>
+      <ogr:lat>52.191944</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -825,6 +925,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.988614</ogr:lon>
+      <ogr:lat>52.203056</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -841,6 +943,8 @@
       <ogr:activity_end>2002-04-23T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.037503</ogr:lon>
+      <ogr:lat>52.121389</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -857,6 +961,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.51028633</ogr:lon>
+      <ogr:lat>52.29805374</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -873,6 +979,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.72139168</ogr:lon>
+      <ogr:lat>52.27249908</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -889,6 +997,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.70861912</ogr:lon>
+      <ogr:lat>52.11249924</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -905,6 +1015,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.9333334</ogr:lon>
+      <ogr:lat>52.87666321</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -921,6 +1033,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.316125</ogr:lon>
+      <ogr:lat>52.075</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -937,6 +1051,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.858061</ogr:lon>
+      <ogr:lat>51.848889</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -953,6 +1069,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.858061</ogr:lon>
+      <ogr:lat>51.838889</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -969,6 +1087,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.57889986</ogr:lon>
+      <ogr:lat>53.21805573</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -985,6 +1105,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.97111416</ogr:lon>
+      <ogr:lat>50.88805771</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1001,6 +1123,8 @@
       <ogr:activity_end>2013-11-14T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.976953</ogr:lon>
+      <ogr:lat>50.885</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1017,6 +1141,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.50806093</ogr:lon>
+      <ogr:lat>52.16805649</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1033,6 +1159,8 @@
       <ogr:activity_end>2011-12-27T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.919536</ogr:lon>
+      <ogr:lat>52.348572</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1049,6 +1177,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.82500839</ogr:lon>
+      <ogr:lat>51.59360886</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1065,6 +1195,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.78084707</ogr:lon>
+      <ogr:lat>51.60333252</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1081,6 +1213,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.36056376</ogr:lon>
+      <ogr:lat>52.03972244</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1097,6 +1231,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.46167755</ogr:lon>
+      <ogr:lat>51.92694473</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1113,6 +1249,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.60889721</ogr:lon>
+      <ogr:lat>53.24694443</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1129,6 +1267,8 @@
       <ogr:activity_end>1993-12-31T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.598069</ogr:lon>
+      <ogr:lat>52.346111</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1145,6 +1285,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.87611961</ogr:lon>
+      <ogr:lat>52.38500214</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1161,6 +1303,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.94389725</ogr:lon>
+      <ogr:lat>52.38888931</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1177,6 +1321,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.84501123</ogr:lon>
+      <ogr:lat>52.38111115</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1193,6 +1339,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.88805819</ogr:lon>
+      <ogr:lat>52.3900032</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1209,6 +1357,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.8088975</ogr:lon>
+      <ogr:lat>52.3599968</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1225,6 +1375,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.87000275</ogr:lon>
+      <ogr:lat>52.39305878</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1241,6 +1393,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.9000001</ogr:lon>
+      <ogr:lat>52.35805511</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1257,6 +1411,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.89806938</ogr:lon>
+      <ogr:lat>52.33388901</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1273,6 +1429,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.84102249</ogr:lon>
+      <ogr:lat>52.33949661</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1289,6 +1447,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.90500307</ogr:lon>
+      <ogr:lat>52.3730545</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1305,6 +1465,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.86084175</ogr:lon>
+      <ogr:lat>52.3758316</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1321,6 +1483,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.98889446</ogr:lon>
+      <ogr:lat>52.32138824</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1337,6 +1501,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.79361963</ogr:lon>
+      <ogr:lat>52.37888718</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1353,6 +1519,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.8166666</ogr:lon>
+      <ogr:lat>52.45000076</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1369,6 +1537,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.51388884</ogr:lon>
+      <ogr:lat>51.65277863</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1385,6 +1555,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.12833357</ogr:lon>
+      <ogr:lat>52.10222244</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1401,6 +1573,8 @@
       <ogr:activity_end>2009-06-25T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.397222</ogr:lon>
+      <ogr:lat>51.408056</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1417,6 +1591,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.39333344</ogr:lon>
+      <ogr:lat>51.40750122</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1433,6 +1609,8 @@
       <ogr:activity_end>2010-08-19T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.909444</ogr:lon>
+      <ogr:lat>52.2175</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1449,6 +1627,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.603333</ogr:lon>
+      <ogr:lat>52.493889</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1465,6 +1645,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.35527754</ogr:lon>
+      <ogr:lat>51.86610794</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1481,6 +1663,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.401389</ogr:lon>
+      <ogr:lat>51.921111</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1497,6 +1681,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.77083302</ogr:lon>
+      <ogr:lat>51.92805862</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1513,6 +1699,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.27750015</ogr:lon>
+      <ogr:lat>51.76305389</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1529,6 +1717,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.85222197</ogr:lon>
+      <ogr:lat>52.16611099</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1545,6 +1735,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.07416677</ogr:lon>
+      <ogr:lat>51.89500046</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1561,6 +1753,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.084167</ogr:lon>
+      <ogr:lat>51.91694641</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1577,6 +1771,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.34027815</ogr:lon>
+      <ogr:lat>51.9011116</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1593,6 +1789,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.31777763</ogr:lon>
+      <ogr:lat>51.9011116</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1609,6 +1807,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.29638863</ogr:lon>
+      <ogr:lat>51.91111374</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1625,6 +1825,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.30472231</ogr:lon>
+      <ogr:lat>51.89889145</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1641,6 +1843,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.14166641</ogr:lon>
+      <ogr:lat>51.97194672</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1657,6 +1861,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.09000015</ogr:lon>
+      <ogr:lat>51.96111298</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1673,6 +1879,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.31972218</ogr:lon>
+      <ogr:lat>51.86999893</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1689,6 +1897,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.3125</ogr:lon>
+      <ogr:lat>51.88888931</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1705,6 +1915,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.38888884</ogr:lon>
+      <ogr:lat>51.88805771</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1721,6 +1933,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.48111105</ogr:lon>
+      <ogr:lat>51.89111328</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1737,6 +1951,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.48749971</ogr:lon>
+      <ogr:lat>51.89389038</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1753,6 +1969,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.57472229</ogr:lon>
+      <ogr:lat>51.86888885</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1769,6 +1987,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.51388884</ogr:lon>
+      <ogr:lat>51.91805649</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1785,6 +2005,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.43111086</ogr:lon>
+      <ogr:lat>51.93805695</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1801,6 +2023,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.48000002</ogr:lon>
+      <ogr:lat>51.91389084</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1817,6 +2041,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.46166658</ogr:lon>
+      <ogr:lat>51.92694473</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1833,6 +2059,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.22777796</ogr:lon>
+      <ogr:lat>51.9319458</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1849,6 +2077,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.12138891</ogr:lon>
+      <ogr:lat>51.97805786</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1865,6 +2095,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.73000002</ogr:lon>
+      <ogr:lat>52.40000153</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1881,6 +2113,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.70821381</ogr:lon>
+      <ogr:lat>51.80065918</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1897,6 +2131,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>6.91949415</ogr:lon>
+      <ogr:lat>52.23450089</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1913,6 +2149,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.76999998</ogr:lon>
+      <ogr:lat>52.43000031</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1929,6 +2167,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>3.91538056</ogr:lon>
+      <ogr:lat>51.284534</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1945,6 +2185,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>3.745008</ogr:lon>
+      <ogr:lat>51.464383</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1961,6 +2203,8 @@
       <ogr:activity_end>2012-01-01T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.866</ogr:lon>
+      <ogr:lat>52.36</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1977,6 +2221,8 @@
       <ogr:activity_end>2013-08-07T00:00:00+01:00</ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.121031</ogr:lon>
+      <ogr:lat>51.977442</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -1993,6 +2239,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.832064</ogr:lon>
+      <ogr:lat>52.420219</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2009,6 +2257,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.601922</ogr:lon>
+      <ogr:lat>52.46302</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2025,6 +2275,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.8617</ogr:lon>
+      <ogr:lat>52.56359</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2041,6 +2293,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.77359</ogr:lon>
+      <ogr:lat>52.33356</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2057,6 +2311,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.766679</ogr:lon>
+      <ogr:lat>52.28743</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2073,6 +2329,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.715071</ogr:lon>
+      <ogr:lat>52.32745</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2089,6 +2347,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.638642</ogr:lon>
+      <ogr:lat>52.4866</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2105,6 +2365,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.6288</ogr:lon>
+      <ogr:lat>52.4744</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2121,6 +2383,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.729</ogr:lon>
+      <ogr:lat>52.79</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2137,6 +2401,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.808593</ogr:lon>
+      <ogr:lat>51.5359</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2153,6 +2419,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.623361</ogr:lon>
+      <ogr:lat>51.70078</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2169,6 +2437,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.181552</ogr:lon>
+      <ogr:lat>52.23508</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2185,6 +2455,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.17583</ogr:lon>
+      <ogr:lat>52.26798</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2201,6 +2473,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.235903</ogr:lon>
+      <ogr:lat>52.25736</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2217,6 +2491,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.664074</ogr:lon>
+      <ogr:lat>52.15407</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2233,6 +2509,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>4.92343</ogr:lon>
+      <ogr:lat>51.97464</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
   <gml:featureMember>
@@ -2249,6 +2527,8 @@
       <ogr:activity_end></ogr:activity_end>
       <ogr:version></ogr:version>
       <ogr:belongs_to></ogr:belongs_to>
+      <ogr:lon>5.986853</ogr:lon>
+      <ogr:lat>50.900317</ogr:lat>
     </ogr:stations>
   </gml:featureMember>
 </ogr:FeatureCollection>
