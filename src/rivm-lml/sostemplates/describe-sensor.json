@@ -2,6 +2,6 @@
   "request": "DescribeSensor",
   "service": "SOS",
   "version": "2.0.0",
-  "procedure": "urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-807",
+  "procedure": "urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-{station_id}",
   "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1"
 }

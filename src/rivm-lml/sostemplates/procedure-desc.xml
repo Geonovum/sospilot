@@ -9,27 +9,27 @@
                 <sml:IdentifierList>
                     <sml:identifier name="uniqueID">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
-                            <sml:value>urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-807</sml:value>
+                            <sml:value>urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-{station_id}</sml:value>
                         </sml:Term>
                     </sml:identifier>
                     <sml:identifier name="longName">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
-                            <sml:value>RIVM Rijksinstituut voor Volksgezondheid en Milieu (http://www.rivm.nl) - Station Hellendoorn
+                            <sml:value>RIVM Rijksinstituut voor Volksgezondheid en Milieu (http://www.rivm.nl) - Station {municipality}
                             </sml:value>
                         </sml:Term>
                     </sml:identifier>
                     <sml:identifier name="shortName">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
-                            <sml:value>RIVM - Station Hellendoorn</sml:value>
+                            <sml:value>RIVM - Station {municipality}</sml:value>
                         </sml:Term>
                     </sml:identifier>
                 </sml:IdentifierList>
             </sml:identification>
             <sml:capabilities name="offerings">
                 <swe:SimpleDataRecord>
-                    <swe:field name="Offering for sensor 807">
+                    <swe:field name="Offering for sensor {station_id}">
                         <swe:Text definition="urn:ogc:def:identifier:OGC:offeringID">
-                            <swe:value>http://sensors.geonovum.nl/rivm-lml/offering/lml/807</swe:value>
+                            <swe:value>http://sensors.geonovum.nl/rivm-lml/offering/lml/{station_id}</swe:value>
                         </swe:Text>
                     </swe:field>
                 </swe:SimpleDataRecord>
@@ -47,7 +47,7 @@
                 <swe:SimpleDataRecord>
                     <swe:field name="featureOfInterestID">
                         <swe:Text>
-                            <swe:value>http://sensors.geonovum.nl/rivm-lml/featureOfInterest/807</swe:value>
+                            <swe:value>http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}</swe:value>
                         </swe:Text>
                     </swe:field>
                 </swe:SimpleDataRecord>
@@ -59,19 +59,19 @@
                             <swe:coordinate name="easting">
                                 <swe:Quantity axisID="x">
                                     <swe:uom code="degree"/>
-                                    <swe:value>6.40361404</swe:value>
+                                    <swe:value>{station_lon}</swe:value>
                                 </swe:Quantity>
                             </swe:coordinate>
                             <swe:coordinate name="northing">
                                 <swe:Quantity axisID="y">
                                     <swe:uom code="degree"/>
-                                    <swe:value>52.38916779</swe:value>
+                                    <swe:value>{station_lat}</swe:value>
                                 </swe:Quantity>
                             </swe:coordinate>
                             <swe:coordinate name="altitude">
                                 <swe:Quantity axisID="z">
                                     <swe:uom code="m"/>
-                                    <swe:value>7.0</swe:value>
+                                    <swe:value>{station_altitude}</swe:value>
                                 </swe:Quantity>
                             </swe:coordinate>
                         </swe:Vector>
@@ -87,6 +87,21 @@
             </sml:inputs>
             <sml:outputs>
                 <sml:OutputList>
+                    <sml:output name="value_benzeen">
+                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/benzeen">
+                            <swe:uom code="ug/m3"/>
+                        </swe:Quantity>
+                    </sml:output>
+                    <sml:output name="value_CO">
+                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/CO">
+                            <swe:uom code="ug/m3"/>
+                        </swe:Quantity>
+                    </sml:output>
+                    <sml:output name="value_NH3">
+                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/NH3">
+                            <swe:uom code="ug/m3"/>
+                        </swe:Quantity>
+                    </sml:output>
                     <sml:output name="value_NO">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/NO">
                             <swe:uom code="ug/m3"/>
@@ -104,6 +119,16 @@
                     </sml:output>
                     <sml:output name="value_PM10">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/PM10">
+                            <swe:uom code="ug/m3"/>
+                        </swe:Quantity>
+                    </sml:output>
+                    <sml:output name="value_PM25">
+                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/PM25">
+                            <swe:uom code="ug/m3"/>
+                        </swe:Quantity>
+                    </sml:output>
+                    <sml:output name="value_SO2">
+                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/SO2">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>

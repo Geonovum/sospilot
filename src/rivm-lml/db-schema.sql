@@ -56,3 +56,82 @@ INSERT INTO etl_progress (worker, source_table, last_id, last_update)
 -- Already Generated from CSV via ogr2ogr
 
 -- VIEWS measurements with stations to create tables for e.g. WFS/WMS(-Time)
+
+-- The selector using INNER JOIN on stations
+-- SELECT m.file_name, m.insert_time, m.component, m.station_id, m.sample_id, m.sample_time, m.sample_value, m.validated,
+--   s.point, s.local_id, s.eu_station_code, s.municipality, s.altitude, s.area_classification, s.activity_begin, s.activity_end
+--    FROM rivm_lml.measurements as m
+--      INNER JOIN rivm_lml.stations as s ON m.station_id = s.natl_station_code;
+
+
+DROP VIEW IF EXISTS rivm_lml.measurements_stations;
+CREATE VIEW rivm_lml.measurements_stations AS
+   SELECT m.gid, m.station_id, s.municipality, m.component, m.sample_time, m.sample_value, s.point, m.validated,
+          m.file_name, m.insert_time, m.sample_id,
+          s.local_id, s.eu_station_code, s.altitude, s.area_classification,
+          s.activity_begin, s.activity_end
+          FROM rivm_lml.measurements as m
+            INNER JOIN rivm_lml.stations as s ON m.station_id = s.natl_station_code;
+
+-- Laatste 24 uur aan metingen voor station en component
+-- SELECT  * FROM  rivm_lml.measurements
+--   WHERE sample_time >  current_timestamp::timestamp without time zone - '1 day'::INTERVAL
+--      AND component = 'NO' AND station_id = '136' order by sample_time desc;
+
+-- Laatste meting voor station en component
+-- SELECT  * FROM  rivm_lml.measurements
+--   WHERE sample_time >  current_timestamp::timestamp without time zone - '1 day'::INTERVAL
+--      AND component = 'NO' AND station_id = '136' order by sample_time desc limit 1;
+
+-- last measured sample value per station for component
+-- SELECT DISTINCT ON (station_id)  station_id, municipality, gid, sample_time , sample_value
+--      FROM rivm_lml.measurements_stations WHERE component = 'SO2' ORDER BY station_id, gid DESC;
+
+DROP VIEW IF EXISTS rivm_lml.v_last_measurements_CO;
+CREATE VIEW rivm_lml.v_last_measurements_CO AS
+  SELECT DISTINCT ON (station_id) station_id,
+    municipality, gid, sample_time, sample_value, point, validated, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'CO' ORDER BY station_id, gid DESC;
+
+DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NH3;
+CREATE VIEW rivm_lml.v_last_measurements_NH3 AS
+  SELECT DISTINCT ON (station_id) station_id,
+    municipality, gid, sample_time, sample_value, point, validated, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'NH3' ORDER BY station_id, gid DESC;
+
+DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NO;
+CREATE VIEW rivm_lml.v_last_measurements_NO AS
+  SELECT DISTINCT ON (station_id) station_id,
+    municipality, gid, sample_time, sample_value, point, validated, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'NO' ORDER BY station_id, gid DESC;
+
+DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NO2;
+CREATE VIEW rivm_lml.v_last_measurements_NO2 AS
+  SELECT DISTINCT ON (station_id) station_id,
+    municipality, gid, sample_time, sample_value, point, validated, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'NO2' ORDER BY station_id, gid DESC;
+
+DROP VIEW IF EXISTS rivm_lml.v_last_measurements_O3;
+CREATE VIEW rivm_lml.v_last_measurements_O3 AS
+  SELECT DISTINCT ON (station_id) station_id,
+    municipality, gid, sample_time, sample_value, point, validated, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'O3' ORDER BY station_id, gid DESC;
+
+-- DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM2_5;
+-- CREATE VIEW rivm_lml.v_last_measurements_PM2_5 AS
+--   SELECT DISTINCT ON (station_id) station_id,
+--     municipality, gid, sample_time, sample_value, point, validated, sample_id
+--   FROM rivm_lml.measurements_stations WHERE component = 'PM2_5' ORDER BY station_id, gid DESC;
+
+DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM10;
+CREATE VIEW rivm_lml.v_last_measurements_PM10 AS
+  SELECT DISTINCT ON (station_id) station_id,
+    municipality, gid, sample_time, sample_value, point, validated, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'PM10' ORDER BY station_id, gid DESC;
+
+DROP VIEW IF EXISTS rivm_lml.v_last_measurements_SO2;
+CREATE VIEW rivm_lml.v_last_measurements_SO2 AS
+  SELECT DISTINCT ON (station_id) station_id,
+    municipality, gid, sample_time, sample_value, point, validated, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'SO2' ORDER BY station_id, gid DESC;
+
