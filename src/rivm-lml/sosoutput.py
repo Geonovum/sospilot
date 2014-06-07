@@ -69,4 +69,23 @@ class SOSTOutput(HttpOutput):
 
             payload = self.template_str.format(**format_args)
             # print payload
-            return payload
+        else:
+            if self.sos_request == 'insert-observation':
+                format_args = dict()
+                # need station_id, unique_id (sample_id?),
+                # component, municipality(may be null), station_lat, station_lon,
+                # sample_time, sample_value
+                format_args['component'] = record[3]
+                format_args['station_id'] = record[4]
+                format_args['unique_id'] = record[5]
+                format_args['sample_time'] = record[6]
+
+                format_args['municipality'] = 'Municipality for %s' % format_args['station_id']
+                format_args['station_lon'] = '4.9'
+                format_args['station_lat'] = '52.2'
+                format_args['sample_value'] = record[7]
+
+                payload = self.template_str.format(**format_args)
+                # print payload
+
+        return payload

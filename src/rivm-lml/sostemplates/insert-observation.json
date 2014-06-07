@@ -1,46 +1,46 @@
-{
+{{
   "request": "InsertObservation",
   "service": "SOS",
   "version": "2.0.0",
   "offering": "http://sensors.geonovum.nl/rivm-lml/offering/lml/{station_id}",
-  "observation": {
-    "identifier": {
-      "value": "http://sensors.geonovum.nl/rivm-lml/observation/{station_id}/11",
+  "observation": {{
+    "identifier": {{
+      "value": "{unique_id}",
       "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
-    },
+    }},
     "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
     "procedure": "urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-{station_id}",
     "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{component}",
-    "featureOfInterest": {
-      "identifier": {
+    "featureOfInterest": {{
+      "identifier": {{
         "value": "http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}",
         "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
-      },
+      }},
       "name": [
-        {
+        {{
           "value": "{municipality}",
           "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
-        }
+        }}
       ],
-      "geometry": {
+      "geometry": {{
         "type": "Point",
         "coordinates": [
           {station_lat},
           {station_lon}
         ],
-        "crs": {
+        "crs": {{
           "type": "name",
-          "properties": {
+          "properties": {{
             "name": "EPSG:4326"
-          }
-        }
-      }
-    },
+          }}
+        }}
+      }}
+    }},
     "phenomenonTime": "{sample_time}",
     "resultTime": "{sample_time}",
-    "result": {
+    "result": {{
       "uom": "ug/m3",
       "value": {sample_value}
-    }
-  }
-}
+    }}
+  }}
+}}
