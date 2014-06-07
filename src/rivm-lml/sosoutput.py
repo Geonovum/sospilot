@@ -20,10 +20,10 @@ class SOSTOutput(HttpOutput):
 
     def __init__(self, configdict, section):
         HttpOutput.__init__(self, configdict, section, consumes=FORMAT.record)
-        self.content_type = self.cfg.get('content_type', 'application/json')
-        self.sos_request = self.cfg.get('sos_request', 'application/json')
+        self.content_type = self.cfg.get('content_type', 'application/json;charset=UTF-8')
+        self.sos_request = self.cfg.get('sos_request', 'insert-observation')
 
-        # Template file
+        # Template file, to be used as POST body with substituted values
         self.template_file_ext = self.cfg.get('template_file_ext', 'json')
         self.template_file_root = self.cfg.get('template_file_root', 'sostemplates')
         self.template_file_path = '%s/%s.%s' % (self.template_file_root, self.sos_request, self.template_file_ext)
@@ -68,8 +68,5 @@ class SOSTOutput(HttpOutput):
             format_args['station_lat'] = record[14]
 
             payload = self.template_str.format(**format_args)
-            print payload
+            # print payload
             return payload
-
-    def get_headers(self, packet):
-        return {"Content−type": "Content-type: %s" % self.content_type, "Accept": "%s" % self.content_type}
