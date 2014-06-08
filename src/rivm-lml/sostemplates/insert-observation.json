@@ -2,15 +2,15 @@
   "request": "InsertObservation",
   "service": "SOS",
   "version": "2.0.0",
-  "offering": "http://sensors.geonovum.nl/rivm-lml/offering/lml/{station_id}",
+  "offering": "http://sensors.geonovum.nl/rivm-lml/offering/{station_id}",
   "observation": {{
     "identifier": {{
       "value": "{unique_id}",
       "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
     }},
     "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
-    "procedure": "urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-{station_id}",
-    "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{component}",
+    "procedure": "http://sensors.geonovum.nl/rivm-lml/procedure/{station_id}",
+    "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/{component}",
     "featureOfInterest": {{
       "identifier": {{
         "value": "http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}",

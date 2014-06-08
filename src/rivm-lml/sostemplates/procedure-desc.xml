@@ -9,7 +9,7 @@
                 <sml:IdentifierList>
                     <sml:identifier name="uniqueID">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
-                            <sml:value>urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-{station_id}</sml:value>
+                            <sml:value>http://sensors.geonovum.nl/rivm-lml/procedure/{station_id}</sml:value>
                         </sml:Term>
                     </sml:identifier>
                     <sml:identifier name="longName">
@@ -29,7 +29,7 @@
                 <swe:SimpleDataRecord>
                     <swe:field name="Offering for sensor {station_id}">
                         <swe:Text definition="urn:ogc:def:identifier:OGC:offeringID">
-                            <swe:value>http://sensors.geonovum.nl/rivm-lml/offering/lml/{station_id}</swe:value>
+                            <swe:value>http://sensors.geonovum.nl/rivm-lml/offering/{station_id}</swe:value>
                         </swe:Text>
                     </swe:field>
                 </swe:SimpleDataRecord>
