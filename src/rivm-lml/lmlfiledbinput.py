@@ -5,7 +5,7 @@
 # Author:Just van den Broecke
 
 from stetl.util import Util, etree
-from stetl.input import Input
+from stetl.inputs.dbinput import PostgresDbInput
 from stetl.packet import FORMAT
 from stetl.postgis import PostGIS
 
@@ -13,27 +13,15 @@ from datetime import datetime
 
 log = Util.get_log("LmlFileDbInput")
 
-class LmlFileDbInput(Input):
+class LmlFileDbInput(PostgresDbInput):
     """
     Reads RIVM raw AQ/LML file data from lml_files table and converts to recordlist
     """
-    def __init__(self, configdict, section, produces=FORMAT.record):
-        Input.__init__(self, configdict, section, produces)
+    def __init__(self, configdict, section):
+        PostgresDbInput.__init__(self, configdict, section)
         self.progress_query = self.cfg.get('progress_query')
         self.progress_update = self.cfg.get('progress_update')
-        self.files_query = self.cfg.get('files_query')
         self.db = None
-
-    def init(self):
-        # Connect only once to DB
-        log.info('Init: connect to DB')
-        self.db = PostGIS(self.cfg.get_dict())
-        self.db.connect()
-
-    def exit(self):
-        # Disconnect from DB when done
-        log.info('Exit: disconnect from DB')
-        self.db.disconnect()
 
     def after_chain_invoke(self, packet):
         """
@@ -55,12 +43,11 @@ class LmlFileDbInput(Input):
         log.info('progress record: %s' % str(progress_rec))
 
         # Fetch next batch of lml_files records
-        lml_file_recs_len = self.db.execute(self.files_query % self.last_id)
-        lml_file_recs = self.db.cursor.fetchall()
-        log.info('read lml_file_recs: %d' % lml_file_recs_len)
+        lml_file_recs = self.do_query(self.query % self.last_id)
+        log.info('read lml_file_recs: %d' % len(lml_file_recs))
 
         # No more records to process?
-        if lml_file_recs_len == 0:
+        if len(lml_file_recs) == 0:
             packet.set_end_of_stream()
             log.info('Nothing to do. All file_records done')
             return packet
@@ -68,12 +55,16 @@ class LmlFileDbInput(Input):
         # Process lml_files records and create recordlist
         record_list = []
         for file_rec in lml_file_recs:
-            log.info('process: file_rec gid=%d file=%s' % (file_rec[0], file_rec[2]))
-            self.last_id = file_rec[0]
-            file_data = file_rec[3]
+            gid = file_rec.get('gid')
+            file_name = file_rec.get('file_name')
 
-            # Parse file data and create a record
-            xml_doc = etree.fromstring(file_data)
+            log.info('process: file_rec gid=%d file=%s' % (gid, file_name))
+
+            # Remember last id processed for next query
+            self.last_id = gid
+
+            # Parse file data and create a record from XML DOM
+            xml_doc = etree.fromstring(file_rec.get('file_data'))
             measurements = xml_doc.xpath('/message/body/*')
             for measurement in measurements:
                 record = dict()
@@ -88,7 +79,7 @@ class LmlFileDbInput(Input):
                 #    <gevalideerd>0</gevalideerd>
                 #   </meting>
 
-                record['file_name'] = file_rec[2]
+                record['file_name'] = file_name
 
                 # station_id variants: '318' or  'NL01485'  or 'NL49551'
                 # always take last three digits?

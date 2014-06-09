@@ -70,14 +70,14 @@
             <sml:inputs>
                 <sml:InputList>
                     <sml:input name="test_observable_property_1">
-                        <swe:ObservableProperty definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/1"/>
+                        <swe:ObservableProperty definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/1"/>
                     </sml:input>
                 </sml:InputList>
             </sml:inputs>
             <sml:outputs>
                 <sml:OutputList>
                     <sml:output name="test_observable_property_1">
-                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/1">
+                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/1">
                             <swe:codeSpace xlink:href="test_unit_1"/>
                         </swe:Quantity>
                     </sml:output>

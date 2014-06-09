@@ -41,6 +41,17 @@ class SOSTOutput(HttpOutput):
         self.file.close()
         self.file = None
 
+        # For insert-sensor we need the Procedure SML (XML) and escape/insert this into
+        # the JSON insert-sensor string.
+        if self.sos_request == 'insert-sensor':
+
+            f = open('%s/procedure-desc.xml' % self.template_file_root, 'r')
+            proc_desc = f.read()
+            proc_desc = proc_desc.replace('"', '\\"')
+            proc_desc = proc_desc.replace('\n', '')
+            self.template_str = self.template_str.replace('{procedure-desc.xml}', proc_desc)
+            f.close()
+
     def create_payload(self, packet):
         record = packet.data
 
@@ -82,9 +93,13 @@ class SOSTOutput(HttpOutput):
                 # Time format: "yyyy-MM-dd'T'HH:mm:ssZ"  e.g. 2013-09-29T18:46:19+0100
                 format_args['sample_time'] = record['sample_time'].strftime('%Y-%m-%dT%H:%M:%S+0100')
 
-                format_args['municipality'] = 'Municipality for %s' % format_args['station_id']
-                format_args['station_lon'] = '4.9'
-                format_args['station_lat'] = '52.2'
+                municipality = record['municipality']
+                if municipality is None or len(municipality) == 0:
+                    municipality = 'Unknown municipality for station id %s' % record['station_id']
+
+                format_args['municipality'] = municipality
+                format_args['station_lon'] = record['lon']
+                format_args['station_lat'] = record['lat']
                 format_args['sample_value'] = record['sample_value']
 
                 payload = self.template_str.format(**format_args)

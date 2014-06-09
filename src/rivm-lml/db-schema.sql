@@ -1,7 +1,7 @@
 -- Database defs for LML RIVM data
 
 -- Raw file table, data harvesting from RIVM Apache SOS server
-DROP TABLE IF EXISTS lml_files;
+DROP TABLE IF EXISTS lml_files CASCADE;
 CREATE TABLE lml_files (
   gid serial,
   insert_time timestamp default current_timestamp,
@@ -15,7 +15,7 @@ DROP INDEX IF EXISTS lml_files_idx;
 CREATE UNIQUE INDEX lml_files_idx ON lml_files USING btree (file_name) ;
 
 -- Raw measurements table - data from lml_files transformed via ETL
-DROP TABLE IF EXISTS measurements;
+DROP TABLE IF EXISTS measurements CASCADE;
 CREATE TABLE measurements (
   gid serial,
   file_name character varying (32),
@@ -36,7 +36,7 @@ CREATE UNIQUE INDEX sample_id_idx ON measurements USING btree (sample_id) ;
 
 -- ETL progress tabel, houdt bij voor ieder ETL proces ("worker") wat het
 -- laatst verwerkte record id is van hun bron tabel.
-DROP TABLE IF EXISTS etl_progress;
+DROP TABLE IF EXISTS etl_progress CASCADE;
 CREATE TABLE etl_progress (
   gid serial,
   worker character varying (25),
@@ -64,9 +64,9 @@ INSERT INTO etl_progress (worker, source_table, last_id, last_update)
 --      INNER JOIN rivm_lml.stations as s ON m.station_id = s.natl_station_code;
 
 
-DROP VIEW IF EXISTS rivm_lml.measurements_stations;
+DROP VIEW IF EXISTS rivm_lml.measurements_stations CASCADE;
 CREATE VIEW rivm_lml.measurements_stations AS
-   SELECT m.gid, m.station_id, s.municipality, m.component, m.sample_time, m.sample_value, s.point, m.validated,
+   SELECT m.gid, m.station_id, s.municipality, m.component, m.sample_time, m.sample_value, s.point, s.lon, s.lat, m.validated,
           m.file_name, m.insert_time, m.sample_id,
           s.local_id, s.eu_station_code, s.altitude, s.area_classification,
           s.activity_begin, s.activity_end
