@@ -6,10 +6,15 @@
 # Usually required in order to have Python find your package
 export PYTHONPATH=.:$PYTHONPATH
 
-options="database=sensors host=localhost user=postgres password=postgres schema=rivm_lml"
+db_options="database=sensors host=localhost user=postgres password=postgres schema=rivm_lml"
 
 logdir=/var/log/sospilot
 
-stetl -c harvester.cfg -a "$options"            >> $logdir/harvester.log 2>&1
+stetl -c harvester.cfg -a "$db_options"            >> $logdir/harvester.log 2>&1
 
-stetl -c files2measurements.cfg -a "$options"   >> $logdir/files2measurements.log 2>&1
+stetl -c files2measurements.cfg -a "$db_options"   >> $logdir/files2measurements.log 2>&1
+
+http_options="http_host=sensors.geonovum.nl http_port=80 http_user=postgres http_password=postgres  http_path=/sos/service"
+
+$stetl_cmd -c measurements2sos.cfg -a "$options $http_options"  >> $logdir/measurements2sos.log 2>&
+
