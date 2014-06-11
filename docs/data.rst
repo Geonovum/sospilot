@@ -31,10 +31,9 @@ ETL Design
 
 Three main ETL steps with three datastores:
 
-#. Harvest source data from RIVM e.g. from  http://geluid.rivm.nl/sos and store locally
+#. Harvest source data from RIVM e.g. from  http://lml.rivm.nl/xml and store locally
 #. Transform local source data to intermediate “core” AQDB
 #. “Core DB” naar 52N SOS DB, evt later naar IPR/INSPIRE XML
-
 
 The dataflow is as follows:
 
@@ -43,12 +42,12 @@ The dataflow is as follows:
 #. The AQ ETL process reads these file blobs and transforms these to the Core AQ DB (Raw Measurements)
 #. The Core AQ DB contains measurements + stations in regular tables 1-1 with original data, adding also a Time column
 #. The Core AQ DB can be used for OWS (WMS/WFS) services via GeoServer (possibly using VIEW by Measurements/Stations JOIN)
-#. The SOS ETL process transforms core AQ data to the 52North SOS DB schema (how? directly, WFS or REST?)
+#. The SOS ETL process transforms core AQ data to SOS Observations and publishes Observations using SOS-T InsertObservation
 #. These three processes run continuously (via cron)
 #. Each process always knows its progress and where it needs to resume, even after it has been stopped (by storing a 'timestamp' in Progress table)
 
 
-De 3 ETL-processen (bijv via cron) houden steeds hun laatste sync-time bij in DB.
+These three ETL processes manage their ``last sync-time`` within the Database.
 
 Advantages of this approach:
 
@@ -60,9 +59,19 @@ Advantages of this approach:
 * OWS server (WMS/WFS evt WCS) can directly use op Core OM DB (possibly via Measurements/Stations JOIN VIEW evt, see below)
 
 The Open Source ETL tool `Stetl, Streaming ETL <http://www.stetl.org>`_  , is used for most of the transformation steps.
+Stetl provides standard modules for building an ETL Chain via a configuration file.
+This ETL Chain is a linkage of Input, Filter and Output modules. Each module is a Python class
+derived from Stetl base classes. In addition a developer
+may add custom modules where standard Stetl modules are not available or to specialize processing aspects.
 
-The Postgres tables, except the ``stations`` table is defined in an SQL file:
-https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/db-schema.sql
+Stetl has been used sucessfully to publish BAG (Dutch Addresses and Buildings) to INSPIRE Addresses via
+XSLT and WFS-T (to the ``deegree WFS server``) but also for transformation of Dutch topography (Top10NL and BGT)
+to PostGIS. As Stetl is written in Python it is well-integrated with standard ETL and Geo-tools like GDAl/OGR, XSLT and
+PostGIS.
+
+At runtime Stetl (via the ``stetl`` command) basically reads the config file,
+creates all modules and links their inputs and outputs. This also makes for an easy programming model
+as one only needs to concentrate on a single ETL step.
 
 ETL Step 1. - Harvester
 -----------------------
@@ -314,8 +323,8 @@ These VIEWs can readily applied for WMS with legenda's like here:
 http://www.eea.europa.eu/data-and-maps/figures/rural-concentration-map-of-the-ozone-indicator-aot40-for-crops-year-3
 
 
-ETL Step 3 - SOS ready Data
----------------------------
+ETL Step 3 - SOS Publication
+----------------------------
 
 In this step the Raw Measurements data (see Step 2) is transformed to "SOS Ready Data",
 i.e. data that can be handled by the 52North SOS server. Three options:
@@ -327,20 +336,23 @@ i.e. data that can be handled by the 52North SOS server. Three options:
 Discussion:
 
 #. Direct publication into the SOS DB (39 tables!) seems to be cumbersome and error prone and not future-proof
-#. via "SOS Transactions" is an option
+#. via "SOS Transactions" (SOS-T) seems a good and standard option
 #. Using the REST-API seems the quickest/most efficient way to go, but the status of the REST implementation is unsure.
 
-To clean DB: reinstall PG schema and remove ``/var/www/sensors.geonovum.nl/webapps/sos/cache.tmp``.
+So from here on publication via SOS-T is further expanded.
 
-SOS Transaction
-~~~~~~~~~~~~~~~
+SOS Transaction - PoC
+~~~~~~~~~~~~~~~~~~~~~
 
-A small PoC using the available requests and sensor ML as example is quite promising.
-Created JSON ``insert-sensor`` and ``insert-observation`` requests and executed these
+A small Proof-of-Concept using the available requests and sensor ML as example was quite promising.
+This also provides an example for the mapping strategy.
+
+We have created JSON ``insert-sensor`` and ``insert-observation`` requests and executed these
 in the Admin SOS webclient. Each Sensor denotes a single station with Input just "Air" and one
-Output for each chemical Component (here O3, MO, NO2, PM10). These files can serve as templates
-for the ETL. The ``insert-sensor`` needs to be done once per Station. The ``insert-observation``
-per measurement, though we may consider using an ``insert-result-template`` and then ``insert-result`` for efficiency.
+Output for each chemical Component (here O3, MO, NO2, PM10). These files can serve later as templates
+for the ETL via Stetl. The ``insert-sensor`` needs to be done once per Station before invoking any ``InsertObservation``.
+The ``insert-observation`` is performed per measurement, though we may consider using an
+``insert-result-template`` and then ``insert-result`` or ``SOS-Batch`` operations for efficiency.
 
 See the images below.
 
@@ -357,9 +369,145 @@ And the observation insert below.
 
    *Figure - Inserting a single measured value (O3) as an Observation as using SOS via 52N SOS Admin webclient*
 
+SOS Publication - Stetl Strategy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As Stetl only supports WFS-T, not yet SOS, a SOS Output module ``sosoutput.py`` was developed derived
+from the standard ``httpoutput.py`` module. See https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/sosoutput.py.
+
+Most importantly, the raw RIVM-LML data
+from Step 2 needs to be transformed to OWS O&M data. The easiest is to use ``substitutable templates``, like the
+Stetl config itself also applies. This means we develop files with SOS Requests in which all variable parts get a
+symbolic value like {sample_value}. These templates can be found under
+https://github.com/Geonovum/sospilot/tree/master/src/rivm-lml/sostemplates in particular
+
+* https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/sostemplates/insert-sensor.json InsertSensor
+* https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/sostemplates/procedure-desc.xml Sensor ML
+* https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/sostemplates/insert-observation.json InsertObservation
+
+These templates were derived from the sample SOS requests available in the 52N SOS Admin Client.
+Note that we use JSON for the requests, as this is simpler than XML. The Sensor ML is embedded in the
+insert-sensor JSON request.
+
+
+SOS Publication - Sensors
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This step needs to be performed only once, or when any of the original Station data (CSV) changes.
+
+The Stetl config https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/stations2sensors.cfg
+uses a Standard Stetl module, ``inputs.dbinput.PostgresDbInput`` for obtaining Record data from a Postgres database.
+
+    {{
+      "request": "InsertSensor",
+      "service": "SOS",
+      "version": "2.0.0",
+      "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1",
+      "procedureDescription": "{procedure-desc.xml}",
+       "observableProperty": [
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/benzeen",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/CO",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NH3",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NO",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NO2",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/O3",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/PM10",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/PM25",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/SO2"
+      ],
+      "observationType": [
+        "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+      ],
+      "featureOfInterestType": "http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"
+    }}
+
+The SOSTOutput module will expand ``{procedure-desc.xml}`` with the Sensor ML template.
+
+SOS Publication - Observations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Stetl config https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/measurements2sos.cfg
+uses an extended Stetl module (``inputs.dbinput.PostgresDbInput``) for obtaining Record data from a Postgres database:
+https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/measurementsdbinput.py.
+This is required to track progress in the ``etl_progress`` table similar as in Step 2.
+The ``last_id`` is remembered.
+
+The Observation template looks as follows:
+
+   {{
+      "request": "InsertObservation",
+      "service": "SOS",
+      "version": "2.0.0",
+      "offering": "http://sensors.geonovum.nl/rivm-lml/offering/{station_id}",
+      "observation": {{
+        "identifier": {{
+          "value": "{unique_id}",
+          "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+        }},
+        "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+        "procedure": "http://sensors.geonovum.nl/rivm-lml/procedure/{station_id}",
+        "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/{component}",
+        "featureOfInterest": {{
+          "identifier": {{
+            "value": "http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}",
+            "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+          }},
+          "name": [
+            {{
+              "value": "{municipality}",
+              "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+            }}
+          ],
+          "geometry": {{
+            "type": "Point",
+            "coordinates": [
+              {station_lat},
+              {station_lon}
+            ],
+            "crs": {{
+              "type": "name",
+              "properties": {{
+                "name": "EPSG:4326"
+              }}
+            }}
+          }}
+        }},
+        "phenomenonTime": "{sample_time}",
+        "resultTime": "{sample_time}",
+        "result": {{
+          "uom": "ug/m3",
+          "value": {sample_value}
+        }}
+      }}
+   }}
+
+It is quite trivial in ``sosoutput.py`` to substitute these values from the ``measurements``-table records.
+
+Like in ETL Step 2 the progress is remembered in the table ``rivm_lml.etl_progress`` by updating the ``last_id`` field
+after publication, where that value represents the ``gid`` value of ``rivm_lml.measurements``.
+
+SOS Publication - Results
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We can observe the database being filled:
+
+.. figure:: _static/sos-database-filling.jpg
+   :align: center
+
+   *Figure - SOS server database being filled: 140 Sensors (Stations) about 100000 Observations inserted*
+
+Via the standard SOS protocol the results can be tested:
+
+* GetCapabilities: http://sensors.geonovum.nl/sos/service?service=SOS&request=GetCapabilities
+* DescribeSensor (station 807, Hellendoorn): http://tinyurl.com/mmsr9hl  (URL shortened)
+* GetObservation: http://tinyurl.com/ol82sxv (URL shortened)
+
 
 REST API
 ~~~~~~~~
+
+For now the REST API will **not** be used since SOS-T is used (see above).
+Below is for possible future reference.
 
 Documentation REST API: http://52north.org/files/sensorweb/docs/sos/restful/restful_sos_documentation.pdf
 
