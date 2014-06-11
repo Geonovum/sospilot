@@ -378,7 +378,7 @@ from the standard ``httpoutput.py`` module. See https://github.com/Geonovum/sosp
 Most importantly, the raw RIVM-LML data
 from Step 2 needs to be transformed to OWS O&M data. The easiest is to use ``substitutable templates``, like the
 Stetl config itself also applies. This means we develop files with SOS Requests in which all variable parts get a
-symbolic value like {sample_value}. These templates can be found under
+symbolic value like ``{sample_value}``. These templates can be found under
 https://github.com/Geonovum/sospilot/tree/master/src/rivm-lml/sostemplates in particular
 
 * https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/sostemplates/insert-sensor.json InsertSensor
@@ -396,7 +396,7 @@ SOS Publication - Sensors
 This step needs to be performed only once, or when any of the original Station data (CSV) changes.
 
 The Stetl config https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/stations2sensors.cfg
-uses a Standard Stetl module, ``inputs.dbinput.PostgresDbInput`` for obtaining Record data from a Postgres database.
+uses a Standard Stetl module, ``inputs.dbinput.PostgresDbInput`` for obtaining Record data from a Postgres database. ::
 
     {{
       "request": "InsertSensor",
@@ -432,7 +432,7 @@ https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/measurementsdbinpu
 This is required to track progress in the ``etl_progress`` table similar as in Step 2.
 The ``last_id`` is remembered.
 
-The Observation template looks as follows:
+The Observation template looks as follows. ::
 
    {{
       "request": "InsertObservation",
