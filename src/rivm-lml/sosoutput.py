@@ -88,6 +88,8 @@ class SOSTOutput(HttpOutput):
                 # sample_time, sample_value
                 format_args['component'] = record['component']
                 format_args['station_id'] = record['station_id']
+
+                # See issue: somehow the unique_id ends up in the capabilities doc!
                 format_args['unique_id'] = record['sample_id']
 
                 # Time format: "yyyy-MM-dd'T'HH:mm:ssZ"  e.g. 2013-09-29T18:46:19+0100

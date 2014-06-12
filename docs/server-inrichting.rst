@@ -646,6 +646,32 @@ Verdere gegevens:
 
   * Logfile: /var/lib/tomcat7/logs/52n-sos-webapp.log
 
+Patches
+~~~~~~~
+
+Since the install from 19052014, the following patches were applied.
+
+* 20140519-patch: ``85658 May 21 17:26 coding-sensorML-v101-4.0.2-SNAPSHOT.jar``
+* 20140612-patch: ``do-core-0.1.3-SNAPSHOT.jar`` and   ``hibernate-common-4.0.2-SNAPSHOT.jar``
+
+The 20140612-patch solves 2 issues:
+
+#. all Observation identifiers were listed in GetCapabilities: https://github.com/Geonovum/sospilot/issues/2
+#. observable property needed to be unique: https://github.com/Geonovum/sospilot/issues/3
+
+Replaced ::
+
+    -rw-r--r-- 1 tomcat7 tomcat7   23436 May 19 10:58 do-core-0.1.3-SNAPSHOT.jar
+    -rw-r--r-- 1 tomcat7 tomcat7  289999 May 19 10:58 hibernate-common-4.0.2-SNAPSHOT.jar
+
+    with
+
+    -rw-r--r-- 1 tomcat7 tomcat7   23529 Jun 12 14:21 do-core-0.1.3-SNAPSHOT.jar
+    -rw-r--r-- 1 tomcat7 tomcat7  289876 Jun 12 14:21 hibernate-common-4.0.2-SNAPSHOT.jar
+
+Patching is done by: Stop Tomcat, Copy patch .jar to
+``/var/www/sensors.geonovum.nl/webapps/sos/WEB-INF/lib``, Start Tomcat.
+
 Installatie - ETL Tools
 =======================
 

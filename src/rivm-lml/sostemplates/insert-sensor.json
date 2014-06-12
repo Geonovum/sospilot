@@ -5,15 +5,15 @@
   "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1",
   "procedureDescription": "{procedure-desc.xml}",
    "observableProperty": [
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/benzeen",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/CO",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NH3",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NO",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NO2",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/O3",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/PM10",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/PM25",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/SO2"
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/benzeen",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/CO",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/NH3",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/NO",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/NO2",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/O3",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM10",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM25",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/SO2"
   ],
   "observationType": [
     "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"

@@ -88,5 +88,15 @@ Admin GeoServer: http://sensors.geonovum.nl/gs/web
 
 Admin SOS: http://sensors.geonovum.nl/sos
 
+SOS Server
+----------
+
+The original version  received was ``52N-SOS-INSPIRE-with-RestAPI_20140519.zip``. This version has been
+patched since to solve some issues. See ``server-inrichting`` chapter.
+
+Patching basically means: Stop Tomcat, copy a replacement .jar to ``/var/www/sensors.geonovum.nl/webapps/sos/WEB-INF/lib``
+and start Tomcat.
+
+
 
 

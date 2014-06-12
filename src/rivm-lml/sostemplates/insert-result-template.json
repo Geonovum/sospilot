@@ -7,7 +7,7 @@
   "observationTemplate": {
     "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
     "procedure": "urn:ogc:object:feature:Sensor:RIVM:rivm-sensor-{station_id}",
-    "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/O3",
+    "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/O3",
     "featureOfInterest": {
       "identifier": {
         "value": "http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}",
@@ -51,7 +51,7 @@
       {
         "type": "quantity",
         "name": "observable_property_9",
-        "definition": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/O3",
+        "definition": "http://sensors.geonovum.nl/rivm-lml/observableProperty/O3",
         "uom": "test_unit_9"
       }
     ]

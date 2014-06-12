@@ -10,7 +10,7 @@
     }},
     "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
     "procedure": "http://sensors.geonovum.nl/rivm-lml/procedure/{station_id}",
-    "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/{component}",
+    "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{component}",
     "featureOfInterest": {{
       "identifier": {{
         "value": "http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}",
