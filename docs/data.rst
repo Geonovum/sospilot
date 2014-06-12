@@ -100,11 +100,11 @@ read already. This is implemented in the file https://github.com/Geonovum/sospil
 
 Note: there are two data streams with AQ Data from RIVM: "XML" oriented and "SOS" oriented. We will use the "XML" oriented
 as the file format is simpler to process and less redundant with station info. The URL is
-http://test.lml.rivm.nl/xml, later to become http://lml.rivm.nl/xml.
+http://test.lml.rivm.nl/xml, later to become http://www.lml.rivm.nl/xml.
 
 For completeness, the "SOS" oriented are identical
 in measurements, though not rounded, but that should be within error range:
-http://test.lml.rivm.nl/sos, later to become http://lml.rivm.nl/sos.
+http://test.lml.rivm.nl/sos, later to become http://www.lml.rivm.nl/sos.
 
 There also seem to be differences, for example "SOS": ::
 
@@ -405,15 +405,15 @@ uses a Standard Stetl module, ``inputs.dbinput.PostgresDbInput`` for obtaining R
       "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1",
       "procedureDescription": "{procedure-desc.xml}",
        "observableProperty": [
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/benzeen",
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/CO",
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NH3",
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NO",
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/NO2",
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/O3",
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/PM10",
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/PM25",
-        "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/SO2"
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/benzeen",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/CO",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/NH3",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/NO",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/NO2",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/O3",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM10",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM25",
+        "http://sensors.geonovum.nl/rivm-lml/observableProperty/SO2"
       ],
       "observationType": [
         "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
@@ -446,7 +446,7 @@ The Observation template looks as follows. ::
         }},
         "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
         "procedure": "http://sensors.geonovum.nl/rivm-lml/procedure/{station_id}",
-        "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{station_id}/{component}",
+        "observedProperty": "http://sensors.geonovum.nl/rivm-lml/observableProperty/{component}",
         "featureOfInterest": {{
           "identifier": {{
             "value": "http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}",
