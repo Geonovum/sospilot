@@ -16,6 +16,7 @@ Contents:
    ideas.rst
    data.rst
    services.rst
+   clients.rst
    administration.rst
    server-inrichting.rst
    contact.rst

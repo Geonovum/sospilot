@@ -55,9 +55,17 @@ may be interesting like Voronoi diagrams: http://smathermather.wordpress.com/201
 The OWS services are available from this URL:
 http://sensors.geonovum.nl/gs/sensors/ows
 
-The WFS capabilties: http://sensors.geonovum.nl/gs/wfs?request=GetCapabilities
+The WFS capabilities: http://sensors.geonovum.nl/gs/wfs?request=GetCapabilities
 
 The WMS Capabilities: http://sensors.geonovum.nl/gs/wms?request=GetCapabilities
+
+The Capbilitities also show for the ``<component>_measurements`` Layers the Time dimension.
+See figure below.
+
+.. figure:: _static/capabilities-layer-time-dim.jpg
+   :align: center
+
+   *Figure - WMS Capabilities Layer with Time Dimension*
 
 Stations Layer
 --------------
