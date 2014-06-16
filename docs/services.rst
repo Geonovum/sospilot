@@ -327,7 +327,7 @@ Integration with other SOSs
 On June 13, 2014, a first test was performed integrating Air Quality SOSs from Belgium, Holland and Sweden
 via the 52 North HTML5 client. This gave a promising result as depicted below.
 
-.. figure:: _static/lml-measurements-stations-wfsreq.jpg
+.. figure:: _static/aq-screenshot-52n-client1s.jpg
    :align: center
 
    *Figure - GeoServer measurements Layer WFS query*
