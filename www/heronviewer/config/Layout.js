@@ -17,6 +17,15 @@ Ext.namespace("Heron.options");
 Ext.namespace("Heron.options.layertree");
 Heron.options.urls = Heron.scratch.urls;
 
+// Create end interval date from current date for timeseries slider config.
+Heron.date = new Date();
+Heron.date.setHours(Heron.date.getHours()+1)
+Heron.date.setMinutes(0);
+Heron.date.setSeconds(0);
+Heron.date.setMilliseconds(0);
+
+Heron.date = Heron.date.toISOString();
+
 /**
  * Defines the entire layout of a Heron webapp using ExtJS-style.
  *
@@ -66,9 +75,9 @@ Heron.layout = {
             items: [
                 {
                     xtype: 'hr_activethemespanel',
-                    height: 300,
                     title: 'Active Layers',
                     contextMenu: 'defaults',
+                    collapsed: true,
 
                     hropts: {
                         // Defines the custom components added with the standard layer node.
@@ -82,11 +91,12 @@ Heron.layout = {
                     // Optional, use internal default if not set
                     contextMenu: 'defaults',
                     hropts: Heron.options.layertree,
-                    flex: 3
+                    collapsed: false
                 },
                 {
                     xtype: 'hr_gxplayerpanel',
                     id: 'gxplayerpanel',
+                    collapsed: true,
                     border: false,
                     title: 'Add Layers (Experimental)',
 //                    header: false,
@@ -218,9 +228,10 @@ Heron.layout = {
                         }
                     }
                 },
-               {
+                {
                     xtype: 'hr_bookmarkspanel',
                     id: 'hr-bookmarks',
+                    collapsed: true,
                     /** The map contexts to show links for in the BookmarksPanel. */
                     hropts: Heron.options.bookmarks
                 }
@@ -248,25 +259,59 @@ Heron.layout = {
             ]
         },
         {
-            xtype: 'hr_layerlegendpanel',
-            id: 'hr-layerlegend-panel',
+            xtype: 'panel',
+
+            id: 'hr-right-main',
+            layout: 'border', //vertical box for left column
             collapsible: true,
-            border: false,
-            width: 260,
             region: 'east',
-            defaults: {
-                useScaleParameter: true,
-                baseParams: {
-                    FORMAT: 'image/png'
+            width: 320,
+            border: false,
+            items: [
+                {
+                    xtype: 'panel',
+                    flex: 1, //gives precedence, and "flexes" to fill space
+                    height: 140,
+                    region: 'north',
+                    layout: 'fit',
+                    items: [
+                        { xtype: 'hr_timerangepanel',
+                            border: false,
+                            dimension: {
+                                name: 'time',
+                                currentValue: '2014-05-01T20:00:00Z',
+                                defaultValue: '2014-05-01T20:00:00Z',
+                                units: 'ISO8601',
+                                values: '2014-05-01T20:00:00Z/' + Heron.date + '/PT1H'
+                            },
+                            layerNames: ["KNMI - Rain Radar (Color)",
+                                "RIVM - Measurements CO",
+                                "RIVM - Measurements NH3","RIVM - Measurements NO2",
+                                "RIVM - Measurements NO", "RIVM - Measurements PM10",
+                                "RIVM - Measurements O3", "RIVM - Measurements SO2"]
+                        }
+                    ]
+                },
+                {
+                    xtype: 'hr_layerlegendpanel',
+                    id: 'hr-layerlegend-panel',
+                    region: 'center',
+                    border: false,
+                    defaults: {
+                        useScaleParameter: true,
+                        baseParams: {
+                            FORMAT: 'image/png'
+                        }
+                    },
+                    hropts: {
+                        // Preload Legends on initial startup
+                        // Will fire WMS GetLegendGraphic's for WMS Legends
+                        // Otherwise Legends will be loaded only when Layer
+                        // becomes visible. Default: false
+                        prefetchLegends: false
+                    }
                 }
-            },
-            hropts: {
-                // Preload Legends on initial startup
-                // Will fire WMS GetLegendGraphic's for WMS Legends
-                // Otherwise Legends will be loaded only when Layer
-                // becomes visible. Default: false
-                prefetchLegends: false
-            }
+            ]
         }
     ]
 };

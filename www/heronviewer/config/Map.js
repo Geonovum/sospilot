@@ -310,14 +310,13 @@ Heron.options.map.layers = [
     new OpenLayers.Layer.Vector("RIVM - Stations (WFS)", {
         strategies: [new OpenLayers.Strategy.BBOX()],
         visibility: false,
-        style:
-            {fillColor: '#37f',
-                                            fillOpacity: 0.8,
-                                            graphicName: "triangle",
-                                            strokeColor: '#03c',
-                                            strokeWidth: 2,
-                                            graphicZIndex: 1,
-                                            pointRadius: 4},
+        style: {fillColor: '#37f',
+            fillOpacity: 0.8,
+            graphicName: "triangle",
+            strokeColor: '#03c',
+            strokeWidth: 2,
+            graphicZIndex: 1,
+            pointRadius: 4},
         protocol: new OpenLayers.Protocol.WFS({
             version: '1.1.0',
             outputFormat: 'GML2',
@@ -328,6 +327,280 @@ Heron.options.map.layers = [
             geometryName: 'point'
         })
     }),
+
+
+    /*
+     * RIVM: Measurements CO
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Measurements CO",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "measurements_co", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Last Measurements CO
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Last Measurements CO",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "last_measurements_co", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements NH3
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Measurements NH3",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "measurements_nh3", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Last Measurements NH3
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Last Measurements NH3",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "last_measurements_nh3", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements NO
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Measurements NO",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "measurements_no", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements NO
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Last Measurements NO",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "last_measurements_no", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements NO2
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Measurements NO2",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "measurements_no2", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Last Measurements NO2
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Last Measurements NO2",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "last_measurements_no2", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements O3
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Last Measurements O3",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "last_measurements_o3", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements O3
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Measurements O3",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "measurements_o3", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements PM10
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Measurements PM10",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "measurements_pm10", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements PM10
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Last Measurements PM10",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "last_measurements_pm10", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: Measurements SO2
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Measurements SO2",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "measurements_so2", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
 
     /*
      * RIVM: Last Measurements SO2
@@ -349,6 +622,28 @@ Heron.options.map.layers = [
             }
         }
     ),
+
+    /* END RIVM */
+
+    /* START KNMI */
+    // http://geoservices.knmi.nl/cgi-bin/RADNL_OPER_R___25PCPRR_L3.cgi?SERVICE=WMS&&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap
+    // &LAYERS=RADNL_OPER_R___25PCPRR_L3_COLOR&WIDTH=550&HEIGHT=512&CRS=EPSG%3A3857&
+    // BBOX=-10713.691389678395,6332649.790725125,1219245.7073756782,7477630.176484875&STYLES=default&
+    // FORMAT=image/png&TRANSPARENT=TRUE&&time=2014-05-15T11%3A30%3A00Z
+    /*
+     * KNMI: Rain Radar
+     */
+    new OpenLayers.Layer.WMS(
+        "KNMI - Rain Radar (Color)",
+        "http://geoservices.knmi.nl/cgi-bin/RADNL_OPER_R___25PCPRR_L3.cgi?",
+        {layers: "RADNL_OPER_R___25PCPRR_L3_COLOR", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
+        }
+    ),
+
+    // More KNMI at: http://geoservices.knmi.nl/WMSexamplesinADAGUC.html
+    // http://geoservices.knmi.nl/cgi-bin/INTER_OPER_R___OBSERV__L3.cgi?
 
     /*
      * PDOK: BAG Adressen
@@ -983,8 +1278,8 @@ Ext.namespace("Heron.options.layertree");
 Heron.options.layertree.tree = [
     {
         // JvdB: Container for layers added via "Add layers", initially hidden until Layers added
-   		text:'Toegevoegde Lagen', nodeType: 'hr_userlayercontainer', expanded: true, children: []
-   	},
+        text: 'Toegevoegde Lagen', nodeType: 'hr_userlayercontainer', expanded: true, children: []
+    },
     {
         text: 'Basis Kaarten', expanded: true, children: [
         {nodeType: "gx_layer", layer: "BRT Achtergrondkaart", text: "BRT (PDOK)" },
@@ -995,24 +1290,63 @@ Heron.options.layertree.tree = [
     ]
     },
     {
-         text: 'RIVM LML', expanded: true, children: [
+        text: 'RIVM LML', expanded: true, children: [
         {nodeType: "gx_layer", layer: "RIVM - Stations", text: "AQ Measurement Stations (WMS)" },
         {nodeType: "gx_layer", layer: "RIVM - Stations (WFS)", text: "AQ Measurement Stations (WFS)" },
 
-         {
-             text: 'Last Measured Values', expanded: false, children: [
-             {nodeType: "gx_layer", layer: "RIVM - Last Measurements CO" },
-             {nodeType: "gx_layer", layer: "RIVM - Last Measurements NH3" },
-             {nodeType: "gx_layer", layer: "RIVM - Last Measurements NO" },
-             {nodeType: "gx_layer", layer: "RIVM - Last Measurements NO2" },
-             {nodeType: "gx_layer", layer: "RIVM - Last Measurements O3" },
-             {nodeType: "gx_layer", layer: "RIVM - Last Measurements SO2" },
-             {nodeType: "gx_layer", layer: "RIVM - Last Measurements PM10" }
+        {
+            text: 'Carbon monoxide (CO) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Last Measurements CO", text: "Last Measurements CO" },
+            {nodeType: "gx_layer", layer: "RIVM - Measurements CO", text: "Time Series Measurements CO" }
+        ]
+        },
+        {
+            text: 'Ammonia (NH3) - WMS', expanded: true, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Last Measurements NH3", text: "Last Measurements NH3" },
+            {nodeType: "gx_layer", layer: "RIVM - Measurements NH3", text: "Time Series Measurements NH3" }
+        ]
+        },
+        {
+            text: 'Nitrogen Oxide (NO) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Last Measurements NO", text: "Last Measurements NO" },
+            {nodeType: "gx_layer", layer: "RIVM - Measurements NO", text: "Time Series Measurements NO" }
+        ]
+        },
+        {
+            text: 'Nitrogen Dioxide (NO2) - WMS', expanded: true, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Last Measurements NO2", text: "Last Measurements NO2" },
+            {nodeType: "gx_layer", layer: "RIVM - Measurements NO2", text: "Time Series Measurements NO2" }
+        ]
+        },
+        {
+            text: 'Ozone (O3) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Last Measurements O3", text: "Last Measurements O3"  },
+            {nodeType: "gx_layer", layer: "RIVM - Measurements O3", text: "Time Series Measurements O3" }
+        ]
+        },
+        {
+            text: 'Particulate Matter (PM10) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Last Measurements PM10", text: "Last Measurements PM10" },
+            {nodeType: "gx_layer", layer: "RIVM - Measurements PM10", text: "Time Series Measurements PM10"  }
 
-         ]
-         }
-     ]
-     },
+        ]
+        },
+        {
+            text: 'Sulfur Dioxide (SO2) - WMS', expanded: true, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Last Measurements SO2", text: "Last Measurements SO2" },
+            {nodeType: "gx_layer", layer: "RIVM - Measurements SO2", text: "Time Series Measurements SO2"  }
+
+        ]
+        }
+    ]
+    },
+    {
+        text: 'KNMI - Meteorology', expanded: false, children: [
+
+
+        {nodeType: "gx_layer", layer: "KNMI - Rain Radar (Color)"}
+    ]
+    },
     {
         text: 'Kadaster', expanded: false, children: [
 

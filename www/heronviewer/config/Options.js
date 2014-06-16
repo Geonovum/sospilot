@@ -109,34 +109,34 @@ Heron.options.searchPanelConfig = {
                 }
             }
         },
-        {
-            searchPanel: {
-                xtype: 'hr_gxpquerypanel',
-                name: 'Make your own queries',
-                description: 'Zoek objecten binnen kaart-extent en/of eigen zoek-criteria',
-                header: false,
-                border: false,
-                caseInsensitiveMatch: true,
-                autoWildCardAttach: true,
-                downloadFormats: Heron.options.downloadFormats
-            },
-            resultPanel: {
-                xtype: 'hr_featuregridpanel',
-                id: 'hr-featuregridpanel',
-                displayPanels: ['Table','Detail'],
-                header: false,
-                border: false,
-                autoConfig: true,
-                autoConfigMaxSniff: 150,
-                exportFormats: Heron.options.exportFormats,
-                hropts: {
-                    zoomOnRowDoubleClick: true,
-                    zoomOnFeatureSelect: false,
-                    zoomLevelPointSelect: 8,
-                    zoomToDataExtent: true
-                }
-            }
-        },
+//        {
+//            searchPanel: {
+//                xtype: 'hr_gxpquerypanel',
+//                name: 'Make your own queries',
+//                description: 'Zoek objecten binnen kaart-extent en/of eigen zoek-criteria',
+//                header: false,
+//                border: false,
+//                caseInsensitiveMatch: true,
+//                autoWildCardAttach: true,
+//                downloadFormats: Heron.options.downloadFormats
+//            },
+//            resultPanel: {
+//                xtype: 'hr_featuregridpanel',
+//                id: 'hr-featuregridpanel',
+//                displayPanels: ['Table','Detail'],
+//                header: false,
+//                border: false,
+//                autoConfig: true,
+//                autoConfigMaxSniff: 150,
+//                exportFormats: Heron.options.exportFormats,
+//                hropts: {
+//                    zoomOnRowDoubleClick: true,
+//                    zoomOnFeatureSelect: false,
+//                    zoomLevelPointSelect: 8,
+//                    zoomToDataExtent: true
+//                }
+//            }
+//        },
         {
             searchPanel: {
                 xtype: 'hr_searchbyfeaturepanel',
@@ -179,9 +179,13 @@ Heron.options.map.toolbar = [
     {type: "scale"},
     /* Leave out: see http://code.google.com/p/geoext-viewer/issues/detail?id=116 */
     {type: "featureinfo", options: {
+        pressed: true,
+        controlDefaults: {
+            maxFeatures: 1600
+        },
         popupWindow: {
-            width: 360,
-            height: 200,
+            width: 440,
+            height: 240,
             featureInfoPanel: {
                 showTopToolbar: true,
                 displayPanels: ['Table','Detail'],
@@ -190,7 +194,7 @@ Heron.options.map.toolbar = [
                 exportFormats: Heron.options.exportFormats,
                 // Export to download file. Option values are 'CSV', 'XLS', default is no export (results in no export menu).
                 // exportFormats: ['CSV', 'XLS'],
-                maxFeatures: 10,
+                maxFeatures: 1000,
 
                 // In case that the same layer would be requested more than once: discard the styles
                 discardStylesForDups: true
