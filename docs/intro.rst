@@ -7,9 +7,11 @@ Intro
 This is the main (technical) documentation for the SOS Pilot Project by Geonovum and RIVM.
 It can always be found at `sospilot.readthedocs.org <http://sospilot.readthedocs.org/>`_.
 
-The project GitHub repository is at https://github.com/Geonovum/sospilot
+The landing page for the SOSPilot project is http://sensors.geonovum.nl
 
-About this Dcoument
+The project GitHub repository is at https://github.com/Geonovum/sospilot.
+
+About this Document
 ===================
 
 This document is written in `Restructured Text (rst) <http://docutils.sourceforge.net/rst.html>`_

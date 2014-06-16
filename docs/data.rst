@@ -208,43 +208,6 @@ processed. On each new run the ETL process starts from new records since that la
 
    *Figure - LML ETL Progress Tracked in Postgres*
 
-Database Queries and VIEWs
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Having all data (stations, measurements) stored PostgreSQL tables gives rise to many possibilities
-for selection. Not just via standard SQL queries, but also via PostgreSQL VIEWs. A VIEW is basically
-a query but presented as a database table. This way data selections can be provided permanently.
-
-One appearent VIEW is to combine the ``measurements`` and ``stations`` tables into a new ``measurements_stations``
-table by means of a JOIN query. This allows for example to build a WFS or a WMS-Time service on top of the
-``measurements_stations`` VIEW. See the Services section of this document.
-The definition is as follows (``rivm_lml`` is the schema name): ::
-
-    CREATE VIEW rivm_lml.measurements_stations AS
-      SELECT m.gid, m.station_id, s.municipality, m.component, m.sample_time, m.sample_value, s.point, m.validated,
-             m.file_name, m.insert_time, m.sample_id,
-             s.local_id, s.eu_station_code, s.altitude, s.area_classification,
-             s.activity_begin, s.activity_end
-             FROM rivm_lml.measurements as m
-               INNER JOIN rivm_lml.stations as s ON m.station_id = s.natl_station_code;
-
-The data can now be viewed as rows in this table:
-
-
-.. figure:: _static/lml-measurements-stations-records.jpg
-   :align: center
-
-   *Figure - LML Postgres VIEW of combined measurements and stations*
-
-The advantage of VIEWs is that they always stay uptodate with the original tables.
-Additional VIEWs can be thought, like:
-
-* per-component measurements+stations
-* current/latest measurements for all or per component
-* averages
-* peak values
-* even Voronoi-data can be derived, though that may be expensive: http://smathermather.wordpress.com/2013/12/21/voronoi-in-postgis
-
 Some query examples: ::
 
     -- Laatste 24 uur aan metingen voor station en component
@@ -256,71 +219,6 @@ Some query examples: ::
      SELECT  * FROM  rivm_lml.measurements
        WHERE sample_time >  current_timestamp::timestamp without time zone - '1 day'::INTERVAL
           AND component = 'NO' AND station_id = '136' order by sample_time desc limit 1;
-
-    -- last measured sample value per station for component
-    SELECT DISTINCT ON (station_id)  station_id, municipality, gid, sample_time , sample_value
-         FROM rivm_lml.measurements_stations WHERE component = 'SO2' ORDER BY station_id, gid DESC;
-
-More VIEWs. There is an endless possibility in VIEWs. Below are VIEWs that provide a per-component table
-with the last measured value at each station. ::
-
-    DROP VIEW IF EXISTS rivm_lml.v_last_measurements_CO;
-    CREATE VIEW rivm_lml.v_last_measurements_CO AS
-      SELECT DISTINCT ON (station_id) station_id,
-        municipality, gid, sample_time, sample_value, point, validated, sample_id
-      FROM rivm_lml.measurements_stations WHERE component = 'CO' ORDER BY station_id, gid DESC;
-
-    DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NH3;
-    CREATE VIEW rivm_lml.v_last_measurements_NH3 AS
-      SELECT DISTINCT ON (station_id) station_id,
-        municipality, gid, sample_time, sample_value, point, validated, sample_id
-      FROM rivm_lml.measurements_stations WHERE component = 'NH3' ORDER BY station_id, gid DESC;
-
-    DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NO;
-    CREATE VIEW rivm_lml.v_last_measurements_NO AS
-      SELECT DISTINCT ON (station_id) station_id,
-        municipality, gid, sample_time, sample_value, point, validated, sample_id
-      FROM rivm_lml.measurements_stations WHERE component = 'NO' ORDER BY station_id, gid DESC;
-
-    DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NO2;
-    CREATE VIEW rivm_lml.v_last_measurements_NO2 AS
-      SELECT DISTINCT ON (station_id) station_id,
-        municipality, gid, sample_time, sample_value, point, validated, sample_id
-      FROM rivm_lml.measurements_stations WHERE component = 'NO2' ORDER BY station_id, gid DESC;
-
-    DROP VIEW IF EXISTS rivm_lml.v_last_measurements_O3;
-    CREATE VIEW rivm_lml.v_last_measurements_O3 AS
-      SELECT DISTINCT ON (station_id) station_id,
-        municipality, gid, sample_time, sample_value, point, validated, sample_id
-      FROM rivm_lml.measurements_stations WHERE component = 'O3' ORDER BY station_id, gid DESC;
-
-    -- DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM2_5;
-    -- CREATE VIEW rivm_lml.v_last_measurements_PM2_5 AS
-    --   SELECT DISTINCT ON (station_id) station_id,
-    --     municipality, gid, sample_time, sample_value, point, validated, sample_id
-    --   FROM rivm_lml.measurements_stations WHERE component = 'PM2_5' ORDER BY station_id, gid DESC;
-
-    DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM10;
-    CREATE VIEW rivm_lml.v_last_measurements_PM10 AS
-      SELECT DISTINCT ON (station_id) station_id,
-        municipality, gid, sample_time, sample_value, point, validated, sample_id
-      FROM rivm_lml.measurements_stations WHERE component = 'PM10' ORDER BY station_id, gid DESC;
-
-    DROP VIEW IF EXISTS rivm_lml.v_last_measurements_SO2;
-    CREATE VIEW rivm_lml.v_last_measurements_SO2 AS
-      SELECT DISTINCT ON (station_id) station_id,
-        municipality, gid, sample_time, sample_value, point, validated, sample_id
-      FROM rivm_lml.measurements_stations WHERE component = 'SO2' ORDER BY station_id, gid DESC;
-
-Data from these VIEWs can now be viewed as rows in this table:
-
-.. figure:: _static/lml-v-last-measurements-o3-records.jpg
-   :align: center
-
-   *Figure - LML Postgres VIEW of last measured values at each station for Ozone*
-
-These VIEWs can readily applied for WMS with legenda's like here:
-http://www.eea.europa.eu/data-and-maps/figures/rural-concentration-map-of-the-ozone-indicator-aot40-for-crops-year-3
 
 
 ETL Step 3 - SOS Publication
