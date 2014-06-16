@@ -4,8 +4,9 @@
 Web Services
 ============
 
-This chapter describes how the web services are realized on top of the
-converted/transformed data. In particular:
+This chapter describes how OGC OWS web services are realized on top of the
+converted/transformed data as described in the `data chapter <data.html>`_.
+In particular:
 
 * WFS and WMS-Time services
 * OWS SOS service
@@ -30,7 +31,8 @@ This describes the realization of WFS and WMS(-Time) in `GeoServer <http://geose
 GeoServer can directly generate OWS services from a Postgres/PostGIS datasource as one Layer per Table (or View).
 For our purpose the source tables are the
 ``stations`` table and ``measurements`` tables in the Postgres schema ``rivm-lml``.
-See the `data chapter <data.html>`_ for info how these tables are continuously populated from the raw AQ data.
+See the `data chapter <data.html>`_ for info how these tables are continuously populated from the raw AQ data via
+ETL Step 1 and Step 2.
 
 Database VIEWs
 ~~~~~~~~~~~~~~
@@ -68,7 +70,7 @@ table by means of a JOIN query as follows (``rivm_lml`` is the schema name): ::
              FROM rivm_lml.measurements as m
                INNER JOIN rivm_lml.stations as s ON m.station_id = s.natl_station_code;
 
-The data can now be viewed as rows in the ``measurements_stations`` VIEW:
+The data can now be viewed as rows in the ``measurements_stations`` VIEW, where each sample also has a POINT-geometry:
 
 .. figure:: _static/lml-measurements-stations-records.jpg
    :align: center
@@ -285,7 +287,7 @@ the WMS-Time parameter on the client, for example the `HeronViewer <http://senso
 for this project. `Heron <http://www.heron-mc.org>`_ is a web mapping client framework that builds on
 `OpenLayers <http://openlayers.org`_ . OL supports WMS Dimensions in general.
 
-.. figure:: _static/heron-viewer-2-small.jpg
+.. figure:: _static/heronviewer-2-small.jpg
    :align: center
 
    *Figure - Heron Viewer showing WMS-T Measurements Layers*
@@ -305,9 +307,9 @@ A WFS query can be as follows:
 SOS Services
 ============
 
-"The OGC Sensor Observation Service aggregates readings from live, in-situ and remote sensors.
-The service provides an interface to make sensors and sensor data archives accessible via an
-interoperable web based interface."
+*"The OGC Sensor Observation Service aggregates readings from live, in-situ and remote sensors.*
+*The service provides an interface to make sensors and sensor data archives accessible via an*
+*interoperable web based interface."*
 
 The chapter on server administration describes how the 52 North SOS server is deployed. This is
 called here the 'SOS Server'.
