@@ -285,7 +285,7 @@ layers. ::
 These layers can be rendered in any WMS viewer, but in particular viewers that support
 the WMS-Time parameter on the client, for example the `HeronViewer <http://sensors.geonovum.nl/heronviewer>`_ developed
 for this project. `Heron <http://www.heron-mc.org>`_ is a web mapping client framework that builds on
-`OpenLayers <http://openlayers.org`_ . OL supports WMS Dimensions in general.
+`OpenLayers <http://openlayers.org>`_ . OL supports WMS Dimensions in general.
 
 .. figure:: _static/heronviewer-2-small.jpg
    :align: center
