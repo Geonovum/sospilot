@@ -1,71 +1,348 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Project Pagina sensors.geonovum.nl</title>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+    <meta name="keywords"
+          content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+    <meta name="author"
+          content="Just van den Broecke - Geonovum original: Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>SOSPilot Home - Geonovum</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Documentation extras -->
+    <link href="css/bootstrap-docs.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+
 </head>
 <body>
+<a class="sr-only" href="#content">Skip to main content</a>
+
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">SOSPilot</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="active" href="#doc-index">Documentation</a>
+                </li>
+                <li>
+                    <a href="#services">Web Services</a>
+                </li>
+                <li>
+                    <a href="#clients">Clients</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
 
-<h2>Project Pagina sensors.geonovum.nl</h2>
+<!-- Docs page layout -->
+<div class="bs-docs-header" id="content">
+    <div class="container">
+        <h1>SOSPilot</h1>
 
-<p>
-    Landingspagina, nog verder in te vullen.
+        <p>Home of the RIVM/Geonovum SOSPilot project</p>
 
-</p>
-<h3>Documentatie</h3>
-<p>
-    Op <a href="http://sospilot.readthedocs.org">http://sospilot.readthedocs.org</a>.
-</p>
-<h3>Clients</h3>
-<ul>
-    <li>
-        <a href="heronviewer">Webviewer voor WMS en WFS gebaseerd op Heron</a>
-    </li>
+    </div>
+</div>
 
-</ul>
-<h3>Geonovum - 52North INSPIRE-enabled SOS server</h3>
+<div class="container bs-docs-container">
 
-<p>
-    Version: 20140521-SNAPSHOT<br>
-    URL en sample requests. Zie ook de <a href="http://sensors.geonovum.nl/sos/client">SOS Client</a>.
-</p>
-<ul>
-    <li>
-        Basis URL: <a href="http://sensors.geonovum.nl/sos">http://sensors.geonovum.nl/sos</a>
-    </li>
-    <li>
-        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&request=GetCapabilities">GetCapabilities (via
-            sensors.geonovum.nl/sos/service?)</a>
-    </li>
-    <li>
-        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&request=GetCapabilities&language=dut">GetCapabilities
-            (via sensors.geonovum.nl/sos/service?) idem met language=dut</a>
-    </li>
-    <li>
-        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&version=2.0.0&request=DescribeSensor&procedure=http://sensors.geonovum.nl/rivm-lml/procedure/807&procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1">DescribeSensor
-            2.0.0 (Station 807, Hellendoorn)
-        </a>
-    </li>
-    <li>
-        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&version=2.0.0&request=GetObservation&offering=http://sensors.geonovum.nl/rivm-lml/offering/807&observedProperty=http://sensors.geonovum.nl/rivm-lml/observableProperty/807/O3">
-            GetObservation (all Ozone Observations for Station 807, Hellendoorn)
-        </a>
-    </li>
+    <div class="row">
+        <div class="col-md-9" role="main">
 
-</ul>
+            <!-- Documentation
+            ================================================== -->
+            <div class="bs-docs-section">
+                <p>The main goal of this project is to take raw Air Quality Measurements from the
+                    <a href="http://www.rivm.nl/">Dutch RIVM</a>
+                <a href="http://www.lml.rivm.nl/">Landelijk Meetnet Luchtkwaliteit</a>
+                    and publish this data using various public standards in
+                    particular those related to <a href="http://inspire.ec.europa.eu/">INSPIRE</a> and
+                    <a href="http://www.eionet.europa.eu/aqportal">Eionet</a>. For this purpose a technical
+                    platform, "SOSPilot" has been developed. This website provides links to various
+                    elements of the SOSPilot platform.
 
-<h3>Geonovum - GeoServer </h3>
-<ul>
-    <li>
-        Basis URL: <a href="http://sensors.geonovum.nl/gs">http://sensors.geonovum.nl/gs</a>
-    </li>
-    <li>
-        <a href="http://sensors.geonovum.nl/gs/ows?service=WMS&request=GetCapabilities">WMS GetCapabilities</a>
-    </li>
-    <li>
-        <a href="http://sensors.geonovum.nl/gs/ows?service=WFS&request=GetCapabilities">WFS GetCapabilities</a>
-    </li>
+                </p>
+                <h1 id="doc-index" class="page-header">Documentation</h1>
 
-</ul>
+
+                <p>
+                    Find all technical documentation on <a href="http://sospilot.readthedocs.org">http://sospilot.readthedocs.org</a>.
+                </p>
+
+                <!--<div class="bs-callout bs-callout-danger">-->
+                <!--<h4>Plugin dependencies</h4>-->
+
+                <!--<p>Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to-->
+                <!--check for these dependencies in the docs. Also note that all plugins depend on jQuery (this means jQuery-->
+                <!--must be included <strong>before</strong> the plugin files). <a-->
+                <!--href="https://github.com/twbs/bootstrap/blob/v3.1.1/bower.json">Consult our <code>bower.json</code></a>-->
+                <!--to see which versions of jQuery are supported.</p>-->
+                <!--</div>-->
+
+                <!--<div class="bs-callout bs-callout-warning" id="callout-third-party-libs">-->
+                <!--<h4>Third-party libraries</h4>-->
+
+                <!--<p><strong>Bootstrap does not officially support third-party JavaScript libraries</strong> like Prototype or-->
+                <!--jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that-->
+                <!--you need to fix on your own.</p>-->
+                <!--</div>-->
+            </div>
+
+            <!-- Clients
+            ================================================== -->
+            <div class="bs-docs-section">
+                <h1 id="clients" class="page-header">Clients</h1>
+
+                <ul>
+                    <li>
+                        HeronViewer - <a href="heronviewer">Web-based viewer for WMS(-Time) and WFS </a> <a href="heronviewer"><img src="media/heronviewer-200.jpg"/></a>
+                    </li>
+                    <li>
+                        To be supplied: 52 North SOS WebCLient
+                    </li>
+                </ul>
+                <!--<div class="bs-callout bs-callout-danger">-->
+                <!--<h4>Plugin dependencies</h4>-->
+
+                <!--<p>Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to-->
+                <!--check for these dependencies in the docs. Also note that all plugins depend on jQuery (this means jQuery-->
+                <!--must be included <strong>before</strong> the plugin files). <a-->
+                <!--href="https://github.com/twbs/bootstrap/blob/v3.1.1/bower.json">Consult our <code>bower.json</code></a>-->
+                <!--to see which versions of jQuery are supported.</p>-->
+                <!--</div>-->
+
+                <!--<div class="bs-callout bs-callout-warning" id="callout-third-party-libs">-->
+                <!--<h4>Third-party libraries</h4>-->
+
+                <!--<p><strong>Bootstrap does not officially support third-party JavaScript libraries</strong> like Prototype or-->
+                <!--jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that-->
+                <!--you need to fix on your own.</p>-->
+                <!--</div>-->
+            </div>
+
+            <!-- Web Services
+            ================================================== -->
+            <div class="bs-docs-section">
+                <h1 id="services" class="page-header">Web Services
+                    <small>OGC WMS, WFS, SOS etc</small>
+                </h1>
+                <h3 id="services-sos">52North SOS server</h3>
+
+                <p>
+                    Version: 20140521-SNAPSHOT<br>
+                </p>
+                <ul>
+                    <li>
+                        Base URL: <a href="http://sensors.geonovum.nl/sos">http://sensors.geonovum.nl/sos</a>
+                    </li>
+                    <li>
+                        SOS API Client: <a href="http://sensors.geonovum.nl/sos/client">http://sensors.geonovum.nl/sos/client</a>
+                     </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&request=GetCapabilities">GetCapabilities
+                            (via
+                            sensors.geonovum.nl/sos/service?)</a>
+                    </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&request=GetCapabilities&language=dut">GetCapabilities
+                            (via sensors.geonovum.nl/sos/service?) ditto with INSPIRE language=dut</a>
+                    </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&version=2.0.0&request=DescribeSensor&procedure=http://sensors.geonovum.nl/rivm-lml/procedure/807&procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1">DescribeSensor
+                            2.0.0 (Station 807, Hellendoorn)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&version=2.0.0&request=GetObservation&offering=http://sensors.geonovum.nl/rivm-lml/offering/807&observedProperty=http://sensors.geonovum.nl/rivm-lml/observableProperty/O3">
+                            GetObservation (all Ozone Observations for Station 807, Hellendoorn)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/sos/service?service=SOS&version=2.0.0&request=GetObservation&offering=http://sensors.geonovum.nl/rivm-lml/offering/807&observedProperty=http://sensors.geonovum.nl/rivm-lml/observableProperty/NO2">
+                            GetObservation (all Nitrogen Dioxide (NO2) Observations for Station 807, Hellendoorn)
+                        </a>
+                    </li>
+
+                </ul>
+
+                <hr class="bs-docs-separator">
+
+                <h3 id="services-wmswfs">GeoServer</h3>
+
+                <ul>
+                    <li>
+                        Base URL: <a href="http://sensors.geonovum.nl/gs">http://sensors.geonovum.nl/gs</a>
+                    </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/gs/ows?service=WMS&request=GetCapabilities">WMS
+                            GetCapabilities</a>
+                    </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/gs/ows?service=WFS&request=GetCapabilities">WFS
+                            GetCapabilities</a>
+                    </li>
+
+                </ul>
+
+
+                <!--<div class="table-responsive">-->
+                <!--<table class="table table-bordered table-striped">-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th style="width: 150px;">Event Type</th>-->
+                <!--<th>Description</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody>-->
+                <!--<tr>-->
+                <!--<td>services.bs.services</td>-->
+                <!--<td>This event fires immediately before the element has been servicesed.</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>servicesed.bs.services</td>-->
+                <!--<td>This event is fired after the element has been servicesed.</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>services-top.bs.services</td>-->
+                <!--<td>This event fires immediately before the element has been servicesed-top.</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>servicesed-top.bs.services</td>-->
+                <!--<td>This event is fired after the element has been servicesed-top.</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>services-bottom.bs.services</td>-->
+                <!--<td>This event fires immediately before the element has been servicesed-bottom.</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>servicesed-bottom.bs.services</td>-->
+                <!--<td>This event is fired after the element has been servicesed-bottom.</td>-->
+                <!--</tr>-->
+                <!--</tbody>-->
+                <!--</table>-->
+                <!--</div>-->
+                <!-- /.table-responsive -->
+
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-print" role="complementary">
+                <ul class="nav bs-docs-sidenav">
+
+                    <li>
+                        <a href="#doc-index">Documentation</a>
+                    </li>
+
+                    <li>
+                        <a href="#clients">Clients</a>
+                     </li>
+                    <li>
+                        <a href="#services">Web Services</a>
+                        <ul class="nav">
+                            <li><a href="#services-sos">SOS</a></li>
+                            <li><a href="#services-wmswfs">WMS and WFS</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <a class="back-to-top" href="#top">Back to top</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <div class="bs-docs-social">
+            <ul class="bs-docs-social-buttons">
+                <li>
+                    <iframe class="github-btn"
+                            src="http://ghbtns.com/github-btn.html?user=Geonovum&amp;repo=sospilot&amp;type=watch&amp;count=true"
+                            width="100" height="20" title="Star on GitHub"></iframe>
+                </li>
+                <li>
+                    <iframe class="github-btn"
+                            src="http://ghbtns.com/github-btn.html?user=Geonovum&amp;repo=sospilot&amp;type=fork&amp;count=true"
+                            width="102" height="20" title="Fork on GitHub"></iframe>
+                </li>
+                <!--<li class="follow-btn">-->
+                <!--<a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6"-->
+                <!--data-show-count="true">Follow @twbootstrap</a>-->
+                <!--</li>-->
+                <!--<li class="tweet-btn">-->
+                <!--<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getbootstrap.com/"-->
+                <!--data-count="horizontal" data-via="twbootstrap" data-related="mdo:Creator of Bootstrap">Tweet</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+
+
+        <p>Original HTML by <a href="http://twitter.com/mdo"
+                               target="_blank">@mdo</a> and <a
+                href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+
+        <p>and the <a href="https://github.com/twbs?tab=members">core team</a> with the help of <a
+                href="https://github.com/twbs/bootstrap/graphs/contributors">Bootstrap contributors</a>.</p>
+
+        <p>Code licensed under <a href="https://github.com/Geonovum/sospilot/blob/master/LICENSE" target="_blank">GNU
+            GPL v3</a>,
+            documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="bs-docs-footer-links muted">
+            <li><a href="https://github.com/Geonovum/sospilot">GitHub</a></li>
+            <li>&middot;</li>
+            <li><a href="http://http://sospilot.readthedocs.org">Documentation</a></li>
+            <li>&middot;</li>
+            <li><a href="https://github.com/Geonovum/sospilot/issues?state=open">Issues</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="js/bootstrap-docs.min.js"></script>
+
+
 </body>
 </html>
-
