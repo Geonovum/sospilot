@@ -55,9 +55,10 @@ The detailed dataflow from source to destination is as follows:
 #. The Core AQ DB can be used for OWS (WMS/WFS) services via GeoServer (possibly using VIEW by Measurements/Stations JOIN)
 #. The SOS ETL process transforms core AQ data to SOS Observations and publishes Observations using SOS-T InsertObservation
 #. These three processes run continuously (via cron)
-#. Each process always knows its progress and where it needs to resume, even after it has been stopped (by storing a 'timestamp' in Progress table)
+#. Each process always knows its progress and where it needs to resume, even after it has been stopped (by storing a progress/checkpoint info)
 
-These three ETL processes manage their ``last sync-time`` within the Database.
+These last two ETL processes manage their ``last sync-time`` using a separate ``progress table`` within the database.
+The first (Harvester) only needs to check if a particular XML file (as they have a unique file name) has already been stored.
 
 Advantages of this approach:
 
@@ -110,12 +111,10 @@ Only a derived version needed to be developed in order to track which files have
 read already. This is implemented in the file https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/apachedirinput.py.
 
 Note: there are two data streams with AQ Data from RIVM: "XML" oriented and "SOS" oriented. We will use the "XML" oriented
-as the file format is simpler to process and less redundant with station info. The URL is
-http://test.lml.rivm.nl/xml, later to become http://www.lml.rivm.nl/xml.
+as the file format is simpler to process and less redundant with station info. The URL is http://www.lml.rivm.nl/xml.
 
 For completeness, the "SOS" oriented are identical
-in measurements, though not rounded, but that should be within error range:
-http://test.lml.rivm.nl/sos, later to become http://www.lml.rivm.nl/sos.
+in measurements, though not rounded, but that should be within error range.
 
 There also seem to be differences, for example "SOS": ::
 
@@ -141,12 +140,12 @@ vs "XML": ::
         <gevalideerd>0</gevalideerd>
     </meting>
 
-Gotcha: there is a file called ``actueel.xml``. This file has to be skipped to avoid double records.
+Gotcha: there is a file called ``actueel.xml`` in the XML stream. This file has to be skipped to avoid double records.
 
 ETL Step 2 - Raw Measurements
 -----------------------------
 
-This step produces raw AQ measurements, "AQ ETL" in Figure 1, from raw source (file) data harvested
+This step produces raw AQ measurements, "AQ ETL" in Figure 2, from raw source (file) data harvested
 in the table ``lml_files`` (see Step 1).
 
 Two tables: ``stations`` and ``measurements``. This is a 1:1 transformation from the raw XML.
