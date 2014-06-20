@@ -169,14 +169,16 @@ body {
 .bs-docs-masthead, .bs-docs-header {
     position: relative;
     padding: 30px 15px;
-    color: #cdbfe3;
+    /*color: #cdbfe3;*/
+    color: #ffffff;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-    background-color: #6f5499;
-    background-image: -webkit-linear-gradient(top, #563d7c 0, #6f5499 100%);
-    background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
+    background-color: #799a00;
+    /*background-color: #6f5499;*/
+    background-image: -webkit-linear-gradient(top, #799a00 0,  #97c000 100%);
+    background-image: linear-gradient(to bottom, #799a00 0,  #97c000 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#799a00', endColorstr='#97c000', GradientType=0)
 }
 
 .bs-docs-masthead .bs-docs-booticon {
@@ -564,7 +566,7 @@ body {
 }
 
 .bs-docs-section {
-    margin-bottom: 60px
+    margin-bottom: 30px
 }
 
 .bs-docs-section:last-child {
@@ -573,7 +575,7 @@ body {
 
 h1[id] {
     margin-top: 0;
-    padding-top: 20px
+    padding-top: 8px
 }
 
 .bs-callout {
