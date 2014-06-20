@@ -20,38 +20,49 @@ Figure 1 sketches the overall SOSPilot architecture with emphasis on the flow of
 Circles depict harvesting/ETL processes. Server-instances are in rectangles. Datastores
 the "DB"-icons.
 
-.. figure:: _static/sospilot-arch1.jpg
+.. figure:: _static/sospilot-arch0.jpg
    :align: center
 
    *Figure 1 - Overall Architecture*
 
+The main challenge/flow of data is from raw XML files with Air Quality data provided by the RIVM LML server.
+This server provides a directory of XML files with hourly measurements of the past month.
+The big circle "ETL" embeds the data transformation processes and storage that is required to
+deliver OGC services for WMS, WFS and SOS.
 
 ETL Design
 ==========
 
-Three main ETL steps with three datastores:
+In this section the ETL is elaborated in more detail as depicted in the figure below.
 
-#. Harvest source data from RIVM e.g. from  http://lml.rivm.nl/xml and store locally
-#. Transform local source data to intermediate “core” AQDB
-#. “Core DB” naar 52N SOS DB, evt later naar IPR/INSPIRE XML
+.. figure:: _static/sospilot-arch1.jpg
+   :align: center
 
-The dataflow is as follows:
+   *Figure 2 - Overall Architecture with ETL Steps*
+
+The ETL design comprises three main processing steps and three datastores. The three ETL Steps are:
+
+#. File Harvester: fetch source data from RIVM e.g. from  http://lml.rivm.nl/xml and store locally
+#. AQ ETL: transform this local source data to intermediate "Core AQ Data" in PostGIS
+#. SOS ETL: transform and publish "Core AQ Data" to the 52N SOS DB via SOS-Transactions (SOS-T)
+
+The detailed dataflow from source to destination is as follows:
 
 #. The File Harvester fetches XML files with AQ/LML measurements from the RIVM server
-#. The File Harvester puts these files as XML blobs 1-1 in a database
+#. The File Harvester puts these files as XML blobs 1-1 in a Postgres/PostGIS database
 #. The AQ ETL process reads these file blobs and transforms these to the Core AQ DB (Raw Measurements)
-#. The Core AQ DB contains measurements + stations in regular tables 1-1 with original data, adding also a Time column
+#. The Core AQ DB contains measurements + stations in regular tables 1-1 with original data, including a Time column
 #. The Core AQ DB can be used for OWS (WMS/WFS) services via GeoServer (possibly using VIEW by Measurements/Stations JOIN)
 #. The SOS ETL process transforms core AQ data to SOS Observations and publishes Observations using SOS-T InsertObservation
 #. These three processes run continuously (via cron)
 #. Each process always knows its progress and where it needs to resume, even after it has been stopped (by storing a 'timestamp' in Progress table)
-
 
 These three ETL processes manage their ``last sync-time`` within the Database.
 
 Advantages of this approach:
 
 * backups of source data possible
+* incrementally build up of history past the last month
 * in case of (design) errors we can always reset the 'progress timestamp(s)' and restart anew
 * simpler ETL scripts than “all-in-one", e.g. from “Core AQ DB” to "52N SOS DB" may even be in plain SQL
 * migration with changed in 52N SOS DB schema simpler
