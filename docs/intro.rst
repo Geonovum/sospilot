@@ -7,9 +7,13 @@ Intro
 This is the main (technical) documentation for the SOS Pilot Project by Geonovum and RIVM.
 It can always be found at `sospilot.readthedocs.org <http://sospilot.readthedocs.org/>`_.
 
-The landing page for the SOSPilot project is http://sensors.geonovum.nl
+The home page for the SOSPilot project is http://sensors.geonovum.nl
 
 The project GitHub repository is at https://github.com/Geonovum/sospilot.
+
+Background reading, see this article: *"Building bridges: experiences and lessons learned*
+*from the implementation of INSPIRE and e-reporting of air quality data in Europe"*
+`[PDF] <http://sensors.geonovum.nl/media/EarthSciInform_Art_10_1007.pdf>`_.
 
 About this Document
 ===================
