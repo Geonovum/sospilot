@@ -28,7 +28,8 @@ the "DB"-icons.
 The main challenge/flow of data is from raw XML files with Air Quality data provided by the RIVM LML server.
 This server provides a directory of XML files with hourly measurements of the past month.
 The big circle "ETL" embeds the data transformation processes and storage that is required to
-deliver OGC services for WMS, WFS and SOS.
+deliver OGC services for WMS, WFS and SOS and at a later stage (dashed rectangle)
+for EU IPR-complied E-reporting.
 
 ETL Design
 ==========

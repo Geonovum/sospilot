@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'SOSPilot'
-copyright = u'2014, Thijs Brentjens, Just van den Broecke, Michel Grothe'
+copyright = u'2014, Geonovum - CC BY-SA 3.0 - Just van den Broecke (author)'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
