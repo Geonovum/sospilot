@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>SOS Core Test</title>
+
+    <style type="text/css">
+      table, th, td {
+        padding-right: 10px;
+      }
+    </style>
+
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/OpenLayers/OpenLayers.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/SOS/SOS.js"></script>
+
+    <script type="text/javascript">
+      /**
+       * Initializes the page
+       */
+      function init() {
+        alert("Open the console log (Ctrl+Shift+k in Firefox) to see outputs from this test harness");
+
+        var sos = new SOS({url: 'http://sensors.geonovum.nl/sos/sos'});
+
+        console.log("***** post instantiation tests *****");
+
+        console.log("sos = ");
+        console.log(sos);
+        console.log(sos.config);
+ 
+        sos.getCapabilities(runCapsTests);
+      }
+
+      /**
+       * Callback to run tests on the SOS object
+       */
+      function runCapsTests(e) {
+        console.log("***** post getCapabilities tests *****");
+
+        console.log("this (sos) = ");
+        console.log(this);
+
+        var off = this.getOffering("HalleyMet");
+
+        if(off) {
+          console.log("off = ");
+          console.log(off);
+
+          /* Example: Request particular observed properties.  Note that
+             calling off.getObservedPropertyIds() will list available
+             observed properties of this offering.  Calling
+             off.unfilterObservedProperties() will mean that all observed
+             properties are requested, which is the default */
+          // off.filterObservedProperties(["wind_speed"]);
+          // off.filterObservedProperties(["wind_speed", "wind_direction"]);
+          // off.unfilterObservedProperties();
+
+          /* Example: Request particular FOIs.  Note that calling
+             off.getFeatureOfInterestIds() will list available FOIs of this
+             offering.  Setting off.foiId to null will mean that all FOIs
+             are requested, which is the default */
+          // off.foiId = "foi_34579";
+          // off.foiId = null;
+
+          off.getLatestObservations(runLatestObsTests);
+        }
+      }
+
+      /**
+       * Callback to run tests on the SOS latest observations
+       */
+      function runLatestObsTests(e) {
+        console.log("***** post getLatestObservations tests *****");
+
+        console.log("this (off) = ");
+        console.log(this);
+        console.log("this.getCountOfObservations() = " + this.getCountOfObservations());
+        console.log("this.getObservationRecord(0) = ");
+        console.log(this.getObservationRecord(0));
+
+        var fois = this.getFeatureOfInterestIds();
+        var html = "";
+
+        for(var i = 0, flen = fois.length; i < flen; i++) {
+          var tcaption = "";
+          var tbody = "";
+          var filter = {foiId: fois[i]};
+
+          for(var j = 0, olen = this.getCountOfObservations(); j < olen; j++) {
+            var ob = this.getFilteredObservationRecord(j, filter);
+            if(ob) {
+              if(tcaption.length < 1) {
+                var foi = this.getFeatureOfInterestFromObservationRecord(ob);
+
+                if(foi) {
+                  tcaption = foi.attributes.name;
+                }
+              }
+              tbody += '<tr>';
+              tbody += '<td>' + ob.observedPropertyTitle + '</td>';
+              tbody += '<td>' + ob.time + '</td>';
+              tbody += '<td>' + ob.result.value + ' ' + ob.uomTitle + '</td>';
+              tbody += '</tr>';
+            }
+          }
+          if(tbody.length > 0) {
+            html += '<table>';
+            html += '<caption><b>' + tcaption + '</b></caption>';
+            html += '<tbody>';
+            html += '<tr>';
+            html += '<th><b>Variable</b></th>';
+            html += '<th><b>Time</b></th>';
+            html += '<th><b>Latest Value</b></th>';
+            html += '</tr>';
+            html += tbody;
+            html += '</tbody>';
+            html += '</table>';
+            html += '<br/>';
+          }
+        }
+        document.getElementById("output").innerHTML = html;
+      }
+
+      /**
+       * Callback to run tests on the SOS latest observations
+       */
+      function runSingleStationLatestObsTests(e) {
+        /* Example:  If only a single station's observations have been
+          returned, for example, by pre-filtering on FOI before calling
+          off.getLatestObservations(), then there's no need to post-filter
+          the result via off.getFilteredObservationRecord().  We can instead
+          call off.getObservationRecord(), which simplifies things a little */
+
+        console.log("***** post getLatestObservations tests *****");
+
+        console.log("this (off) = ");
+        console.log(this);
+        console.log("this.getCountOfObservations() = " + this.getCountOfObservations());
+        console.log("this.getObservationRecord(0) = ");
+        console.log(this.getObservationRecord(0));
+
+        var tbody = "";
+
+        for(var i = 0, len = this.getCountOfObservations(); i < len; i++) {
+          var ob = this.getObservationRecord(i);
+          tbody += '<tr>';
+          tbody += '<td>' + ob.observedPropertyTitle + '</td>';
+          tbody += '<td>' + ob.time + '</td>';
+          tbody += '<td>' + ob.result.value + ' ' + ob.uomTitle + '</td>';
+          tbody += '</tr>';
+        }
+
+        var html = '<table><tbody>';
+        html += '<tr>';
+        html += '<th><b>Variable</b></th>';
+        html += '<th><b>Time</b></th>';
+        html += '<th><b>Latest Value</b></th>';
+        html += '</tr>';
+        html += tbody;
+        html += '</tbody></table>';
+
+        document.getElementById("output").innerHTML = html;
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <h3 id="title">SOS Core Test</h3>
+    <p>Open the console log (Ctrl+Shift+k in Firefox) to see outputs from this test harness</p>
+    <p>This tests the core SOS objects from the SOS.js module, via a number of user-defined callbacks.  It requests the latest data from the <em>HalleyMet</em> offering, for all observed properties, and dumps lots of output to the console log.  It is these core SOS objects that underpin the user interface components, such as SOS.Plot etc.</p>
+    <div id="output"></div>
+  </body>
+</html>
+

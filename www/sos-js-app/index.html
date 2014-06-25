@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>SOS App</title>
+
+    <link rel="stylesheet" href="http://basmet.nerc-bas.ac.uk/js/sos/jquery/theme/default/jquery-ui.min.css" type="text/css"/>
+    <link rel="stylesheet" href="http://basmet.nerc-bas.ac.uk/js/sos/SOS/SOS.Styles.css" type="text/css"/>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/proj4js/lib/proj4js-combined.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/OpenLayers/OpenLayers.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/jquery/jquery-ui.min.js"></script>
+    <!--[if lte IE 8]><script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/flot/excanvas.min.js"></script><![endif]-->
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/flot/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/flot/jquery.flot.selection.min.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/flot/jquery.flot.axislabels.min.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/flot/jquery.flot.navigate.min.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/SOS/SOS.js"></script>
+    <script type="text/javascript" src="http://basmet.nerc-bas.ac.uk/js/sos/SOS/SOS.Ui.js"></script>
+
+    <script type="text/javascript">
+      /**
+       * Initializes the page
+       */
+      function init() {
+        var options = {
+          url: 'http://sensors.geonovum.nl/sos/sos'
+        };
+        var app = new SOS.App(options);
+
+        // This SOS doesn't support the get FOI time request, so we disable it
+        app.setAppOptions({
+          foi: {getTemporalCoverage: false}
+        });
+
+        /* Customise the app's components */
+        app.setAppComponentsOptions({
+          // Setup map component to use OpenStreetMap
+          map: {
+            map: {
+              options: {
+                defaultProjection: new OpenLayers.Projection("EPSG:4326"),
+                centre: new OpenLayers.LonLat(4.5, 52.0).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913")),
+                zoom: 10,
+                params: {
+                  projection: "EPSG:900913"
+                }
+              }
+            },
+            baseLayer: {options: {useOsm: true}}
+          }
+        });
+
+        app.display();
+      }
+    </script>
+    <style>
+      .sos-app-container {
+        width: 100%;
+        position: relative;
+        left: 0px;
+        top: 10px;
+      }
+      .sos-app {
+        width: 81%;
+        height: 600px;
+        padding: 5px;
+        position: absolute;
+        left: 210px;
+        top: 5px;
+      }
+      .sos-menu-controls-container {
+        height: 180px;
+        position: absolute;
+        left: 8px;
+        top: 198px;
+      }
+
+      #helptext {
+          width: 60%;
+          height: 100px;
+          padding: 5px;
+          position: absolute;
+          left: 220px;
+          top: 500px;
+          font-size: 0.80em;
+          font-family: Helvetica, sans-serif;
+          z-index: 1000;
+       }
+    </style>
+  </head>
+  <body onload="init()">
+    <div id="helptext">This app uses the <a href="https://github.com/52North/sos-js">sos-js client library</a>.
+        First list all offerings (RIVM AQ Measurement Stations). Select an offering, then an observed property like NO2.
+        The observed property's data will then be plotted and tabulated.
+        By default, a rolling month's worth of data is shown, but specific dates
+        can be selected via the Date Range controls under the Controls menu item.
+        To overplot further data, check the Add To Existing control before selecting an additional observed property.</div>
+  </body>
+</html>
+
