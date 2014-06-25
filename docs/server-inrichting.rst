@@ -789,8 +789,6 @@ Installatie::
 Maven - Lifecycle Tool
 ----------------------
 
-*NOG EVEN NIET: alleen indien nodig, bijv SOS server custom build.*
-
 Volgens de `Maven website <http://maven.apache.org/>`_.
 
 *Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model
