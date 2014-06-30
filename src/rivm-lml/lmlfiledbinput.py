@@ -68,7 +68,7 @@ class LmlFileDbInput(PostgresDbInput):
             try:
                 xml_doc = etree.fromstring(file_rec.get('file_data'))
             except Exception, e:
-                log.warn("cannot parse file '%s' error: " % (file_name, str(e)))
+                log.warn("cannot parse file '%s' error: %s" % (file_name, str(e)))
                 break
 
             measurements = xml_doc.xpath('/message/body/*')
