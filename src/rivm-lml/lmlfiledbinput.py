@@ -64,7 +64,13 @@ class LmlFileDbInput(PostgresDbInput):
             self.last_id = gid
 
             # Parse file data and create a record from XML DOM
-            xml_doc = etree.fromstring(file_rec.get('file_data'))
+            xml_doc = None
+            try:
+                xml_doc = etree.fromstring(file_rec.get('file_data'))
+            except Exception, e:
+                log.warn("cannot parse file '%s' error: " % (file_name, str(e)))
+                break
+
             measurements = xml_doc.xpath('/message/body/*')
             for measurement in measurements:
                 record = dict()

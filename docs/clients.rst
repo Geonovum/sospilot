@@ -59,6 +59,10 @@ Install Development line from GIT ::
     $ cp /opt/52north/sensorwebclient/git/sensorwebclient-webapp/target/sensorwebclient-webapp-3.3.0-SNAPSHOT.war
         /var/www/sensors.geonovum.nl/webapps/swc.war
 
+The client runs at http://sensors.geonovum.nl:8080/swc but shows no stations for The Netherlands. It does for Belgium.
+See also this issue: https://github.com/Geonovum/sospilot/issues/11
+
+
 SOS-JS Client (52N)
 -------------------
 
@@ -105,6 +109,14 @@ plot a graph for a chemical component for a station during a timeframe.
 
    *Figure 5 - app made with SOS-JS for SOSPilot shows NO2 graph for Station Roerdalen,NL00107*
 
+One can also select multiple stations for a pollutant and select date intervals int he time segment.
+See Figure 6 below.
+
+.. figure:: _static/sos-js-sospilot-plot-multi.jpg
+   :align: center
+   :width: 650 px
+
+   *Figure 6 - app made with SOS-JS for SOSPilot shows NO2 graph for Multiple Stations*
 
 
 
