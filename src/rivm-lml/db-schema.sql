@@ -54,6 +54,10 @@ INSERT INTO etl_progress (worker, source_table, last_id, last_update)
 
 -- Stations table
 -- Already Generated from CSV via ogr2ogr
+-- create a view with active stations
+DROP VIEW IF EXISTS rivm_lml.active_stations CASCADE;
+CREATE VIEW rivm_lml.active_stations AS
+   SELECT * FROM rivm_lml.stations WHERE activity_end is NULL;
 
 -- VIEWS measurements with stations to create tables for e.g. WFS/WMS(-Time)
 

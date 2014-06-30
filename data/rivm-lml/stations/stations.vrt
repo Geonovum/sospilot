@@ -14,8 +14,8 @@
         <Field name="altitude" src="Altitude" type="Integer" />
         <Field name="altitude_unit" src="AltitudeUnit" type="String" />
         <Field name="area_classification" src="AreaClassification" type="String" />
-        <Field name="activity_begin" src="ActivityBegin" type="String" />
-        <Field name="activity_end" src="ActivityEnd" type="String" />
+        <Field name="activity_begin" src="ActivityBegin" type="DateTime" />
+        <Field name="activity_end" src="ActivityEnd" type="DateTime" />
         <Field name="version" src="Version" type="String" />
         <Field name="belongs_to" src="BelongsTo" type="String" />
         <Field name="lon" src="Lon" type="String" />

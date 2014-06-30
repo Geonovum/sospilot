@@ -166,6 +166,7 @@ To create "clean" version of eionet RIVM stations understood by ogr2ogr to read 
 * stations.csv: remove excess quotes, e.g. """
 * stations.csv: replace in CSV header ``Pos`` with ``Lat,Lon``
 * stations.csv: replace space between coordinates with comma: e.g ``,51.566389 4.932792,`` becomes ``,51.566389,4.932792,``
+* fix DateTime formatting to comply with OGR: replace ``T00:00:00`` to `` 00:00:00`` so ``1976-04-02T00:00:00+01:00`` becomes ``1976-04-02 00:00:00+01:00``
 * test result stations.csv by uploading in e.g. Geoviewer: http://kadviewer.kademo.nl
 * create or update ``stations.vrt`` for OGR mapping
 * use stations2postgis.sh to map to PostGIS table
@@ -187,6 +188,14 @@ Reading into PostGIS
    :align: center
 
    *Figure - RIVM Eionet Stations Read into Postgres/PostGIS*
+
+Note that not all stations may be active. This is indicated by the ``activity_end`` column. We create a VIEW with
+only active stations to be used for SOS Sensors (see below). ::
+
+    -- create a view with active stations
+    DROP VIEW IF EXISTS rivm_lml.active_stations CASCADE;
+    CREATE VIEW rivm_lml.active_stations AS
+       SELECT * FROM rivm_lml.stations WHERE activity_end is NULL;
 
 Measurements
 ~~~~~~~~~~~~
