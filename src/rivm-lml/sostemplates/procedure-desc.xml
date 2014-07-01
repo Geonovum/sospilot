@@ -1,8 +1,7 @@
 <sml:SensorML
-        xmlns:swes="http://www.opengis.net/swes/2.0" xmlns:sos="http://www.opengis.net/sos/2.0"
         xmlns:swe="http://www.opengis.net/swe/1.0.1" xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
-        xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0.1">
+        xmlns:gml="http://www.opengis.net/gml"
+        version="1.0.1">
     <sml:member>
         <sml:System>
             <sml:identification>
@@ -14,7 +13,8 @@
                     </sml:identifier>
                     <sml:identifier name="longName">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
-                            <sml:value>RIVM Rijksinstituut voor Volksgezondheid en Milieu (http://www.rivm.nl) - Station {municipality}
+                            <sml:value>RIVM Rijksinstituut voor Volksgezondheid en Milieu (http://www.rivm.nl) - Station
+                                {municipality}
                             </sml:value>
                         </sml:Term>
                     </sml:identifier>
@@ -34,23 +34,31 @@
                     </swe:field>
                 </swe:SimpleDataRecord>
             </sml:capabilities>
- <!--           <sml:capabilities name="parentProcedures">
+            <!--           <sml:capabilities name="parentProcedures">
+                           <swe:SimpleDataRecord>
+                               <swe:field name="parentProcedure">
+                                   <swe:Text>
+                                       <swe:value>http://sensors.geonovum.nl/rivm-lml/procedure/1</swe:value>
+                                   </swe:Text>
+                               </swe:field>
+                           </swe:SimpleDataRecord>
+                       </sml:capabilities>    -->
+            <sml:capabilities name="featuresOfInterest">
                 <swe:SimpleDataRecord>
-                    <swe:field name="parentProcedure">
-                        <swe:Text>
-                            <swe:value>http://sensors.geonovum.nl/rivm-lml/procedure/1</swe:value>
+                    <swe:field>
+                        <swe:Text definition="featureOfInterestID">
+                            <swe:value>http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}</swe:value>
                         </swe:Text>
                     </swe:field>
                 </swe:SimpleDataRecord>
-            </sml:capabilities>    -->
-            <sml:capabilities name="featuresOfInterest">
-                <swe:SimpleDataRecord>
+
+                <!-- OLD invalid: <swe:SimpleDataRecord>
                     <swe:field name="featureOfInterestID">
                         <swe:Text>
                             <swe:value>http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}</swe:value>
                         </swe:Text>
                     </swe:field>
-                </swe:SimpleDataRecord>
+                </swe:SimpleDataRecord>  -->
             </sml:capabilities>
             <sml:position name="sensorPosition">
                 <swe:Position referenceFrame="urn:ogc:def:crs:EPSG::4326">
@@ -81,7 +89,8 @@
             <sml:inputs>
                 <sml:InputList>
                     <sml:input name="air">
-                        <swe:ObservableProperty definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/air"/>
+                        <swe:ObservableProperty
+                                definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/air"/>
                     </sml:input>
                 </sml:InputList>
             </sml:inputs>
@@ -132,7 +141,7 @@
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                 </sml:OutputList>
+                </sml:OutputList>
             </sml:outputs>
         </sml:System>
     </sml:member>
