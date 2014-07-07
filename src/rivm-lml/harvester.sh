@@ -11,7 +11,10 @@ stetl_cmd=stetl
 # debugging
 # stetl_cmd=../../../../stetl/git/stetl/main.py
 
-options="database=sensors host=localhost user=postgres password=postgres schema=rivm_lml"
+# Host-specific Postgres credentials in $pg_options
+. pgcreds.sh
+
+options="$pg_options"
 
 $stetl_cmd -c harvester.cfg -a "$options"
 
