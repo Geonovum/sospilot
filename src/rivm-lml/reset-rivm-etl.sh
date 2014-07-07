@@ -14,6 +14,6 @@ cd ../../data/rivm-lml/stations
 cd -
 
 # Redefine tables and VIEWs (needs stations table)
-psql -U postgres -f db-schema.sql sensors
+psql -f db-schema.sql sensors
 
 
