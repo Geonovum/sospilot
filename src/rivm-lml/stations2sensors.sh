@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # ETL for converting station table to OWS SOS sensors.
 #

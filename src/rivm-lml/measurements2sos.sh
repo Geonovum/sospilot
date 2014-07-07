@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # ETL for converting measurements table to OWS SOS sensors.
 #

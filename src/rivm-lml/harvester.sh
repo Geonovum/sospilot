@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 #
 # ETL for harvesting LML measurement XML files from RIVM
 #
 
 # Usually requried in order to have Python find your package
-PYTHONPATH=.:$PYTHONPATH
+export PYTHONPATH=.:$PYTHONPATH
 
 stetl_cmd=stetl
 

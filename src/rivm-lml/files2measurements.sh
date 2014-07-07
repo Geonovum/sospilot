@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # ETL for harvesting LML measurement XML files from RIVM
 #
