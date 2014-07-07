@@ -13,21 +13,20 @@
                     </sml:identifier>
                     <sml:identifier name="longName">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
-                            <sml:value>RIVM Rijksinstituut voor Volksgezondheid en Milieu (http://www.rivm.nl) - Station
-                                {municipality}
+                            <sml:value>RIVM Rijksinstituut voor Volksgezondheid en Milieu (http://www.rivm.nl) - Station {station_name}
                             </sml:value>
                         </sml:Term>
                     </sml:identifier>
                     <sml:identifier name="shortName">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
-                            <sml:value>RIVM - Station {municipality}</sml:value>
+                            <sml:value>RIVM - {station_name}</sml:value>
                         </sml:Term>
                     </sml:identifier>
                 </sml:IdentifierList>
             </sml:identification>
             <sml:capabilities name="offerings">
                 <swe:SimpleDataRecord>
-                    <swe:field name="Offering for sensor {station_id}">
+                    <swe:field name="{station_id} - {station_name}">
                         <swe:Text definition="urn:ogc:def:identifier:OGC:offeringID">
                             <swe:value>http://sensors.geonovum.nl/rivm-lml/offering/{station_id}</swe:value>
                         </swe:Text>
@@ -45,7 +44,7 @@
                        </sml:capabilities>    -->
             <sml:capabilities name="featuresOfInterest">
                 <swe:SimpleDataRecord>
-                    <swe:field>
+                    <swe:field name="{station_name}">
                         <swe:Text definition="featureOfInterestID">
                             <swe:value>http://sensors.geonovum.nl/rivm-lml/featureOfInterest/{station_id}</swe:value>
                         </swe:Text>
@@ -96,47 +95,47 @@
             </sml:inputs>
             <sml:outputs>
                 <sml:OutputList>
-                    <sml:output name="value_benzeen">
+                    <sml:output name="benzeen">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/benzeen">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="value_CO">
+                    <sml:output name="CO">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/CO">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="value_NH3">
+                    <sml:output name="NH3">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/NH3">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="value_NO">
+                    <sml:output name="NO">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/NO">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="value_NO2">
+                    <sml:output name="NO2">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/NO2">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="value_O3">
+                    <sml:output name="O3">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/O3">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="value_PM10">
+                    <sml:output name="PM10">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/PM10">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="value_PM25">
+                    <sml:output name="PM25">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/PM25">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="value_SO2">
+                    <sml:output name="SO2">
                         <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/SO2">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>

@@ -37,7 +37,10 @@
 
                     <TextSymbolizer>
                         <Label>
-                            <ogc:PropertyName>sample_value</ogc:PropertyName>
+                            <ogc:Function name="numberFormat">
+                                <ogc:Literal>##</ogc:Literal>
+                                <ogc:PropertyName>sample_value</ogc:PropertyName>
+                            </ogc:Function>
                         </Label>
                         <Font>
                             <CssParameter name="font-family">

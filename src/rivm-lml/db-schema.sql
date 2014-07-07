@@ -1,8 +1,8 @@
 -- Database defs for LML RIVM data
 
 -- Raw file table, data harvesting from RIVM Apache SOS server
-DROP TABLE IF EXISTS lml_files CASCADE;
-CREATE TABLE lml_files (
+DROP TABLE IF EXISTS rivm_lml.lml_files CASCADE;
+CREATE TABLE rivm_lml.lml_files (
   gid serial,
   insert_time timestamp default current_timestamp,
   file_name character varying (32),
@@ -11,12 +11,12 @@ CREATE TABLE lml_files (
 );
 
 -- File may only occur once in table, error if trying to insert multiple times
-DROP INDEX IF EXISTS lml_files_idx;
-CREATE UNIQUE INDEX lml_files_idx ON lml_files USING btree (file_name) ;
+DROP INDEX IF EXISTS rivm_lml.lml_files_idx;
+CREATE UNIQUE INDEX rivm_lml.lml_files_idx ON lml_files USING btree (file_name) ;
 
 -- Raw measurements table - data from lml_files transformed via ETL
-DROP TABLE IF EXISTS measurements CASCADE;
-CREATE TABLE measurements (
+DROP TABLE IF EXISTS rivm_lml.measurements CASCADE;
+CREATE TABLE rivm_lml.measurements (
   gid serial,
   file_name character varying (32),
   insert_time timestamp default current_timestamp,
@@ -32,12 +32,12 @@ CREATE TABLE measurements (
 
 -- Measurement may only occur once in table, error if trying to insert multiple times
 DROP INDEX IF EXISTS sample_id_idx;
-CREATE UNIQUE INDEX sample_id_idx ON measurements USING btree (sample_id) ;
+CREATE UNIQUE INDEX sample_id_idx ON rivm_lml.measurements USING btree (sample_id) ;
 
 -- ETL progress tabel, houdt bij voor ieder ETL proces ("worker") wat het
 -- laatst verwerkte record id is van hun bron tabel.
-DROP TABLE IF EXISTS etl_progress CASCADE;
-CREATE TABLE etl_progress (
+DROP TABLE IF EXISTS rivm_lml.etl_progress CASCADE;
+CREATE TABLE rivm_lml.etl_progress (
   gid serial,
   worker character varying (25),
   source_table  character varying (25),
@@ -47,9 +47,9 @@ CREATE TABLE etl_progress (
 );
 
 -- Define workers
-INSERT INTO etl_progress (worker, source_table, last_id, last_update)
+INSERT INTO rivm_lml.etl_progress (worker, source_table, last_id, last_update)
         VALUES ('files2measurements', 'lml_files', -1, current_timestamp);
-INSERT INTO etl_progress (worker, source_table, last_id, last_update)
+INSERT INTO rivm_lml.etl_progress (worker, source_table, last_id, last_update)
         VALUES ('measurements2sos', 'measurements', -1, current_timestamp);
 
 -- Stations table
@@ -70,7 +70,7 @@ CREATE VIEW rivm_lml.active_stations AS
 
 DROP VIEW IF EXISTS rivm_lml.measurements_stations CASCADE;
 CREATE VIEW rivm_lml.measurements_stations AS
-   SELECT m.gid, m.station_id, s.municipality, m.component, m.sample_time, m.sample_value, s.point, s.lon, s.lat, m.validated,
+   SELECT m.gid, m.station_id, s.name, s.municipality, m.component, m.sample_time, m.sample_value, s.point, s.lon, s.lat, m.validated,
           m.file_name, m.insert_time, m.sample_id,
           s.local_id, s.eu_station_code, s.altitude, s.area_classification,
           s.activity_begin, s.activity_end
@@ -95,31 +95,31 @@ CREATE VIEW rivm_lml.measurements_stations AS
 DROP VIEW IF EXISTS rivm_lml.v_measurements_CO;
 CREATE VIEW rivm_lml.v_measurements_CO AS
   SELECT station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'CO';
 
 DROP VIEW IF EXISTS rivm_lml.v_measurements_NH3;
 CREATE VIEW rivm_lml.v_measurements_NH3 AS
   SELECT  station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'NH3';
 
 DROP VIEW IF EXISTS rivm_lml.v_measurements_NO;
 CREATE VIEW rivm_lml.v_measurements_NO AS
   SELECT  station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'NO';
 
 DROP VIEW IF EXISTS rivm_lml.v_measurements_NO2;
 CREATE VIEW rivm_lml.v_measurements_NO2 AS
   SELECT  station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'NO2';
 
 DROP VIEW IF EXISTS rivm_lml.v_measurements_O3;
 CREATE VIEW rivm_lml.v_measurements_O3 AS
   SELECT  station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'O3';
 
 -- DROP VIEW IF EXISTS rivm_lml.v_measurements_PM2_5;
@@ -131,44 +131,44 @@ CREATE VIEW rivm_lml.v_measurements_O3 AS
 DROP VIEW IF EXISTS rivm_lml.v_measurements_PM10;
 CREATE VIEW rivm_lml.v_measurements_PM10 AS
   SELECT  station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'PM10';
 
 DROP VIEW IF EXISTS rivm_lml.v_measurements_SO2;
 CREATE VIEW rivm_lml.v_measurements_SO2 AS
   SELECT  station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'SO2';
 
 -- Laatste Metingen per Component
 DROP VIEW IF EXISTS rivm_lml.v_last_measurements_CO;
 CREATE VIEW rivm_lml.v_last_measurements_CO AS
   SELECT DISTINCT ON (station_id) station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'CO' ORDER BY station_id, gid DESC;
 
 DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NH3;
 CREATE VIEW rivm_lml.v_last_measurements_NH3 AS
   SELECT DISTINCT ON (station_id) station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'NH3' ORDER BY station_id, gid DESC;
 
 DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NO;
 CREATE VIEW rivm_lml.v_last_measurements_NO AS
   SELECT DISTINCT ON (station_id) station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'NO' ORDER BY station_id, gid DESC;
 
 DROP VIEW IF EXISTS rivm_lml.v_last_measurements_NO2;
 CREATE VIEW rivm_lml.v_last_measurements_NO2 AS
   SELECT DISTINCT ON (station_id) station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'NO2' ORDER BY station_id, gid DESC;
 
 DROP VIEW IF EXISTS rivm_lml.v_last_measurements_O3;
 CREATE VIEW rivm_lml.v_last_measurements_O3 AS
   SELECT DISTINCT ON (station_id) station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'O3' ORDER BY station_id, gid DESC;
 
 -- DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM2_5;
@@ -180,12 +180,12 @@ CREATE VIEW rivm_lml.v_last_measurements_O3 AS
 DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM10;
 CREATE VIEW rivm_lml.v_last_measurements_PM10 AS
   SELECT DISTINCT ON (station_id) station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'PM10' ORDER BY station_id, gid DESC;
 
 DROP VIEW IF EXISTS rivm_lml.v_last_measurements_SO2;
 CREATE VIEW rivm_lml.v_last_measurements_SO2 AS
   SELECT DISTINCT ON (station_id) station_id,
-    municipality, sample_time, sample_value, point, validated, gid, sample_id
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'SO2' ORDER BY station_id, gid DESC;
 

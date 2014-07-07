@@ -19,9 +19,9 @@
                     <Name>Active Stations</Name>
                     <ogc:Filter>
 
-                            <ogc:PropertyIsNull>
-                                <ogc:PropertyName>activity_end</ogc:PropertyName>
-                            </ogc:PropertyIsNull>
+                        <ogc:PropertyIsNull>
+                            <ogc:PropertyName>activity_end</ogc:PropertyName>
+                        </ogc:PropertyIsNull>
 
                     </ogc:Filter>
                     <PointSymbolizer>
@@ -50,9 +50,9 @@
                     <ogc:Filter>
                         <ogc:Not>
 
-                        <ogc:PropertyIsNull>
-                            <ogc:PropertyName>activity_end</ogc:PropertyName>
-                        </ogc:PropertyIsNull>
+                            <ogc:PropertyIsNull>
+                                <ogc:PropertyName>activity_end</ogc:PropertyName>
+                            </ogc:PropertyIsNull>
                         </ogc:Not>
 
                     </ogc:Filter>

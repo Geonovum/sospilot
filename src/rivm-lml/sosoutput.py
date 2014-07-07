@@ -61,6 +61,7 @@ class SOSTOutput(HttpOutput):
             # <local_id>STA-NL00807</local_id>
             # <natl_station_code>807</natl_station_code>
             # <eu_station_code>NL00807</eu_station_code>
+            # <name>Hellendoorn-Luttenbergerweg</name>
             # <municipality>Hellendoorn</municipality>
             # <altitude>7</altitude>
             # <altitude_unit>m</altitude_unit>
@@ -73,7 +74,9 @@ class SOSTOutput(HttpOutput):
             # <lat></lat>
             format_args = dict()
             format_args['station_id'] = record['natl_station_code']
-            format_args['municipality'] = record['municipality']
+            format_args['station_name'] = record['name']
+            # if record['municipality'] is not None and len(record['municipality']) > 0:
+            #     format_args['name'] += ' - ' + record['municipality']
             format_args['station_altitude'] = record['altitude']
             format_args['station_lon'] = record['lon']
             format_args['station_lat'] = record['lat']
