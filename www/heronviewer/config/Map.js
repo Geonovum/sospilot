@@ -283,12 +283,12 @@ Heron.options.map.layers = [
 
 /** OVERLAYS **/
     /*
-     * RIVM: Stations
+     * RIVM: All Stations
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Stations",
+        "RIVM - All Stations",
         Heron.scratch.urls.SOSPILOT_OWS,
-        {layers: "stations", format: "image/png", transparent: true},
+        {layers: "all_stations", format: "image/png", transparent: true},
         {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
@@ -303,11 +303,31 @@ Heron.options.map.layers = [
         }
     ),
 
+     /*
+     * RIVM: Stations
+     */
+    new OpenLayers.Layer.WMS(
+        "RIVM - Active Stations",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "active_stations", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
 
     /*
-     * PDOK: Bestuurlijke Grenzen  WFS
+     * RIVM: Active Stations WFS
      */
-    new OpenLayers.Layer.Vector("RIVM - Stations (WFS)", {
+    new OpenLayers.Layer.Vector("RIVM - Active Stations (WFS)", {
         strategies: [new OpenLayers.Strategy.BBOX()],
         visibility: false,
         style: {fillColor: '#37f',
@@ -322,7 +342,7 @@ Heron.options.map.layers = [
             outputFormat: 'GML2',
             srsName: 'EPSG:28992',
             url: Heron.scratch.urls.SOSPILOT_OWS,
-            featureType: "stations",
+            featureType: "active_stations",
             featureNS: "http://sensors.geonovum.nl",
             geometryName: 'point'
         })
@@ -1291,8 +1311,8 @@ Heron.options.layertree.tree = [
     },
     {
         text: 'RIVM LML', expanded: true, children: [
-        {nodeType: "gx_layer", layer: "RIVM - Stations", text: "AQ Measurement Stations (WMS)" },
-        {nodeType: "gx_layer", layer: "RIVM - Stations (WFS)", text: "AQ Measurement Stations (WFS)" },
+        {nodeType: "gx_layer", layer: "RIVM - All Stations", text: "AQ Stations (WMS)" },
+        {nodeType: "gx_layer", layer: "RIVM - Active Stations (WFS)", text: "AQ Stations (Active WFS)" },
 
         {
             text: 'Carbon monoxide (CO) - WMS', expanded: false, children: [

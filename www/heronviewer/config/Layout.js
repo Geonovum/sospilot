@@ -282,7 +282,7 @@ Heron.layout = {
                                 currentValue: '2014-05-01T20:00:00Z',
                                 defaultValue: '2014-05-01T20:00:00Z',
                                 units: 'ISO8601',
-                                values: '2014-05-01T20:00:00Z/' + Heron.date + '/PT1H'
+                                values: '2014-06-09T17:00:00Z/' + Heron.date + '/PT1H'
                             },
                             layerNames: ["KNMI - Rain Radar (Color)",
                                 "RIVM - Measurements CO",

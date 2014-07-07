@@ -9,6 +9,7 @@ This chapter describes the operation and maintenance aspects for the SOSPilot pl
 * how to start stop servers
 * managing the ETL
 * where to find logfiles
+* setting Postgres credentials
 
 Data Management
 ===============
@@ -23,6 +24,9 @@ Every 30 minutes all three steps are run (for now) via the script
 ``https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/etl-all.sh``.
 It is best to stop the cronjob whenever doing any
 of the resets below. Also be aware that the ETL steps build up history.
+
+Postgres credentials: set these once in the file ``https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/pgcreds.sh``
+for your local Postgres. All scripts will use these values.
 
 Reset ETL Step 1 - RIVM File Harvester
 --------------------------------------
@@ -48,6 +52,14 @@ Reset ETL Step 2 - Files to Core AQ
 
 * Reset counter ``last_id`` to ``-1`` in table ``rivm_lml.etl_progress`` for row where worker is ``files2measurements``
 * Also you will need to empty (not drop) the table ``rivm_lml.measurements``
+
+Reset ETL Step 1 + Step 2 - Shortcut
+------------------------------------
+
+Step 1 + Step 2 can be reset via a single script:
+
+``https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/reset-rivm-etl.sh``
+
 
 Reset ETL Step 3 - SOS-T Sensor Publishing
 ------------------------------------------
@@ -77,6 +89,16 @@ As root do
 * Start Tomcat (command ``/opt/bin/tcup``)
 * Republish the Sensors (see Stations to Sensors)
 * restart the cron (see above)
+
+Reset ETL Step 3 - Shortcut
+---------------------------
+
+Step 3 can be reset via a single script:
+
+``https://github.com/Geonovum/sospilot/blob/master/src/rivm-lml/reset-sos-etl.sh``
+
+This renders a clean/empty SOS. The Sensors (see above) need to be republished.
+
 
 Web Services
 ============
