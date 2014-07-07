@@ -10,6 +10,7 @@
         <Field name="local_id" src="LocalId" type="String" />
         <Field name="natl_station_code" src="NatlStationCode" type="String" />
         <Field name="eu_station_code" src="EUStationCode" type="String" />
+        <Field name="name" src="Name" type="String" />
         <Field name="municipality" src="Municipality" type="String" />
         <Field name="altitude" src="Altitude" type="Integer" />
         <Field name="altitude_unit" src="AltitudeUnit" type="String" />

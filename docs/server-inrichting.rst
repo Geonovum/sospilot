@@ -663,11 +663,13 @@ Replaced ::
 
     -rw-r--r-- 1 tomcat7 tomcat7   23436 May 19 10:58 do-core-0.1.3-SNAPSHOT.jar
     -rw-r--r-- 1 tomcat7 tomcat7  289999 May 19 10:58 hibernate-common-4.0.2-SNAPSHOT.jar
+    -rw-r--r-- 1 tomcat7 tomcat7   63249 May 19 10:58 cache-4.0.2-SNAPSHOT.jar
 
     with
 
     -rw-r--r-- 1 tomcat7 tomcat7   23529 Jun 12 14:21 do-core-0.1.3-SNAPSHOT.jar
     -rw-r--r-- 1 tomcat7 tomcat7  289876 Jun 12 14:21 hibernate-common-4.0.2-SNAPSHOT.jar
+    -rw-r--r-- 1 tomcat7 tomcat7   72842 Jul  1 16:41 cache-4.0.2-SNAPSHOT.jar
 
 Patching is done by: Stop Tomcat, Copy patch .jar to
 ``/var/www/sensors.geonovum.nl/webapps/sos/WEB-INF/lib``, Start Tomcat.
