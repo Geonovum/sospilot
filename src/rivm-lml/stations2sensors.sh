@@ -9,7 +9,7 @@ export PYTHONPATH=.:$PYTHONPATH
 stetl_cmd=stetl
 
 # debugging
-stetl_cmd=../../../../stetl/git/stetl/main.py
+# stetl_cmd=../../../../stetl/git/stetl/main.py
 
 # Host-specific Postgres credentials in $pg_options
 . pgcreds.sh
