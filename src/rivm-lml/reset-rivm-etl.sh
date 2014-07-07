@@ -15,5 +15,3 @@ cd -
 
 # Redefine tables and VIEWs (needs stations table)
 psql -f db-schema.sql sensors
-
-
