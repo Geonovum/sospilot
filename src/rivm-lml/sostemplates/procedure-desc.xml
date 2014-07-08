@@ -130,8 +130,8 @@
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="PM25">
-                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/PM25">
+                    <sml:output name="PM2.5">
+                        <swe:Quantity definition="http://sensors.geonovum.nl/rivm-lml/observableProperty/PM2.5">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>

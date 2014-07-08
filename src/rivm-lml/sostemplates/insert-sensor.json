@@ -12,7 +12,7 @@
     "http://sensors.geonovum.nl/rivm-lml/observableProperty/NO2",
     "http://sensors.geonovum.nl/rivm-lml/observableProperty/O3",
     "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM10",
-    "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM25",
+    "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM2.5",
     "http://sensors.geonovum.nl/rivm-lml/observableProperty/SO2"
   ],
   "observationType": [
