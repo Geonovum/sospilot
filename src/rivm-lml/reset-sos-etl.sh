@@ -19,6 +19,6 @@ rm /var/www/sensors.geonovum.nl/webapps/sos/cache.tmp
 /etc/init.d/tomcat7 start
 
 #
-echo " done, now manually run ./stations2sensors.sh after tomcat init finished"
+echo " done, now manually run ./stations2sensors.sh after tomcat init finished and reset the etl_progress record..."
 
 

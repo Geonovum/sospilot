@@ -3,7 +3,6 @@
                        xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd"
                        xmlns="http://www.opengis.net/sld"
                        xmlns:ogc="http://www.opengis.net/ogc"
-                       xmlns:xlink="http://www.w3.org/1999/xlink"
                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <!-- a Named Layer is the basic building block of an SLD document -->
@@ -11,8 +10,8 @@
         <Name>last_measurements_pm10</Name>
         <UserStyle>
             <!-- Styles can have names, titles and abstracts -->
-            <Title>Last RIVM measurements_pm10</Title>
-            <Abstract>Last RIVM measurements_pm10 style</Abstract>
+            <Title>RIVM measurements_pm10</Title>
+            <Abstract>RIVM measurements_pm10 style</Abstract>
             <IsDefault>1</IsDefault>
             <!-- FeatureTypeStyles describe how to render different features -->
             <!-- A FeatureTypeStyle for rendering points -->

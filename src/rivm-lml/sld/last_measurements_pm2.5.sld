@@ -7,11 +7,11 @@
 
     <!-- a Named Layer is the basic building block of an SLD document -->
     <NamedLayer>
-        <Name>last_measurements_no</Name>
+        <Name>last_measurements_pm2.5</Name>
         <UserStyle>
             <!-- Styles can have names, titles and abstracts -->
-            <Title>RIVM measurements_no</Title>
-            <Abstract>RIVM measurements_no style</Abstract>
+            <Title>RIVM measurements_pm2.5</Title>
+            <Abstract>RIVM measurements_pm2.5 style</Abstract>
             <IsDefault>1</IsDefault>
             <!-- FeatureTypeStyles describe how to render different features -->
             <!-- A FeatureTypeStyle for rendering points -->
@@ -22,11 +22,11 @@
                             <Mark>
                                 <WellKnownName>circle</WellKnownName>
                                 <Fill>
-                                    <CssParameter name="fill">#27408b</CssParameter>
+                                    <CssParameter name="fill">#696969</CssParameter>
                                     <CssParameter name="fill-opacity">1.0</CssParameter>
                                 </Fill>
                                 <Stroke>
-                                    <CssParameter name="stroke">#cae1ff</CssParameter>
+                                    <CssParameter name="stroke">#3f3f3f</CssParameter>
                                     <CssParameter name="stroke-width">1</CssParameter>
                                 </Stroke>
                             </Mark>
@@ -64,7 +64,7 @@
                         </LabelPlacement>
 
                         <Fill>
-                            <CssParameter name="fill">#cae1ff</CssParameter>
+                            <CssParameter name="fill">#ffffff</CssParameter>
                         </Fill>
 
                     </TextSymbolizer>
