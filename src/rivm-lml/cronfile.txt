@@ -11,7 +11,7 @@ SOSPILOT=/opt/geonovum/sospilot/git
 55 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step1.sh
 
 # Files2Measurements
-5,35 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step2.sh
+10,40 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step2.sh
 
 # more frequent to catch up
-10,25,40,45 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step3.sh
+00,15,30,45 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step3.sh
