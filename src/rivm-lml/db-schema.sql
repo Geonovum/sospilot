@@ -122,11 +122,11 @@ CREATE VIEW rivm_lml.v_measurements_O3 AS
     name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'O3';
 
--- DROP VIEW IF EXISTS rivm_lml.v_measurements_PM2_5;
--- CREATE VIEW rivm_lml.v_measurements_PM2_5 AS
---   SELECT  station_id,
---     municipality, sample_time, sample_value, point, validated, gid, sample_id
---   FROM rivm_lml.measurements_stations WHERE component = 'PM2_5';
+DROP VIEW IF EXISTS rivm_lml.v_measurements_PM25;
+CREATE VIEW rivm_lml.v_measurements_PM25 AS
+  SELECT  station_id,
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'PM2.5';
 
 DROP VIEW IF EXISTS rivm_lml.v_measurements_PM10;
 CREATE VIEW rivm_lml.v_measurements_PM10 AS
@@ -171,11 +171,11 @@ CREATE VIEW rivm_lml.v_last_measurements_O3 AS
     name, municipality, sample_time, sample_value, point, validated, gid, sample_id
   FROM rivm_lml.measurements_stations WHERE component = 'O3' ORDER BY station_id, gid DESC;
 
--- DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM2_5;
--- CREATE VIEW rivm_lml.v_last_measurements_PM2_5 AS
---   SELECT DISTINCT ON (station_id) station_id,
---     municipality, sample_time, sample_value, point, validated, gid, sample_id
---   FROM rivm_lml.measurements_stations WHERE component = 'PM2_5' ORDER BY station_id, gid DESC;
+DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM25;
+CREATE VIEW rivm_lml.v_last_measurements_PM25 AS
+  SELECT DISTINCT ON (station_id) station_id,
+    name, municipality, sample_time, sample_value, point, validated, gid, sample_id
+  FROM rivm_lml.measurements_stations WHERE component = 'PM2.5' ORDER BY station_id, gid DESC;
 
 DROP VIEW IF EXISTS rivm_lml.v_last_measurements_PM10;
 CREATE VIEW rivm_lml.v_last_measurements_PM10 AS

@@ -4,7 +4,14 @@ SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 SOSPILOT=/opt/geonovum/sospilot/git
 
-# Run all ETL: Harvester, Files2Measurements and Measurements2SOS every half hour
+# Run ETL step 1-3: Harvester, Files2Measurements and Measurements2SOS every half hour
 # m  h dom mon dow user command
-0,30 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-all.sh
 
+# Harvester: once an hour when all files complete
+55 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step1.sh
+
+# Files2Measurements
+5,35 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step2.sh
+
+# more frequent to catch up
+10,25,40,45 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step3.sh
