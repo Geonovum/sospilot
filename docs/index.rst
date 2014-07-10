@@ -18,6 +18,7 @@ Contents:
    services.rst
    clients.rst
    administration.rst
+   weather.rst
    server-inrichting.rst
    contact.rst
    links.rst

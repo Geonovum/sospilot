@@ -1,0 +1,242 @@
+netcdf STD___OPER_P___OBS_____L2 {
+dimensions:
+	stations = 60 ;
+variables:
+	string name(stations) ;
+		name:long_name = "Station name" ;
+		name:units = "string" ;
+		name:coordinates = "starttime lat lon height" ;
+	string WMO(stations) ;
+		WMO:long_name = "WMO number" ;
+		WMO:units = "string" ;
+	string type(stations) ;
+		type:long_name = "Station type" ;
+		type:units = "string" ;
+	double time(stations) ;
+		time:long_name = "Startdate" ;
+		time:standard_name = "time" ;
+		time:units = "days since 1970-01-01 00:00:00" ;
+	double lat(stations) ;
+		lat:long_name = "Latitude" ;
+		lat:standard_name = "latitude" ;
+		lat:units = "degrees_north" ;
+	double lon(stations) ;
+		lon:long_name = "Longitude" ;
+		lon:standard_name = "longitude" ;
+		lon:units = "degrees_east" ;
+	double height(stations) ;
+		height:long_name = "Height" ;
+		height:units = "m" ;
+	int obs_pres(stations) ;
+		obs_pres:long_name = "Pressure observations" ;
+	int obs_wind(stations) ;
+		obs_wind:long_name = "Wind observations" ;
+	int obs_temp(stations) ;
+		obs_temp:long_name = "Temperature observations" ;
+	int obs_hum(stations) ;
+		obs_hum:long_name = "Humidity observations" ;
+	int obs_prec(stations) ;
+		obs_prec:long_name = "Precipitation observations" ;
+	int obs_rad(stations) ;
+		obs_rad:long_name = "Radiation observations" ;
+	int obs_vis(stations) ;
+		obs_vis:long_name = "Visibility observations" ;
+	int obs_clouds(stations) ;
+		obs_clouds:long_name = "Clouds observations" ;
+	int obs_presweather(stations) ;
+		obs_presweather:long_name = "Present weather observations" ;
+	int obs_snowdepth(stations) ;
+		obs_snowdepth:long_name = "Snow depth observations" ;
+	int obs_soiltemp(stations) ;
+		obs_soiltemp:long_name = "Soil Temperature observations" ;
+	char iso_dataset ;
+		iso_dataset:title = "STD___OPER_P___OBS_____L2" ;
+		iso_dataset:abstract = "Informatie over meetstations" ;
+		iso_dataset:status = "ongoing" ;
+		iso_dataset:type = "dataset" ;
+		iso_dataset:uid = "95a63747-32b2-4dc2-a054-b1e168b2218d" ;
+		iso_dataset:topic = "environmental monitoring facilities" ;
+		iso_dataset:keyword = "stations observations metadata" ;
+		iso_dataset:max-x = 10.f ;
+		iso_dataset:min-x = 5.f ;
+		iso_dataset:max-y = 60.f ;
+		iso_dataset:min-y = 40.f ;
+		iso_dataset:temporal_extent = "1950-01-01 and ongoing" ;
+		iso_dataset:date = "2014-2-25" ;
+		iso_dataset:dateType = "publication date" ;
+		iso_dataset:statement = "tbd - large description" ;
+		iso_dataset:code = "TBD" ;
+		iso_dataset:codeSpace = "EPSG" ;
+		iso_dataset:accessConstraints = "none" ;
+		iso_dataset:useLimitation = "none" ;
+		iso_dataset:organisationName_dataset = "Royal Netherlands Meteorological Institute (KNMI)" ;
+		iso_dataset:email_dataset = "data@knmi.nl" ;
+		iso_dataset:role_dataset = "pointOfContact" ;
+		iso_dataset:metadata_id = "38cc9e22-30ba-491f-ab7e-294ad178b719" ;
+		iso_dataset:organisationName_metadata = "Royal Netherlands Meteorological Institute (KNMI)" ;
+		iso_dataset:role_metadata = "pointOfContact" ;
+		iso_dataset:email_metadata = "data@knmi.nl" ;
+		iso_dataset:url_metadata = "http://data.knmi.nl" ;
+		iso_dataset:datestamp = "2010-11-01" ;
+		iso_dataset:language = "eng" ;
+		iso_dataset:metadataStandardName = "ISO 19115" ;
+		iso_dataset:metadataStandardNameVersion = "Nederlandse metadatastandaard op ISO 19115 voor geografie 1.2" ;
+	char product ;
+		product:units = "1" ;
+		product:long_name = "ADAGUC Data Products Standard" ;
+		product:ref_doc = "ADAGUC Data Products Standard" ;
+		product:ref_doc_version = "1.1" ;
+		product:format_version = "1.1" ;
+		product:originator = "Royal Netherlands Meteorological Institute (KNMI)" ;
+		product:type = "P" ;
+		product:acronym = "STD___OPER_P___OBS_____L2" ;
+		product:level = "L2" ;
+		product:style = "camelCase" ;
+	char projection ;
+		projection:EPSG_code = "EPSG:4326" ;
+
+// global attributes:
+		:featureType = "point" ;
+		:Conventions = "CF-1.4" ;
+		:title = "STD___OPER_P___OBS_____L2" ;
+		:institution = "Royal Netherlands Meteorological Institute (KNMI)" ;
+		:source = "Royal Netherlands Meteorological Institute (KNMI)" ;
+		:history = "File created from RobuSAIS ASCII file. " ;
+		:references = "http://data.knmi.nl" ;
+		:comments = "none" ;
+		:description = "none" ;
+		:disclaimer = "none" ;
+		:comment = "none" ;
+data:
+
+ name = "D15-FA-1", "P11-B", "K14-FA-1C", "A12-CPP", "F16-A", "L9-FF-1", 
+    "AWG-1", "IJMOND WP", "VALKENBURG AWS", "J6-A", "HOORN-A", "IJMUIDEN WP", 
+    "DE KOOIJ VK", "F3-FB-1", "AMSTERDAM/SCHIPHOL AP", "VLIELAND", 
+    "WIJDENES WP", "BERKHOUT AWS", "TERSCHELLING HOORN AWS", "K13-A", 
+    "WIJK AAN ZEE AWS", "HOUTRIBDIJK WP", "DE BILT AWS", "STAVOREN AWS", 
+    "LELYSTAD AP", "LEEUWARDEN", "MARKNESSE AWS", "DEELEN", "LAUWERSOOG AWS", 
+    "HEINO AWS", "HOOGEVEEN AWS", "GRONINGEN AP EELDE", "HUPSEL AWS", 
+    "HUIBERTGAT WP", "NIEUW BEERTA AWS", "TWENTE AWS", "CADZAND WP", 
+    "VLISSINGEN AWS", "HOOFDPLAAT", "OOSTERSCHELDE WP", "VLAKTE VAN DE RAAN", 
+    "HANSWEERT", "OOSTERSCHELDE 4", "WESTDORPE AWS", "LICHTEILAND GOEREE", 
+    "EURO PLATFORM", "STAVENISSE", "HOEK VAN HOLLAND AWS", "MAROLLEGAT", 
+    "WOENSDRECHT", "ROTTERDAM GEULHAVEN", "ROTTERDAM THE HAGUE AP", 
+    "CABAUW TOWER AWS", "GILZE RIJEN", "HERWIJNEN AWS", "EINDHOVEN AP", 
+    "VOLKEL", "ELL AWS", "MAASTRICHT AACHEN AP", "ARCEN AWS" ;
+
+ WMO = "06201", "06203", "06204", "06205", "06206", "06207", "06208", 
+    "06209", "06210", "06211", "06212", "06225", "06235", "06239", "06240", 
+    "06242", "06248", "06249", "06251", "06252", "06257", "06258", "06260", 
+    "06267", "06269", "06270", "06273", "06275", "06277", "06278", "06279", 
+    "06280", "06283", "06285", "06286", "06290", "06308", "06310", "06311", 
+    "06312", "06313", "06315", "06316", "06319", "06320", "06321", "06324", 
+    "06330", "06331", "06340", "06343", "06344", "06348", "06350", "06356", 
+    "06370", "06375", "06377", "06380", "06391" ;
+
+ type = "Platform/AWS", "Platform/AWS", "Platform/AWS", "Platform/AWS", 
+    "Platform/AWS", "Platform/AWS", "Platform/AWS", "Wind mast", "AWS", 
+    "Platform/AWS", "Platform/AWS", "Wind mast", "Aerodrome/AWS", 
+    "Platform/AWS", "Aerodrome/AWS", "AWS", "Wind mast", "AWS", "AWS", 
+    "Platform/AWS", "AWS", "Wind mast", "AWS", "AWS", "Aerodrome/AWS", 
+    "Aerodrome/AWS", "AWS", "Aerodrome/AWS", "AWS", "AWS", "AWS", 
+    "Aerodrome/AWS", "AWS", "Wind mast", "AWS", "AWS", "Wind mast", "AWS", 
+    "Wind mast", "Wind mast", "Wind mast", "Wind mast", "Wind mast", "AWS", 
+    "Platform/AWS", "Platform/AWS", "Wind mast", "AWS", "Wind mast", 
+    "Aerodrome/AWS", "Wind mast", "Aerodrome/AWS", "AWS", "Aerodrome/AWS", 
+    "AWS", "Aerodrome/AWS", "Aerodrome/AWS", "AWS", "Aerodrome/AWS", "AWS" ;
+
+ time = 14285, 7305, 2550, 14285, 3645, 13479, -8616, 14285, -8401, -15713, 
+    7305, 11351, -5121, 13479, 7486, -5023, 8954, 10500, -731, 8394, 11413, 
+    13216, -26937, 8895, -6971, 7943, 7670, -7397, 13479, 7305, 7305, -7823, 
+    7670, 3932, 14557, -11749, 473, -41645, -15713, -4755, 7305, -8408, 1826, 
+    7844, 7670, 10561, 7670, 7670, 4011, 4208, -12426, 7305, 723, 8401, 7670, 
+    -8858, -6582, -8043, 7670, 13461 ;
+
+ lat = 54.325666666667, 52.36, 53.269444444444, 55.399166666667, 
+    54.116666666667, 53.614444444444, 53.491666666667, 52.463735018795, 
+    52.170248689194, 53.824130555556, 52.918055555556, 52.462242867998, 
+    52.926865008825, 54.853888888889, 52.315408447486, 53.240026656696, 
+    52.632430667762, 52.642696895243, 53.391265948394, 53.217503824365, 
+    52.505333893732, 52.648187308904, 52.098821802977, 52.896643913235, 
+    52.457270486008, 53.223000488316, 52.701902388132, 52.0548617826, 
+    53.411581103636, 52.434561756559, 52.749056395511, 53.123676213651, 
+    52.067534268959, 53.573888888889, 53.194409573306, 52.27314817052, 51.38, 
+    51.441334059998, 51.377452361354, 51.76762399884, 51.503718278041, 
+    51.445833333333, 51.655878415805, 51.224757511326, 51.925472222222, 
+    51.997951293611, 51.595404203104, 51.990941918858, 51.478611111111, 
+    51.447744494043, 51.891830906739, 51.960667359998, 51.969031121385, 
+    51.564889021961, 51.857593837453, 51.449772459909, 51.658528382201, 
+    51.196699902606, 50.905256257898, 51.497306260089 ;
+
+ lon = 2.93575, 3.3416666666667, 3.6277777777778, 3.8102777777778, 
+    4.0122222222222, 4.9602777777778, 5.9416666666667, 4.5173637041727, 
+    4.4294613573587, 2.9452777777778, 4.1502777777778, 4.5549006792363, 
+    4.7811453228565, 4.6961111111111, 4.7902228464686, 4.9207907082729, 
+    5.1734739738872, 4.9787572406902, 5.3458010937365, 3.2185197221557, 
+    4.6029300588208, 5.4003881262577, 5.1797058644882, 5.383478899702, 
+    5.5196324030324, 5.7515738887123, 5.8874461671401, 5.8723225499118, 
+    6.1990994508938, 6.2589770334531, 6.5729701105864, 6.5848470019087, 
+    6.6567253619722, 6.3983333333333, 7.1493220605216, 6.8908745111116, 
+    3.3791666666667, 3.5958241584686, 3.672675061238, 3.6171265677562, 
+    3.2421667712437, 3.9975, 3.6939548934033, 3.8609657214986, 
+    3.6698611111111, 3.2749384441635, 4.006012888555, 4.121849767852, 4.1925, 
+    4.342014, 4.3126638323991, 4.4469005114756, 4.9259216999194, 
+    4.9352386335384, 5.1453989235756, 5.3770039280214, 5.7065946674719, 
+    5.7625447234516, 5.7617834850481, 6.1961067840608 ;
+
+ height = 42.7, 41.84, 41.8, 48.35, 43.4, 44, 40.5, 0, -0.2, 45.7, 50.9, 4, 
+    1.22, 50.6, -3.35, 10.79, 0.8, -2.4, 0.73, 37.67, 8.5, 7.25, 1.9, -1.3, 
+    -3.66, 1.22, -3.35, 48.16, 2.9, 3.6, 15.82, 5.18, 29.07, 0, -0.2, 34.75, 
+    0, 8.03, 0, 0, 0, 0, 0, 1.68, 22, 19, 0, 11.86, 0, 19.2, 3.5, -4.27, 
+    -0.71, 14.94, 0.66, 22.56, 21.95, 30, 114.3, 19.5 ;
+
+ obs_pres = 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 
+    1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 
+    0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0 ;
+
+ obs_wind = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ;
+
+ obs_temp = 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 
+    0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 ;
+
+ obs_hum = 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 
+    0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 ;
+
+ obs_prec = 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 
+    0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 ;
+
+ obs_rad = 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 
+    0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 ;
+
+ obs_vis = 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 
+    1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 
+    0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0 ;
+
+ obs_clouds = 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 
+    0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0 ;
+
+ obs_presweather = 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 
+    0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 
+    1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0 ;
+
+ obs_snowdepth = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 
+    0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 
+    0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0 ;
+
+ obs_soiltemp = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ;
+
+ iso_dataset = "" ;
+
+ product = "" ;
+
+ projection = "" ;
+}

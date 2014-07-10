@@ -1,0 +1,47 @@
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:georss="http://www.georss.org/georss" xml:lang="en">
+    <!-- The title of the dataset. -->
+    <title xml:lang="en">KNMI Download Service for Observation stations"</title>
+    <!-- The subtitle of the dataset. -->
+    <subtitle xml:lang="en">This is the Download Service of the Royal Netherlands Meteorological Intitute (KNM) and concerns the dataset Observation stations. This dataset includes information about observation stations in the Netherlands"</subtitle>
+    <!-- TODO: enable reference to appropriate theme -->
+	  <!-- Environmental monitoring facilities. -->
+	  <!-- link rel="describedby" type="text/html" href="http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items/20"/ -->
+	  <!-- Natural risk zones. -->
+	  <!-- link rel="describedby" type="text/html" href="http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items/25"/ -->
+	  <!-- Meteorological geographic features. -->
+	  <!-- link rel="describedby" type="text/html" href="http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items/27"/ -->
+	  <!-- Atmospheric conditions. -->
+	  <!-- link rel="describedby" type="text/html" href="http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items/26"/ -->
+	<!-- Link to the dataset metadata document for this dataset. -->
+	<link rel="describedby" type="application/xml" href="http://data.knmi.nl/inspire/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=d8b4d4bb-7ecd-4ef9-a51f-e45303aa67e5&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full"/>
+	<!-- Link to the dataset metadata details for this dataset. -->
+	<link rel="describedby" href="https://data.knmi.nl/portal/KNMI-DataCentre.html#dataset-name=waarneemstations&amp;dataset-version=1" type="text/html"/>
+    <!-- Link to the service itself. -->
+    <link rel="self" type="application/atom+xml" title="Observation stations" hreflang="en" href="http://data.knmi.nl/inspire/atom?dataset=urn:xkdc:ds:nl.knmi::waarneemstations/1/"/>
+    <link rel="alternate" type="application/atom+xml" title="Waarneemstations" hreflang="nl" href="http://data.knmi.nl/inspire/atom?lang=nl&amp;dataset=urn:xkdc:ds:nl.knmi::waarneemstations/1/"/>
+    <!-- Link back to the service feed. -->
+	<link rel="up" href="http://data.knmi.nl/inspire/atom?lang=en" hreflang="en" type="application/atom+xml"/>
+    <!-- Metadata for this dataset. -->
+    <id>http://data.knmi.nl/inspire/atom?dataset=urn:xkdc:ds:nl.knmi::waarneemstations/1/</id>
+    <rights>none</rights>
+    <updated>2014-03-21T07:38:25Z</updated>
+    <author>
+        <name>KNMI</name>
+        <email>data@knmi.nl</email>
+    </author>
+    <entry>
+        <!-- The title of the dataset file. -->
+        <title xml:lang="en">Observation stations - EPSG:4326 (NetCDF)</title>
+        <!-- The download link for the dataset file. -->
+        <link rel="alternate" type="NetCDF" title="Observation stations - EPSG:4326 (NetCDF)" length="69021" hreflang="en" href="http://data.knmi.nl/inspire/download/waarneemstations/1/noversion/0000/00/00/STD___OPER_P___OBS_____L2.nc.zip"/>
+        <link rel="enclosure" type="NetCDF" title="Observation stations - EPSG:4326 (NetCDF)" length="69021" hreflang="en" href="http://data.knmi.nl/inspire/download/waarneemstations/1/noversion/0000/00/00/STD___OPER_P___OBS_____L2.nc.zip"/>
+        <!-- Metadata for the dataset file. -->
+        <id>http://data.knmi.nl/inspire/download/waarneemstations/1/noversion/0000/00/00/STD___OPER_P___OBS_____L2.nc.zip</id>
+        <rights>none</rights>
+        <updated>2014-03-21T07:38:25Z</updated>
+        <!-- summary xml:lang="en">This dataset includes information about observation stations in the Netherlands</summary -->
+        <georss:polygon>2.9 50.7 2.9 55.4 7.4 55.4 7.4 50.7 2.9 50.7</georss:polygon>
+        <category term="http://www.opengis.net/def/crs/EPSG/0/4326" label="EPSG:4326"/>
+    </entry>
+</feed>
+

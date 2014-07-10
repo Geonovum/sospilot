@@ -819,6 +819,15 @@ Git - Source Code Beheer
 apt-get install git-core
 Zie https://help.ubuntu.com/13.10/serverguide/git.html
 
+ncdump - dumping NetCDF files
+-----------------------------
+
+Used for extracting a.o. KNMI weather data files.
+Install ::
+
+    apt-get install netcdf-bin
+
+
 
 Tot hier gekomen op 25.5.2014
 =============================

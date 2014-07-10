@@ -1,0 +1,34 @@
+<!-- OGR VRT file to map eionet CSV station file to any target OGR data type (GML, PostGIS etc). -->
+<OGRVRTDataSource>
+    <OGRVRTLayer name="stations">
+        <SrcDataSource>stations.csv</SrcDataSource>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>EPSG:4326</LayerSRS>
+        <!--
+        Mapped from CSV header:
+        name,WMO,type,time,lat,lon,height,
+        obs_pres,obs_wind,obs_temp,obs_hum,obs_prec,obs_rad,obs_vis,obs_clouds,obs_presweather,obs_snowdepth,obs_soiltemp,
+        so_dataset,product,projection
+        "DE BILT AWS", "06260", "AWS", -26937, 52.098821802977, 5.1797058644882, 1.9,1,1,1,1,1,1,1, 1, 1, 0, 1,,,
+         -->
+        <Field name="WMO" src="WMO" type="String" />
+        <Field name="station_code" src="WMO" type="Integer" />
+        <Field name="name" src="name" type="String" />
+        <Field name="obs_pres" src="obs_pres" type="Integer" />
+        <Field name="obs_wind" src="obs_wind" type="Integer" />
+        <Field name="obs_temp" src="obs_temp" type="Integer" />
+        <Field name="obs_hum" src="obs_hum" type="Integer" />
+        <Field name="obs_prec" src="obs_prec" type="Integer" />
+        <Field name="obs_rad" src="obs_rad" type="Integer" />
+        <Field name="obs_vis" src="obs_vis" type="Integer" />
+        <Field name="obs_clouds" src="obs_clouds" type="Integer" />
+        <Field name="obs_presweather" src="obs_presweather" type="Integer" />
+        <Field name="obs_snowdepth" src="obs_snowdepth" type="Integer" />
+        <Field name="obs_soiltemp" src="obs_soiltemp" type="Integer" />
+
+        <Field name="lon" src="lon" type="Real" />
+        <Field name="lat" src="lat" type="Real" />
+        <Field name="height" src="height" type="Real" />
+        <GeometryField encoding="PointFromColumns" x="lon" y="lat"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>
