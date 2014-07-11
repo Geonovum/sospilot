@@ -812,6 +812,12 @@ Installatie::
   # per-user conf en repository in ~/user/.m2 bijv
   # /home/sadmin/.m2
 
+Hmm, we should have used the standard ``apt-get install maven`` to get Maven 3...
+
+On July 11, 2014, did ::
+
+    $ apt-get remove maven2
+    $ apt-get install maven
 
 Git - Source Code Beheer
 ------------------------

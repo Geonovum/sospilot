@@ -165,6 +165,14 @@
                             </td>
                         </tr>
                         <tr>
+                            <td><a href="jsclient#map"><img src="media/jsclient-200.jpg"/></a></td>
+                            <td><a href="jsclient#map">This app</a>
+                                uses the <a href="https://github.com/52North/js-sensorweb-client/">js-sensorweb-client</a>.
+                                This is a modern HTML5/responsive design app and the most user-friendly.
+                                It uses the REST API from the SOS service (see Web Services below) directly.
+                            </td>
+                        </tr>
+                        <tr>
                             <td><a href="sos-js-app"><img src="media/sos-js-sospilot-plot-200.jpg"/></a></td>
                             <td><a href="sos-js-app">This app</a>
                                 uses the <a href="https://github.com/52North/sos-js">52North sos-js client library</a>.
@@ -172,9 +180,12 @@
                                 and visualize data via a plot or table for a chemical component time frame.</td>
                         </tr>
                         <tr>
-                            <td><img src="media/52n-client-200.jpg"/></td>
+                            <td><a href="http://sensors.geonovum.nl/swc"><img src="media/52n-client-200.jpg"/></a></td>
                             <td>
-                                <a href="http://sensors.geonovum.nl:8080/swc">52North SOS WebClient</a>.
+                                <a href="http://sensors.geonovum.nl/swc">52North SOS WebClient</a>. <br/>
+                                Note that not all stations will output all
+                                components. SO2, benzeen (Utrecht-Erzeijstraat), and PM2.5 (Hilvarenbeek) are very rare.
+                                Most stations will provide observations for NO2.
                             </td>
                         </tr>
                     </table>
@@ -209,7 +220,7 @@
                 </p>
                 <h3 id="services-sos">52North SOS server</h3>
                 <p>
-                    Version: 20140521-SNAPSHOT<br>
+                    Version: 20140521-SNAPSHOT with later patches from 52N<br>
                 </p>
                 <ul>
                     <li>
@@ -241,6 +252,12 @@
                         <a href="http://sensors.geonovum.nl/sos/service?service=SOS&version=2.0.0&request=GetObservation&offering=http://sensors.geonovum.nl/rivm-lml/offering/807&observedProperty=http://sensors.geonovum.nl/rivm-lml/observableProperty/NO2">
                             GetObservation (all Nitrogen Dioxide (NO2) Observations for Station 807, Hellendoorn)
                         </a>
+                    </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/sos/api/v1/stations">REST API, Stations: http://sensors.geonovum.nl/sos/api/v1/stations</a>
+                    </li>
+                    <li>
+                        <a href="http://sensors.geonovum.nl/sos/api/v1/phenomena/">REST API, Phenomena: http://sensors.geonovum.nl/sos/api/v1/phenomena/</a>
                     </li>
 
                 </ul>
