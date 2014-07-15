@@ -1,0 +1,415 @@
+// /var/www/sensors.geonovum.nl/webapps/sos/WEB-INF/classes/config-status-intervals.json
+{
+    "phenomenonIntervals": {
+        "1": {
+            "statusIntervals": {
+            	"90 - 100 Percent": {
+            		"upper" : 100.0,
+            		"lower" : 90.0,
+            		"color" : "#0000FF"
+            	},
+            	"80 - 90 Percent": {
+            		"upper" : 90.0,
+            		"lower" : 80.0,
+            		"color" : "#1C00E2"
+            	},
+            	"70 - 80 Percent": {
+            		"upper" : 80.0,
+            		"lower" : 70.0,
+            		"color" : "#3800C6"
+            	},
+            	"60 - 70 Percent": {
+            		"upper" : 70.0,
+            		"lower" : 60.0,
+            		"color" : "#5500AA"
+            	},
+            	"50 - 60 Percent": {
+            		"upper" : 60.0,
+            		"lower" : 50.0,
+            		"color" : "#71008D"
+            	},
+            	"40 - 50 Percent": {
+            		"upper" : 50.0,
+            		"lower" : 40.0,
+            		"color" : "#8D0071"
+            	},
+            	"30 - 40 Percent": {
+            		"upper" : 40.0,
+            		"lower" : 30.0,
+            		"color" : "#AA0055"
+            	},
+            	"20 - 30 Percent": {
+            		"upper" : 30.0,
+            		"lower" : 20.0,
+            		"color" : "#C60038"
+            	},
+            	"10 - 20 Percent": {
+            		"upper" : 20.0,
+            		"lower" : 10.0,
+            		"color" : "#E2001C"
+            	},
+            	"0 - 10 Percent": {
+            		"upper" : 10.0,
+            		"lower" : 0.0,
+            		"color" : "#FF0000"
+             	}
+            }
+        },
+        "2": {
+            "statusIntervals": {
+            	"2001 - MAX CO": {
+            		"upper" : 100000.0,
+            		"lower" : 2000.0,
+            		"color" : "#5A0000"
+            	},
+            	"1501 - 2000 CO": {
+            		"upper" : 2000.0,
+            		"lower" : 1500.0,
+            		"color" : "#C00000"
+            	},
+            	"1001 - 1500 CO": {
+            		"upper" : 1500.0,
+            		"lower" : 1000.0,
+            		"color" : "#FF0000"
+            	},
+            	"801 - 1000 CO": {
+            		"upper" : 1000.0,
+            		"lower" : 800.0,
+            		"color" : "#FF8000"
+            	},
+            	"601 - 800 CO": {
+            		"upper" : 800.0,
+            		"lower" : 600.0,
+            		"color" : "#F8E748"
+            	},
+            	"401 - 600 CO": {
+            		"upper" : 600.0,
+            		"lower" : 400.0,
+            		"color" : "#CCFF33"
+            	},
+            	"301 - 400 CO": {
+            		"upper" : 400.0,
+            		"lower" : 300.0,
+            		"color" : "#00FF00"
+            	},
+            	"201 - 300 CO": {
+            		"upper" : 300.0,
+            		"lower" : 200.0,
+            		"color" : "#009800"
+            	},
+            	"101 - 200 CO": {
+            		"upper" : 200.0,
+            		"lower" : 100.0,
+            		"color" : "#007EFD"
+            	},
+            	"0 - 100 CO": {
+            		"upper" : 100.0,
+            		"lower" : 0.0,
+            		"color" : "#0000FF"
+             	}
+            }
+        },
+        "9": {
+            "statusIntervals": {
+            	"751 - MAX SO2": {
+            		"upper" : 10000.0,
+            		"lower" : 750.0,
+            		"color" : "#5A0000"
+            	},
+            	"501 - 750 SO2": {
+            		"upper" : 750.0,
+            		"lower" : 500.0,
+            		"color" : "#C00000"
+            	},
+            	"251 - 500 SO2": {
+            		"upper" : 500.0,
+            		"lower" : 250.0,
+            		"color" : "#FF0000"
+            	},
+            	"201 - 250 SO2": {
+            		"upper" : 250.0,
+            		"lower" : 200.0,
+            		"color" : "#FF8000"
+            	},
+            	"126 - 200 SO2": {
+            		"upper" : 200.0,
+            		"lower" : 125.0,
+            		"color" : "#F8E748"
+            	},
+            	"101 - 125 SO2": {
+            		"upper" : 125.0,
+            		"lower" : 100.0,
+            		"color" : "#CCFF33"
+            	},
+            	"76 - 100 SO2": {
+            		"upper" : 100.0,
+            		"lower" : 75.0,
+            		"color" : "#00FF00"
+            	},
+            	"51 - 75 SO2": {
+            		"upper" : 75.0,
+            		"lower" : 50.0,
+            		"color" : "#009800"
+            	},
+            	"26 - 50 SO2": {
+            		"upper" : 50.0,
+            		"lower" : 25.0,
+            		"color" : "#007EFD"
+            	},
+            	"0 - 25 SO2": {
+            		"upper" : 25.0,
+            		"lower" : 0.0,
+            		"color" : "#0000FF"
+             	}
+            }
+        },
+        "4": {
+            "statusIntervals": {
+            	"401 - MAX NO": {
+            		"upper" : 10000.0,
+            		"lower" : 400.0,
+            		"color" : "#5A0000"
+            	},
+            	"271 - 400 NO": {
+            		"upper" : 400.0,
+            		"lower" : 270.0,
+            		"color" : "#C00000"
+            	},
+            	"201 - 270 NO": {
+            		"upper" : 270.0,
+            		"lower" : 200.0,
+            		"color" : "#FF0000"
+            	},
+            	"151 - 200 NO": {
+            		"upper" : 200.0,
+            		"lower" : 150.0,
+            		"color" : "#FF8000"
+            	},
+            	"111 - 150 NO": {
+            		"upper" : 150.0,
+            		"lower" : 110.0,
+            		"color" : "#F8E748"
+            	},
+            	"81 - 110 NO": {
+            		"upper" : 110.0,
+            		"lower" : 80.0,
+            		"color" : "#CCFF33"
+            	},
+            	"61 - 80 NO": {
+            		"upper" : 80.0,
+            		"lower" : 60.0,
+            		"color" : "#00FF00"
+            	},
+            	"46 - 60 NO": {
+            		"upper" : 60.0,
+            		"lower" : 45.0,
+            		"color" : "#009800"
+            	},
+            	"26 - 45 NO": {
+            		"upper" : 45.0,
+            		"lower" : 25.0,
+            		"color" : "#007EFD"
+            	},
+            	"0 - 25 NO": {
+            		"upper" : 25.0,
+            		"lower" : 0.0,
+            		"color" : "#0000FF"
+             	}
+            }
+        },
+        "5": {
+            "statusIntervals": {
+            	"401 - MAX NO2": {
+            		"upper" : 10000.0,
+            		"lower" : 400.0,
+            		"color" : "#5A0000"
+            	},
+            	"271 - 400 NO2": {
+            		"upper" : 400.0,
+            		"lower" : 270.0,
+            		"color" : "#C00000"
+            	},
+            	"201 - 270 NO2": {
+            		"upper" : 270.0,
+            		"lower" : 200.0,
+            		"color" : "#FF0000"
+            	},
+            	"151 - 200 NO2": {
+            		"upper" : 200.0,
+            		"lower" : 150.0,
+            		"color" : "#FF8000"
+            	},
+            	"111 - 150 NO2": {
+            		"upper" : 150.0,
+            		"lower" : 110.0,
+            		"color" : "#F8E748"
+            	},
+            	"81 - 110 NO2": {
+            		"upper" : 110.0,
+            		"lower" : 80.0,
+            		"color" : "#CCFF33"
+            	},
+            	"61 - 80 NO2": {
+            		"upper" : 80.0,
+            		"lower" : 60.0,
+            		"color" : "#00FF00"
+            	},
+            	"46 - 60 NO2": {
+            		"upper" : 60.0,
+            		"lower" : 45.0,
+            		"color" : "#009800"
+            	},
+            	"26 - 45 NO2": {
+            		"upper" : 45.0,
+            		"lower" : 25.0,
+            		"color" : "#007EFD"
+            	},
+            	"0 - 25 NO2": {
+            		"upper" : 25.0,
+            		"lower" : 0.0,
+            		"color" : "#0000FF"
+             	}
+            }
+        },
+        "6": {
+            "statusIntervals": {
+            	"401 - MAX O3": {
+            		"upper" : 10000.0,
+            		"lower" : 360.0,
+            		"color" : "#5A0000"
+            	},
+            	"271 - 400 O3": {
+            		"upper" : 360.0,
+            		"lower" : 240.0,
+            		"color" : "#C00000"
+            	},
+            	"201 - 270 O3": {
+            		"upper" : 240.0,
+            		"lower" : 180.0,
+            		"color" : "#FF0000"
+            	},
+            	"151 - 200 O3": {
+            		"upper" : 180.0,
+            		"lower" : 145.0,
+            		"color" : "#FF8000"
+            	},
+            	"111 - 150 O3": {
+            		"upper" : 145.0,
+            		"lower" : 110.0,
+            		"color" : "#F8E748"
+            	},
+            	"81 - 110 O3": {
+            		"upper" : 110.0,
+            		"lower" : 90.0,
+            		"color" : "#CCFF33"
+            	},
+            	"61 - 80 O3": {
+            		"upper" : 90.0,
+            		"lower" : 70.0,
+            		"color" : "#00FF00"
+            	},
+            	"46 - 60 O3": {
+            		"upper" : 70.0,
+            		"lower" : 50.0,
+            		"color" : "#009800"
+            	},
+            	"26 - 45 O3": {
+            		"upper" : 50.0,
+            		"lower" : 30.0,
+            		"color" : "#007EFD"
+            	},
+            	"0 - 30 O3": {
+            		"upper" : 30.0,
+            		"lower" : 0.0,
+            		"color" : "#0000FF"
+             	}
+            }
+        },
+        "7": {
+            "statusIntervals": {
+            	"201 - MAX PM10": {
+            		"upper" : 10000.0,
+            		"lower" : 200.0,
+            		"color" : "#5A0000"
+            	},
+            	"151 - 200 PM10": {
+            		"upper" : 200.0,
+            		"lower" : 150.0,
+            		"color" : "#C00000"
+            	},
+            	"101 - 150 PM10": {
+            		"upper" : 150.0,
+            		"lower" : 100.0,
+            		"color" : "#FF0000"
+            	},
+            	"71 - 100 PM10": {
+            		"upper" : 100.0,
+            		"lower" : 70.0,
+            		"color" : "#FF8000"
+            	},
+            	"51 - 70 PM10": {
+            		"upper" : 70.0,
+            		"lower" : 50.0,
+            		"color" : "#F8E748"
+            	},
+            	"41 - 50 PM10": {
+            		"upper" : 50.0,
+            		"lower" : 40.0,
+            		"color" : "#CCFF33"
+            	},
+            	"31 - 40 PM10": {
+            		"upper" : 40.0,
+            		"lower" : 30.0,
+            		"color" : "#00FF00"
+            	},
+            	"21 - 30 PM10": {
+            		"upper" : 30.0,
+            		"lower" : 20.0,
+            		"color" : "#009800"
+            	},
+            	"11 - 20 PM10": {
+            		"upper" : 20.0,
+            		"lower" : 10.0,
+            		"color" : "#007EFD"
+            	},
+            	"0 - 10 PM10": {
+            		"upper" : 10.0,
+            		"lower" : 0.0,
+            		"color" : "#0000FF"
+             	}
+            }
+        },
+        "phe_1965ee24af8af96270002b4a434a4250": {
+            "statusIntervals": {
+            	"over 20": {
+            		"lower" : 20.0,
+            		"color" : "#FF0000"
+            	},
+            	"15 - 20": {
+            		"upper" : 20.0,
+            		"lower" : 15.0,
+            		"color" : "#BF003F"
+            	},
+            	"10 - 15": {
+            		"upper" : 15.0,
+            		"lower" : 10.0,
+            		"color" : "#7F007F"
+            	},
+            	"5 - 10": {
+            		"upper" : 10.0,
+            		"lower" : 5.0,
+            		"color" : "#3F00BF"
+            	},
+            	"0 - 5": {
+            		"upper" : 5.0,
+            		"lower" : 0.0,
+            		"color" : "#0000FF"
+            	}
+            }
+        }
+    },
+    "timeseriesIntervals": {
+        "ts_123": {
+        }
+    }
+}

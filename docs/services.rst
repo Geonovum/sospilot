@@ -319,7 +319,13 @@ Via ETL Step 3 as described in the `data <data.html>`_ chapter, the tables are p
 by publishing both sensor and observation data via SOS-Transactions to the SOS Server.
 There is no need to, like with GeoServer, to configure SOS services as these are readily available.
 
-The SOS server is available at http://sensors.geonovum.nl/sos
+A later option is to directly couple the Core AQ tables to the SOS server via a mapping config.
+
+The SOS server is available at this endpoint: http://sensors.geonovum.nl/sos
+Note that this server also supports the REST API as specified in:
+http://sensorweb.demo.52north.org/sensorwebclient-webapp-stable/api-doc/index.html.
+The REST API is at: http://sensors.geonovum.nl/sos/api/v1/
+
 
 Integration with other SOSs
 ---------------------------

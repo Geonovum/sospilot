@@ -398,7 +398,7 @@ Heron.options.map.layers = [
         "RIVM - Measurements NH3",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_nh3", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -608,7 +608,7 @@ Heron.options.map.layers = [
         "RIVM - Measurements SO2",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_so2", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -1321,7 +1321,7 @@ Heron.options.layertree.tree = [
         ]
         },
         {
-            text: 'Ammonia (NH3) - WMS', expanded: true, children: [
+            text: 'Ammonia (NH3) - WMS', expanded: false, children: [
             {nodeType: "gx_layer", layer: "RIVM - Last Measurements NH3", text: "Last Measurements NH3" },
             {nodeType: "gx_layer", layer: "RIVM - Measurements NH3", text: "Time Series Measurements NH3" }
         ]
@@ -1339,20 +1339,20 @@ Heron.options.layertree.tree = [
         ]
         },
         {
-            text: 'Ozone (O3) - WMS', expanded: false, children: [
+            text: 'Ozone (O3) - WMS', expanded: true, children: [
             {nodeType: "gx_layer", layer: "RIVM - Last Measurements O3", text: "Last Measurements O3"  },
             {nodeType: "gx_layer", layer: "RIVM - Measurements O3", text: "Time Series Measurements O3" }
         ]
         },
         {
-            text: 'Particulate Matter (PM10) - WMS', expanded: false, children: [
+            text: 'Particulate Matter (PM10) - WMS', expanded: true, children: [
             {nodeType: "gx_layer", layer: "RIVM - Last Measurements PM10", text: "Last Measurements PM10" },
             {nodeType: "gx_layer", layer: "RIVM - Measurements PM10", text: "Time Series Measurements PM10"  }
 
         ]
         },
         {
-            text: 'Sulfur Dioxide (SO2) - WMS', expanded: true, children: [
+            text: 'Sulfur Dioxide (SO2) - WMS', expanded: false, children: [
             {nodeType: "gx_layer", layer: "RIVM - Last Measurements SO2", text: "Last Measurements SO2" },
             {nodeType: "gx_layer", layer: "RIVM - Measurements SO2", text: "Time Series Measurements SO2"  }
 
