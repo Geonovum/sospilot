@@ -1,0 +1,3219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:am="http://inspire.ec.europa.eu/schemas/am/3.0" xmlns:aqd="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0" xmlns:au="urn:x-inspire:specification:gmlas:AdministrativeUnits:3.0" xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0" xmlns:ef="http://inspire.ec.europa.eu/schemas/ef/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:ompr="http://inspire.ec.europa.eu/schemas/ompr/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" targetNamespace="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0" elementFormDefault="qualified" version="1.0.7">
+	<import namespace="http://inspire.ec.europa.eu/schemas/base/3.3" schemaLocation="http://inspire.ec.europa.eu/schemas/base/3.3/BaseTypes.xsd"/>
+	<import namespace="http://inspire.ec.europa.eu/schemas/base2/1.0" schemaLocation="http://inspire.ec.europa.eu/schemas/base2/1.0/BaseTypes2.xsd"/>
+	<import namespace="http://inspire.ec.europa.eu/schemas/am/3.0" schemaLocation="http://inspire.ec.europa.eu/schemas/am/3.0/AreaManagementRestrictionRegulationZone.xsd"/>
+	<import namespace="http://inspire.ec.europa.eu/schemas/ef/3.0" schemaLocation="http://inspire.ec.europa.eu/schemas/ef/3.0/EnvironmentalMonitoringFacilities.xsd"/>
+	<import namespace="http://inspire.ec.europa.eu/schemas/ompr/2.0" schemaLocation="http://inspire.ec.europa.eu/schemas/ompr/2.0/Processes.xsd"/>
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="http://www.opengis.net/samplingSpatial/2.0" schemaLocation="http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"/>
+	<import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
+	<import namespace="urn:x-inspire:specification:gmlas:AdministrativeUnits:3.0" schemaLocation="http://inspire.ec.europa.eu/schemas/au/3.0/AdministrativeUnits.xsd"/>
+	<!--XML Schema document created by ShapeChange-->
+	<element name="AssessmentMethods" type="aqd:AssessmentMethodsType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+assessment methods
+
+-- Definition --
+This is the identification of the assessment type, a short description text of the assessment, and the link to the respective assessment meta-data (see dataset D)</documentation>
+		</annotation>
+	</element>
+	<complexType name="AssessmentMethodsType">
+		<sequence>
+			<element name="assessmentType" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+assessment type
+
+-- Definition --
+The assessment methods are specified in C.6.1, with multiple entries possible:
+1. Fixed Measurement
+2. Indicativemeasurement
+3. Modelling
+4. Objective Estimation
+See codelist Assessment Type.</documentation>
+				</annotation>
+			</element>
+			<element name="assessmentTypeDescription" type="string">
+				<annotation>
+					<documentation>-- Name --
+assessment type description
+
+-- Definition --
+Short description of assessment.</documentation>
+				</annotation>
+			</element>
+			<element name="samplingPointAssessmentMetadata" type="aqd:AQD_SamplingPointPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="modelAssessmentMetadata" type="aqd:AQD_ModelPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="AssessmentMethodsPropertyType">
+		<sequence>
+			<element ref="aqd:AssessmentMethods"/>
+		</sequence>
+	</complexType>
+	<element name="ExpectedImpact" type="aqd:ExpectedImpactType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+expected impact
+
+-- Definition --
+Expected impact on ambient concentrations</documentation>
+		</annotation>
+	</element>
+	<complexType name="ExpectedImpactType">
+		<sequence>
+			<element name="levelOfConcentration" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+level of concentration
+
+-- Definition --
+A reduction in concentration level is to be given as a positive number.
+For annual mean metrics this reduction should be presented in µg/m³ at the monitoring site where the highest levels are recorded. Where there is an exceedance situation without a monitoring site, the point of highest modelled concentrations should be used. Deviation from this rule has to be indicated and explained.
+To be given in µg/m³.</documentation>
+				</annotation>
+			</element>
+			<element name="numberOfExceedances" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+number of exceedances
+
+-- Definition --
+For short-term limit values this should be presented as the expected reduction in number of exceedences. A reduction in the number of exceedances is to be given as a positive number. This reduction should be calculated at the monitoring station where the highest levels are recorded. Where there is an exceedance situation without a monitoring station (i.e. derived from modelling)  the point of highest modelled concentrations should be used. Deviation from this rule has to be indicated and explained in comments.</documentation>
+				</annotation>
+			</element>
+			<element name="specificationOfHours" type="gml:ReferenceType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+specification of hours
+
+-- Definition --
+see codelist Time unit
+This element specifies if the “Expected impact in number of exceedances in the Projection year” refers to hours or days</documentation>
+				</annotation>
+			</element>
+			<element name="comment" type="string" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="ExpectedImpactPropertyType">
+		<sequence>
+			<element ref="aqd:ExpectedImpact"/>
+		</sequence>
+	</complexType>
+	<element name="AssessmentThreshold" type="aqd:AssessmentThresholdType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+assessment threshold
+
+-- Definition --
+Classification of pollution levels in relation to the Assessment thresholds(by environmental objective)</documentation>
+		</annotation>
+	</element>
+	<complexType name="AssessmentThresholdType">
+		<sequence>
+			<element name="environmentalObjective" type="aqd:EnvironmentalObjectivePropertyType">
+				<annotation>
+					<documentation>-- Name --
+environmental objective
+
+-- Definition --
+See codelist Environmental Objective Type</documentation>
+				</annotation>
+			</element>
+			<element name="exceedanceAttainment" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+exceedance attainment
+
+-- Definition --
+Specifies the pollution level in relation to the Assessment Thresholds for the specified zone and pollutant. See codelist Assessment Threshold Exceedance</documentation>
+				</annotation>
+			</element>
+			<element name="classificationDate" type="gml:TimeInstantPropertyType">
+				<annotation>
+					<documentation>-- Name --
+classification date
+
+-- Definition --
+Year of the last assessment of the pollution level in the zone in relation to the assessment thresholds</documentation>
+				</annotation>
+			</element>
+			<element name="classificationReport" type="anyURI">
+				<annotation>
+					<documentation>-- Name --
+classification report
+
+-- Definition --
+Documentation of the classification</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AssessmentThresholdPropertyType">
+		<sequence>
+			<element ref="aqd:AssessmentThreshold"/>
+		</sequence>
+	</complexType>
+	<element name="EquivalenceDemonstration" type="aqd:EquivalenceDemonstrationType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+equivalence demonstrated
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="EquivalenceDemonstrationType">
+		<sequence>
+			<element name="equivalenceDemonstrated" type="gml:ReferenceType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+equivalence demonstrated
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="demonstrationReport" type="anyURI" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+demonstration report
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="EquivalenceDemonstrationPropertyType">
+		<sequence>
+			<element ref="aqd:EquivalenceDemonstration"/>
+		</sequence>
+	</complexType>
+	<element name="DispersionSituation" type="aqd:DispersionSituationType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+dispersion situation
+
+-- Definition --
+Description – Local and regional dispersion situation : Describes the local dispersion situation on a spatial scale of some 10m.
+It comprises information about the surroundings of the station with respect to dispersion conditions. This information is relevant for the interpretation of the measured data, and to assess the location with respect to the siting criteria laid down in Annex III of Dir. 2008/0/EC and Annex III.II of Dir. 2004/107EC.</documentation>
+		</annotation>
+	</element>
+	<complexType name="DispersionSituationType">
+		<sequence>
+			<element name="dispersionLocal" type="gml:ReferenceType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+distance local
+
+-- Definition --
+Local Dispersion Situation: Describes the location in relation to nearby buildings</documentation>
+				</annotation>
+			</element>
+			<element name="distanceJunction" type="gml:LengthType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+distance junction
+
+-- Definition --
+Distance to major junction is mandatory for traffic sites (related to the station classification) and refers to the microscale siting criteria. 
+A “major junction” to be considered here is a junction which interrupts the traffic flow and causes different emissions (stop&amp;go) from the rest of the road. 
+Unit metres.</documentation>
+				</annotation>
+			</element>
+			<element name="trafficVolume" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+traffic volume
+
+-- Definition --
+Traffic volume is mandatory for traffic sites (related to the station classification) and useful for the assessment of emissions. 
+Unit: annual average daily traffic</documentation>
+				</annotation>
+			</element>
+			<element name="heavy-dutyFraction" type="double" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+heavy duty fraction
+
+-- Definition --
+to be given in percent of total vehicles</documentation>
+				</annotation>
+			</element>
+			<element name="trafficSpeed" type="gml:SpeedType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+traffic speed
+
+-- Definition --
+In km/h</documentation>
+				</annotation>
+			</element>
+			<element name="streetWidth" type="gml:LengthType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+street width
+
+-- Definition --
+In meters</documentation>
+				</annotation>
+			</element>
+			<element name="heightFacades" type="gml:LengthType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+height facades
+
+-- Definition --
+In metres</documentation>
+				</annotation>
+			</element>
+			<element name="dispersionRegional" type="gml:ReferenceType" minOccurs="0">
+				<annotation>
+					<documentation>Describes the topographic situation on a scale of several kilometres.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="DispersionSituationPropertyType">
+		<sequence>
+			<element ref="aqd:DispersionSituation"/>
+		</sequence>
+	</complexType>
+	<element name="ExceedanceDescription" type="aqd:ExceedanceDescriptionType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+exceedance description
+
+-- Definition --
+Statement if the Environmental Objective (itself) is exceeded or complied with.
+In the following elements, either the numeric value which is checked against the Environmental Objective (e.g. annual mean value or AOT value), or the number of exceedances (e.g. daily mean values above 50 µg/m³ or 1 hour mean values above 200 µg/m ³) for which the Environmental Objective is defined, are given.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ExceedanceDescriptionType">
+		<sequence>
+			<element name="exceedance" type="boolean">
+				<annotation>
+					<documentation>-- Name --
+exceedance
+
+-- Definition --
+if the environmental objective for this pollutant is exceeded in this zone (given as “true”/”false”)</documentation>
+				</annotation>
+			</element>
+			<element name="numericalExceedance" type="double" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+numerical exceedance
+
+-- Definition --
+refers to average, percentile or AOT</documentation>
+				</annotation>
+			</element>
+			<element name="numberExceedances" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+number of exceedances
+
+-- Definition --
+Exceedance number: number of daily or hourly exceedances in case an environmental objective given as a maximum number of daily or hourly values above a certain value.</documentation>
+				</annotation>
+			</element>
+			<element name="deductionAssessmentMethod" type="aqd:AdjustmentMethodPropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+deduction assessment method
+
+-- Definition --
+Information of the assessment methods (samplingPoints or Model) used to calculate the fraction to be deducted</documentation>
+				</annotation>
+			</element>
+			<element name="exceedanceArea" type="aqd:ExceedanceAreaPropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+exceedance area
+
+-- Definition --
+Area of the exceedance situation</documentation>
+				</annotation>
+			</element>
+			<element name="exceedanceExposure" type="aqd:ExceedanceExposurePropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+exceedance exposure
+
+-- Definition --
+Information about the population and the exposed ecosystem and vegetation within the area of exceedance</documentation>
+				</annotation>
+			</element>
+			<element name="reason" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>-- Name --
+reason 
+
+-- Definition --
+This code list reference allows for the declaration of reason(s) for the observed exceedance using codes prescribed by the AQD.</documentation>
+				</annotation>
+			</element>
+			<element name="reasonOther" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other reason
+
+-- Definition --
+textual description of reasons not available from codelist</documentation>
+				</annotation>
+			</element>
+			<element name="comment" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+comment
+
+-- Definition --
+Provides further information of relevance on the exceedance</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="ExceedanceDescriptionPropertyType">
+		<sequence>
+			<element ref="aqd:ExceedanceDescription"/>
+		</sequence>
+	</complexType>
+	<element name="RelevantEmissions" type="aqd:RelevantEmissionsType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+relevant emissions
+
+-- Definition --
+Emissions with predominant influence: For each measurement configuration, the type of source is to be given which is responsible for the largest (relative) contribution to the observed concentration. 
+Describes emissions influencing the monitoring station for the specific pollutant. This information is relevant for the interpretation of the measured data and the assessment of the representativeness of the site.</documentation>
+		</annotation>
+	</element>
+	<complexType name="RelevantEmissionsType">
+		<sequence>
+			<element name="distanceSource" type="gml:LengthType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+distance source
+
+-- Definition --
+In case of industrial sources, the distance from the source or source area has to be given. The distance refers to the stack in case of point sources or to the nearest edge of a source area in case of spatially distributed emissions.
+Unit metres.</documentation>
+				</annotation>
+			</element>
+			<element name="heatingEmissions" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+heating emissions
+
+-- Definition --
+Emissions from domestic heating, referring to a surrounding of about 1 km², unit t/m².year.</documentation>
+				</annotation>
+			</element>
+			<element name="industrialEmissions" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+industrial emissions
+
+-- Definition --
+In t/year</documentation>
+				</annotation>
+			</element>
+			<element name="mainEmissionSources" type="gml:ReferenceType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+main emissions sources
+
+-- Definition --
+See codelist Main emission sources
+The main emission source(s) (D.5.1.5.2) can be selected from the Codelist Main Emission Sources.
+In addition to the CRF emission categories, two “source” types have been introduced which represent contributions not originating from identifiyble sources: “Secondary” and “Long-range transport”, for which neither a sectoral nor a spatial source attribution is possible.</documentation>
+				</annotation>
+			</element>
+			<element name="stationClassification" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+station classification
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="trafficEmissions" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+traffic emissions
+
+-- Definition --
+See codelist Main emission sources
+The main emission source(s) (D.5.1.5.2) can be selected from the Codelist Main Emission Sources.
+In addition to the CRF emission categories, two “source” types have been introduced which represent contributions not originating from identifiyble sources: “Secondary” and “Long-range transport”, for which neither a sectoral nor a spatial source attribution is possible.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="RelevantEmissionsPropertyType">
+		<sequence>
+			<element ref="aqd:RelevantEmissions"/>
+		</sequence>
+	</complexType>
+	<element name="SamplingPointCollection" type="aqd:SamplingPointCollectionType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+sampling point collection
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="SamplingPointCollectionType">
+		<sequence>
+			<element name="samplingPoint" type="aqd:AQD_SamplingPointPropertyType" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="SamplingPointCollectionPropertyType">
+		<sequence>
+			<element ref="aqd:SamplingPointCollection"/>
+		</sequence>
+	</complexType>
+	<element name="DataQuality" type="aqd:DataQualityType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+data quality
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="DataQualityType">
+		<sequence>
+			<element name="comment" type="string" minOccurs="0"/>
+			<element name="detectionLimit" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+detection limit
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="documentation" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+documentation
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="qaReport" type="anyURI" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+quality assessment report
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="DataQualityPropertyType">
+		<sequence>
+			<element ref="aqd:DataQuality"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_SamplingPoint" type="aqd:AQD_SamplingPointType" substitutionGroup="ef:EnvironmentalMonitoringFacility">
+		<annotation>
+			<documentation>-- Name --
+sampling point
+
+-- Definition --
+Information concerning measurement configuration by pollutant (sampling point), to be provided for each measurement configuration for which data is to be reported.
+According to Art. 2 (3), a 'Measurement Configuration' means the technical facilities used for the measurement of one pollutant or one of its compounds at a specific station. For a pollutant, more than one Measurement Configurations at a single station can be in operation.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_SamplingPointType">
+		<complexContent>
+			<extension base="ef:EnvironmentalMonitoringFacilityType">
+				<sequence>
+					<element name="assessmentType" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+assessment type
+
+-- Definition --
+The assessment methods are specified in C.6.1, with multiple entries possible:
+1. Fixed Measurement
+2. Indicativemeasurement
+3. Modelling
+4. Objective Estimation
+See codelist Assessment Type</documentation>
+						</annotation>
+					</element>
+					<element name="relevantEmissions" type="aqd:RelevantEmissionsPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+relevant emissions
+
+-- Definition --
+Emissions with predominant influence: For each measurement configuration, the type of source is to be given which is responsible for the largest (relative) contribution to the observed concentration. 
+Describes emissions influencing the monitoring station for the specific pollutant. This information is relevant for the interpretation of the measured data and the assessment of the representativeness of the site.
+
+Cardinality Note: this is optional for Indicative, mandatory for fixed. Schematron must check</documentation>
+						</annotation>
+					</element>
+					<element name="usedAQD" type="boolean">
+						<annotation>
+							<documentation>-- Name --
+used for air quality directive
+
+-- Definition --
+Statement if the measurement is used for assessment under EC legislation.
+This flag discriminates measurement data used for “official” AQ assessment for compliance checking under EC legislation from measurement data used for other purposes.
+This flag is essential especially in cases where more than one measurement configuration for one pollutant is operated at a station.</documentation>
+						</annotation>
+					</element>
+					<element name="environmentalObjective" type="aqd:EnvironmentalObjectivePropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+environmental objective
+
+-- Definition --
+see Dataset Environmental Objective (A.3).
+Describes if the measurement is used for health of ecosystem protection and for AEI measurement.</documentation>
+						</annotation>
+					</element>
+					<element name="changeAEIStations" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+change average exposure indicator (AEI) stations
+
+-- Definition --
+Documentation and justification of changes in monitoring stations used for the AEI</documentation>
+						</annotation>
+					</element>
+					<element name="assessmentMethodNS" type="string" minOccurs="0"/>
+					<element name="assessmentMethodWSS" type="string" minOccurs="0"/>
+					<element name="adjustmentMethods" type="aqd:AdjustmentMethodPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+assessment method natural sources
+
+-- Definition --
+Short description of method for the identification of contributions from Natural Sources (according to Art. 20 of Dir. 2008/50/EC)</documentation>
+						</annotation>
+					</element>
+					<element name="reportingDB" type="gml:ReferenceType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+reporting database
+
+-- Definition --
+Data-bases or programmes to which data are reported 
+Describes the end-use of the measured data; it comprises data-bases on national or international level to be selected from the codelist “Reporting Level”.
+Additional data-bases can be added under D.5.4.2.
+All the bodies to which data from the station are transmitted should be indicated, from the local level and up to national and international level (e.g. European Commission, EEA, EMEP, OECD, GEMS, WHO,....). This information might be used by the Commission in the future to transfer the data to the concerned international bodies so discharging the Member States of doing it.
+See codelist Reporting Level, multiple entries accepted.</documentation>
+						</annotation>
+					</element>
+					<element name="reportingDBOther" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+other reporting database
+
+-- Definition --
+If data is provided to databases not in the list, please select “Other specify” and then enter this database in the Text field.</documentation>
+						</annotation>
+					</element>
+					<element name="zone" type="aqd:AQD_ZonePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_SamplingPointPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_SamplingPoint"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Publication" type="aqd:PublicationType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+publication
+
+-- Definition --
+Documentation of the publication of the AQ Plan.</documentation>
+		</annotation>
+	</element>
+	<complexType name="PublicationType">
+		<sequence>
+			<element name="description" type="string">
+				<annotation>
+					<documentation>-- Name --
+description
+
+-- Definition --
+Title as written in the publication.</documentation>
+				</annotation>
+			</element>
+			<element name="title" type="string">
+				<annotation>
+					<documentation>-- Name --
+title
+
+-- Definition --
+Short description of the publication. ISBN number should be provided if available.</documentation>
+				</annotation>
+			</element>
+			<element name="author" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+author
+
+-- Definition --
+If there are multiple authors, please provide in one field separated by commas</documentation>
+				</annotation>
+			</element>
+			<element name="publicationDate" type="gml:TimeInstantPropertyType">
+				<annotation>
+					<documentation>-- Name --
+publicationDate
+
+-- Definition --
+YYYY
+ISO Format, described under 
+“1. STRUCTURE OF THE TABLES “DATATYPES” AND “DATASETS””</documentation>
+				</annotation>
+			</element>
+			<element name="publisher" type="string">
+				<annotation>
+					<documentation>-- Name --
+air quality directive network
+
+-- Definition --
+Publishing institution, academic jourmal, etc.</documentation>
+				</annotation>
+			</element>
+			<element name="webLink" type="anyURI" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+web link
+
+-- Definition --
+web link to documentation</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="PublicationPropertyType">
+		<sequence>
+			<element ref="aqd:Publication"/>
+		</sequence>
+	</complexType>
+	<element name="SamplingMethod" type="aqd:SamplingMethodType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+sampling method
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="SamplingMethodType">
+		<sequence>
+			<element name="samplingMethod" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+sampling method
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="otherSamplingMethod" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other sampling method
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="SamplingMethodPropertyType">
+		<sequence>
+			<element ref="aqd:SamplingMethod"/>
+		</sequence>
+	</complexType>
+	<element name="ExceedanceExposure" type="aqd:ExceedanceExposureType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+exceedance exposure
+
+-- Definition --
+Information about the population and the exposed ecosystem and vegetation within the area of exceedance</documentation>
+		</annotation>
+	</element>
+	<complexType name="ExceedanceExposureType">
+		<sequence>
+			<element name="populationExposed" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+population exposed
+
+-- Definition --
+Estimate of the total resident population in the exceedance area. Number of resident population within the area of exceedance. This information is required if the Environmental Objective refers to human health protection.</documentation>
+				</annotation>
+			</element>
+			<element name="ecosystemAreaExposed" type="gml:AreaType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+ecosystem area exposed
+
+-- Definition --
+Estimate of the ecosystem/vegetation area exposed above the environmental objective. Area in km² of ecosystems or vegetation within the area of exceedance, e.g. retrieved from Corine Landcover data. This information is required if the Environmental Objective refers to ecosystem/vegetation protection.</documentation>
+				</annotation>
+			</element>
+			<element name="sensitivePopulation" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+sensitive population
+
+-- Definition --
+Percentage of sensitive population in the exceedance area, defined as sum of percentage under 18 and over 60 years of age</documentation>
+				</annotation>
+			</element>
+			<element name="infrastructureServices" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+infrastructure services
+
+-- Definition --
+Total number of infrastructure services for sensitive population groups in the exceedance area (hospitals, kindergardens, schools etc.)</documentation>
+				</annotation>
+			</element>
+			<element name="referenceYear" type="gml:TimeInstantPropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+reference year
+
+-- Definition --
+Reference year for the population/exposure data if different from reporting year</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="ExceedanceExposurePropertyType">
+		<sequence>
+			<element ref="aqd:ExceedanceExposure"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_Attainment" type="aqd:AQD_AttainmentType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>-- Name --
+Air quality directive attainment
+
+-- Definition --
+attainment for each zone and environmental objective</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_AttainmentType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspireId
+
+-- Definition -- 
+The unique identifier for each attainment element (for each zone, environmental objective and pollutant). 
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="pollutant" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+pollutant
+
+-- Definition --
+See codelist Pollutants</documentation>
+						</annotation>
+					</element>
+					<element name="environmentalObjective" type="aqd:EnvironmentalObjectivePropertyType">
+						<annotation>
+							<documentation>-- Name --
+environmental objective
+
+-- Definition --
+See data type Environmental Objective
+Specifies the environmental objective for the pollutant.</documentation>
+						</annotation>
+					</element>
+					<element name="exceedanceDescriptionBase" type="aqd:ExceedanceDescriptionPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+exceedance description base
+
+-- Definition --
+Statement of whether the maximum levels in the zone are above or below the Environmental Objective (exceeded or compliance) before any applicable corrections (adjustments) for NS / WSS are applied. Only populate this element if corrections are applicable and if you are applying them, else go to aqd:exceedanceDescriptionFinal.
+In the following elements, either the numeric value of the maximum concentration observed in the zone which is used to checked against the Environmental Objective (e.g. annual mean value or AOT value), or the maximum number of exceedances in the zone which is used to checked against the Environmental Objective (e.g. daily mean values above 50 µg/m³ or 1 hour mean values above 200 µg/m ³) are given. Information on adjustments, area exposed, population exposed and reasons for exceedance may also be provided.</documentation>
+						</annotation>
+					</element>
+					<element name="exceedanceDescriptionAdjustment" type="aqd:ExceedanceDescriptionPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+exceedance description adjustment
+
+-- Definition --
+Statement of whether the maximum levels in the zone are above or below the Environmental Objective (exceeded or compliance) after each applicable corrections (adjustments) for NS / WSS has been applied. Multiple aqd:exceedanceDescriptionAdjustment elements are allowed and should be used to declare the effect of each type of correction in an incremental way.
+In the following elements, either the numeric value of the maximum concentration observed in the zone which is used to checked against the Environmental Objective (e.g. annual mean value or AOT value), or the maximum number of exceedances in the zone which is used to checked against the Environmental Objective (e.g. daily mean values above 50 µg/m³ or 1 hour mean values above 200 µg/m ³) are given. Information on adjustments, area exposed, population exposed and reasons for exceedance may also be provided.</documentation>
+						</annotation>
+					</element>
+					<element name="exceedanceDescriptionFinal" type="aqd:ExceedanceDescriptionPropertyType">
+						<annotation>
+							<documentation>-- Name --
+exceedance description final
+
+-- Definition --
+Final Statement of whether the maximum levels in the zone are above or below the Environmental Objective (exceeded or compliance). This statement applies to all pollutants where no corrections (adjustments) and for pollutants where corrections (adjustments) are applicable after the combined impact has been applied (i.e. fully corrected).
+In the following elements, either the numeric value of the maximum concentration observed in the zone which is used to checked against the Environmental Objective (e.g. annual mean value or AOT value), or the maximum number of exceedances in the zone which is used to checked against the Environmental Objective (e.g. daily mean values above 50 µg/m³ or 1 hour mean values above 200 µg/m ³) are given. Information on adjustments, area exposed, population exposed and reasons for exceedance may also be provided.</documentation>
+						</annotation>
+					</element>
+					<element name="comment" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+comment
+
+-- Definition --
+Provides further information of relevance on the exceedance</documentation>
+						</annotation>
+					</element>
+					<element name="zone" type="aqd:AQD_ZonePropertyType"/>
+					<element name="assessment" type="aqd:AQD_AssessmentRegimePropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_AttainmentPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_Attainment"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AQD_SamplingPointProcess" type="aqd:AQD_SamplingPointProcessType" substitutionGroup="ompr:Process">
+		<annotation>
+			<documentation>-- Name --
+air quality directive sampling point process
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_SamplingPointProcessType">
+		<complexContent>
+			<extension base="ompr:ProcessType">
+				<sequence>
+					<element name="measurementType" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+measurement type
+
+-- Definition --See codelist Measurement Type.</documentation>
+						</annotation>
+					</element>
+					<element name="measurementMethod" type="aqd:MeasurementMethodPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+measurement method description
+
+-- Definition --
+Information about the measurement method when Measurement Type is “Automatic analyzer” or “Remote sensor”</documentation>
+						</annotation>
+					</element>
+					<element name="samplingMethod" type="aqd:SamplingMethodPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+sampling method description
+
+-- Definition --
+Information about the Sampling method when Measurement Type is “Active or passive sampling”</documentation>
+						</annotation>
+					</element>
+					<element name="analyticalTechnique" type="aqd:AnalyticalTechniquePropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+analytical technique description
+
+-- Definition --
+Information about the Analytical technique when Measurement Type is “Active or passive sampling”</documentation>
+						</annotation>
+					</element>
+					<element name="samplingEquipment" type="aqd:SamplingEquipmentPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+sampling equipment
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="measurementEquipment" type="aqd:MeasurementEquipmentPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+measurement equipment
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="equivalenceDemonstration" type="aqd:EquivalenceDemonstrationPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+equivalence demonstration
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="dataQuality" type="aqd:DataQualityPropertyType">
+						<annotation>
+							<documentation>-- Name --
+data quality
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="duration" type="aqd:TimeReferencesPropertyType">
+						<annotation>
+							<documentation>-- Name --
+duration
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="cadence" type="aqd:TimeReferencesPropertyType">
+						<annotation>
+							<documentation>-- Name --
+cadence
+
+-- Definition --
+Sampling interval: Time interval between the start of two consecutive samplings. 
+D.5.1.10.2 requires the “Sampling interval” as the time between the start of two consecutive samples. In case of sampling with continuous time coverage, the sampling interval is identical with the sampling time.
+The sampling interval may vary slightly in case of discontinuous or of passive sampling. Here, an average or common sampling interval is to be given.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_SamplingPointProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_SamplingPointProcess"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="RegionalBackground" type="aqd:RegionalBackgroundType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+regional background
+
+-- Definition --
+Regional background - Split of total regional background in µg/m³
+The regional background level is the concentration of pollutants on a spatial scale of more than about 30 km. 
+It comprises contributions from outside  the exceedance area, but also from sources within the exceedance area. The regional backbground has to be split, if appropriate data are available, into contributions from within the MS affected and transboundary contributions.</documentation>
+		</annotation>
+	</element>
+	<complexType name="RegionalBackgroundType">
+		<sequence>
+			<element name="total" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+total
+
+-- Definition --
+To be provided in µg/m³</documentation>
+				</annotation>
+			</element>
+			<element name="fromWithinMS" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+from within member state
+
+-- Definition --
+To be provided in µg/m³</documentation>
+				</annotation>
+			</element>
+			<element name="transboundary" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+transboundary
+
+-- Definition --
+To be provided in µg/m³</documentation>
+				</annotation>
+			</element>
+			<element name="natural" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+natural
+
+-- Definition --
+To be provided in µg/m³
+
+For the purpose of this source apportionment, only those sources with natural origin which are strictly independent of human activity can be listed under “natural”. E.g., dust resuspended from roads, even if having Saharan origin, or wind-blown dust from crop fields must be listed under "fromWithinMS" or "transboundary"
+
+Please provide a description of the natural contribution in the comments</documentation>
+				</annotation>
+			</element>
+			<element name="other" type="aqd:QuantityCommentedPropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other
+
+-- Definition --
+To be provided in µg/m³
+
+Please provide description in the comments</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="RegionalBackgroundPropertyType">
+		<sequence>
+			<element ref="aqd:RegionalBackground"/>
+		</sequence>
+	</complexType>
+	<element name="EnvironmentalObjective" type="aqd:EnvironmentalObjectiveType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+environmental objective
+
+-- Definition --
+see Datatype “Environmental Objective”.
+Please note that the name “Environmental objective type” in the Decision 2011/850/EC is not correct. This element refers to the (whole) “Environmental Objective” as defined in A.3.</documentation>
+		</annotation>
+	</element>
+	<complexType name="EnvironmentalObjectiveType">
+		<sequence>
+			<element name="objectiveType" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+objective type
+
+-- Definition --
+See codelist Environmental Objective Type</documentation>
+				</annotation>
+			</element>
+			<element name="reportingMetric" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+reporting metric
+
+-- Definition --
+See codelist Reporting metric</documentation>
+				</annotation>
+			</element>
+			<element name="protectionTarget" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+protection target
+
+-- Definition --
+See codelist Protection Target</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="EnvironmentalObjectivePropertyType">
+		<sequence>
+			<element ref="aqd:EnvironmentalObjective"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_Station" type="aqd:AQD_StationType" substitutionGroup="ef:EnvironmentalMonitoringFacility">
+		<annotation>
+			<documentation>-- Name --
+air quality directive station
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_StationType">
+		<complexContent>
+			<extension base="ef:EnvironmentalMonitoringFacilityType">
+				<sequence>
+					<element name="natlStationCode" type="string">
+						<annotation>
+							<documentation>-- Name --
+national station code
+
+-- Definition --
+same code as in AirBase and according to the EoI.</documentation>
+						</annotation>
+					</element>
+					<element name="municipality" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+municipality
+
+-- Definition --
+Name of the municipality where the monitoring station is located.
+Name of municipality can be derived from external data sources based on the geographical coordinates.</documentation>
+						</annotation>
+					</element>
+					<element name="EUStationCode" type="string">
+						<annotation>
+							<documentation>-- Name --
+EU station code
+
+-- Definition --
+Reference to existing code that uniquely identifies stations for which metadata are provided. 
+Comment: same as in AirBase and according to the EoI.
+The EU station code comprises the two-digit national code, as defined by ISO-3166-1, and four additional alphanumeric digits. These can be directly related to the national station code its format is appropriate and unambiguous.</documentation>
+						</annotation>
+					</element>
+					<element name="meteoParams" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>meteo parameters
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="stationInfo" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+station info
+
+-- Definition --
+Documentation of station information, including Maps and photographs</documentation>
+						</annotation>
+					</element>
+					<element name="areaClassification" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+area classification
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="dispersionSituation" type="aqd:DispersionSituationPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+dispersion situation
+
+-- Definition --
+Local and regional dispersion situation : Describes the local dispersion situation on a spatial scale of some 10m.
+It comprises information about the surroundings of the station with respect to dispersion conditions. This information is relevant for the interpretation of the measured data, and to assess the location with respect to the siting criteria laid down in Annex III of Dir. 2008/0/EC and Annex III.II of Dir. 2004/107EC.</documentation>
+						</annotation>
+					</element>
+					<element name="altitude" type="gml:LengthType">
+						<annotation>
+							<documentation>-- Name --
+altitude
+
+-- Definition --
+Use this element to declare the altitude of the monitoring station above sea level in metres.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_StationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_Station"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AQD_Network" type="aqd:AQD_NetworkType" substitutionGroup="ef:EnvironmentalMonitoringNetwork">
+		<annotation>
+			<documentation>-- Name --
+air quality directive network
+
+-- Definition --
+Network which manages the sampling point.
+Link to D.5.3</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_NetworkType">
+		<complexContent>
+			<extension base="ef:EnvironmentalMonitoringNetworkType">
+				<sequence>
+					<element name="networkType" type="gml:ReferenceType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+network type
+
+-- Definition --
+See codelist Network Type</documentation>
+						</annotation>
+					</element>
+					<element name="operationActivityPeriod" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+operation activity period
+
+-- Definition --</documentation>
+						</annotation>
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence minOccurs="0">
+										<element ref="gml:AbstractTimeObject"/>
+									</sequence>
+									<attributeGroup ref="gml:AssociationAttributeGroup"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="aggregationTimeZone" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+aggregation time zone
+
+-- Definition --
+Use this code list reference to declare the time zone used for aggregated data and statistics derived from observations made by sampling points and stations belonging to this network. It is recommended that local standard time (the time without correction for daylight saving time where this is applicable) is used for reporting of observations and aggregated data and derived statistics.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_NetworkPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_Network"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AQD_Model" type="aqd:AQD_ModelType" substitutionGroup="ef:EnvironmentalMonitoringNetwork">
+		<annotation>
+			<documentation>-- Name --
+air quality directive model
+
+-- Definition --
+Modelling: to be provided for each specific instance of modelling
+Models are a totally different source of air quality information than measurement. 
+Both meta-information as well as results are to be made available in formats different from measurement data, and have not been covered by the present Exchange of Information Decision.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_ModelType">
+		<complexContent>
+			<extension base="ef:EnvironmentalMonitoringNetworkType">
+				<sequence>
+					<element name="environmentalObjective" type="aqd:EnvironmentalObjectivePropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+environmental objective
+
+-- Definition --
+see Datatype “Environmental Objective”.
+Please note that the name “Environmental objective type” in the Decision 2011/850/EC is not correct. This element refers to the (whole) “Environmental Objective” as defined in A.3.</documentation>
+						</annotation>
+					</element>
+					<element name="assessmentType" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+assessment type 
+
+-- Definition --
+The assessment methods are specified in C.6.1, with multiple entries possible:
+1. Fixed Measurement
+2. Indicativemeasurement
+3. Modelling
+4. Objective Estimation
+See codelist Assessment Type</documentation>
+						</annotation>
+					</element>
+					<element name="zone" type="aqd:AQD_ZonePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_ModelPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_Model"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="MeasurementMethod" type="aqd:MeasurementMethodType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+measurement method
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeasurementMethodType">
+		<sequence>
+			<element name="measurementMethod" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+measurement method
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="otherMeasurementMethod" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other measurement method
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="MeasurementMethodPropertyType">
+		<sequence>
+			<element ref="aqd:MeasurementMethod"/>
+		</sequence>
+	</complexType>
+	<element name="SamplingEquipment" type="aqd:SamplingEquipmentType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+sampling equipment
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="SamplingEquipmentType">
+		<sequence>
+			<element name="equipment" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+equipment
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="otherEquipment" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other equipment
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="SamplingEquipmentPropertyType">
+		<sequence>
+			<element ref="aqd:SamplingEquipment"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_Sample" type="aqd:AQD_SampleType" substitutionGroup="sams:SF_SpatialSamplingFeature">
+		<annotation>
+			<documentation>-- Name --
+air quality sample
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_SampleType">
+		<complexContent>
+			<extension base="sams:SF_SpatialSamplingFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspireId
+
+-- Definition -- 
+The unique identifier for the air quality sample 
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="inletHeight" type="gml:LengthType">
+						<annotation>
+							<documentation>-- Name --
+inlet height
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="buildingDistance" type="gml:LengthType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+building distance
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="kerbDistance" type="gml:LengthType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+kerb distance
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_SamplePropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_Sample"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Scenario" type="aqd:ScenarioType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+air quality directive scenario
+
+-- Definition --
+The scenario should describe the effect of a ‘business as usual’ scenario upon emission and concentration in projection year, which includes the effect of existing measures and of measures that have already been decided to reduce pollution, e.g. directives to reduce emissions per vehicle, and also the development in pollution activities, e.g. traffic growth.
+This type is used to describe both the baseline as well as the projection scenario.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ScenarioType">
+		<sequence>
+			<element name="description" type="string">
+				<annotation>
+					<documentation>-- Name --
+description
+
+-- Definition --
+The description of the emission scenario is given in free text. In this text, the assumptions regarding the emission scenarios are described. Preferably a reference to background material is given.</documentation>
+				</annotation>
+			</element>
+			<element name="totalEmissions" type="gml:MeasureType">
+				<annotation>
+					<documentation>-- Name --
+total emissions
+
+-- Definition --
+Emissions in the area addressed by the AQ Plan, Short-term Action Plan, or single measure for the year for which the projections are developed. The projected emission should not take into account reduction due to measures that are not in the baseline.</documentation>
+				</annotation>
+			</element>
+			<element name="expectedConcentration" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+expected concentration
+
+-- Definition --
+Expected concentration levels in the projection year under additional measures emissions scenario. Annual mean value in µg/m³</documentation>
+				</annotation>
+			</element>
+			<element name="expectedExceedances" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+expected exceedances
+
+-- Definition --
+Expected concentration levels in the projection year under  the additional measures emissions scenario. Number of exceedances (related to the environmental objective specified in the exceedance situation description) per calendar year</documentation>
+				</annotation>
+			</element>
+			<element name="comment" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+comment
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="measuresApplied" type="aqd:AQD_MeasuresPropertyType" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="ScenarioPropertyType">
+		<sequence>
+			<element ref="aqd:Scenario"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_Plan" type="aqd:AQD_PlanType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>-- Name --
+air quality directive plan
+
+-- Definition --
+General Information on air quality plan</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_PlanType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspireId
+
+-- Definition --
+External object identifier of the air quality plan.
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="code" type="string">
+						<annotation>
+							<documentation>-- Name --
+code
+
+-- Definition --
+A unique reference to AQ plan provided by the Member States starting with the 2-digit country code according to ISO 3166-1. May also include pollutants and reference year of the assessment triggering the Air Quality Plan.</documentation>
+						</annotation>
+					</element>
+					<element name="name" type="string">
+						<annotation>
+							<documentation>-- Name --
+name
+
+-- Definition --
+Original Name of AQ-plan (s)</documentation>
+						</annotation>
+					</element>
+					<element name="competentAuthority" type="base2:RelatedPartyPropertyType">
+						<annotation>
+							<documentation>-- Name --
+competent authority
+
+-- Definition --
+Competent authority responsible for the air quality plan</documentation>
+						</annotation>
+					</element>
+					<element name="firstExceedanceYear" type="gml:TimeInstantPropertyType">
+						<annotation>
+							<documentation>-- Name --
+first exceedance year
+
+-- Definition --
+Year of the (first) exceedance of LV (+MoT)  which triggered the implementation of the AQ Plan</documentation>
+						</annotation>
+					</element>
+					<element name="status" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+status
+
+-- Definition --
+See codelist Status AQPlan
+• in preparation
+• in formal adoption process
+• First year of implementation, adopted during reporting year
+• Implementation
+• Under revision
+• Ended, no revision foreseen.
+Under implementation minor modifications of the adopted plan may occur and do not need to be reported through the full information on AQ plan</documentation>
+						</annotation>
+					</element>
+					<element name="pollutants" type="aqd:PollutantPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+pollutants
+
+-- Definition --
+See codelist Pollutants
+List of pollutants that the plan covers</documentation>
+						</annotation>
+					</element>
+					<element name="adoptionDate" type="gml:TimeInstantPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+adoption date
+
+-- Definition --
+Can only be given if the status is not “in preparation” or “in formal adoption process”.</documentation>
+						</annotation>
+					</element>
+					<element name="timeTable" type="string">
+						<annotation>
+							<documentation>-- Name --
+time table
+
+-- Definition --
+Short description of timetable for the implementation of the measures comprises in the AQ Plan.</documentation>
+						</annotation>
+					</element>
+					<element name="referenceAQPlan" type="anyURI">
+						<annotation>
+							<documentation>-- Name --
+reference Air quality directive plan
+
+-- Definition --
+Website where the last version of full AQ plan can be accessed, and where information on the implementation of the AQ plan can be found.</documentation>
+						</annotation>
+					</element>
+					<element name="referenceImplementation" type="anyURI">
+						<annotation>
+							<documentation>-- Name --
+reference implementation
+
+-- Definition --
+Website where information about the implementation of the AQ Plan can be found</documentation>
+						</annotation>
+					</element>
+					<element name="publication" type="aqd:PublicationPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+publication
+
+-- Definition --
+Data type Publication 
+Documentation of the publication of the AQ Plan.</documentation>
+						</annotation>
+					</element>
+					<element name="comment" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+comment
+
+-- Definition --
+Further clarification if necessary. If the plan is replacing some existing plans changing code due to change in governance, scope, spatial extent etc., their codes should be identified here</documentation>
+						</annotation>
+					</element>
+					<element name="exceedanceSituation" type="aqd:AQD_AttainmentPropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_PlanPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_Plan"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Pollutant" type="aqd:PollutantType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+pollutant
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="PollutantType">
+		<sequence>
+			<element name="pollutantCode" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+pollutant code
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="protectionTarget" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+protected target
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="PollutantPropertyType">
+		<sequence>
+			<element ref="aqd:Pollutant"/>
+		</sequence>
+	</complexType>
+	<element name="CompetentAuthorities" type="aqd:CompetentAuthoritiesType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>-- Name --
+competent authorities
+
+-- Definition --
+The official and complete information of the body (institution, company …) in charge for a specific reporting obligation</documentation>
+		</annotation>
+	</element>
+	<complexType name="CompetentAuthoritiesType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+inspireID
+
+-- Definition --
+External object identifier of the competent authority.
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="assessmentAirQuality" type="base2:RelatedPartyPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+assessment air quality authority
+
+-- Definition --
+National authority responsible for coordination of all tasks related to AQ assessment and reporting.</documentation>
+						</annotation>
+					</element>
+					<element name="approvalMeasurementSystems" type="base2:RelatedPartyPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+approval measurement systems authority
+
+-- Definition --
+Background information see http://ies.jrc.ec.europa.eu/aquila-project/role-and-tasks-of-national-reference-laboratories.html</documentation>
+						</annotation>
+					</element>
+					<element name="accuracyMeasurements" type="base2:RelatedPartyPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+accuracy measurements authority
+
+-- Definition --
+Background information see http://ies.jrc.ec.europa.eu/aquila-project/role-and-tasks-of-national-reference-laboratories.html</documentation>
+						</annotation>
+					</element>
+					<element name="analysisAssessmentMethod" type="base2:RelatedPartyPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+analysis assessment method authority
+
+-- Definition --
+Background information see http://ies.jrc.ec.europa.eu/aquila-project/role-and-tasks-of-national-reference-laboratories.html</documentation>
+						</annotation>
+					</element>
+					<element name="nationWideQualityAssurance" type="base2:RelatedPartyPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+nation wide quality assurance authority
+
+-- Definition --
+Background information see http://ies.jrc.ec.europa.eu/aquila-project/role-and-tasks-of-national-reference-laboratories.html http://ies.jrc.ec.europa.eu/aquila-project/role-and-tasks-of-national-reference-laboratories.html</documentation>
+						</annotation>
+					</element>
+					<element name="cooperationMSCommission" type="base2:RelatedPartyPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+cooperation MS commision authority
+
+-- Definition --
+Background information see http://ies.jrc.ec.europa.eu/aquila-project/role-and-tasks-of-national-reference-laboratories.html</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="CompetentAuthoritiesPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:CompetentAuthorities"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AQD_ReportingHeader" type="aqd:AQD_ReportingHeaderType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>-- Definition --
+Collection of spatial objects to which reporting information can be associated or linked  to (i.e. statistics, indicators, observations and measurements or spatial data). 
+
+-- Description --
+The collection of spatial objects that form the Reporting Header provide the spatial framework for the associated reported information. 
+The association or linkage between the spatial objects contained within the reporting unit and reporting information is used to join the data together for generate maps used to describe environmental state, identify long term trends or changes in state between reporting periods. 
+
+------</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_ReportingHeaderType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="change" type="boolean">
+						<annotation>
+							<documentation>-- Name --
+change
+
+-- Definition --
+"true" if changes to previous submission, otherwise "false"</documentation>
+						</annotation>
+					</element>
+					<element name="changeDescription" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+change description
+
+-- Definition --
+States if information has changed from that reported the previous year. If change=”false”, the information below can be skipped.
+Data type Documentation of change.</documentation>
+						</annotation>
+					</element>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspired Id
+
+-- Definition --
+External object identifier of the spatial object.
+
+-- Description --
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object. The identifier is an identifier of the spatial object, not an identifier of the real-world phenomenon.
+
+NOTE This is not the same as the object identifier of the spatial object contained within the unit</documentation>
+						</annotation>
+					</element>
+					<element name="reportingAuthority" type="base2:RelatedPartyPropertyType">
+						<annotation>
+							<documentation>-- Name --
+reporting authority
+
+-- Definition --
+Contact information for the Public Authority responsible for creating or collating the data that represents the Reporting Unit and submitting the data to relevant Authority.
+
+-- Description --
+NOTE: Contact information for the Public Authority responsible for generating and submitting the Reporting Unit data should be provided to enable traceability.</documentation>
+						</annotation>
+					</element>
+					<element name="reportingPeriod" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+reporting period
+
+-- Definition --
+Date defining the reporting period.
+
+--Description --
+NOTE: The reporting period may be represented as either a time period (e.g. 2011-01-01 to 2011-12-31) or as a single date representing the reporting year (e.g. 2011).</documentation>
+						</annotation>
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence minOccurs="0">
+										<element ref="gml:AbstractTimeObject"/>
+									</sequence>
+									<attributeGroup ref="gml:AssociationAttributeGroup"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="content" type="gml:FeaturePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="delete" type="gml:FeaturePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_ReportingHeaderPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_ReportingHeader"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AQD_EvaluationScenario" type="aqd:AQD_EvaluationScenarioType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>-- Name --
+air quality evaluation scenario
+
+-- Definition --
+The evaluation scenario should describe both the baseline scenario as well as the effect of the addition measures over and above those included in the baseline scenario upon emission and concentration in projection year.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_EvaluationScenarioType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspireId
+
+-- Definition -- 
+The unique identifier for the air quality evaluation scenario. 
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="codeOfScenario" type="string">
+						<annotation>
+							<documentation>-- Name --
+code of scenario
+
+-- Definition --
+Code of evaluation scenario</documentation>
+						</annotation>
+					</element>
+					<element name="publication" type="aqd:PublicationPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+publication
+
+-- Definition --
+See data type Publication. Documentation of publication with documentation of the Scenario (can be identical to the publications for the AQ Plan referenced in J.2.8).</documentation>
+						</annotation>
+					</element>
+					<element name="attainmentYear" type="gml:TimeInstantPropertyType">
+						<annotation>
+							<documentation>-- Name --
+attainment year for which the projections are calculated
+
+-- Definition --
+the year for which the projections are developed</documentation>
+						</annotation>
+					</element>
+					<element name="startYear" type="gml:TimeInstantPropertyType">
+						<annotation>
+							<documentation>-- Name --
+start year
+
+-- Definition --
+reference year from which the projections are started and for which the source apportionment is available</documentation>
+						</annotation>
+					</element>
+					<element name="baselineScenario" type="aqd:ScenarioPropertyType">
+						<annotation>
+							<documentation>-- Name --
+baselineScenario
+
+-- Definition --
+Emission scenario used for the baseline analysis (without additional measures)</documentation>
+						</annotation>
+					</element>
+					<element name="projectionScenario" type="aqd:ScenarioPropertyType">
+						<annotation>
+							<documentation>-- Name --
+projection scenario
+
+-- Definition --
+Additional measures emission scenario used for the projection analysis. Includes the additional measures not included in the baseline projection</documentation>
+						</annotation>
+					</element>
+					<element name="usedInPlan" type="aqd:AQD_PlanPropertyType"/>
+					<element name="sourceApportionment" type="aqd:AQD_SourceApportionmentPropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_EvaluationScenarioPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_EvaluationScenario"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AQD_AssessmentRegime" type="aqd:AQD_AssessmentRegimeType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>-- Name --
+Air quality directive Assessment regime
+
+-- Definition --
+The Assessment regime – for each zone and pollutant – can be
+&lt;ul&gt;
+	&lt;li&gt;Monitoring&lt;/li&gt;
+	&lt;li&gt;Modelling&lt;/li&gt;
+	&lt;li&gt;Objective Estimation&lt;/li&gt;
+	&lt;li&gt;Indicative measurement&lt;/li&gt;
+	&lt;li&gt;or a combination of these&lt;/li&gt;
+&lt;/ul&gt;
+and depends on the pollution level in relation to the Assessment Thresholds specified in Annex II of Dir. 2008/50EC and Annex I of Dir. 2004/107EC.
+The Assessment Regime applicable for a specific calendar year has to be made available before the end (i.e. 31&lt;sup&gt;st&lt;/sup&gt; Dec.) of the previous year.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_AssessmentRegimeType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspireID
+
+-- Definition --
+External object identifier of the assessment regime report content.
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="pollutant" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+pollutant
+-- Definition --
+select entry from codelist</documentation>
+						</annotation>
+					</element>
+					<element name="assessmentThreshold" type="aqd:AssessmentThresholdPropertyType">
+						<annotation>
+							<documentation>-- Name --
+assessment threshold
+
+-- Definition --
+Specifies the pollution level in relation to the Assessment Thresholds for the specified zone and pollutant.</documentation>
+						</annotation>
+					</element>
+					<element name="assessmentMethods" type="aqd:AssessmentMethodsPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+assessment methods
+
+-- Definition --
+This is the identification of the assessment type, a short description text of the assessment, and the link to the respective assessment meta-data</documentation>
+						</annotation>
+					</element>
+					<element name="zone" type="aqd:AQD_ZonePropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_AssessmentRegimePropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_AssessmentRegime"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AQD_Zone" type="aqd:AQD_ZoneType" substitutionGroup="am:ManagementRestrictionOrRegulationZone">
+		<annotation>
+			<documentation>-- Name --
+air quality directive zone
+
+-- Definition --
+Zones applicable for a specific calendar year have to be made available on a preliminary basis before the end (i.e. 31&lt;sup&gt;st&lt;/sup&gt; Dec.) of the previous year.
+Zones applicable for the air quality assessment, based on validated assessment data, for a specific year, have to be made available – together with the validated assessment data and the attainment/exceedance information – until 30&lt;sup&gt;th&lt;/sup&gt; September of the following year.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_ZoneType">
+		<complexContent>
+			<extension base="am:ManagementRestrictionOrRegulationZoneType">
+				<sequence>
+					<element name="zoneCode" type="string">
+						<annotation>
+							<documentation>-- Name --
+zone code
+
+-- Definition --
+Unique Text code following specification CCXXXX, where CC represents 2-letter Member State code as defined by ISO-3166-1 and XXXX represents a unique code for the zone
+In case of zone modification new codes shall be issued; old codes must not be re-used</documentation>
+						</annotation>
+					</element>
+					<element name="aqdZoneType" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+air quality zone type
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="changeDocumentation" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+change documentation
+
+-- Definition --
+States if information has changed related to the previous year. If change=”false”, the information below can be skipped.
+Data type &lt;i&gt;Documentation of change&lt;/i&gt;</documentation>
+						</annotation>
+					</element>
+					<element name="residentPopulation" type="integer" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+resident population
+
+-- Definition --
+The total number of residents in the zone.</documentation>
+						</annotation>
+					</element>
+					<element name="residentPopulationYear" type="gml:TimeInstantPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+resident population year
+
+-- Definition --
+If reference year is different from reporting year</documentation>
+						</annotation>
+					</element>
+					<element name="area" type="gml:AreaType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+area
+
+-- Definition --
+The measure of the physical extent of any topologically 2-D geometric object. Usually measured in "square" units of length.</documentation>
+						</annotation>
+					</element>
+					<element name="pollutants" type="aqd:PollutantPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+pollutants 
+
+-- Definition --
+Specification for which pollutant(s) the zone has been designated (see codelist pollutants). If the zone is defined for more than one pollutant, the respective pollutant must be provided for each pollutant.</documentation>
+						</annotation>
+					</element>
+					<element name="timeExtensionExemption" type="gml:ReferenceType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+time extension exemption 
+
+-- Definition --
+statement of exemption or time extension for attainment according to Art. 22 of Air Quality Directive</documentation>
+						</annotation>
+					</element>
+					<element name="shapefileLink" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+shapefile link
+
+-- Definition --
+This external file reference may be used to provide a link to the shapefile of the zone if the MS cannot provide the geometry information as a posList. The element provides support for EEA’s user interface (UI) during a 2-year interim period from January 2014 when the UI may be used to report this data flow B on AQ zones.</documentation>
+						</annotation>
+					</element>
+					<element name="predecessor" type="aqd:AQD_ZonePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="LAU" type="au:AdministrativeUnitPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_ZonePropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_Zone"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AdjustmentMethod" type="aqd:AdjustmentMethodType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+adjustment method
+
+-- Definition --
+Information of the assessment methods (samplingPoints or Model) used to calculate the fraction to be deducted, of the adjustment type and the source of the adjustment.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AdjustmentMethodType">
+		<sequence>
+			<element name="assessmentMethod" type="aqd:AssessmentMethodsPropertyType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>-- Name --
+assessment method
+
+-- Definition --
+This is the identification of the assessment type, a short description text of the assessment, and the link to the respective assessment meta-data (see dataset D)</documentation>
+				</annotation>
+			</element>
+			<element name="adjustmentType" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+adjustment type
+
+-- Definition --
+Link to Codelist for describing the nature of the adjustment of exceedances</documentation>
+				</annotation>
+			</element>
+			<element name="adjustmentSource" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>-- Name --
+adjustment source type
+
+-- Definition --
+Link to codelist for defining the natural source type according to AQD Decision 2011/850/EU</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AdjustmentMethodPropertyType">
+		<sequence>
+			<element ref="aqd:AdjustmentMethod"/>
+		</sequence>
+	</complexType>
+	<element name="QuantityCommented" type="aqd:QuantityCommentedType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+quantity commented
+
+-- Definition --
+Numeric information allowing for alternatively voiding the information and providing explanation in the comment field.</documentation>
+		</annotation>
+	</element>
+	<complexType name="QuantityCommentedType">
+		<sequence>
+			<element name="quantity" nillable="true">
+				<annotation>
+					<documentation>-- Name --
+quantity
+
+-- Definition --
+Numeric information on the quantity to be provided together with Unit of Measurement. If this information is not available, the void reason "Unknown" should be used, and the reason for not providing this information should be given in the comment field.</documentation>
+				</annotation>
+				<complexType>
+					<simpleContent>
+						<extension base="gml:MeasureType">
+							<attribute name="nilReason" type="gml:NilReasonType"/>
+						</extension>
+					</simpleContent>
+				</complexType>
+			</element>
+			<element name="comment" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+comment
+
+-- Definition --
+&lt;font color="#1f497d"&gt;Textual description of why the quantification could not be provided or to provide additional context on the validity of the value provided&lt;/font&gt;</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="QuantityCommentedPropertyType">
+		<sequence>
+			<element ref="aqd:QuantityCommented"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_Measures" type="aqd:AQD_MeasuresType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>-- Name --
+Air quality measures
+
+-- Definition --
+Description of measures defined under an air quality directive plan</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_MeasuresType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspireId
+
+-- Definition --
+External object identifier of the air quality measure
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="code" type="string">
+						<annotation>
+							<documentation>-- Name --
+code
+
+-- Definition --
+Unique code of the measure. This may be a unique local code for the measure or may be identical to the unique code used in K2.1.</documentation>
+						</annotation>
+					</element>
+					<element name="name" type="string">
+						<annotation>
+							<documentation>-- Name --
+name
+
+-- Definition --
+Descriptive Title of the measure</documentation>
+						</annotation>
+					</element>
+					<element name="description" type="string">
+						<annotation>
+							<documentation>-- Name --
+description
+
+-- Definition --
+Short description of the measure</documentation>
+						</annotation>
+					</element>
+					<element name="classification" type="gml:ReferenceType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+classification
+
+-- Definition --
+See codelist Measure Classification</documentation>
+						</annotation>
+					</element>
+					<element name="measureType" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+measure type
+
+-- Definition --
+See codelist Measure types</documentation>
+						</annotation>
+					</element>
+					<element name="administrativeLevel" type="gml:ReferenceType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+administrative level
+
+-- Definition --
+See codelist Administrative Level
+Administrative level responsible for implementation of the measure.</documentation>
+						</annotation>
+					</element>
+					<element name="timeScale" type="gml:ReferenceType">
+						<annotation>
+							<documentation>-- Name --
+time scale
+
+-- Definition --
+See codelist Time Scale
+Time scale for implementation of the measure.</documentation>
+						</annotation>
+					</element>
+					<element name="costs" type="aqd:CostsPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+costs
+
+-- Definition --
+Estimated costs for the implementation of the measure over the whole implementation period.</documentation>
+						</annotation>
+					</element>
+					<element name="sourceSectors" type="gml:ReferenceType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+source sectors 
+
+-- Definition --
+See codelist Source Sectors
+Source sector(s) affected by the measure.</documentation>
+						</annotation>
+					</element>
+					<element name="spatialScale" type="gml:ReferenceType" maxOccurs="unbounded">
+						<annotation>
+							<documentation>-- Name --
+spatial scale
+
+-- Definition --
+See codelist Spatial Scale
+Spatial scale of the sources affected</documentation>
+						</annotation>
+					</element>
+					<element name="plannedImplementation" type="aqd:PlannedImplementationPropertyType">
+						<annotation>
+							<documentation>-- Name --
+planned implementation
+
+-- Definition --
+Information about the time frame of the implementation of the measure.</documentation>
+						</annotation>
+					</element>
+					<element name="reductionOfEmissions" type="aqd:QuantityCommentedPropertyType">
+						<annotation>
+							<documentation>-- Name --
+reduction of emissions
+
+-- Definition --
+Reduction of total yearly emissions attributable to the measure; to be given in kt/yr Emissions in the area addressed by the AQ Plan, Short-term Action Plan, or single measure for the year for which the projections are developed.</documentation>
+						</annotation>
+					</element>
+					<element name="expectedImpact" type="aqd:ExpectedImpactPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+expected impact
+
+-- Definition --
+Expected impact on ambient concentrations</documentation>
+						</annotation>
+					</element>
+					<element name="comment" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+comment
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="exceedanceAffected" type="aqd:AQD_SourceApportionmentPropertyType" maxOccurs="unbounded"/>
+					<element name="usedForScenario" type="aqd:AQD_EvaluationScenarioPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_MeasuresPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_Measures"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AQD_ModelArea" type="aqd:AQD_ModelAreaType" substitutionGroup="sams:SF_SpatialSamplingFeature">
+		<annotation>
+			<documentation>-- Name --
+air quality directive model area
+
+-- Definition --
+area of modelling</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_ModelAreaType">
+		<complexContent>
+			<extension base="sams:SF_SpatialSamplingFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+inspireID
+
+-- Definition --
+External object identifier of the model area.
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_ModelAreaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_ModelArea"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="TimeReferences" type="aqd:TimeReferencesType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+time references
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="TimeReferencesType">
+		<sequence>
+			<element name="unit" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+unit
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="numUnits" type="integer">
+				<annotation>
+					<documentation>-- Name --
+numUnits
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="TimeReferencesPropertyType">
+		<sequence>
+			<element ref="aqd:TimeReferences"/>
+		</sequence>
+	</complexType>
+	<element name="ExceedanceArea" type="aqd:ExceedanceAreaType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+exceedance area
+
+-- Definition --
+Area of the exceedance situation</documentation>
+		</annotation>
+	</element>
+	<complexType name="ExceedanceAreaType">
+		<sequence>
+			<element name="areaClassification" type="gml:ReferenceType" maxOccurs="unbounded">
+				<annotation>
+					<documentation>-- Name --
+area classification 
+
+-- Definition --
+Classification of the area. See codelist “area classification ”</documentation>
+				</annotation>
+			</element>
+			<element name="spatialExtent" type="gml:SurfacePropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+spatial extent
+
+-- Definition --
+Area of the exceedance situation. Data type Spatial Extent
+Exceedance area delimitation. GIS description of the exceedance area.</documentation>
+				</annotation>
+			</element>
+			<element name="surfaceArea" type="gml:AreaType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+surface area
+
+-- Definition --
+Estimate of the surface area where the level was above the environmental objective. area in km2</documentation>
+				</annotation>
+			</element>
+			<element name="roadLength" type="gml:LengthType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+road length
+
+-- Definition --
+Estimate of the length of road where the level was above the environmental objective. Length of affected roads in km</documentation>
+				</annotation>
+			</element>
+			<element name="stationUsed" type="aqd:AQD_SamplingPointPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="administrativeUnit" type="au:AdministrativeUnitPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="modelUsed" type="aqd:AQD_ModelPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="ExceedanceAreaPropertyType">
+		<sequence>
+			<element ref="aqd:ExceedanceArea"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_ModelProcess" type="aqd:AQD_ModelProcessType" substitutionGroup="ompr:Process">
+		<annotation>
+			<documentation>-- Name --
+air quality directive model process
+
+-- Definition --
+modelling method</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_ModelProcessType">
+		<complexContent>
+			<extension base="ompr:ProcessType">
+				<sequence>
+					<element name="description" type="string">
+						<annotation>
+							<documentation>-- Name --
+description
+
+-- Definition --
+description of modelling method</documentation>
+						</annotation>
+					</element>
+					<element name="temporalResolution" type="aqd:TimeReferencesPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+temporal resolution
+
+-- Definition --
+Note: cardinality taken down to 0 to account for expert judgement
+Schematron required to check for models</documentation>
+						</annotation>
+					</element>
+					<element name="spatialResolution" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+spatial resolution
+
+-- Definition --
+Note: cardinality taken down to 0 to account for expert judgement
+Schematron required to check for models</documentation>
+						</annotation>
+					</element>
+					<element name="dataQualityDescription" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+data quality description
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="dataQualityReport" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+data quality report
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_ModelProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_ModelProcess"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="PlannedImplementation" type="aqd:PlannedImplementationType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+planned implementation
+
+-- Definition --
+Information about the time frame of the implementation of the measure.</documentation>
+		</annotation>
+	</element>
+	<complexType name="PlannedImplementationType">
+		<sequence>
+			<element name="status" type="gml:ReferenceType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+status
+
+-- Definition --
+See codelist Measure Implementation Status</documentation>
+				</annotation>
+			</element>
+			<element name="implementationPlannedTimePeriod" type="gml:TimePeriodPropertyType">
+				<annotation>
+					<documentation>-- Name --
+implementation planned time period
+
+-- Definition --
+Planned time period for implementation</documentation>
+				</annotation>
+			</element>
+			<element name="implementationActualTimePeriod" type="gml:TimePeriodPropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+implementation actual time period
+
+-- Definition --
+Actual time period for implementation (if different from plan)</documentation>
+				</annotation>
+			</element>
+			<element name="plannedFullEffectDate" type="gml:TimeInstantPropertyType" nillable="true">
+				<annotation>
+					<documentation>-- Name --
+planned full effect date
+
+-- Definition --
+Planned date as of when measure has full effect</documentation>
+				</annotation>
+			</element>
+			<element name="otherDates" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other dates
+
+-- Definition --
+Key adoption/implementation dates with short description</documentation>
+				</annotation>
+			</element>
+			<element name="monitoringProgressIndicators" nillable="true">
+				<annotation>
+					<documentation>-- Name --
+monitoring progress indicators
+
+-- Definition --
+For monitoring the effectiveness of a measure, it is usually not sufficient to just follow how concentration level changes, as the change may be due to other causes. Hence, it is important to follow the progress of the measures with suitable indicators that relate more directly to the measure
+Examples of indicators are:
+- have the planned parking fees been implemented [y/n] and to what extent [number of parking places affected];
+- has the planned permit revision been implemented [y/n];
+- how much has the traffic volume on a road gone down [% heavy duty vehicles].</documentation>
+				</annotation>
+				<complexType>
+					<simpleContent>
+						<extension base="string">
+							<attribute name="nilReason" type="gml:NilReasonType"/>
+						</extension>
+					</simpleContent>
+				</complexType>
+			</element>
+			<element name="comment" type="string" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="PlannedImplementationPropertyType">
+		<sequence>
+			<element ref="aqd:PlannedImplementation"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_SourceApportionment" type="aqd:AQD_SourceApportionmentType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>-- Name --
+air quality directive source apportionment
+
+-- Definition --
+Where the exceedance situation covers a distinct geographical area (as opposed to a point exceedance at a monitoring site) the source apportionment in the exceedance area at the location of highest measured or modelled concentration should be given.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_SourceApportionmentType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspireId
+
+-- Definition --
+A Unique identifier for the source apportionment dataset provided here.
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external applications to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="referenceYear" type="gml:TimeInstantPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+reference year
+
+-- Definition --
+Reference year for which source apportionment has been applied</documentation>
+						</annotation>
+					</element>
+					<element name="regionalBackground" type="aqd:RegionalBackgroundPropertyType">
+						<annotation>
+							<documentation>-- Name --
+regional background
+
+-- Definition --
+Regional background - Split of total regional background in µg/m³
+The regional background level is the concentration of pollutants on a spatial scale of more than about 30 km. 
+It comprises contributions from outside  the exceedance area, but also from sources within the exceedance area. The regional backbground has to be split, if appropriate data are available, into contributions from within the MS affected and transboundary contributions.</documentation>
+						</annotation>
+					</element>
+					<element name="urbanBackground" type="aqd:UrbanBackgroundPropertyType">
+						<annotation>
+							<documentation>-- Name --
+urban background
+
+-- Definition --
+Estimate of split for urban increment in µg/m³
+The urban background level represents the concentrations within towns or agglomerations, wich are determined by the total emissions of the town or agglomerations, but not directly by local emissions.</documentation>
+						</annotation>
+					</element>
+					<element name="localIncrement" type="aqd:LocalIncrementPropertyType">
+						<annotation>
+							<documentation>-- Name --
+local increment
+
+-- Definition --
+Estimate of split for local increment in µg/m³
+The local increment identifies contributions from sources in the immediate vicinity. The local increment can be estimated as the difference between the concentration measured or modelled at the location of exceedance and the urban background level.</documentation>
+						</annotation>
+					</element>
+					<element name="macroExceedanceSituation" type="aqd:ExceedanceDescriptionPropertyType">
+						<annotation>
+							<documentation>-- Name --
+macro exceedance situation
+
+-- Definition --
+An exceedance description for all exceedance situations (instances) in a zone with similar source apportionment. i.e. exceedance arising from similar emissions sectors or groups of emissions sectors</documentation>
+						</annotation>
+					</element>
+					<element name="comment" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+comment
+
+-- Definition --
+Comments on clarification, e.g. information on primary NO2</documentation>
+						</annotation>
+					</element>
+					<element name="parentExceedanceSituation" type="aqd:AQD_AttainmentPropertyType"/>
+					<element name="usedInPlan" type="aqd:AQD_PlanPropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_SourceApportionmentPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_SourceApportionment"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="UrbanBackground" type="aqd:UrbanBackgroundType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+urban background
+
+-- Definition --
+Estimate of split for urban increment (which is the urban background minus the regional background) in µg/m³. 
+The urban background level represents the concentrations within towns or agglomerations, which are determined by the total emissions of the town or agglomerations, but not directly by local emissions.</documentation>
+		</annotation>
+	</element>
+	<complexType name="UrbanBackgroundType">
+		<sequence>
+			<element name="total" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+total
+
+-- Definition --
+To be provided in µg/m³</documentation>
+				</annotation>
+			</element>
+			<element name="traffic" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+traffic
+
+-- Definition --
+Road traffic emissions only (excludes emissions from off road mobile machinery)</documentation>
+				</annotation>
+			</element>
+			<element name="heatAndPowerProduction" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+heat and power production
+
+-- Definition --
+Emissions arising directly from industrial processes and combustion (e.g. sinter plants, BOS furnaces). This excludes emissions from off road mobile machinery used in industry. Because industry is such a broad category, a page reference to where the relevant information about the relative contribution of different processes can be found in the full air quality plan should be given in the comments.</documentation>
+				</annotation>
+			</element>
+			<element name="agriculture" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+agriculture
+
+-- Definition --
+Emissions arising directly from agricultural activities (e.g. chicken farming). This excludes emissions from off road mobile machinery used in agriculture</documentation>
+				</annotation>
+			</element>
+			<element name="commercialAndResidential" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+commercial and residential
+
+-- Definition --
+Emissions from commercial or residential heating (e.g. domestic boilers). This excludes emissions from off road mobile machinery used in commercial and residential sectors.</documentation>
+				</annotation>
+			</element>
+			<element name="shipping" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+shipping
+
+-- Definition --
+Emissions from shipping (excludes emissions from off road mobile machinery used at ports).</documentation>
+				</annotation>
+			</element>
+			<element name="offRoadMobileMachinery" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+off road mobile machinery
+
+-- Definition --
+This includes off road mobile machinery used in industry, agriculture, commercial and residential sectors and shipping.</documentation>
+				</annotation>
+			</element>
+			<element name="natural" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+natural
+
+-- Definition --
+Sources which are not influenced by human activity, e.g., dust resuspended from roads, even if having Saharan origin, must be listed under “traffic”; wind-blown dust from crop fields must be listed under “agriculture”. Please provide a description of the natural contribution in the comments .</documentation>
+				</annotation>
+			</element>
+			<element name="transboundary" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+transboundary
+
+-- Definition --
+Transboundary (related to national boundaries) contributions to the urban increment.</documentation>
+				</annotation>
+			</element>
+			<element name="other" type="aqd:QuantityCommentedPropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other
+
+-- Definition --
+Please provide description in the comments.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="UrbanBackgroundPropertyType">
+		<sequence>
+			<element ref="aqd:UrbanBackground"/>
+		</sequence>
+	</complexType>
+	<element name="Costs" type="aqd:CostsType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+costs
+
+-- Definition --
+Estimated costs for the implementation of the measure over the whole implementation period.</documentation>
+		</annotation>
+	</element>
+	<complexType name="CostsType">
+		<sequence>
+			<element name="estimatedImplementationCosts" nillable="true">
+				<annotation>
+					<documentation>-- Name --
+estimated implementation costs
+
+-- Definition --
+The estimated total costs include also the costs borne by the sector(s) affected</documentation>
+				</annotation>
+				<complexType>
+					<simpleContent>
+						<extension base="integer">
+							<attribute name="nilReason" type="gml:NilReasonType"/>
+						</extension>
+					</simpleContent>
+				</complexType>
+			</element>
+			<element name="finalImplementationCosts" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+final implementation costs
+
+-- Definition --
+The estimated total costs include also the costs borne by the sector(s) affected</documentation>
+				</annotation>
+			</element>
+			<element name="currency" type="gml:ReferenceType" nillable="true">
+				<annotation>
+					<documentation>-- Name --
+currency
+
+-- Definition --
+Specification of currency of costs</documentation>
+				</annotation>
+			</element>
+			<element name="comment" type="string" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="CostsPropertyType">
+		<sequence>
+			<element ref="aqd:Costs"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_RepresentativeArea" type="aqd:AQD_RepresentativeAreaType" substitutionGroup="sams:SF_SpatialSamplingFeature">
+		<annotation>
+			<documentation>-- Name --
+air quality directive representative area
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_RepresentativeAreaType">
+		<complexContent>
+			<extension base="sams:SF_SpatialSamplingFeatureType">
+				<sequence>
+					<element name="inspireId" type="base:IdentifierPropertyType">
+						<annotation>
+							<documentation>-- Name --
+inspireId
+
+-- Definition -- 
+The unique identifier for representative area
+
+-- Description -- 
+An external object identifier is a unique object identifier published by the responsible body, which may be used by external application to reference the spatial object.</documentation>
+						</annotation>
+					</element>
+					<element name="description" type="string" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+description
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+					<element name="documentation" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>-- Name --
+documentation
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_RepresentativeAreaPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_RepresentativeArea"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="MeasurementEquipment" type="aqd:MeasurementEquipmentType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+measurement equipment
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeasurementEquipmentType">
+		<sequence>
+			<element name="equipment" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+equipment
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="otherEquipment" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other equipment
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="MeasurementEquipmentPropertyType">
+		<sequence>
+			<element ref="aqd:MeasurementEquipment"/>
+		</sequence>
+	</complexType>
+	<element name="AQD_AggregationProcess" type="aqd:AQD_AggregationProcessType" substitutionGroup="ompr:Process">
+		<annotation>
+			<documentation>-- Name --
+air quality directive aggregation process
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="AQD_AggregationProcessType">
+		<complexContent>
+			<extension base="ompr:ProcessType">
+				<sequence>
+					<element name="description" type="string">
+						<annotation>
+							<documentation>-- Name --
+description
+
+-- Definition --</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AQD_AggregationProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="aqd:AQD_AggregationProcess"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="LocalIncrement" type="aqd:LocalIncrementType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+local increment
+
+-- Definition --
+Estimate of split for local increment in µg/m³
+The local increment identifies contributions from sources in the immediate vicinity. The local increment can be estimated as the difference between the concentration measured or modelled at the location of exceedance and the urban background level.</documentation>
+		</annotation>
+	</element>
+	<complexType name="LocalIncrementType">
+		<sequence>
+			<element name="total" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+total
+
+-- Definition --
+To be provided in µg/m³</documentation>
+				</annotation>
+			</element>
+			<element name="traffic" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+traffic
+
+-- Definition --
+Road traffic emissions only (excludes emissions from off road mobile machinery)</documentation>
+				</annotation>
+			</element>
+			<element name="heatAndPowerProduction" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+heat and power production
+
+-- Definition --
+Emissions arising directly from industrial processes and combustion (e.g. sinter plants, BOS furnaces). This excludes emissions from off road mobile machinery used in industry. Because industry is such a broad category, a page reference to where the relevant information about the relative contribution of different processes can be found in the full air quality plan should be given in the comments.</documentation>
+				</annotation>
+			</element>
+			<element name="agriculture" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+agriculture
+
+-- Definition --
+Emissions arising directly from agricultural activities (e.g. chicken farming). This excludes emissions from off road mobile machinery used in agriculture</documentation>
+				</annotation>
+			</element>
+			<element name="commercialAndResidential" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+commercial and residential
+
+-- Definition --
+Emissions from commercial or residential heating (e.g. domestic boilers). This excludes emissions from off road mobile machinery used in commercial and residential sectors.</documentation>
+				</annotation>
+			</element>
+			<element name="shipping" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+shipping
+
+-- Definition --
+Emissions from shipping (excludes emissions from off road mobile machinery used at ports).</documentation>
+				</annotation>
+			</element>
+			<element name="offRoadMobileMachinery" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+off road mobile machinery
+
+-- Definition --
+This includes off road mobile machinery used in industry, agriculture, commercial and residential sectors and shipping.</documentation>
+				</annotation>
+			</element>
+			<element name="natural" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+natural
+
+-- Definition --
+Sources which are not influenced by human activity, e.g., dust resuspended from roads, even if having Saharan origin, must be listed under “traffic”; wind-blown dust from crop fields must be listed under “agriculture”. Please provide a description of the natural contribution in the comments .</documentation>
+				</annotation>
+			</element>
+			<element name="transboundary" type="aqd:QuantityCommentedPropertyType">
+				<annotation>
+					<documentation>-- Name --
+transboundary
+
+-- Definition --
+Transboundary (related to national boundaries) contributions to the local increment.</documentation>
+				</annotation>
+			</element>
+			<element name="other" type="aqd:QuantityCommentedPropertyType" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other
+
+-- Definition --
+Please provide description in the comments.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="LocalIncrementPropertyType">
+		<sequence>
+			<element ref="aqd:LocalIncrement"/>
+		</sequence>
+	</complexType>
+	<element name="AnalyticalTechnique" type="aqd:AnalyticalTechniqueType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Name --
+analytical technique
+
+-- Definition --</documentation>
+		</annotation>
+	</element>
+	<complexType name="AnalyticalTechniqueType">
+		<sequence>
+			<element name="analyticalTechnique" type="gml:ReferenceType">
+				<annotation>
+					<documentation>-- Name --
+analytical technique
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+			<element name="otherAnalyticalTechnique" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Name --
+other analytical technique
+
+-- Definition --</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AnalyticalTechniquePropertyType">
+		<sequence>
+			<element ref="aqd:AnalyticalTechnique"/>
+		</sequence>
+	</complexType>
+</schema>

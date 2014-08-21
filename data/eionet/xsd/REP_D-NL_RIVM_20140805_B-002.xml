@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xmlns:aqd="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0"
+                       xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
+                       xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0"
+                       xmlns:ef="http://inspire.ec.europa.eu/schemas/ef/3.0" xmlns:gml="http://www.opengis.net/gml/3.2"
+                       xmlns:ompr="http://inspire.ec.europa.eu/schemas/ompr/2.0"
+                       xmlns:sam="http://www.opengis.net/sampling/2.0"
+                       xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+                       xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                       xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:om="http://www.opengis.net/om/2.0"
+                       xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:am="http://inspire.ec.europa.eu/schemas/am/3.0"
+                       xmlns:ad="urn:x-inspire:specification:gmlas:Addresses:3.0"
+                       xmlns:gn="urn:x-inspire:specification:gmlas:GeographicalNames:3.0"
+                       xsi:schemaLocation="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0 AirQualityReporting.xsd"
+                       gml:id="REP-NL_RIVM_20140805_B">
+    <gml:featureMember>
+        <aqd:AQD_ReportingHeader gml:id="REP_D-NL_RIVM_20140805_B">
+            <aqd:change>true</aqd:change>
+            <aqd:changeDescription>2013 Dataflow B The Netherlands</aqd:changeDescription>
+            <aqd:inspireId>
+                <base:Identifier>
+                    <base:localId>NL_RIVM_20140805</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </aqd:inspireId>
+            <aqd:reportingAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>van der MadeMarjolein</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Rijksinstituut voor Volksgezondheid en Milieu
+                        </gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Postbus 1 3720 BA</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>BILTHOVEN</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>marjolein.van.der.made@rivm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 30 2749111</base2:telephoneVoice>
+                            <base2:website>http://www.rivm.nl</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </aqd:reportingAuthority>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0210"/>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0231"/>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0310"/>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0320"/>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0201"/>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0100"/>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0241"/>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0221"/>
+            <aqd:content xlink:href="NL.RIVM.AQ/ZON-NL0300"/>
+        </aqd:AQD_ReportingHeader>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0210">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0210</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Amsterdam/Haarlem</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0210_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2001-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0210</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <aqd:changeDocumentation></aqd:changeDocumentation>
+            <aqd:residentPopulation>1604719</aqd:residentPopulation>
+            <aqd:area uom="km2">891</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0231">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0231</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Den Haag/ Leiden vanaf 2013</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0231_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2013-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0231</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <aqd:changeDocumentation>change of municipalitie boundaries in agglomeration</aqd:changeDocumentation>
+            <aqd:residentPopulation>1121120</aqd:residentPopulation>
+            <aqd:residentPopulationYear>
+                <gml:TimeInstant gml:id="NL0231_POPULATION">
+                    <gml:timePosition>2013</gml:timePosition>
+                </gml:TimeInstant>
+            </aqd:residentPopulationYear>
+            <aqd:area uom="km2">461</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+            <aqd:predecessor xlink:href="NL.RIVM.AQ/NL0230"/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0310">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0310</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Eindhoven</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0310_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2001-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0310</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <aqd:changeDocumentation></aqd:changeDocumentation>
+            <aqd:residentPopulation>435913</aqd:residentPopulation>
+            <aqd:area uom="km2">276</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0320">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0320</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Heerlen/ Kerkrade</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0320_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2001-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0320</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <aqd:changeDocumentation></aqd:changeDocumentation>
+            <aqd:residentPopulation>231574</aqd:residentPopulation>
+            <aqd:area uom="km2">174</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/none                "/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0201">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0201</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Midden vanaf 2013</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/noagg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0201_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2013-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0201</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/noagg"/>
+            <aqd:changeDocumentation>change of municipalitie boundaries in agglomeration</aqd:changeDocumentation>
+            <aqd:residentPopulation>4999395</aqd:residentPopulation>
+            <aqd:residentPopulationYear>
+                <gml:TimeInstant gml:id="NL0201_POPULATION">
+                    <gml:timePosition>2013</gml:timePosition>
+                </gml:TimeInstant>
+            </aqd:residentPopulationYear>
+            <aqd:area uom="km2">11881</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+            <aqd:predecessor xlink:href="NL.RIVM.AQ/NL0200"/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0100">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0100</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Noord</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/noagg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0100_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2001-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0100</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/noagg"/>
+            <aqd:changeDocumentation></aqd:changeDocumentation>
+            <aqd:residentPopulation>3235377</aqd:residentPopulation>
+            <aqd:area uom="km2">17222</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/9"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0241">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0241</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Rotterdam/ Dordrecht vanaf 2013</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0241_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2013-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0241</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <aqd:changeDocumentation>change of municipalitie boundaries in agglomeration</aqd:changeDocumentation>
+            <aqd:residentPopulation>1298830</aqd:residentPopulation>
+            <aqd:residentPopulationYear>
+                <gml:TimeInstant gml:id="NL0241_POPULATION">
+                    <gml:timePosition>2013</gml:timePosition>
+                </gml:TimeInstant>
+            </aqd:residentPopulationYear>
+            <aqd:area uom="km2">658</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+            <aqd:predecessor xlink:href="NL.RIVM.AQ/NL0240"/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0221">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0221</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Utrecht vanaf 2013</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0221_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2013-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0221</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/agg"/>
+            <aqd:changeDocumentation>change of municipalitie boundaries in agglomeration</aqd:changeDocumentation>
+            <aqd:residentPopulation>459575</aqd:residentPopulation>
+            <aqd:residentPopulationYear>
+                <gml:TimeInstant gml:id="NL0221_POPULATION">
+                    <gml:timePosition>2013</gml:timePosition>
+                </gml:TimeInstant>
+            </aqd:residentPopulationYear>
+            <aqd:area uom="km2">205</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+            <aqd:predecessor xlink:href="NL.RIVM.AQ/NL0220"/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+    <gml:featureMember>
+        <aqd:AQD_Zone gml:id="ZON-NL0300">
+            <am:inspireId>
+                <base:Identifier>
+                    <base:localId>ZON-NL0300</base:localId>
+                    <base:namespace>NL.RIVM.AQ</base:namespace>
+                </base:Identifier>
+            </am:inspireId>
+            <am:name>
+                <gn:GeographicalName>
+                    <gn:language nilReason="missing" xsi:nil="true"/>
+                    <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                    <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                    <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                    <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                    <gn:spelling>
+                        <gn:SpellingOfName>
+                            <gn:text>Zuid</gn:text>
+                            <gn:script nilReason="missing" xsi:nil="true"/>
+                        </gn:SpellingOfName>
+                    </gn:spelling>
+                </gn:GeographicalName>
+            </am:name>
+            <am:geometry
+                    xlink:href="http://cdr.eionet.europa.eu/nl/eu/aqd/b/envu9_csq/airquality_zone_agglomeration_v2013.shp"/>
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/noagg"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="NL0300_DESIGNATION_PERIOD">
+                    <gml:beginPosition>2001-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>PrinsWil</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>Ministerie Infrastructuur en Milieu</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>Plesmanweg 1-6, 2597 JG</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>Den Haag</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>wil.prins@minienm.nl</base2:electronicMailAddress>
+                            <base2:telephoneVoice>+31 70 4560000</base2:telephoneVoice>
+                            <base2:website>http://www.rijksoverheid.nl/ministeries/ienm</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            <am:beginLifespanVersion>2014-08-05T10:04:00+01:00</am:beginLifespanVersion>
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>NL0300</aqd:zoneCode>
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/noagg"/>
+            <aqd:changeDocumentation></aqd:changeDocumentation>
+            <aqd:residentPopulation>3278844</aqd:residentPopulation>
+            <aqd:area uom="km2">9775</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual          "/>
+        </aqd:AQD_Zone>
+    </gml:featureMember>
+</gml:FeatureCollection>
