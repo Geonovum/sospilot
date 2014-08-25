@@ -348,6 +348,26 @@ Heron.options.map.layers = [
         })
     }),
 
+     /*
+     * RIVM: Zones en Agglomeraties
+     */
+    new OpenLayers.Layer.WMS(
+        "Zones and Agglomerations",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "zones", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true, opacity: 0.35,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
 
     /*
      * RIVM: Measurements CO
@@ -1313,6 +1333,7 @@ Heron.options.layertree.tree = [
         text: 'RIVM LML', expanded: true, children: [
         {nodeType: "gx_layer", layer: "RIVM - All Stations", text: "AQ Stations (WMS)" },
         {nodeType: "gx_layer", layer: "RIVM - Active Stations (WFS)", text: "AQ Stations (Active WFS)" },
+        {nodeType: "gx_layer", layer: "Zones and Agglomerations", text: "Zones and Agglomerations (WMS)"},
 
         {
             text: 'Carbon monoxide (CO) - WMS', expanded: false, children: [
