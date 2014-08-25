@@ -1,0 +1,1 @@
+../bin/validate-wfs.sh http://tinyurl.com/2ug9luv
