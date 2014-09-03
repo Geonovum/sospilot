@@ -180,21 +180,18 @@ Heron.options.map.toolbar = [
     /* Leave out: see http://code.google.com/p/geoext-viewer/issues/detail?id=116 */
     {type: "featureinfo", options: {
         pressed: true,
-        controlDefaults: {
-            maxFeatures: 1600
-        },
         popupWindow: {
-            width: 440,
-            height: 240,
+            width: 360,
+            height: 200,
             featureInfoPanel: {
                 showTopToolbar: true,
-                displayPanels: ['Table','Detail'],
+                displayPanels: ['Detail','Table'],
 
                 // Export to download file. Option values are 'CSV', 'XLS', default is no export (results in no export menu).
                 exportFormats: Heron.options.exportFormats,
                 // Export to download file. Option values are 'CSV', 'XLS', default is no export (results in no export menu).
                 // exportFormats: ['CSV', 'XLS'],
-                maxFeatures: 1000,
+                maxFeatures: 10,
 
                 // In case that the same layer would be requested more than once: discard the styles
                 discardStylesForDups: true

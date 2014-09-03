@@ -14,9 +14,28 @@ import cgi
 import sys, os
 
 # Designed to prevent Open Proxy type stuff.
+allowedHosts = ['sosmet.nerc-bas.ac.uk',
+                'geoservices.knmi.nl',
+                'sensors.geonovum.nl',
+                'www.nationaalgeoregister.nl',
+                'gis.kademo.nl',
+                'innovatie.kadaster.nl',
+                'localhost',
+                'wms.nitg.tno.nl',
+                'www.groene-omgeving.nl',
+                '82.98.255.91',
+                'www.kademo.nl',
+                'kademo.nl',
+                'kademo.nl:80',
+                'afnemers.ruimtelijkeplannen.nl',
+                'acceptatie.geodata.nationaalgeoregister.nl',
+                'geodata.nationaalgeoregister.nl']
 
-allowedHosts = ['sosmet.nerc-bas.ac.uk', 'geoservices.knmi.nl', 'sensors.geonovum.nl', 'www.nationaalgeoregister.nl', 'gis.kademo.nl', 'innovatie.kadaster.nl', 'localhost','wms.nitg.tno.nl','www.groene-omgeving.nl','82.98.255.91','www.kademo.nl','kademo.nl','kademo.nl:80', 'afnemers.ruimtelijkeplannen.nl', 'acceptatie.geodata.nationaalgeoregister.nl', 'geodata.nationaalgeoregister.nl', 'research.geodan.nl', '85.158.254.91', 'esdin.geodan.nl', 'gis1.rvob.nl', 'gis2.rvob.nl', 'gis3.rvob.nl', 'open.mapquestapi.com']
-
+allowedReferers = [
+    'geonovum.nl',
+    'kademo.nl',
+    'heron-mc.org'
+]
 
 method = os.environ["REQUEST_METHOD"]
 
@@ -32,9 +51,11 @@ else:
     url = fs.getvalue('url', "http://www.openlayers.org")
 
 try:
-    # host = url.split("/")[2]
+    referer_arr = os.environ.get("HTTP_REFERER", "http://not.present.com/bla").split('/')[2].split(':')[0].split('.')[-2:]
+    referer = referer_arr[0] + '.' + referer_arr[1]
+
     host = url.split("/")[2].split(':')[0]
-    if allowedHosts and not host in allowedHosts:
+    if referer not in allowedReferers:
         print "Status: 502 Bad Gateway"
         print "Content-Type: text/plain"
         print

@@ -1,0 +1,54 @@
+{"type": "FeatureCollection", "totalFeatures": 109, "features": [
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_1483ba97aad_-108d",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [52.38916779, 6.40361404]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 1,
+            "local_id": "STA-NL00807",
+            "natl_station_code": "807",
+            "eu_station_code": "NL00807",
+            "name": "Hellendoorn-Luttenbergerweg",
+            "municipality": "Hellendoorn",
+            "altitude": 7,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1976-04-01T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "belongs_to": "",
+            "lon": "6.40361404",
+            "lat": "52.38916779"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_1483ba97aad_-108c",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [52.65500259, 6.01806974]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 2,
+            "local_id": "STA-NL00818",
+            "natl_station_code": "818",
+            "eu_station_code": "NL00818",
+            "name": "Barsbeek-De Veenen",
+            "municipality": "Steenwijkerland",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1986-11-23T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "belongs_to": "",
+            "lon": "6.01806974",
+            "lat": "52.65500259"
+        }
+    }
+]}

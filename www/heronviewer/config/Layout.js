@@ -172,15 +172,12 @@ Heron.layout = {
                     // layer sources
                     defaultSourceType: "gxp_wmssource",
                     sources: {
-                        pdok_streekpaden_wms: {
-                            url: Heron.options.urls.PDOK + '/streekpaden/wms',
+                        rivm_inspire_wms: {
+                            ptype: "gxp_wmssource",
+                            url: 'http://inspire.rivm.nl/geoserver/wms?',
                             version: "1.1.1",
-                            title: 'PDOK Streekpaden WMS'
-                        },
-                        pdok_fietsknooppunten_wms: {
-                            url: Heron.options.urls.PDOK + '/fietsknooppuntennetwerk/wms',
-                            version: "1.1.1",
-                            title: 'PDOK Fietsknooppunten WMS'
+                            title: 'RIVM INSPIRE WMS',
+                            owsPreviewStrategies: ['getlegendgraphic']  // or 'no preview available' if empty array
                         },
                         pdok_bagviewer_wms: {
                             ptype: "gxp_wmssource",
@@ -208,6 +205,12 @@ Heron.layout = {
                             url: Heron.options.urls.PDOK + '/tms/',
                             isBaseLayer: true,  // default is true
                             group: 'background' // 'background' or 'default', default value is 'background'
+                        },
+                        geodan_tms: {
+                            ptype: "gxp_tmssource",
+                            url: 'http://services.geodan.nl/tms/',
+                            isBaseLayer: true,  // default is true
+                            group: 'background' // 'background' or 'default', default value is 'background'
                         }
                         //                osm: {
                         //                    ptype: "gxp_osmsource"
@@ -224,6 +227,7 @@ Heron.layout = {
                         nationaalgeoregister: {
                             ptype: "gxp_cataloguesource",
                             url: "http://www.nationaalgeoregister.nl/geonetwork/srv/dut/csw",
+                            fullMetadataUrlTpl: 'http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search?uuid={id}',
                             title: "Nationaal Georegister"
                         }
                     }

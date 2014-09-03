@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xmlns:aqd="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0"
+                       xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
+                       xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0"
+                       xmlns:ef="http://inspire.ec.europa.eu/schemas/ef/3.0"
+                       xmlns:gml="http://www.opengis.net/gml/3.2"
+                       xmlns:ompr="http://inspire.ec.europa.eu/schemas/ompr/2.0"
+                       xmlns:sam="http://www.opengis.net/sampling/2.0"
+                       xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+                       xmlns:xlink="http://www.w3.org/1999/xlink"
+                       xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                       xmlns:gco="http://www.isotc211.org/2005/gco"
+                       xmlns:om="http://www.opengis.net/om/2.0"
+                       xmlns:swe="http://www.opengis.net/swe/2.0"
+                       xmlns:am="http://inspire.ec.europa.eu/schemas/am/3.0"
+                       xmlns:ad="urn:x-inspire:specification:gmlas:Addresses:3.0"
+                       xmlns:gn="urn:x-inspire:specification:gmlas:GeographicalNames:3.0"
+                       xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd
+                       http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0 AirQualityReporting.xsd"
+                       gml:id="REP-{{ globs.id_prefix }}_{{ globs.report_date }}_D">
+    <gml:featureMember>
+        <aqd:AQD_ReportingHeader gml:id="REP_D-{{ globs.id_prefix }}_{{ globs.report_date }}_D">
+            <aqd:change>true</aqd:change>
+            <aqd:changeDescription>{{ globs.report_year }} Dataflow D The Netherlands</aqd:changeDescription>
+            <aqd:inspireId>
+                <base:Identifier>
+                    <base:localId>{{ globs.id_prefix }}_{{ globs.report_date }}</base:localId>
+                    <base:namespace>{{ globs.namespace }}</base:namespace>
+                </base:Identifier>
+            </aqd:inspireId>
+             <aqd:reportingAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>{{ globs.reporting_authority.individual_name }}</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>{{ globs.reporting_authority.organisation }}</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        <gn:GeographicalName>
+                                            <gn:language nilReason="missing" xsi:nil="true"/>
+                                            <gn:nativeness nilReason="missing" xsi:nil="true"/>
+                                            <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+                                            <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+                                            <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+                                            <gn:spelling>
+                                                <gn:SpellingOfName>
+                                                    <gn:text>{{ globs.reporting_authority.address }}</gn:text>
+                                                    <gn:script nilReason="missing" xsi:nil="true"/>
+                                                </gn:SpellingOfName>
+                                            </gn:spelling>
+                                        </gn:GeographicalName>
+                                    </ad:adminUnit>
+                                    <ad:locatorDesignator>{{ globs.reporting_authority.municipality }}</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>{{ globs.reporting_authority.email }}</base2:electronicMailAddress>
+                            <base2:telephoneVoice>{{ globs.reporting_authority.telephone }}</base2:telephoneVoice>
+                            <base2:website>{{ globs.reporting_authority.website }}</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </aqd:reportingAuthority>
+
+            {#  Generate all xlinks to INSPIRE-id's of the Stations etc #}
+            {% for feature in features %}
+                <aqd:content xlink:href="{{ globs.namespace }}/{{ feature.properties.local_id }}"/>
+            {% endfor %}
+
+
+        </aqd:AQD_ReportingHeader>
+    </gml:featureMember>
+
+    {% for feature in features %}
+
+        <gml:featureMember>
+
+            <aqd:AQD_Station gml:id="{{ feature.properties.local_id }}">
+                <ef:inspireId>
+                    <base:Identifier>
+                        <base:localId>{{ feature.properties.local_id }}</base:localId>
+                        <base:namespace>{{ globs.namespace }}</base:namespace>
+                    </base:Identifier>
+                </ef:inspireId>
+                <ef:name>{{ feature.properties.name }}</ef:name>
+                <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
+                <ef:geometry>
+                    <gml:Point srsName="{{ globs.srs_name }}" gml:id="STA_G-{{ feature.properties.local_id }}">
+                        <gml:pos srsDimension="2">{{ feature.geometry.coordinates[0] }} {{ feature.geometry.coordinates[1] }}</gml:pos>
+                    </gml:Point>
+                </ef:geometry>
+                <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
+                <ef:mobile>false</ef:mobile>
+                <ef:operationalActivityPeriod>
+                    <ef:OperationalActivityPeriod gml:id="STA_P-{{ feature.properties.local_id }}">
+                        <ef:activityTime>
+                            <gml:TimePeriod gml:id="STA_T-{{ feature.properties.local_id }}">
+                                <gml:beginPosition>{{ feature.properties.activity_begin }}</gml:beginPosition>
+                                <gml:endPosition indeterminatePosition="unknown"/>
+                            </gml:TimePeriod>
+                        </ef:activityTime>
+                    </ef:OperationalActivityPeriod>
+                </ef:operationalActivityPeriod>
+                <ef:belongsTo xlink:href="{{ globs.namespace }}/NET-NL010A"/>
+                <aqd:natlStationCode>{{ feature.properties.natl_station_code }}</aqd:natlStationCode>
+                <aqd:municipality>{{ feature.properties.municipality }}</aqd:municipality>
+                <aqd:EUStationCode>{{ feature.properties.local_id }}</aqd:EUStationCode>
+                <aqd:meteoParams xlink:href="{{ globs.meteo_params }}"/>
+                <aqd:areaClassification xlink:href="{{ feature.properties.area_classification }}"/>
+                <aqd:altitude uom="{{ feature.properties.altitude_unit }}">{{ feature.properties.altitude }}</aqd:altitude>
+            </aqd:AQD_Station>
+        </gml:featureMember>
+    {% endfor %}
+
+</gml:FeatureCollection>
+
