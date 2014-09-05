@@ -11,6 +11,6 @@ logdir=/var/log/sospilot
 stetl_cmd=stetl
 
 # debugging
-stetl_cmd=../../../../stetl/git/stetl/main.py
+# stetl_cmd=../../../../stetl/git/stetl/main.py
 
 $stetl_cmd -c dataflow-D.cfg
