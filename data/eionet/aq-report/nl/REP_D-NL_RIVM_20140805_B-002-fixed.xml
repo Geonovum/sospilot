@@ -12,7 +12,8 @@
                        xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:am="http://inspire.ec.europa.eu/schemas/am/3.0"
                        xmlns:ad="urn:x-inspire:specification:gmlas:Addresses:3.0"
                        xmlns:gn="urn:x-inspire:specification:gmlas:GeographicalNames:3.0"
-                       xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0 AirQualityReporting.xsd"
+                       xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd
+                       http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0 ../../../../schemas/eionet/AirQualityReporting.xsd"
                        gml:id="REP-NL_RIVM_20140805_B">
     <gml:featureMember>
         <aqd:AQD_ReportingHeader gml:id="REP_D-NL_RIVM_20140805_B">
