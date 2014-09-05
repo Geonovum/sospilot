@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:am="http://inspire.ec.europa.eu/schemas/am/3.0" xmlns:aqd="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0" xmlns:au="urn:x-inspire:specification:gmlas:AdministrativeUnits:3.0" xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0" xmlns:ef="http://inspire.ec.europa.eu/schemas/ef/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:swe="http://www.opengis.net/swe/2.0" xmlns:ompr="http://inspire.ec.europa.eu/schemas/ompr/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" targetNamespace="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0" elementFormDefault="qualified" version="1.0.7">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:am="http://inspire.ec.europa.eu/schemas/am/3.0"
+        xmlns:aqd="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0"
+        xmlns:au="urn:x-inspire:specification:gmlas:AdministrativeUnits:3.0"
+        xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
+        xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0"
+        xmlns:ef="http://inspire.ec.europa.eu/schemas/ef/3.0"
+        xmlns:gml="http://www.opengis.net/gml/3.2"
+        xmlns:swe="http://www.opengis.net/swe/2.0"
+        xmlns:ompr="http://inspire.ec.europa.eu/schemas/ompr/2.0"
+        xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+        targetNamespace="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0" elementFormDefault="qualified" version="1.0.7">
 	<import namespace="http://inspire.ec.europa.eu/schemas/base/3.3" schemaLocation="http://inspire.ec.europa.eu/schemas/base/3.3/BaseTypes.xsd"/>
 	<import namespace="http://inspire.ec.europa.eu/schemas/base2/1.0" schemaLocation="http://inspire.ec.europa.eu/schemas/base2/1.0/BaseTypes2.xsd"/>
 	<import namespace="http://inspire.ec.europa.eu/schemas/am/3.0" schemaLocation="http://inspire.ec.europa.eu/schemas/am/3.0/AreaManagementRestrictionRegulationZone.xsd"/>
 	<import namespace="http://inspire.ec.europa.eu/schemas/ef/3.0" schemaLocation="http://inspire.ec.europa.eu/schemas/ef/3.0/EnvironmentalMonitoringFacilities.xsd"/>
 	<import namespace="http://inspire.ec.europa.eu/schemas/ompr/2.0" schemaLocation="http://inspire.ec.europa.eu/schemas/ompr/2.0/Processes.xsd"/>
-	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<!--<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>-->
+    <!-- JvdB use deprecatedTypes to satisfy validator-->
+    <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd"/>
 	<import namespace="http://www.opengis.net/samplingSpatial/2.0" schemaLocation="http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"/>
 	<import namespace="http://www.opengis.net/swe/2.0" schemaLocation="http://schemas.opengis.net/sweCommon/2.0/swe.xsd"/>
 	<import namespace="urn:x-inspire:specification:gmlas:AdministrativeUnits:3.0" schemaLocation="http://inspire.ec.europa.eu/schemas/au/3.0/AdministrativeUnits.xsd"/>
