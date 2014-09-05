@@ -2,10 +2,10 @@
     "globs": {
         "namespace": "NL.RIVM.AQ",
         "id_prefix": "NL_RIVM",
+        "country": "The Netherlands",
         "report_year": "2013",
-        "report_date": "20140903",
+        "report_date": "20140905",
         "srs_name": "urn:ogc:def:crs:EPSG:4326",
-        "meteo_params": "No meteo measured",
         "reporting_authority": {
             "individual_name": "Marjolein van der Made",
             "organisation": "Rijksinstituut voor Volksgezondheid en Milieu",
@@ -14,6 +14,13 @@
             "email": "marjolein.van.der.made@rivm.nl",
             "telephone": "+31 30 2749111",
             "website": "http://www.rivm.nl"
+        },
+        "dataflow_D": {
+            "flow_char" : "D",
+            "name" : "Dataflow D",
+            "change" : "true",
+            "meteo_params": "No meteo measured"
+
         }
     }
 }

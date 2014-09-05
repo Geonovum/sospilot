@@ -1,0 +1,30 @@
+{# Jinja2 Macros for INSPIRE-related elements #}
+
+{# Macro that renders an inspireId (base:Identifier) element #}
+{% macro render_inspire_id(namespace, local_id, version_id=None) -%}
+    <!-- Rendered by macro render_inspire_id() -->
+    <base:Identifier>
+         <base:localId>{{ local_id }}</base:localId>
+         <base:namespace>{{ namespace }}</base:namespace>
+    {% if version_id != None %}
+         <base:versionId>{{ version }}</base:versionId>
+    {%  endif %}
+     </base:Identifier>
+{%- endmacro %}
+
+{# Macro that renders a minimal GeographicalName #}
+{% macro render_geographical_name_min(name) -%}
+    <gn:GeographicalName>
+        <gn:language nilReason="missing" xsi:nil="true"/>
+        <gn:nativeness nilReason="missing" xsi:nil="true"/>
+        <gn:nameStatus nilReason="missing" xsi:nil="true"/>
+        <gn:sourceOfName nilReason="missing" xsi:nil="true"/>
+        <gn:pronunciation nilReason="missing" xsi:nil="true"/>
+        <gn:spelling>
+            <gn:SpellingOfName>
+                <gn:text>{{ name }}</gn:text>
+                <gn:script nilReason="missing" xsi:nil="true"/>
+            </gn:SpellingOfName>
+        </gn:spelling>
+    </gn:GeographicalName>
+{%- endmacro %}

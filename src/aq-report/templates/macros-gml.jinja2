@@ -1,0 +1,54 @@
+{# Jinja2 Macros for GML-related elements #}
+
+{# Macro that renders a Point element #}
+{% macro render_point2d(srs_name, coordinates, gml_id) -%}
+    <!-- Rendered by macro render_point2d() -->
+    <gml:Point srsName="{{ srs_name }}" gml:id="{{ gml_id }}">
+        <gml:pos srsDimension="2">{{ coordinates[0] }} {{ coordinates[1] }}</gml:pos>
+    </gml:Point>
+{%- endmacro %}
+
+{# Macro that renders a bounding box element from feature list
+  NB Point features only and assuming lat lon in reverse axis ordering! #}
+{% macro render_bounded_by(point_features) -%}
+    <!-- Rendered by macro render_bounded_by() -->
+
+    {# first assemble all latitudes and longitudes #}
+    {% set longitudes = [] %}
+    {% set latitudes = [] %}
+
+    {% for feature in point_features %}
+        {% do longitudes.append(feature.geometry.coordinates[1]) %}
+        {% do latitudes.append(feature.geometry.coordinates[0]) %}
+    {% endfor %}
+
+    {# use the maximum and minimum Jinja2 Filters to get max/min from lists #}
+    <gml:boundedBy>
+        <gml:Box>
+            <gml:coord>
+                <gml:X>{{ longitudes|minimum }}</gml:X>
+                <gml:Y>{{ latitudes|minimum }}</gml:Y>
+            </gml:coord>
+            <gml:coord>
+                <gml:X>{{ longitudes|maximum }}</gml:X>
+                <gml:Y>{{ latitudes|maximum }}</gml:Y>
+            </gml:coord>
+        </gml:Box>
+    </gml:boundedBy>
+{%- endmacro %}
+
+{# Macro that renders a name element #}
+{% macro render_name(name) -%}
+    <!-- Rendered by macro render_name() -->
+    <gml:name>
+       {{ name }}
+    </gml:name>
+{%- endmacro %}
+
+{# Macro that renders any element with tag and content :-) #}
+{% macro render_element(tag, content) -%}
+    <!-- Rendered by macro render_element() -->
+    <{{tag}}>
+       {{ content }}
+    </{{tag}}>
+{%- endmacro %}
