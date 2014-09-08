@@ -61,7 +61,7 @@
                 "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
             },
             "PM2.5-H": {
-                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?",
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001",
                 "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
             },
             "SO2-H": {
