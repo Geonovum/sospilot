@@ -1241,5 +1241,55 @@ Zie http://mapproxy.org/docs/latest/install.html. ::
     $ mapproxy-util --version
     # Mapproxy 1.6.0
 
+Python Jinja2
+-------------
+
+Nodig voor Stetl Jinja2 templating Filter. ::
+
+    pip install jinja2
+    Downloading/unpacking jinja2
+      Downloading Jinja2-2.7.3.tar.gz (378kB): 378kB downloaded
+      Running setup.py (path:/tmp/pip_build_root/jinja2/setup.py) egg_info for package jinja2
+
+        warning: no files found matching '*' under directory 'custom_fixers'
+        warning: no previously-included files matching '*' found under directory 'docs/_build'
+        warning: no previously-included files matching '*.pyc' found under directory 'jinja2'
+        warning: no previously-included files matching '*.pyc' found under directory 'docs'
+        warning: no previously-included files matching '*.pyo' found under directory 'jinja2'
+        warning: no previously-included files matching '*.pyo' found under directory 'docs'
+    Downloading/unpacking markupsafe (from jinja2)
+      Downloading MarkupSafe-0.23.tar.gz
+      Running setup.py (path:/tmp/pip_build_root/markupsafe/setup.py) egg_info for package markupsafe
+
+    Installing collected packages: jinja2, markupsafe
+      Running setup.py install for jinja2
+
+        warning: no files found matching '*' under directory 'custom_fixers'
+        warning: no previously-included files matching '*' found under directory 'docs/_build'
+        warning: no previously-included files matching '*.pyc' found under directory 'jinja2'
+        warning: no previously-included files matching '*.pyc' found under directory 'docs'
+        warning: no previously-included files matching '*.pyo' found under directory 'jinja2'
+        warning: no previously-included files matching '*.pyo' found under directory 'docs'
+      Running setup.py install for markupsafe
+
+        building 'markupsafe._speedups' extension
+        x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/usr/include/python2.7 -c markupsafe/_speedups.c -o build/temp.linux-x86_64-2.7/markupsafe/_speedups.o
+        markupsafe/_speedups.c:12:20: fatal error: Python.h: No such file or directory
+         #include <Python.h>
+                            ^
+        compilation terminated.
+        ==========================================================================
+        WARNING: The C extension could not be compiled, speedups are not enabled.
+        Failure information, if any, is above.
+        Retrying the build without the C extension now.
+
+
+        ==========================================================================
+        WARNING: The C extension could not be compiled, speedups are not enabled.
+        Plain-Python installation succeeded.
+        ==========================================================================
+    Successfully installed jinja2 markupsafe
+    Cleaning up...
+
 
 
