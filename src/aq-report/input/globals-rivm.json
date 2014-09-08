@@ -15,6 +15,11 @@
             "telephone": "+31 30 2749111",
             "website": "http://www.rivm.nl"
         },
+        "dataflow_B": {
+            "flow_char" : "B",
+            "name" : "Dataflow B",
+            "change" : "true"
+        },
         "dataflow_D": {
             "flow_char" : "D",
             "name" : "Dataflow D",

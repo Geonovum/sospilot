@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+{#  Macros, a very powerful reuse mechanism, e.g. for common elements and structures like INSPIRE id. #}
+{% import 'templates/macros-gml.jinja2' as macros_gml %}
+{% import 'templates/macros-inspire.jinja2' as macros_inspire %}
+
+<gml:FeatureCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xmlns:aqd="http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0"
+                       xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
+                       xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0"
+                       xmlns:ef="http://inspire.ec.europa.eu/schemas/ef/3.0"
+                       xmlns:gml="http://www.opengis.net/gml/3.2"
+                       xmlns:ompr="http://inspire.ec.europa.eu/schemas/ompr/2.0"
+                       xmlns:sam="http://www.opengis.net/sampling/2.0"
+                       xmlns:sams="http://www.opengis.net/samplingSpatial/2.0"
+                       xmlns:xlink="http://www.w3.org/1999/xlink"
+                       xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                       xmlns:gco="http://www.isotc211.org/2005/gco"
+                       xmlns:om="http://www.opengis.net/om/2.0"
+                       xmlns:swe="http://www.opengis.net/swe/2.0"
+                       xmlns:am="http://inspire.ec.europa.eu/schemas/am/3.0"
+                       xmlns:ad="urn:x-inspire:specification:gmlas:Addresses:3.0"
+                       xmlns:gn="urn:x-inspire:specification:gmlas:GeographicalNames:3.0"
+                       xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd
+                       http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0 http://dd.eionet.europa.eu/schemas/id2011850eu-1.0/AirQualityReporting.xsd"
+                       gml:id="REP-{{ globs.id_prefix }}_{{ globs.report_date }}_{{ globs.dataflow_B.flow_char }}">
+
+    {# Thijs: don't calculate the bounded_by element, because polygons are not supported yet#}
+    {# { macros_gml.render_bounded_by(features) } #}
+
+    <gml:featureMember>
+        <aqd:AQD_ReportingHeader gml:id="REP_{{ globs.dataflow_B.flow_char }}-{{ globs.id_prefix }}_{{ globs.report_date }}_{{ globs.dataflow_B.flow_char }}">
+            <aqd:change>{{ globs.dataflow_B.change }}</aqd:change>
+            <aqd:changeDescription>{{ globs.report_year }} {{ globs.dataflow_B.name }} {{ globs.country }}</aqd:changeDescription>
+            <aqd:inspireId>
+                {{ macros_inspire.render_inspire_id(globs.namespace, globs.id_prefix + '_' + globs.report_date) }}
+            </aqd:inspireId>
+             <aqd:reportingAuthority>
+                <base2:RelatedParty>
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>{{ globs.reporting_authority.individual_name }}</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>{{ globs.reporting_authority.organisation }}</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        {{ macros_inspire.render_geographical_name_min(globs.reporting_authority.address) }}
+                                     </ad:adminUnit>
+                                    <ad:locatorDesignator>{{ globs.reporting_authority.municipality }}</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>{{ globs.reporting_authority.email }}</base2:electronicMailAddress>
+                            <base2:telephoneVoice>{{ globs.reporting_authority.telephone }}</base2:telephoneVoice>
+                            <base2:website>{{ globs.reporting_authority.website }}</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </aqd:reportingAuthority>
+
+            {#  Generate all xlinks to INSPIRE-id's of the Stations etc #}
+            {% for feature in features %}
+                <aqd:content xlink:href="{{ globs.namespace }}/{{ feature.properties.zone_code }}"/>
+            {% endfor %}
+
+        </aqd:AQD_ReportingHeader>
+    </gml:featureMember>
+    <!-- START STATIONS -->
+    {% for feature in features %}
+        <gml:featureMember>
+          <aqd:AQD_Zone gml:id="{{ feature.properties.zone_code }}">
+            <am:inspireId>
+              {{ macros_inspire.render_inspire_id(globs.namespace, feature.properties.zone_code) }}
+            </am:inspireId>  
+            <am:name>
+              {{ macros_inspire.render_geographical_name_min(feature.properties.zone_name) }}
+            </am:name>       
+                {# Thijs: do this later, since this is a bit more work for multipolygons #}  
+                <am:geometry>
+                    {{ macros_gml.render_multipolygon2d(globs.srs_name, feature.geometry.coordinates, 'geometry-' + globs.namespace + '-' + feature.properties.zone_code) }}
+                </am:geometry>
+            {# Thijs: how to match the zone_type? The value comes from the CSV-file for the Zones. A macro could be the best, but would be nice if we could use the vocabulary directly.
+
+            Maybe the SKOS provider of https://github.com/koenedaele/skosprovider could be useful #}
+            <am:zoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/{{feature.properties.zone_type}}"/>
+            <am:designationPeriod>
+                <gml:TimePeriod gml:id="{{ feature.properties.zone_code }}_DESIGNATION_PERIOD">
+                  {# Thijs: we only have the year, so let's start #}
+                    <gml:beginPosition>{{ feature.properties.start_year }}-01-01T00:00:00+01:00</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown"/>
+                </gml:TimePeriod>
+            </am:designationPeriod>
+            {# Thijs: for these zones it is always air, the AQ vocabulary also only contains this value #}
+            <am:environmentalDomain xlink:href="http://dd.eionet.europa.eu/vocabulary/common/environmentaldomain/air"/>
+            <am:competentAuthority>
+                <base2:RelatedParty>                 
+                    <base2:individualName>
+                        <gmd:LocalisedCharacterString>{{ globs.reporting_authority.individual_name }}</gmd:LocalisedCharacterString>
+                    </base2:individualName>
+                    <base2:organisationName>
+                        <gmd:LocalisedCharacterString>{{ globs.reporting_authority.organisation }}</gmd:LocalisedCharacterString>
+                    </base2:organisationName>
+                    <base2:contact>
+                        <base2:Contact>
+                            <base2:address>
+                                <ad:AddressRepresentation>
+                                    <ad:adminUnit>
+                                        {{ macros_inspire.render_geographical_name_min(globs.reporting_authority.address) }}
+                                     </ad:adminUnit>
+                                    <ad:locatorDesignator>{{ globs.reporting_authority.municipality }}</ad:locatorDesignator>
+                                </ad:AddressRepresentation>
+                            </base2:address>
+                            <base2:electronicMailAddress>{{ globs.reporting_authority.email }}</base2:electronicMailAddress>
+                            <base2:telephoneVoice>{{ globs.reporting_authority.telephone }}</base2:telephoneVoice>
+                            <base2:website>{{ globs.reporting_authority.website }}</base2:website>
+                        </base2:Contact>
+                    </base2:contact>
+                    <base2:role/>
+                </base2:RelatedParty>
+            </am:competentAuthority>
+            {# Thijs: how to create this date? Is this registered somewehere by RIVM? #}
+            <am:beginLifespanVersion>{{ feature.properties.beginlifespanversion }}</am:beginLifespanVersion>
+            {# Thijs: assume for now that the legal basis is always the same #}
+            <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
+            <aqd:zoneCode>{{ feature.properties.zone_code }}</aqd:zoneCode>
+            {# Thijs: this is the same property as for am:zoneType. We use a short hack now to construct the URI, because the zone_type value is the same as the last part of the URI #}
+            <aqd:aqdZoneType xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/zonetype/{{feature.properties.zone_type}}"/>
+            <aqd:changeDocumentation></aqd:changeDocumentation>
+            <aqd:residentPopulation>{{feature.properties.zone_popul}}</aqd:residentPopulation>
+            <aqd:area uom="km2">{{feature.properties.zone_area1}}</aqd:area>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            <aqd:pollutants>
+                <aqd:Pollutant>
+                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
+                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                </aqd:Pollutant>
+            </aqd:pollutants>
+            {# Thijs: TODO: data for this element #}
+            <aqd:timeExtensionExemption
+                    xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
+          </aqd:AQD_Zone>
+        </gml:featureMember>
+    {% endfor %}
+    <!-- END STATIONS -->
+
+</gml:FeatureCollection>
+
