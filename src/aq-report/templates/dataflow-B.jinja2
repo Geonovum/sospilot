@@ -131,85 +131,21 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>{{feature.properties.zone_popul}}</aqd:residentPopulation>
             <aqd:area uom="km2">{{feature.properties.zone_area1}}</aqd:area>
+
+            {# Just: expand this var to array and substitute codelist values via globals lookup:
+            "zone_pollutant": "BaP-H;Benzene-H;CO-H;NO2-H;O3-H;O3-V;PM10-H;PM2.5-H;SO2-H". This is RIVM-specific.
+            According to the AQD schema aqd:pollutants is a sequence of aqd:pollutant #}
+            {% set zone_pollutants = feature.properties.zone_pollutant.split(';') %}
             <aqd:pollutants>
+              {% for zone_pollutant in zone_pollutants %}
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="{{ globs.pollutant_defs[zone_pollutant].pollutant_code }}"/>
+                   <aqd:protectionTarget xlink:href="{{ globs.pollutant_defs[zone_pollutant].protection_target }}"/>
                 </aqd:Pollutant>
+              {% endfor %}
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            {# Thijs: TODO: data for this element #}
+
+              {# Thijs: TODO: data for this element #}
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>

@@ -169,84 +169,54 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>3252110</aqd:residentPopulation>
             <aqd:area uom="km2">17222</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/9"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>
@@ -335,84 +305,46 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>4999395</aqd:residentPopulation>
             <aqd:area uom="km2">11881</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>
@@ -501,84 +433,46 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>3296450</aqd:residentPopulation>
             <aqd:area uom="km2">9775</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>
@@ -667,84 +561,42 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>1631175</aqd:residentPopulation>
             <aqd:area uom="km2">891</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>
@@ -833,84 +685,42 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>1121120</aqd:residentPopulation>
             <aqd:area uom="km2">461</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>
@@ -999,84 +809,42 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>1298830</aqd:residentPopulation>
             <aqd:area uom="km2">658</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>
@@ -1165,84 +933,42 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>459575</aqd:residentPopulation>
             <aqd:area uom="km2">205</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>
@@ -1331,84 +1057,38 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>439820</aqd:residentPopulation>
             <aqd:area uom="km2">276</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>
@@ -1497,84 +1177,38 @@
             <aqd:changeDocumentation></aqd:changeDocumentation>
             <aqd:residentPopulation>231870</aqd:residentPopulation>
             <aqd:area uom="km2">174</aqd:area>
+
             <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
                 <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"/>
+                   <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
             </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5012"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5014"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5015"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5018"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5029"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
-            <aqd:pollutants>
-                <aqd:Pollutant>
-                    <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"/>
-                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
-                </aqd:Pollutant>
-            </aqd:pollutants>
+
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
           </aqd:AQD_Zone>

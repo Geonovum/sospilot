@@ -16,16 +16,62 @@
             "website": "http://www.rivm.nl"
         },
         "dataflow_B": {
-            "flow_char" : "B",
-            "name" : "Dataflow B",
-            "change" : "true"
+            "flow_char": "B",
+            "name": "Dataflow B",
+            "change": "true"
         },
         "dataflow_D": {
-            "flow_char" : "D",
-            "name" : "Dataflow D",
-            "change" : "true",
+            "flow_char": "D",
+            "name": "Dataflow D",
+            "change": "true",
             "meteo_params": "No meteo measured"
 
+        },
+        "pollutant_defs": {
+            "BaP-H": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
+            },
+            "Benzene-H": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
+            },
+            "CO-H": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
+            },
+            "NO2-H": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
+            },
+            "NOx-V": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/9",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"
+            },
+            "O3-H": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
+            },
+            "O3-V": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"
+            },
+            "PM10-H": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
+            },
+            "PM2.5-H": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/WELKE_CODE_MOET_DIT_ZIJN?",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
+            },
+            "SO2-H": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"
+            },
+            "SO2-V": {
+                "pollutant_code": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1",
+                "protection_target": "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"
+            }
         }
     }
 }
