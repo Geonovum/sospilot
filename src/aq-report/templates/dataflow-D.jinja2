@@ -24,7 +24,7 @@
                        http://dd.eionet.europa.eu/schemaset/id2011850eu-1.0 http://dd.eionet.europa.eu/schemas/id2011850eu-1.0/AirQualityReporting.xsd"
                        gml:id="REP-{{ globs.id_prefix }}_{{ globs.report_date }}_{{ globs.dataflow_D.flow_char }}">
 
-    {{ macros_gml.render_bounded_by(features, gml3=True, swap_xy=False) }}
+    {{ macros_gml.render_bounded_by(features, gml3=True, swap_xy=True) }}
 
     <gml:featureMember>
         <aqd:AQD_ReportingHeader gml:id="REP_{{ globs.dataflow_D.flow_char }}-{{ globs.id_prefix }}_{{ globs.report_date }}_{{ globs.dataflow_D.flow_char }}">
@@ -77,7 +77,7 @@
                 <ef:name>{{ feature.properties.name }}</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    {{ macros_gml.render_point2d(globs.srs_name, feature.geometry.coordinates, 'STA_G-' + feature.properties.local_id, gml3=True, swap_xy=False) }}
+                    {{ macros_gml.render_point2d(globs.srs_name, feature.geometry.coordinates, 'STA_G-' + feature.properties.local_id, gml3=True, swap_xy=True) }}
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>

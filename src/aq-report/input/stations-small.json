@@ -4,7 +4,7 @@
         "id": "active_stations.fid-7d46fd2a_1483ba97aad_-108d",
         "geometry": {
             "type": "Point",
-            "coordinates": [52.38916779, 6.40361404]
+            "coordinates": [6.40361404, 52.38916779]
         },
         "geometry_name": "point",
         "properties": {
@@ -30,7 +30,7 @@
         "id": "active_stations.fid-7d46fd2a_1483ba97aad_-108c",
         "geometry": {
             "type": "Point",
-            "coordinates": [52.65500259, 6.01806974]
+            "coordinates": [6.01806974, 52.65500259]
         },
         "geometry_name": "point",
         "properties": {
