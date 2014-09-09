@@ -25,18 +25,13 @@
 
 
 
-    <gml:boundedBy>
-        <gml:Box>
-            <gml:coord>
-                <gml:X>3.745008</gml:X>
-                <gml:Y>50.88805771</gml:Y>
-            </gml:coord>
-            <gml:coord>
-                <gml:X>6.9333334</gml:X>
-                <gml:Y>53.33166504</gml:Y>
-            </gml:coord>
-        </gml:Box>
-    </gml:boundedBy>
+        <gml:boundedBy>
+           <gml:Envelope>
+              <gml:lowerCorner>50.88805771 3.745008</gml:lowerCorner>
+              <gml:upperCorner>53.33166504 6.9333334</gml:upperCorner>
+           </gml:Envelope>
+        </gml:boundedBy>
+
 
     <gml:featureMember>
         <aqd:AQD_ReportingHeader gml:id="REP_D-NL_RIVM_20140905_D">
@@ -215,7 +210,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00807">
-        <gml:pos srsDimension="2">52.38916779 6.40361404</gml:pos>
+                <gml:pos srsDimension="2">52.38916779 6.40361404</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -253,7 +248,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00818">
-        <gml:pos srsDimension="2">52.65500259 6.01806974</gml:pos>
+                <gml:pos srsDimension="2">52.65500259 6.01806974</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -291,7 +286,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00918">
-        <gml:pos srsDimension="2">52.91691589 5.57349157</gml:pos>
+                <gml:pos srsDimension="2">52.91691589 5.57349157</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -329,7 +324,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00934">
-        <gml:pos srsDimension="2">53.33166504 6.27750874</gml:pos>
+                <gml:pos srsDimension="2">53.33166504 6.27750874</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -367,7 +362,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00131">
-        <gml:pos srsDimension="2">51.54111099 5.85361385</gml:pos>
+                <gml:pos srsDimension="2">51.54111099 5.85361385</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -405,7 +400,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00133">
-        <gml:pos srsDimension="2">50.9030571 5.882236</gml:pos>
+                <gml:pos srsDimension="2">50.9030571 5.882236</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -443,7 +438,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00230">
-        <gml:pos srsDimension="2">51.51944351 5.14890242</gml:pos>
+                <gml:pos srsDimension="2">51.51944351 5.14890242</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -481,7 +476,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00235">
-        <gml:pos srsDimension="2">51.43500137 4.36028624</gml:pos>
+                <gml:pos srsDimension="2">51.43500137 4.36028624</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -519,7 +514,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00236">
-        <gml:pos srsDimension="2">51.46972275 5.47278357</gml:pos>
+                <gml:pos srsDimension="2">51.46972275 5.47278357</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -557,7 +552,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00237">
-        <gml:pos srsDimension="2">51.44528 5.4289</gml:pos>
+                <gml:pos srsDimension="2">51.44528 5.4289</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -595,7 +590,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00301">
-        <gml:pos srsDimension="2">51.63555908 3.91694736</gml:pos>
+                <gml:pos srsDimension="2">51.63555908 3.91694736</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -633,7 +628,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00318">
-        <gml:pos srsDimension="2">51.29527664 3.74945831</gml:pos>
+                <gml:pos srsDimension="2">51.29527664 3.74945831</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -671,7 +666,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00404">
-        <gml:pos srsDimension="2">52.07805634 4.28917217</gml:pos>
+                <gml:pos srsDimension="2">52.07805634 4.28917217</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -709,7 +704,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00418">
-        <gml:pos srsDimension="2">51.91500092 4.48028898</gml:pos>
+                <gml:pos srsDimension="2">51.91500092 4.48028898</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -747,7 +742,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00433">
-        <gml:pos srsDimension="2">51.91139221 4.32695293</gml:pos>
+                <gml:pos srsDimension="2">51.91139221 4.32695293</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -785,7 +780,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00437">
-        <gml:pos srsDimension="2">51.78749847 4.45084143</gml:pos>
+                <gml:pos srsDimension="2">51.78749847 4.45084143</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -823,7 +818,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00518">
-        <gml:pos srsDimension="2">52.38472366 4.80361414</gml:pos>
+                <gml:pos srsDimension="2">52.38472366 4.80361414</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -861,7 +856,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00107">
-        <gml:pos srsDimension="2">51.1202774 6.04306364</gml:pos>
+                <gml:pos srsDimension="2">51.1202774 6.04306364</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -899,7 +894,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00537">
-        <gml:pos srsDimension="2">52.38166428 4.64806938</gml:pos>
+                <gml:pos srsDimension="2">52.38166428 4.64806938</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -937,7 +932,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00538">
-        <gml:pos srsDimension="2">52.80472183 5.05084181</gml:pos>
+                <gml:pos srsDimension="2">52.80472183 5.05084181</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -975,7 +970,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00627">
-        <gml:pos srsDimension="2">52.120833 5.195567</gml:pos>
+                <gml:pos srsDimension="2">52.120833 5.195567</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1013,7 +1008,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00628">
-        <gml:pos srsDimension="2">52.100833 5.177789</gml:pos>
+                <gml:pos srsDimension="2">52.100833 5.177789</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1051,7 +1046,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00631">
-        <gml:pos srsDimension="2">52.44850159 5.61915016</gml:pos>
+                <gml:pos srsDimension="2">52.44850159 5.61915016</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1089,7 +1084,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00633">
-        <gml:pos srsDimension="2">52.138889 4.838336</gml:pos>
+                <gml:pos srsDimension="2">52.138889 4.838336</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1127,7 +1122,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00636">
-        <gml:pos srsDimension="2">52.106111 5.125286</gml:pos>
+                <gml:pos srsDimension="2">52.106111 5.125286</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1165,7 +1160,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00639">
-        <gml:pos srsDimension="2">52.068889 5.121114</gml:pos>
+                <gml:pos srsDimension="2">52.068889 5.121114</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1203,7 +1198,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00722">
-        <gml:pos srsDimension="2">52.0925 6.605839</gml:pos>
+                <gml:pos srsDimension="2">52.0925 6.605839</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1241,7 +1236,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00641">
-        <gml:pos srsDimension="2">52.203056 4.988614</gml:pos>
+                <gml:pos srsDimension="2">52.203056 4.988614</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1279,7 +1274,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00444">
-        <gml:pos srsDimension="2">52.29805374 4.51028633</gml:pos>
+                <gml:pos srsDimension="2">52.29805374 4.51028633</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1317,7 +1312,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00732">
-        <gml:pos srsDimension="2">52.27249908 5.72139168</gml:pos>
+                <gml:pos srsDimension="2">52.27249908 5.72139168</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1355,7 +1350,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00738">
-        <gml:pos srsDimension="2">52.11249924 5.70861912</gml:pos>
+                <gml:pos srsDimension="2">52.11249924 5.70861912</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1393,7 +1388,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00929">
-        <gml:pos srsDimension="2">52.87666321 6.9333334</gml:pos>
+                <gml:pos srsDimension="2">52.87666321 6.9333334</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1431,7 +1426,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00445">
-        <gml:pos srsDimension="2">52.075 4.316125</gml:pos>
+                <gml:pos srsDimension="2">52.075 4.316125</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1469,7 +1464,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00741">
-        <gml:pos srsDimension="2">51.848889 5.858061</gml:pos>
+                <gml:pos srsDimension="2">51.848889 5.858061</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1507,7 +1502,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00742">
-        <gml:pos srsDimension="2">51.838889 5.858061</gml:pos>
+                <gml:pos srsDimension="2">51.838889 5.858061</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1545,7 +1540,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00937">
-        <gml:pos srsDimension="2">53.21805573 6.57889986</gml:pos>
+                <gml:pos srsDimension="2">53.21805573 6.57889986</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1583,7 +1578,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00136">
-        <gml:pos srsDimension="2">50.88805771 5.97111416</gml:pos>
+                <gml:pos srsDimension="2">50.88805771 5.97111416</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1621,7 +1616,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00447">
-        <gml:pos srsDimension="2">52.16805649 4.50806093</gml:pos>
+                <gml:pos srsDimension="2">52.16805649 4.50806093</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1659,7 +1654,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00240">
-        <gml:pos srsDimension="2">51.59360886 4.82500839</gml:pos>
+                <gml:pos srsDimension="2">51.59360886 4.82500839</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1697,7 +1692,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00241">
-        <gml:pos srsDimension="2">51.60333252 4.78084707</gml:pos>
+                <gml:pos srsDimension="2">51.60333252 4.78084707</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1735,7 +1730,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00446">
-        <gml:pos srsDimension="2">52.03972244 4.36056376</gml:pos>
+                <gml:pos srsDimension="2">52.03972244 4.36056376</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1773,7 +1768,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00448">
-        <gml:pos srsDimension="2">51.92694473 4.46167755</gml:pos>
+                <gml:pos srsDimension="2">51.92694473 4.46167755</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1811,7 +1806,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00938">
-        <gml:pos srsDimension="2">53.24694443 6.60889721</gml:pos>
+                <gml:pos srsDimension="2">53.24694443 6.60889721</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1849,7 +1844,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00002">
-        <gml:pos srsDimension="2">52.38500214 4.87611961</gml:pos>
+                <gml:pos srsDimension="2">52.38500214 4.87611961</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1887,7 +1882,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00003">
-        <gml:pos srsDimension="2">52.38888931 4.94389725</gml:pos>
+                <gml:pos srsDimension="2">52.38888931 4.94389725</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1925,7 +1920,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00007">
-        <gml:pos srsDimension="2">52.38111115 4.84501123</gml:pos>
+                <gml:pos srsDimension="2">52.38111115 4.84501123</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -1963,7 +1958,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00012">
-        <gml:pos srsDimension="2">52.3900032 4.88805819</gml:pos>
+                <gml:pos srsDimension="2">52.3900032 4.88805819</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2001,7 +1996,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00014">
-        <gml:pos srsDimension="2">52.3599968 4.8088975</gml:pos>
+                <gml:pos srsDimension="2">52.3599968 4.8088975</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2039,7 +2034,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00016">
-        <gml:pos srsDimension="2">52.39305878 4.87000275</gml:pos>
+                <gml:pos srsDimension="2">52.39305878 4.87000275</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2077,7 +2072,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00017">
-        <gml:pos srsDimension="2">52.35805511 4.9000001</gml:pos>
+                <gml:pos srsDimension="2">52.35805511 4.9000001</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2115,7 +2110,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00018">
-        <gml:pos srsDimension="2">52.33388901 4.89806938</gml:pos>
+                <gml:pos srsDimension="2">52.33388901 4.89806938</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2153,7 +2148,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00545">
-        <gml:pos srsDimension="2">52.33949661 4.84102249</gml:pos>
+                <gml:pos srsDimension="2">52.33949661 4.84102249</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2191,7 +2186,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00019">
-        <gml:pos srsDimension="2">52.3730545 4.90500307</gml:pos>
+                <gml:pos srsDimension="2">52.3730545 4.90500307</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2229,7 +2224,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00020">
-        <gml:pos srsDimension="2">52.3758316 4.86084175</gml:pos>
+                <gml:pos srsDimension="2">52.3758316 4.86084175</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2267,7 +2262,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00021">
-        <gml:pos srsDimension="2">52.32138824 4.98889446</gml:pos>
+                <gml:pos srsDimension="2">52.32138824 4.98889446</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2305,7 +2300,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00022">
-        <gml:pos srsDimension="2">52.37888718 4.79361963</gml:pos>
+                <gml:pos srsDimension="2">52.37888718 4.79361963</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2343,7 +2338,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00701">
-        <gml:pos srsDimension="2">52.45000076 4.8166666</gml:pos>
+                <gml:pos srsDimension="2">52.45000076 4.8166666</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2381,7 +2376,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00246">
-        <gml:pos srsDimension="2">51.65277863 4.51388884</gml:pos>
+                <gml:pos srsDimension="2">51.65277863 4.51388884</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2419,7 +2414,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00643">
-        <gml:pos srsDimension="2">52.10222244 5.12833357</gml:pos>
+                <gml:pos srsDimension="2">52.10222244 5.12833357</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2457,7 +2452,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00247">
-        <gml:pos srsDimension="2">51.40750122 5.39333344</gml:pos>
+                <gml:pos srsDimension="2">51.40750122 5.39333344</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2495,7 +2490,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00553">
-        <gml:pos srsDimension="2">52.493889 4.603333</gml:pos>
+                <gml:pos srsDimension="2">52.493889 4.603333</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2533,7 +2528,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00485">
-        <gml:pos srsDimension="2">51.86610794 4.35527754</gml:pos>
+                <gml:pos srsDimension="2">51.86610794 4.35527754</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2571,7 +2566,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00494">
-        <gml:pos srsDimension="2">51.921111 4.401389</gml:pos>
+                <gml:pos srsDimension="2">51.921111 4.401389</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2609,7 +2604,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00470">
-        <gml:pos srsDimension="2">51.92805862 4.77083302</gml:pos>
+                <gml:pos srsDimension="2">51.92805862 4.77083302</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2647,7 +2642,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00471">
-        <gml:pos srsDimension="2">51.76305389 4.27750015</gml:pos>
+                <gml:pos srsDimension="2">51.76305389 4.27750015</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2685,7 +2680,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00472">
-        <gml:pos srsDimension="2">52.16611099 4.85222197</gml:pos>
+                <gml:pos srsDimension="2">52.16611099 4.85222197</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2723,7 +2718,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00473">
-        <gml:pos srsDimension="2">51.89500046 4.07416677</gml:pos>
+                <gml:pos srsDimension="2">51.89500046 4.07416677</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2761,7 +2756,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00474">
-        <gml:pos srsDimension="2">51.91694641 4.084167</gml:pos>
+                <gml:pos srsDimension="2">51.91694641 4.084167</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2799,7 +2794,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00475">
-        <gml:pos srsDimension="2">51.9011116 4.34027815</gml:pos>
+                <gml:pos srsDimension="2">51.9011116 4.34027815</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2837,7 +2832,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00476">
-        <gml:pos srsDimension="2">51.9011116 4.31777763</gml:pos>
+                <gml:pos srsDimension="2">51.9011116 4.31777763</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2875,7 +2870,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00477">
-        <gml:pos srsDimension="2">51.91111374 4.29638863</gml:pos>
+                <gml:pos srsDimension="2">51.91111374 4.29638863</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2913,7 +2908,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00478">
-        <gml:pos srsDimension="2">51.89889145 4.30472231</gml:pos>
+                <gml:pos srsDimension="2">51.89889145 4.30472231</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2951,7 +2946,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00479">
-        <gml:pos srsDimension="2">51.97194672 4.14166641</gml:pos>
+                <gml:pos srsDimension="2">51.97194672 4.14166641</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -2989,7 +2984,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00482">
-        <gml:pos srsDimension="2">51.96111298 4.09000015</gml:pos>
+                <gml:pos srsDimension="2">51.96111298 4.09000015</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3027,7 +3022,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00483">
-        <gml:pos srsDimension="2">51.86999893 4.31972218</gml:pos>
+                <gml:pos srsDimension="2">51.86999893 4.31972218</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3065,7 +3060,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00484">
-        <gml:pos srsDimension="2">51.88888931 4.3125</gml:pos>
+                <gml:pos srsDimension="2">51.88888931 4.3125</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3103,7 +3098,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00486">
-        <gml:pos srsDimension="2">51.88805771 4.38888884</gml:pos>
+                <gml:pos srsDimension="2">51.88805771 4.38888884</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3141,7 +3136,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00487">
-        <gml:pos srsDimension="2">51.89111328 4.48111105</gml:pos>
+                <gml:pos srsDimension="2">51.89111328 4.48111105</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3179,7 +3174,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00488">
-        <gml:pos srsDimension="2">51.89389038 4.48749971</gml:pos>
+                <gml:pos srsDimension="2">51.89389038 4.48749971</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3217,7 +3212,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00489">
-        <gml:pos srsDimension="2">51.86888885 4.57472229</gml:pos>
+                <gml:pos srsDimension="2">51.86888885 4.57472229</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3255,7 +3250,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00490">
-        <gml:pos srsDimension="2">51.91805649 4.51388884</gml:pos>
+                <gml:pos srsDimension="2">51.91805649 4.51388884</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3293,7 +3288,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00491">
-        <gml:pos srsDimension="2">51.93805695 4.43111086</gml:pos>
+                <gml:pos srsDimension="2">51.93805695 4.43111086</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3331,7 +3326,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00492">
-        <gml:pos srsDimension="2">51.91389084 4.48000002</gml:pos>
+                <gml:pos srsDimension="2">51.91389084 4.48000002</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3369,7 +3364,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00493">
-        <gml:pos srsDimension="2">51.92694473 4.46166658</gml:pos>
+                <gml:pos srsDimension="2">51.92694473 4.46166658</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3407,7 +3402,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00495">
-        <gml:pos srsDimension="2">51.9319458 4.22777796</gml:pos>
+                <gml:pos srsDimension="2">51.9319458 4.22777796</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3445,7 +3440,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00496">
-        <gml:pos srsDimension="2">51.97805786 4.12138891</gml:pos>
+                <gml:pos srsDimension="2">51.97805786 4.12138891</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3483,7 +3478,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00703">
-        <gml:pos srsDimension="2">52.40000153 4.73000002</gml:pos>
+                <gml:pos srsDimension="2">52.40000153 4.73000002</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3521,7 +3516,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00442">
-        <gml:pos srsDimension="2">51.80065918 4.70821381</gml:pos>
+                <gml:pos srsDimension="2">51.80065918 4.70821381</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3559,7 +3554,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00821">
-        <gml:pos srsDimension="2">52.23450089 6.91949415</gml:pos>
+                <gml:pos srsDimension="2">52.23450089 6.91949415</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3597,7 +3592,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00704">
-        <gml:pos srsDimension="2">52.43000031 4.76999998</gml:pos>
+                <gml:pos srsDimension="2">52.43000031 4.76999998</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3635,7 +3630,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00312">
-        <gml:pos srsDimension="2">51.284534 3.91538056</gml:pos>
+                <gml:pos srsDimension="2">51.284534 3.91538056</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3673,7 +3668,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00319">
-        <gml:pos srsDimension="2">51.464383 3.745008</gml:pos>
+                <gml:pos srsDimension="2">51.464383 3.745008</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3711,7 +3706,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00546">
-        <gml:pos srsDimension="2">52.420219 4.832064</gml:pos>
+                <gml:pos srsDimension="2">52.420219 4.832064</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3749,7 +3744,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00551">
-        <gml:pos srsDimension="2">52.46302 4.601922</gml:pos>
+                <gml:pos srsDimension="2">52.46302 4.601922</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3787,7 +3782,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00556">
-        <gml:pos srsDimension="2">52.56359 4.8617</gml:pos>
+                <gml:pos srsDimension="2">52.56359 4.8617</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3825,7 +3820,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00561">
-        <gml:pos srsDimension="2">52.33356 4.77359</gml:pos>
+                <gml:pos srsDimension="2">52.33356 4.77359</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3863,7 +3858,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00564">
-        <gml:pos srsDimension="2">52.28743 4.766679</gml:pos>
+                <gml:pos srsDimension="2">52.28743 4.766679</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3901,7 +3896,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00565">
-        <gml:pos srsDimension="2">52.32745 4.715071</gml:pos>
+                <gml:pos srsDimension="2">52.32745 4.715071</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3939,7 +3934,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00570">
-        <gml:pos srsDimension="2">52.4866 4.638642</gml:pos>
+                <gml:pos srsDimension="2">52.4866 4.638642</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -3977,7 +3972,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00572">
-        <gml:pos srsDimension="2">52.4744 4.6288</gml:pos>
+                <gml:pos srsDimension="2">52.4744 4.6288</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4015,7 +4010,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00573">
-        <gml:pos srsDimension="2">52.79 4.729</gml:pos>
+                <gml:pos srsDimension="2">52.79 4.729</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4053,7 +4048,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00244">
-        <gml:pos srsDimension="2">51.5359 5.808593</gml:pos>
+                <gml:pos srsDimension="2">51.5359 5.808593</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4091,7 +4086,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00245">
-        <gml:pos srsDimension="2">51.70078 4.623361</gml:pos>
+                <gml:pos srsDimension="2">51.70078 4.623361</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4129,7 +4124,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00547">
-        <gml:pos srsDimension="2">52.23508 5.181552</gml:pos>
+                <gml:pos srsDimension="2">52.23508 5.181552</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4167,7 +4162,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00548">
-        <gml:pos srsDimension="2">52.26798 5.17583</gml:pos>
+                <gml:pos srsDimension="2">52.26798 5.17583</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4205,7 +4200,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00549">
-        <gml:pos srsDimension="2">52.25736 5.235903</gml:pos>
+                <gml:pos srsDimension="2">52.25736 5.235903</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4243,7 +4238,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00743">
-        <gml:pos srsDimension="2">52.15407 5.664074</gml:pos>
+                <gml:pos srsDimension="2">52.15407 5.664074</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4281,7 +4276,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00644">
-        <gml:pos srsDimension="2">51.97464 4.92343</gml:pos>
+                <gml:pos srsDimension="2">51.97464 4.92343</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
@@ -4319,7 +4314,7 @@
                 <ef:geometry>
                     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00138">
-        <gml:pos srsDimension="2">50.900317 5.986853</gml:pos>
+                <gml:pos srsDimension="2">50.900317 5.986853</gml:pos>
     </gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>

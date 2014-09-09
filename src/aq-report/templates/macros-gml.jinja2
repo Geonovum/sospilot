@@ -1,40 +1,70 @@
 {# Jinja2 Macros for GML-related elements #}
 
-{# Macro that renders a Point element #}
-{% macro render_point2d(srs_name, coordinates, gml_id) -%}
+{# Macro that renders a Point element: TODO replace by Filter that uses OGR and proper GML2/GML3 style #}
+{% macro render_point2d(srs_name, coordinates, gml_id, gml3=False, swap_xy=False) -%}
     <!-- Rendered by macro render_point2d() -->
     <gml:Point srsName="{{ srs_name }}" gml:id="{{ gml_id }}">
-        <gml:pos srsDimension="2">{{ coordinates[0] }} {{ coordinates[1] }}</gml:pos>
+        {% if gml3 == True %}
+            {% if swap_xy == True %}
+                <gml:pos srsDimension="2">{{ coordinates[1] }} {{ coordinates[0] }}</gml:pos>
+            {% else %}
+                <gml:pos srsDimension="2">{{ coordinates[0] }} {{ coordinates[1] }}</gml:pos>
+            {% endif %}
+        {% else %}
+            {% if swap_xy == True %}
+                <gml:coordinates>{{ coordinates[1] }}, {{ coordinates[0] }}</gml:coordinates>
+            {% else %}
+                <gml:coordinates>{{ coordinates[0] }}, {{ coordinates[1] }}</gml:coordinates>
+            {% endif %}
+        {%  endif %}
     </gml:Point>
 {%- endmacro %}
 
 {# Macro that renders a bounding box element from feature list
+  TODO replace by Filter that generates boundedBy from any features and uses OGR and proper GML2/GML3 style
   NB Point features only and assuming lat lon in reverse axis ordering! #}
-{% macro render_bounded_by(point_features) -%}
+{% macro render_bounded_by(point_features, gml3=False, swap_xy=False) -%}
     <!-- Rendered by macro render_bounded_by() -->
 
-    {# first assemble all latitudes and longitudes #}
-    {% set longitudes = [] %}
-    {% set latitudes = [] %}
+    {# first assemble all "X" "Y" - may have axis ordering #}
+    {% set X = [] %}
+    {% set Y = [] %}
 
     {% for feature in point_features %}
-        {% do longitudes.append(feature.geometry.coordinates[1]) %}
-        {% do latitudes.append(feature.geometry.coordinates[0]) %}
+        {# May need explicit axis ordering/swapping, the usual GML-mess :-( #}
+        {% if swap_xy == True %}
+            {% do X.append(feature.geometry.coordinates[1]) %}
+            {% do Y.append(feature.geometry.coordinates[0]) %}
+        {% else %}
+            {% do X.append(feature.geometry.coordinates[0]) %}
+            {% do Y.append(feature.geometry.coordinates[1]) %}
+        {% endif %}
     {% endfor %}
 
     {# use the maximum and minimum Jinja2 Filters to get max/min from lists #}
-    <gml:boundedBy>
-        <gml:Box>
-            <gml:coord>
-                <gml:X>{{ longitudes|minimum }}</gml:X>
-                <gml:Y>{{ latitudes|minimum }}</gml:Y>
-            </gml:coord>
-            <gml:coord>
-                <gml:X>{{ longitudes|maximum }}</gml:X>
-                <gml:Y>{{ latitudes|maximum }}</gml:Y>
-            </gml:coord>
-        </gml:Box>
-    </gml:boundedBy>
+    {% if gml3 == True %}
+        {# GML3 Style #}
+        <gml:boundedBy>
+           <gml:Envelope>
+              <gml:lowerCorner>{{ X|minimum }} {{ Y|minimum }}</gml:lowerCorner>
+              <gml:upperCorner>{{ X|maximum }} {{ Y|maximum }}</gml:upperCorner>
+           </gml:Envelope>
+        </gml:boundedBy>
+    {% else %}
+        {# GML1+2 Style #}
+        <gml:boundedBy>
+           <gml:Box>
+               <gml:coord>
+                   <gml:X>{{ X|minimum }}</gml:X>
+                   <gml:Y>{{ Y|minimum }}</gml:Y>
+               </gml:coord>
+               <gml:coord>
+                   <gml:X>{{ X|maximum }}</gml:X>
+                   <gml:Y>{{ Y|maximum }}</gml:Y>
+               </gml:coord>
+           </gml:Box>
+       </gml:boundedBy>
+    {%  endif %}
 {%- endmacro %}
 
 {# Macro that renders a name element #}
