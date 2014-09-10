@@ -208,10 +208,7 @@
                 <ef:name>Hellendoorn-Luttenbergerweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00807">
-                <gml:pos srsDimension="2">52.38916779 6.40361404</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00807"><gml:pos>224190.567870466271415 489520.552890471706633</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -246,10 +243,7 @@
                 <ef:name>Barsbeek-De Veenen</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00818">
-                <gml:pos srsDimension="2">52.65500259 6.01806974</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00818"><gml:pos>197687.926391933637206 518800.324135020899121</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -284,10 +278,7 @@
                 <ef:name>Balk-Trophornsterweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00918">
-                <gml:pos srsDimension="2">52.91691589 5.57349157</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00918"><gml:pos>167530.086806959036039 547774.789242233615369</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -322,10 +313,7 @@
                 <ef:name>Kollumerwaard-Hooge Zuidwal</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00934">
-                <gml:pos srsDimension="2">53.33166504 6.27750874</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00934"><gml:pos>214313.115693976636976 594281.606650074594654</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -360,10 +348,7 @@
                 <ef:name>Vredepeel-Vredeweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00131">
-                <gml:pos srsDimension="2">51.54111099 5.85361385</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00131"><gml:pos>187356.669569048972335 394785.887257535883691</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -398,10 +383,7 @@
                 <ef:name>Wijnandsrade-Opfergeltstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00133">
-                <gml:pos srsDimension="2">50.9030571 5.882236</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00133"><gml:pos>189823.676451528328471 323816.4587510311394</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -436,10 +418,7 @@
                 <ef:name>Biest Houtakker-Biestsestraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00230">
-                <gml:pos srsDimension="2">51.51944351 5.14890242</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00230"><gml:pos>138460.440830067178467 392298.707538558985107</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -474,10 +453,7 @@
                 <ef:name>Huijbergen-Vennekenstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00235">
-                <gml:pos srsDimension="2">51.43500137 4.36028624</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00235"><gml:pos>83594.310179047446582 383380.105594829947222</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -512,10 +488,7 @@
                 <ef:name>Eindhoven-Genovevalaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00236">
-                <gml:pos srsDimension="2">51.46972275 5.47278357</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00236"><gml:pos>160946.514921668887837 386743.695847759256139</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -550,10 +523,7 @@
                 <ef:name>Eindhoven-Noordbrabantlaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00237">
-                <gml:pos srsDimension="2">51.44528 5.4289</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00237"><gml:pos>157898.92399285803549 384021.741612649464514</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -588,10 +558,7 @@
                 <ef:name>Zierikzee-Lange Slikweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00301">
-                <gml:pos srsDimension="2">51.63555908 3.91694736</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00301"><gml:pos>53219.735513499123044 406217.243411495699547</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -626,10 +593,7 @@
                 <ef:name>Philippine-Stelleweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00318">
-                <gml:pos srsDimension="2">51.29527664 3.74945831</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00318"><gml:pos>40775.916059039154788 368614.402570970938541</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -664,10 +628,7 @@
                 <ef:name>Den Haag-Rebecquestraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00404">
-                <gml:pos srsDimension="2">52.07805634 4.28917217</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00404"><gml:pos>79729.32760114694247 454989.217962283059023</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -702,10 +663,7 @@
                 <ef:name>Rotterdam-Schiedamsevest</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00418">
-                <gml:pos srsDimension="2">51.91500092 4.48028898</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00418"><gml:pos>92603.498331609400338 436668.153648922336288</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -740,10 +698,7 @@
                 <ef:name>Vlaardingen-Floreslaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00433">
-                <gml:pos srsDimension="2">51.91139221 4.32695293</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00433"><gml:pos>82048.461349841454648 436409.453060193103738</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -778,10 +733,7 @@
                 <ef:name>Westmaas-Groeneweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00437">
-                <gml:pos srsDimension="2">51.78749847 4.45084143</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00437"><gml:pos>90394.895648923295084 422509.325722578214481</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -816,10 +768,7 @@
                 <ef:name>Amsterdam-Cabeliaustraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00518">
-                <gml:pos srsDimension="2">52.38472366 4.80361414</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00518"><gml:pos>115268.372217957919929 488700.447026266367175</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -854,10 +803,7 @@
                 <ef:name>Posterholt-Vlodropperweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00107">
-                <gml:pos srsDimension="2">51.1202774 6.04306364</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00107"><gml:pos>200920.204722581751412 348070.474183004756924</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -892,10 +838,7 @@
                 <ef:name>Haarlem-Amsterdamsevaart</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00537">
-                <gml:pos srsDimension="2">52.38166428 4.64806938</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00537"><gml:pos>104675.427889259430231 488456.712486650794744</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -930,10 +873,7 @@
                 <ef:name>Wieringerwerf-Medemblikkerweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00538">
-                <gml:pos srsDimension="2">52.80472183 5.05084181</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00538"><gml:pos>132317.050429728988092 535326.630891534499824</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -968,10 +908,7 @@
                 <ef:name>Bilthoven-Van Leeuwenhoeklaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00627">
-                <gml:pos srsDimension="2">52.120833 5.195567</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00627"><gml:pos>141875.441400837444235 459196.70760708785383</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1006,10 +943,7 @@
                 <ef:name>De Bilt-Wilhelminalaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00628">
-                <gml:pos srsDimension="2">52.100833 5.177789</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00628"><gml:pos>140651.470150842418661 456974.884902117832098</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1044,10 +978,7 @@
                 <ef:name>Biddinghuizen-Hoekwantweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00631">
-                <gml:pos srsDimension="2">52.44850159 5.61915016</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00631"><gml:pos>170768.54875577671919 495662.097566588898189</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1082,10 +1013,7 @@
                 <ef:name>Zegveld-Oude Meije</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00633">
-                <gml:pos srsDimension="2">52.138889 4.838336</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00633"><gml:pos>117425.249534220201895 461330.340385062620044</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1120,10 +1048,7 @@
                 <ef:name>Utrecht-de Jongweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00636">
-                <gml:pos srsDimension="2">52.106111 5.125286</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00636"><gml:pos>137056.227115389076062 457573.781464419909753</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1158,10 +1083,7 @@
                 <ef:name>Utrecht-Erzeijstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00639">
-                <gml:pos srsDimension="2">52.068889 5.121114</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00639"><gml:pos>136755.235795390181011 453433.553135157213546</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1196,10 +1118,7 @@
                 <ef:name>Eibergen-Lintveldseweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00722">
-                <gml:pos srsDimension="2">52.0925 6.605839</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00722"><gml:pos>238510.697130508080591 456728.334084944741335</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1234,10 +1153,7 @@
                 <ef:name>Breukelen-Snelweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00641">
-                <gml:pos srsDimension="2">52.203056 4.988614</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00641"><gml:pos>127752.208254176948685 468402.386855151038617</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1272,10 +1188,7 @@
                 <ef:name>De Zilk-Vogelaarsdreef</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00444">
-                <gml:pos srsDimension="2">52.29805374 4.51028633</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00444"><gml:pos>95182.102081535093021 479258.948349980579223</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1310,10 +1223,7 @@
                 <ef:name>Speuld-Garderenseweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00732">
-                <gml:pos srsDimension="2">52.27249908 5.72139168</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00732"><gml:pos>177809.658349570119753 476106.578820321301464</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1348,10 +1258,7 @@
                 <ef:name>Wekerom-Riemterdijk</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00738">
-                <gml:pos srsDimension="2">52.11249924 5.70861912</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00738"><gml:pos>177016.805000297608785 458301.00032444630051</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1386,10 +1293,7 @@
                 <ef:name>Valthermond-Noorderdiep</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00929">
-                <gml:pos srsDimension="2">52.87666321 6.9333334</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00929"><gml:pos>259087.429715267790016 544394.079512991127558</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1424,10 +1328,7 @@
                 <ef:name>Den Haag-Veerkade</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00445">
-                <gml:pos srsDimension="2">52.075 4.316125</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00445"><gml:pos>81571.848936911308556 454621.59796160843689</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1462,10 +1363,7 @@
                 <ef:name>Nijmegen-Graafseweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00741">
-                <gml:pos srsDimension="2">51.848889 5.858061</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00741"><gml:pos>187443.581713845953345 429028.749256787006743</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1500,10 +1398,7 @@
                 <ef:name>Nijmegen-Ruyterstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00742">
-                <gml:pos srsDimension="2">51.838889 5.858061</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00742"><gml:pos>187450.78908513954957 427916.212772492726799</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1538,10 +1433,7 @@
                 <ef:name>Groningen-Europaweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00937">
-                <gml:pos srsDimension="2">53.21805573 6.57889986</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00937"><gml:pos>234600.363556345575489 581929.460382927791215</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1576,10 +1468,7 @@
                 <ef:name>Heerlen-Looierstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00136">
-                <gml:pos srsDimension="2">50.88805771 5.97111416</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00136"><gml:pos>196089.098701202950906 322193.923314177547581</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1614,10 +1503,7 @@
                 <ef:name>Leiden-Willem de Zwijgerlaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00447">
-                <gml:pos srsDimension="2">52.16805649 4.50806093</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00447"><gml:pos>94854.988450165110407 464797.788520790461916</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1652,10 +1538,7 @@
                 <ef:name>Breda-Tilburgseweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00240">
-                <gml:pos srsDimension="2">51.59360886 4.82500839</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00240"><gml:pos>116043.861216616089223 400673.010009730409365</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1690,10 +1573,7 @@
                 <ef:name>Breda-Bastenakenstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00241">
-                <gml:pos srsDimension="2">51.60333252 4.78084707</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00241"><gml:pos>112992.83455962302105 401779.306420289853122</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1728,10 +1608,7 @@
                 <ef:name>Den Haag-Bleriotlaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00446">
-                <gml:pos srsDimension="2">52.03972244 4.36056376</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00446"><gml:pos>84562.728086181698018 450652.928728360624518</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1766,10 +1643,7 @@
                 <ef:name>Rotterdam-Bentinckplein</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00448">
-                <gml:pos srsDimension="2">51.92694473 4.46167755</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00448"><gml:pos>91339.983107286592713 438013.044799039373174</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1804,10 +1678,7 @@
                 <ef:name>Groningen-Nijensteinheerd</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00938">
-                <gml:pos srsDimension="2">53.24694443 6.60889721</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00938"><gml:pos>236549.395741537940921 585177.739943339372985</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1842,10 +1713,7 @@
                 <ef:name>Amsterdam-Haarlemmerweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00002">
-                <gml:pos srsDimension="2">52.38500214 4.87611961</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00002"><gml:pos>120204.801896521268645 488694.146644607069902</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1880,10 +1748,7 @@
                 <ef:name>Amsterdam-Nieuwendammerdijk</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00003">
-                <gml:pos srsDimension="2">52.38888931 4.94389725</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00003"><gml:pos>124821.778732078048051 489096.26199416955933</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1918,10 +1783,7 @@
                 <ef:name>Amsterdam-Einsteinweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00007">
-                <gml:pos srsDimension="2">52.38111115 4.84501123</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00007"><gml:pos>118083.697638309560716 488276.61556047265185</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1956,10 +1818,7 @@
                 <ef:name>Amsterdam-Van Diemenstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00012">
-                <gml:pos srsDimension="2">52.3900032 4.88805819</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00012"><gml:pos>121021.416967107128585 489244.915892317891121</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -1994,10 +1853,7 @@
                 <ef:name>Amsterdam-Vondelpark</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00014">
-                <gml:pos srsDimension="2">52.3599968 4.8088975</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00014"><gml:pos>115606.110354046031716 485946.393789075431414</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2032,10 +1888,7 @@
                 <ef:name>Amsterdam-Westerpark</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00016">
-                <gml:pos srsDimension="2">52.39305878 4.87000275</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00016"><gml:pos>119794.762574048800161 489593.509351354616228</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2070,10 +1923,7 @@
                 <ef:name>Amsterdam-Stadhouderskade</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00017">
-                <gml:pos srsDimension="2">52.35805511 4.9000001</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00017"><gml:pos>121810.43787381000584 485684.7383240229683</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2108,10 +1958,7 @@
                 <ef:name>Amsterdam-A10zuid</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00018">
-                <gml:pos srsDimension="2">52.33388901 4.89806938</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00018"><gml:pos>121660.769627612855402 482996.843400630867109</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2146,10 +1993,7 @@
                 <ef:name>Amsterdam-A10 west</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00545">
-                <gml:pos srsDimension="2">52.33949661 4.84102249</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00545"><gml:pos>117777.226481236109976 483648.522066332108807</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2184,10 +2028,7 @@
                 <ef:name>Amsterdam-Oude Schans</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00019">
-                <gml:pos srsDimension="2">52.3730545 4.90500307</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00019"><gml:pos>122162.35266188357491 487351.336114198260475</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2222,10 +2063,7 @@
                 <ef:name>Amsterdam-Jan van Galenstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00020">
-                <gml:pos srsDimension="2">52.3758316 4.86084175</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00020"><gml:pos>119157.270071907201782 487681.250469126214739</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2260,10 +2098,7 @@
                 <ef:name>Amsterdam-Kantershof (Zuid Oost)</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00021">
-                <gml:pos srsDimension="2">52.32138824 4.98889446</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00021"><gml:pos>127843.680631970462855 481568.082480085780844</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2298,10 +2133,7 @@
                 <ef:name>Amsterdam-Sportpark Ookmeer (Osdorp)</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00022">
-                <gml:pos srsDimension="2">52.37888718 4.79361963</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00022"><gml:pos>114582.623245588110876 488056.592867460043635</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2336,10 +2168,7 @@
                 <ef:name>Zaandam-Wagenschotpad</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00701">
-                <gml:pos srsDimension="2">52.45000076 4.8166666</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00701"><gml:pos>116214.187237781326985 495956.327953214931767</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2374,10 +2203,7 @@
                 <ef:name>Fijnaart-Zwingelspaansedijk</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00246">
-                <gml:pos srsDimension="2">51.65277863 4.51388884</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00246"><gml:pos>94564.922359661373775 407467.885381370433606</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2412,10 +2238,7 @@
                 <ef:name>Utrecht-Griftpark</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00643">
-                <gml:pos srsDimension="2">52.10222244 5.12833357</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00643"><gml:pos>137263.471289562818129 457140.39589065668406</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2450,10 +2273,7 @@
                 <ef:name>Veldhoven-Europalaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00247">
-                <gml:pos srsDimension="2">51.40750122 5.39333344</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00247"><gml:pos>155426.696159562183311 379817.998045105719939</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2488,10 +2308,7 @@
                 <ef:name>Wijk aan Zee-Burgemeester Rothestraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00553">
-                <gml:pos srsDimension="2">52.493889 4.603333</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00553"><gml:pos>101764.733493618899956 500975.05034980509663</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2526,10 +2343,7 @@
                 <ef:name>Hoogvliet-Leemkuil</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00485">
-                <gml:pos srsDimension="2">51.86610794 4.35527754</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00485"><gml:pos>83925.756982824997976 431343.614182149583939</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2564,10 +2378,7 @@
                 <ef:name>Schiedam-Alphons Arienstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00494">
-                <gml:pos srsDimension="2">51.921111 4.401389</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00494"><gml:pos>87184.548344803770306 437418.573875444475561</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2602,10 +2413,7 @@
                 <ef:name>Bergambacht-Provincialeweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00470">
-                <gml:pos srsDimension="2">51.92805862 4.77083302</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00470"><gml:pos>112605.105593893851619 437911.412235720199533</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2640,10 +2448,7 @@
                 <ef:name>Korendijk-Bakkerskeet</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00471">
-                <gml:pos srsDimension="2">51.76305389 4.27750015</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00471"><gml:pos>78394.159473433057428 419958.170103163516615</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2678,10 +2483,7 @@
                 <ef:name>Nieuwkoop-Voorweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00472">
-                <gml:pos srsDimension="2">52.16611099 4.85222197</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00472"><gml:pos>118398.177674377191579 464351.912552594789304</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2716,10 +2518,7 @@
                 <ef:name>Rockanje-Middelweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00473">
-                <gml:pos srsDimension="2">51.89500046 4.07416677</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00473"><gml:pos>64623.501901555777295 434869.943880876118783</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2754,10 +2553,7 @@
                 <ef:name>Oostvoorne-Strandweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00474">
-                <gml:pos srsDimension="2">51.91694641 4.084167</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00474"><gml:pos>65355.538724621510482 437298.907102181517985</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2792,10 +2588,7 @@
                 <ef:name>Vlaardingen-Deltaweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00475">
-                <gml:pos srsDimension="2">51.9011116 4.34027815</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00475"><gml:pos>82948.798401069681859 435252.464130569016561</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2830,10 +2623,7 @@
                 <ef:name>Vlaardingen-Trawlerweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00476">
-                <gml:pos srsDimension="2">51.9011116 4.31777763</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00476"><gml:pos>81400.349371830059681 435275.006761140539311</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2868,10 +2658,7 @@
                 <ef:name>Vlaardingen-Zuidbuurt 34</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00477">
-                <gml:pos srsDimension="2">51.91111374 4.29638863</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00477"><gml:pos>79945.097355778707424 436409.59288527519675</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2906,10 +2693,7 @@
                 <ef:name>Vlaardingen-Deltapad G.L.</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00478">
-                <gml:pos srsDimension="2">51.89889145 4.30472231</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00478"><gml:pos>80498.22755348427745 435041.320165392593481</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2944,10 +2728,7 @@
                 <ef:name>Hoek v. Holland-Prins Hendrikstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00479">
-                <gml:pos srsDimension="2">51.97194672 4.14166641</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00479"><gml:pos>69415.912184842847637 443348.080168010550551</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -2982,10 +2763,7 @@
                 <ef:name>Europoort-Markweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00482">
-                <gml:pos srsDimension="2">51.96111298 4.09000015</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00482"><gml:pos>65844.524680329253897 442205.009002885606606</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3020,10 +2798,7 @@
                 <ef:name>Botlek-Spoortunnel</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00483">
-                <gml:pos srsDimension="2">51.86999893 4.31972218</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00483"><gml:pos>81483.34308516800229 431811.832003627205268</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3058,10 +2833,7 @@
                 <ef:name>Botlek-Oude Maasweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00484">
-                <gml:pos srsDimension="2">51.88888931 4.3125</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00484"><gml:pos>81017.048976213205606 433920.663869721232913</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3096,10 +2868,7 @@
                 <ef:name>Pernis-Soetemanweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00486">
-                <gml:pos srsDimension="2">51.88805771 4.38888884</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00486"><gml:pos>86274.178326115390519 433753.170848406851292</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3134,10 +2903,7 @@
                 <ef:name>Rotterdam Zuid-Pleinweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00487">
-                <gml:pos srsDimension="2">51.89111328 4.48111105</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00487"><gml:pos>92626.928556093611405 434009.945714445144404</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3172,10 +2938,7 @@
                 <ef:name>Rotterdam Zuid-Zwartewaalstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00488">
-                <gml:pos srsDimension="2">51.89389038 4.48749971</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00488"><gml:pos>93070.516070342157036 434313.436130458780099</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3210,10 +2973,7 @@
                 <ef:name>Ridderkerk-Hogeweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00489">
-                <gml:pos srsDimension="2">51.86888885 4.57472229</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00489"><gml:pos>99043.063853557396214 431461.289014691312332</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3248,10 +3008,7 @@
                 <ef:name>Rotterdam-Maasboulevard</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00490">
-                <gml:pos srsDimension="2">51.91805649 4.51388884</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00490"><gml:pos>94919.205626818424207 436979.778650841559283</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3286,10 +3043,7 @@
                 <ef:name>Rotterdam-Oost Sidelinge A13</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00491">
-                <gml:pos srsDimension="2">51.93805695 4.43111086</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00491"><gml:pos>89253.873925028179656 439276.493581343791448</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3324,10 +3078,7 @@
                 <ef:name>Rotterdam-Vasteland</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00492">
-                <gml:pos srsDimension="2">51.91389084 4.48000002</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00492"><gml:pos>92582.076885053509613 436544.905057243653573</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3362,10 +3113,7 @@
                 <ef:name>Rotterdam Noord -Statenweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00493">
-                <gml:pos srsDimension="2">51.92694473 4.46166658</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00493"><gml:pos>91339.228590592261753 438013.054407819814514</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3400,10 +3148,7 @@
                 <ef:name>Maassluis-Kwartellaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00495">
-                <gml:pos srsDimension="2">51.9319458 4.22777796</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00495"><gml:pos>75261.49217495949415 438800.164959410205483</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3438,10 +3183,7 @@
                 <ef:name>Hoek v. Holland-Berghaven</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00496">
-                <gml:pos srsDimension="2">51.97805786 4.12138891</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00496"><gml:pos>68034.534940572673804 444051.998243186913896</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3476,10 +3218,7 @@
                 <ef:name>Amsterdam-Spaarnwoude</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00703">
-                <gml:pos srsDimension="2">52.40000153 4.73000002</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00703"><gml:pos>110272.130655014028889 490443.204772847879212</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3514,10 +3253,7 @@
                 <ef:name>Dordrecht-Bamendaweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00442">
-                <gml:pos srsDimension="2">51.80065918 4.70821381</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00442"><gml:pos>108165.789390419609845 423776.323615226021502</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3552,10 +3288,7 @@
                 <ef:name>Enschede-Winkelhorst</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00821">
-                <gml:pos srsDimension="2">52.23450089 6.91949415</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00821"><gml:pos>259669.146558756794548 472932.338001181138679</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3590,10 +3323,7 @@
                 <ef:name>Amsterdam-Hoogtij</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00704">
-                <gml:pos srsDimension="2">52.43000031 4.76999998</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00704"><gml:pos>113022.827770169271389 493757.017539963126183</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3628,10 +3358,7 @@
                 <ef:name>Axel-Zaaidijk</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00312">
-                <gml:pos srsDimension="2">51.284534 3.91538056</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00312"><gml:pos>52322.900059425053769 367172.920858470024541</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3666,10 +3393,7 @@
                 <ef:name>Nieuwdorp-Coudorp</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00319">
-                <gml:pos srsDimension="2">51.464383 3.745008</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00319"><gml:pos>40889.106327429122757 387431.297149486141279</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3704,10 +3428,7 @@
                 <ef:name>Zaanstad-Hemkade</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00546">
-                <gml:pos srsDimension="2">52.420219 4.832064</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00546"><gml:pos>117235.510491691209609 492634.555588186951354</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3742,10 +3463,7 @@
                 <ef:name>Ijmuiden-Kanaaldijk</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00551">
-                <gml:pos srsDimension="2">52.46302 4.601922</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00551"><gml:pos>101631.662084339579451 497541.518310658459086</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3780,10 +3498,7 @@
                 <ef:name>De Rijp-Oostdijkje</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00556">
-                <gml:pos srsDimension="2">52.56359 4.8617</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00556"><gml:pos>119367.299433399326517 508571.786129205720499</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3818,10 +3533,7 @@
                 <ef:name>Badhoevedorp-Sloterweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00561">
-                <gml:pos srsDimension="2">52.33356 4.77359</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00561"><gml:pos>113176.122650596196763 483024.773204794793855</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3856,10 +3568,7 @@
                 <ef:name>Hoofddorp-Hoofdweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00564">
-                <gml:pos srsDimension="2">52.28743 4.766679</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00564"><gml:pos>112661.146812767023221 477896.329343868012074</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3894,10 +3603,7 @@
                 <ef:name>Oude Meer-Aalsmeerderdijk</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00565">
-                <gml:pos srsDimension="2">52.32745 4.715071</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00565"><gml:pos>109181.246557282123831 482380.346340868447442</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3932,10 +3638,7 @@
                 <ef:name>Beverwijk West-Creutzberglaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00570">
-                <gml:pos srsDimension="2">52.4866 4.638642</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00570"><gml:pos>104154.235860184620833 500138.674324561958201</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -3970,10 +3673,7 @@
                 <ef:name>Velsen-Staalstraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00572">
-                <gml:pos srsDimension="2">52.4744 4.6288</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00572"><gml:pos>103471.522259200923145 498788.220841555914376</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4008,10 +3708,7 @@
                 <ef:name>Velsen-Reijndersweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00573">
-                <gml:pos srsDimension="2">52.79 4.729</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00573"><gml:pos>110598.820776351756649 533837.852655426948331</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4046,10 +3743,7 @@
                 <ef:name>De Rips-Klotterpeellaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00244">
-                <gml:pos srsDimension="2">51.5359 5.808593</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00244"><gml:pos>184236.795600717887282 394187.125606976333074</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4084,10 +3778,7 @@
                 <ef:name>Moerdijk-Julianastraat</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00245">
-                <gml:pos srsDimension="2">51.70078 4.623361</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00245"><gml:pos>102196.446239397919271 412722.8248801176087</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4122,10 +3813,7 @@
                 <ef:name>Hilversum-J. Gerardtsweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00547">
-                <gml:pos srsDimension="2">52.23508 5.181552</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00547"><gml:pos>140951.606415762478719 471910.509799289691728</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4160,10 +3848,7 @@
                 <ef:name>Bussum-Ceintuurbaan</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00548">
-                <gml:pos srsDimension="2">52.26798 5.17583</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00548"><gml:pos>140571.391267379949568 475572.150328052288387</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4198,10 +3883,7 @@
                 <ef:name>Laren-Jagerspad</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00549">
-                <gml:pos srsDimension="2">52.25736 5.235903</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00549"><gml:pos>144669.569976437516743 474380.297230491705704</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4236,10 +3918,7 @@
                 <ef:name>Kootwijkerbroek-Drieenhuizerweg</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00743">
-                <gml:pos srsDimension="2">52.15407 5.664074</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00743"><gml:pos>173947.84224492526846 462913.553493969957344</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4274,10 +3953,7 @@
                 <ef:name>Cabauw-Wielsekade</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00644">
-                <gml:pos srsDimension="2">51.97464 4.92343</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00644"><gml:pos>123133.92469971938408 443015.852593721356243</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
@@ -4312,10 +3988,7 @@
                 <ef:name>Heerlen-Jamboreepad</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    <!-- Rendered by macro render_point2d() -->
-    <gml:Point srsName="urn:ogc:def:crs:EPSG:4326" gml:id="STA_G-STA-NL00138">
-                <gml:pos srsDimension="2">50.900317 5.986853</gml:pos>
-    </gml:Point>
+                    <gml:Point srsName="urn:ogc:def:crs:EPSG::28992" gml:id="STA_G-STA-NL00138"><gml:pos>197185.41819867893355 323566.69353936787229</gml:pos></gml:Point>
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
