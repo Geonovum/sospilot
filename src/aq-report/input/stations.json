@@ -1,267 +1,7 @@
 {"type": "FeatureCollection", "totalFeatures": 109, "features": [
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3609",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.40361404, 52.38916779]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 1,
-            "local_id": "STA-NL00807",
-            "natl_station_code": "807",
-            "eu_station_code": "NL00807",
-            "name": "Hellendoorn-Luttenbergerweg",
-            "municipality": "Hellendoorn",
-            "altitude": 7,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1976-04-01T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.40361404",
-            "lat": "52.38916779"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_360a",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.01806974, 52.65500259]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 2,
-            "local_id": "STA-NL00818",
-            "natl_station_code": "818",
-            "eu_station_code": "NL00818",
-            "name": "Barsbeek-De Veenen",
-            "municipality": "Steenwijkerland",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1986-11-23T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.01806974",
-            "lat": "52.65500259"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_360b",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.57349157, 52.91691589]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 4,
-            "local_id": "STA-NL00918",
-            "natl_station_code": "918",
-            "eu_station_code": "NL00918",
-            "name": "Balk-Trophornsterweg",
-            "municipality": "",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1976-04-01T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.57349157",
-            "lat": "52.91691589"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_360c",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.27750874, 53.33166504]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 6,
-            "local_id": "STA-NL00934",
-            "natl_station_code": "934",
-            "eu_station_code": "NL00934",
-            "name": "Kollumerwaard-Hooge Zuidwal",
-            "municipality": "Kollumerland en Nieuwkruisland",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1989-12-20T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.27750874",
-            "lat": "53.33166504"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_360d",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.85361385, 51.54111099]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 7,
-            "local_id": "STA-NL00131",
-            "natl_station_code": "131",
-            "eu_station_code": "NL00131",
-            "name": "Vredepeel-Vredeweg",
-            "municipality": "Venray",
-            "altitude": 28,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1984-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.85361385",
-            "lat": "51.54111099"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_360e",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.882236, 50.9030571]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 8,
-            "local_id": "STA-NL00133",
-            "natl_station_code": "133",
-            "eu_station_code": "NL00133",
-            "name": "Wijnandsrade-Opfergeltstraat",
-            "municipality": "Nuth",
-            "altitude": 96,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
-            "activity_begin": "1986-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.882236",
-            "lat": "50.9030571"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_360f",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.14890242, 51.51944351]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 11,
-            "local_id": "STA-NL00230",
-            "natl_station_code": "230",
-            "eu_station_code": "NL00230",
-            "name": "Biest Houtakker-Biestsestraat",
-            "municipality": "Hilvarenbeek",
-            "altitude": 15,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1984-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.14890242",
-            "lat": "51.51944351"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3610",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.36028624, 51.43500137]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 15,
-            "local_id": "STA-NL00235",
-            "natl_station_code": "235",
-            "eu_station_code": "NL00235",
-            "name": "Huijbergen-Vennekenstraat",
-            "municipality": "Woensdrecht",
-            "altitude": 18,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1986-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.36028624",
-            "lat": "51.43500137"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3611",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.47278357, 51.46972275]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 16,
-            "local_id": "STA-NL00236",
-            "natl_station_code": "236",
-            "eu_station_code": "NL00236",
-            "name": "Eindhoven-Genovevalaan",
-            "municipality": "Eindhoven",
-            "altitude": 17,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1989-01-25T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.47278357",
-            "lat": "51.46972275"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3612",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.4289, 51.44528]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 17,
-            "local_id": "STA-NL00237",
-            "natl_station_code": "237",
-            "eu_station_code": "NL00237",
-            "name": "Eindhoven-Noordbrabantlaan",
-            "municipality": "",
-            "altitude": 18,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1989-01-18T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.4289",
-            "lat": "51.44528"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3613",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17c8",
         "geometry": {
             "type": "Point",
             "coordinates": [3.91694736, 51.63555908]
@@ -280,1652 +20,44 @@
             "activity_begin": "1976-01-01T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "Zuid",
             "lon": "3.91694736",
-            "lat": "51.63555908"
+            "lat": "51.63555908",
+            "zone_code": "NL00300",
+            "pollutants": "NO,NO2,O3"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3614",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17c9",
         "geometry": {
             "type": "Point",
-            "coordinates": [3.74945831, 51.29527664]
+            "coordinates": [5.85361385, 51.54111099]
         },
         "geometry_name": "point",
         "properties": {
-            "gid": 21,
-            "local_id": "STA-NL00318",
-            "natl_station_code": "318",
-            "eu_station_code": "NL00318",
-            "name": "Philippine-Stelleweg",
-            "municipality": "Terneuzen",
-            "altitude": 5,
+            "gid": 7,
+            "local_id": "STA-NL00131",
+            "natl_station_code": "131",
+            "eu_station_code": "NL00131",
+            "name": "Vredepeel-Vredeweg",
+            "municipality": "Venray",
+            "altitude": 28,
             "altitude_unit": "m",
             "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1982-12-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "3.74945831",
-            "lat": "51.29527664"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3615",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.28917217, 52.07805634]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 22,
-            "local_id": "STA-NL00404",
-            "natl_station_code": "404",
-            "eu_station_code": "NL00404",
-            "name": "Den Haag-Rebecquestraat",
-            "municipality": "'s-Gravenhage",
-            "altitude": 2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1976-01-01T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.28917217",
-            "lat": "52.07805634"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3616",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.48028898, 51.91500092]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 26,
-            "local_id": "STA-NL00418",
-            "natl_station_code": "418",
-            "eu_station_code": "NL00418",
-            "name": "Rotterdam-Schiedamsevest",
-            "municipality": "Rotterdam",
-            "altitude": 3,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1976-01-01T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.48028898",
-            "lat": "51.91500092"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3617",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.32695293, 51.91139221]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 27,
-            "local_id": "STA-NL00433",
-            "natl_station_code": "433",
-            "eu_station_code": "NL00433",
-            "name": "Vlaardingen-Floreslaan",
-            "municipality": "Vlaardingen",
-            "altitude": -1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
             "activity_begin": "1984-03-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
-            "lon": "4.32695293",
-            "lat": "51.91139221"
+            "zone_name": "Zuid",
+            "lon": "5.85361385",
+            "lat": "51.54111099",
+            "zone_code": "NL00300",
+            "pollutants": "NH3,NO,NO2,O3,PM10,PM2.5"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3618",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.45084143, 51.78749847]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 29,
-            "local_id": "STA-NL00437",
-            "natl_station_code": "437",
-            "eu_station_code": "NL00437",
-            "name": "Westmaas-Groeneweg",
-            "municipality": "",
-            "altitude": -1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1986-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.45084143",
-            "lat": "51.78749847"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3619",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.80361414, 52.38472366]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 31,
-            "local_id": "STA-NL00518",
-            "natl_station_code": "518",
-            "eu_station_code": "NL00518",
-            "name": "Amsterdam-Cabeliaustraat",
-            "municipality": "Amsterdam",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1976-04-01T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.80361414",
-            "lat": "52.38472366"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_361a",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.04306364, 51.1202774]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 33,
-            "local_id": "STA-NL00107",
-            "natl_station_code": "107",
-            "eu_station_code": "NL00107",
-            "name": "Posterholt-Vlodropperweg",
-            "municipality": "Roerdalen",
-            "altitude": 32,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1976-01-01T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.04306364",
-            "lat": "51.1202774"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_361b",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.64806938, 52.38166428]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 34,
-            "local_id": "STA-NL00537",
-            "natl_station_code": "537",
-            "eu_station_code": "NL00537",
-            "name": "Haarlem-Amsterdamsevaart",
-            "municipality": "Haarlem",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1989-11-20T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.64806938",
-            "lat": "52.38166428"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_361c",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.05084181, 52.80472183]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 35,
-            "local_id": "STA-NL00538",
-            "natl_station_code": "538",
-            "eu_station_code": "NL00538",
-            "name": "Wieringerwerf-Medemblikkerweg",
-            "municipality": "Wieringermeer",
-            "altitude": -4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1986-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.05084181",
-            "lat": "52.80472183"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_361d",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.195567, 52.120833]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 37,
-            "local_id": "STA-NL00627",
-            "natl_station_code": "627",
-            "eu_station_code": "NL00627",
-            "name": "Bilthoven-Van Leeuwenhoeklaan",
-            "municipality": "De Bilt",
-            "altitude": 3,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
-            "activity_begin": "1977-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.195567",
-            "lat": "52.120833"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_361e",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.177789, 52.100833]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 38,
-            "local_id": "STA-NL00628",
-            "natl_station_code": "628",
-            "eu_station_code": "NL00628",
-            "name": "De Bilt-Wilhelminalaan",
-            "municipality": "De Bilt",
-            "altitude": 2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
-            "activity_begin": "1977-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.177789",
-            "lat": "52.100833"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_361f",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.61915016, 52.44850159]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 39,
-            "local_id": "STA-NL00631",
-            "natl_station_code": "631",
-            "eu_station_code": "NL00631",
-            "name": "Biddinghuizen-Hoekwantweg",
-            "municipality": "",
-            "altitude": -4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1986-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.61915016",
-            "lat": "52.44850159"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3620",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.838336, 52.138889]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 40,
-            "local_id": "STA-NL00633",
-            "natl_station_code": "633",
-            "eu_station_code": "NL00633",
-            "name": "Zegveld-Oude Meije",
-            "municipality": "Woerden",
-            "altitude": -2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1986-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.838336",
-            "lat": "52.138889"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3621",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.125286, 52.106111]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 41,
-            "local_id": "STA-NL00636",
-            "natl_station_code": "636",
-            "eu_station_code": "NL00636",
-            "name": "Utrecht-de Jongweg",
-            "municipality": "Utrecht",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1987-10-28T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.125286",
-            "lat": "52.106111"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3622",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.121114, 52.068889]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 44,
-            "local_id": "STA-NL00639",
-            "natl_station_code": "639",
-            "eu_station_code": "NL00639",
-            "name": "Utrecht-Erzeijstraat",
-            "municipality": "Utrecht",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1987-09-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.121114",
-            "lat": "52.068889"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3623",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.605839, 52.0925]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 46,
-            "local_id": "STA-NL00722",
-            "natl_station_code": "722",
-            "eu_station_code": "NL00722",
-            "name": "Eibergen-Lintveldseweg",
-            "municipality": "Berkelland",
-            "altitude": 19,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1982-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.605839",
-            "lat": "52.0925"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3624",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.988614, 52.203056]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 51,
-            "local_id": "STA-NL00641",
-            "natl_station_code": "641",
-            "eu_station_code": "NL00641",
-            "name": "Breukelen-Snelweg",
-            "municipality": "Loenen",
-            "altitude": -1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1993-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.988614",
-            "lat": "52.203056"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3625",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.51028633, 52.29805374]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 53,
-            "local_id": "STA-NL00444",
-            "natl_station_code": "444",
-            "eu_station_code": "NL00444",
-            "name": "De Zilk-Vogelaarsdreef",
-            "municipality": "Noordwijk",
-            "altitude": 4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1994-04-19T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.51028633",
-            "lat": "52.29805374"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3626",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.72139168, 52.27249908]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 54,
-            "local_id": "STA-NL00732",
-            "natl_station_code": "732",
-            "eu_station_code": "NL00732",
-            "name": "Speuld-Garderenseweg",
-            "municipality": "Ermelo",
-            "altitude": 24,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1994-12-27T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.72139168",
-            "lat": "52.27249908"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3627",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.70861912, 52.11249924]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 55,
-            "local_id": "STA-NL00738",
-            "natl_station_code": "738",
-            "eu_station_code": "NL00738",
-            "name": "Wekerom-Riemterdijk",
-            "municipality": "Ede",
-            "altitude": 18,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1994-03-29T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.70861912",
-            "lat": "52.11249924"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3628",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.9333334, 52.87666321]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 56,
-            "local_id": "STA-NL00929",
-            "natl_station_code": "929",
-            "eu_station_code": "NL00929",
-            "name": "Valthermond-Noorderdiep",
-            "municipality": "Borger-Odoorn",
-            "altitude": 10,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "2000-01-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.9333334",
-            "lat": "52.87666321"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3629",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.316125, 52.075]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 57,
-            "local_id": "STA-NL00445",
-            "natl_station_code": "445",
-            "eu_station_code": "NL00445",
-            "name": "Den Haag-Veerkade",
-            "municipality": "",
-            "altitude": 4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2003-09-04T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.316125",
-            "lat": "52.075"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_362a",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.858061, 51.848889]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 58,
-            "local_id": "STA-NL00741",
-            "natl_station_code": "741",
-            "eu_station_code": "NL00741",
-            "name": "Nijmegen-Graafseweg",
-            "municipality": "Nijmegen",
-            "altitude": 30,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2003-04-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.858061",
-            "lat": "51.848889"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_362b",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.858061, 51.838889]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 59,
-            "local_id": "STA-NL00742",
-            "natl_station_code": "742",
-            "eu_station_code": "NL00742",
-            "name": "Nijmegen-Ruyterstraat",
-            "municipality": "Nijmegen",
-            "altitude": 30,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2003-05-13T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.858061",
-            "lat": "51.838889"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_362c",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.57889986, 53.21805573]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 60,
-            "local_id": "STA-NL00937",
-            "natl_station_code": "937",
-            "eu_station_code": "NL00937",
-            "name": "Groningen-Europaweg",
-            "municipality": "Groningen",
-            "altitude": 2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2003-04-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.57889986",
-            "lat": "53.21805573"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_362d",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.97111416, 50.88805771]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 61,
-            "local_id": "STA-NL00136",
-            "natl_station_code": "136",
-            "eu_station_code": "NL00136",
-            "name": "Heerlen-Looierstraat",
-            "municipality": "Heerlen",
-            "altitude": 100,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2004-08-25T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.97111416",
-            "lat": "50.88805771"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_362e",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.50806093, 52.16805649]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 63,
-            "local_id": "STA-NL00447",
-            "natl_station_code": "447",
-            "eu_station_code": "NL00447",
-            "name": "Leiden-Willem de Zwijgerlaan",
-            "municipality": "Leiden",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2004-12-07T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.50806093",
-            "lat": "52.16805649"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_362f",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.82500839, 51.59360886]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 65,
-            "local_id": "STA-NL00240",
-            "natl_station_code": "240",
-            "eu_station_code": "NL00240",
-            "name": "Breda-Tilburgseweg",
-            "municipality": "",
-            "altitude": 4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
-            "activity_begin": "2005-04-25T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.82500839",
-            "lat": "51.59360886"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3630",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.78084707, 51.60333252]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 66,
-            "local_id": "STA-NL00241",
-            "natl_station_code": "241",
-            "eu_station_code": "NL00241",
-            "name": "Breda-Bastenakenstraat",
-            "municipality": "Breda",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
-            "activity_begin": "2005-02-21T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.78084707",
-            "lat": "51.60333252"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3631",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.36056376, 52.03972244]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 67,
-            "local_id": "STA-NL00446",
-            "natl_station_code": "446",
-            "eu_station_code": "NL00446",
-            "name": "Den Haag-Bleriotlaan",
-            "municipality": "'s-Gravenhage",
-            "altitude": -2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
-            "activity_begin": "2005-12-04T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.36056376",
-            "lat": "52.03972244"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3632",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.46167755, 51.92694473]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 68,
-            "local_id": "STA-NL00448",
-            "natl_station_code": "448",
-            "eu_station_code": "NL00448",
-            "name": "Rotterdam-Bentinckplein",
-            "municipality": "Rotterdam",
-            "altitude": 2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2005-04-14T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.46167755",
-            "lat": "51.92694473"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3633",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.60889721, 53.24694443]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 69,
-            "local_id": "STA-NL00938",
-            "natl_station_code": "938",
-            "eu_station_code": "NL00938",
-            "name": "Groningen-Nijensteinheerd",
-            "municipality": "Groningen",
-            "altitude": -1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
-            "activity_begin": "2005-06-28T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.60889721",
-            "lat": "53.24694443"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3634",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.87611961, 52.38500214]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 71,
-            "local_id": "STA-NL00002",
-            "natl_station_code": "2",
-            "eu_station_code": "NL00002",
-            "name": "Amsterdam-Haarlemmerweg",
-            "municipality": "",
-            "altitude": 4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1996-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.87611961",
-            "lat": "52.38500214"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3635",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.94389725, 52.38888931]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 72,
-            "local_id": "STA-NL00003",
-            "natl_station_code": "3",
-            "eu_station_code": "NL00003",
-            "name": "Amsterdam-Nieuwendammerdijk",
-            "municipality": "",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1986-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.94389725",
-            "lat": "52.38888931"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3636",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.84501123, 52.38111115]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 73,
-            "local_id": "STA-NL00007",
-            "natl_station_code": "7",
-            "eu_station_code": "NL00007",
-            "name": "Amsterdam-Einsteinweg",
-            "municipality": "",
-            "altitude": 2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1998-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.84501123",
-            "lat": "52.38111115"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3637",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.88805819, 52.3900032]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 74,
-            "local_id": "STA-NL00012",
-            "natl_station_code": "12",
-            "eu_station_code": "NL00012",
-            "name": "Amsterdam-Van Diemenstraat",
-            "municipality": "",
-            "altitude": 4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1989-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.88805819",
-            "lat": "52.3900032"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3638",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.8088975, 52.3599968]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 75,
-            "local_id": "STA-NL00014",
-            "natl_station_code": "14",
-            "eu_station_code": "NL00014",
-            "name": "Amsterdam-Vondelpark",
-            "municipality": "",
-            "altitude": 2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1989-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.8088975",
-            "lat": "52.3599968"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3639",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.87000275, 52.39305878]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 76,
-            "local_id": "STA-NL00016",
-            "natl_station_code": "16",
-            "eu_station_code": "NL00016",
-            "name": "Amsterdam-Westerpark",
-            "municipality": "",
-            "altitude": 3,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1998-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.87000275",
-            "lat": "52.39305878"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_363a",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.9000001, 52.35805511]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 77,
-            "local_id": "STA-NL00017",
-            "natl_station_code": "17",
-            "eu_station_code": "NL00017",
-            "name": "Amsterdam-Stadhouderskade",
-            "municipality": "",
-            "altitude": 4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1998-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.9000001",
-            "lat": "52.35805511"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_363b",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.89806938, 52.33388901]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 78,
-            "local_id": "STA-NL00018",
-            "natl_station_code": "18",
-            "eu_station_code": "NL00018",
-            "name": "Amsterdam-A10zuid",
-            "municipality": "",
-            "altitude": 10,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2003-11-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.89806938",
-            "lat": "52.33388901"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_363c",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.84102249, 52.33949661]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 79,
-            "local_id": "STA-NL00545",
-            "natl_station_code": "545",
-            "eu_station_code": "NL00545",
-            "name": "Amsterdam-A10 west",
-            "municipality": "",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2007-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.84102249",
-            "lat": "52.33949661"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_363d",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.90500307, 52.3730545]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 80,
-            "local_id": "STA-NL00019",
-            "natl_station_code": "19",
-            "eu_station_code": "NL00019",
-            "name": "Amsterdam-Oude Schans",
-            "municipality": "",
-            "altitude": 2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2007-01-02T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.90500307",
-            "lat": "52.3730545"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_363e",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.86084175, 52.3758316]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 81,
-            "local_id": "STA-NL00020",
-            "natl_station_code": "20",
-            "eu_station_code": "NL00020",
-            "name": "Amsterdam-Jan van Galenstraat",
-            "municipality": "",
-            "altitude": 4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2006-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.86084175",
-            "lat": "52.3758316"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_363f",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.98889446, 52.32138824]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 82,
-            "local_id": "STA-NL00021",
-            "natl_station_code": "21",
-            "eu_station_code": "NL00021",
-            "name": "Amsterdam-Kantershof (Zuid Oost)",
-            "municipality": "",
-            "altitude": -3,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2007-02-06T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.98889446",
-            "lat": "52.32138824"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3640",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.79361963, 52.37888718]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 83,
-            "local_id": "STA-NL00022",
-            "natl_station_code": "22",
-            "eu_station_code": "NL00022",
-            "name": "Amsterdam-Sportpark Ookmeer (Osdorp)",
-            "municipality": "",
-            "altitude": -1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2007-01-19T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.79361963",
-            "lat": "52.37888718"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3641",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.8166666, 52.45000076]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 84,
-            "local_id": "STA-NL00701",
-            "natl_station_code": "701",
-            "eu_station_code": "NL00701",
-            "name": "Zaandam-Wagenschotpad",
-            "municipality": "",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2006-04-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.8166666",
-            "lat": "52.45000076"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3642",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.51388884, 51.65277863]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 85,
-            "local_id": "STA-NL00246",
-            "natl_station_code": "246",
-            "eu_station_code": "NL00246",
-            "name": "Fijnaart-Zwingelspaansedijk",
-            "municipality": "Moerdijk",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "2007-10-04T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.51388884",
-            "lat": "51.65277863"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3643",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.12833357, 52.10222244]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 86,
-            "local_id": "STA-NL00643",
-            "natl_station_code": "643",
-            "eu_station_code": "NL00643",
-            "name": "Utrecht-Griftpark",
-            "municipality": "Utrecht",
-            "altitude": 2,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2008-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.12833357",
-            "lat": "52.10222244"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3644",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.39333344, 51.40750122]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 88,
-            "local_id": "STA-NL00247",
-            "natl_station_code": "247",
-            "eu_station_code": "NL00247",
-            "name": "Veldhoven-Europalaan",
-            "municipality": "Veldhoven",
-            "altitude": 22,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2009-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.39333344",
-            "lat": "51.40750122"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3645",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.603333, 52.493889]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 90,
-            "local_id": "STA-NL00553",
-            "natl_station_code": "553",
-            "eu_station_code": "NL00553",
-            "name": "Wijk aan Zee-Burgemeester Rothestraat",
-            "municipality": "",
-            "altitude": 7,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2009-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.603333",
-            "lat": "52.493889"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3646",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.35527754, 51.86610794]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 91,
-            "local_id": "STA-NL00485",
-            "natl_station_code": "HGV",
-            "eu_station_code": "NL00485",
-            "name": "Hoogvliet-Leemkuil",
-            "municipality": "",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1973-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.35527754",
-            "lat": "51.86610794"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3647",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.401389, 51.921111]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 92,
-            "local_id": "STA-NL00494",
-            "natl_station_code": "SDM",
-            "eu_station_code": "NL00494",
-            "name": "Schiedam-Alphons Arienstraat",
-            "municipality": "",
-            "altitude": 3,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1973-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.401389",
-            "lat": "51.921111"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3648",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.77083302, 51.92805862]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 93,
-            "local_id": "STA-NL00470",
-            "natl_station_code": "BAM",
-            "eu_station_code": "NL00470",
-            "name": "Bergambacht-Provincialeweg",
-            "municipality": "Bergambacht",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1993-02-09T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.77083302",
-            "lat": "51.92805862"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3649",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.27750015, 51.76305389]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 94,
-            "local_id": "STA-NL00471",
-            "natl_station_code": "KSL",
-            "eu_station_code": "NL00471",
-            "name": "Korendijk-Bakkerskeet",
-            "municipality": "Korendijk",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1990-06-29T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.27750015",
-            "lat": "51.76305389"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_364a",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.85222197, 52.16611099]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 95,
-            "local_id": "STA-NL00472",
-            "natl_station_code": "NKP",
-            "eu_station_code": "NL00472",
-            "name": "Nieuwkoop-Voorweg",
-            "municipality": "Nieuwkoop",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1990-06-29T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.85222197",
-            "lat": "52.16611099"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_364b",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.07416677, 51.89500046]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 96,
-            "local_id": "STA-NL00473",
-            "natl_station_code": "ROC",
-            "eu_station_code": "NL00473",
-            "name": "Rockanje-Middelweg",
-            "municipality": "Westvoorne",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "1990-06-29T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.07416677",
-            "lat": "51.89500046"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_364c",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.084167, 51.91694641]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 97,
-            "local_id": "STA-NL00474",
-            "natl_station_code": "OST",
-            "eu_station_code": "NL00474",
-            "name": "Oostvoorne-Strandweg",
-            "municipality": "",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "1981-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.084167",
-            "lat": "51.91694641"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_364d",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.34027815, 51.9011116]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 98,
-            "local_id": "STA-NL00475",
-            "natl_station_code": "VLE",
-            "eu_station_code": "NL00475",
-            "name": "Vlaardingen-Deltaweg",
-            "municipality": "",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "1974-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.34027815",
-            "lat": "51.9011116"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_364e",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.31777763, 51.9011116]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 99,
-            "local_id": "STA-NL00476",
-            "natl_station_code": "VLT",
-            "eu_station_code": "NL00476",
-            "name": "Vlaardingen-Trawlerweg",
-            "municipality": "Vlaardingen",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "1974-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.31777763",
-            "lat": "51.9011116"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_364f",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.29638863, 51.91111374]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 100,
-            "local_id": "STA-NL00477",
-            "natl_station_code": "VLZ",
-            "eu_station_code": "NL00477",
-            "name": "Vlaardingen-Zuidbuurt 34",
-            "municipality": "Vlaardingen",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "1974-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.29638863",
-            "lat": "51.91111374"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3650",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.30472231, 51.89889145]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 101,
-            "local_id": "STA-NL00478",
-            "natl_station_code": "VLG",
-            "eu_station_code": "NL00478",
-            "name": "Vlaardingen-Deltapad G.L.",
-            "municipality": "Vlaardingen",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "1999-12-12T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.30472231",
-            "lat": "51.89889145"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3651",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.14166641, 51.97194672]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 102,
-            "local_id": "STA-NL00479",
-            "natl_station_code": "HVH",
-            "eu_station_code": "NL00479",
-            "name": "Hoek v. Holland-Prins Hendrikstraat",
-            "municipality": "Rotterdam",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "1995-07-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.14166641",
-            "lat": "51.97194672"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3652",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.09000015, 51.96111298]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 103,
-            "local_id": "STA-NL00482",
-            "natl_station_code": "MRK",
-            "eu_station_code": "NL00482",
-            "name": "Europoort-Markweg",
-            "municipality": "Rotterdam",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2002-06-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.09000015",
-            "lat": "51.96111298"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3653",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17ca",
         "geometry": {
             "type": "Point",
             "coordinates": [4.31972218, 51.86999893]
@@ -1944,14 +76,604 @@
             "activity_begin": "2008-08-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "Rotterdam-Dordrecht",
             "lon": "4.31972218",
-            "lat": "51.86999893"
+            "lat": "51.86999893",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,PM10"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3654",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17cb",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.80361414, 52.38472366]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 31,
+            "local_id": "STA-NL00518",
+            "natl_station_code": "518",
+            "eu_station_code": "NL00518",
+            "name": "Amsterdam-Cabeliaustraat",
+            "municipality": "Amsterdam",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1976-04-01T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.80361414",
+            "lat": "52.38472366",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17cc",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.316125, 52.075]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 57,
+            "local_id": "STA-NL00445",
+            "natl_station_code": "445",
+            "eu_station_code": "NL00445",
+            "name": "Den Haag-Veerkade",
+            "municipality": "",
+            "altitude": 4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2003-09-04T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Den Haag-Leiden",
+            "lon": "4.316125",
+            "lat": "52.075",
+            "zone_code": "NL00231",
+            "pollutants": "NO,NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17cd",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.195567, 52.120833]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 37,
+            "local_id": "STA-NL00627",
+            "natl_station_code": "627",
+            "eu_station_code": "NL00627",
+            "name": "Bilthoven-Van Leeuwenhoeklaan",
+            "municipality": "De Bilt",
+            "altitude": 3,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
+            "activity_begin": "1977-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "5.195567",
+            "lat": "52.120833",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17ce",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.177789, 52.100833]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 38,
+            "local_id": "STA-NL00628",
+            "natl_station_code": "628",
+            "eu_station_code": "NL00628",
+            "name": "De Bilt-Wilhelminalaan",
+            "municipality": "De Bilt",
+            "altitude": 2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
+            "activity_begin": "1977-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "5.177789",
+            "lat": "52.100833",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17cf",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.72139168, 52.27249908]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 54,
+            "local_id": "STA-NL00732",
+            "natl_station_code": "732",
+            "eu_station_code": "NL00732",
+            "name": "Speuld-Garderenseweg",
+            "municipality": "Ermelo",
+            "altitude": 24,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1994-12-27T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "5.72139168",
+            "lat": "52.27249908",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d0",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.87000275, 52.39305878]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 76,
+            "local_id": "STA-NL00016",
+            "natl_station_code": "16",
+            "eu_station_code": "NL00016",
+            "name": "Amsterdam-Westerpark",
+            "municipality": "",
+            "altitude": 3,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1998-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.87000275",
+            "lat": "52.39305878",
+            "zone_code": "NL00210",
+            "pollutants": "PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d1",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.87611961, 52.38500214]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 71,
+            "local_id": "STA-NL00002",
+            "natl_station_code": "2",
+            "eu_station_code": "NL00002",
+            "name": "Amsterdam-Haarlemmerweg",
+            "municipality": "",
+            "altitude": 4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1996-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.87611961",
+            "lat": "52.38500214",
+            "zone_code": "NL00210",
+            "pollutants": "NO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d2",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.401389, 51.921111]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 92,
+            "local_id": "STA-NL00494",
+            "natl_station_code": "SDM",
+            "eu_station_code": "NL00494",
+            "name": "Schiedam-Alphons Arienstraat",
+            "municipality": "",
+            "altitude": 3,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1973-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.401389",
+            "lat": "51.921111",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d3",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.9000001, 52.35805511]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 77,
+            "local_id": "STA-NL00017",
+            "natl_station_code": "17",
+            "eu_station_code": "NL00017",
+            "name": "Amsterdam-Stadhouderskade",
+            "municipality": "",
+            "altitude": 4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1998-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.9000001",
+            "lat": "52.35805511",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d4",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.89806938, 52.33388901]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 78,
+            "local_id": "STA-NL00018",
+            "natl_station_code": "18",
+            "eu_station_code": "NL00018",
+            "name": "Amsterdam-A10zuid",
+            "municipality": "",
+            "altitude": 10,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2003-11-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.89806938",
+            "lat": "52.33388901",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d5",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.77083302, 51.92805862]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 93,
+            "local_id": "STA-NL00470",
+            "natl_station_code": "BAM",
+            "eu_station_code": "NL00470",
+            "name": "Bergambacht-Provincialeweg",
+            "municipality": "Bergambacht",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1993-02-09T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.77083302",
+            "lat": "51.92805862",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d6",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.27750015, 51.76305389]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 94,
+            "local_id": "STA-NL00471",
+            "natl_station_code": "KSL",
+            "eu_station_code": "NL00471",
+            "name": "Korendijk-Bakkerskeet",
+            "municipality": "Korendijk",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1990-06-29T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.27750015",
+            "lat": "51.76305389",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d7",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.85222197, 52.16611099]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 95,
+            "local_id": "STA-NL00472",
+            "natl_station_code": "NKP",
+            "eu_station_code": "NL00472",
+            "name": "Nieuwkoop-Voorweg",
+            "municipality": "Nieuwkoop",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1990-06-29T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.85222197",
+            "lat": "52.16611099",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d8",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.07416677, 51.89500046]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 96,
+            "local_id": "STA-NL00473",
+            "natl_station_code": "ROC",
+            "eu_station_code": "NL00473",
+            "name": "Rockanje-Middelweg",
+            "municipality": "Westvoorne",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1990-06-29T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.07416677",
+            "lat": "51.89500046",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17d9",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.084167, 51.91694641]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 97,
+            "local_id": "STA-NL00474",
+            "natl_station_code": "OST",
+            "eu_station_code": "NL00474",
+            "name": "Oostvoorne-Strandweg",
+            "municipality": "",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "1981-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.084167",
+            "lat": "51.91694641",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17da",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.34027815, 51.9011116]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 98,
+            "local_id": "STA-NL00475",
+            "natl_station_code": "VLE",
+            "eu_station_code": "NL00475",
+            "name": "Vlaardingen-Deltaweg",
+            "municipality": "",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "1974-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.34027815",
+            "lat": "51.9011116",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17db",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.31777763, 51.9011116]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 99,
+            "local_id": "STA-NL00476",
+            "natl_station_code": "VLT",
+            "eu_station_code": "NL00476",
+            "name": "Vlaardingen-Trawlerweg",
+            "municipality": "Vlaardingen",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "1974-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.31777763",
+            "lat": "51.9011116",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17dc",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.29638863, 51.91111374]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 100,
+            "local_id": "STA-NL00477",
+            "natl_station_code": "VLZ",
+            "eu_station_code": "NL00477",
+            "name": "Vlaardingen-Zuidbuurt 34",
+            "municipality": "Vlaardingen",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "1974-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.29638863",
+            "lat": "51.91111374",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17dd",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.30472231, 51.89889145]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 101,
+            "local_id": "STA-NL00478",
+            "natl_station_code": "VLG",
+            "eu_station_code": "NL00478",
+            "name": "Vlaardingen-Deltapad G.L.",
+            "municipality": "Vlaardingen",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "1999-12-12T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.30472231",
+            "lat": "51.89889145",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17de",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.14166641, 51.97194672]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 102,
+            "local_id": "STA-NL00479",
+            "natl_station_code": "HVH",
+            "eu_station_code": "NL00479",
+            "name": "Hoek v. Holland-Prins Hendrikstraat",
+            "municipality": "Rotterdam",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "1995-07-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.14166641",
+            "lat": "51.97194672",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17df",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.09000015, 51.96111298]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 103,
+            "local_id": "STA-NL00482",
+            "natl_station_code": "MRK",
+            "eu_station_code": "NL00482",
+            "name": "Europoort-Markweg",
+            "municipality": "Rotterdam",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "2002-06-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.09000015",
+            "lat": "51.96111298",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e0",
         "geometry": {
             "type": "Point",
             "coordinates": [4.3125, 51.88888931]
@@ -1970,456 +692,16 @@
             "activity_begin": "1969-12-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "",
             "lon": "4.3125",
-            "lat": "51.88888931"
+            "lat": "51.88888931",
+            "zone_code": null,
+            "pollutants": null
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3655",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.38888884, 51.88805771]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 106,
-            "local_id": "STA-NL00486",
-            "natl_station_code": "PNS",
-            "eu_station_code": "NL00486",
-            "name": "Pernis-Soetemanweg",
-            "municipality": "Rotterdam",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1969-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.38888884",
-            "lat": "51.88805771"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3656",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.48111105, 51.89111328]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 107,
-            "local_id": "STA-NL00487",
-            "natl_station_code": "RPW",
-            "eu_station_code": "NL00487",
-            "name": "Rotterdam Zuid-Pleinweg",
-            "municipality": "",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2009-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.48111105",
-            "lat": "51.89111328"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3657",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.48749971, 51.89389038]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 108,
-            "local_id": "STA-NL00488",
-            "natl_station_code": "RZW",
-            "eu_station_code": "NL00488",
-            "name": "Rotterdam Zuid-Zwartewaalstraat",
-            "municipality": "",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2009-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.48749971",
-            "lat": "51.89389038"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3658",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.57472229, 51.86888885]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 109,
-            "local_id": "STA-NL00489",
-            "natl_station_code": "RID",
-            "eu_station_code": "NL00489",
-            "name": "Ridderkerk-Hogeweg",
-            "municipality": "",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2004-06-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.57472229",
-            "lat": "51.86888885"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3659",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.51388884, 51.91805649]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 110,
-            "local_id": "STA-NL00490",
-            "natl_station_code": "RMB",
-            "eu_station_code": "NL00490",
-            "name": "Rotterdam-Maasboulevard",
-            "municipality": "",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2010-07-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.51388884",
-            "lat": "51.91805649"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_365a",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.43111086, 51.93805695]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 111,
-            "local_id": "STA-NL00491",
-            "natl_station_code": "RDO",
-            "eu_station_code": "NL00491",
-            "name": "Rotterdam-Oost Sidelinge A13",
-            "municipality": "Rotterdam",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2001-02-28T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.43111086",
-            "lat": "51.93805695"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_365b",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.48000002, 51.91389084]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 112,
-            "local_id": "STA-NL00492",
-            "natl_station_code": "RDM",
-            "eu_station_code": "NL00492",
-            "name": "Rotterdam-Vasteland",
-            "municipality": "Rotterdam",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "1979-03-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.48000002",
-            "lat": "51.91389084"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_365c",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.46166658, 51.92694473]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 113,
-            "local_id": "STA-NL00493",
-            "natl_station_code": "RDS",
-            "eu_station_code": "NL00493",
-            "name": "Rotterdam Noord -Statenweg",
-            "municipality": "Rotterdam",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2005-01-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.46166658",
-            "lat": "51.92694473"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_365d",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.22777796, 51.9319458]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 114,
-            "local_id": "STA-NL00495",
-            "natl_station_code": "MSL",
-            "eu_station_code": "NL00495",
-            "name": "Maassluis-Kwartellaan",
-            "municipality": "Maassluis",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "1973-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.22777796",
-            "lat": "51.9319458"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_365e",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.12138891, 51.97805786]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 115,
-            "local_id": "STA-NL00496",
-            "natl_station_code": "HHB",
-            "eu_station_code": "NL00496",
-            "name": "Hoek v. Holland-Berghaven",
-            "municipality": "Rotterdam",
-            "altitude": 0,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2007-07-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.12138891",
-            "lat": "51.97805786"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_365f",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.73000002, 52.40000153]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 116,
-            "local_id": "STA-NL00703",
-            "natl_station_code": "703",
-            "eu_station_code": "NL00703",
-            "name": "Amsterdam-Spaarnwoude",
-            "municipality": "Haarlemmerliede c.a.",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "2008-11-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.73000002",
-            "lat": "52.40000153"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3660",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.70821381, 51.80065918]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 117,
-            "local_id": "STA-NL00442",
-            "natl_station_code": "442",
-            "eu_station_code": "NL00442",
-            "name": "Dordrecht-Bamendaweg",
-            "municipality": "Dordrecht",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2010-09-30T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.70821381",
-            "lat": "51.80065918"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3661",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [6.91949415, 52.23450089]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 118,
-            "local_id": "STA-NL00821",
-            "natl_station_code": "821",
-            "eu_station_code": "NL00821",
-            "name": "Enschede-Winkelhorst",
-            "municipality": "Enschede",
-            "altitude": 38,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2010-06-20T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "6.91949415",
-            "lat": "52.23450089"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3662",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.76999998, 52.43000031]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 119,
-            "local_id": "STA-NL00704",
-            "natl_station_code": "704",
-            "eu_station_code": "NL00704",
-            "name": "Amsterdam-Hoogtij",
-            "municipality": "Zaanstad",
-            "altitude": 4,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2008-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.76999998",
-            "lat": "52.43000031"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3663",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [3.91538056, 51.284534]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 120,
-            "local_id": "STA-NL00312",
-            "natl_station_code": "312",
-            "eu_station_code": "NL00312",
-            "name": "Axel-Zaaidijk",
-            "municipality": "",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "2010-01-11T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "3.91538056",
-            "lat": "51.284534"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3664",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [3.745008, 51.464383]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 121,
-            "local_id": "STA-NL00319",
-            "natl_station_code": "319",
-            "eu_station_code": "NL00319",
-            "name": "Nieuwdorp-Coudorp",
-            "municipality": "Vlissingen",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "2010-02-11T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "3.745008",
-            "lat": "51.464383"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3665",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.832064, 52.420219]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 124,
-            "local_id": "STA-NL00546",
-            "natl_station_code": "546",
-            "eu_station_code": "NL00546",
-            "name": "Zaanstad-Hemkade",
-            "municipality": "",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2007-12-18T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.832064",
-            "lat": "52.420219"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3666",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e1",
         "geometry": {
             "type": "Point",
             "coordinates": [4.601922, 52.46302]
@@ -2438,144 +720,72 @@
             "activity_begin": "2009-12-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "Amsterdam-Haarlem",
             "lon": "4.601922",
-            "lat": "52.46302"
+            "lat": "52.46302",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3667",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e2",
         "geometry": {
             "type": "Point",
-            "coordinates": [4.8617, 52.56359]
+            "coordinates": [4.76999998, 52.43000031]
         },
         "geometry_name": "point",
         "properties": {
-            "gid": 126,
-            "local_id": "STA-NL00556",
-            "natl_station_code": "556",
-            "eu_station_code": "NL00556",
-            "name": "De Rijp-Oostdijkje",
-            "municipality": "Graft-De Rijp",
-            "altitude": 1,
+            "gid": 119,
+            "local_id": "STA-NL00704",
+            "natl_station_code": "704",
+            "eu_station_code": "NL00704",
+            "name": "Amsterdam-Hoogtij",
+            "municipality": "Zaanstad",
+            "altitude": 4,
             "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural(-regional)",
-            "activity_begin": "2009-12-31T23:00:00Z",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2008-12-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
-            "lon": "4.8617",
-            "lat": "52.56359"
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.76999998",
+            "lat": "52.43000031",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3668",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e3",
         "geometry": {
             "type": "Point",
-            "coordinates": [4.77359, 52.33356]
+            "coordinates": [4.43111086, 51.93805695]
         },
         "geometry_name": "point",
         "properties": {
-            "gid": 127,
-            "local_id": "STA-NL00561",
-            "natl_station_code": "561",
-            "eu_station_code": "NL00561",
-            "name": "Badhoevedorp-Sloterweg",
-            "municipality": "Haarlemmermeer",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "2009-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.77359",
-            "lat": "52.33356"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3669",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.766679, 52.28743]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 128,
-            "local_id": "STA-NL00564",
-            "natl_station_code": "564",
-            "eu_station_code": "NL00564",
-            "name": "Hoofddorp-Hoofdweg",
-            "municipality": "Haarlemmermeer",
-            "altitude": 1,
+            "gid": 111,
+            "local_id": "STA-NL00491",
+            "natl_station_code": "RDO",
+            "eu_station_code": "NL00491",
+            "name": "Rotterdam-Oost Sidelinge A13",
+            "municipality": "Rotterdam",
+            "altitude": 0,
             "altitude_unit": "m",
             "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_begin": "2001-02-28T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
-            "lon": "4.766679",
-            "lat": "52.28743"
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.43111086",
+            "lat": "51.93805695",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,PM10"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_366a",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.715071, 52.32745]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 129,
-            "local_id": "STA-NL00565",
-            "natl_station_code": "565",
-            "eu_station_code": "NL00565",
-            "name": "Oude Meer-Aalsmeerderdijk",
-            "municipality": "Haarlemmermeer",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2009-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.715071",
-            "lat": "52.32745"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_366b",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [4.638642, 52.4866]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 130,
-            "local_id": "STA-NL00570",
-            "natl_station_code": "570",
-            "eu_station_code": "NL00570",
-            "name": "Beverwijk West-Creutzberglaan",
-            "municipality": "Beverwijk",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
-            "activity_begin": "2009-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "4.638642",
-            "lat": "52.4866"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_366c",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e4",
         "geometry": {
             "type": "Point",
             "coordinates": [4.6288, 52.4744]
@@ -2594,66 +804,128 @@
             "activity_begin": "2009-12-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "Amsterdam-Haarlem",
             "lon": "4.6288",
-            "lat": "52.4744"
+            "lat": "52.4744",
+            "zone_code": "NL00210",
+            "pollutants": "PM10"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_366d",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e5",
         "geometry": {
             "type": "Point",
-            "coordinates": [4.729, 52.79]
+            "coordinates": [4.51388884, 51.91805649]
         },
         "geometry_name": "point",
         "properties": {
-            "gid": 132,
-            "local_id": "STA-NL00573",
-            "natl_station_code": "573",
-            "eu_station_code": "NL00573",
-            "name": "Velsen-Reijndersweg",
-            "municipality": "Velsen",
+            "gid": 110,
+            "local_id": "STA-NL00490",
+            "natl_station_code": "RMB",
+            "eu_station_code": "NL00490",
+            "name": "Rotterdam-Maasboulevard",
+            "municipality": "",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "2010-07-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.51388884",
+            "lat": "51.91805649",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e6",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.48000002, 51.91389084]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 112,
+            "local_id": "STA-NL00492",
+            "natl_station_code": "RDM",
+            "eu_station_code": "NL00492",
+            "name": "Rotterdam-Vasteland",
+            "municipality": "Rotterdam",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "1979-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "",
+            "lon": "4.48000002",
+            "lat": "51.91389084",
+            "zone_code": null,
+            "pollutants": null
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e7",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.715071, 52.32745]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 129,
+            "local_id": "STA-NL00565",
+            "natl_station_code": "565",
+            "eu_station_code": "NL00565",
+            "name": "Oude Meer-Aalsmeerderdijk",
+            "municipality": "Haarlemmermeer",
             "altitude": 1,
             "altitude_unit": "m",
             "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
             "activity_begin": "2009-12-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
-            "lon": "4.729",
-            "lat": "52.79"
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.715071",
+            "lat": "52.32745",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_366e",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e8",
         "geometry": {
             "type": "Point",
-            "coordinates": [5.808593, 51.5359]
+            "coordinates": [3.91538056, 51.284534]
         },
         "geometry_name": "point",
         "properties": {
-            "gid": 133,
-            "local_id": "STA-NL00244",
-            "natl_station_code": "244",
-            "eu_station_code": "NL00244",
-            "name": "De Rips-Klotterpeellaan",
-            "municipality": "Gemert-Bakel",
+            "gid": 120,
+            "local_id": "STA-NL00312",
+            "natl_station_code": "312",
+            "eu_station_code": "NL00312",
+            "name": "Axel-Zaaidijk",
+            "municipality": "",
             "altitude": 1,
             "altitude_unit": "m",
             "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "2008-12-31T23:00:00Z",
+            "activity_begin": "2010-01-11T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
-            "lon": "5.808593",
-            "lat": "51.5359"
+            "zone_name": "",
+            "lon": "3.91538056",
+            "lat": "51.284534",
+            "zone_code": null,
+            "pollutants": null
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_366f",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17e9",
         "geometry": {
             "type": "Point",
             "coordinates": [4.623361, 51.70078]
@@ -2672,40 +944,16 @@
             "activity_begin": "2008-12-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "",
             "lon": "4.623361",
-            "lat": "51.70078"
+            "lat": "51.70078",
+            "zone_code": null,
+            "pollutants": null
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3670",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.181552, 52.23508]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 135,
-            "local_id": "STA-NL00547",
-            "natl_station_code": "547",
-            "eu_station_code": "NL00547",
-            "name": "Hilversum-J. Gerardtsweg",
-            "municipality": "Hilversum",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2009-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.181552",
-            "lat": "52.23508"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3671",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17ea",
         "geometry": {
             "type": "Point",
             "coordinates": [5.17583, 52.26798]
@@ -2724,40 +972,16 @@
             "activity_begin": "2009-12-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "",
             "lon": "5.17583",
-            "lat": "52.26798"
+            "lat": "52.26798",
+            "zone_code": null,
+            "pollutants": null
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3672",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [5.235903, 52.25736]
-        },
-        "geometry_name": "point",
-        "properties": {
-            "gid": 137,
-            "local_id": "STA-NL00549",
-            "natl_station_code": "549",
-            "eu_station_code": "NL00549",
-            "name": "Laren-Jagerspad",
-            "municipality": "Laren",
-            "altitude": 1,
-            "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
-            "activity_begin": "2009-12-31T23:00:00Z",
-            "activity_end": null,
-            "version": "",
-            "belongs_to": "",
-            "lon": "5.235903",
-            "lat": "52.25736"
-        }
-    },
-    {
-        "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3673",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17eb",
         "geometry": {
             "type": "Point",
             "coordinates": [5.664074, 52.15407]
@@ -2776,40 +1000,856 @@
             "activity_begin": "2009-12-31T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "",
             "lon": "5.664074",
-            "lat": "52.15407"
+            "lat": "52.15407",
+            "zone_code": null,
+            "pollutants": null
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3674",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17ec",
         "geometry": {
             "type": "Point",
-            "coordinates": [4.92343, 51.97464]
+            "coordinates": [4.48028898, 51.91500092]
         },
         "geometry_name": "point",
         "properties": {
-            "gid": 139,
-            "local_id": "STA-NL00644",
-            "natl_station_code": "644",
-            "eu_station_code": "NL00644",
-            "name": "Cabauw-Wielsekade",
-            "municipality": "Lopik",
-            "altitude": 1,
+            "gid": 26,
+            "local_id": "STA-NL00418",
+            "natl_station_code": "418",
+            "eu_station_code": "NL00418",
+            "name": "Rotterdam-Schiedamsevest",
+            "municipality": "Rotterdam",
+            "altitude": 3,
             "altitude_unit": "m",
-            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
-            "activity_begin": "2011-12-31T23:00:00Z",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1976-01-01T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
-            "lon": "4.92343",
-            "lat": "51.97464"
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.48028898",
+            "lat": "51.91500092",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10"
         }
     },
     {
         "type": "Feature",
-        "id": "active_stations.fid-7d46fd2a_1485a8ba18d_3675",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17ed",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.85778, 51.8414]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 58,
+            "local_id": "STA-NL00741",
+            "natl_station_code": "741",
+            "eu_station_code": "NL00741",
+            "name": "Nijmegen-Graafseweg",
+            "municipality": "Nijmegen",
+            "altitude": 30,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2003-04-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "5.858061",
+            "lat": "51.848889",
+            "zone_code": "NL00201",
+            "pollutants": "CO,NO,NO2,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17ee",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.181552, 52.23508]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 135,
+            "local_id": "STA-NL00547",
+            "natl_station_code": "547",
+            "eu_station_code": "NL00547",
+            "name": "Hilversum-J. Gerardtsweg",
+            "municipality": "Hilversum",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "5.181552",
+            "lat": "52.23508",
+            "zone_code": "NL00201",
+            "pollutants": "NO,NO2,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17ef",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.39333344, 51.40750122]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 88,
+            "local_id": "STA-NL00247",
+            "natl_station_code": "247",
+            "eu_station_code": "NL00247",
+            "name": "Veldhoven-Europalaan",
+            "municipality": "Veldhoven",
+            "altitude": 22,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2009-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Eindhoven",
+            "lon": "5.39333344",
+            "lat": "51.40750122",
+            "zone_code": "NL00310",
+            "pollutants": "NO,NO2,O3,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f0",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.235903, 52.25736]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 137,
+            "local_id": "STA-NL00549",
+            "natl_station_code": "549",
+            "eu_station_code": "NL00549",
+            "name": "Laren-Jagerspad",
+            "municipality": "Laren",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "5.235903",
+            "lat": "52.25736",
+            "zone_code": "NL00201",
+            "pollutants": "NO,NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f1",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.46167755, 51.92694473]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 68,
+            "local_id": "STA-NL00448",
+            "natl_station_code": "448",
+            "eu_station_code": "NL00448",
+            "name": "Rotterdam-Bentinckplein",
+            "municipality": "Rotterdam",
+            "altitude": 2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2005-04-14T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.46167755",
+            "lat": "51.92694473",
+            "zone_code": "NL00241",
+            "pollutants": "PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f2",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.01806974, 52.65500259]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 2,
+            "local_id": "STA-NL00818",
+            "natl_station_code": "818",
+            "eu_station_code": "NL00818",
+            "name": "Barsbeek-De Veenen",
+            "municipality": "Steenwijkerland",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1986-11-23T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "6.01806974",
+            "lat": "52.65500259",
+            "zone_code": "NL00100",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f3",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.04306364, 51.1202774]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 33,
+            "local_id": "STA-NL00107",
+            "natl_station_code": "107",
+            "eu_station_code": "NL00107",
+            "name": "Posterholt-Vlodropperweg",
+            "municipality": "Roerdalen",
+            "altitude": 32,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1976-01-01T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "6.04306364",
+            "lat": "51.1202774",
+            "zone_code": "NL00300",
+            "pollutants": "NO,NO2,O3"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f4",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.14890242, 51.51944351]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 11,
+            "local_id": "STA-NL00230",
+            "natl_station_code": "230",
+            "eu_station_code": "NL00230",
+            "name": "Biest Houtakker-Biestsestraat",
+            "municipality": "Hilvarenbeek",
+            "altitude": 15,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1984-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "5.14890242",
+            "lat": "51.51944351",
+            "zone_code": "NL00300",
+            "pollutants": "NO,NO2,O3,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f5",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.51028633, 52.29805374]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 53,
+            "local_id": "STA-NL00444",
+            "natl_station_code": "444",
+            "eu_station_code": "NL00444",
+            "name": "De Zilk-Vogelaarsdreef",
+            "municipality": "Noordwijk",
+            "altitude": 4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1994-04-19T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "4.51028633",
+            "lat": "52.29805374",
+            "zone_code": "NL00201",
+            "pollutants": "NH3,NO,NO2,O3,PM10,PM2.5,SO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f6",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.05084181, 52.80472183]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 35,
+            "local_id": "STA-NL00538",
+            "natl_station_code": "538",
+            "eu_station_code": "NL00538",
+            "name": "Wieringerwerf-Medemblikkerweg",
+            "municipality": "Wieringermeer",
+            "altitude": -4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1986-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "5.05084181",
+            "lat": "52.80472183",
+            "zone_code": "NL00201",
+            "pollutants": "NH3,NO,NO2,O3,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f7",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.36028624, 51.43500137]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 15,
+            "local_id": "STA-NL00235",
+            "natl_station_code": "235",
+            "eu_station_code": "NL00235",
+            "name": "Huijbergen-Vennekenstraat",
+            "municipality": "Woensdrecht",
+            "altitude": 18,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1986-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "4.36028624",
+            "lat": "51.43500137",
+            "zone_code": "NL00300",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f8",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.45084143, 51.78749847]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 29,
+            "local_id": "STA-NL00437",
+            "natl_station_code": "437",
+            "eu_station_code": "NL00437",
+            "name": "Westmaas-Groeneweg",
+            "municipality": "",
+            "altitude": -1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1986-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "4.45084143",
+            "lat": "51.78749847",
+            "zone_code": "NL00201",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17f9",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.40361404, 52.38916779]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 1,
+            "local_id": "STA-NL00807",
+            "natl_station_code": "807",
+            "eu_station_code": "NL00807",
+            "name": "Hellendoorn-Luttenbergerweg",
+            "municipality": "Hellendoorn",
+            "altitude": 7,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1976-04-01T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "6.40361404",
+            "lat": "52.38916779",
+            "zone_code": "NL00100",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17fa",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.57889986, 53.21805573]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 60,
+            "local_id": "STA-NL00937",
+            "natl_station_code": "937",
+            "eu_station_code": "NL00937",
+            "name": "Groningen-Europaweg",
+            "municipality": "Groningen",
+            "altitude": 2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2003-04-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "6.57889986",
+            "lat": "53.21805573",
+            "zone_code": "NL00100",
+            "pollutants": "NO,NO2,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17fb",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.838336, 52.138889]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 40,
+            "local_id": "STA-NL00633",
+            "natl_station_code": "633",
+            "eu_station_code": "NL00633",
+            "name": "Zegveld-Oude Meije",
+            "municipality": "Woerden",
+            "altitude": -2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1986-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "4.838336",
+            "lat": "52.138889",
+            "zone_code": "NL00201",
+            "pollutants": "benzeen,CO,NH3,NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17fc",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.85694, 51.8382]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 59,
+            "local_id": "STA-NL00742",
+            "natl_station_code": "742",
+            "eu_station_code": "NL00742",
+            "name": "Nijmegen-Ruyterstraat",
+            "municipality": "Nijmegen",
+            "altitude": 30,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2003-05-13T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "5.858061",
+            "lat": "51.838889",
+            "zone_code": "NL00201",
+            "pollutants": "CO,NO,NO2,O3,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17fd",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.50806093, 52.16805649]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 63,
+            "local_id": "STA-NL00447",
+            "natl_station_code": "447",
+            "eu_station_code": "NL00447",
+            "name": "Leiden-Willem de Zwijgerlaan",
+            "municipality": "Leiden",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2004-12-07T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Den Haag-Leiden",
+            "lon": "4.50806093",
+            "lat": "52.16805649",
+            "zone_code": "NL00231",
+            "pollutants": "PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17fe",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.9333334, 52.87666321]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 56,
+            "local_id": "STA-NL00929",
+            "natl_station_code": "929",
+            "eu_station_code": "NL00929",
+            "name": "Valthermond-Noorderdiep",
+            "municipality": "Borger-Odoorn",
+            "altitude": 10,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "2000-01-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "6.9333334",
+            "lat": "52.87666321",
+            "zone_code": "NL00100",
+            "pollutants": "NH3,NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_17ff",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.86084175, 52.3758316]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 81,
+            "local_id": "STA-NL00020",
+            "natl_station_code": "20",
+            "eu_station_code": "NL00020",
+            "name": "Amsterdam-Jan van Galenstraat",
+            "municipality": "",
+            "altitude": 4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2006-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.86084175",
+            "lat": "52.3758316",
+            "zone_code": "NL00210",
+            "pollutants": "NO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1800",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.78084707, 51.60333252]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 66,
+            "local_id": "STA-NL00241",
+            "natl_station_code": "241",
+            "eu_station_code": "NL00241",
+            "name": "Breda-Bastenakenstraat",
+            "municipality": "Breda",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
+            "activity_begin": "2005-02-21T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "4.78084707",
+            "lat": "51.60333252",
+            "zone_code": "NL00300",
+            "pollutants": "NO,NO2,O3,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1801",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.97111416, 50.88805771]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 61,
+            "local_id": "STA-NL00136",
+            "natl_station_code": "136",
+            "eu_station_code": "NL00136",
+            "name": "Heerlen-Looierstraat",
+            "municipality": "Heerlen",
+            "altitude": 100,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2004-08-25T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Heerlen-Kerkrade",
+            "lon": "5.97111416",
+            "lat": "50.88805771",
+            "zone_code": "NL00320",
+            "pollutants": "NO,NO2,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1802",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.60889721, 53.24694443]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 69,
+            "local_id": "STA-NL00938",
+            "natl_station_code": "938",
+            "eu_station_code": "NL00938",
+            "name": "Groningen-Nijensteinheerd",
+            "municipality": "Groningen",
+            "altitude": -1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
+            "activity_begin": "2005-06-28T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "6.60889721",
+            "lat": "53.24694443",
+            "zone_code": "NL00100",
+            "pollutants": "NO,NO2,O3,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1803",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.48749971, 51.89389038]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 108,
+            "local_id": "STA-NL00488",
+            "natl_station_code": "RZW",
+            "eu_station_code": "NL00488",
+            "name": "Rotterdam Zuid-Zwartewaalstraat",
+            "municipality": "",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.48749971",
+            "lat": "51.89389038",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1804",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.832064, 52.420219]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 124,
+            "local_id": "STA-NL00546",
+            "natl_station_code": "546",
+            "eu_station_code": "NL00546",
+            "name": "Zaanstad-Hemkade",
+            "municipality": "",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2007-12-18T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.832064",
+            "lat": "52.420219",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1805",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.8088975, 52.3599968]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 75,
+            "local_id": "STA-NL00014",
+            "natl_station_code": "14",
+            "eu_station_code": "NL00014",
+            "name": "Amsterdam-Vondelpark",
+            "municipality": "",
+            "altitude": 2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1989-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.8088975",
+            "lat": "52.3599968",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1806",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.82500839, 51.59360886]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 65,
+            "local_id": "STA-NL00240",
+            "natl_station_code": "240",
+            "eu_station_code": "NL00240",
+            "name": "Breda-Tilburgseweg",
+            "municipality": "",
+            "altitude": 4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
+            "activity_begin": "2005-04-25T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "4.82500839",
+            "lat": "51.59360886",
+            "zone_code": "NL00300",
+            "pollutants": "NO,NO2,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1807",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.70821381, 51.80065918]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 117,
+            "local_id": "STA-NL00442",
+            "natl_station_code": "442",
+            "eu_station_code": "NL00442",
+            "name": "Dordrecht-Bamendaweg",
+            "municipality": "Dordrecht",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2010-09-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.70821381",
+            "lat": "51.80065918",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1808",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.57349157, 52.91691589]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 4,
+            "local_id": "STA-NL00918",
+            "natl_station_code": "918",
+            "eu_station_code": "NL00918",
+            "name": "Balk-Trophornsterweg",
+            "municipality": "",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1976-04-01T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "5.57349157",
+            "lat": "52.91691589",
+            "zone_code": "NL00100",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1809",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.61915016, 52.44850159]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 39,
+            "local_id": "STA-NL00631",
+            "natl_station_code": "631",
+            "eu_station_code": "NL00631",
+            "name": "Biddinghuizen-Hoekwantweg",
+            "municipality": "",
+            "altitude": -4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1986-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "5.61915016",
+            "lat": "52.44850159",
+            "zone_code": "NL00100",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_180a",
         "geometry": {
             "type": "Point",
             "coordinates": [5.986853, 50.900317]
@@ -2828,9 +1868,1187 @@
             "activity_begin": "2013-11-17T23:00:00Z",
             "activity_end": null,
             "version": "",
-            "belongs_to": "",
+            "zone_name": "Heerlen-Kerkrade",
             "lon": "5.986853",
-            "lat": "50.900317"
+            "lat": "50.900317",
+            "zone_code": "NL00320",
+            "pollutants": "NO,NO2,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_180b",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.125286, 52.106111]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 41,
+            "local_id": "STA-NL00636",
+            "natl_station_code": "636",
+            "eu_station_code": "NL00636",
+            "name": "Utrecht-de Jongweg",
+            "municipality": "Utrecht",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1987-10-28T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Utrecht",
+            "lon": "5.125286",
+            "lat": "52.106111",
+            "zone_code": "NL00221",
+            "pollutants": "NO,NO2,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_180c",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.73000002, 52.40000153]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 116,
+            "local_id": "STA-NL00703",
+            "natl_station_code": "703",
+            "eu_station_code": "NL00703",
+            "name": "Amsterdam-Spaarnwoude",
+            "municipality": "Haarlemmerliede c.a.",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "2008-11-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.73000002",
+            "lat": "52.40000153",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_180d",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.38888884, 51.88805771]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 106,
+            "local_id": "STA-NL00486",
+            "natl_station_code": "PNS",
+            "eu_station_code": "NL00486",
+            "name": "Pernis-Soetemanweg",
+            "municipality": "Rotterdam",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1969-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.38888884",
+            "lat": "51.88805771",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_180e",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.22777796, 51.9319458]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 114,
+            "local_id": "STA-NL00495",
+            "natl_station_code": "MSL",
+            "eu_station_code": "NL00495",
+            "name": "Maassluis-Kwartellaan",
+            "municipality": "Maassluis",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1973-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.22777796",
+            "lat": "51.9319458",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_180f",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.88805819, 52.3900032]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 74,
+            "local_id": "STA-NL00012",
+            "natl_station_code": "12",
+            "eu_station_code": "NL00012",
+            "name": "Amsterdam-Van Diemenstraat",
+            "municipality": "",
+            "altitude": 4,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1989-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.88805819",
+            "lat": "52.3900032",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1810",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.51388884, 51.65277863]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 85,
+            "local_id": "STA-NL00246",
+            "natl_station_code": "246",
+            "eu_station_code": "NL00246",
+            "name": "Fijnaart-Zwingelspaansedijk",
+            "municipality": "Moerdijk",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "2007-10-04T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "4.51388884",
+            "lat": "51.65277863",
+            "zone_code": "NL00300",
+            "pollutants": "NO,NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1811",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [3.74945831, 51.29527664]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 21,
+            "local_id": "STA-NL00318",
+            "natl_station_code": "318",
+            "eu_station_code": "NL00318",
+            "name": "Philippine-Stelleweg",
+            "municipality": "Terneuzen",
+            "altitude": 5,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1982-12-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "3.74945831",
+            "lat": "51.29527664",
+            "zone_code": "NL00300",
+            "pollutants": "NO,NO2,O3,PM10,SO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1812",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.84102249, 52.33949661]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 79,
+            "local_id": "STA-NL00545",
+            "natl_station_code": "545",
+            "eu_station_code": "NL00545",
+            "name": "Amsterdam-A10 west",
+            "municipality": "",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2007-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.84102249",
+            "lat": "52.33949661",
+            "zone_code": "NL00210",
+            "pollutants": "PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1813",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.28917217, 52.07805634]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 22,
+            "local_id": "STA-NL00404",
+            "natl_station_code": "404",
+            "eu_station_code": "NL00404",
+            "name": "Den Haag-Rebecquestraat",
+            "municipality": "'s-Gravenhage",
+            "altitude": 2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1976-01-01T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Den Haag-Leiden",
+            "lon": "4.28917217",
+            "lat": "52.07805634",
+            "zone_code": "NL00231",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1814",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.882236, 50.9030571]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 8,
+            "local_id": "STA-NL00133",
+            "natl_station_code": "133",
+            "eu_station_code": "NL00133",
+            "name": "Wijnandsrade-Opfergeltstraat",
+            "municipality": "Nuth",
+            "altitude": 96,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
+            "activity_begin": "1986-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Heerlen-Kerkrade",
+            "lon": "5.882236",
+            "lat": "50.9030571",
+            "zone_code": "NL00320",
+            "pollutants": "NO,NO2,O3,PM10,SO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1815",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.8617, 52.56359]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 126,
+            "local_id": "STA-NL00556",
+            "natl_station_code": "556",
+            "eu_station_code": "NL00556",
+            "name": "De Rijp-Oostdijkje",
+            "municipality": "Graft-De Rijp",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural(-regional)",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "4.8617",
+            "lat": "52.56359",
+            "zone_code": "NL00201",
+            "pollutants": "PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1816",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.12833357, 52.10222244]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 86,
+            "local_id": "STA-NL00643",
+            "natl_station_code": "643",
+            "eu_station_code": "NL00643",
+            "name": "Utrecht-Griftpark",
+            "municipality": "Utrecht",
+            "altitude": 2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2008-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Utrecht",
+            "lon": "5.12833357",
+            "lat": "52.10222244",
+            "zone_code": "NL00221",
+            "pollutants": "NO,NO2,O3,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1817",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.46166658, 51.92694473]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 113,
+            "local_id": "STA-NL00493",
+            "natl_station_code": "RDS",
+            "eu_station_code": "NL00493",
+            "name": "Rotterdam Noord -Statenweg",
+            "municipality": "Rotterdam",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "2005-01-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.46166658",
+            "lat": "51.92694473",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1818",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.605839, 52.0925]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 46,
+            "local_id": "STA-NL00722",
+            "natl_station_code": "722",
+            "eu_station_code": "NL00722",
+            "name": "Eibergen-Lintveldseweg",
+            "municipality": "Berkelland",
+            "altitude": 19,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1982-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "6.605839",
+            "lat": "52.0925",
+            "zone_code": "NL00201",
+            "pollutants": "NO,NO2,O3,PM10,SO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1819",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.729, 52.79]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 132,
+            "local_id": "STA-NL00573",
+            "natl_station_code": "573",
+            "eu_station_code": "NL00573",
+            "name": "Velsen-Reijndersweg",
+            "municipality": "Velsen",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.729",
+            "lat": "52.79",
+            "zone_code": "NL00210",
+            "pollutants": "PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_181a",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.36056376, 52.03972244]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 67,
+            "local_id": "STA-NL00446",
+            "natl_station_code": "446",
+            "eu_station_code": "NL00446",
+            "name": "Den Haag-Bleriotlaan",
+            "municipality": "'s-Gravenhage",
+            "altitude": -2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/suburban",
+            "activity_begin": "2005-12-04T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Den Haag-Leiden",
+            "lon": "4.36056376",
+            "lat": "52.03972244",
+            "zone_code": "NL00231",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_181b",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.988614, 52.203056]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 51,
+            "local_id": "STA-NL00641",
+            "natl_station_code": "641",
+            "eu_station_code": "NL00641",
+            "name": "Breukelen-Snelweg",
+            "municipality": "Loenen",
+            "altitude": -1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1993-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "4.988614",
+            "lat": "52.203056",
+            "zone_code": "NL00201",
+            "pollutants": "NO,NO2,O3,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_181c",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.4289, 51.44528]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 17,
+            "local_id": "STA-NL00237",
+            "natl_station_code": "237",
+            "eu_station_code": "NL00237",
+            "name": "Eindhoven-Noordbrabantlaan",
+            "municipality": "",
+            "altitude": 18,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1989-01-18T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Eindhoven",
+            "lon": "5.4289",
+            "lat": "51.44528",
+            "zone_code": "NL00310",
+            "pollutants": "NO,NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_181d",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.766679, 52.28743]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 128,
+            "local_id": "STA-NL00564",
+            "natl_station_code": "564",
+            "eu_station_code": "NL00564",
+            "name": "Hoofddorp-Hoofdweg",
+            "municipality": "Haarlemmermeer",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.766679",
+            "lat": "52.28743",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_181e",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.64806938, 52.38166428]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 34,
+            "local_id": "STA-NL00537",
+            "natl_station_code": "537",
+            "eu_station_code": "NL00537",
+            "name": "Haarlem-Amsterdamsevaart",
+            "municipality": "Haarlem",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1989-11-20T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.64806938",
+            "lat": "52.38166428",
+            "zone_code": "NL00210",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_181f",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.94389725, 52.38888931]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 72,
+            "local_id": "STA-NL00003",
+            "natl_station_code": "3",
+            "eu_station_code": "NL00003",
+            "name": "Amsterdam-Nieuwendammerdijk",
+            "municipality": "",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1986-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.94389725",
+            "lat": "52.38888931",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,O3"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1820",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.808593, 51.5359]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 133,
+            "local_id": "STA-NL00244",
+            "natl_station_code": "244",
+            "eu_station_code": "NL00244",
+            "name": "De Rips-Klotterpeellaan",
+            "municipality": "Gemert-Bakel",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "2008-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "5.808593",
+            "lat": "51.5359",
+            "zone_code": "NL00300",
+            "pollutants": "NH3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1821",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.638642, 52.4866]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 130,
+            "local_id": "STA-NL00570",
+            "natl_station_code": "570",
+            "eu_station_code": "NL00570",
+            "name": "Beverwijk West-Creutzberglaan",
+            "municipality": "Beverwijk",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.638642",
+            "lat": "52.4866",
+            "zone_code": "NL00210",
+            "pollutants": "PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1822",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.77359, 52.33356]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 127,
+            "local_id": "STA-NL00561",
+            "natl_station_code": "561",
+            "eu_station_code": "NL00561",
+            "name": "Badhoevedorp-Sloterweg",
+            "municipality": "Haarlemmermeer",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.77359",
+            "lat": "52.33356",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1823",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.12138891, 51.97805786]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 115,
+            "local_id": "STA-NL00496",
+            "natl_station_code": "HHB",
+            "eu_station_code": "NL00496",
+            "name": "Hoek v. Holland-Berghaven",
+            "municipality": "Rotterdam",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "2007-07-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.12138891",
+            "lat": "51.97805786",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1824",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.47278357, 51.46972275]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 16,
+            "local_id": "STA-NL00236",
+            "natl_station_code": "236",
+            "eu_station_code": "NL00236",
+            "name": "Eindhoven-Genovevalaan",
+            "municipality": "Eindhoven",
+            "altitude": 17,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1989-01-25T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Eindhoven",
+            "lon": "5.47278357",
+            "lat": "51.46972275",
+            "zone_code": "NL00310",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1825",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.57472229, 51.86888885]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 109,
+            "local_id": "STA-NL00489",
+            "natl_station_code": "RID",
+            "eu_station_code": "NL00489",
+            "name": "Ridderkerk-Hogeweg",
+            "municipality": "",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/unknown",
+            "activity_begin": "2004-06-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.57472229",
+            "lat": "51.86888885",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1826",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.70861912, 52.11249924]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 55,
+            "local_id": "STA-NL00738",
+            "natl_station_code": "738",
+            "eu_station_code": "NL00738",
+            "name": "Wekerom-Riemterdijk",
+            "municipality": "Ede",
+            "altitude": 18,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1994-03-29T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "5.70861912",
+            "lat": "52.11249924",
+            "zone_code": "NL00201",
+            "pollutants": "NH3,NO,NO2,O3,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1827",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.35527754, 51.86610794]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 91,
+            "local_id": "STA-NL00485",
+            "natl_station_code": "HGV",
+            "eu_station_code": "NL00485",
+            "name": "Hoogvliet-Leemkuil",
+            "municipality": "",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1973-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.35527754",
+            "lat": "51.86610794",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1828",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.91949415, 52.23450089]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 118,
+            "local_id": "STA-NL00821",
+            "natl_station_code": "821",
+            "eu_station_code": "NL00821",
+            "name": "Enschede-Winkelhorst",
+            "municipality": "Enschede",
+            "altitude": 38,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2010-06-20T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "6.91949415",
+            "lat": "52.23450089",
+            "zone_code": "NL00100",
+            "pollutants": "PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1829",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.32695293, 51.91139221]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 27,
+            "local_id": "STA-NL00433",
+            "natl_station_code": "433",
+            "eu_station_code": "NL00433",
+            "name": "Vlaardingen-Floreslaan",
+            "municipality": "Vlaardingen",
+            "altitude": -1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1984-03-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.32695293",
+            "lat": "51.91139221",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,O3,PM10,PM2.5"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_182a",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.79361963, 52.37888718]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 83,
+            "local_id": "STA-NL00022",
+            "natl_station_code": "22",
+            "eu_station_code": "NL00022",
+            "name": "Amsterdam-Sportpark Ookmeer (Osdorp)",
+            "municipality": "",
+            "altitude": -1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2007-01-19T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.79361963",
+            "lat": "52.37888718",
+            "zone_code": "NL00210",
+            "pollutants": "NO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_182b",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.92343, 51.97464]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 139,
+            "local_id": "STA-NL00644",
+            "natl_station_code": "644",
+            "eu_station_code": "NL00644",
+            "name": "Cabauw-Wielsekade",
+            "municipality": "Lopik",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "2011-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Midden",
+            "lon": "4.92343",
+            "lat": "51.97464",
+            "zone_code": "NL00201",
+            "pollutants": "CO,NO,NO2,O3,PM10,PM2.5,SO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_182c",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.48111105, 51.89111328]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 107,
+            "local_id": "STA-NL00487",
+            "natl_station_code": "RPW",
+            "eu_station_code": "NL00487",
+            "name": "Rotterdam Zuid-Pleinweg",
+            "municipality": "",
+            "altitude": 0,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Rotterdam-Dordrecht",
+            "lon": "4.48111105",
+            "lat": "51.89111328",
+            "zone_code": "NL00241",
+            "pollutants": "NO,NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_182d",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.84501123, 52.38111115]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 73,
+            "local_id": "STA-NL00007",
+            "natl_station_code": "7",
+            "eu_station_code": "NL00007",
+            "name": "Amsterdam-Einsteinweg",
+            "municipality": "",
+            "altitude": 2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1998-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.84501123",
+            "lat": "52.38111115",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_182e",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.27750874, 53.33166504]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 6,
+            "local_id": "STA-NL00934",
+            "natl_station_code": "934",
+            "eu_station_code": "NL00934",
+            "name": "Kollumerwaard-Hooge Zuidwal",
+            "municipality": "Kollumerland en Nieuwkruisland",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "1989-12-20T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Noord",
+            "lon": "6.27750874",
+            "lat": "53.33166504",
+            "zone_code": "NL00100",
+            "pollutants": "NO,NO2,O3,PM10,PM2.5,SO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_182f",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.90500307, 52.3730545]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 80,
+            "local_id": "STA-NL00019",
+            "natl_station_code": "19",
+            "eu_station_code": "NL00019",
+            "name": "Amsterdam-Oude Schans",
+            "municipality": "",
+            "altitude": 2,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2007-01-02T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.90500307",
+            "lat": "52.3730545",
+            "zone_code": "NL00210",
+            "pollutants": "NO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1830",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.603333, 52.493889]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 90,
+            "local_id": "STA-NL00553",
+            "natl_station_code": "553",
+            "eu_station_code": "NL00553",
+            "name": "Wijk aan Zee-Burgemeester Rothestraat",
+            "municipality": "",
+            "altitude": 7,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2009-12-31T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.603333",
+            "lat": "52.493889",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1831",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.98889446, 52.32138824]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 82,
+            "local_id": "STA-NL00021",
+            "natl_station_code": "21",
+            "eu_station_code": "NL00021",
+            "name": "Amsterdam-Kantershof (Zuid Oost)",
+            "municipality": "",
+            "altitude": -3,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2007-02-06T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.98889446",
+            "lat": "52.32138824",
+            "zone_code": "NL00210",
+            "pollutants": "NO2"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1832",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [3.745008, 51.464383]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 121,
+            "local_id": "STA-NL00319",
+            "natl_station_code": "319",
+            "eu_station_code": "NL00319",
+            "name": "Nieuwdorp-Coudorp",
+            "municipality": "Vlissingen",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/rural",
+            "activity_begin": "2010-02-11T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Zuid",
+            "lon": "3.745008",
+            "lat": "51.464383",
+            "zone_code": "NL00300",
+            "pollutants": "PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1833",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.8166666, 52.45000076]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 84,
+            "local_id": "STA-NL00701",
+            "natl_station_code": "701",
+            "eu_station_code": "NL00701",
+            "name": "Zaandam-Wagenschotpad",
+            "municipality": "",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "2006-04-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Amsterdam-Haarlem",
+            "lon": "4.8166666",
+            "lat": "52.45000076",
+            "zone_code": "NL00210",
+            "pollutants": "NO2,O3,PM10"
+        }
+    },
+    {
+        "type": "Feature",
+        "id": "active_stations.fid-7d46fd2a_14864b87f63_1834",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.121114, 52.068889]
+        },
+        "geometry_name": "point",
+        "properties": {
+            "gid": 44,
+            "local_id": "STA-NL00639",
+            "natl_station_code": "639",
+            "eu_station_code": "NL00639",
+            "name": "Utrecht-Erzeijstraat",
+            "municipality": "Utrecht",
+            "altitude": 1,
+            "altitude_unit": "m",
+            "area_classification": "http://dd.eionet.europa.eu/vocabulary/aq/areaclassification/urban",
+            "activity_begin": "1987-09-30T23:00:00Z",
+            "activity_end": null,
+            "version": "",
+            "zone_name": "Utrecht",
+            "lon": "5.121114",
+            "lat": "52.068889",
+            "zone_code": "NL00221",
+            "pollutants": "benzeen,NO,NO2,O3,PM10"
         }
     }
 ], "crs": {

@@ -18,7 +18,7 @@
         <Field name="activity_begin" src="ActivityBegin" type="DateTime" />
         <Field name="activity_end" src="ActivityEnd" type="DateTime" />
         <Field name="version" src="Version" type="String" />
-        <Field name="belongs_to" src="BelongsTo" type="String" />
+        <Field name="zone_name" src="BelongsTo" type="String" />
         <Field name="lon" src="Lon" type="String" />
         <Field name="lat" src="Lat" type="String" />
         <GeometryField encoding="PointFromColumns" x="Lon" y="Lat"/>
