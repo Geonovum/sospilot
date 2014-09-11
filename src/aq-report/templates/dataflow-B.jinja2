@@ -80,7 +80,8 @@
             </am:name>       
                 {# Thijs: do this later, since this is a bit more work for multipolygons #}  
                 <am:geometry>
-                    {{ macros_gml.render_multipolygon2d(globs.srs_name, feature.geometry.coordinates, 'geometry-' + globs.namespace + '-' + feature.properties.zone_code) }}
+                    {% set gml_id = 'geometry-' + globs.namespace + '-' + feature.properties.zone_code %}
+                    {{ feature.geometry | geojson2gml(source_crs=4326, target_crs=4258, gml_id=gml_id, gml_format='GML3', gml_longsrs='YES') }}
                 </am:geometry>
             {# Thijs: how to match the zone_type? The value comes from the CSV-file for the Zones. A macro could be the best, but would be nice if we could use the vocabulary directly.
 

@@ -82,12 +82,3 @@
        {{ content }}
     </{{tag}}>
 {%- endmacro %}
-
-{# Macro that renders a MultiPolygon element #}
-{# Thijs: a stub for now, Just will work on this #}
-{% macro render_multipolygon2d(srs_name, coordinates, gml_id) -%}
-    <!-- Rendered by macro render_multipolygon2d(). NOTE: this is an invalid geometry for now -->
-    <gml:MultiSurface srsName="{{ srs_name }}" gml:id="{{ gml_id }}">
-       {{ coordinates }}
-    </gml:MultiSurface>
-{%- endmacro %}
