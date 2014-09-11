@@ -77,7 +77,15 @@
                 <ef:name>{{ feature.properties.name }}</ef:name>
                 <ef:mediaMonitored xlink:href="http://inspire.ec.europa.eu/codeList/MediaValue/air"/>
                 <ef:geometry>
-                    {{ macros_gml.render_point2d(globs.srs_name, feature.geometry.coordinates, 'STA_G-' + feature.properties.local_id, gml3=True, swap_xy=True) }}
+                   {# Generate a Point (or any other) GML geometry from a GeoJSON geometry using the geojson2gml
+                      Jinja2 custom Filter.
+                      By specifying a target_crs we can even reproject from the source CRS.
+                      The gml_format=GML2|GML3 determines the general GML form: e.g. pos/posList or coordinates. gml_longsrs=YES|NO
+                      determines the srsName format like EPSG:4326 or urn:ogc:def:crs:EPSG::4326 (long).
+                      gml_longsrs=YES will also do XY swapping (lat/lon) for lat/lon based projections.
+                      Generate gml id first (gml:id is GML3-specific and optional) #}
+                    {% set gml_id = 'STA_G-%s' % feature.properties.local_id %}
+                    {{ feature.geometry | geojson2gml(source_crs=crs, target_crs=4258, gml_id=gml_id, gml_format='GML3', gml_longsrs='YES') }}
                 </ef:geometry>
                 <ef:measurementRegime xlink:href="http://inspire.ec.europa.eu/codeList/MeasurementRegimeValue/continuousDataCollection"/>
                 <ef:mobile>false</ef:mobile>
