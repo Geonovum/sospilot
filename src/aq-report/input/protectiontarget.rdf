@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dctype="http://purl.org/dc/dcmitype/" xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns="http://dd.eionet.europa.eu/property/"
+    xml:base="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/">
+    <skos:ConceptScheme rdf:about="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/">
+        <rdfs:label>AQD - ProtectionTarget</rdfs:label>
+        <skos:notation>protectiontarget</skos:notation>
+        <dcterms:isPartOf rdf:resource="http://dd.eionet.europa.eu/vocabulary/aq/"/>
+    </skos:ConceptScheme>
+    <skos:Concept rdf:about="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H">
+        <skos:notation>H</skos:notation>
+        <skos:prefLabel>Health</skos:prefLabel>
+        <skos:definition>Protection target of human health</skos:definition>
+        <skos:inScheme rdf:resource="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/"/>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H-S1">
+        <skos:notation>H-S1</skos:notation>
+        <skos:prefLabel>Health (Stage 1)</skos:prefLabel>
+        <skos:definition>Differentiates between the annual mean Stage 1 &amp; 2 health protection
+            target for PM2.5 both of which use annual mean as the reporting
+            metric.</skos:definition>
+        <skos:inScheme rdf:resource="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/"/>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H-S2">
+        <skos:notation>H-S2</skos:notation>
+        <skos:prefLabel>Health (Stage 2)</skos:prefLabel>
+        <skos:definition>Differentiates between the annual mean Stage 1 &amp; 2 health protection
+            target for PM2.5 both of which use annual mean as the reporting
+            metric.</skos:definition>
+        <skos:inScheme rdf:resource="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/"/>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/HV">
+        <skos:notation>HV</skos:notation>
+        <skos:prefLabel>Health &amp; Vegetation</skos:prefLabel>
+        <skos:definition>INTERIM code. Please note that preferably countries should use either H or
+            V separately</skos:definition>
+        <skos:inScheme rdf:resource="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/"/>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/NA">
+        <skos:notation>NA</skos:notation>
+        <skos:prefLabel>Not applicable</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/"/>
+    </skos:Concept>
+    <skos:Concept rdf:about="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V">
+        <skos:notation>V</skos:notation>
+        <skos:prefLabel>Vegetation</skos:prefLabel>
+        <skos:definition>Protection target of vegetation</skos:definition>
+        <skos:inScheme rdf:resource="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/"/>
+    </skos:Concept>
+</rdf:RDF>

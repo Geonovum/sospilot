@@ -138,9 +138,10 @@
             {% set zone_pollutants = feature.properties.zone_pollutant.split(';') %}
             <aqd:pollutants>
               {% for zone_pollutant in zone_pollutants %}
+                {% set parts = zone_pollutant.split('-') %}
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="{{ globs.pollutant_defs[zone_pollutant].pollutant_code }}"/>
-                   <aqd:protectionTarget xlink:href="{{ globs.pollutant_defs[zone_pollutant].protection_target }}"/>
+                   <aqd:pollutantCode xlink:href="{{ globs.pollutant_defs[parts[0]]}}"/>
+                   <aqd:protectionTarget xlink:href="{{ globs.protectiontarget_defs[parts[1]] }}"/>
                 </aqd:Pollutant>
               {% endfor %}
             </aqd:pollutants>

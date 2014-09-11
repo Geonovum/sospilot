@@ -172,11 +172,11 @@
 
             <aqd:pollutants>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7029"/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:pollutantCode xlink:href=""/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
@@ -188,7 +188,7 @@
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/9"/>
+                   <aqd:pollutantCode xlink:href=""/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
@@ -308,11 +308,11 @@
 
             <aqd:pollutants>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7029"/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:pollutantCode xlink:href=""/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
@@ -436,11 +436,11 @@
 
             <aqd:pollutants>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7029"/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:pollutantCode xlink:href=""/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
@@ -564,7 +564,7 @@
 
             <aqd:pollutants>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7029"/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
@@ -688,7 +688,7 @@
 
             <aqd:pollutants>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:pollutantCode xlink:href=""/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
@@ -812,7 +812,7 @@
 
             <aqd:pollutants>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/29"/>
+                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7029"/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
@@ -936,7 +936,7 @@
 
             <aqd:pollutants>
                 <aqd:Pollutant>
-                   <aqd:pollutantCode xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20"/>
+                   <aqd:pollutantCode xlink:href=""/>
                    <aqd:protectionTarget xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/H"/>
                 </aqd:Pollutant>
                 <aqd:Pollutant>
