@@ -35,7 +35,8 @@
             "NA" : "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/NA",
             "V" : "http://dd.eionet.europa.eu/vocabulary/aq/protectiontarget/V"
         },
-        "pollutant_defs":    {     
+        "pollutant_defs":    {
+                "Benzene" : "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/20",
                 "SO2" : "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1",
                 "CO" : "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10",
                 "Pb in PM2.5" : "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1012",
