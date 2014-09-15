@@ -123,7 +123,8 @@
                 </base2:RelatedParty>
             </am:competentAuthority>
             {# Thijs: how to create this date? Is this registered somewehere by RIVM? #}
-            <am:beginLifespanVersion>{{ feature.properties.beginlifespanversion }}</am:beginLifespanVersion>
+            {# For now use the report date, as set in the globals. Could also create a custom filter for this. #}
+            <am:beginLifespanVersion>{{ globs.report_date[0:4] }}-{{ globs.report_date[4:6] }}-{{ globs.report_date[6:8] }}T00:00:00+01:00</am:beginLifespanVersion>
             {# Thijs: assume for now that the legal basis is always the same #}
             <am:legalBasis xlink:href="http://rod.eionet.europa.eu/instruments/650"/>
             <aqd:zoneCode>{{ feature.properties.zone_code }}</aqd:zoneCode>
@@ -137,16 +138,15 @@
             "zone_pollutant": "BaP-H;Benzene-H;CO-H;NO2-H;O3-H;O3-V;PM10-H;PM2.5-H;SO2-H". This is RIVM-specific.
             According to the AQD schema aqd:pollutants is a sequence of aqd:pollutant #}
             {% set zone_pollutants = feature.properties.zone_pollutant.split(';') %}
-            <aqd:pollutants>
-              {% for zone_pollutant in zone_pollutants %}
+            {% for zone_pollutant in zone_pollutants %}
+            <aqd:pollutants>              
                 {% set parts = zone_pollutant.split('-') %}
                 <aqd:Pollutant>
                    <aqd:pollutantCode xlink:href="{{ globs.pollutant_defs[parts[0]]}}"/>
                    <aqd:protectionTarget xlink:href="{{ globs.protectiontarget_defs[parts[1]] }}"/>
-                </aqd:Pollutant>
-              {% endfor %}
+                </aqd:Pollutant>              
             </aqd:pollutants>
-
+            {% endfor %}
               {# Thijs: TODO: data for this element #}
             <aqd:timeExtensionExemption
                     xlink:href="http://dd.eionet.europa.eu/vocabulary/aq/timeextensiontypes/NO2-annual"/>
