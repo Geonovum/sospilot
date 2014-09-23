@@ -1,0 +1,42 @@
+// Request: http://sensors.geonovum.nl/sos/api/v1/services?expanded=true&locale=en
+
+[
+    {
+        "id": "1",
+        "label": "SOS of RIVM/Geonovum - The Netherlands",
+        "version": "1.0.0",
+        "type": "Thin DB access layer service.",
+        "supportsFirstLatest": true,
+        "quantities": {
+            "categories": 9,
+            "features": 62,
+            "offerings": 109,
+            "timeseries": 211,
+            "stations": 62,
+            "procedures": 109,
+            "phenomena": 9
+        }
+    }
+]
+
+
+// Request: http://sosrest.irceline.be/api/v1/services?expanded=true&locale=en
+[
+    {
+        "id": "srv_6d9ccea8d609ecb74d4a512922bb7cee",
+        "label": "SOS of IRCEL - CELINE",
+        "serviceUrl": "http://sos.irceline.be/sos",
+        "version": "1.0.0",
+        "type": "SOS",
+        "supportsFirstLatest": true,
+        "quantities": {
+            "phenomena": 20,
+            "stations": 116,
+            "procedures": 532,
+            "timeseries": 532,
+            "features": 116,
+            "offerings": 20,
+            "categories": 20
+        }
+    }
+]

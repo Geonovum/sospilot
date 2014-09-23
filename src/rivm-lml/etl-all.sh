@@ -1,3 +1,5 @@
+#!/bin/bash
+# 
 # Usually required in order to have Python find your package                                                                                                          
 export PYTHONPATH=.:$PYTHONPATH
 

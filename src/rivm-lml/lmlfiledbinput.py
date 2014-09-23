@@ -15,7 +15,7 @@ log = Util.get_log("LmlFileDbInput")
 
 class LmlFileDbInput(PostgresDbInput):
     """
-    Reads RIVM raw AQ/LML file data from lml_files table and converts to recordlist
+    Reads RIVM raw AQ/LML file data from lml_files table and converts to record_array
     """
     def __init__(self, configdict, section):
         PostgresDbInput.__init__(self, configdict, section)

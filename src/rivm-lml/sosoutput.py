@@ -19,7 +19,7 @@ class SOSTOutput(HttpOutput):
     """
 
     def __init__(self, configdict, section):
-        HttpOutput.__init__(self, configdict, section, consumes=FORMAT.record)
+        HttpOutput.__init__(self, configdict, section, consumes=FORMAT.record_array)
         self.content_type = self.cfg.get('content_type', 'application/json;charset=UTF-8')
         self.sos_request = self.cfg.get('sos_request', 'insert-observation')
 

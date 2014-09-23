@@ -1,0 +1,119 @@
+// request: http://sensors.geonovum.nl/sos/api/v1/phenomena/?service=1&locale=en
+[
+    {
+        "id": "2",
+        "label": "http://sensors.geonovum.nl/rivm-lml/observableProperty/CO"
+    },
+    {
+        "id": "3",
+        "label": "http://sensors.geonovum.nl/rivm-lml/observableProperty/NH3"
+    },
+    {
+        "id": "4",
+        "label": "http://sensors.geonovum.nl/rivm-lml/observableProperty/NO"
+    },
+    {
+        "id": "5",
+        "label": "http://sensors.geonovum.nl/rivm-lml/observableProperty/NO2"
+    },
+    {
+        "id": "6",
+        "label": "http://sensors.geonovum.nl/rivm-lml/observableProperty/O3"
+    },
+    {
+        "id": "7",
+        "label": "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM10"
+    },
+    {
+        "id": "8",
+        "label": "http://sensors.geonovum.nl/rivm-lml/observableProperty/PM2.5"
+    },
+    {
+        "id": "9",
+        "label": "http://sensors.geonovum.nl/rivm-lml/observableProperty/SO2"
+    }
+]
+
+// http://sosrest.irceline.be/api/v1/phenomena/?service=srv_6d9ccea8d609ecb74d4a512922bb7cee&locale=en
+[
+    {
+        "id": "phe_b0802ab0b3db886cc2b7017f07a8091c",
+        "label": "16111 - Black Carbon"
+    },
+    {
+        "id": "phe_fd0ba6c107e07a2ef448e890cfa5f24a",
+        "label": "42101 - CO"
+    },
+    {
+        "id": "phe_af715098b000d12f8083d9f5d31ccfaf",
+        "label": "42102 - CO2"
+    },
+    {
+        "id": "phe_f6a34510c63b8fca89b61be72ebd10e8",
+        "label": "42242 - Hg"
+    },
+    {
+        "id": "phe_277c2a665b9f51606671938c1edf7f36",
+        "label": "42401 - SO2"
+    },
+    {
+        "id": "phe_3dc71c068463698bd4d613acfa3b433b",
+        "label": "42601 - NO"
+    },
+    {
+        "id": "phe_786920043e664f8ec79f1d18634acc39",
+        "label": "42602 - NO2"
+    },
+    {
+        "id": "phe_1f904175b4ba9a0eaa5548bc251a1666",
+        "label": "44201 - O3"
+    },
+    {
+        "id": "phe_6fec4e679ec332b43e1c8546ea4f43a0",
+        "label": "45109 - m,p-C6H4(CH3)2"
+    },
+    {
+        "id": "phe_217a4645dd9374c04136456a0b96f3bb",
+        "label": "45201 - C6H6"
+    },
+    {
+        "id": "phe_a766bde4518be8ddb820c39b9f81648",
+        "label": "45202 - C6H5-CH3"
+    },
+    {
+        "id": "phe_11c9dd0f546221d9bb16c1e3228fd41e",
+        "label": "45203 - C6H5-C2H5"
+    },
+    {
+        "id": "phe_4101a9275200f3fed995adcc897e972",
+        "label": "45204 - o-C6H4-(CH3)2"
+    },
+    {
+        "id": "phe_f5f4556d84a3c33f748cb746bca9b9f6",
+        "label": "61102 - DD"
+    },
+    {
+        "id": "phe_235f2cc5a95668b1d7417f7ea34c3749",
+        "label": "61110 - WSP-SCA"
+    },
+    {
+        "id": "phe_d17948c85317b847a521002458b19e1",
+        "label": "62101 - TT"
+    },
+    {
+        "id": "phe_12df3d438dfa7d2d6b1caa243c6af713",
+        "label": "81102 - PM10"
+    },
+    {
+        "id": "phe_1c2bfff42096414ba3daac77eae36927",
+        "label": "81104 - PM2.5"
+    },
+    {
+        "id": "phe_76bd0fcbd8e7c609e619f8e7dfbea9c0",
+        "label": "89101 - PM1"
+    },
+    {
+        "id": "phe_54d95b5519cd442ba322fb1507a8ff63",
+        "label": "90500 - PN1"
+    }
+]

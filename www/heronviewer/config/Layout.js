@@ -19,7 +19,7 @@ Heron.options.urls = Heron.scratch.urls;
 
 // Create end interval date from current date for timeseries slider config.
 Heron.date = new Date();
-Heron.date.setHours(Heron.date.getHours()+1)
+Heron.date.setHours(Heron.date.getHours()-1);
 Heron.date.setMinutes(0);
 Heron.date.setSeconds(0);
 Heron.date.setMilliseconds(0);
@@ -279,18 +279,17 @@ Heron.layout = {
                     region: 'north',
                     layout: 'fit',
                     items: [
-                        { xtype: 'hr_timerangepanel',
+                        {
+                            xtype: 'hr_simpletimesliderpanel',
+                            title: 'Slider for Time Series Layers',
                             border: false,
-                            dimension: {
-                                name: 'time',
-                                currentValue: '2014-05-01T20:00:00Z',
-                                defaultValue: '2014-05-01T20:00:00Z',
-                                units: 'ISO8601',
-                                values: '2014-06-09T17:00:00Z/' + Heron.date + '/PT1H'
-                            },
+                            startDateTime: '2014-06-09T17:00:00Z',
+                            endDateTime: Heron.date,  // default is current time
+                            stepTime: 'PT1H',
+                            dateTime: '2014-08-02T01:00:00Z',
                             layerNames: ["KNMI - Rain Radar (Color)",
                                 "RIVM - Measurements CO",
-                                "RIVM - Measurements NH3","RIVM - Measurements NO2",
+                                "RIVM - Measurements NH3", "RIVM - Measurements NO2",
                                 "RIVM - Measurements NO", "RIVM - Measurements PM10",
                                 "RIVM - Measurements O3", "RIVM - Measurements SO2"]
                         }
