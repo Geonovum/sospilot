@@ -7,4 +7,4 @@
 validate=../../src/validator/bin/validate.sh
 
 # Can validate multiple files, advantage: XSDs are fetched only once.
-$validate output/dataflow-D.xml output/dataflow-B.xml
+$validate output/dataflow-D.xml output/dataflow-B.xml  output/dataflow-C.xml

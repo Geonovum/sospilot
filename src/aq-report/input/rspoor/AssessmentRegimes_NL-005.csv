@@ -1,0 +1,138 @@
+change;class_year;zone_code;ENV_pollutant;assessment_method_type;assessment_threshold_exceedance;assessment_method_type_descr;link_class_doc;link_model
+;2013;NL0100;As;fixed;belowLAT;;;
+;2013;NL0100;BaP;fixed;belowLAT;;;
+;2013;NL0100;Benzene;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0100;Cd;fixed;belowLAT;;;
+;2013;NL0100;CO;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0100;Ni;fixed;belowLAT;;;
+;2013;NL0100;NO2_all;fixed;aboveUAT;;;
+;2013;NL0100;NO2_hour;fixed;belowLAT;;;
+;2013;NL0100;NOx;fixed;belowLAT;;;
+;2013;NL0100;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0100;O3-V_LTO;fixed;aboveLTO;;;
+;2013;NL0100;Pb;fixed;belowLAT;;;
+;2013;NL0100;PM10_all;fixed;LAT-UAT;;;
+;2013;NL0100;PM10_day;fixed;aboveUAT;;;
+;2013;NL0100;PM2.5_LV;fixed;LAT-UAT;;;
+;2013;NL0100;SO2-H_day;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0100;SO2-V_winter;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0201;As;fixed;belowLAT;;;
+;2013;NL0201;BaP;fixed;belowLAT;;;
+;2013;NL0201;Benzene;fixed;belowLAT;;;
+;2013;NL0201;Cd;fixed;belowLAT;;;
+;2013;NL0201;CO;fixed;belowLAT;;;
+;2013;NL0201;Ni;fixed;belowLAT;;;
+;2013;NL0201;NO2_all;fixed;aboveUAT;;;
+;2013;NL0201;NO2_hour;fixed;LAT-UAT;;;
+;2013;NL0201;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0201;O3-V_LTO;fixed;aboveLTO;;;
+;2013;NL0201;Pb;fixed;belowLAT;;;
+;2013;NL0201;PM10_all;fixed;LAT-UAT;;;
+;2013;NL0201;PM10_day;fixed;aboveUAT;;;
+;2013;NL0201;PM2.5_LV;fixed;aboveUAT;;;
+;2013;NL0201;SO2-H_day;fixed;belowLAT;;;
+;2013;NL0210;As;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0210;BaP;fixed;LAT-UAT;;;
+;2013;NL0210;Benzene;fixed;belowLAT;;;
+;2013;NL0210;Cd;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0210;CO;fixed;belowLAT;;;
+;2013;NL0210;Ni;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0210;NO2_all;fixed;aboveUAT;;;
+;2013;NL0210;NO2_hour;fixed;aboveUAT;;;
+;2013;NL0210;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0210;O3-V_LTO;fixed;aboveLTO;;;
+;2013;NL0210;Pb;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0210;PM10_all;fixed;aboveUAT;;;
+;2013;NL0210;PM10_day;fixed;aboveUAT;;;
+;2013;NL0210;PM2.5_LV;fixed;aboveUAT;;;
+;2013;NL0210;SO2-H_day;fixed;belowLAT;;;
+;2013;NL0221;As;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0221;BaP;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0221;Benzene;fixed;belowLAT;;;
+;2013;NL0221;Cd;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0221;CO;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0221;Ni;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0221;NO2_all;fixed;aboveUAT;;;
+;2013;NL0221;NO2_hour;fixed;LAT-UAT;;;
+;2013;NL0221;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0221;O3-V_LTO;fixed;aboveLTO;;;
+;2013;NL0221;Pb;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0221;PM10_all;fixed;LAT-UAT;;;
+;2013;NL0221;PM10_day;fixed;aboveUAT;;;
+;2013;NL0221;PM2.5_LV;fixed;aboveUAT;;;
+;2013;NL0221;SO2-H_day;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0231;As;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0231;BaP;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0231;Benzene;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0231;Cd;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0231;CO;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0231;Ni;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0231;NO2_all;fixed;aboveUAT;;;
+;2013;NL0231;NO2_hour;fixed;LAT-UAT;;;
+;2013;NL0231;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0231;O3-V_LTO;fixed;belowLTO;;;
+;2013;NL0231;Pb;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0231;PM10_all;fixed;aboveUAT;;;
+;2013;NL0231;PM10_day;fixed;aboveUAT;;;
+;2013;NL0231;PM2.5_LV;fixed;LAT-UAT;;;
+;2013;NL0231;SO2-H_day;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0241;As;fixed;belowLAT;;;
+;2013;NL0241;BaP;fixed;LAT-UAT;;;
+;2013;NL0241;Benzene;fixed;belowLAT;;;
+;2013;NL0241;Cd;fixed;belowLAT;;;
+;2013;NL0241;CO;fixed;belowLAT;;;
+;2013;NL0241;Ni;fixed;belowLAT;;;
+;2013;NL0241;NO2_all;fixed;aboveUAT;;;
+;2013;NL0241;NO2_hour;fixed;aboveUAT;;;
+;2013;NL0241;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0241;O3-V_LTO;fixed;aboveLTO;;;
+;2013;NL0241;Pb;fixed;belowLAT;;;
+;2013;NL0241;PM10_all;fixed;LAT-UAT;;;
+;2013;NL0241;PM10_day;fixed;aboveUAT;;;
+;2013;NL0241;PM2.5_LV;fixed;aboveUAT;;;
+;2013;NL0241;SO2-H_day;fixed;belowLAT;;;
+;2013;NL0300;As;fixed;belowLAT;;;
+;2013;NL0300;BaP;fixed;belowLAT;;;
+;2013;NL0300;Benzene;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0300;Cd;fixed;belowLAT;;;
+;2013;NL0300;CO;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0300;Ni;fixed;belowLAT;;;
+;2013;NL0300;NO2_all;fixed;belowLAT;;;
+;2013;NL0300;NO2_hour;fixed;belowLAT;;;
+;2013;NL0300;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0300;O3-V_LTO;fixed;aboveLTO;;;
+;2013;NL0300;Pb;fixed;belowLAT;;;
+;2013;NL0300;PM10_all;fixed;aboveUAT;;;
+;2013;NL0300;PM10_day;fixed;aboveUAT;;;
+;2013;NL0300;PM2.5_LV;fixed;aboveUAT;;;
+;2013;NL0300;SO2-H_day;fixed;belowLAT;;;
+;2013;NL0310;As;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0310;BaP;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0310;Benzene;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0310;Cd;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0310;CO;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0310;Ni;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0310;NO2_all;fixed;aboveUAT;;;
+;2013;NL0310;NO2_hour;fixed;LAT-UAT;;;
+;2013;NL0310;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0310;O3-V_LTO;fixed;aboveLTO;;;
+;2013;NL0310;Pb;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0310;PM10_all;fixed;aboveUAT;;;
+;2013;NL0310;PM10_day;fixed;aboveUAT;;;
+;2013;NL0310;PM2.5_LV;fixed;LAT-UAT;;;
+;2013;NL0310;SO2-H_day;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0320;As;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0320;BaP;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0320;Benzene;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0320;Cd;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0320;CO;model;belowLAT;GCN kaarten;Grootschalige_concentratie_en_depositiekaarten_Nederland_Rapportage_2014;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0320;Ni;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0320;NO2_all;fixed;aboveUAT;;;
+;2013;NL0320;NO2_hour;fixed;LAT-UAT;;;
+;2013;NL0320;O3-H_LTO;fixed;aboveLTO;;;
+;2013;NL0320;O3-V_LTO;fixed;aboveLTO;;;
+;2013;NL0320;Pb;objective;belowLAT;Report RIVM 680704001;Prelimanary assessment of heavy metals and benzo(a)pyrene in ambient air;http://rivm.nl/Documenten_en_publicaties/Wetenschappelijk/Rapporten
+;2013;NL0320;PM10_all;fixed;LAT-UAT;;;
+;2013;NL0320;PM10_day;fixed;aboveUAT;;;
+;2013;NL0320;PM2.5_LV;fixed;aboveUAT;;;
+;2013;NL0320;SO2-H_day;fixed;belowLAT;;;

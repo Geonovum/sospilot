@@ -28,3 +28,42 @@
         </gn:spelling>
     </gn:GeographicalName>
 {%- endmacro %}
+
+{# Macro that renders a minimal RelatedParty. Input structure must by like:
+         "reporting_authority": {
+            "individual_name": "Marjolein van der Made",
+            "organisation": "Rijksinstituut voor Volksgezondheid en Milieu",
+            "address": "Postbus 1 3720 BA",
+            "municipality": "Bilthoven",
+            "email": "marjolein.van.der.made@rivm.nl",
+            "telephone": "+31 30 2749111",
+            "website": "http://www.rivm.nl"
+        }
+ #}
+{% macro render_related_party_min(related_party) -%}
+    <!-- Rendered by macro render_related_party_min() -->
+    <base2:RelatedParty>
+        <base2:individualName>
+            <gmd:LocalisedCharacterString>{{ related_party.individual_name }}</gmd:LocalisedCharacterString>
+        </base2:individualName>
+        <base2:organisationName>
+            <gmd:LocalisedCharacterString>{{ related_party.organisation }}</gmd:LocalisedCharacterString>
+        </base2:organisationName>
+        <base2:contact>
+            <base2:Contact>
+                <base2:address>
+                    <ad:AddressRepresentation>
+                        <ad:adminUnit>
+                            {{ render_geographical_name_min(related_party.address) }}
+                         </ad:adminUnit>
+                        <ad:locatorDesignator>{{ related_party.municipality }}</ad:locatorDesignator>
+                    </ad:AddressRepresentation>
+                </base2:address>
+                <base2:electronicMailAddress>{{ related_party.email }}</base2:electronicMailAddress>
+                <base2:telephoneVoice>{{ related_party.telephone }}</base2:telephoneVoice>
+                <base2:website>{{ related_party.website }}</base2:website>
+            </base2:Contact>
+        </base2:contact>
+        <base2:role/>
+    </base2:RelatedParty>
+{%- endmacro %}

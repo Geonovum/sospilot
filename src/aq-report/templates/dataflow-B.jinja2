@@ -35,31 +35,9 @@
                 {{ macros_inspire.render_inspire_id(globs.namespace, globs.id_prefix + '_' + globs.report_date) }}
             </aqd:inspireId>
              <aqd:reportingAuthority>
-                <base2:RelatedParty>
-                    <base2:individualName>
-                        <gmd:LocalisedCharacterString>{{ globs.reporting_authority.individual_name }}</gmd:LocalisedCharacterString>
-                    </base2:individualName>
-                    <base2:organisationName>
-                        <gmd:LocalisedCharacterString>{{ globs.reporting_authority.organisation }}</gmd:LocalisedCharacterString>
-                    </base2:organisationName>
-                    <base2:contact>
-                        <base2:Contact>
-                            <base2:address>
-                                <ad:AddressRepresentation>
-                                    <ad:adminUnit>
-                                        {{ macros_inspire.render_geographical_name_min(globs.reporting_authority.address) }}
-                                     </ad:adminUnit>
-                                    <ad:locatorDesignator>{{ globs.reporting_authority.municipality }}</ad:locatorDesignator>
-                                </ad:AddressRepresentation>
-                            </base2:address>
-                            <base2:electronicMailAddress>{{ globs.reporting_authority.email }}</base2:electronicMailAddress>
-                            <base2:telephoneVoice>{{ globs.reporting_authority.telephone }}</base2:telephoneVoice>
-                            <base2:website>{{ globs.reporting_authority.website }}</base2:website>
-                        </base2:Contact>
-                    </base2:contact>
-                    <base2:role/>
-                </base2:RelatedParty>
-            </aqd:reportingAuthority>
+                 <!-- Render a complete <RelatedParty> structure including GeograhicalName etc. -->
+                 {{ macros_inspire.render_related_party_min(globs.reporting_authority) }}
+             </aqd:reportingAuthority>
 
             {#  Generate all xlinks to INSPIRE-id's of the Stations etc #}
             {% for feature in features %}
