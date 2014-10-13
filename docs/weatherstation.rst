@@ -23,7 +23,10 @@ a `Geo-Info magazine article (2010-1) <http://www.geo-info.nl/download/?id=15311
 Raspberry Pi
 ------------
 
-A raspberry Pi will be setup as a headless (no GUI) server.
+A Raspberry Pi will be setup as a headless (no GUI) server. Via a USB Cable the Pi will be connected to the Davis datalogger cable.
+The Pi will run a Debian Linux version (Raspbian) with the free `weewx` weather server and
+archiver. `weewx` will fetch data from the Davis, storing this in MySQL or SQLLite.
+It can also can publish data to community Weather networks like Wunderground.
 
 Raspberry Pi core,
 bijv `RPi Kit van Kiwi Elektronics <http://www.kiwi-electronics.nl/raspberry-pi/board-and-kits/raspberry-pi-model-b-plus-bundel-met-voeding-en-noobs-op-microsd>`_ (EUR 59,95):
@@ -50,7 +53,7 @@ Wifi Networking
 
 Connection Weather Station
 
-* USB Cable with ferrite noise surpressor : http://www.allekabels.nl/usb-20-kabel/172/1043113/usb-20-kabel-professioneel.html (EUR 17,95)
+* USB Cable (USB A Male both sides) with ferrite noise suppressor : http://www.allekabels.nl/usb-20-kabel/172/1043113/usb-20-kabel-professioneel.html (EUR 17,95)
 
 Software
 
