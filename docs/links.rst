@@ -50,3 +50,10 @@ Tools and Libs
 .. [INSPIRE] INSPIRE, http://inspire.ec.europa.eu/
 .. [INSPIREFOSS] INSPIRE FOSS project, http://inspire-foss.org
 .. [PostGIS] PostGIS/PostgreSQL, http://postgis.refractions.net
+
+Hardware
+--------
+
+.. [DAVISVP] Davis Vantage Pro2 Weather Station, http://www.davisnet.com/weather/products/vantage-pro-professional-weather-stations.asp
+
+

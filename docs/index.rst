@@ -19,6 +19,7 @@ Contents:
    clients.rst
    administration.rst
    weather.rst
+   weatherstation.rst
    server-inrichting.rst
    contact.rst
    links.rst
