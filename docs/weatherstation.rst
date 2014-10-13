@@ -23,15 +23,17 @@ a `Geo-Info magazine article (2010-1) <http://www.geo-info.nl/download/?id=15311
 Raspberry Pi
 ------------
 
+A raspberry Pi will be setup as a headless (no GUI) server.
+
 Raspberry Pi core,
-bijv `RPi Kit van Kiwi Elektronics <http://www.kiwi-electronics.nl/raspberry-pi/board-and-kits/raspberry-pi-model-b-plus-bundel-met-voeding-en-noobs-op-microsd>`_:
+bijv `RPi Kit van Kiwi Elektronics <http://www.kiwi-electronics.nl/raspberry-pi/board-and-kits/raspberry-pi-model-b-plus-bundel-met-voeding-en-noobs-op-microsd>`_ (EUR 59,95):
 
 * Raspberry Pi Model B+ 512MB
 * transparant Multicomp enclosure
 * 5.2V 2A microUSB power adapter
 * microSD card 32GB - Class 10
 
-User access
+User access (but not required once having setup as we access via SSH).
 
 * USB mouse
 * USB keyboard
@@ -40,26 +42,26 @@ User access
 
 Mobile networking
 
-* USB 3G Modem - Huawei - most probably E3131
+* USB 3G Modem - Huawei - most probably E3131 (of Wifi networking)
 
-Links:
+Wifi Networking
 
-http://garethhowell.com/wp/connect-raspberry-pi-3g-network
-
-http://www.jamesrobertson.eu/blog/2014/jun/24/setting-up-a-huawei-e3131-to-work-with-a.html
-
-http://christianscode.blogspot.nl/2012/11/python-huawei-e3131-library.html
-
-
-We will need reverse tunneling to access the Pi from outside:
-http://www.thirdway.ch/En/projects/raspberry_pi_3g/index.php
+* Draadloze USB Adapter voor Raspberry `Pi Wi-Pi  <http://www.kiwi-electronics.nl/raspberry-pi/raspberry-pi-accessoires/wi-pi-draadloze-usb-adapter-voor-raspberry-pi>`_ (EUR 18,95).
 
 Connection Weather Station
 
-* USB Cable with ferrite noise surpressor
+* USB Cable with ferrite noise surpressor : http://www.allekabels.nl/usb-20-kabel/172/1043113/usb-20-kabel-professioneel.html (EUR 17,95)
 
 Software
 
-* OS: Raspbian Debian Wheezy (sept 2014)
-* Open source software for weather station: `weewx <http://www.weewx.com>`_ with SQLlite
+* OS: Raspbian Debian Wheezy (sept 2014) - Free
+* Open source software for weather station: `weewx <http://www.weewx.com>`_ with SQLlite  - free
 
+Links
+-----
+
+* http://garethhowell.com/wp/connect-raspberry-pi-3g-network
+* http://www.jamesrobertson.eu/blog/2014/jun/24/setting-up-a-huawei-e3131-to-work-with-a.html
+* http://christianscode.blogspot.nl/2012/11/python-huawei-e3131-library.html
+* Reverse tunneling to access the Pi from outside: http://www.thirdway.ch/En/projects/raspberry_pi_3g/index.php
+* Use `autossh` to maintain tunnel: http://unix.stackexchange.com/questions/133863/permanent-background-ssh-connection-to-create-reverse-tunnel-what-is-correct-wa
