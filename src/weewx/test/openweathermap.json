@@ -1,0 +1,45 @@
+// http://api.openweathermap.org/data/2.5/weather?q=Otterlo,nl&units=imperial
+
+{"coord": {
+    "lon": 5.77,
+    "lat": 52.1
+},
+    "sys": {
+        "type": 1,
+        "id": 5207,
+        "message": 0.6065,
+        "country": "Netherlands",
+        "sunrise": 1413266452,
+        "sunset": 1413305086
+    },
+    "weather": [
+        {
+            "id": 503,
+            "main": "Rain",
+            "description": "very heavy rain",
+            "icon": "10n"
+        },
+        {
+            "id": 701,
+            "main": "Mist",
+            "description": "mist",
+            "icon": "50n"
+        }
+    ],
+    "base": "cmc stations",
+    "main": {
+        "temp": 286.87,
+        "pressure": 1005,
+        "humidity": 93,
+        "temp_min": 286.15,
+        "temp_max": 287.75
+    },
+    "wind": {
+        "speed": 5.7,
+        "deg": 200
+    },
+    "rain": {
+    "1h": 47.27
+}, "clouds": {
+    "all": 90
+}, "dt": 1413313501, "id": 2749203, "name": "Ede", "cod": 200}
