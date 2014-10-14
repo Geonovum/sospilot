@@ -26,13 +26,14 @@
 # Do NOT "set -e"
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
+WEEWX_HOME=/opt/weewx/weewxinst
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
-WEEWX_BIN=/opt/weewx/weeinst/bin/weewxd
-WEEWX_CFG=/opt/weewx/weeinst/weewx.conf
+WEEWX_BIN=$WEEWX_HOME/bin/weewxd
+WEEWX_CFG=$WEEWX_HOME/weewx.conf
 DESC="weewx weather system"
 NAME=weewx
 WEEWX_USER=sadmin:sadmin
-PIDFILE=/opt/weewx/weeinst/$NAME.pid
+PIDFILE=$WEEWX_HOME/$NAME.pid
 DAEMON=$WEEWX_BIN
 DAEMON_ARGS="--daemon --pidfile=$PIDFILE $WEEWX_CFG" 
 SCRIPTNAME=/etc/init.d/$NAME
