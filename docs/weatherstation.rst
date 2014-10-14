@@ -53,12 +53,14 @@ Wifi Networking
 
 Connection Weather Station
 
-* USB Cable (USB A Male both sides) with ferrite noise suppressor : http://www.allekabels.nl/usb-20-kabel/172/1043113/usb-20-kabel-professioneel.html (EUR 17,95)
+* USB Cable (USB A Male both sides??) with ferrite noise suppressor : http://www.allekabels.nl/usb-20-kabel/172/1043113/usb-20-kabel-professioneel.html (EUR 17,95)
+* powered USB hub. Why? See http://www.weewx.com/docs/usersguide.htm#Raspberry_Pi
 
 Software
 
 * OS: Raspbian Debian Wheezy (sept 2014) - Free
 * Open source software for weather station: `weewx <http://www.weewx.com>`_ with SQLlite  - free
+* `wview`, kan gebruik maken van archive SQLite DB van weewx: http://www.wviewweather.com
 
 Links
 -----

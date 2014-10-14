@@ -833,6 +833,91 @@ Install ::
 
     apt-get install netcdf-bin
 
+weewx - Weather Station server
+------------------------------
+
+Used for testing `weewx <http://www.weewx.com>`_.
+
+Dir: `/opt/weewx`. We do custom install as user `sadmin` in order to make tweaking easier.
+
+See http://www.weewx.com/docs/setup.htm
+
+Steps. ::
+
+    # Install Dependencies
+    # required packages:
+    apt-get install python-configobj
+    apt-get install python-cheetah
+    apt-get install python-imaging
+
+    # optional for extended almanac information:
+    apt-get install python-dev
+    pip install pyephem
+
+    # Weewx install after download
+    cd /opt/weewx
+    tar xzvf archive/weewx-2.7.0.tar.gz
+    ln -s weewx-2.7.0 weewx
+
+    cd weewx
+
+    # Change install dir in setup.cfg as follows
+    # Configuration file for weewx installer. The syntax is from module
+    # ConfigParser. See http://docs.python.org/library/configparser.html
+
+    [install]
+
+    # Set the following to the root directory where weewx should be installed
+    home = /opt/weewx/weewxinst
+
+    # Given the value of 'home' above, the following are reasonable values
+    prefix =
+    exec-prefix =
+    install_lib = %(home)s/bin
+    install_scripts = %(home)s/bin
+
+    # build en install in /opt/weewx/weewxinst
+    ./setup.py build
+    ./setup.py install
+
+    # link met aangepaste configs uit Geonovum GitHub (na backup oude versies)
+    ln -s /opt/geonovum/sospilot/git/src/weewx/test/weewx.conf /opt/weewx/weewxinst
+    ln -s /opt/geonovum/sospilot/git/src/weewx/test/skin.conf /opt/weewx/weewxinst/skins/Standard
+    ln -s /opt/geonovum/sospilot/git/src/weewx/test/weatherapidriver.py /opt/weewx/weewxinst/bin/user
+
+    # test OK
+    sadmin@vps44500:/opt/weewx/weewxinst$ ./bin/weewxd weewx.conf
+    ('Created packet: %s', "{'barometer': 29.681039574719435, 'windchill': 56.48, 'dewpoint': 52.656315478047,
+    'pressure': 29.681039574719435, 'outHumidity': 87, 'heatindex': 56.48, 'dateTime': 1413323976, 'windDir': 200,
+    'outTemp': 56.48, 'windSpeed': 14.47, 'rainRate': 43.33, 'usUnits': 1}")
+    LOOP:   2014-10-14 23:59:36 CEST (1413323976) {'barometer': 29.681039574719435, 'windchill': 56.48, 'dewpoint': 52.656315478047,
+    'pressure': 29.681039574719435, 'outHumidity': 87, 'heatindex': 56.48, 'dateTime': 1413323976, 'windDir': 200, 'outTemp': 56.48,
+    'windSpeed': 14.47, 'rainRate': 43.33, 'usUnits': 1}
+
+    # install weewx daemon in /etc/init.d (als root)
+    # aanpassen settings in daemon in GitHub  /opt/geonovum/sospilot/git/src/weewx/test/weewx-daemon.sh
+
+    # PATH should only include /usr/* if it runs after the mountnfs.sh script
+    WEEWX_HOME=/opt/weewx/weewxinst
+    PATH=/sbin:/usr/sbin:/bin:/usr/bin
+    WEEWX_BIN=$WEEWX_HOME/bin/weewxd
+    WEEWX_CFG=$WEEWX_HOME/weewx.conf
+    DESC="weewx weather system"
+    NAME=weewx
+    WEEWX_USER=sadmin:sadmin
+    PIDFILE=$WEEWX_HOME/$NAME.pid
+    DAEMON=$WEEWX_BIN
+    DAEMON_ARGS="--daemon --pidfile=$PIDFILE $WEEWX_CFG"
+    SCRIPTNAME=/etc/init.d/$NAME
+
+    cp /opt/geonovum/sospilot/git/src/weewx/test/weewx-daemon.sh /etc/init.d
+    update-rc.d weewx defaults
+    /etc/init.d/weewx start
+    /etc/init.d/weewx status
+    * Status of weewx weather system: running
+
+    # weewx log bekijken
+    tail -f /var/log/syslog
 
 
 Tot hier gekomen op 25.5.2014
