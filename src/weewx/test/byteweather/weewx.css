@@ -1,0 +1,309 @@
+/**
+#errorCatcher Echo
+##    $Revision: 1 $
+##    $Author: weewx@davies-barnard.co.uk $
+##    $Date: 2013-12-30 $
+##
+**/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.clr { clear:both; }
+
+
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*************** Global Styles ***************/
+body {
+    background: #e2e2e2;
+    background-image: url('backgrounds/background.png');
+    color: #f9f9f9;
+	background-repeat: repeat;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14.4px;
+    line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FF6201;
+		margin: 0.5em 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {/* tables still need 'cellspacing="0"' in the markup */
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+a {
+    color: #BF4615;
+    text-decoration: none;
+}
+a:focus,
+a:active,
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*************** Area Styles ***************/
+header {
+	background-color:#FFFFFF;
+}
+#page {
+		background-color:#000000;
+}
+
+/*
+ * This is the big header at the top of the page
+ */
+#masthead {
+    text-align: left;
+}
+
+#masthead h1 {
+    color: #FF6201;
+		font-size:2.0em;
+		text-transform:uppercase;
+		margin-top:20px;
+}
+#masthead h2, #masthead h3  {
+    color: #CCCCCC;
+	font-size:1.5em;
+}
+#masthead h3 {
+		font-style:italic;
+}
+
+#stats {
+	font-size:0.8em;
+	margin:15px 0;
+}
+#stats h3 {
+	padding:0;
+	margin:5px 0;
+}
+
+
+/*
+ * This holds the statistics (daily high/low, etc.) on the left: 
+ */
+#stats_group {
+}
+
+.stats table {
+    border: 1px solid #F9F9F9;
+    width: 100%;
+}
+.stats td {
+    border: 1px solid #F9F9F9;
+    padding: 2px;
+}
+
+.stats_header  {
+    background-color: #E3E3E3;
+    color: #FF6201;
+    font-weight: bolder;
+		text-align:center;
+}
+
+.stats_label,.stats_data  {
+	font-size:0.8em;
+}
+
+.stats_data {
+	font-style:italic;
+}
+
+/*
+ * This holds the "About", "Almanac", and plots on the right
+ */
+#content {}
+
+#content .header {
+    font-size: 14pt;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+
+#content .caption {
+    font-weight: bold;
+    text-align: -webkit-left;
+    margin-bottom: 0.5em;
+}
+
+#content table {
+    text-align: left;
+    width: 100%;
+}
+
+#content td {
+    width: 50%;
+}
+
+#content .label {
+    text-align: left;
+    font-style: italic;
+}
+
+#content .data {
+    text-align: left;
+}
+
+#about, #almanac {}
+
+.celestial_group {
+	font-size: 0.8em;
+}
+
+.celestial_body {}
+
+.plots { margin-top: 1em; }
+
+#radar_img {
+	margin-top:1em;
+}   
+#radar_img img {
+	width:300px;
+	height:300px;
+}
+
+#radar_img p {}
+
+#footer {
+	margin-bottom: 20px;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+#access {
+	background: #0082e5; /* Old browsers */
+	background: -moz-linear-gradient(top, #0082e5 0%, #074b99 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0082e5), color-stop(100%,#074b99)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #0082e5 0%,#074b99 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #0082e5 0%,#074b99 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #0082e5 0%,#074b99 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #0082e5 0%,#074b99 100%); /* W3C */
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	clear: both;
+	display: block;
+	float: left;
+	margin: 0 auto;
+	width: 100%;
+}
+#access ul {
+	font-size: 13px;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding-left: 13px;
+}
+#access li {
+	float: left;
+	text-align: center;
+	position: relative;
+    min-width:86px;
+   	border-bottom: 1px solid #074b99;
+  	border-top: 1px solid #074b99;
+  	border-right: 1px solid #074b99;
+}
+#access a {
+	color: #eee;
+	display: block;
+	line-height: 3.333em;
+	padding: 0 4px 0 4px;
+	text-decoration: none;
+}
+#access li.menu-item-home a{ border-left: 1px solid #074b99; }
+#access ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 3.333em;
+	left: 0;
+	width: 168px;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a {
+	background: #f9f9f9;
+	border-bottom: 1px dotted #ddd;
+	color: #444;
+	font-size: 13px;
+	font-weight: normal;
+	height: auto;
+	line-height: 1.4em;
+	padding: 10px 13px 10px 10px;
+	width: 148px;
+}
+
+#access ul ul { padding-left: 0;}
+#access ul ul li {
+	border:none;
+}
+
+
+#access li:hover > a,
+#access ul ul :hover > a,
+#access a:focus {
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	z-index: 99999;
+}
+#access li:hover > a,
+#access a:focus {
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	color: #373737;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+#access .current_page_item > a,
+#access .current_page_ancestor > a {
+	font-weight: bold;
+}
