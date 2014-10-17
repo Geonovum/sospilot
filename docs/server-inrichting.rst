@@ -849,6 +849,7 @@ Steps. ::
     apt-get install python-configobj
     apt-get install python-cheetah
     apt-get install python-imaging
+    apt-get install fonts-freefont-ttf  # Fonts in reporting
 
     # optional for extended almanac information:
     apt-get install python-dev
@@ -918,6 +919,10 @@ Steps. ::
 
     # weewx log bekijken
     tail -f /var/log/syslog
+
+    # memory in gaten houden
+      PID USER      PR  NI    VIRT    RES    SHR  S  %CPU %MEM     TIME+ COMMAND
+     4688 sadmin    20   0    170936  36776  4608 S   0.0  0.5   3:15.23 weewxd  (16.10.14 16:22)
 
 
 Tot hier gekomen op 25.5.2014

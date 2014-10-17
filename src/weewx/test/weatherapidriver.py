@@ -6,6 +6,7 @@
 
 from __future__ import with_statement
 import math
+import json
 import time
 from urllib2 import Request, urlopen, URLError, HTTPError
 import urllib
@@ -44,22 +45,25 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
 
             # http://api.openweathermap.org/data/2.5/find?q=Otterlo&units=imperial
 
-            json_data = self.read_from_url('http://api.openweathermap.org/data/2.5/weather?q=Otterlo,nl&units=imperial')
-            self.the_time = time.time()
-            if json_data is not None:
-                data_dict = self.parse_data(json_data)
-                if data_dict is not None:
-                    packet = self.createpacket(data_dict)
-                    print("Created packet: %s", str(packet))
-                    yield packet
+            try:
+                json_data = self.read_from_url('http://api.openweathermap.org/data/2.5/weather?q=Otterlo,nl&units=imperial')
+                self.the_time = time.time()
+                if json_data is not None:
+                    data_dict = self.parse_data(json_data)
+                    if data_dict is not None:
+                        packet = self.createpacket(data_dict)
+                        if packet is not None:
+                            print("Created packet: %s", str(packet))
+                            yield packet
+            finally:
+                # We should never loose the loop due to some error
+                # Determine how long to sleep
+                # We are in real time mode. Try to keep synched up with the
+                # wall clock
+                # sleep_time = self.the_time + self.loop_interval - time.time()
+                # if sleep_time > 0:
 
-            # Determine how long to sleep
-            # We are in real time mode. Try to keep synched up with the
-            # wall clock
-            # sleep_time = self.the_time + self.loop_interval - time.time()
-            # if sleep_time > 0:
-
-            time.sleep(self.loop_interval)
+                time.sleep(self.loop_interval)
 
     def read_from_url(self, url, parameters=None):
         """
@@ -90,13 +94,11 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
 
     def parse_data(self, json_string):
         # One-time read/parse only
+        file_data = None
         try:
-            import json
             file_data = json.loads(json_string)
-
         except Exception, e:
             print('Cannot parse JSON from %s, err= %s' % (json_string, str(e)))
-            raise e
 
         return file_data
 

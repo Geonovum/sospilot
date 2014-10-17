@@ -151,7 +151,7 @@
             <!-- Clients
             ================================================== -->
             <div class="bs-docs-section">
-                <h1 id="clients" class="page-header">Clients</h1>
+                <h1 id="clients" class="page-header">Clients - AQ Data</h1>
                 <p>
                     Various clients that connect to the Web Services. Click on an image to launch each client.
                 </p>
@@ -208,6 +208,31 @@
                 <!--jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that-->
                 <!--you need to fix on your own.</p>-->
                 <!--</div>-->
+            </div>
+            <!-- Clients - Weather Data
+            ================================================== -->
+            <div class="bs-docs-section">
+                 <h1 id="weather" class="page-header">Clients - Weather Data</h1>
+                 <p>In addition to AQ data, weather data is also exercised in the project.</p>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td><a href="weather"><img src="media/weewx-report-200.png"/></a>  </td>
+                            <td><a href="weather">Weather report</a> - a first PoC using the
+                                Python <a href="http://www.weewx.com">weewx weather software</a> with
+                                local weather data obtained from the
+                                <a href="http://openweathermap.org/api">OpenWeatherMap API</a>.
+                                weewx normally collects data from a Weather Station, stores it in a DB and can publish
+                                to websites such as the <a href="weather">Weather report here</a>.
+                                A <a href="https://github.com/Geonovum/sospilot/blob/master/src/weewx/test/weatherapidriver.py">simple Python driver</a> was developed to simulate a Weather Station using the
+                                <a href="http://openweathermap.org/api">OpenWeatherMap API</a> web service.
+                                In the next stage weewx will collect weather data from the Davis Weather Station
+                                at Geonovum. This data will be published to WFS and SOS similar to RIVM AQ data.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
             <!-- Web Services

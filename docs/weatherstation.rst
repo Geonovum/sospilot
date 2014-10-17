@@ -51,9 +51,9 @@ Wifi Networking
 
 * Draadloze USB Adapter voor Raspberry `Pi Wi-Pi  <http://www.kiwi-electronics.nl/raspberry-pi/raspberry-pi-accessoires/wi-pi-draadloze-usb-adapter-voor-raspberry-pi>`_ (EUR 18,95).
 
-Connection Weather Station
+Connection to Davis Weather Station WeatherLink USB adapter
 
-* USB Cable (USB A Male both sides??) with ferrite noise suppressor : http://www.allekabels.nl/usb-20-kabel/172/1043113/usb-20-kabel-professioneel.html (EUR 17,95)
+* USB Cable (USB A Male B Mini) with ferrite noise suppressor : http://www.allekabels.nl/usb-20-kabel/172/1043120/usb-20-mini-kabel-professioneel.html (EUR 17,95)
 * powered USB hub. Why? See http://www.weewx.com/docs/usersguide.htm#Raspberry_Pi
 
 Software
@@ -61,6 +61,8 @@ Software
 * OS: Raspbian Debian Wheezy (sept 2014) - Free
 * Open source software for weather station: `weewx <http://www.weewx.com>`_ with SQLlite  - free
 * `wview`, kan gebruik maken van archive SQLite DB van weewx: http://www.wviewweather.com
+
+Best option for now seems to be to use Pi with WIFI.
 
 Links
 -----
