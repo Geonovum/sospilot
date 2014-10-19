@@ -37,6 +37,9 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
             'generator': Emit packets as fast as it can (useful for testing).
         """
         self.loop_interval = float(stn_dict.get('loop_interval', 2.5))
+
+        # e.g.'http://api.openweathermap.org/data/2.5/weather?q=Otterlo,nl&units=imperial'
+        self.openweathermap_url = stn_dict.get('openweathermap_url')
         self.the_time = time.time()
 
     def genLoopPackets(self):
@@ -46,7 +49,7 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
             # http://api.openweathermap.org/data/2.5/find?q=Otterlo&units=imperial
 
             try:
-                json_data = self.read_from_url('http://api.openweathermap.org/data/2.5/weather?q=Otterlo,nl&units=imperial')
+                json_data = self.read_from_url(self.openweathermap_url)
                 self.the_time = time.time()
                 if json_data is not None:
                     data_dict = self.parse_data(json_data)
