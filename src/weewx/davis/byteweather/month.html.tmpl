@@ -1,0 +1,539 @@
+#errorCatcher Echo
+##    $Revision: 1 $
+##    $Author: weewx@davies-barnard.co.uk $
+##    $Date: 2013-12-30 $
+##
+## Specifying an encoding of UTF-8 is usually safe, but if your text is 
+## actually in Latin-1, then you should replace the string "UTF-8" with "latin-1"
+#encoding UTF-8
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://www.w3.org/2005/10/profile">
+    #if $encoding == 'utf8'
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    #end if    
+    <title>$station.location Monthly weather summary</title>
+    <link rel="stylesheet" type="text/css" href="weewx.css"/>
+    <link rel="stylesheet" type="text/css" href="grid.css"/>
+    
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <script type="text/javascript">
+      function openURL(urlname)
+      {
+      window.location=urlname;
+      }
+      function openNoaaFile(date)
+      {
+        var url = "NOAA/NOAA-";
+        url = url + date;
+        url = url + ".txt";
+        window.location=url;
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <div id="page" class="container_12">
+      
+      <!-- Header Section -->
+      <header>
+        <div id="masthead" class="grid_5">
+          <h1>$station.location</h1>
+          <h2>Monthly Weather Summary</h2>
+          <h3>$current.dateTime</h3>
+        </div>
+
+          <!-- INSERT YOUR WUNDERGROUND CODE HERE -->
+        <!--<div class="grid_3">-->
+          <!--<a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IBRISTOL31"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=WeatherStationCount&weatherstationcount=IBRISTOL31" height="160" width="163" border="0" alt="Weather Underground PWS IBRISTOL31" /></a>-->
+        <!--</div>-->
+          <!-- END OF WUNDERGROUND CODE -->
+        
+        <div id="stats" class="grid_4">
+                    <h3>Stats</h3>
+          Weewx uptime: $station.uptime<br/>
+          Server  uptime: $station.os_uptime<br/>
+          weewx v$station.version
+          <h3>Location</h3>
+          Latitude: $station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2]<br />
+          Longitude: $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2]<br />
+          Altitude: $station.altitude<br />
+        </div>
+      </header>
+      <!-- End of Header Section -->
+      
+      <!--Start of navigation -->
+      <nav id="access" role="navigation">
+        <h1 class="assistive-text section-heading">Main menu</h1>
+        <div class="skip-link screen-reader-text">
+          <a href="#content" title="Skip to content">Skip to content</a>
+        </div>
+        <div class="menu-top-menu-container">
+          <ul id="menu-top-menu" class="menu">
+            <li id="menu-item-1" class="menu-item menu-item-home"><a href="index.html">Home</a></li>
+            <li id="menu-item-2" class="menu-item"><a href="week.html">Week</a></li>
+            <li id="menu-item-3" class="menu-item current-menu-item"><a href="month.html">Month</a></li>
+            <li id="menu-item-4" class="menu-item"><a href="year.html">Year</a></li>
+            <li id="menu-item-5" class="menu-item"><a href="#">Monthly</a>
+              <ul class="sub-menu">
+                #for $monthYear  in $SummaryByMonth
+                  <li><a href="#" id="$monthYear" onClick="openNoaaFile('$monthYear')">
+			$monthYear
+			</a></li>
+                #end for
+              </ul>
+            </li>
+            <li id="menu-item-6" class="menu-item"><a href="#">Yearly</a>
+              <ul class="sub-menu">
+                #for   $yr   in   $SummaryByYear 
+                  <li><a href="#" id="$yr" onClick="openNoaaFile('$yr')">$yr</a></li>  
+                #end for
+              </ul>
+            </li>
+            <li id="menu-item-7" class="menu-item"><a href="RSS/weewx_rss.xml">RSS</a></li>
+            <li id="menu-item-8" class="menu-item"><a href="mobile.html">WAP</a></li>
+            <li id="menu-item-9" class="menu-item"><a href="smartphone/index.html">Mobile</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End of Navigation -->
+
+      <!-- Left Hand Side Stats Group -->
+      <div id="stats_group" class="grid_4">
+        <div class="stats">
+          <h3 class="stats_header">
+            This Month
+          </h3>
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="stats_label">
+                  High Temperature<br/>
+                  Low Temperature
+                </td>
+                <td class="stats_data">
+                  $month.outTemp.max at $month.outTemp.maxtime<br/>
+                  $month.outTemp.min at $month.outTemp.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Heat Index
+                </td>
+                <td class="stats_data"> 
+                  $month.heatindex.max at $month.heatindex.maxtime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label"> 
+                  Low Wind Chill
+                </td>
+                <td class="stats_data"> 
+                  $month.windchill.min at $month.windchill.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Humidity<br/>
+                  Low Humidity
+                </td>
+                <td class="stats_data">
+                  $month.outHumidity.max $month.outHumidity.maxtime<br/>
+                  $month.outHumidity.min $month.outHumidity.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Dewpoint<br/>
+                  Low Dewpoint
+                </td>
+                <td class="stats_data">
+                  $month.dewpoint.max $month.dewpoint.maxtime<br/>
+                  $month.dewpoint.min $month.dewpoint.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Barometer<br/>
+                  Low Barometer
+                </td>
+                <td class="stats_data">
+                  $month.barometer.max at $month.barometer.maxtime<br/>
+                  $month.barometer.min at $month.barometer.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  Rain Total
+                </td>
+                <td class="stats_data">
+                  $month.rain.sum
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label"> 
+                  High Rain Rate
+                </td>
+                <td class="stats_data">
+                  $month.rainRate.max at $month.rainRate.maxtime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Wind Speed
+                </td>
+                <td class="stats_data">
+                  $month.wind.max from $month.wind.gustdir at $month.wind.maxtime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  Average Wind
+                </td>
+                <td class="stats_data">
+                  $month.wind.avg
+                </td>
+              </td>
+              
+              <tr>
+                <td class="stats_label">
+                  RMS Wind
+                </td>
+                <td class="stats_data">
+                  $month.wind.rms
+                </td>
+              </tr>
+
+              <tr>
+                <td class="stats_label">
+                  Vector Average Speed<br/>
+                  Vector Average Direction
+                </td>
+                <td class="stats_data">
+                  $month.wind.vecavg<br/>
+                  $month.wind.vecdir
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Inside Temperature<br/>
+                  Low Inside Temperature
+                </td>
+                <td class="stats_data">
+                  $month.inTemp.max at $month.inTemp.maxtime<br/>
+                  $month.inTemp.min at $month.inTemp.mintime
+                </td>
+              </tr>
+			  #if $month.extraTemp1.has_data
+              <tr>
+                <td class="stats_label">
+                  High Pond Temperature<br/>
+                  Low Pond Temperature
+                </td>
+                <td class="stats_data">
+                  $month.extraTemp1.max at $month.extraTemp1.maxtime<br/>
+                  $month.extraTemp1.min at $month.extraTemp1.mintime
+                </td>
+              </tr>
+              #end if
+              #if $month.UV.has_data
+              <tr>
+                <td class="stats_label">
+                  High UV<br/>
+                  Low UV
+                </td>
+                <td class="stats_data">
+                  $month.UV.max at $month.UV.maxtime<br/>
+                  $month.UV.min at $month.UV.mintime
+                </td>
+              </tr>
+              #end if
+              #if $month.ET.has_data and $month.ET.sum.raw >0.0
+              <tr>
+                <td class="stats_label">
+                  High ET<br/>
+                  Low ET
+                </td>
+                <td class="stats_data">
+                  $month.ET.max at $month.ET.maxtime<br/>
+                  $month.ET.min at $month.ET.mintime
+                </td>
+              </tr>
+              #end if
+              #if $month.radiation.has_data
+              <tr>
+                <td class="stats_label">
+                  High Radiation<br/>
+                  Low Radiation
+                </td>
+                <td class="stats_data">
+                  $month.radiation.max at $month.radiation.maxtime<br/>
+                  $month.radiation.min at $month.radiation.mintime
+                </td>
+              </tr>
+              #end if
+            </tbody>
+          </table>
+        </div> <!-- End class "stats" -->
+
+        <div class="stats">
+          <h3 class="stats_header">
+            Calendar Year
+          </h3>
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="stats_label">
+                  High Temperature<br/>
+                  Low Temperature
+                </td>
+                <td class="stats_data">
+                  $year.outTemp.max at $year.outTemp.maxtime<br/>
+                  $year.outTemp.min at $year.outTemp.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Heat Index
+                </td>
+                <td class="stats_data"> 
+                  $year.heatindex.max at $year.heatindex.maxtime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label"> 
+                  Low Wind Chill
+                </td>
+                <td class="stats_data"> 
+                  $year.windchill.min at $year.windchill.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Humidity<br/>
+                  Low Humidity
+                </td>
+                <td class="stats_data">
+                  $year.outHumidity.max $year.outHumidity.maxtime<br/>
+                  $year.outHumidity.min $year.outHumidity.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Dewpoint<br/>
+                  Low Dewpoint
+                </td>
+                <td class="stats_data">
+                  $year.dewpoint.max $year.dewpoint.maxtime<br/>
+                  $year.dewpoint.min $year.dewpoint.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Barometer<br/>
+                  Low Barometer
+                </td>
+                <td class="stats_data">
+                  $year.barometer.max at $year.barometer.maxtime<br/>
+                  $year.barometer.min at $year.barometer.mintime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  Rain Total
+                </td>
+                <td class="stats_data">
+                  $year.rain.sum
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label"> 
+                  High Rain Rate
+                </td>
+                <td class="stats_data">
+                  $year.rainRate.max at $year.rainRate.maxtime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Wind Speed
+                </td>
+                <td class="stats_data">
+                  $year.wind.max from $year.wind.gustdir at $year.wind.maxtime
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  Average Wind
+                </td>
+                <td class="stats_data">
+                  $year.wind.avg
+                </td>
+              </td>
+              
+              <tr>
+                <td class="stats_label">
+                  RMS Wind
+                </td>
+                <td class="stats_data">
+                  $year.wind.rms
+                </td>
+              </tr>
+
+              <tr>
+                <td class="stats_label">
+                  Vector Average Speed<br/>
+                  Vector Average Direction
+                </td>
+                <td class="stats_data">
+                  $year.wind.vecavg<br/>
+                  $year.wind.vecdir
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Inside Temperature<br/>
+                  Low Inside Temperature
+                </td>
+                <td class="stats_data">
+                  $year.inTemp.max at $year.inTemp.maxtime<br/>
+                  $year.inTemp.min at $year.inTemp.mintime
+                </td>
+              </tr>
+			  #if $year.extraTemp1.has_data
+              <tr>
+                <td class="stats_label">
+                  High Pond Temperature<br/>
+                  Low Pond Temperature
+                </td>
+                <td class="stats_data">
+                  $year.extraTemp1.max at $year.extraTemp1.maxtime<br/>
+                  $year.extraTemp1.min at $year.extraTemp1.mintime
+                </td>
+              </tr>
+              #end if
+              #if $year.UV.has_data
+              <tr>
+                <td class="stats_label">
+                  High UV<br/>
+                  Low UV
+                </td>
+                <td class="stats_data">
+                  $year.UV.max at $year.UV.maxtime<br/>
+                  $year.UV.min at $year.UV.mintime
+                </td>
+              </tr>
+              #end if
+              #if $year.ET.has_data and $year.ET.sum.raw >0.0
+              <tr>
+                <td class="stats_label">
+                  High ET<br/>
+                  Low ET
+                </td>
+                <td class="stats_data">
+                  $year.ET.max at $year.ET.maxtime<br/>
+                  $year.ET.min at $year.ET.mintime
+                </td>
+              </tr>
+              #end if
+              #if $year.radiation.has_data
+              <tr>
+                <td class="stats_label">
+                  High Radiation<br/>
+                  Low Radiation
+                </td>
+                <td class="stats_data">
+                  $year.radiation.max at $year.radiation.maxtime<br/>
+                  $year.radiation.min at $year.radiation.mintime
+                </td>
+              </tr>
+              #end if
+            </tbody>
+          </table>
+        </div> <!-- End class "stats" -->
+
+      </div> <!-- End  Left Hand Stats Group and class "stats_group" -->
+
+      <div id="content" class="grid_8">
+        
+        <div class="header">
+          <h3>Monthly Statistics and Plots</h3>
+        </div>
+        <div id="plots">
+          <img class="grid_4 alpha"  src="monthtempdew.png" alt="temperatures" />
+          <img class="grid_4 omega"  src="monthtempchill.png" alt="heatchill" />
+          <div class="clr"></div>
+        </div><div class="plots">
+          <img class="grid_4 alpha"  src="monthrain.png" alt="rain" />
+          <img class="grid_4 omega" src="monthwind.png" alt="wind" />
+          <div class="clr"></div>
+        </div><div class="plots">
+          <img class="grid_4 alpha"  src="monthbarometer.png" alt="barometer"/>
+          <img class="grid_4 omega" src="monthwinddir.png" alt="Hi Wind" />
+          <div class="clr"></div>
+        </div><div class="plots">
+          <img class="grid_4 alpha"  src="monthinside.png" alt="Inside" />
+          <img class="grid_4 omega" src="monthwindvec.png" alt="Wind Vector" />
+          <div class="clr"></div>
+        </div><div class="plots">
+          #if $month.rxCheckPercent.has_data
+          <img class="grid_4 alpha" src="monthrx.png" alt="month rx percent"/>
+          #end if
+          #if $month.radiation.has_data
+          <img class="grid_4 omega"  src="monthradiation.png" alt="Radiation" />
+          #end if
+          <div class="clr"></div>
+        </div><div class="plots">
+          #if $month.extraTemp1.has_data
+          <img class="grid_4 alpha"  src="monthpond.png" alt="Pond Temperatures" />
+          #end if
+        </div>
+      </div> <!-- End id "content" -->
+      <div class="clr"></div>
+
+
+      <div id="footer" class="grid_12">
+        <h3>About this weather station</h3>
+        <p>
+          #if $station.hardware[0:7] == 'Vantage'
+              This station uses a <a href="http://davisnet.com">
+              Davis $station.hardware</a> weather station,
+          #elif $station.hardware == 'VantageIP'
+            with a <a href="http://davisnet.com/weather/products/weather_product.asp?pnum=06555">
+            WeatherLinkIP connection</a>, 
+          #elif $station.hardware == 'WMR100'
+            This station uses an <a href="http://us.oregonscientific.com">
+            Oregon Scientific WMR100N</a> weather station,
+          #else
+              This station uses a $station.hardware weather station,
+          #end if
+          controlled by <a href="http://www.weewx.com">'weewx'</a>, an
+          experimental weather software system written in Python. Weewx was designed to be simple,
+          fast, and easy to understand by leveraging modern software concepts.
+        </p>
+      </div> <!-- End id "about" -->
+      
+      
+    <div class="clr"></div>
+
+    </div> <!-- End id "page" -->
+        
+    ## Include the Google Analytics code if the user has supplied an ID:
+    #if $Extras.has_key('googleAnalyticsId')
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try{
+            var pageTracker = _gat._getTracker("$Extras.googleAnalyticsId");
+            pageTracker._trackPageview();
+        } catch(err) {}
+    </script>
+    #end if
+
+  </body>
+</html>
