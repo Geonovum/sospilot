@@ -41,7 +41,7 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
 
         # e.g.'http://api.openweathermap.org/data/2.5/weather?q=Otterlo,nl&units=imperial'
         self.openweathermap_url = ''.join(stn_dict.get('openweathermap_url'))
-        syslog.syslog(syslog.LOG_INFO, "WeatherAPIStation: openweathermap_url=%s", self.openweathermap_url)
+        syslog.syslog(syslog.LOG_INFO, "WeatherAPIStation: openweathermap_url=" + self.openweathermap_url)
 
         self.the_time = time.time()
 
