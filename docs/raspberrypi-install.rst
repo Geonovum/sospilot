@@ -82,6 +82,12 @@ Aangeschaft 16 okt 2014, geleverd 17 okt 2014 from http://www.kiwi-electronics.n
     with two data lanes and a clock lane
     Memory Card Slot SDIO
 
+
+.. figure:: _static/rasp-pi-all-s.jpg
+   :align: center
+
+   *Figure 1 - Raspberry Pi Package*
+
 See also https://www.adafruit.com/datasheets/pi-specs.pdf
 
 Hardware Setup
@@ -193,11 +199,11 @@ And in the file  `/etc/wpa_supplicant.conf` configure multiple WIFI stations. Fo
            key_mgmt=WPA-PSK
            pairwise=CCMP TKIP
            group=CCMP TKIP
-           #psk="GeonovumGuest"
            psk=<generated PSK #2>
     }
 
-The latter approach did somehow not work so we remained in the first simple approach without `wpa_supplicant`.
+The latter approach with `wpa_supplicant` did somehow not work so we remained
+in the first simple approach without `wpa_supplicant`, only a simple `/etc/network/interfaces` config.
 
 Hostname
 --------
@@ -207,20 +213,14 @@ In ``/etc/hostname`` set to ``georasp``..
 Accounts
 --------
 
-Elke server krijgt 2 standaard accounts: ``root`` ("root admin") en ``sadmin`` ("sensors admin"). NB de account ``root``
+Twee standaard accounts: ``root`` ("root admin") en ``sadmin`` ("sensors admin"). NB de account ``root``
 wordt (door Ubuntu) nooit aangemaakt als login account!
 
 Het beheer-account ``root`` heeft root-rechten.
 
 Het account ``sadmin`` heeft ook wat rechten maar minder.
-Dit account heeft lees/schrijfrechten op directories voor custom installaties (zie onder),
-de websites onder ``/var/www`` behalve partner-projecten en data/configuratie directories onder ``/var/sensors``. ::
+Het account ``sadmin`` heeft lees/schrijfrechten op directories voor custom installaties (zie onder).
 
-	$ id sadmin
-	uid=1001(sadmin) gid=1002(sadmin) groups=1002(sadmin)
-
-	$ id root
-	uid=0(root) gid=0(root) groups=0(root)
 
 Software Installation
 ---------------------
@@ -237,23 +237,22 @@ custom installaties worden door het account ``root``.
 Backup
 ------
 
-TODO
+TODO vooral de weewx DB!
 
 Disk Gebruik
 ------------
 
-Op 17.10.14, before major installs. ::
+Op 20.10.14. ::
 
-    root@georasp:~# df -h
     Filesystem      Size  Used Avail Use% Mounted on
-    rootfs           28G  2.4G   24G  10% /
-    /dev/root        28G  2.4G   24G  10% /
+    rootfs           28G  2.6G   24G  10% /
+    /dev/root        28G  2.6G   24G  10% /
     devtmpfs        215M     0  215M   0% /dev
-    tmpfs            44M  272K   44M   1% /run
+    tmpfs            44M  268K   44M   1% /run
     tmpfs           5.0M     0  5.0M   0% /run/lock
     tmpfs            88M     0   88M   0% /run/shm
     /dev/mmcblk0p5   60M  9.6M   50M  17% /boot
-    /dev/mmcblk0p3   27M  438K   25M   2% /media/SETTINGS
+
 
 Server Software - General
 =========================
@@ -305,7 +304,7 @@ Config under `/etc/nginx` especially, default website at `/etc/nginx/sites-avail
 Installatie - Project Software
 ==============================
 
-Software en documentatie voor project zit in Geonovum GitHub: https://github.com/Geonovum/sospilot
+Software en documentatie voor project, bijv `weewx` config, zit in Geonovum GitHub: https://github.com/Geonovum/sospilot
 
 We installeren deze onder ``/opt/geonovum/sospilot`` ::
 
@@ -446,6 +445,36 @@ XML-based language used for the transformation of XML documents into other XML d
 Installatie van XSLT processor voor commandline. o.a. gebruikt voor INSPIRE GML transformaties. ::
 
   apt-get install xsltproc
+
+SQLite
+------
+
+`weewx` uses SQLite to store weather records. Command line tools. ::
+
+    apt-get install sqlite3
+
+    # test
+    sqlite3 weewx.sdb
+    SQLite version 3.7.13 2012-06-11 02:05:22
+    Enter ".help" for instructions
+    Enter SQL statements terminated with a ";"
+    sqlite> .schema
+    CREATE TABLE archive (`dateTime` INTEGER NOT NULL UNIQUE PRIMARY KEY,
+    `usUnits` INTEGER NOT NULL,
+    `interval` INTEGER NOT NULL,
+    `barometer` REAL, `pressure`
+    REAL, `altimeter` REAL, `inTemp` REAL,
+    `outTemp` REAL, `inHumidity` REAL, `outHumidity` REAL,
+    `windSpeed` REAL, `windDir` REAL, `windGust` REAL, `windGustDir`
+    REAL, `rainRate` REAL, `rain` REAL, `dewpoint` REAL, `windchill` REAL,
+    `heatindex` REAL, `ET` REAL, `radiation` REAL, `UV` REAL, `extraTemp1` REAL,
+    `extraTemp2` REAL, `extraTemp3` REAL, `soilTemp1` REAL, `soilTemp2` REAL, `soilTemp3` REAL,
+    `soilTemp4` REAL, `leafTemp1` REAL, `leafTemp2` REAL, `extraHumid1` REAL, `extraHumid2` REAL,
+    `soilMoist1` REAL, `soilMoist2` REAL, `soilMoist3` REAL, `soilMoist4` REAL, `leafWet1` REAL,
+    `leafWet2` REAL, `rxCheckPercent` REAL, `txBatteryStatus` REAL, `consBatteryVoltage` REAL,
+    `hail` REAL, `hailRate` REAL, `heatingTemp` REAL, `heatingVoltage` REAL, `supplyVoltage` REAL,
+    `referenceVoltage` REAL, `windBatteryStatus` REAL, `rainBatteryStatus` REAL, `outTempBatteryStatus` REAL,
+    `inTempBatteryStatus` REAL);
 
 GDAL/OGR
 --------
