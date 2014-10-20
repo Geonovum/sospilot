@@ -19,7 +19,6 @@ published to the 52N SOS. The station is also registered in the national gespati
 The results of this project have been described in
 a `Geo-Info magazine article (2010-1) <http://www.geo-info.nl/download/?id=15311409&download=1>`_.
 
-
 Raspberry Pi
 ------------
 
@@ -60,9 +59,50 @@ Software
 
 * OS: Raspbian Debian Wheezy (sept 2014) - Free
 * Open source software for weather station: `weewx <http://www.weewx.com>`_ with SQLlite  - free
-* `wview`, kan gebruik maken van archive SQLite DB van weewx: http://www.wviewweather.com
+* `wview`, kan gebruik maken van archive SQLite DB van weewx: http://www.wviewweather.com ??
 
-Best option for now seems to be to use Pi with WIFI.
+Best option for now seems to be to use Pi with WIFI. See `raspberrypi-install <raspberrypi-install.html`_ for the
+basic installation.
+
+Weather Software
+----------------
+
+The choice is `weewx <http://www.weewx.com>`_ with SQLlite. `weewx` is installed as part of the
+`raspberrypi-install <raspberrypi-install.html`_. The configuration is maintained in
+GitHub https://github.com/Geonovum/sospilot/tree/master/src/weewx/davis. After a first test
+using our WeatherStationAPI custom driver the Geonovum Davis weather station will be connected.
+The web reporting is synced by `weewx` every 5 mins to to our main website:
+http://sensors.geonovum.nl/weewx. This will take about 125kb each 5 mins.
+
+Data ETL
+--------
+
+`weewx` stores 'archive' data within a SQLite DB file `weewx.sdb`. Statistical
+data is derived from this data. Within `weewx.sdb` there is a single table `archive`.
+The database/table structure. ::
+
+    # test
+    sqlite3 weewx.sdb
+    SQLite version 3.7.13 2012-06-11 02:05:22
+    Enter ".help" for instructions
+    Enter SQL statements terminated with a ";"
+    sqlite> .schema
+    CREATE TABLE archive (`dateTime` INTEGER NOT NULL UNIQUE PRIMARY KEY,
+    `usUnits` INTEGER NOT NULL,
+    `interval` INTEGER NOT NULL,
+    `barometer` REAL, `pressure`
+    REAL, `altimeter` REAL, `inTemp` REAL,
+    `outTemp` REAL, `inHumidity` REAL, `outHumidity` REAL,
+    `windSpeed` REAL, `windDir` REAL, `windGust` REAL, `windGustDir`
+    REAL, `rainRate` REAL, `rain` REAL, `dewpoint` REAL, `windchill` REAL,
+    `heatindex` REAL, `ET` REAL, `radiation` REAL, `UV` REAL, `extraTemp1` REAL,
+    `extraTemp2` REAL, `extraTemp3` REAL, `soilTemp1` REAL, `soilTemp2` REAL, `soilTemp3` REAL,
+    `soilTemp4` REAL, `leafTemp1` REAL, `leafTemp2` REAL, `extraHumid1` REAL, `extraHumid2` REAL,
+    `soilMoist1` REAL, `soilMoist2` REAL, `soilMoist3` REAL, `soilMoist4` REAL, `leafWet1` REAL,
+    `leafWet2` REAL, `rxCheckPercent` REAL, `txBatteryStatus` REAL, `consBatteryVoltage` REAL,
+    `hail` REAL, `hailRate` REAL, `heatingTemp` REAL, `heatingVoltage` REAL, `supplyVoltage` REAL,
+    `referenceVoltage` REAL, `windBatteryStatus` REAL, `rainBatteryStatus` REAL, `outTempBatteryStatus` REAL,
+    `inTempBatteryStatus` REAL);
 
 Links
 -----
