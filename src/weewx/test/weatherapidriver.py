@@ -165,35 +165,40 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
         #                      'UV'         : Solar(magnitude=14,     solar_start=6.0, solar_length=12.0),
         #                      'rain'       : Rain(rain_start=0, rain_length=3, total_rain=0.2, loop_interval=self.loop_interval)}
         packet = {'dateTime': int(self.the_time+0.5), 'usUnits' : weewx.US }
-        main = rsp_dict['main']
-        packet['outTemp'] = main['temp']
-        # packet['barometer'] = main['temp']
-        # p_m = (1016.5, 'mbar', 'group_pressure')
-        # c = Converter()
-        # print c.convert(p_m)
-        # (30.020673360897813, 'inHg', 'group_pressure')
+        try:
+            main = rsp_dict['main']
+            packet['outTemp'] = main['temp']
+            # packet['barometer'] = main['temp']
+            # p_m = (1016.5, 'mbar', 'group_pressure')
+            # c = Converter()
+            # print c.convert(p_m)
+            # (30.020673360897813, 'inHg', 'group_pressure')
 
-        c = Converter()
-        p_m = (main['pressure'], 'mbar', 'group_pressure')
-        pressure, units, group = c.convert(p_m)
+            c = Converter()
+            p_m = (main['pressure'], 'mbar', 'group_pressure')
+            pressure, units, group = c.convert(p_m)
 
-        packet['barometer'] = pressure
-        packet['pressure'] = pressure
-        packet['outHumidity'] = main['humidity']
-        wind = rsp_dict['wind']
-        # p_m = (wind['speed'], 'meter_per_second', 'group_speed')
-        # speed, units, group = c.convert(p_m)
+            packet['barometer'] = pressure
+            packet['pressure'] = pressure
+            packet['outHumidity'] = main['humidity']
+            wind = rsp_dict['wind']
+            # p_m = (wind['speed'], 'meter_per_second', 'group_speed')
+            # speed, units, group = c.convert(p_m)
 
-        packet['windSpeed'] = wind['speed']
-        # packet['windGust'] = wind['temp']
-        packet['windDir'] = wind['deg']
-        # packet['windGust'] = main['temp']
+            packet['windSpeed'] = wind['speed']
+            # packet['windGust'] = wind['temp']
+            packet['windDir'] = wind['deg']
+            # packet['windGust'] = main['temp']
 
-        packet['rainRate'] = rsp_dict['rain']['1h']
+            packet['rainRate'] = rsp_dict['rain']['1h']
 
-        packet['windchill'] = weewx.wxformulas.windchillF(packet['outTemp'], packet['windSpeed'])
-        packet['dewpoint']  = weewx.wxformulas.dewpointF(packet['outTemp'], packet['outHumidity'])
-        packet['heatindex'] = weewx.wxformulas.heatindexF(packet['outTemp'], packet['outHumidity'])
+            packet['windchill'] = weewx.wxformulas.windchillF(packet['outTemp'], packet['windSpeed'])
+            packet['dewpoint']  = weewx.wxformulas.dewpointF(packet['outTemp'], packet['outHumidity'])
+            packet['heatindex'] = weewx.wxformulas.heatindexF(packet['outTemp'], packet['outHumidity'])
+        except Exception, e:
+            syslog.syslog(syslog.LOG_INFO, "WeatherAPIStation: error creating packet=" + str(rsp_dict) + ' e=' + str(e))
+            packet = None
+
         return packet
 
     def getTime(self):
