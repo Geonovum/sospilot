@@ -20,6 +20,7 @@ Contents:
    administration.rst
    weather.rst
    weatherstation.rst
+   raspberrypi-install.rst
    server-inrichting.rst
    contact.rst
    links.rst
