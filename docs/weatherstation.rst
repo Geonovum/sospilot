@@ -42,27 +42,28 @@ User access (but not required once having setup as we access via SSH).
 * monitor with HDMI input
 * HDMI cable
 
-Mobile networking
+Mobile networking (not)
 
 * USB 3G Modem - Huawei - most probably E3131 (of Wifi networking)
 
-Wifi Networking
+Wifi Networking:
 
 * Draadloze USB Adapter voor Raspberry `Pi Wi-Pi  <http://www.kiwi-electronics.nl/raspberry-pi/raspberry-pi-accessoires/wi-pi-draadloze-usb-adapter-voor-raspberry-pi>`_ (EUR 18,95).
 
-Connection to Davis Weather Station WeatherLink USB adapter
+Connection to Davis Weather Station WeatherLink USB adapter:
 
 * USB Cable (USB A Male B Mini) with ferrite noise suppressor : http://www.allekabels.nl/usb-20-kabel/172/1043120/usb-20-mini-kabel-professioneel.html (EUR 17,95)
 * powered USB hub. Why? See http://www.weewx.com/docs/usersguide.htm#Raspberry_Pi
 
-Software
+Software:
 
 * OS: Raspbian Debian Wheezy (sept 2014) - Free
 * Open source software for weather station: `weewx <http://www.weewx.com>`_ with SQLlite  - free
 * `wview`, kan gebruik maken van archive SQLite DB van weewx: http://www.wviewweather.com ??
 
-Best option for now seems to be to use Pi with WIFI. See `raspberrypi-install <raspberrypi-install.html`_ for the
-basic installation.
+Best option for now seems to be to use Pi with WIFI i.s.o. mobile data.
+
+See `raspberrypi-install <raspberrypi-install.html>`_ for the basic installation of the RPi for the project.
 
 Weather Software
 ----------------

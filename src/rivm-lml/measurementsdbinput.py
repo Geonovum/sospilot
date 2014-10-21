@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# ApacheDirInput: access remote Apache dir over HTTP and fetch file-data from it.
+# MeasurementsDbInput: Reads RIVM raw AQ/LML file data from measurements table and converts to recordlist
 #
 # Author:Just van den Broecke
 
@@ -15,7 +15,7 @@ log = Util.get_log("MeasurementsDbInput")
 
 class MeasurementsDbInput(PostgresDbInput):
     """
-    Reads RIVM raw AQ/LML file data from measurementss table and converts to recordlist
+    Reads RIVM raw AQ/LML file data from measurements table and converts to recordlist
     """
     def __init__(self, configdict, section):
         PostgresDbInput.__init__(self, configdict, section)
