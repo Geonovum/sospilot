@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# WeewxDbInput: reads raw weewx archive records and converts to Python record array (list of dict)
+# WeewxDbInput: reads raw weewx archive records from SQLite and converts to Python record array (list of dict)
 #
 # Author:Just van den Broecke
 
