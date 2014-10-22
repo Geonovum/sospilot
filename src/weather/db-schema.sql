@@ -81,6 +81,20 @@ CREATE TABLE weather.weewx_archive (
   inTempBatteryStatus  REAL
 );
 
+-- SELECT to_timestamp(datetime), "datetime","pressure","outtemp" FROM "weather"."weewx_archive"
+DROP VIEW IF EXISTS weather.v_weewx_archive;
+CREATE VIEW weather.v_weewx_archive AS
+  SELECT datetime,
+    to_timestamp(datetime),
+    round(((outtemp-32.0)*5.0/9.0)::numeric) as outtemp_c,
+    round(windSpeed::numeric) as windSpeed,
+    round(windDir::numeric) as windDir,
+    round(((windchill-32.0)*5.0/9.0)::numeric) as windchill_c,
+    rainRate,
+    pressure,
+    round(outhumidity::numeric) as outhumidity
+  FROM weather.weewx_archive ORDER BY datetime DESC;
+
 DROP TABLE IF EXISTS weather.measurements CASCADE;
 CREATE TABLE weather.measurements (
   gid          SERIAL,
