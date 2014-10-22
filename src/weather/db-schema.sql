@@ -13,6 +13,7 @@ CREATE TABLE weather.etl_progress (
   worker       CHARACTER VARYING(25),
   source_table CHARACTER VARYING(25),
   last_id      INTEGER,
+  last_time    CHARACTER VARYING(25) DEFAULT '-',
   last_update  TIMESTAMP,
   PRIMARY KEY (gid)
 );

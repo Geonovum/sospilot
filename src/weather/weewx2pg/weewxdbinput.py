@@ -7,6 +7,8 @@
 from stetl.util import Util
 from stetl.inputs.dbinput import SqliteDbInput
 from stetl.postgis import PostGIS
+import time
+import datetime
 
 log = Util.get_log("WeewxDbInput")
 
@@ -34,8 +36,11 @@ class WeewxDbInput(SqliteDbInput):
         Called right after entire Component Chain invoke.
         Used to update last id of processed file record.
         """
-        log.info('Updating progress table with last_id= %d' % self.last_id)
-        self.progress_db.execute(self.progress_update % self.last_id)
+        # last_datetime.datetime.fromtimestamp(self.last_id).strftime('%Y-%m-%d %H:%M:%S')
+        ts_local = time.strftime("%Y-%m-%d %H:%M:%S %Z", time.localtime(self.last_id))
+
+        log.info('Updating progress table ts_unix=%d ts_local=%s' % (self.last_id, ts_local))
+        self.progress_db.execute(self.progress_update % (self.last_id, ts_local))
         self.progress_db.commit(close=False)
         log.info('Update progress table ok')
         return True
