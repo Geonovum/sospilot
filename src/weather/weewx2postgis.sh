@@ -11,11 +11,9 @@ stetl_cmd=stetl
 # debugging
 # stetl_cmd=../../../../stetl/git/stetl/main.py
 
-# Host-specific Postgres credentials in $pg_options
+# Set Stetl options
+
 . pgcreds.sh
-
-options="$pg_options"
-
 
 $stetl_cmd -c weewx2postgis.cfg -a "$options"
 

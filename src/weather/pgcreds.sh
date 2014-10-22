@@ -1,4 +1,4 @@
-export PGUSER=postgres
-export PGPASSWORD=postgres
+# Sets host-specific variables
+. options-`hostname`.sh
 
-export pg_options="host=localhost port=5432 weewx_db=../../data/weewx/weewx.sdb user=$PGUSER password=$PGPASSWORD database=sensors schema=weather"
+export options="host=localhost port=5432 weewx_db=$WEEWX_DB user=$PGUSER password=$PGPASSWORD database=sensors schema=weather"
