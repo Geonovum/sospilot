@@ -1,5 +1,8 @@
 #!/bin/bash
 #
+# Script to invoke ETL on the Raspberry Pi
+# Uses an SSH tunnel to connect to Postgres on the VPS
+#
 
 # Kill possible hanging background SSH tunnel
 pstree -p sadmin | grep 'ssh(' | cut -d'(' -f2 | cut -d')' -f1|xargs kill -9 > /dev/null 2>&1

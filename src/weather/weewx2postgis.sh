@@ -13,7 +13,7 @@ stetl_cmd=stetl
 
 # Set Stetl options
 
-. pgcreds.sh
+. options.sh
 
 $stetl_cmd -c weewx2postgis.cfg -a "$options"
 
