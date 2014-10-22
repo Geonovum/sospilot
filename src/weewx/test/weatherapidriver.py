@@ -1,11 +1,11 @@
 #
 #    Copyright (c) 2014 Just van den Broecke <just@justobjects.nl>
 #
+#    See GNU GPL LICENSE at top-level dir of this project.
 #
-"""Waether API fetcher for the weewx weather system"""
+"""Weather API fetcher for the weewx weather system"""
 
 from __future__ import with_statement
-import math
 import json
 import time
 from urllib2 import Request, urlopen, URLError, HTTPError
@@ -27,21 +27,19 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
     """Station simulator by querying weather APIs"""
 
     def __init__(self, **stn_dict):
-        """Initialize the simulator
+        """Initialize the WeatherAPIStation
 
         NAMED ARGUMENTS:
 
         loop_interval: The time (in seconds) between emitting LOOP packets. [Optional. Default is 2.5]
 
-        mode: Required. One of either:
-            'simulator': Real-time simulator. It will sleep between emitting LOOP packets.
-            'generator': Emit packets as fast as it can (useful for testing).
+        openweathermap_url: the OpenWeatherMapAPI URL like 'http://api.openweathermap.org/data/2.5/weather?q=Otterlo,nl&units=imperial'
         """
         self.loop_interval = float(stn_dict.get('loop_interval', 2.5))
 
         # e.g.'http://api.openweathermap.org/data/2.5/weather?q=Otterlo,nl&units=imperial'
         self.openweathermap_url = ','.join(stn_dict.get('openweathermap_url'))
-        syslog.syslog(syslog.LOG_INFO, "WeatherAPIStation: openweathermap_url=" + self.openweathermap_url)
+        syslog.syslog(syslog.LOG_INFO, "WeatherAPIStation: openweathermap_url=%s" % self.openweathermap_url)
 
         self.the_time = time.time()
 
@@ -59,7 +57,7 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
                     if data_dict is not None:
                         packet = self.createpacket(data_dict)
                         if packet is not None:
-                            print("Created packet: %s", str(packet))
+                            print("Created packet: %s" % str(packet))
                             yield packet
             finally:
                 # We should never loose the loop due to some error
@@ -81,22 +79,22 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
         # log.info('Fetch data from URL: %s ...' % url)
 
         req = Request(url)
+        rsp_data = None
         try:
             # Urlencode optional parameters
             query_string = None
             if parameters:
                 query_string = urllib.urlencode(parameters)
 
+            syslog.syslog(syslog.LOG_INFO, "WeatherAPIStation: fetching packet from=%s ..." % url)
             response = urlopen(req, query_string)
-        except HTTPError as e:
-            print('HTTPError fetching from URL %s: code=%d e=%s' % (url, e.code, e))
-            return None
-        except URLError as e:
-            print('URLError fetching from URL %s: reason=%s e=%s' % (url, e.reason, e))
-            return None
-        else:
-                # everything is fine
-            return response.read()
+
+            # everything is fine
+            rsp_data = response.read()
+        except Exception, e:
+            syslog.syslog(syslog.LOG_WARNING, 'HTTPError fetching from URL %s: e=%s' % (url, str(e)))
+
+        return rsp_data
 
     def parse_data(self, json_string):
         # One-time read/parse only
@@ -104,7 +102,7 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
         try:
             file_data = json.loads(json_string)
         except Exception, e:
-            print('Cannot parse JSON from %s, err= %s' % (json_string, str(e)))
+            syslog.syslog(syslog.LOG_WARNING, 'Cannot parse JSON from %s, err= %s' % (json_string, str(e)))
 
         return file_data
 
@@ -196,7 +194,7 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
             packet['dewpoint']  = weewx.wxformulas.dewpointF(packet['outTemp'], packet['outHumidity'])
             packet['heatindex'] = weewx.wxformulas.heatindexF(packet['outTemp'], packet['outHumidity'])
         except Exception, e:
-            syslog.syslog(syslog.LOG_INFO, "WeatherAPIStation: error creating packet=" + str(rsp_dict) + ' e=' + str(e))
+            syslog.syslog(syslog.LOG_WARNING, "WeatherAPIStation: error creating packet=" + str(rsp_dict) + ' e=' + str(e))
             packet = None
 
         return packet
@@ -211,7 +209,7 @@ class WeatherAPIStation(weewx.abstractstation.AbstractStation):
 
 if __name__ == "__main__":
 
-    station = WeatherAPIStation(mode='simulator',loop_interval=2.0)
+    station = WeatherAPIStation(openweathermap_url=['http://api.openweathermap.org/data/2.5/weather?q=Otterlo','nl&units=imperial'], loop_interval=2.0)
     for packet in station.genLoopPackets():
         print weeutil.weeutil.timestamp_to_string(packet['dateTime']), packet
 
