@@ -19,9 +19,9 @@ CREATE TABLE weather.etl_progress (
 
 -- Define workers
 INSERT INTO weather.etl_progress (worker, source_table, last_id, last_update)
-  VALUES ('weewx2archive', 'sqlite_archive', -1, current_timestamp);
+  VALUES ('weewx2archive', 'sqlite_archive', 0, current_timestamp);
 INSERT INTO weather.etl_progress (worker, source_table, last_id, last_update)
-  VALUES ('archive2measurements', 'weewx_archive', -1, current_timestamp);
+  VALUES ('archive2measurements', 'weewx_archive', 0, current_timestamp);
 
 -- Raw weewx_archive table - data from weewx weather archive
 DROP TABLE IF EXISTS weather.weewx_archive CASCADE;
