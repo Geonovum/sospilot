@@ -5,7 +5,7 @@
 Raspberry Pi Install Log
 ************************
 
-Below the setup and installation of the Raspberry Pi for the weather station is described.
+Below the setup and installation of the Raspberry Pi (RPi) for the weather station is described.
 
 Conventions
 ===========
@@ -62,6 +62,8 @@ Specs. ::
 
     Wi-Pi Draadloze USB Adapter voor Raspberry Pi   € 18,95
 
+    Belkin 4-Port Powered Mobile USB 2.0 Hub        € 16,95
+
     Specs:
     Chip Broadcom BCM2835 SoC
     Core architecture ARM11
@@ -91,7 +93,8 @@ Specs. ::
     Memory Card Slot SDIO
 
 
-See also https://www.adafruit.com/datasheets/pi-specs.pdf
+See also https://www.adafruit.com/datasheets/pi-specs.pdf. The Belkin 4-Port Powered Mobile USB
+is recommended when attaching WiPi and Davis USB devices, as the RPi may have loss USB-power issues.
 
 Hardware Setup
 --------------
@@ -208,6 +211,11 @@ And in the file  `/etc/wpa_supplicant.conf` configure multiple WIFI stations. Fo
 The latter approach with `wpa_supplicant` did somehow not work so we remained
 in the first simple approach without `wpa_supplicant`, only a simple `/etc/network/interfaces` config.
 
+Wifi seems to go down from time to time with `wlan0: CTRL-EVENT-DISCONNECTED reason=4` in syslog.
+Will use a script in cron to always keep Wifi up.
+For topic see http://www.raspberrypi.org/forums/viewtopic.php?t=54001&p=413095.
+See script at https://github.com/Geonovum/sospilot/blob/master/src/raspberry/wificheck.sh and Monitoring section below.
+
 Hostname
 --------
 
@@ -216,7 +224,7 @@ In ``/etc/hostname`` set to ``georasp``..
 Accounts
 --------
 
-Twee standaard accounts: ``root`` ("root admin") en ``sadmin`` ("sensors admin"). NB de account ``root``
+Two standard accounts: ``root`` ("root admin") en ``sadmin`` ("sensors admin"). NB de account ``root``
 wordt (door Ubuntu) nooit aangemaakt als login account!
 
 Het beheer-account ``root`` heeft root-rechten.
@@ -237,28 +245,8 @@ Alleen in een uiterst geval waarbij een software product niet in het APT systeem
 in een gewenste versie is een handmatige ("custom") installatie gedaan. Hierbij is de volgende conventie aangehouden:
 custom installaties worden door het account ``root``.
 
-Backup
-------
-
-TODO vooral de weewx DB!
-
-Disk Gebruik
-------------
-
-Op 20.10.14. ::
-
-    Filesystem      Size  Used Avail Use% Mounted on
-    rootfs           28G  2.6G   24G  10% /
-    /dev/root        28G  2.6G   24G  10% /
-    devtmpfs        215M     0  215M   0% /dev
-    tmpfs            44M  268K   44M   1% /run
-    tmpfs           5.0M     0  5.0M   0% /run/lock
-    tmpfs            88M     0   88M   0% /run/shm
-    /dev/mmcblk0p5   60M  9.6M   50M  17% /boot
-
-
-Server Software - General
-=========================
+Software - General
+==================
 
 Install of standard packages.
 
@@ -435,8 +423,8 @@ Steps. ::
         allow all;
     }
 
-Installatie - ETL Tools
-=======================
+Installation - ETL Tools
+========================
 
 
 XSLT Processor
@@ -456,6 +444,13 @@ SQLite
 
     apt-get install sqlite3
 
+Postgres Client
+---------------
+
+Just need `psql` for now plus libs (`psycopg2`) for Stetl.  ::
+
+    apt-get  install postgresql-client
+
 GDAL/OGR
 --------
 
@@ -470,11 +465,15 @@ Installatie is simpel via APT. ::
 
     $ apt-get install gdal-bin python-gdal
 
-    0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
-    Inst gdal-bin (1.10.1+dfsg-5ubuntu1 Ubuntu:14.04/trusty [amd64])
-    Conf gdal-bin (1.10.1+dfsg-5ubuntu1 Ubuntu:14.04/trusty [amd64])
-    Setting up python-numpy (1:1.8.1-1ubuntu1) ...
-    Setting up python-gdal (1.10.1+dfsg-5ubuntu1) ...
+    # Error...! 2e keer gaat goed na  apt-get update --fix-missing
+    Fetched 15.6 MB in 18s (838 kB/s)
+    Failed to fetch http://mirrordirector.raspbian.org/raspbian/pool/main/m/mysql-5.5/mysql-common_5.5.38-0+wheezy1_all.deb  404  Not Found
+    Failed to fetch http://mirrordirector.raspbian.org/raspbian/pool/main/m/mysql-5.5/libmysqlclient18_5.5.38-0+wheezy1_armhf.deb  404  Not Found
+
+    Setting up libgeos-3.3.3 (3.3.3-1.1) ...
+    Setting up proj-bin (4.7.0-2) ...
+    Setting up gdal-bin (1.9.0-3.1) ...
+    python-gdal_1.9.0-3.1_armhf.deb
 
 
 Stetl - Streaming ETL
@@ -482,27 +481,24 @@ Stetl - Streaming ETL
 
 Zie http://stetl.org
 
-Eerst alle dependencies!  ::
+First all dependencies!  ::
 
-	apt-get install python-pip
-	apt-get install python-lxml
-	apt-get install postgresql-server-dev-9.3
-	apt-get install python-gdal libgdal-dev
-	apt-get install python-psycopg2
+    apt-get install python-pip python-lxml libgdal-dev python-psycopg2
 
 Normaal doen we ``pip install stetl`` maar nu even install uit Git vanwege
-te verwachten updates.Install vanuit GitHub versie onder ``/opt/stetl/git``. ::
+te verwachten updates. Install vanuit GitHub versie onder ``/opt/stetl/git`` (als user `sadmin`). ::
 
     $ mkdir /opt/stetl
     $ cd /opt/stetl
     $ git clone https://github.com/justb4/stetl.git git
     $ cd git
-    $ python setup.py install
+    $ python setup.py install  (als root)
 
     $ stetl -h
-    # 2014-05-25 13:43:40,930 util INFO running with lxml.etree, good!
-    # 2014-05-25 13:43:40,931 util INFO running with cStringIO, fabulous!
-    # 2014-05-25 13:43:40,936 main INFO Stetl version = 1.0.5
+    # 2014-10-21 18:40:37,819 util INFO Found cStringIO, good!
+    # 2014-10-21 18:40:38,585 util INFO Found lxml.etree, native XML parsing, fabulous!
+    # 2014-10-21 18:40:41,636 util INFO Found GDAL/OGR Python bindings, super!!
+    # 2014-10-21 18:40:41,830 main INFO Stetl version = 1.0.7rc13
 
 
 Installatie Testen. ::
@@ -564,66 +560,308 @@ Nodig voor Stetl Jinja2 templating Filter. ::
     Successfully installed jinja2 markupsafe
     Cleaning up...
 
-Tot hier gekomen op 19.10.2014
-==============================
+Installation - Maintenance
+==========================
+
+Remote Access
+-------------
+
+The RPi is not accessible from outside the LAN. For small maintenance purposes we may setup a
+reverse SSH tunnel such that we can access the RPi from a known system, 'remote', to which the RPi can connect via SSH.
+This way the RPi is only accessible from 'remote' and the communication is encrypted.
+
+Setting up and maintaining a tunnel is best done with ``autossh``.
+See more info at http://linuxaria.com/howto/permanent-ssh-tunnels-with-autossh
+
+Steps as follows. ::
+
+    # install autossh
+    $ apt-get install autossh
+
+    # add user without shell on RPi and remote
+    useradd -m -s /bin/false autossh
+
+    # Generate keys op RPi
+    ssh-keygen -t rsa
+
+    # store on remote in /home/autossh/.ssh/authorized_keys
+
+    # add to /etc/rc.local on RPi/opt/bin/start-tunnels.sh with content
+    sleep 120
+    export AUTOSSH_LOGFILE=/var/log/autossh/autossh.log
+    export AUTOSSH_PIDFILE=/var/run/autossh/autossh.pid
+    # export AUTOSSH_POLL=60
+    # export AUTOSSH_FIRST_POLL=30
+    # export AUTOSSH_GATETIME=30
+    export AUTOSSH_DEBUG=1
+
+    su -s /bin/sh autossh -c
+      'autossh -M 0 -q -f -N -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R <localport>:localhost:22 autossh@<remote>'
+
+Now we can login to the RPi, but only from 'remote' with ``ssh <user>@localhost -p <localport>``.
+
+Monitoring
+----------
+
+As the RPi will be running headless and unattended within a LAN, it is of utmost importance
+that 'everything remains running'. To this end cronjobs are run with the following crontab file. ::
+
+    # Cronfile for keeping stuff alive on unattended Raspberry Pi
+    # Some bit crude like reboot, but effective mostly
+    # Author: Just van den Broecke <justb4@gmail.com>
+    #
+    SHELL=/bin/sh
+    PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+    SRC=/opt/geonovum/sospilot/git/src
+
+    # Do checks on weewx and network every N mins
+    */6  * * * * $SRC/weewx/weewxcheck.sh
+    */10 * * * * $SRC/raspberry/wificheck.sh
+    */15 * * * * $SRC/raspberry/rpistatus.sh
+    0   4  * * *   shutdown -r +5
+
+The `weewx` daemon appears to be stopping randomly. Not clear why, but looks like this happens
+when there are network problems. To check and restart if needed the following script is run. ::
+
+    #! /bin/sh
+    # Author: Just van den Broecke <justb4@gmail.com>
+    # Restart weewx if not running.
+    #
+
+    WEEWX_HOME=/opt/weewx/weewxinst
+    WEEWX_BIN=$WEEWX_HOME/bin/weewxd
+
+    NPROC=`ps ax | grep $WEEWX_BIN | grep $NAME.pid | wc -l`
+    if [ $NPROC -gt 1 ]; then
+        echo "weewx running multiple times on `date`! Attempting restart." >> /var/log/weewxcheck.log
+        /etc/init.d/weewx restart
+    elif [ $NPROC = 1 ]; then
+        echo "Weewx is ok: $status"
+    else
+        echo "weewx not running on `date`! Attempting restart." >> /var/log/weewxcheck.log
+        /etc/init.d/weewx restart
+    fi
+
+Restarts are also logged so we can see how often this happens.
+
+The WiPi seems to have stability problems. This is a whole area of investigation on
+WIFI-stations/drivers/parameters etc, that could take days if not weeks... For now a script
+is run, that checks if the WIfi (`wlan0` device) is up or else restarts the interface/Wifi.
+For topic see http://www.raspberrypi.org/forums/viewtopic.php?t=54001&p=413095.
+See script at https://github.com/Geonovum/sospilot/blob/master/src/raspberry/wificheck.sh ::
+
+    #!/bin/bash
+    ##################################################################
+    # NOTE! THIS IS A MODIFIED VERSION OF THE ORIGINAL PROGRAM
+    # WRITTEN BY KEVIN REED.  TO GET THE ORIGINAL PROGRAM SEE
+    # THE URL BELOW:
+    #
+    # A Project of TNET Services, Inc
+    #
+    # Title:     WiFi_Check
+    # Author:    Kevin Reed (Dweeber)
+    #            dweeber.dweebs@gmail.com
+    #            Small adaptions by Just van den Broecke <justb4@gmail.com>
+    # Project:   Raspberry Pi Stuff
+    #
+    # Copyright: Copyright (c) 2012 Kevin Reed <kreed@tnet.com>
+    #            https://github.com/dweeber/WiFi_Check
+    #
+    # Purpose:
+    #
+    # Script checks to see if WiFi has a network IP and if not
+    # restart WiFi
+    #
+    # Uses a lock file which prevents the script from running more
+    # than one at a time.  If lockfile is old, it removes it
+    #
+    # Instructions:
+    #
+    # o Install where you want to run it from like /usr/local/bin
+    # o chmod 0755 /usr/local/bin/WiFi_Check
+    # o Add to crontab
+    #
+    # Run Every 5 mins - Seems like ever min is over kill unless
+    # this is a very common problem.  If once a min change */5 to *
+    # once every 2 mins */5 to */2 ...
+    #
+    # */5 * * * * /usr/local/bin/WiFi_Check
+    #
+    ##################################################################
+    # Settings
+    # Where and what you want to call the Lockfile
+    lockfile='/var/run/WiFi_Check.pid'
+
+    # Which Interface do you want to check/fix
+    wlan='wlan0'
+
+    # Which address do you want to ping to see if you can connect
+    pingip='194.109.6.93'
+
+    ##################################################################
+    echo
+    echo "Starting WiFi check for $wlan"
+    date
+    echo
+
+    # Check to see if there is a lock file
+    if [ -e $lockfile ]; then
+        # A lockfile exists... Lets check to see if it is still valid
+        pid=`cat $lockfile`
+        if kill -0 &>1 > /dev/null $pid; then
+            # Still Valid... lets let it be...
+            #echo "Process still running, Lockfile valid"
+            exit 1
+        else
+            # Old Lockfile, Remove it
+            #echo "Old lockfile, Removing Lockfile"
+            rm $lockfile
+        fi
+    fi
+    # If we get here, set a lock file using our current PID#
+    #echo "Setting Lockfile"
+    echo $$ > $lockfile
+
+    # We can perform check
+    echo "Performing Network check for $wlan"
+    /bin/ping -c 2 -I $wlan $pingip > /dev/null 2> /dev/null
+    if [ $? -ge 1 ] ; then
+        echo "Network connection down on `date`! Attempting reconnection." >> /var/log/wificheck.log
+        /sbin/ifdown $wlan
+        sleep 10
+        /sbin/ifup --force $wlan
+    else
+        echo "Network is Okay"
+    fi
+
+
+    # Check is complete, Remove Lock file and exit
+    #echo "process is complete, removing lockfile"
+    rm $lockfile
+    exit 0
+
+    ##################################################################
+    # End of Script
+
+
+The overall RPi status is checked every 15 mins and the results posted to
+the VPS. In particular the network
+usage is monitored via `vnstat`. The script can be found at
+https://github.com/Geonovum/sospilot/blob/master/src/raspberry/rpistatus.sh and is
+as follows. ::
+
+    #! /bin/sh
+    # Author: Just van den Broecke <justb4@gmail.com>
+    # Status of RPi main resources. Post to VPS if possible.
+    #
+
+    log=/var/log/rpistatus.txt
+    remote=sadmin@sensors:/var/www/sensors.geonovum.nl/site/pi
+
+    echo "Status of `hostname` on date: `date`" > $log
+    uptime  >> $log 2>&1
+
+    echo "\n=== weewx ===" >> $log
+    /etc/init.d/weewx status >> $log
+    echo "archive stat: `ls -l /opt/weewx/weewxinst/archive`" >> $log 2>&1
+    echo "archive recs: `sqlite3 /opt/weewx/weewxinst/archive/weewx.sdb 'select count(*) from archive'`" >> $log 2>&1
+
+    echo "\n=== restarts ===" >> $log
+    echo "weewx:" >> $log
+    wc -l /var/log/weewxcheck.log | cut -d'/' -f1 >> $log 2>&1
+    echo "\nWifi:" >> $log
+    wc -l /var/log/wificheck.log  | cut -d'/' -f1 >> $log 2>&1
+
+    echo "\n=== bandwidth (vnstat)" >> $log
+    vnstat >> $log 2>&1
+
+    echo "\n=== network (ifconfig)" >> $log
+    ifconfig >> $log 2>&1
+
+    echo "\n=== disk usage (df -h) ===" >> $log
+    df -h >> $log 2>&1
+
+    echo "\n=== memory (free -m)===" >> $log
+    free -m >> $log 2>&1
+
+    scp $log $remote
+
+A typical result is as follows. See http://sensors.geonovum.nl/pi/rpistatus.txt. ::
+
+    Status of georasp on date: Thu Oct 23 13:11:31 CEST 2014
+     13:11:31 up 16:39,  3 users,  load average: 0.18, 0.17, 0.16
+
+    === weewx ===
+    Status of weewx weather system:: running.
+    archive stat: total 196
+    -rw-r--r-- 1 sadmin sadmin    189 Oct 20 13:02 one_archive_rec.txt
+    -rw-r--r-- 1 sadmin sadmin  43008 Oct 23 13:08 stats.sdb
+    -rw-r--r-- 1 sadmin sadmin 145408 Oct 23 13:08 weewx.sdb
+    archive recs: 850
+
+    === restarts ===
+    weewx:
+    0
+
+    Wifi:
+    0
+
+    === bandwidth (vnstat)
+
+                          rx      /      tx      /     total    /   estimated
+     eth0: Not enough data available yet.
+     wlan0:
+           Oct '14      1.32 MiB  /    2.34 MiB  /    3.66 MiB  /    3.00 MiB
+             today      1.32 MiB  /    2.34 MiB  /    3.66 MiB  /       4 MiB
+
+
+    === network (ifconfig)
+    eth0      Link encap:Ethernet  HWaddr b8:27:eb:12:6a:ef
+              UP BROADCAST MULTICAST  MTU:1500  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+    lo        Link encap:Local Loopback
+              inet addr:127.0.0.1  Mask:255.0.0.0
+              UP LOOPBACK RUNNING  MTU:65536  Metric:1
+              RX packets:16829 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:16829 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0
+              RX bytes:2825670 (2.6 MiB)  TX bytes:2825670 (2.6 MiB)
+
+    wlan0     Link encap:Ethernet  HWaddr 00:c1:41:06:0f:42
+              inet addr:10.0.0.241  Bcast:10.255.255.255  Mask:255.0.0.0
+              UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+              RX packets:52305 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:31157 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000
+              RX bytes:9209831 (8.7 MiB)  TX bytes:11348504 (10.8 MiB)
+
+
+    === disk usage (df -h) ===
+    Filesystem      Size  Used Avail Use% Mounted on
+    rootfs           28G  3.0G   24G  12% /
+    /dev/root        28G  3.0G   24G  12% /
+    devtmpfs        215M     0  215M   0% /dev
+    tmpfs            44M  276K   44M   1% /run
+    tmpfs           5.0M     0  5.0M   0% /run/lock
+    tmpfs            88M     0   88M   0% /run/shm
+    /dev/mmcblk0p5   60M  9.6M   50M  17% /boot
+
+    === memory (free -m)===
+                 total       used       free     shared    buffers     cached
+    Mem:           437        224        212          0         33        136
+    -/+ buffers/cache:         55        382
+    Swap:           99          0         99
+
+Backup
+------
 
 TODO
-====
-
-
-
-Installatie - Beheer
-====================
-
-Webalizer
----------
-
-Zie `<http://www.mrunix.net/webalizer/>`_.  *The Webalizer is a fast, free web server log file analysis program. It produces highly detailed,
-easily configurable usage reports in HTML format, for viewing with a standard web browser.*
-
-Installatie, ::
-
-  $ apt-get install webalizer
-  # installeer webalizer configuratie in /etc/webalizer/
-
-  # zorg dat output zichtbaar is via dir onder /var/www/default/sadm/webalizer
-
-  # enable DNS lookups
-  touch  /var/cache/webalizer/dns_cache.db
-
-Extra Fonts
------------
-
-Hoeft blijkbaar niet bij elke Java JDK upgrade...
-
-Installeren  MS fonts zie `<http://corefonts.sourceforge.net>`_
-en `<http://embraceubuntu.com/2005/09/09/installing-microsoft-fonts>`_. ::
-
-  apt-get install msttcorefonts
-  # installs in /usr/share/fonts/truetype/msttcorefonts
-
-Installeren fonts in Java (for geoserver).
-
- * Few fonts are included with Java by default, and for most people the the official documentation falls short of a useful explanation.
-   It is unclear exactly where Java looks for fonts, so the easiest way to solve this problems is to
-   copy whatever you need to a path guaranteed to be read by Java, which in our
-   case is ``/usr/lib/jvm/java-7-oracle``
-
- * First install the fonts you want. The MS Core Fonts
-   (Arial, Times New Roman, Verdana etc.) can be installed by following the instructions on
-   http://corefonts.sourceforge.net/.
-
- * Now copy the .ttf files to ``/usr/lib/jvm/java-7-oracle/``  and run (ttmkfdir is obsolete??),
-    from http://askubuntu.com/questions/22448/not-all-ttf-fonts-visible-from-the-sun-jdk this install
-
-Commands ::
-
-    mkfontscale
-    mkfontdir
-    fc-cache -f -v
-
-*All that remains is to restart any Java processes you have running, and the new fonts should be available.*
-
+- in particular the weewx DB needs to be backed up
+- SD-card image
 
 
 
