@@ -4,4 +4,11 @@
 #
 
 status=`/etc/init.d/weewx status | cut -d':' -f3`
-echo $status
+echo ".$status."
+
+if [ "$status" = " not running." ] ; then
+    echo "weewx not running on `date`! Attempting restart." >> /var/log/weewxcheck.log
+    /etc/init.d/weewx restart
+else
+    echo "Weewx is ok: $status"
+fi

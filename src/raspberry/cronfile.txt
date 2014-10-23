@@ -1,0 +1,12 @@
+# Cronfile for keeping stuff alive on unattended Raspberry Pi
+# Some bit crude like reboot, but effective mostly
+# Author: Just van den Broecke <justb4@gmail.com>
+#
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+SRC=/opt/geonovum/sospilot/git/src
+
+# Do checks on weewx and network every N mins
+*/6  * * * * $SRC/weewx/weewxcheck.sh
+*/10 * * * * $SRC/raspberry/wificheck.sh
+0   4  * * *   shutdown -r +5
