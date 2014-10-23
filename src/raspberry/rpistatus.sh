@@ -2,7 +2,6 @@
 # Author: Just van den Broecke <justb4@gmail.com>
 # Status of RPi main resources. Post to VPS if possible.
 #
-
 log=/var/log/rpistatus.txt
 remote=sadmin@sensors:/var/www/sensors.geonovum.nl/site/pi
 
@@ -33,3 +32,4 @@ echo "\n=== memory (free -m)===" >> $log
 free -m >> $log 2>&1
 
 scp $log $remote
+
