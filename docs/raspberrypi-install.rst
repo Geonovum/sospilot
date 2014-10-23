@@ -1,11 +1,11 @@
 .. _raspberrypiinst:
 
 
-************************
-Raspberry Pi Install Log
-************************
+*************************
+Raspberry Pi Installation
+*************************
 
-Below the setup and installation of the Raspberry Pi (RPi) for weewx with the Davis Vantage Pro2
+Below the setup and installation of the Raspberry Pi (RPi) for ``weewx`` weather software with the Davis Vantage Pro2
 weather station is described.
 
 Conventions
@@ -282,10 +282,10 @@ Config under `/etc/nginx` especially, default website at `/etc/nginx/sites-avail
             }
     }
 
-Installatie - Project Software
-==============================
+Installation - Project Software
+===============================
 
-Software en documentatie voor project, bijv `weewx` config, zit in Geonovum GitHub: https://github.com/Geonovum/sospilot
+Software and documentation for the project, e.g. ``weewx`` config, zit in Geonovum GitHub: https://github.com/Geonovum/sospilot
 
 We installeren deze onder ``/opt/geonovum/sospilot`` ::
 
@@ -295,6 +295,16 @@ We installeren deze onder ``/opt/geonovum/sospilot`` ::
 NB alle documentatie (Sphinx) wordt automatisch gepubliceerd naar ReadTheDocs.org:
 http://sospilot.readthedocs.org via een GitHub Post-commit hook.
 
+The following refresh script is handy to undo local changes and sync with master. ::
+
+    # Refresh from original Repo
+    # WARNING will remove all local changes!!!
+    # except for files not in Git
+
+    git fetch --all
+    git reset --hard origin/master
+
+See https://github.com/Geonovum/sospilot/blob/master/refresh-git.sh
 
 Installation - Weather Software
 ===============================
