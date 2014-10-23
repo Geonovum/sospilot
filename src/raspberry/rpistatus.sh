@@ -7,6 +7,7 @@ log=/var/log/rpistatus.txt
 remote=sadmin@sensors:/var/www/sensors.geonovum.nl/site/pi
 
 echo "Status of `hostname` on date: `date`" > $log
+uptime  >> $log 2>&1
 
 echo "\n=== weewx ===" >> $log
 /etc/init.d/weewx status >> $log
