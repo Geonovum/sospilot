@@ -9,6 +9,7 @@
 # Title:     WiFi_Check
 # Author:    Kevin Reed (Dweeber)
 #            dweeber.dweebs@gmail.com
+#            Small adaptions by Just van den Broecke <justb4@gmail.com>
 # Project:   Raspberry Pi Stuff
 #
 # Copyright: Copyright (c) 2012 Kevin Reed <kreed@tnet.com>

@@ -11,6 +11,12 @@ echo "Status of `hostname` on date: `date`" > $log
 echo "\n=== weewx ===" >> $log
 /etc/init.d/weewx status >> $log
 
+echo "\n=== restarts ===" >> $log
+echo "weewx:" >> $log
+wc -l /var/log/weewxcheck.log | cut -d'/' -f1 >> $log 2>&1
+echo "\nWifi:" >> $log
+wc -l /var/log/wificheck.log  | cut -d'/' -f1 >> $log 2>&1
+
 echo "\n=== bandwidth (vnstat)" >> $log
 vnstat >> $log 2>&1
 
