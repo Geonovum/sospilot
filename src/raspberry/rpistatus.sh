@@ -11,6 +11,8 @@ uptime  >> $log 2>&1
 
 echo "\n=== weewx ===" >> $log
 /etc/init.d/weewx status >> $log
+echo "archive stat: `ls -l /opt/weewx/weewxinst/archive`" >> $log 2>&1
+echo "archive recs: `sqlite3 /opt/weewx/weewxinst/archive/weewx.sdb 'select count(*) from archive'`" >> $log 2>&1
 
 echo "\n=== restarts ===" >> $log
 echo "weewx:" >> $log

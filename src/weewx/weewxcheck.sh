@@ -16,3 +16,4 @@ else
     echo "weewx not running on `date`! Attempting restart." >> /var/log/weewxcheck.log
     /etc/init.d/weewx restart
 fi
+
