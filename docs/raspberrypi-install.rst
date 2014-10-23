@@ -5,7 +5,8 @@
 Raspberry Pi Install Log
 ************************
 
-Below the setup and installation of the Raspberry Pi (RPi) for the weather station is described.
+Below the setup and installation of the Raspberry Pi (RPi) for weewx with the Davis Vantage Pro2
+weather station is described.
 
 Conventions
 ===========
@@ -15,37 +16,26 @@ General conventions.
 Directories
 -----------
 
-The following
+We keep the following directory conventions:
 
-* ``/opt`` additionele, handmatig geinstalleerde software
-* ``/opt/<leverancier of product>/<product-versie>`` installatie dirs voor additionele, handmatig geinstalleerde software
-* ``/opt/download`` downloads voor additionele, handmatig geinstalleerde software
-* ``/opt/bin`` eigen additionele shell scripts (bijv. backup)
-* ``/var/sensors`` alle eigen (geo)data, configuraties, tilecaches, packed backups to be transfered
-* ``/var/www`` alle web applicaties/sites
-* ``/var/www/sensors.geonovum.nl/site`` sensors website (platte HTML)
-* ``/var/www/sensors.geonovum.nl/webapps`` alle Tomcat applicaties: GeoServer, GeoWebCache, deegree etc
-* ``/var/www/sensors.geonovum.nl/cgi-bin`` proxy en python scripts
+* ``/opt`` additional, manually installed software
+* ``/opt/<product>/<product-version>`` subdires e.g. ``/opt/weewx/weewx-2.7.0``
+* ``/opt/bin`` own shell scripts
+* ``/opt/geonovum/sospilot/git`` all project software synced with GitHub https://github.com/Geonovum/sospilot
 * ``/home/sadmin`` home dir beheer account
 
-Onder ``/opt/<leverancier of product>`` kan vaak ook een dynamic link staan naar de laatste versie
-van een product, bijvoorbeeld ``/opt/nlextract/active`` is een dynlink naar een versie van NLExtract bijvoorbeeld
-naar ``/opt/nlextract/1.1.5``.
+Under ``/opt/<product>/<product-version>`` we often make a dynamic link to the latest version
+of a product, for example ``/opt/weewx/weewx`` is a dynlink to
+``/opt/weewx/weewx-2.7.0``.
 
-Voeg ook toe in ``/etc/profile`` zodat de scripts in ``/opt/bin`` gevonden worden  ::
+Add to ``/etc/profile``  ::
 
-  export PATH=/opt/bin:${PATH}
-
-Omdat de meeste toepassingen gebruik maken van Apache Virtual Hosts met een prefix op ``sensors``, zoals
-bijvoorbeeld `inspire.sensors <http://inspire.sensors>`_ is hier ook een conventie op zijn plaats:
-
- * ``/etc/apache2/sites-available/sensors.geonovum.nl.conf`` bevat de Apache configuratie
- * ``/var/www/sensors.geonovum.nl`` bevat de website content (HTML etc)
+  export PATH=${PATH}:/opt/bin
 
 System
 ------
 
-Aangeschaft 16 okt 2014, geleverd 17 okt 2014 from http://www.kiwi-electronics.nl.
+Ordered Oct 16, 2014. Delivered Oct 17, 2014. From http://www.kiwi-electronics.nl.
 
 
 .. figure:: _static/rasp-pi-all-s.jpg
@@ -146,7 +136,7 @@ In the case of WEP, add the following instead
     wireless-essid <name of your WiFi network>
     wireless-key <password of your WiFi network>
 
-Result in `/etc/network/interfaces` ::
+Result in ``/etc/network/interfaces`` ::
 
     root@georasp:~# cat /etc/network/interfaces
     auto lo
@@ -182,8 +172,8 @@ Our `/etc/network/interfaces` is now ::
 
     pre-up wpa_supplicant -Dwext -i wlan0 -c /etc/wpa_supplicant.conf -B
 
-And in the file  `/etc/wpa_supplicant.conf` configure multiple WIFI stations. For each station generate a PSK as follows
-` wpa_passphrase <ssid> <passphrase>`.  `/etc/wpa_supplicant.conf` will become something like: ::
+And in the file  ``/etc/wpa_supplicant.conf`` configure multiple WIFI stations. For each station generate a PSK as follows
+``wpa_passphrase <ssid> <passphrase>``.  ``/etc/wpa_supplicant.conf`` will become something like: ::
 
     ctrl_interface=/var/run/wpa_supplicant
     #ap_scan=2
@@ -208,10 +198,10 @@ And in the file  `/etc/wpa_supplicant.conf` configure multiple WIFI stations. Fo
            psk=<generated PSK #2>
     }
 
-The latter approach with `wpa_supplicant` did somehow not work so we remained
-in the first simple approach without `wpa_supplicant`, only a simple `/etc/network/interfaces` config.
+The latter approach with ``wpa_supplicant`` did somehow not work so we remained
+in the first simple approach without ``wpa_supplicant``, only a simple ``/etc/network/interfaces`` config.
 
-Wifi seems to go down from time to time with `wlan0: CTRL-EVENT-DISCONNECTED reason=4` in syslog.
+Bogger: Wifi seems to go down from time to time with ``wlan0: CTRL-EVENT-DISCONNECTED reason=4`` in syslog.
 Will use a script in cron to always keep Wifi up.
 For topic see http://www.raspberrypi.org/forums/viewtopic.php?t=54001&p=413095.
 See script at https://github.com/Geonovum/sospilot/blob/master/src/raspberry/wificheck.sh and Monitoring section below.
@@ -224,8 +214,8 @@ In ``/etc/hostname`` set to ``georasp``..
 Accounts
 --------
 
-Two standard accounts: ``root`` ("root admin") en ``sadmin`` ("sensors admin"). NB de account ``root``
-wordt (door Ubuntu) nooit aangemaakt als login account!
+Two standard accounts: ``root`` ("root admin") en ``sadmin`` ("sensors admin"). NB account ``root``
+is never a login account on Ubuntu/Debian!
 
 Het beheer-account ``root`` heeft root-rechten.
 
@@ -305,11 +295,6 @@ We installeren deze onder ``/opt/geonovum/sospilot`` ::
 NB alle documentatie (Sphinx) wordt automatisch gepubliceerd naar ReadTheDocs.org:
 http://sospilot.readthedocs.org via een GitHub Post-commit hook.
 
-
-Server Software - Geo
-=====================
-
-Not yet.
 
 Installation - Weather Software
 ===============================
@@ -513,7 +498,7 @@ Installatie Testen. ::
 Python Jinja2
 -------------
 
-Nodig voor Stetl Jinja2 templating Filter. ::
+Needed for Stetl Jinja2 templating Filter. ::
 
     pip install jinja2
     Downloading/unpacking jinja2
@@ -860,8 +845,9 @@ Backup
 ------
 
 TODO
-- in particular the weewx DB needs to be backed up
-- SD-card image
+
+* in particular the weewx DB needs to be backed up
+* SD-card image
 
 
 
