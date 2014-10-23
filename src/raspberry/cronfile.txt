@@ -9,4 +9,5 @@ SRC=/opt/geonovum/sospilot/git/src
 # Do checks on weewx and network every N mins
 */6  * * * * $SRC/weewx/weewxcheck.sh
 */10 * * * * $SRC/raspberry/wificheck.sh
+*/15 * * * * $SRC/raspberry/rpistatus.sh
 0   4  * * *   shutdown -r +5
