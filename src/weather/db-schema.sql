@@ -20,14 +20,14 @@ CREATE TABLE weather.etl_progress (
 
 -- Define workers
 INSERT INTO weather.etl_progress (worker, source_table, last_id, last_update)
-  VALUES ('weewx2archive', 'sqlite_archive', 0, current_timestamp);
-INSERT INTO weather.etl_progress (worker, source_table, last_id, last_update)
-  VALUES ('archive2measurements', 'weewx_archive', 0, current_timestamp);
+  VALUES ('weewx2postgres', 'sqlite_archive', 0, current_timestamp);
 
--- Raw weewx_archive table - data from weewx weather archive
-DROP TABLE IF EXISTS weather.weewx_archive CASCADE;
-CREATE TABLE weather.weewx_archive (
+-- Raw measurements table - data from weewx weather archive or possibly other source
+-- all units in US metrics assumed!
+DROP TABLE IF EXISTS weather.measurements CASCADE;
+CREATE TABLE weather.measurements (
   dateTime             INTEGER NOT NULL UNIQUE PRIMARY KEY,
+  station_code         INTEGER DEFAULT 33,
   usUnits              INTEGER NOT NULL,
   interval             INTEGER NOT NULL,
   barometer            REAL,
@@ -81,20 +81,6 @@ CREATE TABLE weather.weewx_archive (
   inTempBatteryStatus  REAL
 );
 
--- SELECT to_timestamp(datetime), "datetime","pressure","outtemp" FROM "weather"."weewx_archive"
-DROP VIEW IF EXISTS weather.v_weewx_archive;
-CREATE VIEW weather.v_weewx_archive AS
-  SELECT datetime,
-    to_timestamp(datetime),
-    round(((outtemp-32.0)*5.0/9.0)::numeric) as outtemp_c,
-    round((windSpeed*1.61)/3.6::numeric) as windspeed_mps,
-    round((windGust*1.61)/3.6::numeric) as windgust_mps,
-    round(windDir::numeric) as winddir_deg,
-    round(((windchill-32.0)*5.0/9.0)::numeric) as windchill_c,
-    rainRate,
-    round((pressure*33.8638815)::numeric) as pressure_mbar,
-    round(outhumidity::numeric) as outhumidity_perc
-  FROM weather.weewx_archive ORDER BY datetime DESC;
 
 --
 -- Name: stations; Type: TABLE; Schema: knmi; Owner: postgres; Tablespace:
@@ -128,19 +114,43 @@ CREATE INDEX stations_point_idx ON stations USING gist (point);
 INSERT INTO weather.stations (gid, point, wmo, station_code, name, obs_pres, obs_wind, obs_temp, obs_hum, obs_prec, obs_rad, obs_vis, obs_clouds, obs_presweather, obs_snowdepth, obs_soiltemp, lon, lat, height)
 VALUES (1, ST_GeomFromText('POINT(5.372 52.152)', 4326), 'Davis Vantage Pro2', 33,'Geonovum',	1,1,	1,	1,	1,	0,	0,	0,	0,	0,	0, 5.372, 52.152, 32.4);
 
+-- VIEWS
 
-DROP TABLE IF EXISTS weather.measurements CASCADE;
-CREATE TABLE weather.measurements (
-  gid          SERIAL,
-  unix_time    INTEGER, -- seconds since 1970
-  sample_time  TIMESTAMP,
-  insert_time  TIMESTAMP DEFAULT current_timestamp,
+-- SELECT to_timestamp(datetime), "datetime","pressure","outtemp" FROM "weather"."measurements"
+DROP VIEW IF EXISTS weather.v_observations CASCADE;
+CREATE VIEW weather.v_observations AS
+  SELECT
+    meas.datetime,
+    meas.station_code,
+    stations.name as station_name,
+    to_timestamp(datetime) as time,
+    round(((outtemp-32.0)*5.0/9.0)::numeric) as outtemp_c,
+    round((windSpeed*1.61)/3.6::numeric) as windspeed_mps,
+    round((windGust*1.61)/3.6::numeric) as windgust_mps,
+    round(windDir::numeric) as winddir_deg,
+    round(((windchill-32.0)*5.0/9.0)::numeric) as windchill_c,
+    meas.rainRate,
+    round((pressure*33.8638815)::numeric) as pressure_mbar,
+    round(outhumidity::numeric) as outhumidity_perc,
+    stations.point
+  FROM weather.measurements as meas
+  INNER JOIN weather.stations AS stations
+      ON meas.station_code = stations.station_code ORDER BY datetime DESC;
 
-  station_id   CHARACTER VARYING(8),
-  sample_value REAL,
-  PRIMARY KEY (gid)
-);
+-- Laatste Metingen per Station
+DROP VIEW IF EXISTS weather.v_last_observations CASCADE;
+CREATE VIEW weather.v_last_observations AS
+  SELECT DISTINCT ON (station_code) station_code,
+    station_name,
+    datetime,
+    time,
+    outtemp_c,
+    windspeed_mps,
+    windgust_mps,
+    winddir_deg,
+    windchill_c,
+    rainRate,
+    pressure_mbar,
+    outhumidity_perc
+  FROM weather.v_observations;
 
--- Measurement may only occur once in table, error if trying to insert multiple times
-DROP INDEX IF EXISTS unix_time_idx;
-CREATE UNIQUE INDEX unix_time_idx ON weather.measurements USING BTREE (unix_time);
