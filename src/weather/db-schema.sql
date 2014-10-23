@@ -87,13 +87,47 @@ CREATE VIEW weather.v_weewx_archive AS
   SELECT datetime,
     to_timestamp(datetime),
     round(((outtemp-32.0)*5.0/9.0)::numeric) as outtemp_c,
-    round(windSpeed::numeric) as windSpeed,
-    round(windDir::numeric) as windDir,
+    round((windSpeed*1.61)/3.6::numeric) as windspeed_mps,
+    round((windGust*1.61)/3.6::numeric) as windgust_mps,
+    round(windDir::numeric) as winddir_deg,
     round(((windchill-32.0)*5.0/9.0)::numeric) as windchill_c,
     rainRate,
-    pressure,
-    round(outhumidity::numeric) as outhumidity
+    round((pressure*33.8638815)::numeric) as pressure_mbar,
+    round(outhumidity::numeric) as outhumidity_perc
   FROM weather.weewx_archive ORDER BY datetime DESC;
+
+--
+-- Name: stations; Type: TABLE; Schema: knmi; Owner: postgres; Tablespace:
+--
+
+DROP TABLE IF EXISTS weather.stations CASCADE;
+CREATE TABLE weather.stations (
+    gid integer NOT NULL UNIQUE PRIMARY KEY,
+    point geometry (Point,4326),
+    wmo character varying,
+    station_code integer,
+    name character varying,
+    obs_pres integer,
+    obs_wind integer,
+    obs_temp integer,
+    obs_hum integer,
+    obs_prec integer,
+    obs_rad integer,
+    obs_vis integer,
+    obs_clouds integer,
+    obs_presweather integer,
+    obs_snowdepth integer,
+    obs_soiltemp integer,
+    lon double precision,
+    lat double precision,
+    height double precision
+);
+
+CREATE INDEX stations_point_idx ON stations USING gist (point);
+
+INSERT INTO weather.stations (gid, point, wmo, station_code, name, obs_pres, obs_wind, obs_temp, obs_hum, obs_prec, obs_rad, obs_vis, obs_clouds, obs_presweather, obs_snowdepth, obs_soiltemp, lon, lat, height)
+VALUES (1, ST_GeomFromText('POINT(5.372 52.152)', 4326), 'Davis Vantage Pro2', 33,'Geonovum',	1,1,	1,	1,	1,	0,	0,	0,	0,	0,	0, 5.372, 52.152, 32.4);
+
 
 DROP TABLE IF EXISTS weather.measurements CASCADE;
 CREATE TABLE weather.measurements (
