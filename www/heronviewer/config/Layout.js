@@ -287,11 +287,14 @@ Heron.layout = {
                             endDateTime: Heron.date,  // default is current time
                             stepTime: 'PT1H',
                             dateTime: '2014-08-02T01:00:00Z',
-                            layerNames: ["KNMI - Rain Radar (Color)",
+                            layerNames: [
+                                "KNMI - Rain Radar (Color)",
                                 "RIVM - Measurements CO",
                                 "RIVM - Measurements NH3", "RIVM - Measurements NO2",
                                 "RIVM - Measurements NO", "RIVM - Measurements PM10",
-                                "RIVM - Measurements O3", "RIVM - Measurements SO2"]
+                                "RIVM - Measurements O3", "RIVM - Measurements SO2",
+                                "Weather Observations"
+                            ]
                         }
                     ]
                 },

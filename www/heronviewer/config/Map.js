@@ -665,6 +665,73 @@ Heron.options.map.layers = [
 
     /* END RIVM */
 
+    /* START GEONOVUM WEATHER */
+
+    /*
+     * GEONOVUM: Weather Stations
+     */
+    new OpenLayers.Layer.WMS(
+        "Weather Stations",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "weather_stations", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * GEONOVUM: Observations Weather
+     */
+    new OpenLayers.Layer.WMS(
+        "Weather Observations",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "weather_observations", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * GEONOVUM: Last Observations Weather
+     */
+    new OpenLayers.Layer.WMS(
+        "Last Weather Observations",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "weather_last_observations", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /* END GEONOVUM WEATHER */
+
     /* START KNMI */
     // http://geoservices.knmi.nl/cgi-bin/RADNL_OPER_R___25PCPRR_L3.cgi?SERVICE=WMS&&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap
     // &LAYERS=RADNL_OPER_R___25PCPRR_L3_COLOR&WIDTH=550&HEIGHT=512&CRS=EPSG%3A3857&
@@ -1379,6 +1446,13 @@ Heron.options.layertree.tree = [
 
         ]
         }
+    ]
+    },
+    {
+        text: 'Geonovum Weather', expanded: true, children: [
+        {nodeType: "gx_layer", layer: "Weather Stations", text: "Weather Stations (WMS)" },
+        {nodeType: "gx_layer", layer: "Weather Observations", text: "Weather Observations (WMS Time)" },
+        {nodeType: "gx_layer", layer: "Last Weather Observations", text: "Last Weather Observations (WMS)" }
     ]
     },
     {

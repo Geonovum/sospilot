@@ -181,8 +181,8 @@ Heron.options.map.toolbar = [
     {type: "featureinfo", options: {
         pressed: true,
         popupWindow: {
-            width: 360,
-            height: 200,
+            width: 380,
+            height: 400,
             featureInfoPanel: {
                 showTopToolbar: true,
                 displayPanels: ['Detail','Table'],
