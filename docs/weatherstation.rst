@@ -38,12 +38,13 @@ and stores this data locally in a (SQLite)  `weather archive database`.
 
 An ETL process based on `Stetl <http:/www.stetl.org>`_ transforms and syncs data
 from the `weather archive database` to a remote PostgreSQL server
-in a "Cloud Server" (Ubuntu VPS). The VPS runs GeoServer that serves the weather data directly fromthe Postgres/PostGIS
+in a "Cloud Server" (Ubuntu VPS). The VPS runs GeoServer that serves the weather data directly from the Postgres/PostGIS
 database as WMS, WMS-Time and WFS.
-In addition the VPS runs a Stetl ETL process that transformsand and publishes
+In addition the VPS runs a Stetl ETL process that transforms and and publishes
 the weather data from PostgreSQL via SOS-T to the 52North Sensor Web Application server.
-The latter provides a SOS (Sensor Observation Service). Via the webbrowser various WMS/WFS and SOS client applications
-are run.
+The latter provides a SOS (Sensor Observation Service). Via the web browser various WMS/WFS
+and SOS client applications
+are invoked.
 
 Raspberry Pi
 ------------
