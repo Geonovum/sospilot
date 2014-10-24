@@ -19,6 +19,32 @@ published to the 52N SOS. The station is also registered in the national gespati
 The results of this project have been described in
 a `Geo-Info magazine article (2010-1) <http://www.geo-info.nl/download/?id=15311409&download=1>`_.
 
+Architecture
+------------
+
+The overall architecture is depicted in Figure 1 below.
+
+
+.. figure:: _static/weather-hwsw-pictarch.png
+   :align: center
+
+   *Figure 1 - Global Setup from Weather Station Through OGC Services*
+
+In summary the overall architecture in hard/software is as follows.
+The Davis weather station is connected to a `Raspberry Pi <http://www.raspberrypi.org/>`_ (RPi) micro computer via
+USB. The RPi runs the Raspbian OS with the weather data software
+deamon `weewx <http://weewx.com>`_.  ``weewx`` reads out the raw weather from the Davis weather station
+and stores this data locally in a (SQLite)  `weather archive database`.
+
+An ETL process based on `Stetl <http:/www.stetl.org>`_ transforms and syncs data
+from the `weather archive database` to a remote PostgreSQL server
+in a "Cloud Server" (Ubuntu VPS). The VPS runs GeoServer that serves the weather data directly fromthe Postgres/PostGIS
+database as WMS, WMS-Time and WFS.
+In addition the VPS runs a Stetl ETL process that transformsand and publishes
+the weather data from PostgreSQL via SOS-T to the 52North Sensor Web Application server.
+The latter provides a SOS (Sensor Observation Service). Via the webbrowser various WMS/WFS and SOS client applications
+are run.
+
 Raspberry Pi
 ------------
 
