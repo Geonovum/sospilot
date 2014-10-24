@@ -84,7 +84,7 @@ Weather Software
 ----------------
 
 The choice is `weewx <http://www.weewx.com>`_ with SQLlite. `weewx` is installed as part of the
-`raspberrypi-install <raspberrypi-install.html`_. The configuration is maintained in
+`raspberrypi-install <raspberrypi-install.html>`_. The configuration is maintained in
 GitHub https://github.com/Geonovum/sospilot/tree/master/src/weewx/davis. After a first test
 using our WeatherStationAPI custom driver the Geonovum Davis weather station will be connected.
 The web reporting is synced by `weewx` every 5 mins to to our main website:

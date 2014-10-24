@@ -244,8 +244,7 @@ nginx Web Server
 ----------------
 
 As Apache2 seems to have a relative large footprint, many prefer `nginx <http://nginx.com/>`_ as webserver on RPi.
-
-Setup. ::
+(Though for now, no webserver is used nor required). Setup. ::
 
     apt-get install nginx
 
@@ -253,7 +252,7 @@ Setup. ::
     /etc/init.d/nginx start
     /etc/init.d/nginx stop
 
-Config under `/etc/nginx` especially, default website at `/etc/nginx/sites-available/default` ::
+Config under ``/etc/nginx`` especially, default website at ``/etc/nginx/sites-available/default`` ::
 
     server {
             #listen   80; ## listen for ipv4; this line is default and implied
@@ -285,15 +284,16 @@ Config under `/etc/nginx` especially, default website at `/etc/nginx/sites-avail
 Installation - Project Software
 ===============================
 
-Software and documentation for the project, e.g. ``weewx`` config, zit in Geonovum GitHub: https://github.com/Geonovum/sospilot
+Software and documentation for the project, e.g. ``weewx`` config, are in the project
+GitHub: https://github.com/Geonovum/sospilot
 
-We installeren deze onder ``/opt/geonovum/sospilot`` ::
+Installed under ``/opt/geonovum/sospilot`` ::
 
     cd /opt/geonovum/sospilot
     git clone https://github.com/Geonovum/sospilot.git git
 
-NB alle documentatie (Sphinx) wordt automatisch gepubliceerd naar ReadTheDocs.org:
-http://sospilot.readthedocs.org via een GitHub Post-commit hook.
+NB all documentation (Sphinx) is automagically published after each Git commit/push
+to ReadTheDocs.org: http://sospilot.readthedocs.org via a standard GitHub Post-commit hook.
 
 The following refresh script is handy to undo local changes and sync with master. ::
 
@@ -312,9 +312,9 @@ Installation - Weather Software
 weewx - Weather Station server
 ------------------------------
 
-Used for testing `weewx <http://www.weewx.com>`_.
+Home: `weewx <http://www.weewx.com>`_.
 
-Dir: `/opt/weewx`. We do custom install as user `sadmin` in order to make tweaking easier.
+Install under ``/opt/weewx``. Custom install as user `sadmin` in order to facilitate custimization.
 
 See http://www.weewx.com/docs/setup.htm
 
