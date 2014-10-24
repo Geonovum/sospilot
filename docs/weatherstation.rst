@@ -3,26 +3,46 @@
 Weather Station
 ===============
 
-As part of the SOSPilot project, the plan is to connect the existing
-Geonovum  `Davis Vantage Pro II Weather station <http://www.davisnet.com/weather/products/vantage-pro-professional-weather-stations.asp>`_
-to the SOS and WMS/WFS servers and public weather services.
-Below the realization and results are described.
+This chapter describes the hard/software setup of a weather station whose measurements are
+to be exposed via OGC protocols like WMS, WFS and in particular SOS.
 
-History
--------
+Introduction
+------------
 
-In 2008/2009 Geonovum had acquired a Davis Vantage Pro II Weather station. This station
-was/is mounted on the roof of Geonovum building. This tsation measures
-barometric pressure, temperature, humidity, rainfall, wind speed and direction. Data from the weather station was extracted and
-published to the 52N SOS. The station is also registered in the national gespatial catalog, Nationaal Georegister (NGR).
+In 2008/2009 Geonovum acquired a
+`Davis Vantage Pro II Weather station <http://www.davisnet.com/weather/products/vantage-pro-professional-weather-stations.asp>`_.
+This station was/is mounted on the roof of Geonovum building. The outside station-sensors measure
+barometric pressure, temperature, humidity, rainfall, wind speed and direction. Data is continuously
+sent (wireless, via RF) to a base station, a.k.a. the "console". The console
+has a `Davis WeatherLink® <http://www.davisnet.com/weather/products/weather-reporting-software.asp>`_
+hard/software add-on that is able to act as a data-logger and provides connectivity over USB.
 
-The results of this project have been described in
+Data from the weather station was extracted and published to the 52N SOS via a special purpose
+PC application. The results of this project have been described in
 a `Geo-Info magazine article (2010-1) <http://www.geo-info.nl/download/?id=15311409&download=1>`_.
+
+As part of the SOSPilot project, we will now "revive" the Davis
+Weather station and connect its data stream to the SOSPilot infrastructure simliar
+to the RIVM AQ datastream. Eventually, the goal is to expose the station weather data to OGC services like
+WMS, WFS and in particular SOS.
+
+As we cannot connect the weather base station (USB),
+directly to the SOSPilot server "in the cloud",
+an intermediate "middleman" hard/software component will be required.
+The main functions of this component are to acquire data from the base station and to
+transform and publish this data to the SOSPilot server (VPS).
+
+To this end a `Raspberry Pi <http://www.raspberrypi.org/>`_ (RPi) microcomputer has been chosen.
+The RPi is a cheap (around $25,-) credit-card-sized microcomputer that can run free OS-es like Linux (`Raspbian <http://www.raspbian.org/>`_,
+a Debian version)
+and allows connectivity to USB, WIFI, GSM etc. The RPi is
+`popular with weather amateurs <https://www.google.nl/search?q=Raspberry+Pi+Weather+Station&oq=Raspberry+Pi+Weather+Station>`_
+(and various other IoT projects as well).
 
 Architecture
 ------------
 
-The overall architecture is depicted in Figure 1 below.
+The overall hard/software architecture is depicted below.
 
 
 .. figure:: _static/weather-hwsw-pictarch.png
@@ -30,67 +50,35 @@ The overall architecture is depicted in Figure 1 below.
 
    *Figure 1 - Global Setup from Weather Station Through OGC Services*
 
-In summary the overall architecture in hard/software is as follows.
+Summarized, the components and their interconnections operate as follows.
+
 The Davis weather station is connected to a `Raspberry Pi <http://www.raspberrypi.org/>`_ (RPi) micro computer via
 USB. The RPi runs the Raspbian OS with the weather data software
-deamon `weewx <http://weewx.com>`_.  ``weewx`` reads out the raw weather from the Davis weather station
-and stores this data locally in a (SQLite)  `weather archive database`.
+`weewx <http://weewx.com>`_.  The weewx daemon reads out raw weather data from the Davis weather station
+and stores this data locally in a (SQLite or MySQL) database. These raw measurements, typically a 5-minute summary
+of multiple samples ("Loop records") are called `archive records`.
 
 An ETL process based on `Stetl <http:/www.stetl.org>`_ transforms and syncs data
 from the `weather archive database` to a remote PostgreSQL server
 in a "Cloud Server" (Ubuntu VPS). The VPS runs GeoServer that serves the weather data directly from the Postgres/PostGIS
 database as WMS, WMS-Time and WFS.
 In addition the VPS runs a Stetl ETL process that transforms and and publishes
-the weather data from PostgreSQL via SOS-T to the 52North Sensor Web Application server.
+the weather data from PostgreSQL using the SOS-T protocol
+to the 52North Sensor Web Application server.
 The latter provides a SOS (Sensor Observation Service). Via the web browser various WMS/WFS
-and SOS client applications
-are invoked.
+and SOS client applications are invoked.
 
 Raspberry Pi
 ------------
 
 A Raspberry Pi will be setup as a headless (no GUI) server. Via a USB Cable the Pi will be connected to the Davis datalogger cable.
 The Pi will run a Debian Linux version (Raspbian) with the free `weewx` weather server and
-archiver. `weewx` will fetch data from the Davis, storing this in MySQL or SQLLite.
-It can also can publish data to community Weather networks like Wunderground.
+archiver. `weewx` will fetch samples from the Davis, storing its summaries regularly (typically every 5 mins) in
+a MySQL or SQLLite `archive table`.
+weewx can also can publish data to community Weather networks like Wunderground.
 
-Raspberry Pi core,
-bijv `RPi Kit van Kiwi Elektronics <http://www.kiwi-electronics.nl/raspberry-pi/board-and-kits/raspberry-pi-model-b-plus-bundel-met-voeding-en-noobs-op-microsd>`_ (EUR 59,95):
-
-* Raspberry Pi Model B+ 512MB
-* transparant Multicomp enclosure
-* 5.2V 2A microUSB power adapter
-* microSD card 32GB - Class 10
-
-User access (but not required once having setup as we access via SSH).
-
-* USB mouse
-* USB keyboard
-* monitor with HDMI input
-* HDMI cable
-
-Mobile networking (not)
-
-* USB 3G Modem - Huawei - most probably E3131 (of Wifi networking)
-
-Wifi Networking:
-
-* Draadloze USB Adapter voor Raspberry `Pi Wi-Pi  <http://www.kiwi-electronics.nl/raspberry-pi/raspberry-pi-accessoires/wi-pi-draadloze-usb-adapter-voor-raspberry-pi>`_ (EUR 18,95).
-
-Connection to Davis Weather Station WeatherLink USB adapter:
-
-* USB Cable (USB A Male B Mini) with ferrite noise suppressor : http://www.allekabels.nl/usb-20-kabel/172/1043120/usb-20-mini-kabel-professioneel.html (EUR 17,95)
-* powered USB hub. Why? See http://www.weewx.com/docs/usersguide.htm#Raspberry_Pi
-
-Software:
-
-* OS: Raspbian Debian Wheezy (sept 2014) - Free
-* Open source software for weather station: `weewx <http://www.weewx.com>`_ with SQLlite  - free
-* `wview`, kan gebruik maken van archive SQLite DB van weewx: http://www.wviewweather.com ??
-
-Best option for now seems to be to use Pi with WIFI i.s.o. mobile data.
-
-See `raspberrypi-install <raspberrypi-install.html>`_ for the basic installation of the RPi for the project.
+See the `raspberrypi-install section <raspberrypi-install.html>`_ for the full hardware setup and software installation
+of the RPi for the project.
 
 Weather Software
 ----------------
