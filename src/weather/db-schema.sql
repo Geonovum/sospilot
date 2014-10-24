@@ -132,7 +132,7 @@ CREATE VIEW weather.v_observations AS
     meas.rainRate,
     round((pressure*33.8638815)::numeric) as pressure_mbar,
     round(outhumidity::numeric) as outhumidity_perc,
-    stations.point
+    stations.point as point
   FROM weather.measurements as meas
   INNER JOIN weather.stations AS stations
       ON meas.station_code = stations.station_code ORDER BY datetime DESC;
@@ -151,6 +151,7 @@ CREATE VIEW weather.v_last_observations AS
     windchill_c,
     rainRate,
     pressure_mbar,
-    outhumidity_perc
+    outhumidity_perc,
+    point
   FROM weather.v_observations;
 
