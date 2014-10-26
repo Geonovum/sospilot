@@ -140,6 +140,11 @@ is never exposed directly via internet.
 
 Each of these components are elaborated further below.
 
+Sources for this architecture can be found in GitHub. ::
+
+* ETL and services: https://github.com/Geonovum/sospilot/tree/master/src/weather
+* Raspberry Pi system setup: https://github.com/Geonovum/sospilot/tree/master/src/raspberry
+* weewx-specific: https://github.com/Geonovum/sospilot/tree/master/src/weewx
 
 Raspberry Pi
 ------------
@@ -147,7 +152,7 @@ Raspberry Pi
 A Raspberry Pi will be setup as a headless (no GUI) server. Via a USB Cable the Pi will be connected to the Davis datalogger cable.
 The Pi will run a Debian Linux version (Raspbian) with the free `weewx` weather server and
 archiver. `weewx` will fetch samples from the Davis, storing its summaries regularly (typically every 5 mins) in
-a MySQL or SQLLite `archive table`. weewx can also can publish data to community Weather networks like Wunderground.
+a MySQL or SQLite `archive table`. weewx can also can publish data to community Weather networks like Wunderground.
 
 
 .. figure:: _static/rasp-pi-all-s.jpg
