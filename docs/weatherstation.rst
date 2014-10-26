@@ -134,7 +134,7 @@ The components are divided over two server machines.
 * the Raspberry Pi: ``weewx`` and  `Stetl Sync`
 * the Ubuntu Linux VPS: GeoServer, SOS server and Apache server plus the PostgreSQL/PostGIS database and the `Stetl SOS` ETL
 
-Connections between the RPi and the VPS are via SSH. An SSH tunnel (via ``autossh``) is maintained
+Connections between the RPi and the VPS are via SSH. An SSH tunnel (``SSHTun``) is maintained
 to provide a secure connection to the PostgreSQL server on the VPS. This way the PostgreSQL server
 is never exposed directly via internet.
 
@@ -168,35 +168,326 @@ using our WeatherStationAPI custom driver, the Geonovum Davis weather station wi
 The web reporting is synced by `weewx` every 5 mins to to our main website:
 http://sensors.geonovum.nl/weewx. This will take about 125kb each 5 mins.
 
-Data ETL
---------
+PostgreSQL Database
+-------------------
+
+The PostgreSQL database plays a central role. The 52North SOS will maintain its own tables.
+For the Stetl ETL and GeoServer datasources the following tables and VIEWs are created in the ``weather``
+schema. ::
+
+    DROP SCHEMA weather CASCADE;
+    CREATE SCHEMA weather;
+
+    -- Raw measurements table - data from weewx weather archive or possibly other source
+    -- all units in US metrics assumed!
+    DROP TABLE IF EXISTS weather.measurements CASCADE;
+    CREATE TABLE weather.measurements (
+      dateTime             INTEGER NOT NULL UNIQUE PRIMARY KEY,
+      station_code         INTEGER DEFAULT 33,
+      usUnits              INTEGER NOT NULL,
+      interval             INTEGER NOT NULL,
+      barometer            REAL,
+      pressure             REAL,
+      altimeter            REAL,
+      inTemp               REAL,
+      outTemp              REAL,
+      inHumidity           REAL,
+      outHumidity          REAL,
+      windSpeed            REAL,
+      windDir              REAL,
+      windGust             REAL,
+      windGustDir          REAL,
+      rainRate             REAL,
+      rain                 REAL,
+      dewpoint             REAL,
+     .
+     .
+     .
+    );
+
+
+    --
+    -- Name: stations; Type: TABLE; Schema: weather; Owner: postgres; Tablespace:
+    --
+    DROP TABLE IF EXISTS weather.stations CASCADE;
+    CREATE TABLE weather.stations (
+        gid integer NOT NULL UNIQUE PRIMARY KEY,
+        point geometry (Point,4326),
+        wmo character varying,
+        station_code integer,
+        name character varying,
+        obs_pres integer,
+        obs_wind integer,
+        obs_temp integer,
+        obs_hum integer,
+        obs_prec integer,
+        obs_rad integer,
+        obs_vis integer,
+        obs_clouds integer,
+        obs_presweather integer,
+        obs_snowdepth integer,
+        obs_soiltemp integer,
+        lon double precision,
+        lat double precision,
+        height double precision
+    );
+
+    CREATE INDEX stations_point_idx ON stations USING gist (point);
+
+    INSERT INTO weather.stations (gid, point, wmo, station_code, name, obs_pres, obs_wind, obs_temp, obs_hum, obs_prec, obs_rad, obs_vis, obs_clouds, obs_presweather, obs_snowdepth, obs_soiltemp, lon, lat, height)
+    VALUES (1, ST_GeomFromText('POINT(5.372 52.152)', 4326), 'Davis Vantage Pro2', 33,'Geonovum',	1,1,	1,	1,	1,	0,	0,	0,	0,	0,	0, 5.372, 52.152, 32.4);
+
+    -- VIEWS
+
+    -- SELECT to_timestamp(datetime), "datetime","pressure","outtemp" FROM "weather"."measurements"
+    DROP VIEW IF EXISTS weather.v_observations CASCADE;
+    CREATE VIEW weather.v_observations AS
+      SELECT
+        meas.datetime,
+        meas.station_code,
+        stations.name as station_name,
+        to_timestamp(datetime) as time,
+        round(((outtemp-32.0)*5.0/9.0)::numeric) as outtemp_c,
+        round((windSpeed*1.61)/3.6::numeric) as windspeed_mps,
+        round((windGust*1.61)/3.6::numeric) as windgust_mps,
+        round(windDir::numeric) as winddir_deg,
+        round(((windchill-32.0)*5.0/9.0)::numeric) as windchill_c,
+        meas.rainRate,
+        round((pressure*33.8638815)::numeric) as pressure_mbar,
+        round(outhumidity::numeric) as outhumidity_perc,
+        stations.point as point
+      FROM weather.measurements as meas
+      INNER JOIN weather.stations AS stations
+          ON meas.station_code = stations.station_code ORDER BY datetime DESC;
+
+    -- Laatste Metingen per Station
+    DROP VIEW IF EXISTS weather.v_last_observations CASCADE;
+    CREATE VIEW weather.v_last_observations AS
+      SELECT DISTINCT ON (station_code) station_code,
+        station_name,
+        datetime,
+        time,
+        outtemp_c,
+        windspeed_mps,
+        windgust_mps,
+        winddir_deg,
+        windchill_c,
+        rainRate,
+        pressure_mbar,
+        outhumidity_perc,
+        point
+      FROM weather.v_observations;
+
+The raw weather data is stored in the ``measurements`` table (US units).
+In order to make the tables/VIEWs geospatially enabled, a ``stations`` table is added.
+The stations table is modeled after existing KNMI station data. Only a single station is
+added for now, the Geonovum Davis station. The ``measurements`` table has a ``station_code``
+column to facilitate JOINs with the ``stations`` table.
+
+Via VIEWs more simple and geospatially-enabled data is created. Also the VIEWs take
+care of conversion from US to metric units. The ``weather.v_observations`` VIEW contains
+a selection of weather characteristics joined with station data. ``weather.v_last_observations``
+contains the last (current) observations per station.
+
+Stetl Sync
+----------
+
+This section describes the `Stetl Sync` processing within the RPi. Effectively
+this process will synchronize the latest data from the ``weewx`` database to
+a remote PostgreSQL database on the VPS.
+
+The `all sources can be found here <https://github.com/Geonovum/sospilot/tree/master/src/weather/weewx2pg>`_.
 
 `weewx` stores 'archive' data within a SQLite DB file `weewx.sdb`. Statistical
 data is derived from this data. Within `weewx.sdb` there is a single table `archive`.
-The database/table structure. ::
+The database/table structure (only relevant fields shown). ::
 
-    # test
-    sqlite3 weewx.sdb
-    SQLite version 3.7.13 2012-06-11 02:05:22
-    Enter ".help" for instructions
-    Enter SQL statements terminated with a ";"
-    sqlite> .schema
-    CREATE TABLE archive (`dateTime` INTEGER NOT NULL UNIQUE PRIMARY KEY,
-    `usUnits` INTEGER NOT NULL,
-    `interval` INTEGER NOT NULL,
-    `barometer` REAL, `pressure`
-    REAL, `altimeter` REAL, `inTemp` REAL,
-    `outTemp` REAL, `inHumidity` REAL, `outHumidity` REAL,
-    `windSpeed` REAL, `windDir` REAL, `windGust` REAL, `windGustDir`
-    REAL, `rainRate` REAL, `rain` REAL, `dewpoint` REAL, `windchill` REAL,
-    `heatindex` REAL, `ET` REAL, `radiation` REAL, `UV` REAL, `extraTemp1` REAL,
-    `extraTemp2` REAL, `extraTemp3` REAL, `soilTemp1` REAL, `soilTemp2` REAL, `soilTemp3` REAL,
-    `soilTemp4` REAL, `leafTemp1` REAL, `leafTemp2` REAL, `extraHumid1` REAL, `extraHumid2` REAL,
-    `soilMoist1` REAL, `soilMoist2` REAL, `soilMoist3` REAL, `soilMoist4` REAL, `leafWet1` REAL,
-    `leafWet2` REAL, `rxCheckPercent` REAL, `txBatteryStatus` REAL, `consBatteryVoltage` REAL,
-    `hail` REAL, `hailRate` REAL, `heatingTemp` REAL, `heatingVoltage` REAL, `supplyVoltage` REAL,
-    `referenceVoltage` REAL, `windBatteryStatus` REAL, `rainBatteryStatus` REAL, `outTempBatteryStatus` REAL,
-    `inTempBatteryStatus` REAL);
+    CREATE TABLE archive (
+        dateTime INTEGER NOT NULL UNIQUE PRIMARY KEY,
+        usUnits INTEGER NOT NULL,
+        interval INTEGER NOT NULL,
+        barometer REAL, 
+        pressure REAL, 
+        altimeter REAL, 
+        inTemp REAL,
+        outTemp REAL, 
+        inHumidity REAL, 
+        outHumidity REAL,
+        windSpeed REAL, 
+        windDir REAL, 
+        windGust REAL, 
+        windGustDir REAL, 
+        rainRate REAL, 
+        rain REAL, 
+        dewpoint REAL, 
+        windchill REAL,
+        ....
+    );
+
+Most of the Stetl Sync processing can be realizeed with standard Stetl components like for SQLite input and PostgreSQL
+publishing. Only synchronization tracking needs a small Stetl input
+component `WeewxDBInput <https://github.com/Geonovum/sospilot/blob/master/src/weather/weewx2pg/weewxdbinput.py>`_.
+This component keeps track of the `last archive data record synced` within a PostgreSQL record. At a later stage
+this may also become a Stetl component so the complete ETL could be effected in Stetl.
+
+The Stetl config is as follows. ::
+
+    # weewx archiove data in SQLite to Postgres/PostGIS output - Stetl config
+    #
+    # Just van den Broecke - 2014
+    #
+    # Incrementally reads raw weewx archive records and publishes these to
+    # PostGIS.
+
+    # The main Stetl ETL chain
+    [etl]
+    chains = input_weewx_db|output_postgres_insert
+
+
+    # for reading files from weewx SQLite, tracking progress in Postgres
+    [input_weewx_db]
+    class = weewxdbinput.WeewxDbInput
+    host = {host}
+    port = {port}
+    database = {database}
+    user = {user}
+    password = {password}
+    schema = {schema}
+    progress_query = SELECT * from etl_progress WHERE worker = 'weewx2postgres'
+    progress_update = UPDATE etl_progress SET last_id = %d, last_time = '%s', last_update = current_timestamp WHERE worker = 'weewx2postgres'
+    table = archive
+    query = SELECT * from archive WHERE dateTime > %d ORDER BY dateTime LIMIT 100
+    database_name = {weewx_db}
+    output_format = record_array
+
+    [output_std]
+    class = outputs.standardoutput.StandardOutput
+
+    # For inserting file records
+    [output_postgres_insert]
+    class = outputs.dboutput.PostgresInsertOutput
+    input_format = record_array
+    host = {host}
+    database = {database}
+    user = {user}
+    password = {password}
+    schema = {schema}
+    table = {table}
+    key=dateTime
+
+The target table is the PostgreSQL ``weather.measurements`` table depicted above.
+
+The synchronization state is tracked in a PostgresQL table. A single `worker` (see Stetl config above)
+is inserted as well::
+
+    -- ETL progress tabel, houdt bij voor ieder ETL proces ("worker") wat het
+    -- laatst verwerkte record id is van hun bron tabel.
+    DROP TABLE IF EXISTS weather.etl_progress CASCADE;
+    CREATE TABLE weather.etl_progress (
+      gid          SERIAL,
+      worker       CHARACTER VARYING(25),
+      source_table CHARACTER VARYING(25),
+      last_id      INTEGER,
+      last_time    CHARACTER VARYING(25) DEFAULT '-',
+      last_update  TIMESTAMP,
+      PRIMARY KEY (gid)
+    );
+
+    -- Define workers
+    INSERT INTO weather.etl_progress (worker, source_table, last_id, last_update)
+      VALUES ('weewx2postgres', 'sqlite_archive', 0, current_timestamp);
+
+The Stetl Sync process is scheduled via ``cron`` to run typically every 4 minutes. ::
+
+    # Cronfile for ETL processes on Raspberry Pi
+
+    SHELL=/bin/sh
+    PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+    SOSPILOT=/opt/geonovum/sospilot/git
+
+    # Run ETL step 1: Raw weewx data from SQLite to remote Postgres DB on VPN
+    */4 * * * * cd $SOSPILOT/src/weather/weewx2pg; ./pi-etl.sh >> /var/log/sospilot/weewx2pg.log 2>&1
+
+The ``pi-etl.sh`` shell-script will first setup an SSH tunnel, then call the Stetl-wrapper ``weewx2pg.sh`` and
+then tear down the SSH-tunnel. ::
+
+    #!/bin/bash
+    #
+    # Script to invoke ETL on the Raspberry Pi
+    # Uses an SSH tunnel to connect to Postgres on the VPS
+    #
+
+    # Kill possible (hanging) background SSH tunnel
+    function killTunnel() {
+        pstree -p sadmin | grep 'ssh(' | cut -d'(' -f2 | cut -d')' -f1|xargs kill -9 > /dev/null 2>&1
+    }
+
+
+    # Kill possible (hanging) background SSH tunnel
+    killTunnel
+
+    # Setup SSH tunnel to remote host
+    ssh -f -L 5432:sensors:5432 sadmin@sensors -4 -g -N
+    sleep 10
+    ps aux | grep 5432
+
+    # Do the ETL
+    ./weewx2pg.sh
+
+    # Kill the background SSH tunnel
+    killTunnel
+
+The ``weewx2pg.sh`` script is as follows. ::
+
+    #!/bin/bash
+    #
+    # ETL for converting/harvesting weewx archive data into PostGIS
+    #
+
+    # Usually requried in order to have Python find your package
+    export PYTHONPATH=.:$PYTHONPATH
+
+    stetl_cmd=stetl
+
+    # debugging
+    # stetl_cmd=../../../../stetl/git/stetl/main.py
+
+    # Set Stetl options
+
+    . ../options.sh
+
+    $stetl_cmd -c weewx2pg.cfg -a "$options"
+
+The ``options.sh`` script will set various (shell) variables to be substituted in the Stetl
+config. ::
+
+    #!/bin/sh
+    #
+    # Sets host-specific variables
+    # To add your localhost add options-<your hostname>.sh in this directory
+
+    # All file locations are relative to the specific ETL subdirs like weewx2pg
+    . ../options-`hostname`.sh
+
+    export options="host=localhost port=5432 weewx_db=$WEEWX_DB user=$PGUSER password=$PGPASSWORD database=sensors schema=weather table=measurements"
+
+By calling the ``options-<hostname>.sh`` script, various host-specific/secured variables are set.
+
+GeoServer
+---------
+
+The ``stations`` table and two VIEWs are used as data sources for weather-layers:
+
+* ``weather.stations`` as a source for a WMS Layer ``sensors:weather_stations``
+* ``weather.v_observations`` as a source for a timeseries WMS-Dimension Layer ``sensors:weather_observations`` using continuous interval option
+* ``weather.v_last_observations``  for a WMS last observation layer ``sensors:weather_last_observations``
+
+These three layers were easily integrated in the `SOSPilot Heron Viewer <http://sensors.geonovum.nl/heronviewer/>`_.
+
+Stetl SOS
+---------
+
+To be supplied. Will be similar to the RIVM LML AQ SOS publishing setup.
 
 Links
 -----
