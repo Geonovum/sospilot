@@ -173,6 +173,13 @@ using our WeatherStationAPI custom driver, the Geonovum Davis weather station wi
 The web reporting is synced by `weewx` every 5 mins to to our main website:
 http://sensors.geonovum.nl/weewx. This will take about 125kb each 5 mins.
 
+
+.. figure:: _static/weewx-report-sshot.png
+   :align: center
+
+   *Figure 5 - weewx standard report screenshot*
+
+
 PostgreSQL Database
 -------------------
 
@@ -292,7 +299,14 @@ column to facilitate JOINs with the ``stations`` table.
 Via VIEWs more simple and geospatially-enabled data is created. Also the VIEWs take
 care of conversion from US to metric units. The ``weather.v_observations`` VIEW contains
 a selection of weather characteristics joined with station data. ``weather.v_last_observations``
-contains the last (current) observations per station.
+contains the last (current) observations per station. Below an example of data in the
+view.
+
+
+.. figure:: _static/weather-pg-observations.png
+   :align: center
+
+   *Figure 6 - PostgreSQL weather.v_observations VIEW*
 
 Stetl Sync
 ----------
@@ -301,7 +315,7 @@ This section describes the `Stetl Sync` processing within the RPi. Effectively
 this process will synchronize the latest data from the ``weewx`` database to
 a remote PostgreSQL database on the VPS.
 
-The `all sources can be found here <https://github.com/Geonovum/sospilot/tree/master/src/weather/weewx2pg>`_.
+All `sources can be found here <https://github.com/Geonovum/sospilot/tree/master/src/weather/weewx2pg>`_.
 
 `weewx` stores 'archive' data within a SQLite DB file `weewx.sdb`. Statistical
 data is derived from this data. Within `weewx.sdb` there is a single table `archive`.
@@ -337,7 +351,7 @@ this may also become a Stetl component so the complete ETL could be effected in 
 
 The Stetl config is as follows. ::
 
-    # weewx archiove data in SQLite to Postgres/PostGIS output - Stetl config
+    # weewx archive data in SQLite to Postgres/PostGIS output - Stetl config
     #
     # Just van den Broecke - 2014
     #
@@ -488,6 +502,12 @@ The ``stations`` table and two VIEWs are used as data sources for weather-layers
 * ``weather.v_last_observations``  for a WMS last observation layer ``sensors:weather_last_observations``
 
 These three layers were easily integrated in the `SOSPilot Heron Viewer <http://sensors.geonovum.nl/heronviewer/>`_.
+
+
+.. figure:: _static/heronviewer-weather.png
+   :align: center
+
+   *Figure 7 - Weather Data WMS Layers in Heron viewer*
 
 Stetl SOS
 ---------
