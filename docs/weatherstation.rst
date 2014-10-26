@@ -140,9 +140,9 @@ is never exposed directly via internet.
 
 Each of these components are elaborated further below.
 
-Sources for this architecture can be found in GitHub. ::
+Sources for this architecture can be found in GitHub.
 
-* ETL and services: https://github.com/Geonovum/sospilot/tree/master/src/weather
+* ETL, database and services: https://github.com/Geonovum/sospilot/tree/master/src/weather
 * Raspberry Pi system setup: https://github.com/Geonovum/sospilot/tree/master/src/raspberry
 * weewx-specific: https://github.com/Geonovum/sospilot/tree/master/src/weewx
 
