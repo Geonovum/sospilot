@@ -50,23 +50,39 @@ The overall hard/software architecture is depicted below.
 
    *Figure 1 - Global Setup from Weather Station Through OGC Services*
 
-Summarized, the components and their interconnections operate as follows.
+These components and their interconnections operate as follows.
 
 The Davis weather station is connected to a `Raspberry Pi <http://www.raspberrypi.org/>`_ (RPi) micro computer via
-USB. The RPi runs the Raspbian OS with the weather data software
-`weewx <http://weewx.com>`_.  The weewx daemon reads out raw weather data from the Davis weather station
-and stores this data locally in a (SQLite or MySQL) database. These raw measurements, typically a 5-minute summary
-of multiple samples ("Loop records") are called `archive records`.
+USB trough the `Davis WeatherLink® <http://www.davisnet.com/weather/products/weather-reporting-software.asp>`_.
+
+The RPi runs the `Raspbian <http://www.raspbian.org/>`_ OS with the weather data software
+`weewx <http://weewx.com>`_.  The weewx daemon continuously reads raw weather sample data from the Davis weather station
+and stores this data locally in a (SQLite or MySQL) database. These measurements, called weewx `Archive Records` are
+typically a 5-minute summary of multiple samples (weewx `Loop Records`) collected every few seconds.
 
 An ETL process based on `Stetl <http:/www.stetl.org>`_ transforms and syncs data
-from the `weather archive database` to a remote PostgreSQL server
-in a "Cloud Server" (Ubuntu VPS). The VPS runs GeoServer that serves the weather data directly from the Postgres/PostGIS
-database as WMS, WMS-Time and WFS.
+from the SQLite `weather archive database` to a remote PostgreSQL server
+in a "Cloud Server" (the Ubuntu VPS used in the project).
+
+Other weewx plugins generate reports with statistics and summaries. These are synced regularly to be viewed
+as webpages in a browser.
+
+The VPS runs GeoServer to serve the weather data directly from the Postgres/PostGIS
+database, using specialized PostgreSQL VIEWs, as WMS, WMS-Time and WFS.
+
 In addition the VPS runs a Stetl ETL process that transforms and and publishes
 the weather data from PostgreSQL using the SOS-T protocol
 to the 52North Sensor Web Application server.
 The latter provides a SOS (Sensor Observation Service). Via the web browser various WMS/WFS
 and SOS client applications are invoked.
+
+All client applications
+can be found and accessed via the project landing page: `sensors.geonovum.nl <http://sensors.geonovum.nl>`_:
+
+* weather reports via: `sensors.geonovum.nl/weewx <http://sensors.geonovum.nl/weewx>`_
+* WMS/WMS-Time/WFS via: `sensors.geonovum.nl/heronviewer <http://sensors.geonovum.nl/heronviewer>`_
+* SOS via SOS client apps: `sensors.geonovum.nl <http://sensors.geonovum.nl>`_
+
 
 Raspberry Pi
 ------------
