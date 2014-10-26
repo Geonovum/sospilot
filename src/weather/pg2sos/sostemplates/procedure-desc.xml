@@ -1,0 +1,132 @@
+<sml:SensorML
+        xmlns:swe="http://www.opengis.net/swe/1.0.1" xmlns:sml="http://www.opengis.net/sensorML/1.0.1"
+        xmlns:gml="http://www.opengis.net/gml"
+        version="1.0.1">
+    <sml:member>
+        <sml:System>
+            <sml:identification>
+                <sml:IdentifierList>
+                    <sml:identifier name="uniqueID">
+                        <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
+                            <sml:value>http://sensors/weather/procedure/{station_id}</sml:value>
+                        </sml:Term>
+                    </sml:identifier>
+                    <sml:identifier name="longName">
+                        <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
+                            <sml:value>Weather Station {station_name}
+                            </sml:value>
+                        </sml:Term>
+                    </sml:identifier>
+                    <sml:identifier name="shortName">
+                        <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
+                            <sml:value>{station_name}</sml:value>
+                        </sml:Term>
+                    </sml:identifier>
+                </sml:IdentifierList>
+            </sml:identification>
+            <sml:capabilities name="offerings">
+                <swe:SimpleDataRecord>
+                    <swe:field name="{station_id} - {station_name}">
+                        <swe:Text definition="urn:ogc:def:identifier:OGC:offeringID">
+                            <swe:value>http://sensors/weather/offering/{station_id}</swe:value>
+                        </swe:Text>
+                    </swe:field>
+                </swe:SimpleDataRecord>
+            </sml:capabilities>
+            <!--           <sml:capabilities name="parentProcedures">
+                           <swe:SimpleDataRecord>
+                               <swe:field name="parentProcedure">
+                                   <swe:Text>
+                                       <swe:value>http://sensors/weather/procedure/1</swe:value>
+                                   </swe:Text>
+                               </swe:field>
+                           </swe:SimpleDataRecord>
+                       </sml:capabilities>    -->
+            <sml:capabilities name="featuresOfInterest">
+                <swe:SimpleDataRecord>
+                    <swe:field name="{station_name}">
+                        <swe:Text definition="featureOfInterestID">
+                            <swe:value>http://sensors/weather/featureOfInterest/{station_id}</swe:value>
+                        </swe:Text>
+                    </swe:field>
+                </swe:SimpleDataRecord>
+
+                <!-- OLD invalid: <swe:SimpleDataRecord>
+                    <swe:field name="featureOfInterestID">
+                        <swe:Text>
+                            <swe:value>http://sensors/weather/featureOfInterest/{station_id}</swe:value>
+                        </swe:Text>
+                    </swe:field>
+                </swe:SimpleDataRecord>  -->
+            </sml:capabilities>
+            <sml:position name="sensorPosition">
+                <swe:Position referenceFrame="urn:ogc:def:crs:EPSG::4326">
+                    <swe:location>
+                        <swe:Vector gml:id="STATION_LOCATION">
+                            <swe:coordinate name="easting">
+                                <swe:Quantity axisID="x">
+                                    <swe:uom code="degree"/>
+                                    <swe:value>{station_lon}</swe:value>
+                                </swe:Quantity>
+                            </swe:coordinate>
+                            <swe:coordinate name="northing">
+                                <swe:Quantity axisID="y">
+                                    <swe:uom code="degree"/>
+                                    <swe:value>{station_lat}</swe:value>
+                                </swe:Quantity>
+                            </swe:coordinate>
+                            <swe:coordinate name="altitude">
+                                <swe:Quantity axisID="z">
+                                    <swe:uom code="m"/>
+                                    <swe:value>{station_altitude}</swe:value>
+                                </swe:Quantity>
+                            </swe:coordinate>
+                        </swe:Vector>
+                    </swe:location>
+                </swe:Position>
+            </sml:position>
+            <sml:inputs>
+                <sml:InputList>
+                    <sml:input name="air">
+                        <swe:ObservableProperty
+                                definition="http://sensors/weather/obsProperty/air"/>
+                    </sml:input>
+                </sml:InputList>
+            </sml:inputs>
+            <sml:outputs>
+                <sml:OutputList>
+                    <sml:output name="outtemp">
+                        <swe:Quantity definition="http://sensors/weather/obsProperty/outtemp">
+                            <swe:uom code="deg"/>
+                        </swe:Quantity>
+                    </sml:output>
+                    <sml:output name="windspeed">
+                        <swe:Quantity definition="http://sensors/weather/obsProperty/windspeed">
+                            <swe:uom code="m/s"/>
+                        </swe:Quantity>
+                    </sml:output>
+                    <sml:output name="winddir">
+                        <swe:Quantity definition="http://sensors/weather/obsProperty/winddir">
+                            <swe:uom code="degrees"/>
+                        </swe:Quantity>
+                    </sml:output>
+                    <sml:output name="rainrate">
+                         <swe:Quantity definition="http://sensors/weather/obsProperty/rainrate">
+                             <swe:uom code="mm/h"/>
+                         </swe:Quantity>
+                     </sml:output>
+                    <sml:output name="pressure">
+                         <swe:Quantity definition="http://sensors/weather/obsProperty/pressure">
+                             <swe:uom code="mbar"/>
+                         </swe:Quantity>
+                     </sml:output>
+                    <sml:output name="outhumidity">
+                         <swe:Quantity definition="http://sensors/weather/obsProperty/outhumidity">
+                             <swe:uom code="%"/>
+                         </swe:Quantity>
+                     </sml:output>
+                 </sml:OutputList>
+            </sml:outputs>
+        </sml:System>
+    </sml:member>
+</sml:SensorML>

@@ -1,0 +1,7 @@
+{
+  "request": "DescribeSensor",
+  "service": "SOS",
+  "version": "2.0.0",
+  "procedure": "http://sensors/weather/procedure/33",
+  "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1"
+}

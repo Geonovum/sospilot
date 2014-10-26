@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# ETL for converting/harvesting weewx archive data into PostGIS
+# ETL for reading PG data and transforming/publishing to a SOS.
 #
 
 # Usually requried in order to have Python find your package
@@ -15,6 +15,9 @@ stetl_cmd=stetl
 
 . ../options.sh
 
-$stetl_cmd -c weewx2pg.cfg -a "$weewx_options $pg_options"
+options=$options
+$stetl_cmd -c pg2sos.cfg -a "$pg_options $sos_options"
+
+
 
 

@@ -48,27 +48,25 @@
 
                         <Font>
                             <CssParameter name="font-family">
-                                <ogc:Literal>Lucida Sans Regular</ogc:Literal>
+                                <ogc:Literal>Lucida Sans Demibold</ogc:Literal>
                             </CssParameter>
 
                             <CssParameter name="font-size">
-                                <ogc:Literal>13</ogc:Literal>
+                                <ogc:Literal>14</ogc:Literal>
                             </CssParameter>
-                            <CssParameter name="font-weight">
-                                <ogc:Literal>bold</ogc:Literal>
-                            </CssParameter>
+
                         </Font>
                         <LabelPlacement>
                             <PointPlacement>
                                 <AnchorPoint>
-                                    <AnchorPointX>0.5</AnchorPointX>
+                                    <AnchorPointX>0.55</AnchorPointX>
                                     <AnchorPointY>0.5</AnchorPointY>
                                 </AnchorPoint>
                             </PointPlacement>
                         </LabelPlacement>
 
                         <Fill>
-                            <CssParameter name="fill">#FFFF99</CssParameter>
+                            <CssParameter name="fill">#FFFFCC</CssParameter>
                         </Fill>
 
                     </TextSymbolizer>

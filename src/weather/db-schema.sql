@@ -22,6 +22,9 @@ CREATE TABLE weather.etl_progress (
 INSERT INTO weather.etl_progress (worker, source_table, last_id, last_update)
   VALUES ('weewx2postgres', 'sqlite_archive', 0, current_timestamp);
 
+INSERT INTO weather.etl_progress (worker, source_table, last_id, last_update)
+  VALUES ('postgres2sos', 'v_observations', 0, current_timestamp);
+
 -- Raw measurements table - data from weewx weather archive or possibly other source
 -- all units in US metrics assumed!
 DROP TABLE IF EXISTS weather.measurements CASCADE;
@@ -83,7 +86,7 @@ CREATE TABLE weather.measurements (
 
 
 --
--- Name: stations; Type: TABLE; Schema: knmi; Owner: postgres; Tablespace:
+-- Name: stations; Type: TABLE; Schema: weather; Owner: postgres; Tablespace:
 --
 
 DROP TABLE IF EXISTS weather.stations CASCADE;
@@ -93,6 +96,7 @@ CREATE TABLE weather.stations (
     wmo character varying,
     station_code integer,
     name character varying,
+    city character varying,
     obs_pres integer,
     obs_wind integer,
     obs_temp integer,
@@ -111,8 +115,8 @@ CREATE TABLE weather.stations (
 
 CREATE INDEX stations_point_idx ON stations USING gist (point);
 
-INSERT INTO weather.stations (gid, point, wmo, station_code, name, obs_pres, obs_wind, obs_temp, obs_hum, obs_prec, obs_rad, obs_vis, obs_clouds, obs_presweather, obs_snowdepth, obs_soiltemp, lon, lat, height)
-VALUES (1, ST_GeomFromText('POINT(5.372 52.152)', 4326), 'Davis Vantage Pro2', 33,'Geonovum',	1,1,	1,	1,	1,	0,	0,	0,	0,	0,	0, 5.372, 52.152, 32.4);
+INSERT INTO weather.stations (gid, point, wmo, station_code, name, city, obs_pres, obs_wind, obs_temp, obs_hum, obs_prec, obs_rad, obs_vis, obs_clouds, obs_presweather, obs_snowdepth, obs_soiltemp, lon, lat, height)
+VALUES (1, ST_GeomFromText('POINT(5.372 52.152)', 4326), 'Davis Vantage Pro2', 33,'Geonovum',	'Amersfoort', 1,1,	1,	1,	1,	0,	0,	0,	0,	0,	0, 5.372, 52.152, 32.4);
 
 -- VIEWS
 
@@ -123,6 +127,7 @@ CREATE VIEW weather.v_observations AS
     meas.datetime,
     meas.station_code,
     stations.name as station_name,
+    stations.city as city,
     to_timestamp(datetime) as time,
     round(((outtemp-32.0)*5.0/9.0)::numeric) as outtemp_c,
     round((windSpeed*1.61)/3.6::numeric) as windspeed_mps,
@@ -132,6 +137,8 @@ CREATE VIEW weather.v_observations AS
     meas.rainRate,
     round((pressure*33.8638815)::numeric) as pressure_mbar,
     round(outhumidity::numeric) as outhumidity_perc,
+    stations.lon as lon,
+    stations.lat as lat,
     stations.point as point
   FROM weather.measurements as meas
   INNER JOIN weather.stations AS stations
@@ -142,6 +149,7 @@ DROP VIEW IF EXISTS weather.v_last_observations CASCADE;
 CREATE VIEW weather.v_last_observations AS
   SELECT DISTINCT ON (station_code) station_code,
     station_name,
+    city,
     datetime,
     time,
     outtemp_c,
@@ -152,6 +160,8 @@ CREATE VIEW weather.v_last_observations AS
     rainRate,
     pressure_mbar,
     outhumidity_perc,
+    lon,
+    lat,
     point
   FROM weather.v_observations;
 

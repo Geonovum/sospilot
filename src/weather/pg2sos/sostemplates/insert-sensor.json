@@ -1,0 +1,20 @@
+{{
+    "request": "InsertSensor",
+    "service": "SOS",
+    "version": "2.0.0",
+    "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1",
+    "procedureDescription": "{procedure-desc.xml}",
+    "observableProperty": [
+        "http://sensors/weather/obsProperty/outtemp",
+        "http://sensors/weather/obsProperty/windspeed",
+        "http://sensors/weather/obsProperty/winddir",
+        "http://sensors/weather/obsProperty/rainrate",
+        "http://sensors/weather/obsProperty/pressure",
+        "http://sensors/weather/obsProperty/outhumidity"
+    ],
+    "observationType": [
+    "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+    ],
+    "featureOfInterestType": "http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"
+}}
+

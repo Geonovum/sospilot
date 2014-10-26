@@ -1,0 +1,46 @@
+{{
+  "request": "InsertObservation",
+  "service": "SOS",
+  "version": "2.0.0",
+  "offering": "http://sensors/weather/offering/{station_id}",
+  "observation": {{
+    "identifier": {{
+      "value": "{unique_id}",
+      "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+    }},
+    "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+    "procedure": "http://sensors/weather/procedure/{station_id}",
+    "observedProperty": "http://sensors/weather/obsProperty/{phenomenon}",
+    "featureOfInterest": {{
+      "identifier": {{
+        "value": "http://sensors/weather/featureOfInterest/{station_id}",
+        "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+      }},
+      "name": [
+        {{
+          "value": "{municipality}",
+          "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+        }}
+      ],
+      "geometry": {{
+        "type": "Point",
+        "coordinates": [
+          {station_lat},
+          {station_lon}
+        ],
+        "crs": {{
+          "type": "name",
+          "properties": {{
+            "name": "EPSG:4326"
+          }}
+        }}
+      }}
+    }},
+    "phenomenonTime": "{sample_time}",
+    "resultTime": "{sample_time}",
+    "result": {{
+      "uom": "{uom}",
+      "value": {sample_value}
+    }}
+  }}
+}}

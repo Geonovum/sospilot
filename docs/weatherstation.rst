@@ -517,6 +517,7 @@ To be supplied. Will be similar to the RIVM LML AQ SOS publishing setup.
 Links
 -----
 
+* `RGI-189 Sensoren als databronnen aan de geo-informatie infrastructuur`, Wiel Wauben, KNMI http://www.knmi.nl/~wauben/HIM/SWE%20KNMI%20evaluatie%20v3.pdf
 * http://garethhowell.com/wp/connect-raspberry-pi-3g-network
 * http://www.jamesrobertson.eu/blog/2014/jun/24/setting-up-a-huawei-e3131-to-work-with-a.html
 * http://christianscode.blogspot.nl/2012/11/python-huawei-e3131-library.html
