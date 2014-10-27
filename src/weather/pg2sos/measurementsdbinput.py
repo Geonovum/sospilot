@@ -4,6 +4,7 @@
 #
 # Author:Just van den Broecke
 
+import time
 from stetl.util import Util
 from stetl.inputs.dbinput import PostgresDbInput
 
@@ -25,7 +26,10 @@ class MeasurementsDbInput(PostgresDbInput):
         Used to update last id of processed file record.
         """
         log.info('Updating progress table with last_id= %d' % self.last_id)
-        self.db.execute(self.progress_update % self.last_id)
+        ts_local = time.strftime("%Y-%m-%d %H:%M:%S %Z", time.localtime(self.last_id))
+
+        self.db.execute(self.progress_update % (self.last_id, ts_local))
+        # self.db.execute(self.progress_update % self.last_id)
         self.db.commit(close=False)
         log.info('Update progress table ok')
         return True
