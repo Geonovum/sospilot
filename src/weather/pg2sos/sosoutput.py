@@ -114,7 +114,7 @@ class SOSTOutput(HttpOutput):
 
                 # See issue: somehow the unique_id ends up in the capabilities doc!
                 format_args['unique_id'] = str(record['datetime']) + '-' + str(
-                    record['station_code']) + '-' + phenomenon
+                    record['station_code']) + '-' + field
 
                 # Time format: "yyyy-MM-dd'T'HH:mm:ssZ"  e.g. 2013-09-29T18:46:19+0100
                 format_args['sample_time'] = record['time'].strftime('%Y-%m-%dT%H:%M:%S+0100')
