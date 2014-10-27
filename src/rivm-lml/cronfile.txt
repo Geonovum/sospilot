@@ -15,3 +15,7 @@ SOSPILOT=/opt/geonovum/sospilot/git
 
 # more frequent to catch up
 00,15,30,45 * * * * cd $SOSPILOT/src/rivm-lml; ./etl-step3.sh
+
+# Run weather: PostgreSQL 2 SOS
+*/6 * * * * cd $SOSPILOT/src/weather/pg2sos; ./pg2sos.sh >> /var/log/sospilot/weather_pg2sos.log 2>&1
+
