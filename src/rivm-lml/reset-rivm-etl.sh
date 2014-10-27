@@ -3,7 +3,7 @@
 # Use with care as ALL DATA WILL BE DELETED!!!
 #
 
-. pgcreds.sh
+. options.sh
 
 # Drop the schema to delete all
 psql -f db-schema-drop.sql sensors

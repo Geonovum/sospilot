@@ -12,9 +12,9 @@ stetl_cmd=stetl
 # stetl_cmd=../../../../stetl/git/stetl/main.py
 
 # Host-specific Postgres credentials in $pg_options
-. pgcreds.sh
+. options.sh
 
-options="$pg_options http_host=sensors.geonovum.nl http_port=80 http_user=postgres http_password=postgres  http_path=/sos/service"
+options="$pg_options $sos_options"
 
 $stetl_cmd -c measurements2sos.cfg -a "$options"
 

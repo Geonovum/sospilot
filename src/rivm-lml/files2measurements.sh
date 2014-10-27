@@ -12,7 +12,7 @@ stetl_cmd=stetl
 # stetl_cmd=../../../../stetl/git/stetl/main.py
 
 # Host-specific Postgres credentials in $pg_options
-. pgcreds.sh
+. options.sh
 
 options="$pg_options"
 

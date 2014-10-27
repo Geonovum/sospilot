@@ -5,7 +5,7 @@
 # Run this as Root
 #
 
-. pgcreds.sh
+. options.sh
 
 # Stop Tomcat
 /etc/init.d/tomcat7 stop

@@ -4,7 +4,7 @@
 export PYTHONPATH=.:$PYTHONPATH
 
 # set postgres credentials and options in $pg_options
-. pgcreds.sh
+. options.sh
 
 logdir=/var/log/sospilot
 
