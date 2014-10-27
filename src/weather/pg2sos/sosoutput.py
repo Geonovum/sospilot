@@ -11,6 +11,7 @@ from stetl.packet import FORMAT
 
 log = Util.get_log('sosoutput')
 
+
 class SOSTOutput(HttpOutput):
     """
     Output via SOS-T protocol over plain HTTP.
@@ -44,7 +45,6 @@ class SOSTOutput(HttpOutput):
         # For insert-sensor we need the Procedure SML (XML) and escape/insert this into
         # the JSON insert-sensor string.
         if self.sos_request == 'insert-sensor':
-
             f = open('%s/procedure-desc.xml' % self.template_file_root, 'r')
             proc_desc = f.read()
             proc_desc = proc_desc.replace('"', '\\"')
@@ -86,19 +86,35 @@ class SOSTOutput(HttpOutput):
             # print payload
         else:
             if self.sos_request == 'insert-observation':
+            # "http://sensors/weather/obsProperty/outtemp",
+            # "http://sensors/weather/obsProperty/windspeed",
+            # "http://sensors/weather/obsProperty/winddir",
+            # "http://sensors/weather/obsProperty/rainrate",
+            # "http://sensors/weather/obsProperty/pressure",
+            # "http://sensors/weather/obsProperty/outhumidity"
+            # phenomena = ['pressure_mbar','outtemp_c' ,'outhumidity_perc','windspeed_mps','winddir_deg','rainrate']
+                phenomena_fields = {
+                    'pressure_mbar': 'pressure',
+                    'outtemp_c': 'outtemp',
+                    'outhumidity_perc': 'outhumidity',
+                    'windspeed_mps': 'windspeed',
+                    'winddir_deg': 'winddir',
+                    'rainrate': 'rainrate'}
+
                 format_args = dict()
                 # need station_id, unique_id (sample_id?),
                 # component, municipality(may be null), station_lat, station_lon,
                 # sample_time, sample_value
-                phenomenon = 'outtemp'
-                field = 'outtemp_c'
-                format_args['uom'] = 'deg'
+                phenomenon = record['phenomenon']
+                field = phenomena_fields[phenomenon]
+                format_args['uom'] = record['uom']
 
-                format_args['phenomenon'] = phenomenon
+                format_args['phenomenon'] = field
                 format_args['station_id'] = record['station_code']
 
                 # See issue: somehow the unique_id ends up in the capabilities doc!
-                format_args['unique_id'] = str(record['datetime']) + '-' + str(record['station_code']) + '-' + phenomenon
+                format_args['unique_id'] = str(record['datetime']) + '-' + str(
+                    record['station_code']) + '-' + phenomenon
 
                 # Time format: "yyyy-MM-dd'T'HH:mm:ssZ"  e.g. 2013-09-29T18:46:19+0100
                 format_args['sample_time'] = record['time'].strftime('%Y-%m-%dT%H:%M:%S+0100')
@@ -110,7 +126,7 @@ class SOSTOutput(HttpOutput):
                 format_args['municipality'] = city
                 format_args['station_lon'] = record['lon']
                 format_args['station_lat'] = record['lat']
-                format_args['sample_value'] = record[field]
+                format_args['sample_value'] = record[phenomenon]
 
                 payload = self.template_str.format(**format_args)
                 # print payload

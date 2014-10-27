@@ -15,7 +15,6 @@ stetl_cmd=stetl
 
 . ../options.sh
 
-options=$options
 $stetl_cmd -c pg2sos.cfg -a "$pg_options $sos_options"
 
 
