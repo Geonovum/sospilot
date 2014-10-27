@@ -518,12 +518,16 @@ Further description to be supplied. Similar to the RIVM LML AQ SOS publishing se
 
 Source code: https://github.com/Geonovum/sospilot/tree/master/src/weather/pg2sos
 
+As the weather data is published in the same SOS as the AQ data, both data types can be combined in
+any of the SOS browser clients. An example can be seen in Figure 8: both outside temperature (deg) and humidity (%) are
+combined with NO2 (Nitrogen Dioxide) and PM10 (Particulate Matter up to 10 micrometers in size).
+
+.. figure:: _static/aq-weather-sshot-52n-client.png
+   :align: center
+
+   *Figure 8 - Weather Data SOS Data integrated in 52N JS Client*
+
 Links
 -----
 
 * `RGI-189 Sensoren als databronnen aan de geo-informatie infrastructuur`, Wiel Wauben, KNMI http://www.knmi.nl/~wauben/HIM/SWE%20KNMI%20evaluatie%20v3.pdf
-* http://garethhowell.com/wp/connect-raspberry-pi-3g-network
-* http://www.jamesrobertson.eu/blog/2014/jun/24/setting-up-a-huawei-e3131-to-work-with-a.html
-* http://christianscode.blogspot.nl/2012/11/python-huawei-e3131-library.html
-* Reverse tunneling to access the Pi from outside: http://www.thirdway.ch/En/projects/raspberry_pi_3g/index.php
-* Use `autossh` to maintain tunnel: http://unix.stackexchange.com/questions/133863/permanent-background-ssh-connection-to-create-reverse-tunnel-what-is-correct-wa

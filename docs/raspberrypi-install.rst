@@ -859,6 +859,17 @@ TODO
 * in particular the weewx DB needs to be backed up
 * SD-card image
 
+Links
+-----
+
+* http://garethhowell.com/wp/connect-raspberry-pi-3g-network
+* http://www.jamesrobertson.eu/blog/2014/jun/24/setting-up-a-huawei-e3131-to-work-with-a.html
+* http://christianscode.blogspot.nl/2012/11/python-huawei-e3131-library.html
+* Reverse tunneling to access the Pi from outside: http://www.thirdway.ch/En/projects/raspberry_pi_3g/index.php
+* Use `autossh` to maintain tunnel: http://unix.stackexchange.com/questions/133863/permanent-background-ssh-connection-to-create-reverse-tunnel-what-is-correct-wa
+* http://ccgi.peterhurn.plus.com/wordpress/raspberry-pi-weather-station-installation-notes/
+
+
 
 
 
