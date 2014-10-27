@@ -512,7 +512,11 @@ These three layers were easily integrated in the `SOSPilot Heron Viewer <http://
 Stetl SOS
 ---------
 
-To be supplied. Will be similar to the RIVM LML AQ SOS publishing setup.
+This ETL process reads measurements from PostgreSQL and transforms/publishes these to the SOS via SOS-T.
+
+Further description to be supplied. Similar to the RIVM LML AQ SOS publishing setup.
+
+Source code: https://github.com/Geonovum/sospilot/tree/master/src/weather/pg2sos
 
 Links
 -----
