@@ -11,3 +11,4 @@ SRC=/opt/geonovum/sospilot/git/src
 */10 * * * * $SRC/raspberry/wificheck.sh
 */15 * * * * $SRC/raspberry/rpistatus.sh
 0   4  * * *   shutdown -r +5
+0   3  * * *   $SRC/weewx/backup-weewx.sh
