@@ -3,7 +3,7 @@
 Some First Ideas
 ================
 
-Hieronder wat eerste ideeën.
+Hieronder wat eerste ideeën. Kept for future reference.
 
 
 Project naam
@@ -13,7 +13,6 @@ SensorPlus of bestaat er al iets? Denk ``SOSPilot``
 
 Support Technologie
 -------------------
-
 
 #. website sensors.geonovum.nl: simpele Bootstrap HTML met info + links naar bijv. 52N Client en andere demo’s, documentatie etc
 #. code en doc: GitHub: account Geonovum?, in ieder geval waar we beiden direct op kunnen committen ipv via PRs?  *DONE*

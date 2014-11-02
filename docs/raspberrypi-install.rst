@@ -589,6 +589,9 @@ Steps as follows. ::
     # export AUTOSSH_FIRST_POLL=30
     # export AUTOSSH_GATETIME=30
     export AUTOSSH_DEBUG=1
+    rm -rf /var/run/autossh
+    mkdir  /var/run/autossh
+    chown autossh:autossh /var/run/autossh
 
     su -s /bin/sh autossh -c
       'autossh -M 0 -q -f -N -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R <localport>:localhost:22 autossh@<remote>'
@@ -856,8 +859,219 @@ Backup
 
 TODO
 
-* in particular the weewx DB needs to be backed up
-* SD-card image
+* in particular the weewx DB needs to be backed up, e.g. nightly
+
+*Pi SD Card Disk Backup*
+
+Follow instructions on http://sysmatt.blogspot.nl/2014/08/backup-restore-customize-and-clone-your.html
+to make a restorable .tar.gz (i.s.o. dd diskclone).  ::
+
+    $ apt-get install dosfstools
+    # was already installed
+    # attach USB SDcardreader with 16GB SD Card
+    $ dmesg
+    [39798.700351] sd 0:0:0:1: [sdb] 31586304 512-byte logical blocks: (16.1 GB/15.0 GiB)
+    [39798.700855] sd 0:0:0:1: [sdb] Write Protect is off
+    [39798.700888] sd 0:0:0:1: [sdb] Mode Sense: 03 00 00 00
+    [39798.701388] sd 0:0:0:1: [sdb] No Caching mode page found
+    [39798.701451] sd 0:0:0:1: [sdb] Assuming drive cache: write through
+    [39798.706669] sd 0:0:0:2: [sdc] Attached SCSI removable disk
+    [39798.707165] sd 0:0:0:2: Attached scsi generic sg2 type 0
+    [39798.709292] sd 0:0:0:1: [sdb] No Caching mode page found
+    [39798.709355] sd 0:0:0:1: [sdb] Assuming drive cache: write through
+    [39798.710838]  sdb: sdb1
+    [39798.714637] sd 0:0:0:1: [sdb] No Caching mode page found
+    [39798.714677] sd 0:0:0:1: [sdb] Assuming drive cache: write through
+    [39798.714701] sd 0:0:0:1: [sdb] Attached SCSI removable disk
+    [39798.715493] scsi 0:0:0:3: Direct-Access     Generic  SM/xD-Picture    0.00 PQ: 0 ANSI: 2
+    [39798.718181] sd 0:0:0:3: [sdd] Attached SCSI removable disk
+    [39798.724978] sd 0:0:0:3: Attached scsi generic sg3 type 0
+
+    root@georasp:~# df
+    Filesystem     1K-blocks    Used Available Use% Mounted on
+    rootfs          29077488 3081180  24496200  12% /
+    /dev/root       29077488 3081180  24496200  12% /
+    devtmpfs          219764       0    219764   0% /dev
+    tmpfs              44788     280     44508   1% /run
+    tmpfs               5120       0      5120   0% /run/lock
+    tmpfs              89560       0     89560   0% /run/shm
+    /dev/mmcblk0p5     60479    9779     50700  17% /boot
+
+    root@georasp:~# parted -l
+    Model: Generic SD/MMC (scsi)
+    Disk /dev/sdb: 16.2GB
+    Sector size (logical/physical): 512B/512B
+    Partition Table: msdos
+
+    Number  Start   End     Size    Type     File system  Flags
+     1      4194kB  16.2GB  16.2GB  primary  fat32        lba
+
+
+    Model: SD USD (sd/mmc)
+    Disk /dev/mmcblk0: 31.3GB
+    Sector size (logical/physical): 512B/512B
+    Partition Table: msdos
+
+    Number  Start   End     Size    Type      File system  Flags
+     1      4194kB  828MB   824MB   primary   fat32        lba
+     2      830MB   31.3GB  30.5GB  extended
+     5      835MB   898MB   62.9MB  logical   fat32        lba
+     6      902MB   31.3GB  30.4GB  logical   ext4
+     3      31.3GB  31.3GB  33.6MB  primary   ext4
+
+
+    root@georasp:~# parted /dev/sdb
+    GNU Parted 2.3
+    Using /dev/sdb
+    Welcome to GNU Parted! Type 'help' to view a list of commands.
+    (parted) mklabel msdos
+    Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
+    Yes/No? Yes
+    (parted) mkpart primary fat16 1MiB 64MB
+    (parted) mkpart primary ext4 64MB -1s
+    (parted) print
+    Model: Generic SD/MMC (scsi)
+    Disk /dev/sdb: 16.2GB
+    Sector size (logical/physical): 512B/512B
+    Partition Table: msdos
+
+    Number  Start   End     Size    Type     File system  Flags
+     1      1049kB  64.0MB  62.9MB  primary               lba
+     2      64.0MB  16.2GB  16.1GB  primary
+
+    (parted) quit
+    Information: You may need to update /etc/fstab.
+
+    root@georasp:~# parted -l
+    Model: Generic SD/MMC (scsi)
+    Disk /dev/sdb: 16.2GB
+    Sector size (logical/physical): 512B/512B
+    Partition Table: msdos
+
+    Number  Start   End     Size    Type     File system  Flags
+     1      1049kB  64.0MB  62.9MB  primary               lba
+     2      64.0MB  16.2GB  16.1GB  primary
+
+
+    Model: SD USD (sd/mmc)
+    Disk /dev/mmcblk0: 31.3GB
+    Sector size (logical/physical): 512B/512B
+    Partition Table: msdos
+
+    Number  Start   End     Size    Type      File system  Flags
+     1      4194kB  828MB   824MB   primary   fat32        lba
+     2      830MB   31.3GB  30.5GB  extended
+     5      835MB   898MB   62.9MB  logical   fat32        lba
+     6      902MB   31.3GB  30.4GB  logical   ext4
+     3      31.3GB  31.3GB  33.6MB  primary   ext4
+
+
+    root@georasp:~# mkfs.vfat /dev/sdb1
+    mkfs.vfat 3.0.13 (30 Jun 2012)
+
+    root@georasp:~# mkfs.ext4 -j  /dev/sdb2
+    mke2fs 1.42.5 (29-Jul-2012)
+    warning: 512 blocks unused.
+
+    Filesystem label=
+    OS type: Linux
+    Block size=4096 (log=2)
+    Fragment size=4096 (log=2)
+    Stride=0 blocks, Stripe width=0 blocks
+    984960 inodes, 3932160 blocks
+    196633 blocks (5.00%) reserved for the super user
+    First data block=0
+    Maximum filesystem blocks=4026531840
+    120 block groups
+    32768 blocks per group, 32768 fragments per group
+    8208 inodes per group
+    Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
+
+    Allocating group tables: done
+    Writing inode tables: done
+    Creating journal (32768 blocks): done
+    Writing superblocks and filesystem accounting information: done
+
+    root@georasp:~# mkdir /tmp/newpi
+    root@georasp:~# mount /dev/sdb2 /tmp/newpi
+    root@georasp:~# mkdir /tmp/newpi/boot
+    root@georasp:~# mount /dev/sdb1 /tmp/newpi/boot
+
+    root@georasp:~# df -h
+    Filesystem      Size  Used Avail Use% Mounted on
+    rootfs           28G  3.0G   24G  12% /
+    /dev/root        28G  3.0G   24G  12% /
+    devtmpfs        215M     0  215M   0% /dev
+    tmpfs            44M  284K   44M   1% /run
+    tmpfs           5.0M     0  5.0M   0% /run/lock
+    tmpfs            88M     0   88M   0% /run/shm
+    /dev/mmcblk0p5   60M  9.6M   50M  17% /boot
+    /dev/sdb2        15G   38M   14G   1% /tmp/newpi
+    /dev/sdb1        60M     0   60M   0% /tmp/newpi/boot
+    root@georasp:~# crontab -l
+    # Cronfile for keeping stuff alive on unattended Raspberry Pi
+    # Some bit crude like reboot, but effective mostly
+    # Author: Just van den Broecke <justb4@gmail.com>
+    #
+    SHELL=/bin/sh
+    PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+    SRC=/opt/geonovum/sospilot/git/src
+
+    # Do checks on weewx and network every N mins
+    */6  * * * * $SRC/weewx/weewxcheck.sh
+    */10 * * * * $SRC/raspberry/wificheck.sh
+    */15 * * * * $SRC/raspberry/rpistatus.sh
+    0   4  * * *   shutdown -r +5
+    root@georasp:~# crontab -r
+    root@georasp:~# ls
+    Desktop
+    root@georasp:~# /etc/init.d/weewx stop
+    [ ok ] Stopping weewx weather system: weewx.
+    root@georasp:~#
+
+    # get the backup tools
+    wget -O sysmatt-rpi-tools.zip  https://github.com/sysmatt-industries/sysmatt-rpi-tools/archive/master.zip
+
+    # do rsync
+    $ rsync -av --one-file-system / /boot /tmp/newpi/
+
+    # ...wait long time, many files....
+
+    root@georasp:~# df -h
+    Filesystem      Size  Used Avail Use% Mounted on
+    rootfs           28G  3.0G   24G  12% /
+    /dev/root        28G  3.0G   24G  12% /
+    devtmpfs        215M     0  215M   0% /dev
+    tmpfs            44M  284K   44M   1% /run
+    tmpfs           5.0M     0  5.0M   0% /run/lock
+    tmpfs            88M     0   88M   0% /run/shm
+    /dev/mmcblk0p5   60M  9.6M   50M  17% /boot
+    /dev/sdb2        15G  3.0G   11G  22% /tmp/newpi
+    /dev/sdb1        60M  9.6M   51M  16% /tmp/newpi/boot
+
+    # NOOBS stuff repair
+    $ edit /tmp/newpi/boot/cmdline.txt
+    # root=/dev/mmcblk0p6 must become root=/dev/mmcblk0p2
+    dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+
+    # fstab
+    # in /tmp/newpi/etc/fstab
+    proc            /proc           proc    defaults          0       0
+    /dev/mmcblk0p5  /boot           vfat    defaults          0       2
+    /dev/mmcblk0p6  /               ext4    defaults,noatime  0       1
+    # should become
+    proc            /proc           proc    defaults          0       0
+    /dev/mmcblk0p1  /boot           vfat    defaults          0       2
+    /dev/mmcblk0p   /               ext4    defaults,noatime  0       1
+
+
+Overdracht. /etc/network/interfaces aanpassen. ::
+
+    # SD-card in USBReader mounten:
+    mkdir /tmp/oldpi
+    mount /dev/sdb6 /tmp/oldpi
+    /tmp/oldpi/etc/network/interfaces
 
 Links
 -----

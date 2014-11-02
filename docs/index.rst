@@ -13,7 +13,6 @@ Contents:
    :maxdepth: 1
 
    intro.rst
-   ideas.rst
    data.rst
    services.rst
    clients.rst
@@ -22,6 +21,7 @@ Contents:
    weatherstation.rst
    raspberrypi-install.rst
    server-inrichting.rst
+   ideas.rst
    contact.rst
    links.rst
 

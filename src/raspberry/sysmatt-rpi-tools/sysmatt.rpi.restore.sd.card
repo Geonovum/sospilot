@@ -1,0 +1,106 @@
+#!/bin/bash 
+# 20140804-1708 Matthew E Hoskins / Twitter: @sysmatt (c) GNU GPL
+
+SDCARD_DEVICE="${1:?You must specify one SD CARD DEVICE to destroy}"
+PI_BACKUP_SLASH="${2:?You must specify one PI BACKUP SLASH GTAR file}"
+
+# Temp random mountpoint under /tmp
+MOUNTPOINT="/tmp/pi.sd.${RANDOM}${$}"
+
+bomb (){
+	echo "BOMB: ${1}"
+	exit 1
+}
+
+[ -x "/sbin/mkfs.vfat" ] || bomb "/sbin/mkfs.vfat Missing"
+
+echo ""
+echo "=== ${SDCARD_DEVICE} Current Partition Table - To be destroyed! ==="
+parted --script ${SDCARD_DEVICE} "print"
+echo ""
+read -p "PRESS ENTER to DESTROY ${SDCARD_DEVICE}, Press CTRL-c to abort" 
+
+parted --script "${SDCARD_DEVICE}"  "mklabel msdos"
+parted --script "${SDCARD_DEVICE}"  "mkpart primary fat16 1MiB 64MB"
+parted --script "${SDCARD_DEVICE}"  "mkpart primary ext4 64MB -1s"
+parted --script "${SDCARD_DEVICE}"  print
+mkfs.vfat  "${SDCARD_DEVICE}1"
+mkfs.ext4 -j "${SDCARD_DEVICE}2" 
+mkdir -p "${MOUNTPOINT}"
+mount "${SDCARD_DEVICE}2" "${MOUNTPOINT}"
+mkdir -p "${MOUNTPOINT}/boot"
+mount "${SDCARD_DEVICE}1" "${MOUNTPOINT}/boot"
+df -h "${MOUNTPOINT}"
+df -h "${MOUNTPOINT}/boot"
+read -p "Press ENTER To begin image restore"
+tar -xvzf  "${PI_BACKUP_SLASH}" -C "${MOUNTPOINT}"
+
+# Begin NOOBS fixup / Recommended by @KevinSidwar / 20140829-1744-MEH
+ORIG_SLASHDEV_FOUND=`cat "${MOUNTPOINT}/etc/fstab"| grep " / "     |grep -v "^#" |awk '{ print $1; }' |cut -d/ -f3`
+ORIG_BOOTDEV_FOUND=`cat  "${MOUNTPOINT}/etc/fstab"| grep " /boot " |grep -v "^#" |awk '{ print $1; }' |cut -d/ -f3`
+
+# Hardcoded
+NEW_SLASHDEV="mmcblk0p2"
+NEW_BOOTDEV="mmcblk0p1"
+
+# Defaults just in case the above search of fstab is a miss
+ORIG_SLASHDEV="${ORIG_SLASHDEV_FOUND:-$NEW_SLASHDEV}"
+ORIG_BOOTDEV="${ORIG_BOOTDEV_FOUND:-$NEW_BOOTDEV}"
+
+
+echo "ORIG_SLASHDEV[${ORIG_SLASHDEV}] NEW_SLASHDEV[${NEW_SLASHDEV}] ORIG_BOOTDEV[${ORIG_BOOTDEV}] NEW_BOOTDEV[${NEW_BOOTDEV}]"
+
+FILE_FSTAB="${MOUNTPOINT}/etc/fstab"
+FILE_CMDLINE="${MOUNTPOINT}/boot/cmdline.txt"
+FILE_OS_CONFIG_JSON="${MOUNTPOINT}/boot/os_config.json"
+
+if [  "${ORIG_SLASHDEV}" != "${NEW_SLASHDEV}"  -o   "${ORIG_BOOTDEV}" != "${NEW_BOOTDEV}"  ]
+then
+	echo "CONFIGURATION CONVERSION NECESSARY - Devices do not match, modifying files. "
+
+	THISFILE="${FILE_FSTAB}"
+	if [ -e "${THISFILE}" ] 
+	then
+		echo "Fixing ${THISFILE}"
+		cp -f "${THISFILE}" "${THISFILE}.old"
+		cat "${THISFILE}.old" |sed -e "s#${ORIG_SLASHDEV}#%NEW_SLASHDEV%# ; s#${ORIG_BOOTDEV}#%NEW_BOOTDEV%#"  > "${THISFILE}.i"
+		cat "${THISFILE}.i"   |sed -e "s#%NEW_SLASHDEV%#${NEW_SLASHDEV}# ; s#%NEW_BOOTDEV%#${NEW_BOOTDEV}#"    >"${THISFILE}"
+		rm -f "${THISFILE}.i"
+	fi
+
+	THISFILE="${FILE_CMDLINE}"
+	if [ -e "${THISFILE}" ] 
+	then
+		echo "Fixing ${THISFILE}"
+		cp -f "${THISFILE}" "${THISFILE}.old"
+		cat "${THISFILE}.old" |sed -e "s#${ORIG_SLASHDEV}#%NEW_SLASHDEV%# ; s#${ORIG_BOOTDEV}#%NEW_BOOTDEV%#"  > "${THISFILE}.i"
+		cat "${THISFILE}.i"   |sed -e "s#%NEW_SLASHDEV%#${NEW_SLASHDEV}# ; s#%NEW_BOOTDEV%#${NEW_BOOTDEV}#"    >"${THISFILE}"
+		rm -f "${THISFILE}.i"
+	fi
+
+	THISFILE="${FILE_OS_CONFIG_JSON}"
+	if [ -e "${THISFILE}" ] 
+	then
+		echo "Fixing ${THISFILE}"
+		cp -f "${THISFILE}" "${THISFILE}.old"
+		cat "${THISFILE}.old" |sed -e "s#${ORIG_SLASHDEV}#%NEW_SLASHDEV%# ; s#${ORIG_BOOTDEV}#%NEW_BOOTDEV%#"  > "${THISFILE}.i"
+		cat "${THISFILE}.i"   |sed -e "s#%NEW_SLASHDEV%#${NEW_SLASHDEV}# ; s#%NEW_BOOTDEV%#${NEW_BOOTDEV}#"    >"${THISFILE}"
+		rm -f "${THISFILE}.i"
+	fi
+
+fi
+# End Noobs fixup
+echo ""
+echo ""
+echo =DONE=
+echo "The SD is mounted at: ${MOUNTPOINT}"
+echo "Now would be a good time to make modifications in another shell session..."
+read -p "Press ENTER To unmount or CTRL-c to exit leaving mounted."
+echo ""
+echo "Working. This may take a moment..."
+echo ""
+set -x
+umount "${MOUNTPOINT}/boot"
+umount "${MOUNTPOINT}"
+
+

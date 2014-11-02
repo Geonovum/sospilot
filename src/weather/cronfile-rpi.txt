@@ -1,8 +1,0 @@
-# Cronfile for ETL processes on Raspberry Pi
-
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-SOSPILOT=/opt/geonovum/sospilot/git
-
-# Run ETL step 1: Raw weewx data from SQLite to remote Postgres DB on VPN
-*/4 * * * * cd $SOSPILOT/src/weather; ./pi-etl.sh

@@ -121,24 +121,22 @@ The (data) flow in Figure 3 is as follows.
 * data is sampled by the ``weewx`` daemon from the Davis Weather station
 * weewx stores `archive records` in a SQLite database
 * the `Stetl Sync` process reads the latest data from SQLite database
-* the `Stetl Sync` publishes these records unaltered to a PostgreSQL database
-* several specialized PostgreSQL VIEWs will convert the raw archive data and JOIN data records with Station (location) info
-* the PostgreSQL database (VIEWs) serve directly as WMS/WFS Layer datasources for GeoServer
+* `Stetl Sync` publishes these records unaltered to a PostgreSQL database (table: ``measurements``)
+* several specialized PostgreSQL VIEWs will filter and convert the raw archive data and JOIN data records with the ``stations`` (location) table date
+* the PostgreSQL database (VIEWs) serve directly as data sources for GeoServer WMS/WFS Layers
 * GeoServer will also provide a WMS-Dimension (-Time) service using the record timestamp column
-* the `Stetl SOS` process reads data from PostgreSQL and transforms this data to SOS-T requests, POSTing these via SOS-T to the 552 North SOS
+* the `Stetl SOS` process reads data from PostgreSQL and transforms this data to SOS-T requests, POSTing these via SOS-T to the 52North SOS
 * ``weewx`` also creates and publishes weather data reports in HTML to be serverd by an Apache server
 * in addition ``weewx`` may publish weather data to various weather community services like `Weather Underground <http://www.wunderground.com>`_ (optional)
 
-The components are divided over two server machines.
+The above components are divided over two server machines.
 
 * the Raspberry Pi: ``weewx`` and  `Stetl Sync`
 * the Ubuntu Linux VPS: GeoServer, SOS server and Apache server plus the PostgreSQL/PostGIS database and the `Stetl SOS` ETL
 
 Connections between the RPi and the VPS are via SSH. An SSH tunnel (``SSHTun``) is maintained
 to provide a secure connection to the PostgreSQL server on the VPS. This way the PostgreSQL server
-is never exposed directly via internet.
-
-Each of these components are elaborated further below.
+is never exposed directly via internet. Each of these components are elaborated further below.
 
 Sources for this architecture can be found in GitHub.
 
@@ -151,7 +149,7 @@ Raspberry Pi
 
 A Raspberry Pi will be setup as a headless (no GUI) server. Via a USB Cable the Pi will be connected to the Davis datalogger cable.
 The Pi will run a Debian Linux version (Raspbian) with the free `weewx` weather server and
-archiver. `weewx` will fetch samples from the Davis, storing its summaries regularly (typically every 5 mins) in
+archiver. `weewx` will fetch samples from the Davis weather station, storing its summaries regularly (typically every 5 mins) in
 a MySQL or SQLite `archive table`. weewx can also can publish data to community Weather networks like Wunderground.
 
 
@@ -166,19 +164,19 @@ of the RPi for the project.
 Weather Software
 ----------------
 
-The choice is `weewx <http://www.weewx.com>`_ with SQLlite. `weewx` is installed as part of the
-`raspberrypi-install <raspberrypi-install.html>`_. The configuration is maintained in
+The choice is `weewx <http://www.weewx.com>`_ with SQLite. `weewx` is installed as part of the
+`raspberrypi-install <raspberrypi-install.html>`_. The `weewx` configuration for the Davis station
+is maintained in
 GitHub https://github.com/Geonovum/sospilot/tree/master/src/weewx/davis. After a first test
 using our WeatherStationAPI custom driver, the Geonovum Davis weather station will be connected.
-The web reporting is synced by `weewx` every 5 mins to to our main website:
-http://sensors.geonovum.nl/weewx. This will take about 125kb each 5 mins.
 
+The web reporting is synced by `weewx` every 5 mins to to our main website (using ``rsync`` over SSH):
+http://sensors.geonovum.nl/weewx. This will take about 125kb each 5 mins.
 
 .. figure:: _static/weewx-report-sshot.png
    :align: center
 
    *Figure 5 - weewx standard report screenshot*
-
 
 PostgreSQL Database
 -------------------
@@ -513,8 +511,7 @@ Stetl SOS
 ---------
 
 This ETL process reads measurements from PostgreSQL and transforms/publishes these to the SOS via SOS-T.
-
-Further description to be supplied. Similar to the RIVM LML AQ SOS publishing setup.
+The design Similar to the RIVM LML AQ SOS publishing setup.
 
 Source code: https://github.com/Geonovum/sospilot/tree/master/src/weather/pg2sos
 
