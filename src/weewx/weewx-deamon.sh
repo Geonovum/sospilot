@@ -69,6 +69,7 @@ do_start()
     [ -c /dev/ttyUSB1 ] && [  ! -c /dev/ttyUSB0 ] && ln -s /dev/ttyUSB1 /dev/ttyUSB0 || log_daemon_msg "Not present /dev/ttyUSB1"
     [ -c /dev/ttyUSB2 ] && [  ! -c /dev/ttyUSB0 ] && ln -s /dev/ttyUSB2 /dev/ttyUSB0 || log_daemon_msg "Not present /dev/ttyUSB2"
     [ -c /dev/ttyUSB3 ] && [  ! -c /dev/ttyUSB0 ] && ln -s /dev/ttyUSB3 /dev/ttyUSB0 || log_daemon_msg "Not present /dev/ttyUSB3"
+    chown :dialout /dev/ttyUSB0
 
     NPROC=`ps ax | grep $WEEWX_BIN | grep $NAME.pid | wc -l`
     if [ $NPROC != 0 ]; then
