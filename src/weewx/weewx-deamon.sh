@@ -1,6 +1,7 @@
 #! /bin/sh
 # $Id: weewx.debian 2064 2014-02-05 21:13:51Z mwall $
 # Author: Tom Keffer <keffer@gmail.com>
+# modified by Just van den Broecke for local Raspberry Pi
 # Startup script for Debian derivatives
 #
 # the skeleton script in debian 6 does not work properly in package scripts.
@@ -58,6 +59,9 @@ SCRIPTNAME=/etc/init.d/$NAME
 # check using ps not the pid file.  pid file could be leftover.
 do_start()
 {
+    # normally root is owner
+    chown $WEEWX_USER:$WEEWX_USER /dev/ttyUSB0
+
     NPROC=`ps ax | grep $WEEWX_BIN | grep $NAME.pid | wc -l`
     if [ $NPROC != 0 ]; then
 	return 1
