@@ -538,25 +538,27 @@
 
       <div id="footer" class="grid_12">
         <h3>About this weather station</h3>
+          #if $station.hardware[0:7] == 'Vantage'
+              This station uses a <a href="http://davisnet.com">
+              Davis $station.hardware</a> weather station,
+          #elif $station.hardware == 'VantageIP'
+            with a <a href="http://davisnet.com/weather/products/weather_product.asp?pnum=06555">
+            WeatherLinkIP connection</a>,
+          #elif $station.hardware == 'WMR100'
+            This station uses an <a href="http://us.oregonscientific.com">
+            Oregon Scientific WMR100N</a> weather station,
+          #else
+              This station uses a $station.hardware weather station,
+          #end if
           <p>
-            This station gets is data not from a station but from the
-              <a href="http://openweathermap.org/api">openweathermap.org</a> API.
-
-              It is still controlled by
+            This is
+              mounted on the Geonovum roof in Amersfoort, the Netherlands.
+              It is controlled by
             <a href="http://www.weewx.com">'weewx'</a>, an experimental
             weather software system written in Python. Weewx
             was designed to be simple, fast, and easy to understand by
             leveraging modern software concepts.
           </p>
-            <p>
-                A special weewx driver was written to obtain weather data from
-                <a href="http://openweathermap.org/api">openweathermap.org</a> for this location.
-                This was par of proof-of-concept for weewx and its extensibility as part the
-                <a href="http://sensors.geonovum.nl">Geonovum SOS Pilot Project</a>.
-
-                See
-                the <a href="https://github.com/Geonovum/sospilot/blob/master/src/weewx/test/weatherapidriver.py">implementation of the 'WeatherAPI' station driver</a>.
-            </p>
           <p>
               The <a href="http://davies-barnard.co.uk/2014/01/weewx-byteweather-template">"Byteweather" template</a>
               for these pages was kindly provided by <a href="http://davies-barnard.co.uk/">Chris Davies-Barnard</a>.
