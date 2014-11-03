@@ -60,7 +60,10 @@ SCRIPTNAME=/etc/init.d/$NAME
 do_start()
 {
     # normally root is owner
-    chown $WEEWX_USER:$WEEWX_USER /dev/ttyUSB0
+    # see http://askubuntu.com/questions/133235/how-do-i-allow-non-root-access-to-ttyusb0-on-12-04
+    # chown $WEEWX_USER /dev/ttyUSB0
+    # instead do:
+    # usermod -a -G dialout $USER
 
     NPROC=`ps ax | grep $WEEWX_BIN | grep $NAME.pid | wc -l`
     if [ $NPROC != 0 ]; then

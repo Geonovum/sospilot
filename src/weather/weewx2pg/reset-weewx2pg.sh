@@ -6,7 +6,7 @@
 
 . ../options.sh
 
-options="$options sql_files=reset-weewx2pg.sql"
+options="$pg_options sql_files=reset-weewx2pg.sql"
 
 echo "options = [$options]"
 
