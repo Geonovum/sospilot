@@ -617,6 +617,7 @@ that 'everything remains running'. To this end cronjobs are run with the followi
     */10 * * * * $SRC/raspberry/wificheck.sh
     */15 * * * * $SRC/raspberry/rpistatus.sh
     0   4  * * *   shutdown -r +5
+    0   3  * * *   $SRC/weewx/backup-weewx.sh
 
 The `weewx` daemon appears to be stopping randomly. Not clear why, but looks like this happens
 when there are network problems. To check and restart if needed the following script is run. ::
@@ -857,9 +858,17 @@ A typical result is as follows. See http://sensors.geonovum.nl/pi/rpistatus.txt.
 Backup
 ------
 
-TODO
+*weewx db backup*
 
-* in particular the weewx DB needs to be backed up, e.g. nightly
+Only weewx.sdb the SQLite DB has to be backed up. The stats file will always be regenerated.
+
+See script:
+https://github.com/Geonovum/sospilot/blob/master/src/weewx/backup-weewx.sh
+added to root cronfile
+
+Local dir: `/opt/weewx/weewxinst/backup`
+
+Backed up to sensors VPS: `/home/sadmin/weewx-backup` dir.
 
 *Pi SD Card Disk Backup*
 
@@ -1066,7 +1075,7 @@ to make a restorable .tar.gz (i.s.o. dd diskclone).  ::
     /dev/mmcblk0p   /               ext4    defaults,noatime  0       1
 
 
-Overdracht. /etc/network/interfaces aanpassen. ::
+Overdracht. `/etc/network/interfaces` aanpassen. ::
 
     # SD-card in USBReader mounten:
     mkdir /tmp/oldpi

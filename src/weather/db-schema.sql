@@ -116,7 +116,7 @@ CREATE TABLE weather.stations (
 CREATE INDEX stations_point_idx ON stations USING gist (point);
 
 INSERT INTO weather.stations (gid, point, wmo, station_code, name, city, obs_pres, obs_wind, obs_temp, obs_hum, obs_prec, obs_rad, obs_vis, obs_clouds, obs_presweather, obs_snowdepth, obs_soiltemp, lon, lat, height)
-VALUES (1, ST_GeomFromText('POINT(5.372 52.152)', 4326), 'Davis Vantage Pro2', 33,'Geonovum',	'Amersfoort', 1,1,	1,	1,	1,	0,	0,	0,	0,	0,	0, 5.372, 52.152, 32.4);
+VALUES (1, ST_GeomFromText('POINT(5.37241 52.152435)', 4326), 'Davis Vantage Pro2', 33,'Geonovum',	'Amersfoort', 1,1,	1,	1,	1,	0,	0,	0,	0,	0,	0, 5.372, 52.152, 32.4);
 
 -- VIEWS
 
