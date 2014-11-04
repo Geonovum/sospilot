@@ -218,17 +218,14 @@
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tr>
-                            <td><a href="weather"><img src="media/weewx-report-200.png"/></a>  </td>
-                            <td><a href="weather">Weather report</a> - a first PoC using the
-                                Python <a href="http://www.weewx.com">weewx weather software</a> with
-                                local weather data obtained from the
-                                <a href="http://openweathermap.org/api">OpenWeatherMap API</a>.
-                                weewx normally collects data from a Weather Station, stores it in a DB and can publish
-                                to websites such as the <a href="weather">Weather report here</a>.
-                                A <a href="https://github.com/Geonovum/sospilot/blob/master/src/weewx/test/weatherapidriver.py">simple Python driver</a> was developed to simulate a Weather Station using the
-                                <a href="http://openweathermap.org/api">OpenWeatherMap API</a> web service.
-                                In the next stage weewx will collect weather data from the Davis Weather Station
-                                at Geonovum. This data will be published to WFS and SOS similar to RIVM AQ data.
+                            <td><a href="weewx"><img src="media/weewx-report-200.png"/></a>  </td>
+                            <td><a href="weewx">Report from the Geonovum Davis Weather Station</a><br/>
+
+
+                                Python <a href="http://www.weewx.com">weewx weather software</a> on a Raspberry Pi
+                                collects weather data from the Davis Vantage Pro2 Weather Station
+                                on the Geonovum-building rooftop. weewx generates this report every 5 mins.
+                                The weather data is also published to WMS-Time/WFS and SOS services similar to RIVM AQ data.
                             </td>
                         </tr>
                     </table>
