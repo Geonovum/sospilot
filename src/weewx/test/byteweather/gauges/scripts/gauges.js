@@ -12,7 +12,7 @@
 /*jshint jquery:true,nomen:false,plusplus:false */
 
 var gauges = (function () {
-    var strings = LANG.EN,         //Set to your default language. Store all the strings in one object
+    var strings = LANG.NL,         //Set to your default language. Store all the strings in one object
         config = {
             // Script configuration parameters you may want to 'tweak'
             scriptVer         : '2.4.4 - 2013-08-25',
@@ -31,9 +31,9 @@ var gauges = (function () {
             showPopupData     : true,                   //Popup data displayed
             showPopupGraphs   : true,                   //If popup data is displayed, show the graphs?
             showWindVariation : true,                   //Show variation in wind direction over the last 10 minutes on the direction gauge
-            showIndoorTempHum : true,                   //Show the indoor temperature/humidity options
-            showUvGauge       : true,                   //Display the UV Index gauge
-            showSolarGauge    : true,                   //Display the Solar gauge
+            showIndoorTempHum : false,                   //Show the indoor temperature/humidity options
+            showUvGauge       : false,                   //Display the UV Index gauge
+            showSolarGauge    : false,                   //Display the Solar gauge
             showRoseGauge     : true,                   //Show the optional Wind Rose gauge
             showRoseGaugeOdo  : true,                   //Show the optional Wind Rose gauge Windrun Odometer
             showGaugeShadow   : true,                   //Show a drop shadow outside the gauges
@@ -198,6 +198,21 @@ var gauges = (function () {
                     (config.showUvGauge ? 'uv.png' : null),         // UV
                     (config.showSolarGauge ? 'solar.png' : null),   // Solar rad
                     (config.showRoseGauge ? 'windd.png' : null)     // Wind direction for Wind Rose
+                ];
+                // For weewx
+                config.tipImgs = [                                  // config.tipImgs for Cumulus users using the 'default' weather site
+                    ['daytempdew.png', 'intemp.png'],                     // Temperature: outdoor, indoor
+                    // Temperature: dewpoint, apparent, windChill, heatIndex, humidex
+                    ['daytempdew.png', 'daytempdew.png', 'daytempchill.png', 'daytempchill.png', 'daytempdew.png'],
+                    'dayrain.png',                                    // Rainfall
+                    'dayrain.png',                                     // Rainfall rate
+                    ['daytempdew.png', 'daytempdew.png'],                         // Humidity: outdoor, indoor
+                    'daybarometer.png',                                    // Pressure
+                    'daywind.png',                                     // Wind speed
+                    'daywinddir.png',                                    // Wind direction
+                    (config.showUvGauge ? 'uv.png' : null),         // UV
+                    (config.showSolarGauge ? 'solar.png' : null),   // Solar rad
+                    (config.showRoseGauge ? 'daywinddir.png' : null)     // Wind direction for Wind Rose
                 ];
                 break;
             case 1:
@@ -2182,7 +2197,13 @@ var gauges = (function () {
         // it ignores any text such as pre/appended units
         //
         extractDecimal = function (str) {
-            return (/[\-+]?[0-9]+\.?[0-9]*/).exec(str.replace(',', '.'))[0];
+            var val = 0;
+            try {
+                val = (/[\-+]?[0-9]+\.?[0-9]*/).exec(str.replace(',', '.'))[0];
+            } catch(e) {
+                val = 0;
+            }
+            return val;
         },
 
         //
