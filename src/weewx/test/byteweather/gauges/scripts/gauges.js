@@ -199,20 +199,20 @@ var gauges = (function () {
                     (config.showSolarGauge ? 'solar.png' : null),   // Solar rad
                     (config.showRoseGauge ? 'windd.png' : null)     // Wind direction for Wind Rose
                 ];
-                // For weewx
+                // For weewx where gauges in subdir gauges/
                 config.tipImgs = [                                  // config.tipImgs for Cumulus users using the 'default' weather site
-                    ['daytempdew.png', 'intemp.png'],                     // Temperature: outdoor, indoor
+                    ['../daytempdew.png', '../intemp.png'],                     // Temperature: outdoor, indoor
                     // Temperature: dewpoint, apparent, windChill, heatIndex, humidex
-                    ['daytempdew.png', 'daytempdew.png', 'daytempchill.png', 'daytempchill.png', 'daytempdew.png'],
-                    'dayrain.png',                                    // Rainfall
-                    'dayrain.png',                                     // Rainfall rate
-                    ['daytempdew.png', 'daytempdew.png'],                         // Humidity: outdoor, indoor
-                    'daybarometer.png',                                    // Pressure
-                    'daywind.png',                                     // Wind speed
-                    'daywinddir.png',                                    // Wind direction
-                    (config.showUvGauge ? 'uv.png' : null),         // UV
-                    (config.showSolarGauge ? 'solar.png' : null),   // Solar rad
-                    (config.showRoseGauge ? 'daywinddir.png' : null)     // Wind direction for Wind Rose
+                    ['../daytempdew.png', '../daytempdew.png', '../daytempchill.png', '../daytempchill.png', '../daytempdew.png'],
+                    '../dayrain.png',                                    // Rainfall
+                    '../dayrain.png',                                     // Rainfall rate
+                    ['../daytempdew.png', '../daytempdew.png'],                         // Humidity: outdoor, indoor
+                    '../daybarometer.png',                                    // Pressure
+                    '../daywind.png',                                     // Wind speed
+                    '../daywinddir.png',                                    // Wind direction
+                    (config.showUvGauge ? '../uv.png' : null),         // UV
+                    (config.showSolarGauge ? '../solar.png' : null),   // Solar rad
+                    (config.showRoseGauge ? '../daywinddir.png' : null)     // Wind direction for Wind Rose
                 ];
                 break;
             case 1:
