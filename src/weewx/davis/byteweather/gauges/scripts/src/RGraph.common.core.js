@@ -2477,6 +2477,7 @@
     /**
     * Produces a dashed line
     * 
+    * @param
     */
     RGraph.DashedLine = function(context, x1, y1, x2, y2)
     {
