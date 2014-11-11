@@ -16,13 +16,35 @@
         }
     </style>
     <script type="text/javascript">
+        var tlong=60, tmedium=15, tshort=6;
         var Dash = {
             nextIndex: 0,
-
             dashboards: [
-                {url: "http://sensors.geonovum.nl/weewx", time: 30},
-                {url: "http://http://sensors.geonovum.nl/weather/gauges", time: 30},
-                {url: "http://sensors.geonovum.nl/heronviewer", time: 30}
+                {url: "pages/inleiding.html", time: tshort},
+                {url: "pages/ws-pics.html", time: tmedium},
+                {url: "pages/arch-text.html", time: tshort},
+                {url: "pages/arch-hw.html", time: tmedium},
+                {url: "pages/arch-sw.html", time: tmedium},
+                {url: "pages/rpi-text.html", time: tshort},
+                {url: "pages/rpi.html", time: tmedium},
+
+                {url: "pages/resultaten-text.html", time: tshort},
+                {url: "http://sensors.geonovum.nl/weewx", time: tlong},
+                {url: "http://sensors.geonovum.nl/weewx/gauges", time: tlong},
+
+                {url: "pages/wms-time.html", time: tshort},
+                {url: "http://sensors.geonovum.nl/heronviewer", time: tlong},
+
+                {url: "pages/sos-text.html", time: tshort},
+                {url: "pages/sos-gml.html", time: tmedium},
+                {url: "pages/sos-jsapp-map.html", time: tmedium},
+                {url: "pages/sos-jsapp-chart.html", time: tmedium},
+
+                {url: "pages/hetweer-text.html", time: tshort},
+                {url: "pages/knmi.html", time: tlong},
+                {url: "pages/buienradar.html", time: tlong},
+                {url: "pages/meteox.html", time: tlong},
+                {url: "pages/sat24.html", time: tlong}
             ],
 
             display: function () {

@@ -1,0 +1,24 @@
+html, body, img, table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    overflow: hidden;
+    background: #eeeeee;
+    text-align: center;
+    font-size: 11pt;
+    font-family: arial, helvetica, sanserif;
+}
+
+h1 {
+    font-size: 64pt;
+}
+
+h2 {
+    font-size: 42pt;
+}
+
+h3 {
+    font-size: 28pt;
+}
