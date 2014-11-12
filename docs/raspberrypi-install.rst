@@ -418,6 +418,92 @@ Steps. ::
         allow all;
     }
 
+Installation - Weather Hardware
+===============================
+
+The Davis weather station is mounted on the Geonovum roof. The Vantage Pro2 console
+is connected via RF to the outside station. The console includes Weatherlink for archiving
+and USB connectivity. Via the console the station can be configured. Via weewx the status can be obtained
+
+Several sensors seem to be non-active. ::
+
+    ./wee_config_vantage --info --config /opt/weewx/weewxinst/weewx.conf
+    Using configuration file /opt/weewx/weewxinst/weewx.conf.
+    Querying...
+    Davis Vantage EEPROM settings:
+
+        CONSOLE TYPE:                   VantagePro2
+
+        CONSOLE FIRMWARE:
+          Date:                         Jul 14 2008
+          Version:                      1.80
+
+        CONSOLE SETTINGS:
+          Archive interval:             1800 (seconds)
+          Altitude:                     98 (meter)
+          Wind cup type:                large
+          Rain bucket type:             0.2 MM
+          Rain year start:              10
+          Onboard time:                 2014-11-03 14:48:51
+
+        CONSOLE DISPLAY UNITS:
+          Barometer:                    hPa
+          Temperature:                  degree_10F
+          Rain:                         mm
+          Wind:                         km_per_hour
+
+        CONSOLE STATION INFO:
+          Latitude (onboard):           +52.2
+          Longitude (onboard):          +5.4
+          Use manual or auto DST?       AUTO
+          DST setting:                  N/A
+          Use GMT offset or zone code?  ZONE_CODE
+          Time zone code:               21
+          GMT offset:                   N/A
+
+        TRANSMITTERS:
+          Channel 1:                    iss
+          Channel 2:                    (N/A)
+          Channel 3:                    (N/A)
+          Channel 4:                    (N/A)
+          Channel 5:                    (N/A)
+          Channel 6:                    (N/A)
+          Channel 7:                    (N/A)
+          Channel 8:                    (N/A)
+
+        RECEPTION STATS:
+          Total packets received:       109
+          Total packets missed:         3
+          Number of resynchronizations: 0
+          Longest good stretch:         41
+          Number of CRC errors:         0
+
+        BAROMETER CALIBRATION DATA:
+          Current barometer reading:    29.405 inHg
+          Altitude:                     98 feet
+          Dew point:                    255 F
+          Virtual temperature:          -89 F
+          Humidity correction factor:   23
+          Correction ratio:             1.005
+          Correction constant:          +0.000 inHg
+          Gain:                         0.000
+          Offset:                       9.000
+
+        OFFSETS:
+          Wind direction:               +0 deg
+          Inside Temperature:           +0.0 F
+          Inside Humidity:              +0%
+          Outside Temperature:          -1.0 F
+          Outside Humidity:             +0%
+
+Also http://www.weewx.com/docs/usersguide.htm#wee_config_vantage to clear archive and set archive
+interval to 5 mins.
+
+Problem: temperature and humidity sensors not working! Working after 3 hours on 20:00, then failing at 0800.
+Also low station battery message.
+
+May also be the Davis Supercap Problem: http://vp-kb.wikispaces.com/Supercap+fault
+
 Installation - ETL Tools
 ========================
 
@@ -1081,6 +1167,30 @@ Overdracht. `/etc/network/interfaces` aanpassen. ::
     mkdir /tmp/oldpi
     mount /dev/sdb6 /tmp/oldpi
     /tmp/oldpi/etc/network/interfaces
+
+Kiosk Mode
+----------
+
+The RPi will be conencted to a TV-screen in a public room at Geonovum (kitchen). As to have
+something interesting to see, the Rpi will be put in a "kiosk" mode. This can be
+achieved quite simply using a webbrowser and a website. As there is no user interaction
+possible via mouse/keyboard this simple setup suffices.
+
+The website will be a continuous change of pages/URLs. For this a simple JavaScript app is made that
+changes pages into an `iframe`. See https://github.com/Geonovum/sospilot/blob/master/www/kiosk/index.html.
+This app will be published to http://sensors.geonovum.nl/kiosk thus can be updated at all times without
+needing access to the RPi. If bandwidth becomes an issue we may move the app to the RPi later.
+
+In order to always start a browser, X-Windows needs to be started at boottime. This is described here:
+http://www.opentechguides.com/how-to/article/raspberry-pi/5/raspberry-pi-auto-start.html
+
+In order to start the browser (Chromium) the following is useful:
+https://lokir.wordpress.com/2012/09/16/raspberry-pi-kiosk-mode-with-chromium
+
+
+
+
+
 
 Links
 -----
