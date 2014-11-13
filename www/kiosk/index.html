@@ -17,17 +17,22 @@
     </style>
     <script type="text/javascript">
         // inspired by: http://stackoverflow.com/questions/84163/how-can-i-cycle-through-pages
-        var tlong=60, tmedium=15, tshort=6;
+
+        // Use tfact = 1 to test
+        var tfact=10;
+
+        // Standard timings in seconds
+        var tlong=9*tfact, tmedium=3*tfact, tshort=1*tfact;
         var Dash = {
             nextIndex: 0,
             dashboards: [
                 {url: "pages/inleiding.html", time: tshort},
-                {url: "pages/ws-pics.html", time: tmedium},
+                {url: "pages/ws-pics.html", time: tlong},
                 {url: "pages/arch-text.html", time: tshort},
                 {url: "pages/arch-hw.html", time: tmedium},
                 {url: "pages/arch-sw.html", time: tmedium},
                 {url: "pages/rpi-text.html", time: tshort},
-                {url: "pages/rpi.html", time: tmedium},
+                {url: "pages/rpi.html", time: tlong},
 
                 {url: "pages/resultaten-text.html", time: tshort},
                 {url: "http://sensors.geonovum.nl/weewx", time: tlong},
@@ -38,14 +43,18 @@
 
                 {url: "pages/sos-text.html", time: tshort},
                 {url: "pages/sos-gml.html", time: tmedium},
-                {url: "pages/sos-jsapp-map.html", time: tmedium},
-                {url: "pages/sos-jsapp-chart.html", time: tmedium},
+                {url: "pages/sos-jsapp-map.html", time: tlong},
+                {url: "pages/sos-jsapp-chart.html", time: tlong},
+                {url: "pages/meer-weten.html", time: tmedium},
 
                 {url: "pages/hetweer-text.html", time: tshort},
                 {url: "pages/knmi.html", time: tlong},
                 {url: "pages/buienradar.html", time: tlong},
                 {url: "pages/meteox.html", time: tlong},
-                {url: "pages/sat24.html", time: tlong}
+                {url: "pages/sat24.html", time: tlong},
+
+                // Reloads entire page, handy if having made changes to pages
+                {url: "pages/refresh.html", time: tshort}
             ],
 
             display: function () {
