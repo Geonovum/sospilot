@@ -283,6 +283,78 @@ Heron.options.map.layers = [
     ),
 
 /** OVERLAYS **/
+
+    /* START KNMI */
+    // http://geoservices.knmi.nl/cgi-bin/RADNL_OPER_R___25PCPRR_L3.cgi?SERVICE=WMS&&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap
+    // &LAYERS=RADNL_OPER_R___25PCPRR_L3_COLOR&WIDTH=550&HEIGHT=512&CRS=EPSG%3A3857&
+    // BBOX=-10713.691389678395,6332649.790725125,1219245.7073756782,7477630.176484875&STYLES=default&
+    // FORMAT=image/png&TRANSPARENT=TRUE&&time=2014-05-15T11%3A30%3A00Z
+ //https://data.knmi.nl/wms-preview/viewer/?service=https%3A%2F%2Fdata.knmi.nl%2Fwms%2Fcgi-bin%2Fwms.cgi%3Fsource%3D%2FActuele10mindataKNMIstations%252F1%252Fnoversion%252F2014%252F11%252F04%252FKMDS__OPER_P___10M_OBS_L2.nc&zoomtolayer=1&layer=ta
+    // WMS: https://data.knmi.nl/wms/cgi-bin/wms.cgi?%26source%3D%2FActuele10mindataKNMIstations%2F1%2Fnoversion%2F2014%2F11%2F04%2FKMDS__OPER_P___10M_OBS_L2%2Enc%26&service=WMS&request=GetCapabilities
+
+    /*
+     * KNMI: Actual Temperatures
+     */
+    new OpenLayers.Layer.WMS(
+        "KNMI - Current Temperatures",
+        Heron.scratch.urls.KNMI_ACT_10MIN,
+        {layers: "ta", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
+        }
+    ),
+
+    /*
+     * KNMI: Actual Wind forces
+     */
+    new OpenLayers.Layer.WMS(
+        "KNMI - Current Wind Forces",
+        Heron.scratch.urls.KNMI_ACT_10MIN,
+        {layers: "ff", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
+        }
+    ),
+
+    /*
+     * KNMI: Actual Wind Directions
+     */
+    new OpenLayers.Layer.WMS(
+        "KNMI - Current Wind Directions",
+        Heron.scratch.urls.KNMI_ACT_10MIN,
+        {layers: "dd", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
+        }
+    ),
+
+    /*
+     * KNMI: Actual Air Pressures
+     */
+    new OpenLayers.Layer.WMS(
+        "KNMI - Current Air Pressures",
+        Heron.scratch.urls.KNMI_ACT_10MIN,
+        {layers: "pp", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
+        }
+    ),
+
+    /*
+     * KNMI: Rain Radar
+     */
+    new OpenLayers.Layer.WMS(
+        "KNMI - Rain Radar (Color)",
+        "http://geoservices.knmi.nl/cgi-bin/RADNL_OPER_R___25PCPRR_L3.cgi?",
+        {layers: "RADNL_OPER_R___25PCPRR_L3_COLOR", format: "image/png", transparent: true},
+        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
+        }
+    ),
+
+    // More KNMI at: http://geoservices.knmi.nl/WMSexamplesinADAGUC.html
+    // http://geoservices.knmi.nl/cgi-bin/INTER_OPER_R___OBSERV__L3.cgi?
+
     /*
      * RIVM: All Stations
      */
@@ -696,7 +768,7 @@ Heron.options.map.layers = [
         "Weather Observations",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "weather_observations", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -717,7 +789,7 @@ Heron.options.map.layers = [
         "Last Weather Observations",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "weather_last_observations", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -732,77 +804,6 @@ Heron.options.map.layers = [
     ),
 
     /* END GEONOVUM WEATHER */
-
-    /* START KNMI */
-    // http://geoservices.knmi.nl/cgi-bin/RADNL_OPER_R___25PCPRR_L3.cgi?SERVICE=WMS&&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap
-    // &LAYERS=RADNL_OPER_R___25PCPRR_L3_COLOR&WIDTH=550&HEIGHT=512&CRS=EPSG%3A3857&
-    // BBOX=-10713.691389678395,6332649.790725125,1219245.7073756782,7477630.176484875&STYLES=default&
-    // FORMAT=image/png&TRANSPARENT=TRUE&&time=2014-05-15T11%3A30%3A00Z
- //https://data.knmi.nl/wms-preview/viewer/?service=https%3A%2F%2Fdata.knmi.nl%2Fwms%2Fcgi-bin%2Fwms.cgi%3Fsource%3D%2FActuele10mindataKNMIstations%252F1%252Fnoversion%252F2014%252F11%252F04%252FKMDS__OPER_P___10M_OBS_L2.nc&zoomtolayer=1&layer=ta
-    // WMS: https://data.knmi.nl/wms/cgi-bin/wms.cgi?%26source%3D%2FActuele10mindataKNMIstations%2F1%2Fnoversion%2F2014%2F11%2F04%2FKMDS__OPER_P___10M_OBS_L2%2Enc%26&service=WMS&request=GetCapabilities
-
-    /*
-     * KNMI: Actual Temperatures
-     */
-    new OpenLayers.Layer.WMS(
-        "KNMI - Current Temperatures",
-        Heron.scratch.urls.KNMI_ACT_10MIN,
-        {layers: "ta", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
-            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
-        }
-    ),
-
-    /*
-     * KNMI: Actual Wind forces
-     */
-    new OpenLayers.Layer.WMS(
-        "KNMI - Current Wind Forces",
-        Heron.scratch.urls.KNMI_ACT_10MIN,
-        {layers: "ff", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
-            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
-        }
-    ),
-
-    /*
-     * KNMI: Actual Wind Directions
-     */
-    new OpenLayers.Layer.WMS(
-        "KNMI - Current Wind Directions",
-        Heron.scratch.urls.KNMI_ACT_10MIN,
-        {layers: "dd", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
-            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
-        }
-    ),
-
-    /*
-     * KNMI: Actual Air Pressures
-     */
-    new OpenLayers.Layer.WMS(
-        "KNMI - Current Air Pressures",
-        Heron.scratch.urls.KNMI_ACT_10MIN,
-        {layers: "pp", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
-            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
-        }
-    ),
-
-    /*
-     * KNMI: Rain Radar
-     */
-    new OpenLayers.Layer.WMS(
-        "KNMI - Rain Radar (Color)",
-        "http://geoservices.knmi.nl/cgi-bin/RADNL_OPER_R___25PCPRR_L3.cgi?",
-        {layers: "RADNL_OPER_R___25PCPRR_L3_COLOR", format: "image/png", transparent: true},
-        {isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
-            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
-        }
-    ),
-
-    // More KNMI at: http://geoservices.knmi.nl/WMSexamplesinADAGUC.html
-    // http://geoservices.knmi.nl/cgi-bin/INTER_OPER_R___OBSERV__L3.cgi?
 
     /*
      * PDOK: BAG Adressen

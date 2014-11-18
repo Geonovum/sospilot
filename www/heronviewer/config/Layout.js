@@ -26,6 +26,14 @@ Heron.date.setMilliseconds(0);
 
 Heron.date = Heron.date.toISOString();
 
+Heron.cdate = new Date();
+Heron.cdate.setHours(Heron.cdate.getHours()-3);
+Heron.cdate.setMinutes(0);
+Heron.cdate.setSeconds(0);
+Heron.cdate.setMilliseconds(0);
+
+Heron.cdate = Heron.cdate.toISOString();
+
 /**
  * Defines the entire layout of a Heron webapp using ExtJS-style.
  *
@@ -286,7 +294,7 @@ Heron.layout = {
                             startDateTime: '2014-06-09T17:00:00Z',
                             endDateTime: Heron.date,  // default is current time
                             stepTime: 'PT1H',
-                            dateTime: '2014-08-02T01:00:00Z',
+                            dateTime: Heron.cdate,
                             layerNames: [
                                 "KNMI - Rain Radar (Color)",
                                 "RIVM - Measurements CO",
