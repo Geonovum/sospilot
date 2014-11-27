@@ -1,0 +1,1 @@
+sed -i "s/wupasswd/`cat wupasswd`/g" weewxt.conf
