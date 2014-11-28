@@ -26,6 +26,11 @@ Weather station and connect its data stream to the SOSPilot infrastructure simli
 to the RIVM AQ datastream. Eventually, the goal is to expose the station weather data to OGC services like
 WMS, WFS and in particular SOS.
 
+.. figure:: _static/geonovum-ws-all.jpg
+   :align: center
+
+   *Figure 0 - Geonovum Davis VP2 Weather Station and Console connected to RPi*
+
 As we cannot connect the weather base station (USB),
 directly to the SOSPilot server "in the cloud",
 an intermediate "middleman" hard/software component will be required.
@@ -144,6 +149,9 @@ Sources for this architecture can be found in GitHub.
 * Raspberry Pi system setup: https://github.com/Geonovum/sospilot/tree/master/src/raspberry
 * weewx-specific: https://github.com/Geonovum/sospilot/tree/master/src/weewx
 
+In addition, weewx will be configured to report weather data to the Weather Underground personal weather
+station network at http://www.wunderground.com.
+
 Raspberry Pi
 ------------
 
@@ -177,6 +185,14 @@ http://sensors.geonovum.nl/weewx. This will take about 125kb each 5 mins.
    :align: center
 
    *Figure 5 - weewx standard report screenshot*
+
+In addition `weewx` has been configured to report to the Weather Underground community site.
+The station is registered as **IUTRECHT96**, http://www.wunderground.com/personal-weather-station/dashboard?ID=IUTRECHT96.
+
+.. figure:: _static/geonovum-on-wunderground1.png
+   :align: center
+
+   *Figure 6 - Geonovum station on Weather Underground*
 
 PostgreSQL Database
 -------------------
@@ -304,7 +320,7 @@ view.
 .. figure:: _static/weather-pg-observations.png
    :align: center
 
-   *Figure 6 - PostgreSQL weather.v_observations VIEW*
+   *Figure 7 - PostgreSQL weather.v_observations VIEW*
 
 Stetl Sync
 ----------
@@ -505,7 +521,7 @@ These three layers were easily integrated in the `SOSPilot Heron Viewer <http://
 .. figure:: _static/heronviewer-weather.png
    :align: center
 
-   *Figure 7 - Weather Data WMS Layers in Heron viewer*
+   *Figure 8 - Weather Data WMS Layers in Heron viewer*
 
 Stetl SOS
 ---------
@@ -522,7 +538,7 @@ combined with NO2 (Nitrogen Dioxide) and PM10 (Particulate Matter up to 10 micro
 .. figure:: _static/aq-weather-sshot-52n-client.png
    :align: center
 
-   *Figure 8 - Weather Data SOS Data integrated in 52N JS Client*
+   *Figure 9 - Weather Data SOS Data integrated in 52N JS Client*
 
 Test with SOS requests:
 

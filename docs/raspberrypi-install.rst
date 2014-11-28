@@ -1182,15 +1182,36 @@ This app will be published to http://sensors.geonovum.nl/kiosk thus can be updat
 needing access to the RPi. If bandwidth becomes an issue we may move the app to the RPi later.
 
 In order to always start a browser, X-Windows needs to be started at boottime. This is described here:
-http://www.opentechguides.com/how-to/article/raspberry-pi/5/raspberry-pi-auto-start.html
+http://www.opentechguides.com/how-to/article/raspberry-pi/5/raspberry-pi-auto-start.html and here a complete
+tutorial https://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial
 
 In order to start the browser (Chromium) the following is useful:
-https://lokir.wordpress.com/2012/09/16/raspberry-pi-kiosk-mode-with-chromium
+https://lokir.wordpress.com/2012/09/16/raspberry-pi-kiosk-mode-with-chromium  and
+http://askubuntu.com/questions/487488/how-to-open-chromium-in-full-screen-kiosk-mode-in-minimal-windows-manager-enviro
 
+The following was executed. ::
 
+    # install chromium and tools
+    apt-get install chromium x11-xserver-utils unclutter
 
+    # enable X desktop at boot
+    raspi-config
 
+    # choose option3
 
+    # edit /etc/xdg/lxsession/LXDE/autostart as follows
+    @lxpanel --profile LXDE
+    @pcmanfm --desktop --profile LXDE
+    # @xscreensaver -no-splash
+    @xset s off
+    @xset -dpms
+    @xset s noblank
+    @chromium --noerrdialogs --kiosk http://sensors.geonovum.nl/kiosk
+
+    apt-get install tightvncserver
+    tightvncserver
+    # start als user pi http://www.penguintutor.com/linux/tightvnc
+    su pi -c '/usr/bin/tightvncserver :1'
 
 Links
 -----
