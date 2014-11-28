@@ -50,26 +50,25 @@
         <!--</div>-->
           <!-- END OF WUNDERGROUND CODE -->
         
-        <div id="stats" class="grid_4">
-                    <h3>Stats</h3>
-          Weewx uptime: $station.uptime<br/>
-          Server  uptime: $station.os_uptime<br/>
-          weewx v$station.version
-          <h3>Location</h3>
-          Latitude: $station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2]<br />
-          Longitude: $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2]<br />
-          Altitude: $station.altitude<br />
-        </div>
-
-          <div class="grid_3">
-              <pre>
-
-
-              </pre>
+          <div id="stats" class="grid_4">
               <a href="http://www.geonovum.nl">
                   <img src="geonovum-logo.png" width="140" border="0" alt="Geonovum Website" />
               </a>
+              Latitude: $station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2]<br />
+              Longitude: $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2]<br />
+              Altitude: $station.altitude<br />
+              weewx v$station.version   <br />
           </div>
+
+        <div class="grid_3">
+          <!--<h3>Stats</h3>-->
+          <!--Weewx uptime: $station.uptime<br/>-->
+          <!--Server  uptime: $station.os_uptime<br/>-->
+          <!--<h3>Info</h3>-->
+            <a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=IUTRECHT96">
+                <img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=wxstnsticker_metric&weatherstationcount=IUTRECHT96" height="160" width="160" border="0" alt="Weather Underground PWS IUTRECHT96" />
+            </a>
+        </div>
       </header>
       <!-- End of Header Section -->
       
