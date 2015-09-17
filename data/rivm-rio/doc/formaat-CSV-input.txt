@@ -1,0 +1,14 @@
+> het formaat van het input csv-bestand
+>
+> 938,o3_the1,O3,2015-09-16 10:00:00,2015-09-16
+> 11:00:00,31.82,236553,585132,vrstad achtergr
+>
+> stationsnummer
+> opstellingstype
+> component
+> begintijd meting (UTC+1)
+> eindtijd metingen (UTC+1)
+> meetwaarde
+> x-coor
+> y-coor
+> stationstype
