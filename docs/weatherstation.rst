@@ -192,7 +192,16 @@ The station is registered as **IUTRECHT96**, http://www.wunderground.com/persona
 .. figure:: _static/geonovum-on-wunderground1.png
    :align: center
 
-   *Figure 6 - Geonovum station on Weather Underground*
+   *Figure 6a - Geonovum station on Weather Underground*
+
+Also, `weewx` has been configured (in sept 2015) to report to the MET UK Weather Observations Website (WOW).
+The station is registered with WOW site ID **929236001**, http://wow.metoffice.gov.uk/sitehandlerservlet?requestedAction=READ&siteID=929236001.
+The Dutch KNMI has a localized version, called `WOW-NL <https://wow.knmi.nl/>`_.
+
+.. figure:: _static/geonovum-on-wow.knmi.nl.png
+   :align: center
+
+   *Figure 6b - Geonovum station on KNMI Weather Observations Website (WOW-NL)*
 
 PostgreSQL Database
 -------------------

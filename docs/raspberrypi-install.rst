@@ -418,6 +418,57 @@ Steps. ::
         allow all;
     }
 
+Extra voor TFA Nexus Pro
+------------------------
+
+TE923 driver. Nodig `pyusb` ::
+
+    pip install pyusb
+    # geeft: DistributionNotFound: No distributions matching the version for pyusb
+
+    # tweede try:
+    apt-get install python-usb
+    Reading package lists... Done
+    Building dependency tree
+    Reading state information... Done
+    The following NEW packages will be installed:
+      python-usb
+    0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+    Need to get 17.7 kB of archives.
+    After this operation, 132 kB of additional disk space will be used.
+    Get:1 http://mirrordirector.raspbian.org/raspbian/ wheezy/main python-usb armhf 0.4.3-1 [17.7 kB]
+    Fetched 17.7 kB in 0s (37.9 kB/s)
+    Selecting previously unselected package python-usb.
+    (Reading database ... 83706 files and directories currently installed.)
+    Unpacking python-usb (from .../python-usb_0.4.3-1_armhf.deb) ...
+    Setting up python-usb (0.4.3-1) ...
+
+    # root@otterpi:/opt/weewx/weewxinst# lsusb
+    Bus 001 Device 002: ID 0424:9514 Standard Microsystems Corp.
+    Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+    Bus 001 Device 003: ID 0424:ec00 Standard Microsystems Corp.
+    Bus 001 Device 004: ID 05e3:0608 Genesys Logic, Inc. USB-2.0 4-Port HUB
+    Bus 001 Device 005: ID 1130:6801 Tenx Technology, Inc.
+    Bus 001 Device 006: ID 148f:5370 Ralink Technology, Corp. RT5370 Wireless Adapter
+
+    # nu andere error van weewx
+    Dec 10 15:02:51 otterpi weewx[2645]: te923: Found device on USB bus=001 device=005
+    Dec 10 15:02:51 otterpi weewx[2645]: te923: Unable to claim USB interface 0: could not claim interface 0: Operation not permitted
+    Dec 10 15:02:51 otterpi weewx[2645]: wxengine: Unable to open WX station hardware: could not claim interface 0: Operation not permitted
+    Dec 10 15:02:51 otterpi weewx[2645]: wxengine: Caught WeeWxIOError: could not claim interface 0: Operation not permitted
+    Dec 10 15:02:51 otterpi weewx[2645]:     ****  Exiting...
+
+    # may have to do with udev usb rules
+    http://www.tdressler.net/ipsymcon/te923.html
+
+    vi /etc/udev/rules.d/99-te923.rules
+    Inhalt:
+    ATTRS{idVendor}=="1130", ATTRS{idProduct}=="6801", MODE="0660", GROUP="plugdev", RUN="/bin/sh -c 'echo -n $id:1.0 > /sys/bus/usb/drivers/usbhid/unbind'"
+
+    udevadm control --reload-rules
+
+    adduser sadmin plugdev
+
 Installation - Weather Hardware
 ===============================
 
