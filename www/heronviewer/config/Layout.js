@@ -298,9 +298,15 @@ Heron.layout = {
                             layerNames: [
                                 "KNMI - Rain Radar (Color)",
                                 "RIVM - Measurements CO",
-                                "RIVM - Measurements NH3", "RIVM - Measurements NO2",
-                                "RIVM - Measurements NO", "RIVM - Measurements PM10",
-                                "RIVM - Measurements O3", "RIVM - Measurements SO2",
+                                "RIVM - Measurements NH3",
+                                "RIVM - Measurements NO2",
+                                "RIVM - Measurements NO",
+                                "RIVM - Measurements PM10",
+                                "RIVM - Measurements O3",
+                                "RIVM - Measurements SO2",
+                                "Smart Emission - Measurements CO",
+                                "Smart Emission - Measurements NO2",
+                                "Smart Emission - Measurements O3",
                                 "Weather Observations"
                             ]
                         }

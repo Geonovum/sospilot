@@ -79,20 +79,20 @@ CREATE VIEW smartem.measurements_stations AS
 DROP VIEW IF EXISTS smartem.v_measurements_CO;
 CREATE VIEW smartem.v_measurements_CO AS
   SELECT station_id,
-    name, municipality, sample_time, sample_value, point, gid, sample_id
+    name, municipality, date_trunc('hour'::text, sample_time) AS sample_time, sample_value, point, gid, sample_id
   FROM smartem.measurements_stations WHERE component = 'CO';
 
 
 DROP VIEW IF EXISTS smartem.v_measurements_NO2;
 CREATE VIEW smartem.v_measurements_NO2 AS
   SELECT  station_id,
-    name, municipality, sample_time, sample_value, point, gid, sample_id
+    name, municipality, date_trunc('hour'::text, sample_time) AS sample_time, sample_value, point, gid, sample_id
   FROM smartem.measurements_stations WHERE component = 'NO2';
 
 DROP VIEW IF EXISTS smartem.v_measurements_O3;
 CREATE VIEW smartem.v_measurements_O3 AS
   SELECT  station_id,
-    name, municipality, sample_time, sample_value, point, gid, sample_id
+    name, municipality, date_trunc('hour'::text, sample_time) AS sample_time, sample_value, point, gid, sample_id
   FROM smartem.measurements_stations WHERE component = 'O3';
 
 
