@@ -1,0 +1,22 @@
+{{
+  "request": "InsertSensor",
+  "service": "SOS",
+  "version": "2.0.0",
+  "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1",
+  "procedureDescription": "{procedure-desc.xml}",
+   "observableProperty": [
+    "http://citygis.nl/smartem/observableProperty/benzeen",
+    "http://citygis.nl/smartem/observableProperty/CO",
+    "http://citygis.nl/smartem/observableProperty/NH3",
+    "http://citygis.nl/smartem/observableProperty/NO",
+    "http://citygis.nl/smartem/observableProperty/NO2",
+    "http://citygis.nl/smartem/observableProperty/O3",
+    "http://citygis.nl/smartem/observableProperty/PM10",
+    "http://citygis.nl/smartem/observableProperty/PM2.5",
+    "http://citygis.nl/smartem/observableProperty/SO2"
+  ],
+  "observationType": [
+    "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement"
+  ],
+  "featureOfInterestType": "http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint"
+}}

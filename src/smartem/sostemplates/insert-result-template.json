@@ -1,0 +1,63 @@
+{
+  "request": "InsertResultTemplate",
+  "service": "SOS",
+  "version": "2.0.0",
+  "identifier": "urn:ogc:object:feature:Sensor:SmartEm:smartem-sensor-{station_id}/template/1",
+  "offering": "http://citygis.nl/smartem/offering/{station_id}",
+  "observationTemplate": {
+    "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
+    "procedure": "urn:ogc:object:feature:Sensor:SmartEm:smartem-sensor-{station_id}",
+    "observedProperty": "http://citygis.nl/smartem/observableProperty/O3",
+    "featureOfInterest": {
+      "identifier": {
+        "value": "http://citygis.nl/smartem/featureOfInterest/{station_id}",
+        "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+      },
+      "name": [
+        {
+          "value": "{municipality}",
+          "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
+        }
+      ],
+      "sampledFeature": [
+        "http://citygis.nl/smartem/featureOfInterest/world"
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          {station_lat},
+          {station_lon}
+        ],
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:4326"
+          }
+        }
+      }
+    },
+    "phenomenonTime": "template",
+    "resultTime": "template",
+    "result": ""
+  },
+  "resultStructure": {
+    "fields": [
+      {
+        "type": "time",
+        "name": "phenomenonTime",
+        "definition": "http://www.opengis.net/def/property/OGC/0/PhenomenonTime",
+        "uom": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+      },
+      {
+        "type": "quantity",
+        "name": "observable_property_9",
+        "definition": "http://citygis.nl/smartem/observableProperty/O3",
+        "uom": "test_unit_9"
+      }
+    ]
+  },
+  "resultEncoding": {
+    "tokenSeparator": ",",
+    "blockSeparator": "#"
+  }
+}

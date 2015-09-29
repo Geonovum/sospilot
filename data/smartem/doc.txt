@@ -1,0 +1,38 @@
+﻿S.TemperatureUnit		milliKelvin
+S.TemperatureAmbient	milliKelvin
+S.Humidity				%mRH
+S.LightsensorTop		Lux
+S.LightsensorBottom		Lux
+S.Barometer				Pascal
+S.Altimeter				Meter
+S.CO					ppb
+S.NO2					ppb
+S.AcceleroX				2 ~ +2G (0x200 = midscale)
+S.AcceleroY				2 ~ +2G (0x200 = midscale)
+S.AcceleroZ				2 ~ +2G (0x200 = midscale)
+S.LightsensorRed		Lux
+S.LightsensorGreen		Lux
+S.LightsensorBlue		Lux
+S.RGBColor				8 bit R, 8 bit G, 8 bit B
+S.BottomSwitches		?
+S.O3					ppb
+S.CO2					ppb
+S.AudioMinus5			Octave -5 in dB(A)
+S.AudioMinus4			Octave -4 in dB(A)
+S.AudioMinus3			Octave -3 in dB(A)
+S.AudioMinus2			Octave -2 in dB(A)
+S.AudioMinus1			Octave -1 in dB(A)
+S.Audio0				Octave 0 in dB(A)
+S.AudioPlus1			Octave +1 in dB(A)
+S.AudioPlus2			Octave +2 in dB(A)
+S.AudioPlus3			Octave +3 in dB(A)
+S.AudioPlus4			Octave +4 in dB(A)
+S.AudioPlus5			Octave +5 in dB(A)
+S.AudioPlus6			Octave +6 in dB(A)
+S.AudioPlus7			Octave +7 in dB(A)
+S.AudioPlus8			Octave +8 in dB(A)
+S.AudioPlus9			Octave +9 in dB(A)
+S.AudioPlus10			Octave +10 in dB(A)
+S.SatInfo				?
+S.Latitude				*100 + Fractional degrees
+S.Longitude				*10 + Fractional degrees

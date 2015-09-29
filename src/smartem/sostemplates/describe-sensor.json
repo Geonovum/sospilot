@@ -1,0 +1,7 @@
+{
+  "request": "DescribeSensor",
+  "service": "SOS",
+  "version": "2.0.0",
+  "procedure": "http://citygis.nl/smartem/procedure/644",
+  "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1"
+}

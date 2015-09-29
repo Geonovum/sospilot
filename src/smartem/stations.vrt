@@ -1,0 +1,20 @@
+<!-- OGR VRT file to map eionet CSV station file to any target OGR data type (GML, PostGIS etc). -->
+<OGRVRTDataSource>
+    <OGRVRTLayer name="stations">
+        <SrcDataSource>stations.csv</SrcDataSource>
+        <GeometryType>wkbPoint</GeometryType>
+        <LayerSRS>EPSG:4326</LayerSRS>
+        <!--
+        Mapped from CSV header:
+        SmartEm-1,Nijmegen-1,Nijmegen,51.8414,5.85778,30,m
+           -->
+        <Field name="unit_id" src="UnitId" type="String" />
+        <Field name="name" src="Name" type="String" />
+        <Field name="municipality" src="Municipality" type="String" />
+        <Field name="altitude" src="Altitude" type="Integer" />
+        <Field name="altitude_unit" src="AltitudeUnit" type="String" />
+        <Field name="lon" src="Lon" type="String" />
+        <Field name="lat" src="Lat" type="String" />
+        <GeometryField encoding="PointFromColumns" x="Lon" y="Lat"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>

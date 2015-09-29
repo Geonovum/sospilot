@@ -1,0 +1,16 @@
+# Host-specific settings - Just's macbook
+
+pg_host=localhost
+pg_user=postgres
+pg_password=postgres
+pg_port=5432
+pg_database=sensors
+pg_schema=smartem
+
+sos_host=sensors.geonovum.nl
+sos_port=80
+sos_user=SOSUSER
+sos_password=SOSPASSWORD
+sos_path=/sos/service
+
+src_file_path=../../data/smartem/raw/*.txt

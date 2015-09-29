@@ -1,0 +1,1965 @@
+// Request: http://sensors.geonovum.nl/sos/api/v1/stations/?service=1&locale=en
+[
+    {
+        "properties": {
+            "id": 14,
+            "label": "http://citygis.nl/smartem/featureOfInterest/107"
+        },
+        "geometry": {
+            "coordinates": [6.04306364, 51.1202774],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 4,
+            "label": "http://citygis.nl/smartem/featureOfInterest/131"
+        },
+        "geometry": {
+            "coordinates": [5.85361385, 51.54111099],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 15,
+            "label": "http://citygis.nl/smartem/featureOfInterest/133"
+        },
+        "geometry": {
+            "coordinates": [5.882236, 50.9030571],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 16,
+            "label": "http://citygis.nl/smartem/featureOfInterest/136"
+        },
+        "geometry": {
+            "coordinates": [5.97111416, 50.88805771],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 17,
+            "label": "http://citygis.nl/smartem/featureOfInterest/138"
+        },
+        "geometry": {
+            "coordinates": [5.986853, 50.900317],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 18,
+            "label": "http://citygis.nl/smartem/featureOfInterest/230"
+        },
+        "geometry": {
+            "coordinates": [5.14890242, 51.51944351],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 19,
+            "label": "http://citygis.nl/smartem/featureOfInterest/235"
+        },
+        "geometry": {
+            "coordinates": [4.36028624, 51.43500137],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 20,
+            "label": "http://citygis.nl/smartem/featureOfInterest/236"
+        },
+        "geometry": {
+            "coordinates": [5.47278357, 51.46972275],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 21,
+            "label": "http://citygis.nl/smartem/featureOfInterest/237"
+        },
+        "geometry": {
+            "coordinates": [5.4289, 51.44528],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 22,
+            "label": "http://citygis.nl/smartem/featureOfInterest/240"
+        },
+        "geometry": {
+            "coordinates": [4.82500839, 51.59360886],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 23,
+            "label": "http://citygis.nl/smartem/featureOfInterest/241"
+        },
+        "geometry": {
+            "coordinates": [4.78084707, 51.60333252],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 3,
+            "label": "http://citygis.nl/smartem/featureOfInterest/244"
+        },
+        "geometry": {
+            "coordinates": [5.808593, 51.5359],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 13,
+            "label": "http://citygis.nl/smartem/featureOfInterest/246"
+        },
+        "geometry": {
+            "coordinates": [4.51388884, 51.65277863],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 12,
+            "label": "http://citygis.nl/smartem/featureOfInterest/247"
+        },
+        "geometry": {
+            "coordinates": [5.39333344, 51.40750122],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 24,
+            "label": "http://citygis.nl/smartem/featureOfInterest/301"
+        },
+        "geometry": {
+            "coordinates": [3.91694736, 51.63555908],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 25,
+            "label": "http://citygis.nl/smartem/featureOfInterest/318"
+        },
+        "geometry": {
+            "coordinates": [3.74945831, 51.29527664],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 59,
+            "label": "http://citygis.nl/smartem/featureOfInterest/319"
+        },
+        "geometry": {
+            "coordinates": [3.745008, 51.464383],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 26,
+            "label": "http://citygis.nl/smartem/featureOfInterest/404"
+        },
+        "geometry": {
+            "coordinates": [4.28917217, 52.07805634],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 27,
+            "label": "http://citygis.nl/smartem/featureOfInterest/418"
+        },
+        "geometry": {
+            "coordinates": [4.48028898, 51.91500092],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 28,
+            "label": "http://citygis.nl/smartem/featureOfInterest/433"
+        },
+        "geometry": {
+            "coordinates": [4.32695293, 51.91139221],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 29,
+            "label": "http://citygis.nl/smartem/featureOfInterest/437"
+        },
+        "geometry": {
+            "coordinates": [4.45084143, 51.78749847],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 30,
+            "label": "http://citygis.nl/smartem/featureOfInterest/442"
+        },
+        "geometry": {
+            "coordinates": [4.70821381, 51.80065918],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 5,
+            "label": "http://citygis.nl/smartem/featureOfInterest/444"
+        },
+        "geometry": {
+            "coordinates": [4.51028633, 52.29805374],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 31,
+            "label": "http://citygis.nl/smartem/featureOfInterest/445"
+        },
+        "geometry": {
+            "coordinates": [4.316125, 52.075],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 32,
+            "label": "http://citygis.nl/smartem/featureOfInterest/446"
+        },
+        "geometry": {
+            "coordinates": [4.36056376, 52.03972244],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 60,
+            "label": "http://citygis.nl/smartem/featureOfInterest/447"
+        },
+        "geometry": {
+            "coordinates": [4.50806093, 52.16805649],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 33,
+            "label": "http://citygis.nl/smartem/featureOfInterest/537"
+        },
+        "geometry": {
+            "coordinates": [4.64806938, 52.38166428],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 6,
+            "label": "http://citygis.nl/smartem/featureOfInterest/538"
+        },
+        "geometry": {
+            "coordinates": [5.05084181, 52.80472183],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 61,
+            "label": "http://citygis.nl/smartem/featureOfInterest/545"
+        },
+        "geometry": {
+            "coordinates": [4.84102249, 52.33949661],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 48,
+            "label": "http://citygis.nl/smartem/featureOfInterest/546"
+        },
+        "geometry": {
+            "coordinates": [4.832064, 52.420219],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 10,
+            "label": "http://citygis.nl/smartem/featureOfInterest/547"
+        },
+        "geometry": {
+            "coordinates": [5.181552, 52.23508],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 11,
+            "label": "http://citygis.nl/smartem/featureOfInterest/549"
+        },
+        "geometry": {
+            "coordinates": [5.235903, 52.25736],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 49,
+            "label": "http://citygis.nl/smartem/featureOfInterest/551"
+        },
+        "geometry": {
+            "coordinates": [4.601922, 52.46302],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 50,
+            "label": "http://citygis.nl/smartem/featureOfInterest/553"
+        },
+        "geometry": {
+            "coordinates": [4.603333, 52.493889],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 55,
+            "label": "http://citygis.nl/smartem/featureOfInterest/556"
+        },
+        "geometry": {
+            "coordinates": [4.8617, 52.56359],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 51,
+            "label": "http://citygis.nl/smartem/featureOfInterest/561"
+        },
+        "geometry": {
+            "coordinates": [4.77359, 52.33356],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 52,
+            "label": "http://citygis.nl/smartem/featureOfInterest/564"
+        },
+        "geometry": {
+            "coordinates": [4.766679, 52.28743],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 53,
+            "label": "http://citygis.nl/smartem/featureOfInterest/565"
+        },
+        "geometry": {
+            "coordinates": [4.715071, 52.32745],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 56,
+            "label": "http://citygis.nl/smartem/featureOfInterest/570"
+        },
+        "geometry": {
+            "coordinates": [4.638642, 52.4866],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 57,
+            "label": "http://citygis.nl/smartem/featureOfInterest/572"
+        },
+        "geometry": {
+            "coordinates": [4.6288, 52.4744],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 58,
+            "label": "http://citygis.nl/smartem/featureOfInterest/573"
+        },
+        "geometry": {
+            "coordinates": [4.729, 52.79],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 34,
+            "label": "http://citygis.nl/smartem/featureOfInterest/631"
+        },
+        "geometry": {
+            "coordinates": [5.61915016, 52.44850159],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 7,
+            "label": "http://citygis.nl/smartem/featureOfInterest/633"
+        },
+        "geometry": {
+            "coordinates": [4.838336, 52.138889],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 35,
+            "label": "http://citygis.nl/smartem/featureOfInterest/636"
+        },
+        "geometry": {
+            "coordinates": [5.125286, 52.106111],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 62,
+            "label": "http://citygis.nl/smartem/featureOfInterest/639"
+        },
+        "geometry": {
+            "coordinates": [5.121114, 52.068889],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 36,
+            "label": "http://citygis.nl/smartem/featureOfInterest/641"
+        },
+        "geometry": {
+            "coordinates": [4.988614, 52.203056],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 37,
+            "label": "http://citygis.nl/smartem/featureOfInterest/643"
+        },
+        "geometry": {
+            "coordinates": [5.12833357, 52.10222244],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 38,
+            "label": "http://citygis.nl/smartem/featureOfInterest/644"
+        },
+        "geometry": {
+            "coordinates": [4.92343, 51.97464],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 54,
+            "label": "http://citygis.nl/smartem/featureOfInterest/701"
+        },
+        "geometry": {
+            "coordinates": [4.8166666, 52.45000076],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 46,
+            "label": "http://citygis.nl/smartem/featureOfInterest/703"
+        },
+        "geometry": {
+            "coordinates": [4.73000002, 52.40000153],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 47,
+            "label": "http://citygis.nl/smartem/featureOfInterest/704"
+        },
+        "geometry": {
+            "coordinates": [4.76999998, 52.43000031],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 39,
+            "label": "http://citygis.nl/smartem/featureOfInterest/722"
+        },
+        "geometry": {
+            "coordinates": [6.605839, 52.0925],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 8,
+            "label": "http://citygis.nl/smartem/featureOfInterest/738"
+        },
+        "geometry": {
+            "coordinates": [5.70861912, 52.11249924],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 1,
+            "label": "http://citygis.nl/smartem/featureOfInterest/741"
+        },
+        "geometry": {
+            "coordinates": [5.858061, 51.848889],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 2,
+            "label": "http://citygis.nl/smartem/featureOfInterest/742"
+        },
+        "geometry": {
+            "coordinates": [5.858061, 51.838889],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 40,
+            "label": "http://citygis.nl/smartem/featureOfInterest/807"
+        },
+        "geometry": {
+            "coordinates": [6.40361404, 52.38916779],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 41,
+            "label": "http://citygis.nl/smartem/featureOfInterest/818"
+        },
+        "geometry": {
+            "coordinates": [6.01806974, 52.65500259],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 42,
+            "label": "http://citygis.nl/smartem/featureOfInterest/918"
+        },
+        "geometry": {
+            "coordinates": [5.57349157, 52.91691589],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 9,
+            "label": "http://citygis.nl/smartem/featureOfInterest/929"
+        },
+        "geometry": {
+            "coordinates": [6.9333334, 52.87666321],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 43,
+            "label": "http://citygis.nl/smartem/featureOfInterest/934"
+        },
+        "geometry": {
+            "coordinates": [6.27750874, 53.33166504],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 44,
+            "label": "http://citygis.nl/smartem/featureOfInterest/937"
+        },
+        "geometry": {
+            "coordinates": [6.57889986, 53.21805573],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": 45,
+            "label": "http://citygis.nl/smartem/featureOfInterest/938"
+        },
+        "geometry": {
+            "coordinates": [6.60889721, 53.24694443],
+            "type": "Point"
+        },
+        "type": "Feature"
+    }
+]
+
+// http://sosrest.irceline.be/api/v1/stations/?service=srv_6d9ccea8d609ecb74d4a512922bb7cee&locale=en
+[
+    {
+        "properties": {
+            "id": "sta_8a7ab166e79c40cc7f598bdd8ff45f67",
+            "label": "BELAB01"
+        },
+        "geometry": {
+            "coordinates": [4.328800746521485, 51.28076093033469],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_879422958afadb16fefe6e15de608204",
+            "label": "BELAB02"
+        },
+        "geometry": {
+            "coordinates": [4.320772990123678, 51.34047473468224],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_633882461774b799bda0292ebe1cb0c2",
+            "label": "BELAL01"
+        },
+        "geometry": {
+            "coordinates": [4.384176201992604, 51.23594145802103],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_a5f9b1ed9030ce14d9dced228d257650",
+            "label": "BELAL02"
+        },
+        "geometry": {
+            "coordinates": [4.23378603592549, 51.304268002324086],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_aa06cbd102ae27cea85b90ce4df12a3",
+            "label": "BELAL03"
+        },
+        "geometry": {
+            "coordinates": [4.2004139024733425, 51.25371207889571],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_11098342453094d2e060dfdf4f6840d5",
+            "label": "BELAL04"
+        },
+        "geometry": {
+            "coordinates": [4.292282450869197, 51.29041475719237],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_631aa913b64f303b41342aa8003ce569",
+            "label": "BELAL05"
+        },
+        "geometry": {
+            "coordinates": [4.277842897811193, 51.26286494096863],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_8924cb67ff36d660bf33fb01947a68b8",
+            "label": "BELGK06"
+        },
+        "geometry": {
+            "coordinates": [5.469566955653654, 50.92763949654357],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_907422bbd34ead0a2d0be365efcdd90a",
+            "label": "BELGK09"
+        },
+        "geometry": {
+            "coordinates": [5.49173522097833, 50.934378882152025],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_b7ae6f7ae1d60e35b399962d978d9ea6",
+            "label": "BELHB23"
+        },
+        "geometry": {
+            "coordinates": [4.339957879729796, 51.1700452778959],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_3a25287836810a3034b2a3d57c5fc5b0",
+            "label": "BELLD01"
+        },
+        "geometry": {
+            "coordinates": [5.003813649438513, 51.10972359591983],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_b9a17b587df0d88ce4164f8bec25ad13",
+            "label": "BELLD02"
+        },
+        "geometry": {
+            "coordinates": [5.0204951326028056, 51.12013161960038],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_74a60fc5938501bb860aacdff37a5476",
+            "label": "BELMN01"
+        },
+        "geometry": {
+            "coordinates": [3.108601636140242, 50.79321590792331],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_ade4f888d9898d9e98957b9b74c044bf",
+            "label": "BELOB01"
+        },
+        "geometry": {
+            "coordinates": [3.3063444168218337, 50.91697536075491],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_7be1ff9803d99ff0856e899c131d1dfb",
+            "label": "BELR801"
+        },
+        "geometry": {
+            "coordinates": [4.430773332865335, 51.20940980337123],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_eee788ab9acdb62175f80c641ab4b512",
+            "label": "BELR833"
+        },
+        "geometry": {
+            "coordinates": [4.361213157927746, 51.327406127081574],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_abcc1be57f12911aa5066a1631dabbfb",
+            "label": "BELRL01"
+        },
+        "geometry": {
+            "coordinates": [3.12011520232101, 50.95292415578557],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_d0c559b8639ec72616ebcd7053aebc33",
+            "label": "BELSA04"
+        },
+        "geometry": {
+            "coordinates": [4.402820488221657, 51.313676163025455],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_69e51349f18a1d43c817a9bb972cc91",
+            "label": "BELSZ01"
+        },
+        "geometry": {
+            "coordinates": [4.503135472527078, 50.91432341770829],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_8feffceb9dd2c1ede735fd52721bdd80",
+            "label": "BELSZ02"
+        },
+        "geometry": {
+            "coordinates": [4.511136453539578, 50.912767706261675],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_cae67f64aeeca5e5974875ba294f093a",
+            "label": "BELTS12"
+        },
+        "geometry": {
+            "coordinates": [5.092809966379838, 51.063103631895835],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_a72f8e41439b6042281543231f71b44c",
+            "label": "BELWZ02"
+        },
+        "geometry": {
+            "coordinates": [5.220482072996424, 51.1925478988663],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_52e54cc286d1a3977c11df8eb05b6023",
+            "label": "BELZL01"
+        },
+        "geometry": {
+            "coordinates": [3.807356019807785, 51.2028884998475],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_e0d53f2f9f0cffc891a390ff9f2187ad",
+            "label": "BETB003"
+        },
+        "geometry": {
+            "coordinates": [4.367634162756215, 50.84546233111552],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_dd95a2ef9bb7006138d708d7a99b3822",
+            "label": "BETB004"
+        },
+        "geometry": {
+            "coordinates": [4.347540517602077, 50.850557760512416],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_87d62f9b8d16d3d852d2ee65e5a449cf",
+            "label": "BETB006"
+        },
+        "geometry": {
+            "coordinates": [4.373341197855533, 50.83837841934125],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_7a25ab51933dbbcec6578bc059594332",
+            "label": "BETB008"
+        },
+        "geometry": {
+            "coordinates": [4.375101972946155, 50.84053579892573],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_a586793f0b03a11da48a7d0493790044",
+            "label": "BETB011"
+        },
+        "geometry": {
+            "coordinates": [4.287289728487266, 50.857777797320146],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_f518330577c1f0a4d80a8b6a30290d66",
+            "label": "BETE007"
+        },
+        "geometry": {
+            "coordinates": [4.251582058965422, 50.795045815360474],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_b7c08b0bcf191032193c481cb04f9881",
+            "label": "BETE008"
+        },
+        "geometry": {
+            "coordinates": [4.394872738450364, 50.92584236010066],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_59a2d7e1561118b1a2522788fbf7bbad",
+            "label": "BETE009"
+        },
+        "geometry": {
+            "coordinates": [4.4343694710428085, 50.95466394705793],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_de0365851b2c2f5e32916599b9427860",
+            "label": "BETE013"
+        },
+        "geometry": {
+            "coordinates": [4.327337849927232, 50.811448108728854],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_163a12cca18037e3115ec393058267f2",
+            "label": "BETE702"
+        },
+        "geometry": {
+            "coordinates": [3.530697559080052, 50.813747590748605],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_7bc1fb07e87d95e043dadab02ae38473",
+            "label": "BETE703"
+        },
+        "geometry": {
+            "coordinates": [3.6862521230719167, 51.19006407956373],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_f928c93efee3a500bc4f8a494dcf2530",
+            "label": "BETE714"
+        },
+        "geometry": {
+            "coordinates": [3.247582769386584, 51.27871022911717],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_1b308de53cd570ef00e7c4a7769d24fd",
+            "label": "BETE715"
+        },
+        "geometry": {
+            "coordinates": [3.1739433323770148, 51.245611122073264],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_8a56871793ede6549c602650c247ad0f",
+            "label": "BETE716"
+        },
+        "geometry": {
+            "coordinates": [3.6817694969938635, 51.06673493118095],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_7afa0172ce8f94d05442ffe51d9f54f7",
+            "label": "BETE804"
+        },
+        "geometry": {
+            "coordinates": [4.306113201290856, 51.281137918397214],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_f518330577c1f0a4d80a8b6a30290d66",
+            "label": "BETE807"
+        },
+        "geometry": {
+            "coordinates": [4.251582058965422, 50.795045815360474],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_b7c08b0bcf191032193c481cb04f9881",
+            "label": "BETE808"
+        },
+        "geometry": {
+            "coordinates": [4.394872738450364, 50.92584236010066],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_59a2d7e1561118b1a2522788fbf7bbad",
+            "label": "BETE809"
+        },
+        "geometry": {
+            "coordinates": [4.4343694710428085, 50.95466394705793],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_3195f97ca660f80f00ae50a66d97d04d",
+            "label": "BETE810"
+        },
+        "geometry": {
+            "coordinates": [5.0399467695629205, 51.21126005957034],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_fbd2169ca2edfc0e5da5774ed1fff909",
+            "label": "BETE811"
+        },
+        "geometry": {
+            "coordinates": [5.417150871369041, 50.89668083612687],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_7c2a53b4dd93959a12c7116e77d2455f",
+            "label": "BETE812"
+        },
+        "geometry": {
+            "coordinates": [5.536686256347378, 50.967725750433395],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_46dc67ad9a1d9ff1bb54af7b4f81ac95",
+            "label": "BETGK11"
+        },
+        "geometry": {
+            "coordinates": [5.519259443823626, 50.931235278054864],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_e53e4f90f8cceff2bbd7049fccf6e4c8",
+            "label": "BETH201"
+        },
+        "geometry": {
+            "coordinates": [5.5464110085259755, 50.62473923749001],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_6ce723d891229b2c9367c10b56d219e5",
+            "label": "BETM204"
+        },
+        "geometry": {
+            "coordinates": [5.6100962628166045, 50.61167040180888],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_c3eb99051d10619eadf86a661b2d394a",
+            "label": "BETM702"
+        },
+        "geometry": {
+            "coordinates": [3.7610933349898583, 51.16577027927974],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_992e5189974b39104d9f240b9d7ff660",
+            "label": "BETM705"
+        },
+        "geometry": {
+            "coordinates": [3.151361029367506, 50.94510612402099],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_29a9dc3d8533522c4c33ff8c031814ab",
+            "label": "BETM802"
+        },
+        "geometry": {
+            "coordinates": [4.423351288874053, 51.26073698032209],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_274cf5c8730d9cff4dc890ad6f383524",
+            "label": "BETMEU1"
+        },
+        "geometry": {
+            "coordinates": [4.391670465484688, 50.89484780317898],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_ee40b3a8654d3731b2be7f03f45f8a8",
+            "label": "BETN012"
+        },
+        "geometry": {
+            "coordinates": [3.3614939869373877, 51.254320575687466],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_3eb3343c024b46950fa626b8ba7db637",
+            "label": "BETN016"
+        },
+        "geometry": {
+            "coordinates": [5.162927112669919, 51.233399751102034],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_8c36bb418fe0db94da563091060859e4",
+            "label": "BETN027"
+        },
+        "geometry": {
+            "coordinates": [5.605605179924863, 51.13346441917528],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_9402e2ea047f6e5e770ea3a05394fc89",
+            "label": "BETN029"
+        },
+        "geometry": {
+            "coordinates": [2.581285273499176, 51.01602687157289],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_7189eee216c3abdeb312f551e65b9117",
+            "label": "BETN035"
+        },
+        "geometry": {
+            "coordinates": [4.836568305212791, 50.977288782475995],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_730781dcbad8632ecaebc3389e5a336c",
+            "label": "BETN040"
+        },
+        "geometry": {
+            "coordinates": [4.224148022507917, 50.7678846913905],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_9f0fff5462ecf591ba24279cfb27597e",
+            "label": "BETN041"
+        },
+        "geometry": {
+            "coordinates": [4.223142493207307, 50.76757780938049],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_c67d167c6f67bfa92e0bfa82aa8d9ee6",
+            "label": "BETN043"
+        },
+        "geometry": {
+            "coordinates": [4.381916082147075, 50.883307048563324],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_6dc9424d68136c16ddf8166c353da83a",
+            "label": "BETN045"
+        },
+        "geometry": {
+            "coordinates": [5.367325990004875, 50.93945947627086],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_4a08f52238952f7029941ce9962aae",
+            "label": "BETN046"
+        },
+        "geometry": {
+            "coordinates": [5.61782015286658, 50.88204653991555],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_ce3357c14ec792ff3bc1b29239c40816",
+            "label": "BETN051"
+        },
+        "geometry": {
+            "coordinates": [3.929248575768813, 50.7986626907343],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_c42251d20d2479b24ef4987be80a60f9",
+            "label": "BETN052"
+        },
+        "geometry": {
+            "coordinates": [3.321452920380108, 50.814620787643214],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_52746ca84cff0755e30b0851d13e5470",
+            "label": "BETN054"
+        },
+        "geometry": {
+            "coordinates": [5.1021077234305325, 50.711453584728154],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_60e5b151e742ca41cc8f7a59e3dd7013",
+            "label": "BETN060"
+        },
+        "geometry": {
+            "coordinates": [3.456582431464841, 50.61646534351792],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_cba0a738e15d1aee313784a24d68337a",
+            "label": "BETN063"
+        },
+        "geometry": {
+            "coordinates": [4.667239178007942, 50.65518642718018],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_9d8ad5100a09c1642af70c7eac362b73",
+            "label": "BETN066"
+        },
+        "geometry": {
+            "coordinates": [6.0012730813606385, 50.62860813126288],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_c83765c8670479c3c4690f61c22b9854",
+            "label": "BETN067"
+        },
+        "geometry": {
+            "coordinates": [5.991697183632146, 50.61202539419906],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_f0d643146d0c8dd86e3ae97fb0f47dd3",
+            "label": "BETN070"
+        },
+        "geometry": {
+            "coordinates": [3.938669863971859, 50.46493922715397],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_62bbebea445d93c2cf8df2e9e84748ee",
+            "label": "BETN073"
+        },
+        "geometry": {
+            "coordinates": [4.987372881615698, 50.50246377536034],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_1c3a1241297cca50d9286a467ab182b1",
+            "label": "BETN085"
+        },
+        "geometry": {
+            "coordinates": [6.000681056163052, 50.30295568067042],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_4bf089d6c8cfce7c1edf59098b2f3d44",
+            "label": "BETN093"
+        },
+        "geometry": {
+            "coordinates": [5.234117495551344, 50.27422502948455],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_65eb63692f78b61c7cb7860ca1c275d0",
+            "label": "BETN100"
+        },
+        "geometry": {
+            "coordinates": [4.5937151363327136, 50.09543069946103],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_91634ede3648c0c6b344aba3fbffda72",
+            "label": "BETN113"
+        },
+        "geometry": {
+            "coordinates": [5.591964126529964, 50.02677667113093],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_a2cb6127ba91acf723bd2d7d1c621c67",
+            "label": "BETN121"
+        },
+        "geometry": {
+            "coordinates": [5.201336865704334, 49.8768759737465],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_ae0f88102ce388eb9bdc85a3cf3aad4f",
+            "label": "BETN132"
+        },
+        "geometry": {
+            "coordinates": [5.62934507784547, 49.71902884008304],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_2b5ba6dab89f6c53dbe4f6ee5e7932be",
+            "label": "BETR001"
+        },
+        "geometry": {
+            "coordinates": [4.332772831608211, 50.8494127067704],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_f6c94da05eeb7327ee86e4c1939de934",
+            "label": "BETR002"
+        },
+        "geometry": {
+            "coordinates": [4.383671711935253, 50.82487510738298],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_25931a789a056af491fa097af3900f87",
+            "label": "BETR010"
+        },
+        "geometry": {
+            "coordinates": [4.427379884304826, 50.86485513503179],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_cfef23420924ee10912b09c9db5657e7",
+            "label": "BETR012"
+        },
+        "geometry": {
+            "coordinates": [4.357491891473815, 50.79637886245367],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_db502c030c147e983530656456052295",
+            "label": "BETR020"
+        },
+        "geometry": {
+            "coordinates": [4.4356732542075665, 50.941134373389076],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_35d2a09cf5b22d58c47c25f6168631f5",
+            "label": "BETR221"
+        },
+        "geometry": {
+            "coordinates": [5.626781651896404, 50.65819212194334],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_8c08211190215a5d86f89e3edbf61b4f",
+            "label": "BETR222"
+        },
+        "geometry": {
+            "coordinates": [5.569169530878802, 50.61316017917033],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_9fc76130cc096f63f642599379f36638",
+            "label": "BETR223"
+        },
+        "geometry": {
+            "coordinates": [5.515351751441901, 50.62041853392709],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_f31dc2708ed93ffd6f5a403c862989e3",
+            "label": "BETR240"
+        },
+        "geometry": {
+            "coordinates": [5.3963937195286675, 50.58336195024436],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_e7e185dde37a95a049c1257316e8e0b1",
+            "label": "BETR501"
+        },
+        "geometry": {
+            "coordinates": [4.4511246411250545, 50.40905868556234],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_58a507031d1e29fa7fee9da01c690443",
+            "label": "BETR502"
+        },
+        "geometry": {
+            "coordinates": [4.457633666960066, 50.42874262981557],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_a6283080accc879073ce519636cb63a2",
+            "label": "BETR510"
+        },
+        "geometry": {
+            "coordinates": [4.520082696235321, 50.41618061738218],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_d1139bf4f08d8b419fe6ad04c2c91bb8",
+            "label": "BETR511"
+        },
+        "geometry": {
+            "coordinates": [4.42365348276216, 50.37733932443557],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_29c3c57b765135cbd67dcaa59a0a3b6d",
+            "label": "BETR512"
+        },
+        "geometry": {
+            "coordinates": [4.394850276971763, 50.40755741365582],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_7ea9db54b576aaf63cc96008afef9a7c",
+            "label": "BETR701"
+        },
+        "geometry": {
+            "coordinates": [3.7282544050240585, 51.05807875873328],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_62c74f0998f9afabda3e02e8b48cefee",
+            "label": "BETR702"
+        },
+        "geometry": {
+            "coordinates": [3.7339276949920204, 51.040436462520994],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_92faad9c76a2f7f37c455021dff477a9",
+            "label": "BETR710"
+        },
+        "geometry": {
+            "coordinates": [3.7742183710031907, 51.0610247536111],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_c26055f58a81d79d88f3be91954e07e0",
+            "label": "BETR721"
+        },
+        "geometry": {
+            "coordinates": [3.715075653512805, 51.08870476409703],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_c78d2d39517fba4ca09fb9ad7fc4fe8",
+            "label": "BETR731"
+        },
+        "geometry": {
+            "coordinates": [3.738460349983397, 51.12443756110966],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_e03fe0aa3e9fba75b153d4d63d9ffb1c",
+            "label": "BETR740"
+        },
+        "geometry": {
+            "coordinates": [3.807691163894316, 51.14988316084379],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_6ebdf793cbee37cd13c5249a275c69e2",
+            "label": "BETR750"
+        },
+        "geometry": {
+            "coordinates": [3.8218756686368165, 51.19581034614816],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_7be1ff9803d99ff0856e899c131d1dfb",
+            "label": "BETR801"
+        },
+        "geometry": {
+            "coordinates": [4.430773332865335, 51.20940980337123],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_deaa1541811a3b43279be71bd2cda516",
+            "label": "BETR802"
+        },
+        "geometry": {
+            "coordinates": [4.4307445169709485, 51.209266004026645],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_2bfc1d99961a282d5d91105d5cb142f3",
+            "label": "BETR811"
+        },
+        "geometry": {
+            "coordinates": [4.490313951437762, 51.25185070723545],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_bc666bd52a74d992a2571f325273572e",
+            "label": "BETR815"
+        },
+        "geometry": {
+            "coordinates": [4.331159257846051, 51.21444605542715],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_63cc0926249292fd929b66ddc70c1172",
+            "label": "BETR820"
+        },
+        "geometry": {
+            "coordinates": [4.443762737410088, 51.320164068546006],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_b264afc2acbc0c70bd8b722c89435983",
+            "label": "BETR821"
+        },
+        "geometry": {
+            "coordinates": [4.249267938060937, 51.215246731213306],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_5cc53ca63e4dadf9ff619caf26b78199",
+            "label": "BETR822"
+        },
+        "geometry": {
+            "coordinates": [4.340232726267421, 51.264037029169906],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_a6a5b1d657e311e374b03ae6cfb221b",
+            "label": "BETR830"
+        },
+        "geometry": {
+            "coordinates": [4.2615868485405155, 51.317975852163066],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_2d08007bb7faa1c1849bd5a022e57b4d",
+            "label": "BETR831"
+        },
+        "geometry": {
+            "coordinates": [4.338662617454492, 51.348542541149634],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_79203ee4acc9010c5a147236a8b7e830",
+            "label": "BETR834"
+        },
+        "geometry": {
+            "coordinates": [4.37905621373377, 51.09174728565064],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_79ca008d8bfd9801f0e4d9391660c",
+            "label": "BETR841"
+        },
+        "geometry": {
+            "coordinates": [4.468273298019945, 51.002273241887536],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_e8fd7ee93d5a230b9f7ebfde4b5c3ce9",
+            "label": "BETR891"
+        },
+        "geometry": {
+            "coordinates": [4.384312325988676, 51.25555390359908],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_4a7d61b428dc602b07c7841c28f3cf7a",
+            "label": "BETR892"
+        },
+        "geometry": {
+            "coordinates": [4.277843052716327, 51.26278404690535],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_c8bcd5cac7f0f2ef943e618288d0e584",
+            "label": "BETR893"
+        },
+        "geometry": {
+            "coordinates": [4.3847230952044045, 51.281125316636164],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_2218862845b7f17faf543c3670d1ba51",
+            "label": "BETR894"
+        },
+        "geometry": {
+            "coordinates": [4.348448486106361, 51.283246381291086],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_ed0249465720a1b5fc6744786c25c6ab",
+            "label": "BETR897"
+        },
+        "geometry": {
+            "coordinates": [4.341057252688654, 51.24985374269493],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_cbd86e3db5e9b25db02f8dcdb52e367d",
+            "label": "BETTS21"
+        },
+        "geometry": {
+            "coordinates": [5.106485131733738, 51.065454722119995],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_bc41f204ede928a9cd0c139c10bbf89a",
+            "label": "BETWOL1"
+        },
+        "geometry": {
+            "coordinates": [4.424656306951782, 50.85632548758377],
+            "type": "Point"
+        },
+        "type": "Feature"
+    },
+    {
+        "properties": {
+            "id": "sta_bc41f204ede928a9cd0c139c10bbf89a",
+            "label": "BETWOL2"
+        },
+        "geometry": {
+            "coordinates": [4.424656306951782, 50.85632548758377],
+            "type": "Point"
+        },
+        "type": "Feature"
+    }
+]
