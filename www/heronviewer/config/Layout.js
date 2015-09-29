@@ -297,16 +297,16 @@ Heron.layout = {
                             dateTime: Heron.cdate,
                             layerNames: [
                                 "KNMI - Rain Radar (Color)",
-                                "RIVM - Measurements CO",
-                                "RIVM - Measurements NH3",
-                                "RIVM - Measurements NO2",
-                                "RIVM - Measurements NO",
-                                "RIVM - Measurements PM10",
-                                "RIVM - Measurements O3",
-                                "RIVM - Measurements SO2",
-                                "Smart Emission - Measurements CO",
-                                "Smart Emission - Measurements NO2",
-                                "Smart Emission - Measurements O3",
+                                "RIVM - History CO",
+                                "RIVM - History NH3",
+                                "RIVM - History NO2",
+                                "RIVM - History NO",
+                                "RIVM - History PM10",
+                                "RIVM - History O3",
+                                "RIVM - History SO2",
+                                "Smart Emission - History CO",
+                                "Smart Emission - History NO2",
+                                "Smart Emission - History O3",
                                 "Weather Observations"
                             ]
                         }

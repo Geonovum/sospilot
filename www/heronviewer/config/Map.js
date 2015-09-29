@@ -371,7 +371,7 @@ Heron.options.map.layers = [
         "http://geoservices.knmi.nl/cgi-bin/RADNL_OPER_R___25PCPRR_L3.cgi?",
         {layers: "RADNL_OPER_R___25PCPRR_L3_COLOR", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
         }
     ),
@@ -475,7 +475,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements CO
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Measurements CO",
+        "RIVM - History CO",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_co", format: "image/png", transparent: true},
         {
@@ -494,10 +494,10 @@ Heron.options.map.layers = [
     ),
 
     /*
-     * RIVM: Last Measurements CO
+     * RIVM: Current CO
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Last Measurements CO",
+        "RIVM - Current CO",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_co", format: "image/png", transparent: true},
         {
@@ -519,7 +519,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements NH3
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Measurements NH3",
+        "RIVM - History NH3",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_nh3", format: "image/png", transparent: true},
         {
@@ -538,10 +538,10 @@ Heron.options.map.layers = [
     ),
 
     /*
-     * RIVM: Last Measurements NH3
+     * RIVM: Current NH3
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Last Measurements NH3",
+        "RIVM - Current NH3",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_nh3", format: "image/png", transparent: true},
         {
@@ -563,7 +563,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements NO
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Measurements NO",
+        "RIVM - History NO",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_no", format: "image/png", transparent: true},
         {
@@ -585,7 +585,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements NO
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Last Measurements NO",
+        "RIVM - Current NO",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_no", format: "image/png", transparent: true},
         {
@@ -607,11 +607,11 @@ Heron.options.map.layers = [
      * RIVM: Measurements NO2
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Measurements NO2",
+        "RIVM - History NO2",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_no2", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -626,10 +626,10 @@ Heron.options.map.layers = [
     ),
 
     /*
-     * RIVM: Last Measurements NO2
+     * RIVM: Current NO2
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Last Measurements NO2",
+        "RIVM - Current NO2",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_no2", format: "image/png", transparent: true},
         {
@@ -651,7 +651,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements O3
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Last Measurements O3",
+        "RIVM - Current O3",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_o3", format: "image/png", transparent: true},
         {
@@ -673,7 +673,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements O3
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Measurements O3",
+        "RIVM - History O3",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_o3", format: "image/png", transparent: true},
         {
@@ -695,7 +695,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements PM10
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Measurements PM10",
+        "RIVM - History PM10",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_pm10", format: "image/png", transparent: true},
         {
@@ -717,7 +717,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements PM10
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Last Measurements PM10",
+        "RIVM - Current PM10",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_pm10", format: "image/png", transparent: true},
         {
@@ -739,7 +739,7 @@ Heron.options.map.layers = [
      * RIVM: Measurements SO2
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Measurements SO2",
+        "RIVM - History SO2",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_so2", format: "image/png", transparent: true},
         {
@@ -758,10 +758,10 @@ Heron.options.map.layers = [
     ),
 
     /*
-     * RIVM: Last Measurements SO2
+     * RIVM: Current SO2
      */
     new OpenLayers.Layer.WMS(
-        "RIVM - Last Measurements SO2",
+        "RIVM - Current SO2",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_so2", format: "image/png", transparent: true},
         {
@@ -809,11 +809,11 @@ Heron.options.map.layers = [
      * Smart Emission: Measurements CO
      */
     new OpenLayers.Layer.WMS(
-        "Smart Emission - Measurements CO",
+        "Smart Emission - History CO",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_co_smartem", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -828,10 +828,10 @@ Heron.options.map.layers = [
     ),
 
     /*
-     * Smart Emission: Last Measurements CO
+     * Smart Emission: Current CO
      */
     new OpenLayers.Layer.WMS(
-        "Smart Emission - Last Measurements CO",
+        "Smart Emission - Current CO",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_co_smartem", format: "image/png", transparent: true},
         {
@@ -853,11 +853,11 @@ Heron.options.map.layers = [
      * Smart Emission: Measurements NO2
      */
     new OpenLayers.Layer.WMS(
-        "Smart Emission - Measurements NO2",
+        "Smart Emission - History NO2",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_no2_smartem", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -872,10 +872,10 @@ Heron.options.map.layers = [
     ),
 
     /*
-     * Smart Emission: Last Measurements NO2
+     * Smart Emission: Current NO2
      */
     new OpenLayers.Layer.WMS(
-        "Smart Emission - Last Measurements NO2",
+        "Smart Emission - Current NO2",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_no2_smartem", format: "image/png", transparent: true},
         {
@@ -897,11 +897,11 @@ Heron.options.map.layers = [
      * Smart Emission: Measurements O3
      */
     new OpenLayers.Layer.WMS(
-        "Smart Emission - Measurements O3",
+        "Smart Emission - History O3",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "measurements_o3_smartem", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -916,10 +916,10 @@ Heron.options.map.layers = [
     ),
 
     /*
-     * Smart Emission: Last Measurements O3
+     * Smart Emission: Current O3
      */
     new OpenLayers.Layer.WMS(
-        "Smart Emission - Last Measurements O3",
+        "Smart Emission - Current O3",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_o3_smartem", format: "image/png", transparent: true},
         {
@@ -971,7 +971,7 @@ Heron.options.map.layers = [
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "weather_observations", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -1728,7 +1728,7 @@ Heron.options.layertree.tree = [
         text: 'Toegevoegde Lagen', nodeType: 'hr_userlayercontainer', expanded: true, children: []
     },
     {
-        text: 'Basis Kaarten', expanded: true, children: [
+        text: 'Basis Kaarten', expanded: false, children: [
         {nodeType: "gx_layer", layer: "BRT Achtergrondkaart", text: "BRT (PDOK)"},
         {nodeType: "gx_layer", layer: "OpenBasisKaart OSM"},
         {nodeType: "gx_layer", layer: "Luchtfoto (PDOK)"},
@@ -1738,90 +1738,184 @@ Heron.options.layertree.tree = [
     },
 
     {
-        text: 'RIVM LML', expanded: true, children: [
-        {nodeType: "gx_layer", layer: "RIVM - All Stations", text: "AQ Stations (WMS)"},
-        {nodeType: "gx_layer", layer: "RIVM - Active Stations (WFS)", text: "AQ Stations (Active WFS)"},
-        {nodeType: "gx_layer", layer: "Zones and Agglomerations", text: "Zones and Agglomerations (WMS)"},
-
+        text: 'Sensoren', expanded: true, children: [
+        {nodeType: "gx_layer", layer: "RIVM - All Stations", text: "RIVM AQ Stations (WMS)"},
+        {nodeType: "gx_layer", layer: "RIVM - Active Stations (WFS)", text: "RIVM AQ Stations (WFS)"},
+        {nodeType: "gx_layer", layer: "Zones and Agglomerations", text: "RIVM Zones and Agglomerations (WMS)"},
+        {nodeType: "gx_layer", layer: "Smart Emission - Sensors", text: "Smart Emission - Sensors (WMS)"}
+    ]
+    },
+    {
+        text: 'Chemische Componenten (Current)', expanded: false, children: [
         {
-            text: 'Carbon monoxide (CO) - WMS', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "RIVM - Last Measurements CO", text: "Last Measurements CO"},
-            {nodeType: "gx_layer", layer: "RIVM - Measurements CO", text: "Time Series Measurements CO"}
+            text: 'Carbon monoxide (CO)', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Current CO"},
+            {nodeType: "gx_layer", layer: "Smart Emission - Current CO"}
+
         ]
         },
         {
             text: 'Ammonia (NH3) - WMS', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "RIVM - Last Measurements NH3", text: "Last Measurements NH3"},
-            {nodeType: "gx_layer", layer: "RIVM - Measurements NH3", text: "Time Series Measurements NH3"}
+            {nodeType: "gx_layer", layer: "RIVM - Current NH3"}
         ]
         },
         {
             text: 'Nitrogen Oxide (NO) - WMS', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "RIVM - Last Measurements NO", text: "Last Measurements NO"},
-            {nodeType: "gx_layer", layer: "RIVM - Measurements NO", text: "Time Series Measurements NO"}
+            {nodeType: "gx_layer", layer: "RIVM - Current NO"}
         ]
         },
         {
-            text: 'Nitrogen Dioxide (NO2) - WMS', expanded: true, children: [
-            {nodeType: "gx_layer", layer: "RIVM - Last Measurements NO2", text: "Last Measurements NO2"},
-            {nodeType: "gx_layer", layer: "RIVM - Measurements NO2", text: "Time Series Measurements NO2"}
+            text: 'Nitrogen Dioxide (NO2) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Current NO2"},
+            {nodeType: "gx_layer", layer: "Smart Emission - Current NO2"}
         ]
         },
         {
-            text: 'Ozone (O3) - WMS', expanded: true, children: [
-            {nodeType: "gx_layer", layer: "RIVM - Last Measurements O3", text: "Last Measurements O3"},
-            {nodeType: "gx_layer", layer: "RIVM - Measurements O3", text: "Time Series Measurements O3"}
+            text: 'Ozone (O3) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Current O3"},
+            {nodeType: "gx_layer", layer: "Smart Emission - Current O3"}
         ]
         },
         {
-            text: 'Particulate Matter (PM10) - WMS', expanded: true, children: [
-            {nodeType: "gx_layer", layer: "RIVM - Last Measurements PM10", text: "Last Measurements PM10"},
-            {nodeType: "gx_layer", layer: "RIVM - Measurements PM10", text: "Time Series Measurements PM10"}
+            text: 'Particulate Matter (PM10) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - Current PM10"}
 
         ]
         },
         {
             text: 'Sulfur Dioxide (SO2) - WMS', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "RIVM - Last Measurements SO2", text: "Last Measurements SO2"},
-            {nodeType: "gx_layer", layer: "RIVM - Measurements SO2", text: "Time Series Measurements SO2"}
+            {nodeType: "gx_layer", layer: "RIVM - Current SO2"}
 
         ]
         }
     ]
     },
     {
-        text: 'Smart Emission (Citygis.nl)', expanded: true, children: [
-        {nodeType: "gx_layer", layer: "Smart Emission - Sensors", text: "Smart Emission - Sensors (WMS)"},
-        //{nodeType: "gx_layer", layer: "SmartEm - Active Stations (WFS)", text: "AQ Stations (Active WFS)" },
+        text: 'Chemische Componenten (Historie)', expanded: false, children: [
         {
-            text: 'Carbon monoxide (CO) - WMS', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "Smart Emission - Last Measurements CO", text: "Last Measurements CO"},
-            {nodeType: "gx_layer", layer: "Smart Emission - Measurements CO", text: "Time Series Measurements CO"}
+            text: 'Carbon monoxide (CO)', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - History CO"},
+            {nodeType: "gx_layer", layer: "Smart Emission - History CO"}
+        ]
+        },
+        {
+            text: 'Ammonia (NH3) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - History NH3"}
+        ]
+        },
+        {
+            text: 'Nitrogen Oxide (NO) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - History NO"}
         ]
         },
         {
             text: 'Nitrogen Dioxide (NO2) - WMS', expanded: true, children: [
-            {nodeType: "gx_layer", layer: "Smart Emission - Last Measurements NO2", text: "Last Measurements NO2"},
-            {nodeType: "gx_layer", layer: "Smart Emission - Measurements NO2", text: "Time Series Measurements NO2"}
+            {nodeType: "gx_layer", layer: "RIVM - History NO2"},
+            {nodeType: "gx_layer", layer: "Smart Emission - History NO2"}
         ]
         },
         {
             text: 'Ozone (O3) - WMS', expanded: true, children: [
-            {nodeType: "gx_layer", layer: "Smart Emission - Last Measurements O3", text: "Last Measurements O3"},
-            {nodeType: "gx_layer", layer: "Smart Emission - Measurements O3", text: "Time Series Measurements O3"}
+            {nodeType: "gx_layer", layer: "RIVM - History O3"},
+            {nodeType: "gx_layer", layer: "Smart Emission - History O3"}
+        ]
+        },
+        {
+            text: 'Particulate Matter (PM10) - WMS', expanded: true, children: [
+            {nodeType: "gx_layer", layer: "RIVM - History PM10"}
+
+        ]
+        },
+        {
+            text: 'Sulfur Dioxide (SO2) - WMS', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RIVM - History SO2"}
+
         ]
         }
     ]
     },
+
+    //{
+    //    text: 'RIVM LML', expanded: false, children: [
+    //    {
+    //        text: 'Carbon monoxide (CO) - WMS', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "RIVM - Current CO", text: "Current CO"},
+    //        {nodeType: "gx_layer", layer: "RIVM - History CO", text: "Time Series Measurements CO"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Ammonia (NH3) - WMS', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "RIVM - Current NH3", text: "Current NH3"},
+    //        {nodeType: "gx_layer", layer: "RIVM - History NH3", text: "Time Series Measurements NH3"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Nitrogen Oxide (NO) - WMS', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "RIVM - Current NO", text: "Current NO"},
+    //        {nodeType: "gx_layer", layer: "RIVM - History NO", text: "Time Series Measurements NO"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Nitrogen Dioxide (NO2) - WMS', expanded: true, children: [
+    //        {nodeType: "gx_layer", layer: "RIVM - Current NO2", text: "Current NO2"},
+    //        {nodeType: "gx_layer", layer: "RIVM - History NO2", text: "Time Series Measurements NO2"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Ozone (O3) - WMS', expanded: true, children: [
+    //        {nodeType: "gx_layer", layer: "RIVM - Current O3", text: "Current O3"},
+    //        {nodeType: "gx_layer", layer: "RIVM - History O3", text: "Time Series Measurements O3"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Particulate Matter (PM10) - WMS', expanded: true, children: [
+    //        {nodeType: "gx_layer", layer: "RIVM - Current PM10", text: "Current PM10"},
+    //        {nodeType: "gx_layer", layer: "RIVM - History PM10", text: "Time Series Measurements PM10"}
+    //
+    //    ]
+    //    },
+    //    {
+    //        text: 'Sulfur Dioxide (SO2) - WMS', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "RIVM - Current SO2", text: "Current SO2"},
+    //        {nodeType: "gx_layer", layer: "RIVM - History SO2", text: "Time Series Measurements SO2"}
+    //
+    //    ]
+    //    }
+    //]
+    //},
+    //{
+    //    text: 'Smart Emission (Citygis.nl)', expanded: false, children: [
+    //    {nodeType: "gx_layer", layer: "Smart Emission - Sensors", text: "Smart Emission - Sensors (WMS)"},
+    //    //{nodeType: "gx_layer", layer: "SmartEm - Active Stations (WFS)", text: "AQ Stations (Active WFS)" },
+    //    {
+    //        text: 'Carbon monoxide (CO) - WMS', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "Smart Emission - Current CO", text: "Current CO"},
+    //        {nodeType: "gx_layer", layer: "Smart Emission - History CO", text: "Time Series Measurements CO"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Nitrogen Dioxide (NO2) - WMS', expanded: true, children: [
+    //        {nodeType: "gx_layer", layer: "Smart Emission - Current NO2", text: "Current NO2"},
+    //        {nodeType: "gx_layer", layer: "Smart Emission - History NO2", text: "Time Series Measurements NO2"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Ozone (O3) - WMS', expanded: true, children: [
+    //        {nodeType: "gx_layer", layer: "Smart Emission - Current O3", text: "Current O3"},
+    //        {nodeType: "gx_layer", layer: "Smart Emission - History O3", text: "Time Series Measurements O3"}
+    //    ]
+    //    }
+    //]
+    //},
     {
-        text: 'Geonovum Weather', expanded: true, children: [
+        text: 'Geonovum Weather', expanded: false, children: [
         {nodeType: "gx_layer", layer: "Weather Stations", text: "Weather Stations (WMS)"},
         {nodeType: "gx_layer", layer: "Weather Observations", text: "Weather Observations (WMS Time)"},
         {nodeType: "gx_layer", layer: "Last Weather Observations", text: "Last Weather Observations (WMS)"}
     ]
     },
     {
-        text: 'KNMI - Meteorology', expanded: true, children: [
+        text: 'KNMI - Meteorology', expanded: false, children: [
         {nodeType: "gx_layer", layer: "KNMI - Current Temperatures"},
         {nodeType: "gx_layer", layer: "KNMI - Current Wind Forces"},
         {nodeType: "gx_layer", layer: "KNMI - Current Wind Directions"},
@@ -1829,86 +1923,86 @@ Heron.options.layertree.tree = [
         {nodeType: "gx_layer", layer: "KNMI - Rain Radar (Color)"}
     ]
     },
-    {
-        text: 'Kadaster', expanded: false, children: [
-
-        {
-            text: 'Kadastrale Kaart (zoom >8)', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "Kadastrale Vlakken", text: "Percelen (WMS)"},
-            {nodeType: "gx_layer", layer: "Kadastrale Vlakken (tiled)", text: "Percelen (tiled)"},
-            {nodeType: "gx_layer", layer: "Kadastrale Gebouwen (tiled)", text: "Gebouwen (tiled)"},
-            {nodeType: "gx_layer", layer: "Kadastrale Kaart Alles (tiled)", text: "Percelen en Gebouwen (tiled)"}
-        ]
-        }
-    ]
-    },
-    {
-        text: 'PDOK', expanded: false, children: [
-        {
-            text: 'BAG', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "BAG - Adressen", text: "BAG Adressen"},
-            {nodeType: "gx_layer", layer: "BAG - Woonplaatsen", text: "BAG Woonplaatsen"},
-            {nodeType: "gx_layer", layer: "BAG - Ligplaatsen", text: "BAG Ligplaatsen"},
-            {nodeType: "gx_layer", layer: "BAG - Standplaatsen", text: "BAG Standplaatsen"},
-            {nodeType: "gx_layer", layer: "BAG - Verblijfsobjecten", text: "BAG Verblijfsobjecten"},
-            {nodeType: "gx_layer", layer: "BAG - Panden", text: "BAG Panden"},
-            {nodeType: "gx_layer", layer: "BAG - Panden (WFS)", text: "BAG Panden (WFS)"}
-        ]
-        },
-        {
-            text: 'Bestuurlijke Grenzen', expanded: false, children: [
-            /*							{nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Buurten", text: "Buurten" },
-             {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Wijken", text: "Wijken" },  */
-            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Gemeenten", text: "Gemeenten (WMS)"},
-            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Gemeenten (WFS)", text: "Gemeenten (WFS)"},
-            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Provincies", text: "Provincies"},
-            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Provincies (WFS)", text: "Provincies (WFS)"},
-            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Land", text: "Land"},
-            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Land (WFS)", text: "Land (WFS)"}
-        ]
-        },
-        {
-            text: 'Digitaal Topografisch Bestand (DTB)', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "DTB Vlakken"},
-            {nodeType: "gx_layer", layer: "DTB Lijnen"},
-            {nodeType: "gx_layer", layer: "DTB Punten"}
-        ]
-        },
-        {
-            text: 'Actueel Hoogtebestand (AHN)', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "AHN2 0.5m Ruw"},
-            {nodeType: "gx_layer", layer: "AHN2 0.5m Geinterpoleerd"},
-            {nodeType: "gx_layer", layer: "AHN2 0.5m Niet Geinterpoleerd"},
-            {nodeType: "gx_layer", layer: "AHN2 5m"},
-            {nodeType: "gx_layer", layer: "AHN2 Bladindex"},
-            {nodeType: "gx_layer", layer: "AHN 25m", text: 'AHN1 25m (Oud)'}
-        ]
-        },
-        {
-            text: 'Rijksdriehoeksmeting (RDInfo)', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "RD Info - Punten"},
-            {nodeType: "gx_layer", layer: "RD Info - Stations"}
-        ]
-
-        },
-        {
-            text: 'Natuur & Mileu', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "Natura 2000"},
-            {nodeType: "gx_layer", layer: "Nationale Parken"},
-            {nodeType: "gx_layer", layer: "NOK 2010 - EHS"},
-            {nodeType: "gx_layer", layer: "NOK 2010 - RODS"},
-            {nodeType: "gx_layer", layer: "NOK 2010 - BBLBuitenbegrenzing", text: "NOK 2010 - BBLBuitenbegr."}
-        ]
-        }
-    ]
-    },
-    {
-        text: 'RO Online', expanded: false, children: [
-        {nodeType: "gx_layer", layer: "RO Online Bestemmingsplannen", text: "Bestemmingsplannen (BP)"},
-        {nodeType: "gx_layer", layer: "RO Online Gem. Structuurvisie", text: "Gem. Structuurvisie (GSV),"},
-        {nodeType: "gx_layer", layer: "RO Online Prov. Structuurvisie", text: "Prov. Structuurvisie (PSV)"}
-    ]
-    },
+    //{
+    //    text: 'Kadaster', expanded: false, children: [
+    //
+    //    {
+    //        text: 'Kadastrale Kaart (zoom >8)', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "Kadastrale Vlakken", text: "Percelen (WMS)"},
+    //        {nodeType: "gx_layer", layer: "Kadastrale Vlakken (tiled)", text: "Percelen (tiled)"},
+    //        {nodeType: "gx_layer", layer: "Kadastrale Gebouwen (tiled)", text: "Gebouwen (tiled)"},
+    //        {nodeType: "gx_layer", layer: "Kadastrale Kaart Alles (tiled)", text: "Percelen en Gebouwen (tiled)"}
+    //    ]
+    //    }
+    //]
+    //},
+    //{
+    //    text: 'PDOK', expanded: false, children: [
+    //    {
+    //        text: 'BAG', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "BAG - Adressen", text: "BAG Adressen"},
+    //        {nodeType: "gx_layer", layer: "BAG - Woonplaatsen", text: "BAG Woonplaatsen"},
+    //        {nodeType: "gx_layer", layer: "BAG - Ligplaatsen", text: "BAG Ligplaatsen"},
+    //        {nodeType: "gx_layer", layer: "BAG - Standplaatsen", text: "BAG Standplaatsen"},
+    //        {nodeType: "gx_layer", layer: "BAG - Verblijfsobjecten", text: "BAG Verblijfsobjecten"},
+    //        {nodeType: "gx_layer", layer: "BAG - Panden", text: "BAG Panden"},
+    //        {nodeType: "gx_layer", layer: "BAG - Panden (WFS)", text: "BAG Panden (WFS)"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Bestuurlijke Grenzen', expanded: false, children: [
+    //        /*							{nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Buurten", text: "Buurten" },
+    //         {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Wijken", text: "Wijken" },  */
+    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Gemeenten", text: "Gemeenten (WMS)"},
+    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Gemeenten (WFS)", text: "Gemeenten (WFS)"},
+    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Provincies", text: "Provincies"},
+    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Provincies (WFS)", text: "Provincies (WFS)"},
+    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Land", text: "Land"},
+    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Land (WFS)", text: "Land (WFS)"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Digitaal Topografisch Bestand (DTB)', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "DTB Vlakken"},
+    //        {nodeType: "gx_layer", layer: "DTB Lijnen"},
+    //        {nodeType: "gx_layer", layer: "DTB Punten"}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Actueel Hoogtebestand (AHN)', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "AHN2 0.5m Ruw"},
+    //        {nodeType: "gx_layer", layer: "AHN2 0.5m Geinterpoleerd"},
+    //        {nodeType: "gx_layer", layer: "AHN2 0.5m Niet Geinterpoleerd"},
+    //        {nodeType: "gx_layer", layer: "AHN2 5m"},
+    //        {nodeType: "gx_layer", layer: "AHN2 Bladindex"},
+    //        {nodeType: "gx_layer", layer: "AHN 25m", text: 'AHN1 25m (Oud)'}
+    //    ]
+    //    },
+    //    {
+    //        text: 'Rijksdriehoeksmeting (RDInfo)', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "RD Info - Punten"},
+    //        {nodeType: "gx_layer", layer: "RD Info - Stations"}
+    //    ]
+    //
+    //    },
+    //    {
+    //        text: 'Natuur & Mileu', expanded: false, children: [
+    //        {nodeType: "gx_layer", layer: "Natura 2000"},
+    //        {nodeType: "gx_layer", layer: "Nationale Parken"},
+    //        {nodeType: "gx_layer", layer: "NOK 2010 - EHS"},
+    //        {nodeType: "gx_layer", layer: "NOK 2010 - RODS"},
+    //        {nodeType: "gx_layer", layer: "NOK 2010 - BBLBuitenbegrenzing", text: "NOK 2010 - BBLBuitenbegr."}
+    //    ]
+    //    }
+    //]
+    //},
+    //{
+    //    text: 'RO Online', expanded: false, children: [
+    //    {nodeType: "gx_layer", layer: "RO Online Bestemmingsplannen", text: "Bestemmingsplannen (BP)"},
+    //    {nodeType: "gx_layer", layer: "RO Online Gem. Structuurvisie", text: "Gem. Structuurvisie (GSV),"},
+    //    {nodeType: "gx_layer", layer: "RO Online Prov. Structuurvisie", text: "Prov. Structuurvisie (PSV)"}
+    //]
+    //},
     {
         text: 'Scratch folder', expanded: false, children: [
         {nodeType: "gx_layer", layer: "Tekenlaag", text: "Drawing Layer"},

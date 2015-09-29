@@ -7,73 +7,73 @@
 
     <!-- a Named Layer is the basic building block of an SLD document -->
     <NamedLayer>
-        <Name>Measurements NO2</Name>
+        <Name>Measurements O3</Name>
         <UserStyle>
             <!-- Styles can have names, titles and abstracts -->
-            <Title>Smart Emission measurements NO2</Title>
-            <Abstract>Smart Emission measurements_no2 style</Abstract>
+            <Title>Smart Emission measurements O3</Title>
+            <Abstract>Smart Emission measurements_03 style</Abstract>
             <IsDefault>1</IsDefault>
             <!-- FeatureTypeStyles describe how to render different features -->
             <!--
-            	"401 - MAX NO2": {
+           	"360 - MAX O3": {
             		"upper" : 10000.0,
-            		"lower" : 400.0,
+            		"lower" : 360.0,
             		"color" : "#5A0000"
             	},
-            	"271 - 400 NO2": {
-            		"upper" : 400.0,
-            		"lower" : 270.0,
+            	"240 - 360 O3": {
+            		"upper" : 360.0,
+            		"lower" : 240.0,
             		"color" : "#C00000"
             	},
-            	"201 - 270 NO2": {
-            		"upper" : 270.0,
-            		"lower" : 200.0,
+            	"201 - 270 O3": {
+            		"upper" : 240.0,
+            		"lower" : 180.0,
             		"color" : "#FF0000"
             	},
-            	"151 - 200 NO2": {
-            		"upper" : 200.0,
-            		"lower" : 150.0,
+            	"145 - 180 O3": {
+            		"upper" : 180.0,
+            		"lower" : 145.0,
             		"color" : "#FF8000"
             	},
-            	"111 - 150 NO2": {
-            		"upper" : 150.0,
+            	"110 - 145 O3": {
+            		"upper" : 145.0,
             		"lower" : 110.0,
             		"color" : "#F8E748"
             	},
-            	"81 - 110 NO2": {
+            	"90 - 110 O3": {
             		"upper" : 110.0,
-            		"lower" : 80.0,
+            		"lower" : 90.0,
             		"color" : "#CCFF33"
             	},
-            	"61 - 80 NO2": {
-            		"upper" : 80.0,
-            		"lower" : 60.0,
+            	"70 - 90 O3": {
+            		"upper" : 90.0,
+            		"lower" : 70.0,
             		"color" : "#00FF00"
             	},
-            	"46 - 60 NO2": {
-            		"upper" : 60.0,
-            		"lower" : 45.0,
+            	"50 - 70 O3": {
+            		"upper" : 70.0,
+            		"lower" : 50.0,
             		"color" : "#009800"
             	},
-            	"26 - 45 NO2": {
-            		"upper" : 45.0,
-            		"lower" : 25.0,
+            	"30 - 50 O3": {
+            		"upper" : 50.0,
+            		"lower" : 30.0,
             		"color" : "#007EFD"
             	},
-            	"0 - 25 NO2": {
-            		"upper" : 25.0,
+            	"0 - 30 O3": {
+            		"upper" : 30.0,
             		"lower" : 0.0,
             		"color" : "#0000FF"
-             	}                       -->
+             	}                     -->
             <!-- A FeatureTypeStyle for rendering points -->
             <FeatureTypeStyle>
                 <Rule>
-                    <Name>0 - 25 ug/m3</Name>
-                    <Title>  0 - 25 ug/m3</Title>
+                    <Name>0 - 30 ug/m3</Name>
+                    <Title>  0 - 30 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:PropertyIsLessThan>
                             <ogc:PropertyName>sample_value</ogc:PropertyName>
-                            <ogc:Literal>25.5</ogc:Literal>
+                            <ogc:Literal>30.5</ogc:Literal>
                         </ogc:PropertyIsLessThan>
                     </ogc:Filter>
                     <PointSymbolizer>
@@ -94,17 +94,17 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>26 - 45 ug/m3</Name>
-                    <Title>  26 - 45 ug/m3</Title>
+                    <Name>31 - 51 ug/m3</Name>
+                    <Title>  31 - 51 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>25.5</ogc:Literal>
+                                <ogc:Literal>30.5</ogc:Literal>
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>45.5</ogc:Literal>
+                                <ogc:Literal>50.5</ogc:Literal>
                             </ogc:PropertyIsLessThan>
                         </ogc:And>
                     </ogc:Filter>
@@ -125,17 +125,17 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>46 - 60 ug/m3</Name>
-                    <Title>  46 - 60 ug/m3</Title>
+                    <Name>51 - 71 ug/m3</Name>
+                    <Title>  51 - 71 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>45.5</ogc:Literal>
+                                <ogc:Literal>50.5</ogc:Literal>
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>60.5</ogc:Literal>
+                                <ogc:Literal>70.5</ogc:Literal>
                             </ogc:PropertyIsLessThan>
                         </ogc:And>
                     </ogc:Filter>
@@ -156,17 +156,17 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>61 - 80 ug/m3</Name>
-                    <Title>  61 - 80 ug/m3</Title>
+                    <Name>71 - 90 ug/m3</Name>
+                    <Title>  71 - 90 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>60.5</ogc:Literal>
+                                <ogc:Literal>70.5</ogc:Literal>
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>80.5</ogc:Literal>
+                                <ogc:Literal>90.5</ogc:Literal>
                             </ogc:PropertyIsLessThan>
                         </ogc:And>
                     </ogc:Filter>
@@ -187,13 +187,13 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>81 - 110 ug/m3</Name>
-                    <Title>  81 - 110 ug/m3</Title>
+                    <Name>91 - 110 ug/m3</Name>
+                    <Title>  91 - 110 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>80.5</ogc:Literal>
+                                <ogc:Literal>90.5</ogc:Literal>
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
@@ -218,8 +218,8 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>111 - 150  ug/m3</Name>
-                    <Title>  111 - 150  ug/m3</Title>
+                    <Name>111 - 145   ug/m3</Name>
+                    <Title>  111 - 145   ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
@@ -228,7 +228,7 @@
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>150.5</ogc:Literal>
+                                <ogc:Literal>145.5</ogc:Literal>
                             </ogc:PropertyIsLessThan>
                         </ogc:And>
                     </ogc:Filter>
@@ -249,17 +249,17 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>151 - 200 ug/m3</Name>
-                    <Title>  151 - 200 ug/m3</Title>
+                    <Name>146 - 180 ug/m3</Name>
+                    <Title>  146 - 180 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>150.5</ogc:Literal>
+                                <ogc:Literal>145.5</ogc:Literal>
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>200.5</ogc:Literal>
+                                <ogc:Literal>180.5</ogc:Literal>
                             </ogc:PropertyIsLessThan>
                         </ogc:And>
                     </ogc:Filter>
@@ -280,17 +280,17 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>101 - 150 ug/m3</Name>
-                    <Title>  101 - 150 ug/m3</Title>
+                    <Name>181 - 240 ug/m3</Name>
+                    <Title>  181 - 240  ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>100.5</ogc:Literal>
+                                <ogc:Literal>180.5</ogc:Literal>
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>150.5</ogc:Literal>
+                                <ogc:Literal>240.5</ogc:Literal>
                             </ogc:PropertyIsLessThan>
                         </ogc:And>
                     </ogc:Filter>
@@ -311,17 +311,17 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>271 - 400 ug/m3</Name>
-                    <Title>  271 - 400 ug/m3</Title>
+                    <Name>241 - 360 ug/m3</Name>
+                    <Title>  241 - 360 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>270.5</ogc:Literal>
+                                <ogc:Literal>240.5</ogc:Literal>
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>400.5</ogc:Literal>
+                                <ogc:Literal>360.5</ogc:Literal>
                             </ogc:PropertyIsLessThan>
                         </ogc:And>
                     </ogc:Filter>
@@ -342,12 +342,12 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>401 - MAX ug/m3</Name>
-                    <Title>  &gt; 401 ug/m3</Title>
+                    <Name>360 - MAX ug/m3</Name>
+                    <Title>  &gt; 360 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:PropertyIsGreaterThan>
                             <ogc:PropertyName>sample_value</ogc:PropertyName>
-                            <ogc:Literal>400.5</ogc:Literal>
+                            <ogc:Literal>360.5</ogc:Literal>
                         </ogc:PropertyIsGreaterThan>
                     </ogc:Filter>
                     <PointSymbolizer>
@@ -400,7 +400,7 @@
                         </LabelPlacement>
 
                         <Fill>
-                            <CssParameter name="fill">#FFCCFF</CssParameter>
+                            <CssParameter name="fill">#ffffff</CssParameter>
                         </Fill>
 
                     </TextSymbolizer>
