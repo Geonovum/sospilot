@@ -1,8 +1,8 @@
 ﻿UnitId,Name,Municipality,Lat,Lon,Altitude,AltitudeUnit
-1,Nijmegen-1,Nijmegen,51.94994,5.91407,30,m
-3,Nijmegen-3,Nijmegen,51.467064,6.083515,30,m
-5,Nijmegen-5,Nijmegen,51.950177,5.914166,30,m
-7,Nijmegen-7,Nijmegen,51.321986,6.109906,30,m
-8,Nijmegen-8,Nijmegen,51.327426,6.101788,30,m
-9,Nijmegen-9,Nijmegen,51.322246,6.108601,30,m
-10,Nijmegen-10,Nijmegen,51.949976,5.914793,30,m
+1,Nijmegen-1,Nijmegen,51.94,5.90,30,m
+3,Nijmegen-3,Nijmegen,51.46,6.00,30,m
+5,Nijmegen-5,Nijmegen,51.95,5.95,30,m
+7,Nijmegen-7,Nijmegen,51.20,6.10,30,m
+8,Nijmegen-8,Nijmegen,51.25,5.80,30,m
+9,Nijmegen-9,Nijmegen,51.32,6.20,30,m
+10,Nijmegen-10,Nijmegen,51.40,5.85,30,m

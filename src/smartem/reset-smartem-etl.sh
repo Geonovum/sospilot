@@ -4,6 +4,10 @@
 #
 
 # . options.sh
+source options-`hostname`.args
+export PGPASSWORD=$pg_password
+export PGUSER=$pg_user
+export PGHOST=$pg_host
 
 # Drop the schema to delete all
 psql -f db/db-schema-drop.sql sensors
