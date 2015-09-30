@@ -4,7 +4,7 @@
 Smart Emission Project
 ======================
 
-In 2015 the SOSPilot platform was
+In september 2015 the SOSPilot platform was
 extended to handle air quality data from
 the `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
 The same ETL components and services (WMS, WFS, SOS) as used for RIVM AQ data could be reused with some small modifications.
@@ -80,7 +80,8 @@ The measurement data (circles) have a pink-purple border.
 Stations Layer
 ~~~~~~~~~~~~~~
 
-See Figure below (pink-purple triangles).
+The Figure below shows all stations from RIVM LML (orange is active, grey inactive)
+and Smart Emission (pink-purple triangles).
 
 .. figure:: _static/smartem/stations-viewer.jpg
    :align: center
