@@ -7,13 +7,10 @@ Smart Emission Project
 In 2015 the SOSPilot platform was
 extended to handle air quality data from
 the `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
-
 The same ETL components and services (WMS, WFS, SOS) as used for RIVM AQ data could be reused with some small modifications.
-
 Source code for the Smart Emission ETL can be found in
 GitHub: https://github.com/Geonovum/sospilot/tree/master/src/smartem
 
-The AQ data was provided through `CityGIS <http://citygis.nl">`_.
 
 Background
 ==========
@@ -21,7 +18,7 @@ Background
 Read more via the project page: `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
 
 In the paper `Filling the feedback gap of place-related externalities in smart cities <http://www.ru.nl/publish/pages/774337/carton_etall_aesop-2015_v11_filling_thefeedback_gap_ofexternalities_insmartcities.pdf>`_
-the project project is described extensively.
+the project is described extensively.
 
 *"...we present the set-up of the pilot experiment in project “Smart Emission”,*
 *constructing an experimental citizen-sensor-network in the city of Nijmegen. This project, as part of*
@@ -55,7 +52,7 @@ The Sensor (Sensor Jose) used was developed by Intemo with Server-connection by 
 
 The data from these sensors was used to convert and publish into standard OGC services: WMS(-Time), WFS and SOS.
 This is described in the remainder of this chapter. For readers eager to see the results, these are presented
-in the next chapter.
+in the next chapter. The AQ data was provided through `CityGIS <http://citygis.nl">`_ via FTP.
 
 Results
 =======
