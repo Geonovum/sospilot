@@ -95,7 +95,9 @@
                     <a href="http://www.eionet.europa.eu/aqportal">Eionet</a>. For this purpose a technical
                     platform, "SOSPilot" has been developed. This website provides links to various
                     elements of the SOSPilot platform. In addition, a weather station has been added to the platform.
-
+                    In 2015, Air Quality data from the
+                    <a href="http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/">Smart Emission project</a>
+                    (via <a href="http://citygis.nl/">CityGIS.nl</a>) was added to the platform.
                 </p>
                 <h1 id="doc-index" class="page-header">Documentation</h1>
                 <p>
@@ -267,9 +269,7 @@
                 </p>
                 <h3 id="services-sos">52North SOS server</h3>
                 <p>
-                    Version: 20140521-SNAPSHOT with later patches from 52N<br/> See
-                    <a href="http://sensorweb.demo.52north.org/sensorwebclient-webapp-stable/api-doc/index.html">REST API doc</a>
-                    for the simpler REST API requests.
+                    Version: 20140521-SNAPSHOT with later patches from 52N<br/>
                 </p>
                 <ul>
                     <li>
@@ -312,17 +312,33 @@
                             GetObservation (all Temperature Observations for Geonovum Weather Station, Amersfoort)
                         </a>
                     </li>
+                 </ul>
+                <p>
+                    The <strong>REST API</strong> provides easier access to the SOS.
+                    See <a href="http://sensorweb.demo.52north.org/sensorwebclient-webapp-stable/api-doc/index.html">REST API doc</a>
+                                       for the REST API Syntax.  Below some example REST API requests
+                </p>
+                <ul>
                     <li>
-                        <a href="http://sensors.geonovum.nl/sos/api/v1/stations">REST API, Stations: http://sensors.geonovum.nl/sos/api/v1/stations</a>
-                    </li>
-                    <li>
-                        <a href="http://sensors.geonovum.nl/sos/api/v1/phenomena/">REST API, Phenomena: http://sensors.geonovum.nl/sos/api/v1/phenomena/</a>
-                    </li>
-                    <li>
-                        <a href="http://sensors.geonovum.nl/sos/api/v1/timeseries/100/getData?timespan=PT48H/2014-09-06">REST API, Time Series Data: http://sensors.geonovum.nl/sos/api/v1/timeseries/100/getData?timespan=PT48H/2014-09-06</a>
-                    </li>
-                </ul>
+                         <a href="http://sensors.geonovum.nl/sos/api/v1/stations">REST API, Stations: http://sensors.geonovum.nl/sos/api/v1/stations</a>
+                     </li>
+                     <li>
+                         <a href="http://sensors.geonovum.nl/sos/api/v1/phenomena/">REST API, Phenomena: http://sensors.geonovum.nl/sos/api/v1/phenomena/</a>
+                     </li>
+                     <li>
+                          <a href="http://sensors.geonovum.nl/sos/api/v1/timeseries">REST API, All Time Series List: http://sensors.geonovum.nl/sos/api/v1/timeseries</a>
+                      </li>
+                     <li>
+                          <a href="http://sensors.geonovum.nl/sos/api/v1/timeseries/260">REST API, Single Time Series MetaData: http://sensors.geonovum.nl/sos/api/v1/timeseries/260</a>
+                      </li>
+                     <li>
+                         <a href="http://sensors.geonovum.nl/sos/api/v1/timeseries/100/getData?timespan=PT48H/2014-09-06">REST API, Time Series Data: http://sensors.geonovum.nl/sos/api/v1/timeseries/100/getData?timespan=PT48H/2014-09-06</a>
+                     </li>
+                     <li>
+                         <a href="http://sensors.geonovum.nl/sos/api/v1/timeseries/260/getData?timespan=2015-07-21TZ/2015-07-28TZ">REST API, Time Series Data: http://sensors.geonovum.nl/sos/api/v1/timeseries/260/getData?timespan=2015-07-21TZ/2015-07-28TZ</a>
+                     </li>
 
+                </ul>
                 <!--<hr class="bs-docs-separator">-->
 
                 <h3 id="services-wmswfs">GeoServer</h3>

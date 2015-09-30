@@ -7,7 +7,7 @@ Data Management
 This chapter describes all technical aspects related to data within the SOSPilot project. The "data"
 as mentioned here is all related to LML RIVM data, i.e. Dutch Air Quality Data.  In 2015 this setup was
 also used to handle air quality data from the `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
-This is described in a separate chapter.
+This is described in a separate chapter: :ref:`smartemission`.
 
 * obtaining raw source data: measurements, stations etc.
 * data transformation (ETL) for various (OWS) services, INSPIRE and E-reporting

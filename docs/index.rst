@@ -17,6 +17,7 @@ Contents:
    services.rst
    clients.rst
    administration.rst
+   smartemission.rst
    weather.rst
    weatherstation.rst
    raspberrypi-install.rst
