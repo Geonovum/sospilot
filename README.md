@@ -7,4 +7,9 @@ is harvested and converted for further dispatching via the OGC SOS INSPIRE-enabl
 other standards like WMS/WFS and E-reporting for Shared Environmental Information System (SEISs) like
 the EU Shared Environmental Information System for reporting ambient air quality (2011/850/EU). 
 
-Read more at the documentation: http://sospilot.readthedocs.org
+In september 2015 support for Air Quality data from the Smart Emission project
+(See http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/) was added.
+Read more about this in a dedicated chapter in the documentation:
+http://sospilot.readthedocs.org/en/latest/smartemission.html
+
+All documentation can be found at: http://sospilot.readthedocs.org
