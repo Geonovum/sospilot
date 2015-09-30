@@ -131,7 +131,7 @@ The SOS Web Client by 52North: http://sensors.geonovum.nl/jsclient accesses the 
 
 The viewer is quite advanced and
 takes some time to get used to. It is possible to get charts and other views. Best is to follow
-the tutorial. Custom charts can be made by selecting stations on the map (Map View) and
+the built-in tutorial. Custom charts can be made by selecting stations on the map (Map View) and
 adding these. The Smart Emission components are called O3, CO and NO2. The RIVM LML ones have
 longer names starting with ``http:``.
 As can be seen the Smart Emission measurements are significantly higher.
@@ -149,6 +149,7 @@ The following are examples:
 * http://sensors.geonovum.nl/sos/api/v1/timeseries/100/getData?timespan=PT48H/2014-09-06 REST API, Time Series Data
 * http://sensors.geonovum.nl/sos/api/v1/timeseries/260/getData?timespan=2015-07-21TZ/2015-07-28TZ REST API, Time Series Data
 
+The remainder of this chapter describes the technical setup.
 
 Architecture
 ============
@@ -162,7 +163,7 @@ the "DB"-icons.
 
    *Figure 2 - Overall Architecture*
 
-Figure 1 sketches the approach for RIVM LML AQ data, but this same approach was used voor Smart Emission. For "RIVM LML File Server" one should read:
+Figure 2 sketches the approach for RIVM LML AQ data, but this same approach was used voor Smart Emission. For "RIVM LML File Server" one should read:
 "Raw Smart Emission Sample Data".
 
 
@@ -173,7 +174,7 @@ In this section the ETL is elaborated in more detail as depicted in the figure b
 Figure 3 sketches the approach for RIVM LML AQ data, but this same approach was used voor Smart Emission.
 Also here: for "RIVM LML File Server" one should read:
 "Raw Smart Emission Sample Data". Step 2 and Step 3 are identical, an advantage of the multi-step ETL process now pays back!
-Step 1 was performed more manually, awaiting a similar automated approach.
+Step 1 (File Harvester) was performed more manually, awaiting a similar automated approach.
 
 .. figure:: _static/sospilot-arch1.jpg
    :align: center
@@ -189,15 +190,15 @@ The ETL design comprises three main processing steps and three datastores. The t
 The detailed dataflow from source to destination is as follows:
 
 #. AQ raw (text) files are placed on the file system (awaiting automated approach)
-#. The AQ ETL process (files2measurements) reads these files Core AQ DB (Raw Measurements)
+#. The AQ ETL process (``files2measurements``) reads these files Core AQ DB (Raw Measurements)
 #. The Core AQ DB contains measurements + stations in regular tables 1-1 with original data, including a Time column
-#. The Core AQ DB can be used for OWS (WMS/WFS) services via GeoServer (possibly using VIEW by Measurements/Stations JOIN)
-#. The SOS ETL process transforms core AQ data to SOS Observations and publishes Observations using SOS-T InsertObservation
+#. The Core AQ DB can be used for OWS (WMS/WFS) services via GeoServer (using VIEW by Measurements/Stations JOIN)
+#. The SOS ETL process transforms core AQ data to SOS Observations and publishes Observations using SOS-T ``InsertObservation``
 #. These three processes run continuously (via cron)
 #. Each process always knows its progress and where it needs to resume, even after it has been stopped (by storing a progress/checkpoint info)
 
 These last two ETL processes manage their ``last sync-time`` using a separate ``progress table`` within the database.
-The first (Harvester) only needs to check if a particular XML file (as they have a unique file name) has already been stored.
+The first (Harvester) only needs to check if a particular file (as they have a unique file name) has already been stored.
 
 Advantages of this approach:
 
@@ -209,7 +210,7 @@ Advantages of this approach:
 * prepared for op IPR/INSPIRE ETL (source is Core OM DB)
 * OWS server (WMS/WFS evt WCS) can directly use op Core OM DB (possibly via Measurements/Stations JOIN VIEW evt, see below)
 
-The Open Source ETL tool `Stetl, Streaming ETL <http://www.stetl.org>`_  , is used for most of the transformation steps.
+The Open Source ETL tool `Stetl, Streaming ETL <http://www.stetl.org>`_ , is used for most of the transformation steps.
 Stetl provides standard modules for building an ETL Chain via a configuration file.
 This ETL Chain is a linkage of Input, Filter and Output modules. Each module is a Python class
 derived from Stetl base classes. In addition a developer
@@ -231,7 +232,7 @@ The Smart Emission FTP server provides measurements per sensor (unit)
 in text files. See figure below. The raw data records per unit are divided
 over multiple lines. See example below: ::
 
-	07/24/2015 07:25:41,P.UnitSerialnumber,1
+	07/24/2015 07:25:41,P.UnitSerialnumber,1   # start record
 	07/24/2015 07:25:41,S.Longitude,5914103
 	07/24/2015 07:25:41,S.Latitude,53949942
 	07/24/2015 07:25:41,S.SatInfo,90889
@@ -260,7 +261,7 @@ over multiple lines. See example below: ::
 	07/24/2015 07:25:41,P.BaseTimer,9
 	07/24/2015 07:25:41,P.ErrorStatus,0
 	07/24/2015 07:25:41,P.Powerstate,79
-	07/24/2015 07:25:51,P.UnitSerialnumber,1
+	07/24/2015 07:25:51,P.UnitSerialnumber,1  # start record
 	07/24/2015 07:25:51,S.Longitude,5914103
 	07/24/2015 07:25:51,S.Latitude,53949942
 	07/24/2015 07:25:51,S.SatInfo,90889
@@ -270,9 +271,9 @@ over multiple lines. See example below: ::
 Each record starts on a line that contains ``P.UnitSerialnumber`` and runs to the next line
 containing ``P.UnitSerialnumber`` or the end-of-file is reached. Each record contains
 zero to three chemical component values named: ``S.CO`` (Carbon Monoxide), ``S.NO2`` (Nitrogen Dioxide)
-or ``S.O3`` (Ozone), and further fields such as location (Latitude, Longitude) and
+or ``S.O3`` (Ozone), and further fields such as location (``S.Latitude``, ``S.Longitude``) and
 weather data (Temperature, Pressure). All fields have the same timestamp, e.g. ``07/24/2015 07:25:41``.
-This is taken as the timestamp of the record.
+This value is taken as the timestamp of the record.
 
 According to CityGIS the units are defined as follows. ::
 
@@ -315,7 +316,7 @@ According to CityGIS the units are defined as follows. ::
 	S.Latitude				*100 + Fractional degrees
 	S.Longitude				*10 + Fractional degrees
 
-As stated above: this step, acquiring files is done via FTP.
+As stated above: this step, acquiring/harvesting files, is done via FTP.
 
 ETL Step 2 - Raw Measurements
 -----------------------------
@@ -367,6 +368,9 @@ Reading raw measurements from the files is done with a ``Stetl``
 process. A specific Stetl Input module was developed to effect reading and parsing the files
 and tracking the last id of the file processed.
 https://github.com/Geonovum/sospilot/blob/master/src/smartem/raw2measurements.py
+These are two Filters: the class ``Raw2RecordFilter`` converts raw lines from the
+file to raw records. The class ``Record2MeasurementsFilter``  converts these records to
+records to be inserted into the ``measurements`` table. Other components used are standard Stetl.
 
 Unit Conversion: as seen above the units for chemical components are in ``ppb`` (Parts-Per-Billion).
 For AQ data the usual unit is ug/m3 (Microgram per cubic meter). The conversion
@@ -396,14 +400,14 @@ with ``Record2MeasurementsFilter.ppb_to_ugm3_factor``: ::
 	# For now a crude conversion (1 atm, 20C)
 	ppb_to_ugm3_factor = {'o3': 2.0, 'no2': 1.9, 'co': 1.15}
 
-The Stetl process is defined in
+The entire Stetl process is defined in
 https://github.com/Geonovum/sospilot/blob/master/src/smartem/files2measurements.cfg
 
 The invokation of that Stetl process is via shell script:
 https://github.com/Geonovum/sospilot/blob/master/src/smartem/files2measurements.sh
 
 The data is stored in the ``measurements`` table, as below. ``station_id`` is a foreign key
-into the ``stations`` table.
+into the ``stations`` table corresponding to a ``unit_id``.
 
 .. figure:: _static/smartem/measurements-table.jpg
    :align: center
@@ -426,6 +430,8 @@ The VIEW is defined in https://github.com/Geonovum/sospilot/blob/master/src/smar
 	          FROM smartem.measurements as m
 	            INNER JOIN smartem.stations as s ON m.station_id = s.unit_id;
 
+Other detailed VIEWs provide virtual tables like Last Measurements and Measurements per component (see the DB schema and the
+Heron viewer).
 
 ETL Step 3 - SOS Publication
 ----------------------------
@@ -443,7 +449,7 @@ See https://github.com/Geonovum/sospilot/blob/master/src/smartem/sosoutput.py (t
 adapted from the version used for RIVM LML).
 
 Most importantly, the raw Smart Emission Measurements data
-from Step 2 needs to be transformed to OWS O&M data. This is done via``substitutable templates``, like the
+from Step 2 needs to be transformed to OWS Observations & Measurements (O&M) data. This is done via ``substitutable templates``, like the
 Stetl config itself also applies. This means we develop files with SOS Requests in which all variable parts get a
 symbolic value like ``{sample_value}``. These templates can be found under
 https://github.com/Geonovum/sospilot/tree/master/src/smartem/sostemplates in particular
