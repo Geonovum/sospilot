@@ -7,14 +7,15 @@ Smart Emission Project
 In september 2015 the SOSPilot platform was
 extended to handle air quality data from
 the `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
-The same ETL components and services (WMS, WFS, SOS) as used for RIVM AQ data could be reused with some small modifications.
+The same ETL components and services (WMS, WFS, SOS) as used for RIVM AQ data were reused with some small modifications.
 Source code for the Smart Emission ETL can be found in
-GitHub: https://github.com/Geonovum/sospilot/tree/master/src/smartem
+GitHub: https://github.com/Geonovum/sospilot/tree/master/src/smartem . Small sample data used for development can be found at
+https://github.com/Geonovum/sospilot/tree/master/data/smartem
 
 Background
 ==========
 
-Read more via the project page: `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
+Read about the Smart Emission project via: `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
 The figures below were taken from the Living Lab presentation, on June 24, 2015:
 http://www.ru.nl/publish/pages/774337/smartemission_ru_24juni_lc_v5_smallsize.pdf
 
@@ -62,7 +63,7 @@ Results can be viewed in basically 3 ways:
 * as SOS-data via the SOS Web-Client: http://sensors.geonovum.nl/jsclient
 * as raw SOS-data via SOS or easier via the SOS-REST API
 
-Below some guidance for each method.
+Below some guidance for each viewing method.
 
 Heron Viewer
 ------------
@@ -71,16 +72,16 @@ Within the Heron Viewer at http://sensors.geonovum.nl/heronviewer one can view S
 Measurements. These are available as standard WMS layers organized as follows:
 
 * Stations Layer: geo-locations and info of all stations (triangles)
-* Last Measurements Layers: per-component a Layer showing the last known measurements for each station
-* Measurements History Layers: per-component a Layer showing measurements over time for each station
+* Last Measurements Layers: per-component Layers showing the last known measurements for each station
+* Measurements History Layers: per-component Layers showing measurements over time for each station
 
 To discern among RIVM LML and Smart Emission data, the latter Stations are rendered as pink-purple icons.
-The measurement data (circles) have a pink-purple border.
+The related measurements data (circles) have a pink-purple border.
 
 Stations Layer
 ~~~~~~~~~~~~~~
 
-The Figure below shows all stations from RIVM LML (orange is active, grey inactive)
+The figure below shows all stations from RIVM LML (orange active stations, grey inactive)
 and Smart Emission (pink-purple triangles).
 
 .. figure:: _static/smartem/stations-viewer.jpg
@@ -94,7 +95,7 @@ Last Measurements Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the viewer the latest measurements per station can be shown. NB the Smart Emission data may not
-be current. LML data is current, i.e. from the last hour.
+be current. LML data is current, i.e. from the current last hour.
 
 .. figure:: _static/smartem/heron-viewer-o3.jpg
    :align: center
@@ -107,7 +108,7 @@ there are one or two (NO2, CO and O3) layers that can be enabled. Click on a cir
 Measurements History Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This shows measurements through time.  NB Smart Emission data is mainly from july/august 2015!
+This shows measurements through time (using WMS-Time).  NB Smart Emission data is mainly from july/august 2015!
 
 .. figure:: _static/smartem/heron-viewer-o3-ts.jpg
    :align: center
@@ -116,8 +117,8 @@ This shows measurements through time.  NB Smart Emission data is mainly from jul
 
 Use the map/folder on the left called "Chemische Componenten (Historie)". For each component
 there are one or two (NO2, CO and O3)layers that can be enabled. Click on a circle to see more detail.
-Use the TimeSlider on the upper right to go through the history. The image below
-shows O3 at July 27, 2015, 10:00. Again pink-purple-bordered circles denote Smart Emission measurements.
+Use the TimeSlider on the upper right to go through date and time. The image above
+shows O3 at July 27, 2015, 10:00. Pink-purple-bordered circles denote Smart Emission measurements.
 
 SOS Web-Client
 --------------
