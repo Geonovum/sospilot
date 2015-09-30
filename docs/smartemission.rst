@@ -70,7 +70,7 @@ Heron Viewer
 Within the Heron Viewer at http://sensors.geonovum.nl/heronviewer one can view Stations and
 Measurements. These are available as standard WMS layers organized as follows:
 
-* a Stations-layer: just the locations and info of all stations (triangles)
+* Stations Layer: geo-locations and info of all stations (triangles)
 * Last Measurements Layers: per-component a Layer showing the last known measurements for each station
 * Measurements History Layers: per-component a Layer showing measurements over time for each station
 
