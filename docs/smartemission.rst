@@ -11,11 +11,18 @@ The same ETL components and services (WMS, WFS, SOS) as used for RIVM AQ data co
 Source code for the Smart Emission ETL can be found in
 GitHub: https://github.com/Geonovum/sospilot/tree/master/src/smartem
 
-
 Background
 ==========
 
 Read more via the project page: `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
+
+The following figures were taken from the Living Lab presentation, in June 2015:
+http://www.ru.nl/publish/pages/774337/smartemission_ru_24juni_lc_v5_smallsize.pdf
+
+.. figure:: _static/smartem/smartem-participants.jpg
+   :align: center
+
+   *Figure - Smart Emission Project - Participants*
 
 In the paper `Filling the feedback gap of place-related externalities in smart cities <http://www.ru.nl/publish/pages/774337/carton_etall_aesop-2015_v11_filling_thefeedback_gap_ofexternalities_insmartcities.pdf>`_
 the project is described extensively.
@@ -35,13 +42,6 @@ the project is described extensively.
 *possible options for improvement (supported by a Maptable instrument) to get a fair and ‘better’*
 *distribution of air pollution in the city, balanced against other spatial qualities. ...."*
 
-The following figures were taken from the Living Lab presentation, in June 2015:
-http://www.ru.nl/publish/pages/774337/smartemission_ru_24juni_lc_v5_smallsize.pdf
-
-.. figure:: _static/smartem/smartem-participants.jpg
-   :align: center
-
-   *Figure - Smart Emission Project - Participants*
 
 The Sensor (Sensor Jose) used was developed by Intemo with Server-connection by CityGIS. See below.
 
@@ -75,13 +75,13 @@ Measurements. These are available as standard WMS layers organized as follows:
 * Last Measurements Layers: per-component a Layer showing the last known measurements for each station
 * Measurements History Layers: per-component a Layer showing measurements over time for each station
 
-To discern among RIVM LML and Smart Emission data, the latter Stations are rendered as pink icons.
-The measurement data (circles) have a pink border.
+To discern among RIVM LML and Smart Emission data, the latter Stations are rendered as pink-purple icons.
+The measurement data (circles) have a pink-purple border.
 
 Stations Layer
 ~~~~~~~~~~~~~~
 
-See Figure below (pink triangles). Clicking on a Station provides more detailed info via WMS ``GetFeatureInfo``.
+See Figure below (pink-purple triangles). Clicking on a Station provides more detailed info via WMS ``GetFeatureInfo``.
 
 .. figure:: _static/smartem/stations-viewer.jpg
    :align: center
@@ -106,7 +106,7 @@ Measurements History Layers
 Use the map/folder on the left called "Chemische Componenten (Historie)". For each component
 there are one or two (NO2, CO and O3)layers that can be enabled. Click on a circle to see more detail.
 Use the TimeSlider on the upper right to go through the history. The image below
-shows O3 at July 27, 2015, 10:00. Again pink-bordered circles denote Smart Emission measurements.
+shows O3 at July 27, 2015, 10:00. Again pink-purple-bordered circles denote Smart Emission measurements.
 
 .. figure:: _static/smartem/heron-viewer-o3-ts.jpg
    :align: center
@@ -346,7 +346,7 @@ This will need to be corrected at a later stage.
    *Figure - Stations Read into Postgres/PostGIS*
 
 Test by viewing in http://sensors.geonovum.nl/heronviewer
-See result (pink triangles). Clicking on a station provides more detailed info via WMS ``GetFeatureInfo``.
+See result (pink-purple triangles). Clicking on a station provides more detailed info via WMS ``GetFeatureInfo``.
 
 .. figure:: _static/smartem/stations-viewer.jpg
    :align: center
