@@ -134,7 +134,8 @@ takes some time to get used to. It is possible to get charts and other views. Be
 the built-in tutorial. Custom charts can be made by selecting stations on the map (Map View) and
 adding these. The Smart Emission components are called O3, CO and NO2. The RIVM LML ones have
 longer names starting with ``http:``.
-As can be seen the Smart Emission measurements are significantly higher.
+As can be seen the Smart Emission measurements are significantly higher. Also RIVM LML data is produced
+as an hourly average while Smart Emission data (now) provides all measurements. This is an item for improvement.
 
 SOS-REST API
 ------------
