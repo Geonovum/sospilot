@@ -15,14 +15,13 @@ Background
 ==========
 
 Read more via the project page: `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
-
-The following figures were taken from the Living Lab presentation, in June 2015:
+The figures below were taken from the Living Lab presentation, on June 24, 2015:
 http://www.ru.nl/publish/pages/774337/smartemission_ru_24juni_lc_v5_smallsize.pdf
 
 .. figure:: _static/smartem/smartem-participants.jpg
    :align: center
 
-   *Figure - Smart Emission Project - Participants*
+   *Smart Emission Project - Participants*
 
 In the paper `Filling the feedback gap of place-related externalities in smart cities <http://www.ru.nl/publish/pages/774337/carton_etall_aesop-2015_v11_filling_thefeedback_gap_ofexternalities_insmartcities.pdf>`_
 the project is described extensively.
@@ -43,23 +42,23 @@ the project is described extensively.
 *distribution of air pollution in the city, balanced against other spatial qualities. ...."*
 
 
-The Sensor (Sensor Jose) used was developed by Intemo with Server-connection by CityGIS. See below.
+The Sensor (Sensor Jose) used was developed by Intemo with Server-sensor connection by CityGIS. See below.
 
 .. figure:: _static/smartem/smartem-sensor.jpg
    :align: center
 
-   *Figure - Smart Emission Project - Sensors*
+   *Smart Emission Project - Sensors*
 
-The data from these sensors was used to convert and publish into standard OGC services: WMS(-Time), WFS and SOS.
+The data from these sensors was converted and published into standard OGC services: WMS(-Time), WFS and SOS.
 This is described in the remainder of this chapter. For readers eager to see the results, these are presented
-in the next chapter. The AQ data was provided through `CityGIS <http://citygis.nl">`_ via FTP.
+in the next section. A snapshot of AQ data was provided through `CityGIS <http://citygis.nl">`_ via FTP.
 
 Results
 =======
 
 Results can be viewed in basically 3 ways:
 
-* as WMS and WMS-Time via the Heron Viewer: http://sensors.geonovum.nl/heronviewer
+* as WMS and WMS-Time Layers via the Heron Viewer: http://sensors.geonovum.nl/heronviewer
 * as SOS-data via the SOS Web-Client: http://sensors.geonovum.nl/jsclient
 * as raw SOS-data via SOS or easier via the SOS-REST API
 
@@ -81,52 +80,59 @@ The measurement data (circles) have a pink-purple border.
 Stations Layer
 ~~~~~~~~~~~~~~
 
-See Figure below (pink-purple triangles). Clicking on a Station provides more detailed info via WMS ``GetFeatureInfo``.
+See Figure below (pink-purple triangles).
 
 .. figure:: _static/smartem/stations-viewer.jpg
    :align: center
 
-   *Figure - Smart Emission Stations in Heron Viewer*
+   *Smart Emission Stations in Heron Viewer*
+
+Clicking on a Station provides more detailed info via WMS ``GetFeatureInfo`` in a pop-up window.
 
 Last Measurements Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the map/folder on the left called "Chemische Componenten (Current)". For each component
-there are one or two (NO2, CO and O3)layers that can be enabled. NB the SmartEm data may not
-be current. Click on a circle to see more detail.
+In the viewer the latest measurements per station can be shown. NB the Smart Emission data may not
+be current. LML data is current, i.e. from the last hour.
 
 .. figure:: _static/smartem/heron-viewer-o3.jpg
    :align: center
 
-   *Figure - Heron Viewer showing latest known O3 Measurements*
+   *Heron Viewer showing latest known O3 Measurements*
+
+Use the map/folder on the left called "Chemische Componenten (Current)" to open a chemical component. For each component
+there are one or two (NO2, CO and O3) layers that can be enabled. Click on a circle to see more detail.
 
 Measurements History Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This shows measurements through time.  NB Smart Emission data is mainly from july/august 2015!
+
+.. figure:: _static/smartem/heron-viewer-o3-ts.jpg
+   :align: center
+
+   *Heron Viewer showing O3 Measurements over time with timeslider*
 
 Use the map/folder on the left called "Chemische Componenten (Historie)". For each component
 there are one or two (NO2, CO and O3)layers that can be enabled. Click on a circle to see more detail.
 Use the TimeSlider on the upper right to go through the history. The image below
 shows O3 at July 27, 2015, 10:00. Again pink-purple-bordered circles denote Smart Emission measurements.
 
-.. figure:: _static/smartem/heron-viewer-o3-ts.jpg
-   :align: center
-
-   *Figure - Heron Viewer showing O3 Measurements over time with timeslider*
-
 SOS Web-Client
 --------------
 
-The SOS Web Client by 52North: http://sensors.geonovum.nl/jsclient accesses the SOS directly. It is somewhat advanced and
-takes some time to get used to. It is possible to get charts and other views. Best is to follow
-the tutorial. Custom charts can be made by selecting stations on the map (Map View) and
-adding these. The Smart Emission components are called O3, CO and NO2. The RIVM LML ones have
-longer names starting with ``http:``.
+The SOS Web Client by 52North: http://sensors.geonovum.nl/jsclient accesses the SOS directly via the map and charts.
 
 .. figure:: _static/smartem/jsclient-no2.jpg
    :align: center
 
-   *Figure - SOS Web Client showing NO2 Measurements in Chart*
+   *SOS Web Client showing NO2 Measurements in Chart*
 
+The viewer is quite advanced and
+takes some time to get used to. It is possible to get charts and other views. Best is to follow
+the tutorial. Custom charts can be made by selecting stations on the map (Map View) and
+adding these. The Smart Emission components are called O3, CO and NO2. The RIVM LML ones have
+longer names starting with ``http:``.
 As can be seen the Smart Emission measurements are significantly higher.
 
 SOS-REST API
@@ -343,7 +349,7 @@ This will need to be corrected at a later stage.
 .. figure:: _static/smartem/stations-table.png
    :align: center
 
-   *Figure - Stations Read into Postgres/PostGIS*
+   *Stations Read into Postgres/PostGIS*
 
 Test by viewing in http://sensors.geonovum.nl/heronviewer
 See result (pink-purple triangles). Clicking on a station provides more detailed info via WMS ``GetFeatureInfo``.
@@ -351,7 +357,7 @@ See result (pink-purple triangles). Clicking on a station provides more detailed
 .. figure:: _static/smartem/stations-viewer.jpg
    :align: center
 
-   *Figure - Smart Emission Stations in Heron Viewer*
+   *Smart Emission Stations in Heron Viewer*
 
 Measurements
 ~~~~~~~~~~~~
@@ -401,7 +407,7 @@ into the ``stations`` table.
 .. figure:: _static/smartem/measurements-table.jpg
    :align: center
 
-   *Figure - Smart Emission raw measurements stored in Postgres*
+   *Smart Emission raw measurements stored in Postgres*
 
 Using a Postgres VIEW the two tables can be combined via an ``INNER JOIN`` to provide measurements
 with location. This VIEW can be used as a WMS/WFS data source in GeoServer.
@@ -409,7 +415,7 @@ with location. This VIEW can be used as a WMS/WFS data source in GeoServer.
 .. figure:: _static/smartem/measurements-stations-view.jpg
    :align: center
 
-   *Figure - Postgres VIEW combining measurements and stations (units)*
+   *Postgres VIEW combining measurements and stations (units)*
 
 The VIEW is defined in https://github.com/Geonovum/sospilot/blob/master/src/smartem/db/db-schema.sql: ::
 
