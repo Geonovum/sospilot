@@ -8,27 +8,27 @@
                 <sml:IdentifierList>
                     <sml:identifier name="uniqueID">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
-                            <sml:value>http://citygis.nl/smartem/procedure/{station_id}</sml:value>
+                            <sml:value>SmartEmission-Unit-{unit_id}</sml:value>
                         </sml:Term>
                     </sml:identifier>
                     <sml:identifier name="longName">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:longName">
-                            <sml:value>Project Smart Emission - Station {station_name}
+                            <sml:value>Smart Emission - Station {name}
                             </sml:value>
                         </sml:Term>
                     </sml:identifier>
                     <sml:identifier name="shortName">
                         <sml:Term definition="urn:ogc:def:identifier:OGC:1.0:shortName">
-                            <sml:value>SmartEm - {station_name}</sml:value>
+                            <sml:value>SmartEmission - {name}</sml:value>
                         </sml:Term>
                     </sml:identifier>
                 </sml:IdentifierList>
             </sml:identification>
             <sml:capabilities name="offerings">
                 <swe:SimpleDataRecord>
-                    <swe:field name="{station_id} - {station_name}">
+                    <swe:field name="{name}">
                         <swe:Text definition="urn:ogc:def:identifier:OGC:offeringID">
-                            <swe:value>http://citygis.nl/smartem/offering/{station_id}</swe:value>
+                            <swe:value>SmartEmission-Offering-{unit_id}</swe:value>
                         </swe:Text>
                     </swe:field>
                 </swe:SimpleDataRecord>
@@ -44,9 +44,9 @@
                        </sml:capabilities>    -->
             <sml:capabilities name="featuresOfInterest">
                 <swe:SimpleDataRecord>
-                    <swe:field name="{station_name}">
+                    <swe:field name="{name}">
                         <swe:Text definition="featureOfInterestID">
-                            <swe:value>http://citygis.nl/smartem/featureOfInterest/{station_id}</swe:value>
+                            <swe:value>SmartEmission-FID-{unit_id}</swe:value>
                         </swe:Text>
                     </swe:field>
                 </swe:SimpleDataRecord>
@@ -54,7 +54,7 @@
                 <!-- OLD invalid: <swe:SimpleDataRecord>
                     <swe:field name="featureOfInterestID">
                         <swe:Text>
-                            <swe:value>http://citygis.nl/smartem/featureOfInterest/{station_id}</swe:value>
+                            <swe:value>http://citygis.nl/smartem/featureOfInterest/{unit_id}</swe:value>
                         </swe:Text>
                     </swe:field>
                 </swe:SimpleDataRecord>  -->
@@ -66,19 +66,19 @@
                             <swe:coordinate name="easting">
                                 <swe:Quantity axisID="x">
                                     <swe:uom code="degree"/>
-                                    <swe:value>{station_lon}</swe:value>
+                                    <swe:value>{lon}</swe:value>
                                 </swe:Quantity>
                             </swe:coordinate>
                             <swe:coordinate name="northing">
                                 <swe:Quantity axisID="y">
                                     <swe:uom code="degree"/>
-                                    <swe:value>{station_lat}</swe:value>
+                                    <swe:value>{lat}</swe:value>
                                 </swe:Quantity>
                             </swe:coordinate>
                             <swe:coordinate name="altitude">
                                 <swe:Quantity axisID="z">
                                     <swe:uom code="m"/>
-                                    <swe:value>{station_altitude}</swe:value>
+                                    <swe:value>{altitude}</swe:value>
                                 </swe:Quantity>
                             </swe:coordinate>
                         </swe:Vector>
@@ -89,58 +89,28 @@
                 <sml:InputList>
                     <sml:input name="air">
                         <swe:ObservableProperty
-                                definition="http://citygis.nl/smartem/observableProperty/air"/>
+                                definition="air"/>
                     </sml:input>
                 </sml:InputList>
             </sml:inputs>
             <sml:outputs>
                 <sml:OutputList>
-                    <sml:output name="benzeen">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/benzeen">
-                            <swe:uom code="ug/m3"/>
-                        </swe:Quantity>
-                    </sml:output>
                     <sml:output name="CO">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/CO">
-                            <swe:uom code="ug/m3"/>
-                        </swe:Quantity>
-                    </sml:output>
-                    <sml:output name="NH3">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/NH3">
-                            <swe:uom code="ug/m3"/>
-                        </swe:Quantity>
-                    </sml:output>
-                    <sml:output name="NO">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/NO">
+                        <swe:Quantity definition="CO">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
                     <sml:output name="NO2">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/NO2">
+                        <swe:Quantity definition="NO2">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
                     <sml:output name="O3">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/O3">
+                        <swe:Quantity definition="O3">
                             <swe:uom code="ug/m3"/>
                         </swe:Quantity>
                     </sml:output>
-                    <sml:output name="PM10">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/PM10">
-                            <swe:uom code="ug/m3"/>
-                        </swe:Quantity>
-                    </sml:output>
-                    <sml:output name="PM2.5">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/PM2.5">
-                            <swe:uom code="ug/m3"/>
-                        </swe:Quantity>
-                    </sml:output>
-                    <sml:output name="SO2">
-                        <swe:Quantity definition="http://citygis.nl/smartem/observableProperty/SO2">
-                            <swe:uom code="ug/m3"/>
-                        </swe:Quantity>
-                    </sml:output>
-                </sml:OutputList>
+                 </sml:OutputList>
             </sml:outputs>
         </sml:System>
     </sml:member>

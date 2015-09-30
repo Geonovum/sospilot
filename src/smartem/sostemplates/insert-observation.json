@@ -2,18 +2,18 @@
   "request": "InsertObservation",
   "service": "SOS",
   "version": "2.0.0",
-  "offering": "http://citygis.nl/smartem/offering/{station_id}",
+  "offering": "SmartEmission-Offering-{unit_id}",
   "observation": {{
     "identifier": {{
-      "value": "{unique_id}",
+      "value": "{sample_id}",
       "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
     }},
     "type": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement",
-    "procedure": "http://citygis.nl/smartem/procedure/{station_id}",
-    "observedProperty": "http://citygis.nl/smartem/observableProperty/{component}",
+    "procedure": "SmartEmission-Unit-{unit_id}",
+    "observedProperty": "{component}",
     "featureOfInterest": {{
       "identifier": {{
-        "value": "http://citygis.nl/smartem/featureOfInterest/{station_id}",
+        "value": "SmartEmission-FID-{unit_id}",
         "codespace": "http://www.opengis.net/def/nil/OGC/0/unknown"
       }},
       "name": [
@@ -25,8 +25,8 @@
       "geometry": {{
         "type": "Point",
         "coordinates": [
-          {station_lat},
-          {station_lon}
+          {lat},
+          {lon}
         ],
         "crs": {{
           "type": "name",

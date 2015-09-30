@@ -1746,7 +1746,7 @@ Heron.options.layertree.tree = [
     ]
     },
     {
-        text: 'Chemische Componenten (Current)', expanded: false, children: [
+        text: 'Chemische Componenten (Current)', expanded: true, children: [
         {
             text: 'Carbon monoxide (CO)', expanded: false, children: [
             {nodeType: "gx_layer", layer: "RIVM - Current CO"},
