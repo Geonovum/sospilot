@@ -1,0 +1,3 @@
+[submodule "src/fiware/fiware-figway"]
+	path = src/fiware/fiware-figway
+	url = https://github.com/telefonicaid/fiware-figway
