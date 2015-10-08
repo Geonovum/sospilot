@@ -11,12 +11,17 @@
 # APS metadata provide input parameters for the GDAL functions, in particular the origin and
 # pixelsize. Projection is fixed at the Dutch EPSG:28992 (RD) projection. Although the APS
 # data are floats, they are rounded and converted to ints (0-255) in order to fit into the GeoTIFF.
-# Negative values in the APS data like -999.0 are assumed to be 0 (TODO: maybe GDAL.NO_DATA later).
+# Negative values in the APS data like -999.0 are assumed to be No Data values.
+#
+# This utility depends on the GDAL and NumPy Python libraries.
+#
+# Usage: python aps2raster.py <input APS file> <output GeoTIFF file>
 import sys
-import gdal,osr
+import gdal, osr
 import numpy as np
 
-def array2raster(out_file, origin, pixel_width, pixel_height, array, epsg_code):
+
+def array2raster(out_file, origin, pixel_width, pixel_height, array, meta, epsg_code):
     cols = array.shape[1]
     rows = array.shape[0]
     origin_x = origin[0]
@@ -33,7 +38,13 @@ def array2raster(out_file, origin, pixel_width, pixel_height, array, epsg_code):
 
     # Write array data to first rasterband
     out_band = out_raster.GetRasterBand(1)
+    out_band.SetUnitType('ug/m3')
     out_band.SetNoDataValue(-999)
+
+    metadata = {
+        'name': 'concentration'
+    }
+    out_band.SetMetadata(metadata)
     out_band.WriteArray(array)
 
     # Project
@@ -44,16 +55,23 @@ def array2raster(out_file, origin, pixel_width, pixel_height, array, epsg_code):
     # Writeout
     out_band.FlushCache()
 
+
 def parse_aps_meta(meta_line):
     # APS Header
-    #  Y M  D  H  C   unit  sys comment   format  proj  orig_x  orig_y  cols rows  pix_w  pix_h
+    # Y M  D  H  C   unit  sys comment   format  proj  orig_x  orig_y  cols rows  pix_w  pix_h
     # 15 9 16 10 NO2 ug/m3 RIO uurwaarden f7.1    1     0.000   620.000 70    80   4.000 4.000
 
+    # Slice the string first as the "comment" field may have multiple words
+    # Becomes like '15 9 16 10 NO2 ug/m3 1 0.000 620.000 70 80 4.000 4.000'
+    meta_line_1 = meta_line[0:34]
+    meta_line_2 = meta_line[75:]
+
+    meta_line_min = meta_line_1 + meta_line_2
     # Remove excess whitespace
-    meta_line = " ".join(meta_line.split())
+    meta_line_min = " ".join(meta_line_min.split())
 
     # Now split with single whitespace
-    meta_arr = meta_line.split(' ')
+    meta_arr = meta_line_min.split(' ')
 
     # Build-up dict from array, do conversions where needed
     meta = dict()
@@ -64,9 +82,9 @@ def parse_aps_meta(meta_line):
     meta['hour'] = int(meta_arr[3])
     meta['component'] = meta_arr[4]
     meta['unit'] = meta_arr[5]
-    meta['system'] = meta_arr[6]
-    meta['comment'] = meta_arr[7]
-    meta['cell_format'] = meta_arr[8]
+    # meta['system'] = meta_arr[6]
+    # meta['comment'] = meta_arr[7]
+    # meta['cell_format'] = meta_arr[8]
 
     # Code voor coordinatenstelsel
     # 1. Amersfoortse coordinaten
@@ -74,18 +92,20 @@ def parse_aps_meta(meta_line):
     # 3. Projectie op 50 NB (shifted pole) 4. projectie op 60 NB (shifted pole) 5. EMEP-coordinaten
     # 6. IE-coordinaten (EMEP/2.)
     # 7. OECD-coordinaten (EMEP/3.)
-    meta['projection'] = int(meta_arr[9])
+    meta['projection'] = int(meta_arr[6])
 
     # Upper left of upper left pixel
-    meta['origin_x'] = float(meta_arr[10])*1000
-    meta['origin_y'] = float(meta_arr[11])*1000
+    meta['origin_x'] = float(meta_arr[7]) * 1000
+    meta['origin_y'] = float(meta_arr[8]) * 1000
 
-    meta['columns'] = int(meta_arr[12])
-    meta['rows'] = int(meta_arr[13])
-    meta['pixel_width'] = float(meta_arr[14])*1000
-    meta['pixel_height'] = float(meta_arr[15])*1000
+    meta['columns'] = int(meta_arr[9])
+    meta['rows'] = int(meta_arr[10])
+    meta['pixel_width'] = float(meta_arr[11]) * 1000
+    meta['pixel_height'] = float(meta_arr[12]) * 1000
+    meta['meta'] = meta_line
 
     return meta
+
 
 def read_aps_file(file_path):
     file = open(file_path, 'r')
@@ -112,11 +132,12 @@ def read_aps_file(file_path):
 
     return meta, raster_array
 
+
 if __name__ == "__main__":
     args = sys.argv
 
-    in_file = args[1] # '../../data/rivm-rio/output/2015091611_no2.aps'
-    out_file = args[2] # 'aps_no2.tif'
+    in_file = args[1]  # '../../data/rivm-rio/output/2015091611_no2.aps'
+    out_file = args[2]  # '../../data/rivm-rio/aps2raster/2015091611_no2.tif'
 
     aps_meta, aps_array = read_aps_file(in_file)
     origin = (aps_meta['origin_x'], aps_meta['origin_y'], 0)
@@ -138,5 +159,5 @@ if __name__ == "__main__":
     # aps_list = aps_array.tolist()
 
     # Convert to raster file
-    array2raster(out_file, origin, pixel_width, pixel_height, aps_array, 28992)
+    array2raster(out_file, origin, pixel_width, pixel_height, aps_array, aps_meta, 28992)
 

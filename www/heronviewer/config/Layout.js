@@ -19,7 +19,7 @@ Heron.options.urls = Heron.scratch.urls;
 
 // Create end interval date from current date for timeseries slider config.
 Heron.date = new Date();
-Heron.date.setHours(Heron.date.getHours()-1);
+Heron.date.setHours(Heron.date.getHours() - 1);
 Heron.date.setMinutes(0);
 Heron.date.setSeconds(0);
 Heron.date.setMilliseconds(0);
@@ -27,7 +27,7 @@ Heron.date.setMilliseconds(0);
 Heron.date = Heron.date.toISOString();
 
 Heron.cdate = new Date();
-Heron.cdate.setHours(Heron.cdate.getHours()-3);
+Heron.cdate.setHours(Heron.cdate.getHours() - 3);
 Heron.cdate.setMinutes(0);
 Heron.cdate.setSeconds(0);
 Heron.cdate.setMilliseconds(0);
@@ -180,6 +180,13 @@ Heron.layout = {
                     // layer sources
                     defaultSourceType: "gxp_wmssource",
                     sources: {
+                        rivm_wms: {
+                            ptype: "gxp_wmssource",
+                            url: 'http://geodata.rivm.nl/geoserver/ows?',
+                            version: "1.1.1",
+                            title: 'RIVM WMS',
+                            owsPreviewStrategies: ['getlegendgraphic']  // or 'no preview available' if empty array
+                        },
                         rivm_inspire_wms: {
                             ptype: "gxp_wmssource",
                             url: 'http://inspire.rivm.nl/geoserver/wms?',
@@ -187,11 +194,26 @@ Heron.layout = {
                             title: 'RIVM INSPIRE WMS',
                             owsPreviewStrategies: ['getlegendgraphic']  // or 'no preview available' if empty array
                         },
+
+                        //geonovum_sospilot_wms: {
+                        //    ptype: "gxp_wmssource",
+                        //    url: 'http://sensors.geonovum.nl/gs/sensors/wms?',
+                        //    version: "1.1.1",
+                        //    title: 'Geonovum SOSPilot WMS',
+                        //    owsPreviewStrategies: ['getlegendgraphic']  // or 'no preview available' if empty array
+                        //},
                         pdok_bagviewer_wms: {
                             ptype: "gxp_wmssource",
                             url: Heron.options.urls.PDOK + '/bagviewer/wms',
                             version: "1.1.0",
                             title: 'PDOK BAG WMS',
+                            owsPreviewStrategies: ['getlegendgraphic']  // or 'no preview available' if empty array
+                        },
+                        pdok_bestuurlijkegrenzen_wms: {
+                            ptype: "gxp_wmssource",
+                            url: Heron.options.urls.PDOK + '/bestuurlijkegrenzen/wms',
+                            version: "1.1.0",
+                            title: 'PDOK Bestuurlijke Grenzen WMS',
                             owsPreviewStrategies: ['getlegendgraphic']  // or 'no preview available' if empty array
                         },
                         pdok_bagviewer_wfs: {
@@ -201,22 +223,15 @@ Heron.layout = {
                             title: 'PDOK BAG WFS',
                             owsPreviewStrategies: ['randomcolor']  // or 'no preview available' if empty array
                         },
-                        pdok_nwbspoorwegen_wfs: {
-                            ptype: "gxp_wfssource",
-                            url: Heron.options.urls.PDOK + '/nwbspoorwegen/wfs',
-                            version: "1.1.0",
-                            title: 'PDOK NWB Spoorwegen WFS',
-                            owsPreviewStrategies: ['randomcolor']  // or 'no preview available' if empty array
+                        map5_tms: {
+                            ptype: "gxp_tmssource",
+                            url: 'http://s.map5.nl/map/gast/tms/1.0.0/',
+                            isBaseLayer: true,  // default is true
+                            group: 'background' // 'background' or 'default', default value is 'background'
                         },
                         pdok_tms: {
                             ptype: "gxp_tmssource",
                             url: Heron.options.urls.PDOK + '/tms/',
-                            isBaseLayer: true,  // default is true
-                            group: 'background' // 'background' or 'default', default value is 'background'
-                        },
-                        geodan_tms: {
-                            ptype: "gxp_tmssource",
-                            url: 'http://services.geodan.nl/tms/',
                             isBaseLayer: true,  // default is true
                             group: 'background' // 'background' or 'default', default value is 'background'
                         }

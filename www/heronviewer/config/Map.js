@@ -938,6 +938,77 @@ Heron.options.map.layers = [
     ),
 
     /* END SMARTEM  */
+    /* START APS2RASTER */
+
+
+    /*
+     * RIVM: APS2RASTER TEST NO2
+     */
+    new OpenLayers.Layer.WMS(
+        "TEST - RIO APS NO2",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "rio_no2_2015091611", format: "image/png", transparent: true},
+        {
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * RIVM: APS2RASTER TEST O3
+     */
+    new OpenLayers.Layer.WMS(
+        "TEST - RIO APS O3",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "rio_o3_2015091611", format: "image/png", transparent: true},
+        {
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+        /*
+     * RIVM: APS2RASTER TEST PM10
+     */
+    new OpenLayers.Layer.WMS(
+        "TEST - RIO APS PM10",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "rio_pm10_2015091611", format: "image/png", transparent: true},
+        {
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+      /* END APS2RASTER */
+
 
     /* START GEONOVUM WEATHER */
 
@@ -1811,18 +1882,21 @@ Heron.options.layertree.tree = [
         {
             text: 'Nitrogen Dioxide (NO2) - WMS', expanded: true, children: [
             {nodeType: "gx_layer", layer: "RIVM - History NO2"},
-            {nodeType: "gx_layer", layer: "Smart Emission - History NO2"}
+            {nodeType: "gx_layer", layer: "Smart Emission - History NO2"},
+            {nodeType: "gx_layer", layer: "TEST - RIO APS NO2"}
         ]
         },
         {
             text: 'Ozone (O3) - WMS', expanded: true, children: [
             {nodeType: "gx_layer", layer: "RIVM - History O3"},
-            {nodeType: "gx_layer", layer: "Smart Emission - History O3"}
+            {nodeType: "gx_layer", layer: "Smart Emission - History O3"},
+            {nodeType: "gx_layer", layer: "TEST - RIO APS O3"}
         ]
         },
         {
             text: 'Particulate Matter (PM10) - WMS', expanded: true, children: [
-            {nodeType: "gx_layer", layer: "RIVM - History PM10"}
+            {nodeType: "gx_layer", layer: "RIVM - History PM10"},
+            {nodeType: "gx_layer", layer: "TEST - RIO APS PM10"}
 
         ]
         },
@@ -1936,73 +2010,73 @@ Heron.options.layertree.tree = [
     //    }
     //]
     //},
-    //{
-    //    text: 'PDOK', expanded: false, children: [
-    //    {
-    //        text: 'BAG', expanded: false, children: [
-    //        {nodeType: "gx_layer", layer: "BAG - Adressen", text: "BAG Adressen"},
-    //        {nodeType: "gx_layer", layer: "BAG - Woonplaatsen", text: "BAG Woonplaatsen"},
-    //        {nodeType: "gx_layer", layer: "BAG - Ligplaatsen", text: "BAG Ligplaatsen"},
-    //        {nodeType: "gx_layer", layer: "BAG - Standplaatsen", text: "BAG Standplaatsen"},
-    //        {nodeType: "gx_layer", layer: "BAG - Verblijfsobjecten", text: "BAG Verblijfsobjecten"},
-    //        {nodeType: "gx_layer", layer: "BAG - Panden", text: "BAG Panden"},
-    //        {nodeType: "gx_layer", layer: "BAG - Panden (WFS)", text: "BAG Panden (WFS)"}
-    //    ]
-    //    },
-    //    {
-    //        text: 'Bestuurlijke Grenzen', expanded: false, children: [
-    //        /*							{nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Buurten", text: "Buurten" },
-    //         {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Wijken", text: "Wijken" },  */
-    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Gemeenten", text: "Gemeenten (WMS)"},
-    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Gemeenten (WFS)", text: "Gemeenten (WFS)"},
-    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Provincies", text: "Provincies"},
-    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Provincies (WFS)", text: "Provincies (WFS)"},
-    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Land", text: "Land"},
-    //        {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Land (WFS)", text: "Land (WFS)"}
-    //    ]
-    //    },
-    //    {
-    //        text: 'Digitaal Topografisch Bestand (DTB)', expanded: false, children: [
-    //        {nodeType: "gx_layer", layer: "DTB Vlakken"},
-    //        {nodeType: "gx_layer", layer: "DTB Lijnen"},
-    //        {nodeType: "gx_layer", layer: "DTB Punten"}
-    //    ]
-    //    },
-    //    {
-    //        text: 'Actueel Hoogtebestand (AHN)', expanded: false, children: [
-    //        {nodeType: "gx_layer", layer: "AHN2 0.5m Ruw"},
-    //        {nodeType: "gx_layer", layer: "AHN2 0.5m Geinterpoleerd"},
-    //        {nodeType: "gx_layer", layer: "AHN2 0.5m Niet Geinterpoleerd"},
-    //        {nodeType: "gx_layer", layer: "AHN2 5m"},
-    //        {nodeType: "gx_layer", layer: "AHN2 Bladindex"},
-    //        {nodeType: "gx_layer", layer: "AHN 25m", text: 'AHN1 25m (Oud)'}
-    //    ]
-    //    },
-    //    {
-    //        text: 'Rijksdriehoeksmeting (RDInfo)', expanded: false, children: [
-    //        {nodeType: "gx_layer", layer: "RD Info - Punten"},
-    //        {nodeType: "gx_layer", layer: "RD Info - Stations"}
-    //    ]
-    //
-    //    },
-    //    {
-    //        text: 'Natuur & Mileu', expanded: false, children: [
-    //        {nodeType: "gx_layer", layer: "Natura 2000"},
-    //        {nodeType: "gx_layer", layer: "Nationale Parken"},
-    //        {nodeType: "gx_layer", layer: "NOK 2010 - EHS"},
-    //        {nodeType: "gx_layer", layer: "NOK 2010 - RODS"},
-    //        {nodeType: "gx_layer", layer: "NOK 2010 - BBLBuitenbegrenzing", text: "NOK 2010 - BBLBuitenbegr."}
-    //    ]
-    //    }
-    //]
-    //},
-    //{
-    //    text: 'RO Online', expanded: false, children: [
-    //    {nodeType: "gx_layer", layer: "RO Online Bestemmingsplannen", text: "Bestemmingsplannen (BP)"},
-    //    {nodeType: "gx_layer", layer: "RO Online Gem. Structuurvisie", text: "Gem. Structuurvisie (GSV),"},
-    //    {nodeType: "gx_layer", layer: "RO Online Prov. Structuurvisie", text: "Prov. Structuurvisie (PSV)"}
-    //]
-    //},
+    {
+        text: 'PDOK', expanded: false, children: [
+        {
+            text: 'BAG', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "BAG - Adressen", text: "BAG Adressen"},
+            {nodeType: "gx_layer", layer: "BAG - Woonplaatsen", text: "BAG Woonplaatsen"},
+            {nodeType: "gx_layer", layer: "BAG - Ligplaatsen", text: "BAG Ligplaatsen"},
+            {nodeType: "gx_layer", layer: "BAG - Standplaatsen", text: "BAG Standplaatsen"},
+            {nodeType: "gx_layer", layer: "BAG - Verblijfsobjecten", text: "BAG Verblijfsobjecten"},
+            {nodeType: "gx_layer", layer: "BAG - Panden", text: "BAG Panden"},
+            {nodeType: "gx_layer", layer: "BAG - Panden (WFS)", text: "BAG Panden (WFS)"}
+        ]
+        },
+        {
+            text: 'Bestuurlijke Grenzen', expanded: false, children: [
+            /*							{nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Buurten", text: "Buurten" },
+             {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Wijken", text: "Wijken" },  */
+            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Gemeenten", text: "Gemeenten (WMS)"},
+            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Gemeenten (WFS)", text: "Gemeenten (WFS)"},
+            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Provincies", text: "Provincies"},
+            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Provincies (WFS)", text: "Provincies (WFS)"},
+            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Land", text: "Land"},
+            {nodeType: "gx_layer", layer: "Bestuurlijke Grenzen - Land (WFS)", text: "Land (WFS)"}
+        ]
+        },
+        {
+            text: 'Digitaal Topografisch Bestand (DTB)', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "DTB Vlakken"},
+            {nodeType: "gx_layer", layer: "DTB Lijnen"},
+            {nodeType: "gx_layer", layer: "DTB Punten"}
+        ]
+        },
+        {
+            text: 'Actueel Hoogtebestand (AHN)', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "AHN2 0.5m Ruw"},
+            {nodeType: "gx_layer", layer: "AHN2 0.5m Geinterpoleerd"},
+            {nodeType: "gx_layer", layer: "AHN2 0.5m Niet Geinterpoleerd"},
+            {nodeType: "gx_layer", layer: "AHN2 5m"},
+            {nodeType: "gx_layer", layer: "AHN2 Bladindex"},
+            {nodeType: "gx_layer", layer: "AHN 25m", text: 'AHN1 25m (Oud)'}
+        ]
+        },
+        {
+            text: 'Rijksdriehoeksmeting (RDInfo)', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "RD Info - Punten"},
+            {nodeType: "gx_layer", layer: "RD Info - Stations"}
+        ]
+
+        },
+        {
+            text: 'Natuur & Mileu', expanded: false, children: [
+            {nodeType: "gx_layer", layer: "Natura 2000"},
+            {nodeType: "gx_layer", layer: "Nationale Parken"},
+            {nodeType: "gx_layer", layer: "NOK 2010 - EHS"},
+            {nodeType: "gx_layer", layer: "NOK 2010 - RODS"},
+            {nodeType: "gx_layer", layer: "NOK 2010 - BBLBuitenbegrenzing", text: "NOK 2010 - BBLBuitenbegr."}
+        ]
+        }
+    ]
+    },
+    {
+        text: 'RO Online', expanded: false, children: [
+        {nodeType: "gx_layer", layer: "RO Online Bestemmingsplannen", text: "Bestemmingsplannen (BP)"},
+        {nodeType: "gx_layer", layer: "RO Online Gem. Structuurvisie", text: "Gem. Structuurvisie (GSV),"},
+        {nodeType: "gx_layer", layer: "RO Online Prov. Structuurvisie", text: "Prov. Structuurvisie (PSV)"}
+    ]
+    },
     {
         text: 'Scratch folder', expanded: false, children: [
         {nodeType: "gx_layer", layer: "Tekenlaag", text: "Drawing Layer"},

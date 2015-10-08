@@ -13,14 +13,14 @@
                 <Rule>
                     <RasterSymbolizer>
                         <ColorMap type="intervals">
-                            <ColorMapEntry color="#FFFFFF" quantity="0.0001" opacity="0.0"/>
-                            <ColorMapEntry color="#6699CC" quantity="20.00" opacity="1.0"/>
-                            <ColorMapEntry color="#99CCCC" quantity="50.00" opacity="1.0"/>
-                            <ColorMapEntry color="#CCFFFF" quantity="200.00" opacity="1.0"/>
-                            <ColorMapEntry color="#FFFFCC" quantity="250.00" opacity="1.0"/>   <!-- Yellow -->
-                            <ColorMapEntry color="#FFCC66" quantity="350.00" opacity="1.0"/>
-                            <ColorMapEntry color="#FF9966" quantity="400.00" opacity="1.0"/>
-                            <ColorMapEntry color="#990033" quantity="2000.00" opacity="1.0"/>
+                            <ColorMapEntry color="#FFFFFF" quantity="0" label="No Data" opacity="0.0"/>
+                            <ColorMapEntry color="#6699CC" quantity="20" label="&lt; 20 ug/m3" opacity="1.0"/>
+                            <ColorMapEntry color="#99CCCC" quantity="50" label="20-50 ug/m3" opacity="1.0"/>
+                            <ColorMapEntry color="#CCFFFF" quantity="200" label="50-200 ug/m3" opacity="1.0"/>
+                            <ColorMapEntry color="#FFFFCC" quantity="250" label="200-250 ug/m3" opacity="1.0"/>   <!-- Yellow -->
+                            <ColorMapEntry color="#FFCC66" quantity="350" label="250-350 ug/m3" opacity="1.0"/>
+                            <ColorMapEntry color="#FF9966" quantity="400" label="350-400 ug/m3" opacity="1.0"/>
+                            <ColorMapEntry color="#990033" quantity="20000" label="&gt; 400 ug/m3" opacity="1.0"/>
                         </ColorMap>
                     </RasterSymbolizer>
                 </Rule>
