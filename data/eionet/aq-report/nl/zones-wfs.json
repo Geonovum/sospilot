@@ -1,0 +1,48 @@
+
+    {"properties": {
+        "objectid": 9,
+        "geometry_l": 81872.10739,
+        "geometry_a": 1.74366211597E8,
+        "zone_code": "NL0320",
+        "zone_name": "Heerlen/Kerkrade",
+        "zone_name_": "Agglomeratie Heerlen/Kerkrade",
+        "start_year": 2011,
+        "end_year": null,
+        "zone_type": "agg",
+        "zone_popul": 231870,
+        "zone_pop_1": 2013,
+        "zone_area_": 174366,
+        "zone_area1": 174,
+        "zone_prede": null
+    }}
+
+    {"properties": {
+        "inspireid": "http://data.rivm.nl/inspire/so/ef/aqd-zone/NL0320/0",
+        "zone_code": "NL0320",
+        "versionid": 0,
+        "predecessor": null,
+        "beginlifespanversion": "2013-05-06T11:03:35.926Z",
+        "endlifespanversion": null,
+        "zone_name": "Heerlen/Kerkrade",
+        "zone_type": "airQualityManagementZone",
+        "application_start_date": "2001-06-20T22:00:00Z",
+        "application_end_date": null,
+        "documentation_of_predecessors": null,
+        "resident_population": null,
+        "resident_population_ref_year": null,
+        "area_of_zone_value": null,
+        "area_of_zone_uom": "sqm",
+        "designated_pollutant": null,
+        "protection_target": "Health",
+        "timeextensionexemption": "NO2-annual",
+        "environmental_domain": "air",
+        "plan": null,
+        "legalbasis": "Directive 2008/50/EC of the European Parliament and of the Council of 21 May 2008 on ambient air quality and cleaner air for Europe",
+        "relatedzone": null,
+        "authority_name": "Ministerie van I&M",
+        "webaddress": "http://www.rijksoverheid.nl/ministeries/ienm",
+        "responsible_person_name": "Inge van der Veen",
+        "address": "Plesmanweg 1-6 2597JG Den Haag",
+        "telephone_number": "+31704560000",
+        "email": null
+    }}

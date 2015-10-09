@@ -31,7 +31,7 @@ def array2raster(out_file, origin, pixel_width, pixel_height, array, meta, epsg_
     driver = gdal.GetDriverByName('GTiff')
 
     # Create raster with 1-band and 1-byte cells
-    out_raster = driver.Create(out_file, cols, rows, n_bands, gdal.GDT_Int16)
+    out_raster = driver.Create(out_file, cols, rows, n_bands, gdal.GDT_Float32)
 
     # affine transformation coefficients
     out_raster.SetGeoTransform((origin_x, pixel_width, 0, origin_y, 0, pixel_height))
@@ -39,7 +39,7 @@ def array2raster(out_file, origin, pixel_width, pixel_height, array, meta, epsg_
     # Write array data to first rasterband
     out_band = out_raster.GetRasterBand(1)
     out_band.SetUnitType('ug/m3')
-    out_band.SetNoDataValue(-999)
+    out_band.SetNoDataValue(-999.0)
 
     metadata = {
         'name': 'concentration'
@@ -145,15 +145,15 @@ if __name__ == "__main__":
     pixel_height = -aps_meta['pixel_height']
 
     # http://docs.scipy.org/doc/numpy/reference/generated/numpy.around.html
-    # Round all floats first
-    aps_array = np.around(aps_array)
+    # Round all floats first ==> no more, as gives wrong results in legenda
+    # aps_array = np.around(aps_array)
 
     # http://stackoverflow.com/questions/7994133/fast-in-place-replacement-of-some-values-in-a-numpy-array
-    # Make negative values zero NB maybe need NO_VALUE
+    # Make negative values zero ==> no more, use GDAL's NO DATA value
     # aps_array[aps_array < 0] = 0
 
-    # COnvert rounded floats to ints
-    aps_array = aps_array.astype(int)
+    # Convert rounded floats to ints  ==> no more, as gives wrong results in legenda
+    # aps_array = aps_array.astype(int)
 
     # Debug: convert to oridinary Python list (array)
     # aps_list = aps_array.tolist()

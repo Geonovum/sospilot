@@ -17,11 +17,11 @@
                             <ColorMapEntry color="#6699CC" quantity="10" label="&lt; 10 ug/m3" opacity="1.0"/>
                             <ColorMapEntry color="#99CCCC" quantity="30" label="10-30 ug/m3" opacity="1.0"/>
                             <ColorMapEntry color="#CCFFFF" quantity="50" label="30-50 ug/m3" opacity="1.0"/>
-                            <ColorMapEntry color="#FFFFCC" quantity="75" label="50-75 ug/m3" opacity="1.0"/>   <!-- Yellow -->
+                            <ColorMapEntry color="#FFFFCC" quantity="75" label="50-75 ug/m3" opacity="1.0"/> <!-- Yellow -->
                             <ColorMapEntry color="#FFCC66" quantity="125" label="75-125 ug/m3" opacity="1.0"/>
                             <ColorMapEntry color="#FF9966" quantity="200" label="125-200 ug/m3" opacity="1.0"/>
                             <ColorMapEntry color="#990033" quantity="20000" label="&gt; 200 ug/m3" opacity="1.0"/>
-                         </ColorMap>
+                        </ColorMap>
                     </RasterSymbolizer>
                 </Rule>
             </FeatureTypeStyle>
