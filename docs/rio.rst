@@ -28,7 +28,7 @@ The RIO tools are used by RIVM, see the
 
 A RIO toolkit, has been developed by `VITO <https://vito.be>`_, a leading European independent research and technology organisation
 based in Belgium. The toolkit is implemented in `MatLab <http://nl.mathworks.com/products/matlab/>`_. Basically the RIO-tool
-converts Air Quality measurement data (CSV) from a set of dispersed stations to country-side coverage data.
+converts Air Quality measurement data (CSV) from a set of dispersed stations to country-wide (RIO needs to be tailored per country) coverage data.
 RIVM uses RIO to produce and publish `daily maps of Air Quality data <http://www.lml.rivm.nl>`_ for NO2, O3 and PM10, like the image below.
 
 .. figure:: _static/rivm-rio/rivm-lml-maps.jpg
