@@ -18,6 +18,7 @@ Contents:
    clients.rst
    administration.rst
    smartemission.rst
+   rio.rst
    weather.rst
    weatherstation.rst
    raspberrypi-install.rst
