@@ -15,6 +15,9 @@ Background reading, see this article: *"Building bridges: experiences and lesson
 *from the implementation of INSPIRE and e-reporting of air quality data in Europe"*
 `[PDF] <http://sensors.geonovum.nl/media/EarthSciInform_Art_10_1007.pdf>`_.
 
+This is document version |release| generated on |today|.
+
+
 About this Document
 ===================
 

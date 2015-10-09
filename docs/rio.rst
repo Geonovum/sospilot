@@ -58,7 +58,7 @@ See also an overview in `this presentation (Grothe 2015) <http://www.geonovum.nl
 
    *INSPIRE View and Download Services*
 
-RIO Output Via WCS
+RIO Output via WCS
 ==================
 
 This was done as a first step. RIVM has kindly provided us with some RIO input and output datafiles plus documentation.
@@ -85,7 +85,7 @@ The metadata gives enough information to construct a GeoTIFF. The most important
 * date and time (hour) of the measurements
 * the chemical component (here NO2)
 
-The data values are space-separated values. No-values are denoted with ``-999.0`` : ::
+The data values are space-separated values. Empty (NoData) values are denoted with ``-999.0`` : ::
 
 	... -999.0   23.4   23.6 -999.0   24.2   17.3   14.3 ...
 	...   16.1   17.3   18.4   19.4   21.6   21.9   20.1 ...
@@ -96,15 +96,17 @@ Converting to GeoTIFF
 Developing a simple Python program called `aps2raster.py <https://github.com/Geonovum/sospilot/blob/master/src/rivm-rio/aps2raster.py>`_,
 the ``.aps`` files are converted to GeoTIFF files. ``aps2raster.py`` reads an APS file line by line. From the first
 line the metadata elements are parsed. From the remaining lines a 2-dimensional array of floats is populated.
-Finally a geoTIFF file is created with the data and metadata. Projection is always in RD/EPSG:28992.
+Finally a GeoTIFF file is created with the data and metadata. Projection is always in RD/EPSG:28992.
+
+`aps2raster.py <https://github.com/Geonovum/sospilot/blob/master/src/rivm-rio/aps2raster.py>`_ uses the GDAL and NumPy Python libraries.
 
 WMS with Raster Styling
 -----------------------
 
 Using GeoServer the GeoTIFFs are added as datasources and one layer per GeoTIFF is published. Within GeoServer
-this automatically creates both a WCS and a WMS layer. As the GeoTIFF does not contain colors but data values
-styling is needed to view the WMS layer. This has been done via Styled Layer Descriptor files. In order
-to render the same colors as the RIVM LML daily images a value-interval color-mapping was developed as
+this automatically creates both a WCS and a WMS layer. As the GeoTIFF does not contain colors but data values,
+styling is needed to view the WMS layer. This has been done via Styled Layer Descriptor (SLD) files. GeoServer supports SLDs for Rasterdata styling.
+In order to render the same colors as the RIVM LML daily images a value-interval color-mapping was developed as
 in this example for NO2: ::
 
 	<FeatureTypeStyle>
@@ -132,7 +134,7 @@ The WMS layers have been added to the existing `SOSPilot Heron viewer <http://se
 Comparing with RIVM LML
 -----------------------
 
-The resulting WMS layers can be compared to the original PNG files that came with the APS data files.
+The resulting WMS layers can now be compared to the original PNG files that came with the APS data files from RIVM.
 Below two examples for NO2 and PM10.
 
 For NO2 below.
@@ -149,7 +151,7 @@ And for PM10 below.
 
    *Comparing with RIVM LML maps (right) - PM10*
 
-As can be seen the maps are identical. Our WMS-maps are on the right. They
+As can be seen the maps are identical. Our WMS-maps are on the left, RIVM maps on the right. Our WMS maps
 are somewhat "rougher" on the edges since we have not cut-out using the coastlines.
 
 WCS in QGIS
