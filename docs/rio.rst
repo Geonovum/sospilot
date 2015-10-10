@@ -168,10 +168,11 @@ support in QGIS.
 Viewing Results
 ===============
 
-Results can be viewed in basically 3 ways:
+Results can be viewed in basically 3 four ways:
 
 * as WMS Layers via the Heron Viewer: http://sensors.geonovum.nl/heronviewer
 * as WCS in e.q. QGIS http://sensors.geonovum.nl/gs/sensors/wcs?
+* via direct WCS protocol requests
 * as `raw GeoTIFF raster files <https://github.com/Geonovum/sospilot/tree/master/data/rivm-rio/aps2raster>`_
 
 Below some guidance for each viewing method. TBS
@@ -202,7 +203,10 @@ WCS in QGIS
 
 See above. WCS link is http://sensors.geonovum.nl/gs/sensors/wcs?. There are 3 layers.
 
-Direct requests using the WCS 2.0.1 protocol:
+WCS Protocol Requests
+---------------------
+
+Direct requests to GeoServer, using the WCS 2.0.1 protocol:
 
 * Fetch `WCS Capabilities 2.0.1 <http://sensors.geonovum.nl/gs/sensors/wcs?request=GetCapabilities&version=2.0.1>`_
 * Fetch `WCS DescribeCoverage 2.0.1 <http://sensors.geonovum.nl/gs/sensors/wcs?request=DescribeCoverage&version=2.0.1&CoverageId=sensors__rio_o3_2015091611>`_
