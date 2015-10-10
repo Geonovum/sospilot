@@ -181,16 +181,57 @@ Heron Viewer
 
 Go to http://sensors.geonovum.nl/heronviewer
 
-- links staan mappen met kaartlagen
-- een heet "Chemische Componenten (Historie)"
-- deze openen
-- dan bijv submap "Nitrogen Dioxide (NO2) - WMS" openen
-- dan de laag "TEST RIO APS NO2" aanvinken
+* links staan mappen met kaartlagen
+* vind map "Chemische Componenten (Historie)"
+* deze map openen
+* dan bijv submap "Nitrogen Dioxide (NO2) - WMS" openen
+* dan de laag "TEST RIO APS NO2" aanvinken
+
+These values can be compared with the WMS-Time Layer-based values for the same component, for example
+for NO2:
+
+* within the same submap "Nitrogen Dioxide (NO2) - WMS"
+* enable the WMS-Time Layer "RIVM History - NO2"
+* use the Timeslider in the upper right of the viewer
+* slide the date/time to September 16, 2015 11:00
+* compare the values by clicking on the circles, a pop-up opens for each click
+* you may first want to disable the stations layers
 
 WCS in QGIS
 -----------
 
-See above.
+See above. WCS link is http://sensors.geonovum.nl/gs/sensors/wcs?. There are 3 layers.
+
+Direct requests using the WCS 2.0.1 protocol:
+
+* Fetch `WCS Capabilities 2.0.1 <http://sensors.geonovum.nl/gs/sensors/wcs?request=GetCapabilities&version=2.0.1>`_
+* Fetch `WCS DescribeCoverage 2.0.1 <http://sensors.geonovum.nl/gs/sensors/wcs?request=DescribeCoverage&version=2.0.1&CoverageId=sensors__rio_o3_2015091611>`_
+* Fetch `WCS GetCoverage, 41kB GeoTIFF <http://sensors.geonovum.nl/gs/sensors/wcs?request=GetCoverage&version=2.0.1&CoverageId=sensors__rio_o3_2015091611>`_
+* Fetch `WCS GetCoverage, plain text <http://sensors.geonovum.nl/gs/sensors/wcs?request=GetCoverage&version=2.0.1&CoverageId=sensors__rio_o3_2015091611&format=text/plain>`_
+
+Raw Coverage Files
+------------------
+
+Get GeoTIFF Files from `raw GeoTIFF raster files <https://github.com/Geonovum/sospilot/tree/master/data/rivm-rio/aps2raster>`_. or via
+`WCS GetCoverage, 41kB GeoTIFF <http://sensors.geonovum.nl/gs/sensors/wcs?request=GetCoverage&version=2.0.1&CoverageId=sensors__rio_o3_2015091611>`_.
+
+Future Enhancements
+===================
+
+WCS and WMS as time-series
+--------------------------
+
+Traditional WMS-Time layers are based on vector-data, where a single column in the source data denotes time (or any other dimension like elevation).
+GeoServer also supports time-series for raster data.
+
+Each coverage now is a snapshot for a single chemical component for a single hour on s single date. To unlock multiple
+coverages as a time-series the GeoServer ImageMosaic with
+time-series support can be applied, see
+`this link <http://docs.geoserver.org/latest/en/user/tutorials/imagemosaic_timeseries/imagemosaic_timeseries.html>`_.
+
+Another posibility is a GeoServer plugin for "Earth Observation profile of coverage standard", see
+http://docs.geoserver.org/latest/en/user/extensions/wcs20eo/index.html
+and http://www.opengeospatial.org/standards/requests/81
 
 
 

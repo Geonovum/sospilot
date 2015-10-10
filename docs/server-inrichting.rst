@@ -577,6 +577,8 @@ Om permissie-problemen te voorkomen doen we. ::
     chown -R tomcat7:tomcat7 /var/www/sensors.geonovum.nl/webapps
     chown -R tomcat7:tomcat7 /var/sensors/config/geoserver
 
+GeoServer was upgraded to 2.8.0 on oct 10, 2015.
+
 Sensorweb SOS Server
 --------------------
 
@@ -1219,9 +1221,6 @@ Configuratie in ``/etc/denyhosts.cfg`` (email adres en Subject aanpassen)
 
 Om deblokkeren, zie. Data files staan onder `/var/lib`:
 http://www.cyberciti.biz/faq/linux-unix-delete-remove-ip-address-that-denyhosts-blocked/
-
-
-
 
 Optimaliseren van Java
 ----------------------
