@@ -175,7 +175,7 @@
                                 It uses the REST API from the SOS service (see Web Services below) directly.
                             </td>
                         </tr>
-                        <tr>
+                        <!--  <tr>
                             <td><a href="sos-js-app"><img src="media/sos-js-sospilot-plot-200.jpg"/></a></td>
                             <td><a href="sos-js-app">This app</a>
                                 uses the <a href="https://github.com/52North/sos-js">52North sos-js client library</a>.
@@ -190,7 +190,7 @@
                                 components. SO2, benzeen (Utrecht-Erzeijstraat), and PM2.5 (Hilvarenbeek) are very rare.
                                 Most stations will provide observations for NO2.
                             </td>
-                        </tr>
+                        </tr>   -->
                     </table>
                 </div>
 
@@ -218,9 +218,9 @@
                  <h1 id="weather" class="page-header">Clients - Weather Data</h1>
                  <p>In addition to AQ data, weather data is also exercised in the project using a Davis Vantage Pro2 weather station
                      at the Geonovum building roof.
-                 <a href="http://sospilot.readthedocs.org/en/latest/weatherstation.html">Read more info</a>
-                     how the weather station has been setup and connected to OWS and
-                     public weather services.
+                 <a href="http://sospilot.readthedocs.org/en/latest/weatherstation.html">Read the documentation</a>
+                     on how the Geonovum weather station has been setup and connected to OWS (WMS-Time, WFS and SOS) and
+                     public weather services like Weather Underground and <a href="https://wow.knmi.nl">KNMI WOW</a>.
                  </p>
 
                 <div class="table-responsive">
@@ -228,9 +228,7 @@
                         <tr>
                             <td><a href="weewx"><img src="media/weewx-report-200.png"/></a>  </td>
                             <td><a href="weewx">Report from the Geonovum Davis Weather Station</a><br/>
-
-
-                                Python <a href="http://www.weewx.com">weewx weather software</a> on a Raspberry Pi
+                                The Python <a href="http://www.weewx.com">weewx weather software</a> on a Raspberry Pi
                                 collects weather data from the Davis Vantage Pro2 Weather Station
                                 on the Geonovum-building rooftop. weewx generates this report every 5 mins.
                                 The weather data is also published to WMS-Time/WFS and SOS services similar to RIVM AQ data.
@@ -241,7 +239,6 @@
                             <td><a href="weewx/gauges">Report from the Geonovum Davis Weather Station as Gauges</a><br/>
                              Another cool weather data view using the <a href="http://wiki.sandaysoft.com/a/SteelSeries_Gauges">Steelseries Gauges</a>.
                                 All pure JavaScript!
-
                             </td>
                         </tr>
                         <tr>
@@ -256,6 +253,20 @@
                             </td>
 
                         </tr>
+                        <tr>
+                            <td><a href="https://wow.knmi.nl">
+                                                            <img src="media/geonovum-on-wow.knmi.nl.png" height="160" width="160" border="0"
+                                                                 alt="WOW KNMI Geonovum Station" />
+                                                        </a></td>
+                            <td>The Geonovum Davis Weather Station (via weewx on the Raspberry Pi) is also actively (every 5 mins) publishing to
+                                <a href="http://wow.metoffice.gov.uk/sitehandlerservlet?requestedAction=READ&siteID=929236001">MET UK Weather Observations Website (WOW)</a>.
+                                The station is registered with WOW site ID 929236001,
+                                The Dutch KNMI has a localized version, at <a href="https://wow.knmi.nl">wow.knmi.nl</a>.
+                                Zoom in to Amersfoort to see the Geonovum station.
+                            </td>
+
+                        </tr>
+
                     </table>
                 </div>
             </div>
