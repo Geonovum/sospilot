@@ -180,13 +180,19 @@ Below some guidance for each viewing method. TBS
 Heron Viewer
 ------------
 
-Go to http://sensors.geonovum.nl/heronviewer
+Easiest is to use the predefined map-context bookmarks (see also the tab "Bookmarks" on the left panel):
 
-* links staan mappen met kaartlagen
-* vind map "Chemische Componenten (Historie)"
-* deze map openen
-* dan bijv submap "Nitrogen Dioxide (NO2) - WMS" openen
-* dan de laag "TEST RIO APS NO2" aanvinken
+* NO2 coverage: http://sensors.geonovum.nl/heronviewer/?bookmark=rivmriono2
+* O3 coverage: http://sensors.geonovum.nl/heronviewer/?bookmark=rivmriono3
+* PM10 coverage: http://sensors.geonovum.nl/heronviewer/?bookmark=rivmriopm10
+
+Or by hand: go to http://sensors.geonovum.nl/heronviewer
+
+* left are all map-layers organized as a collapsible explorer folders
+* find the folder named "Chemische Componenten (Historie)"
+* open this folder
+* open subfolder named "Nitrogen Dioxide (NO2) - WMS"
+* activate the map-layer named "TEST RIO APS NO2"
 
 These values can be compared with the WMS-Time Layer-based values for the same component, for example
 for NO2:

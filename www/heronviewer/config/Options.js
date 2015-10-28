@@ -8,6 +8,26 @@ OpenLayers.DOTS_PER_INCH = 25.4 / 0.28;
 Ext.BLANK_IMAGE_URL = 'http://cdnjs.cloudflare.com/ajax/libs/extjs/3.4.1-1/resources/images/default/s.gif';
 GeoExt.Lang.set("nl");
 
+/**
+ * Check if bookmark passed in parms
+ * TODO: move to heron core !!
+ */
+Ext.onReady(function() {
+    // Bookmark e.g. http://sensors.geonovum.nl/heronviewer?bookmark=rivmriono2 may be passed in
+    var queryParams = OpenLayers.Util.getParameters();
+    var bookmark = (queryParams && queryParams['bookmark'] !== undefined) ? queryParams['bookmark'] : undefined;
+    if (bookmark) {
+        var bookmarksPanel = Ext.getCmp('hr-bookmarks');
+        if (bookmarksPanel) {
+            try {
+                Heron.widgets.Bookmarks.setMapContext('hr-bookmarks', bookmark);
+            } catch (err) {
+                alert('could not load bookmark');
+            }
+        }
+    }
+});
+
 //        new Ext.data.Store({
 //      proxy: new Ext.data.HttpProxy({url: '/testapp/poptype.json',method:'GET'}),
 //      reader: new Ext.data.JsonReader({
@@ -374,30 +394,85 @@ Ext.namespace("Heron.options.bookmarks");
 Heron.options.bookmarks =
     [
         {
-            id: 'degrift',
-            name: 'Kadaster - De Grift',
-            desc: 'Vestiging De Grift Apeldoorn',
-            layers: ['BRT Achtergrondkaart'],
-            x: 194322,
-            y: 469474,
-            zoom: 13
+            id: 'rivmno2',
+            name: 'RIVM Current NO2',
+            desc: 'Current (Latest) values NO2',
+            layers: ['OpenBasisKaart OSM', 'RIVM - All Stations', 'RIVM - Current NO2'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
         },
         {
-            id: 'debrug',
-            name: 'Kadaster - De Brug',
-            desc: 'Vestiging De Brug Apeldoorn',
-            layers: ['Luchtfoto (PDOK)'],
-            x: 194194,
-            y: 465873,
-            zoom: 13
+            id: 'rivmo3',
+            name: 'RIVM Current O3',
+            desc: 'Current (Latest) values O3',
+            layers: ['OpenBasisKaart OSM', 'RIVM - All Stations', 'RIVM - Current O3'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
         },
         {
-            id: 'debrugbrt',
-            name: 'Kadaster - De Brug met BRT',
-            desc: 'Vestiging De Brug Apeldoorn',
-            layers: ['BRT Achtergrondkaart'],
-            x: 194194,
-            y: 465873,
-            zoom: 13
+            id: 'rivmpm10',
+            name: 'RIVM Current PM10',
+            desc: 'Current (Latest) values PM10',
+            layers: ['OpenBasisKaart OSM', 'RIVM - All Stations', 'RIVM - Current PM10'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
+        },
+        {
+            id: 'smartemno2',
+            name: 'Smart Emissions Latest NO2',
+            desc: 'Current (Latest) values NO2',
+            layers: ['OpenSimpleTopo TMS', 'Smart Emission - Sensors', 'Smart Emission - Current NO2'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
+        },
+        {
+            id: 'smartemo3',
+            name: 'Smart Emissions Latest O3',
+            desc: 'Current (Latest) values O3',
+            layers: ['OpenBasisKaart OSM', 'Smart Emission - Sensors', 'Smart Emission - Current O3'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
+        },
+        {
+            id: 'smartemco',
+            name: 'Smart Emissions Latest CO',
+            desc: 'Current (Latest) values CO',
+            layers: ['OpenBasisKaart OSM', 'Smart Emission - Sensors', 'Smart Emission - Current CO'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
+        },
+        {
+            id: 'rivmriono2',
+            name: 'RIVM RIO NO2 Coverage',
+            desc: 'Current (Latest) values NO2',
+            layers: ['OpenBasisKaart OSM', 'TEST - RIO APS NO2'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
+        },
+        {
+            id: 'rivmrioo3',
+            name: 'RIVM RIO O3 Coverage',
+            desc: 'Current (Latest) values O3',
+            layers: ['OpenBasisKaart OSM', 'TEST - RIO APS O3'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
+        },
+        {
+            id: 'rivmriopm10',
+            name: 'RIVM RIO PM10 Coverage',
+            desc: 'Current (Latest) values PM10',
+            layers: ['OpenBasisKaart OSM', 'TEST - RIO APS PM10'],
+            x: 155000,
+            y: 465000,
+            zoom: 3
         }
+
     ];

@@ -10,7 +10,7 @@ Goals
 4- get temperatures from CB
 5- show in Wirecloud Mashup
 
-ROugly follow this article.
+Rougly follow this article.
 https://www.fiware.org/2014/06/18/connect-your-own-internet-of-things-to-fi-lab/
 
 0- register at lab.fiware.org (justb4)

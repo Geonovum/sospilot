@@ -116,6 +116,8 @@ Heron.scratch.urls = {
     KADEMO_WFS: 'http://kademo.nl/gs2/wfs?',
     KADEMO_OWS: 'http://kademo.nl/gs2/ows?',
     KADEMO_GWC_TMS: 'http://kademo.nl/gwc/service/tms/',
+    MAP5_TMS: 'http://s.map5.nl/map/gast/tms/',
+    MAP5_WMS: 'http://s.map5.nl/map/gast/service?',
     OPENBASISKAART_TMS: 'http://openbasiskaart.nl/mapcache/tms/',
     RO_WMS: 'http://afnemers.ruimtelijkeplannen.nl/afnemers/services?',
     KNMI_ACT_10MIN: 'https://data.knmi.nl/wms/cgi-bin/wms.cgi?%26source%3D%2FActuele10mindataKNMIstations%2F1%2Fnoversion%2F2014%2F11%2F04%2FKMDS__OPER_P___10M_OBS_L2%2Enc%26'
@@ -246,22 +248,102 @@ Heron.options.map.layers = [
             transitionEffect: 'resize'
         }),
 
-    /*
-     * Combinatie top250/50/25
-     * http://kademo.nl/gwc/service/tms/1.0.0/top_raster@nlGridSetPDOK@png
-     */
-    new OpenLayers.Layer.TMS(
-        "TopRaster",
-        Heron.scratch.urls.KADEMO_GWC_TMS,
+    new OpenLayers.Layer.TMS("OpenTopo TMS",
+        Heron.scratch.urls.MAP5_TMS,
         {
-            layername: 'top_raster@nlGridSetPDOK@png',
-            type: "png",
+            layername: 'opentopo/EPSG28992',
+            type: "jpeg",
             isBaseLayer: true,
-            transparent: true,
+            transparent: false,
             bgcolor: "0xffffff",
             visibility: false,
             singleTile: false,
-            alpha: true, opacity: 1.0,
+            serverResolutions: Heron.options.serverResolutions.zoom_0_16,
+            alpha: true,
+            opacity: 1.0,
+            attribution: "CC by CA <a href='http://opentopo.nl'>OpenTopo</a> <br/>Data <a href='http://www.openstreetmap.org/copyright'>ODbL</a> <a href='http://openstreetmap.org/'>OpenStreetMap</a> ",
+            transitionEffect: 'resize',
+            metadata: {
+                legend: {
+                    // Use a fixed URL as legend
+                    legendURL: 'images/legend/legenda-opentopo-1012.png',
+                    hideInLegend: false
+                }
+            }
+        }),
+
+    new OpenLayers.Layer.TMS("OpenSimpleTopo TMS",
+        Heron.scratch.urls.MAP5_TMS,
+        {
+            layername: 'opensimpletopo/EPSG28992',
+            type: "jpeg",
+            isBaseLayer: true,
+            transparent: false,
+            bgcolor: "0xffffff",
+            visibility: false,
+            singleTile: false,
+            serverResolutions: Heron.options.serverResolutions.zoom_0_16,
+            alpha: true,
+            opacity: 1.0,
+            attribution: "CC by CA <a href='http://opentopo.nl'>OpenTopo</a> <br/>Data <a href='http://www.openstreetmap.org/copyright'>ODbL</a> <a href='http://openstreetmap.org/'>OpenStreetMap</a> ",
+            transitionEffect: 'resize',
+            metadata: {
+                legend: {
+                    // Use a fixed URL as legend
+                    legendURL: 'images/legend/legenda-opensimpletopo-760.png',
+                    hideInLegend: false
+                }
+            }
+        }),
+
+    new OpenLayers.Layer.TMS("Map5 Relief Struct TMS",
+        Heron.scratch.urls.MAP5_TMS,
+        {
+            layername: 'relief_struct/EPSG28992',
+            type: "jpeg",
+            isBaseLayer: true,
+            transparent: false,
+            bgcolor: "0xffffff",
+            visibility: false,
+            singleTile: false,
+            serverResolutions: Heron.options.serverResolutions.zoom_0_16,
+            alpha: true,
+            opacity: 1.0,
+            attribution: "CC by CA <a href='http://opentopo.nl'>OpenTopo</a> <br/>Data <a href='http://www.openstreetmap.org/copyright'>ODbL</a> <a href='http://openstreetmap.org/'>OpenStreetMap</a> ",
+            transitionEffect: 'resize'
+        }),
+
+    new OpenLayers.Layer.TMS("Map5 OpenLufo TMS",
+        Heron.scratch.urls.MAP5_TMS,
+        {
+            layername: 'openlufo/EPSG28992',
+            type: "jpeg",
+            isBaseLayer: true,
+            transparent: false,
+            bgcolor: "0xffffff",
+            visibility: false,
+            singleTile: false,
+            serverResolutions: Heron.options.serverResolutions.zoom_0_16,
+            alpha: true,
+            opacity: 1.0,
+            attribution: "CC by CA <a href='http://opentopo.nl'>OpenTopo</a> <br/>Data <a href='http://www.openstreetmap.org/copyright'>ODbL</a> <a href='http://openstreetmap.org/'>OpenStreetMap</a> ",
+            transitionEffect: 'resize'
+        }),
+
+    new OpenLayers.Layer.TMS("Map5 TopRaster TMS",
+        Heron.scratch.urls.MAP5_TMS,
+        {
+            layername: 'topraster/EPSG28992',
+            type: "jpeg",
+            isBaseLayer: true,
+            transparent: false,
+            bgcolor: "0xffffff",
+            visibility: false,
+            singleTile: false,
+            serverResolutions: Heron.options.serverResolutions.zoom_0_16,
+            alpha: true,
+            opacity: 1.0,
+            attribution: "<a href='http://kadaster.nl'>Kadaster</a>, rendered by <a href='http://map5.nl'>Map5.nl</a> ",
             transitionEffect: 'resize',
             metadata: {
                 legend: {
@@ -271,6 +353,32 @@ Heron.options.map.layers = [
                 }
             }
         }),
+
+    /*
+     * Combinatie top250/50/25
+     * http://kademo.nl/gwc/service/tms/1.0.0/top_raster@nlGridSetPDOK@png
+     */
+    //new OpenLayers.Layer.TMS(
+    //    "TopRaster",
+    //    Heron.scratch.urls.KADEMO_GWC_TMS,
+    //    {
+    //        layername: 'top_raster@nlGridSetPDOK@png',
+    //        type: "png",
+    //        isBaseLayer: true,
+    //        transparent: true,
+    //        bgcolor: "0xffffff",
+    //        visibility: false,
+    //        singleTile: false,
+    //        alpha: true, opacity: 1.0,
+    //        transitionEffect: 'resize',
+    //        metadata: {
+    //            legend: {
+    //                // Use a fixed URL as legend
+    //                legendURL: 'images/legend/legenda-t25raster.png',
+    //                hideInLegend: false
+    //            }
+    //        }
+    //    }),
 
     /*
      * Areal images PDOK.
@@ -1802,8 +1910,12 @@ Heron.options.layertree.tree = [
         text: 'Basis Kaarten', expanded: false, children: [
         {nodeType: "gx_layer", layer: "BRT Achtergrondkaart", text: "BRT (PDOK)"},
         {nodeType: "gx_layer", layer: "OpenBasisKaart OSM"},
+        {nodeType: "gx_layer", layer: "OpenTopo TMS", text: "OpenTopo (Map5.nl)"},
+        {nodeType: "gx_layer", layer: "OpenSimpleTopo TMS", text: "OpenSimpleTopo (Map5.nl)"},
+        {nodeType: "gx_layer", layer: "Map5 OpenLufo TMS", text: "OpenLufo (Map5.nl)"},
+        {nodeType: "gx_layer", layer: "Map5 Relief Struct TMS", text: "AHN2 Reliëf (Map5.nl)"},
+        {nodeType: "gx_layer", layer: "Map5 TopRaster TMS", text: "TopRaster (Map5.nl)"},
         {nodeType: "gx_layer", layer: "Luchtfoto (PDOK)"},
-        {nodeType: "gx_layer", layer: "TopRaster", text: "TopRaster (Kadaster)"},
         {nodeType: "gx_layer", layer: "Blanco"}
     ]
     },

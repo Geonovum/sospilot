@@ -106,7 +106,7 @@ Heron.layout = {
                     id: 'gxplayerpanel',
                     collapsed: true,
                     border: false,
-                    title: 'Add Layers (Experimental)',
+                    title: 'Add Layers from Catalogs',
 //                    header: false,
 //                    width: 240,
                     tbar: [], // we will add buttons to "gxplayerpanel.bbar" later
