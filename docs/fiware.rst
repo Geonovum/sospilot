@@ -29,7 +29,7 @@ And appearantly by others as well.
 
 http://stackoverflow.com/questions/31051501/missing-attributes-on-orion-cb-entity-when-registering-device-through-idas
 
-After an unsuccessful attempt to compile and run the OCB and IoT Agent on Ubuntu 14.03
+After an unsuccessful attempt to compile and run the OCB and IoT Agent on Ubuntu 14.04-3
 it was decided to use Docker. This seems the best/recommended option anyway as CentOS is the primary
 target platform for FIWARE. See next section.
 
@@ -218,7 +218,7 @@ See tutorial at: http://www.slideshare.net/FI-WARE/fiware-iotidasintroul20v2.
 Sending commands from local system using FIWARE FIGWAY (python-IDAS4): https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4.
 These are a set of Python commands for most common REST services for both the OCB and IoTAgent/Manager.
 
-Prepare the right ``config.ini`` used by all cPython commands ::
+Prepare the right ``config.ini`` used by all Python commands ::
 
 	[user]
 	# Please, configure here your username at FIWARE Cloud and a valid Oauth2.0 TOKEN for your user
@@ -542,7 +542,8 @@ Installing FIWARE - from Source
 ===============================
 
 Done on the Linux VPS (Ubuntu 14.04).
-**Abandoned, Orion CB comppiled and ran with mongodb, but IoTAgent gave core dump, using Docker now, but kept for reference.**
+
+**Abandoned, Orion CB compiled and ran with mongodb, but IoTAgent gave core dump, using Docker now, but kept for reference.**
 
 Orion Context Broker (OCB)
 --------------------------
@@ -768,44 +769,42 @@ Create install scripts from RPM spec files.
 Running
 ~~~~~~~
 
-{
-    "ngsi_url": {
-        "cbroker": "http://127.0.0.1:1026",
-        "updateContext": "/NGSI10/updateContext",
-        "registerContext": "/NGSI9/registerContext",
-        "queryContext": "/NGSI10/queryContext"
-    },
-    "timeout": 10,
-    "http_proxy": "PUBLIC_PROXY_PORT",
-    "public_ip": "8081",
-    "dir_log": "/var/log/iot/",
-    "timezones": "/etc/iot/date_time_zonespec.csv",
-    "storage": {
-        "host": "localhost",
-        "type": "mongodb",
-        "port": "27017",
-        "dbname": "iot"
-    },
-   "resources": [
-        {
-            "resource": "/iot/d",
-            "options": {
-                "FileName": "UL20Service"
-            }
-        },
-        {
-            "resource": "/iot/mqtt",
-            "options": {
-                "ConfigFile" : "/etc/iot/MqttService.xml",
-                "FileName": "MqttService"
-            }
-         }
-   ]
-}
+Config JSON. ::
 
-
-mkdir /var/log/iot/
-cp ../../schema/* /etc/iot
+	{
+	    "ngsi_url": {
+	        "cbroker": "http://127.0.0.1:1026",
+	        "updateContext": "/NGSI10/updateContext",
+	        "registerContext": "/NGSI9/registerContext",
+	        "queryContext": "/NGSI10/queryContext"
+	    },
+	    "timeout": 10,
+	    "http_proxy": "PUBLIC_PROXY_PORT",
+	    "public_ip": "8081",
+	    "dir_log": "/var/log/iot/",
+	    "timezones": "/etc/iot/date_time_zonespec.csv",
+	    "storage": {
+	        "host": "localhost",
+	        "type": "mongodb",
+	        "port": "27017",
+	        "dbname": "iot"
+	    },
+	   "resources": [
+	        {
+	            "resource": "/iot/d",
+	            "options": {
+	                "FileName": "UL20Service"
+	            }
+	        },
+	        {
+	            "resource": "/iot/mqtt",
+	            "options": {
+	                "ConfigFile" : "/etc/iot/MqttService.xml",
+	                "FileName": "MqttService"
+	            }
+	         }
+	   ]
+	}
 
 Need these files
 https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/tree/develop/rpm/SOURCES
