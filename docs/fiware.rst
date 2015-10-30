@@ -17,6 +17,21 @@ The Plan
 # get temperatures from Orion CB
 # show in Wirecloud Mashup
 
+Via lab.fiware.org
+==================
+
+Registering at the international FIWARE Lab worked ok, but could not get
+the Orion CB with the IDAS IoTAgent working. The interaction between the two
+seemed to be broken. This was reported, see specifics here:
+http://stackoverflow.com/questions/32933813/fiware-no-observation-attributes-in-orion-cb-when-registered-sent-via-idas-ultr
+
+And appearantly by others as well.
+
+http://stackoverflow.com/questions/31051501/missing-attributes-on-orion-cb-entity-when-registering-device-through-idas
+
+After an unsuccessful attempt to compile and run the OCB and IoT Agent on Ubuntu 14.03
+it was decided to use Docker. This seems the best/recommended option anyway as CentOS is the primary
+target platform for FIWARE. See next section.
 
 Installing FIWARE - with Docker
 ===============================
@@ -30,7 +45,7 @@ See https://docs.docker.com/installation/ubuntulinux. Install via Docker APT rep
 
 Steps. ::
 
-	# Kernel version
+	# Kernel version OK for Docker
 	$ uname -r
 	3.13.0-66-generic
 
@@ -51,9 +66,20 @@ Steps. ::
 	docker run hello-world
 	docker run -it ubuntu bash
 
+	# cleanup non-running images
+	docker rm -v $(docker ps -a -q -f status=exited)
+	docker rmi $(docker images -f "dangling=true" -q)
+
 Docker-compose. https://docs.docker.com/compose/install. Easiest via ``pip``. ::
 
 	$ pip install docker-compose
+
+Docker utils.  ::
+
+	docker ps -a
+
+	# go into docker image named docker_iotacpp_1 to bash prompt
+	docker exec -it docker_iotacpp_1 bash
 
 Install FIWARE for IoT
 ----------------------
@@ -96,11 +122,11 @@ So our iota.yml becomes:
 
 Now start. ::
 
-	# Start containers
-	$ docker-compose -f iota.yaml up -d iotacpp
+	# Start containers (-d iotacpp option not required?)
+	$ docker-compose -f iota.yaml up
 
 	# Stopping
-    $ docker-compose -f iota.yaml stop
+	$ docker-compose -f iota.yaml stop
 
 	# check
 	$ docker images
@@ -119,11 +145,11 @@ Now start. ::
 
 	# get into a container with bash
 	docker exec -it docker_orion_1 bash
-    [root@1c9dceec8ec8 /]# ps -elf
-    F S UID        PID  PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
-    4 S root         1     0  0  80   0 - 50812 hrtime 15:19 ?        00:00:00 /usr/bin/contextBroker -fg -multiservice
-    4 S root       976     0  0  80   0 -  3374 wait   15:35 ?        00:00:00 bash
-    0 R root      1021   976  0  80   0 -  3846 -      15:36 ?        00:00:00 ps -elf
+	[root@1c9dceec8ec8 /]# ps -elf
+	F S UID        PID  PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
+	4 S root         1     0  0  80   0 - 50812 hrtime 15:19 ?        00:00:00 /usr/bin/contextBroker -fg -multiservice
+	4 S root       976     0  0  80   0 -  3374 wait   15:35 ?        00:00:00 bash
+	0 R root      1021   976  0  80   0 -  3846 -      15:36 ?        00:00:00 ps -elf
 
 	[root@1c9dceec8ec8 /]# cat /etc/hosts
 	172.17.0.41	1c9dceec8ec8
@@ -146,15 +172,15 @@ Now start. ::
 	# Check Orion
 	$ curl 172.17.0.41:1026/statistics
 	<orion>
-	  <versionRequests>0</versionRequests>
-	  <statisticsRequests>1</statisticsRequests>
-	  <uptime_in_secs>1472</uptime_in_secs>
-	  <measuring_interval_in_secs>1472</measuring_interval_in_secs>
-	  <subCacheRefreshs>3</subCacheRefreshs>
-	  <subCacheInserts>0</subCacheInserts>
-	  <subCacheRemoves>0</subCacheRemoves>
-	  <subCacheUpdates>0</subCacheUpdates>
-	  <subCacheItems>0</subCacheItems>
+		<versionRequests>0</versionRequests>
+		<statisticsRequests>1</statisticsRequests>
+		<uptime_in_secs>1472</uptime_in_secs>
+		<measuring_interval_in_secs>1472</measuring_interval_in_secs>
+		<subCacheRefreshs>3</subCacheRefreshs>
+		<subCacheInserts>0</subCacheInserts>
+		<subCacheRemoves>0</subCacheRemoves>
+		<subCacheUpdates>0</subCacheUpdates>
+		<subCacheItems>0</subCacheItems>
 	</orion>
 
 	# Check iot agent iotacpp
@@ -176,12 +202,347 @@ Now start. ::
 	curl -g -X GET http://sensors.geonovum.nl:8000/iot/about
 	Welcome to IoTAgents  identifier:IoTPlatform:8080  1.3.0 commit 128.g14ee433 in Oct 28 2015
 
+Testing IoTAgent-Orion
+----------------------
+
+Simple scenario, using the UltraLight (UL2.0) IoT protocol.:
+
+#. create IoT service via IoTAgent (IDAS)
+#. create IoT device via IoTAgent (IDAS)
+#. observe new Entity in Orion
+#. send temperature via IDAS
+#. observe changed Entity via Orion
+
+See tutorial at: http://www.slideshare.net/FI-WARE/fiware-iotidasintroul20v2.
+
+Sending commands from local system using FIWARE FIGWAY (python-IDAS4): https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4.
+These are a set of Python commands for most common REST services for both the OCB and IoTAgent/Manager.
+
+Prepare the right ``config.ini`` used by all cPython commands ::
+
+	[user]
+	# Please, configure here your username at FIWARE Cloud and a valid Oauth2.0 TOKEN for your user
+	# (you can use get_token.py to obtain a valid TOKEN).
+	username=(not required)
+	token=(not required here)
+
+	[contextbroker]
+	# host=130.206.80.40
+	host=sensors.geonovum.nl
+	port=1026
+	OAuth=no
+	# Here you need to specify the ContextBroker database you are querying.
+	# Leave it blank if you want the general database or the IDAS service if you are
+	# looking for IoT devices connected by you.
+	fiware_service=fiwareiot
+	# fiware_service=bus_auto
+	fiware-service-path=/
+
+	[idas]
+	host=sensors.geonovum.nl
+	# host=130.206.80.40
+	#adminport=5371
+	#ul20port=5371
+	adminport=8081
+	ul20port=8000
+	OAuth=no
+	# Here you need to configure the IDAS service your devices will be sending data to.
+	# By default the OpenIoT service is provided.
+	#
+	#fiware-service=fiwareiot
+	fiware-service=fiwareiot
+	# fiware-service=bus_auto
+	fiware-service-path=/
+	apikey=4jggokgpepnvsb2uv4s40d59ov
+
+	[local]
+	#Choose here your System type. Examples: RaspberryPI, MACOSX, Linux, ...
+	host_type=MACOSX
+	# Here please add a unique identifier for you. Suggestion: the 3 lower hexa bytes of your Ethernet MAC. E.g. 79:ed:af
+	# Also you may use your e-mail address.
+	host_id=a0:11:00
+
+Create device template (called ``OTTERLO_TEMP``) under
+https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/Sensors_UL20/devices ::
+
+	{
+	 "devices": [
+	    { "device_id": "DEV_ID",
+	      "entity_name": "ENTITY_ID",
+	      "entity_type": "thing",
+	      "protocol": "PDI-IoTA-UltraLight",
+	      "timezone": "Europe/Amsterdam",
+	"attributes": [
+	        { "object_id": "ot",
+	          "name": "temperature",
+	          "type": "int"
+	        } ],
+	 "static_attributes": [
+	        { "name": "location",
+	          "type": "string",
+	          "value": "BosHut"
+	        }
+	       ]
+	      }
+	     ]
+	    }
+
+
+Create service, then a device and send an observation using Python code under
+https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/Sensors_UL20 (IoTAgent with UL protocol) and
+https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/ContextBroker (OCB).
+Watch that the related Entity is created in the OCB and that it gets an attribute value when sending
+an Observation to the IoTAgent. ::
+
+	# IoTAgent: List devices (none present)
+	python ListDevices.py
+	* Asking to http://sensors.geonovum.nl:8000/iot/devices
+	* Headers: {'Fiware-Service': 'fiwareiot', 'content-type': 'application/json', 'Fiware-ServicePath': '/', 'X-Auth-Token': 'NULL'}
+	...
+
+	* Status Code: 200
+	* Response:
+	{ "count": 0,"devices": []}
+
+	# OCB: Show Entities ot OCB (none present)
+	$ python GetEntities.py ALL
+	* Asking to http://sensors.geonovum.nl:1026/ngsi10/queryContext
+	* Headers: {'Fiware-Service': 'fiwareiot', 'content-type': 'application/json', 'accept': 'application/json', 'X-Auth-Token': 'NULL'}
+	* Sending PAYLOAD:
+	{
+	    "entities": [
+	        {
+	            "type": "",
+	            "id": ".*",
+	            "isPattern": "true"
+	        }
+	    ],
+	    "attributes": []
+	}
+
+	# IoTAgent: Create an IoT service
+	$ python CreateService.py fiwareiot 4jggokgpepnvsb2uv4s40d59ov 185.21.189.59 1026
+	* Asking to http://sensors.geonovum.nl:8000/iot/services
+	* Headers: {'Fiware-Service': 'fiwareiot', 'content-type': 'application/json', 'Fiware-ServicePath': '/', 'X-Auth-Token': 'NULL'}
+	* Sending PAYLOAD:
+	{
+	    "services": [
+	        {
+	            "token": "token2",
+	            "apikey": "4jggokgpepnvsb2uv4s40d59ov",
+	            "resource": "/iot/d",
+	            "entity_type": "thing",
+	            "cbroker": "http://185.21.189.59:1026"
+	        }
+	    ]
+	}
+
+	# IoTAgent: Register a Device passing related Entity name
+	$ python RegisterDevice.py OTTERLO_TEMP NexusProDev WeatherOtterloEnt
+	* opening: ./devices/OTTERLO_TEMP
+	* Asking to http://sensors.geonovum.nl:8000/iot/devices
+	* Headers: {'Fiware-Service': 'fiwareiot', 'content-type': 'application/json', 'Fiware-ServicePath': '/', 'X-Auth-Token': 'NULL'}
+	* Sending PAYLOAD:
+	{
+	    "devices": [
+	        {
+	            "protocol": "PDI-IoTA-UltraLight",
+	            "entity_name": "WeatherOtterloEnt",
+	            "entity_type": "thing",
+	            "static_attributes": [
+	                {
+	                    "type": "string",
+	                    "name": "location",
+	                    "value": "BosHut"
+	                }
+	            ],
+	            "timezone": "Europe/Amsterdam",
+	            "attributes": [
+	                {
+	                    "type": "int",
+	                    "name": "temperature",
+	                    "object_id": "ot"
+	                }
+	            ],
+	            "device_id": "NexusProDev"
+	        }
+	    ]
+	}
+
+	...
+
+	* Status Code: 201
+
+    # IoTAgent: List the newly added device
+	$ python ListDevices.py
+	* Asking to http://sensors.geonovum.nl:8000/iot/devices
+	* Headers: {'Fiware-Service': 'fiwareiot', 'content-type': 'application/json', 'Fiware-ServicePath': '/', 'X-Auth-Token': 'NULL'}
+	...
+
+	* Status Code: 200
+	* Response:
+	{ "count": 1,"devices": [{ "device_id" : "NexusProDev" }]}
+
+	# OCB: Show related Entity in OCB
+	$ python GetEntities.py ALL
+	* Asking to http://sensors.geonovum.nl:1026/ngsi10/queryContext
+	* Headers: {'Fiware-Service': 'fiwareiot', 'content-type': 'application/json', 'accept': 'application/json', 'X-Auth-Token': 'NULL'}
+	* Sending PAYLOAD:
+	{
+	    "entities": [
+	        {
+	            "type": "",
+	            "id": ".*",
+	            "isPattern": "true"
+	        }
+	    ],
+	    "attributes": []
+	}
+
+	...
+
+	* Status Code: 200
+	***** Number of Entity Types: 1
+
+	***** List of Entity Types
+	<entityId type="thing" isPattern="false"> : 1
+
+	**** Number of Entity IDs: 1
+
+	**** List of Entity IDs
+	<id>WeatherOtterloEnt< : 1
+
+	Do you want me to print all Entities? (yes/no)yes
+	<queryContextResponse>
+	  <contextResponseList>
+	    <contextElementResponse>
+	      <contextElement>
+	        <entityId type="thing" isPattern="false">
+	          <id>WeatherOtterloEnt</id>
+	        </entityId>
+	        <contextAttributeList>
+	          <contextAttribute>
+	            <name>TimeInstant</name>
+	            <type>ISO8601</type>
+	            <contextValue>2015-10-30T20:21:17.557970</contextValue>
+	          </contextAttribute>
+	          <contextAttribute>
+	            <name>location</name>
+	            <type>string</type>
+	            <contextValue>BosHut</contextValue>
+	            <metadata>
+	              <contextMetadata>
+	                <name>TimeInstant</name>
+	                <type>ISO8601</type>
+	                <value>2015-10-30T20:21:17.558093</value>
+	              </contextMetadata>
+	            </metadata>
+	          </contextAttribute>
+	        </contextAttributeList>
+	      </contextElement>
+	      <statusCode>
+	        <code>200</code>
+	        <reasonPhrase>OK</reasonPhrase>
+	      </statusCode>
+	    </contextElementResponse>
+	  </contextResponseList>
+	</queryContextResponse>
+
+	# IoTAgent: Send an Observation to device
+	$ python SendObservation.py NexusProDev 'ot|16'
+	* Asking to http://sensors.geonovum.nl:8000/iot/d?k=4jggokgpepnvsb2uv4s40d59ov&i=NexusProDev
+	* Headers: {'Fiware-Service': 'fiwareiot', 'content-type': 'application/json', 'Fiware-ServicePath': '/', 'X-Auth-Token': 'NULL'}
+	* Sending PAYLOAD:
+	ot|16
+
+	...
+
+	* Status Code: 200
+	* Response:
+
+	# OCB: See value in Entity
+    python GetEntities.py ALL
+    * Asking to http://sensors.geonovum.nl:1026/ngsi10/queryContext
+    * Headers: {'Fiware-Service': 'fiwareiot', 'content-type': 'application/json', 'accept': 'application/json', 'X-Auth-Token': 'NULL'}
+    * Sending PAYLOAD:
+    {
+        "entities": [
+            {
+                "type": "",
+                "id": ".*",
+                "isPattern": "true"
+            }
+        ],
+        "attributes": []
+    }
+
+    ...
+
+    * Status Code: 200
+    ***** Number of Entity Types: 1
+
+    ***** List of Entity Types
+    <entityId type="thing" isPattern="false"> : 1
+
+    **** Number of Entity IDs: 1
+
+    **** List of Entity IDs
+    <id>WeatherOtterloEnt< : 1
+
+    Do you want me to print all Entities? (yes/no)yes
+    <queryContextResponse>
+      <contextResponseList>
+        <contextElementResponse>
+          <contextElement>
+            <entityId type="thing" isPattern="false">
+              <id>WeatherOtterloEnt</id>
+            </entityId>
+            <contextAttributeList>
+              <contextAttribute>
+                <name>TimeInstant</name>
+                <type>ISO8601</type>
+                <contextValue>2015-10-30T21:04:13.770532</contextValue>
+              </contextAttribute>
+              <contextAttribute>
+                <name>location</name>
+                <type>string</type>
+                <contextValue>BosHut</contextValue>
+                <metadata>
+                  <contextMetadata>
+                    <name>TimeInstant</name>
+                    <type>ISO8601</type>
+                    <value>2015-10-30T21:04:13.770563</value>
+                  </contextMetadata>
+                </metadata>
+              </contextAttribute>
+              <contextAttribute>
+                <name>temperature</name>
+                <type>int</type>
+                <contextValue>16</contextValue>
+                <metadata>
+                  <contextMetadata>
+                    <name>TimeInstant</name>
+                    <type>ISO8601</type>
+                    <value>2015-10-30T21:04:13.770532</value>
+                  </contextMetadata>
+                </metadata>
+              </contextAttribute>
+            </contextAttributeList>
+          </contextElement>
+          <statusCode>
+            <code>200</code>
+            <reasonPhrase>OK</reasonPhrase>
+          </statusCode>
+        </contextElementResponse>
+      </contextResponseList>
+    </queryContextResponse>
 
 
 Installing FIWARE - from Source
 ===============================
 
-Done on the Linux VPS (Ubuntu 14.04). *Abandoned, using Docker now, but kept for reference.*
+Done on the Linux VPS (Ubuntu 14.04).
+**Abandoned, Orion CB comppiled and ran with mongodb, but IoTAgent gave core dump, using Docker now, but kept for reference.**
 
 Orion Context Broker (OCB)
 --------------------------
@@ -442,64 +803,6 @@ Running
    ]
 }
 
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/cppunit/src/test-cppunit/src/cppunit/.libs/libcppunit-1.12.so.1.0.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/cppunit/lib/libcppunit-1.12.so.1.0.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/src/.libs/libpion-5.0.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/doc/README.solaris /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/HelloService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/CookieService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/EchoService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/CookieService.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/AllowNothingService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/HelloService.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/AllowNothingService.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/FileService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/LogService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/FileService.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/EchoService.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/services/.libs/LogService.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/tests/plugins/.libs/hasCreateAndDestroy.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/tests/plugins/.libs/hasCreateButNoDestroy.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/tests/plugins/.libs/hasCreateAndDestroy.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/tests/plugins/.libs/hasNoCreate.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/tests/plugins/.libs/hasCreateButNoDestroy.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/src/pion-library/tests/plugins/.libs/hasNoCreate.soT /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/HelloService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/CookieService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/EchoService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/AllowNothingService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/FileService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/LogService.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/hasCreateAndDestroy.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/hasNoCreate.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/share/pion/plugins/hasCreateButNoDestroy.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/pion/lib/libpion-5.0.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/log4cplus/src/logger-log4cplus-build/src/.libs/liblog4cplus-1.1.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/log4cplus/lib/liblog4cplus-1.1.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/libcares/src/libcares-build/.libs/libcares.so.2.1.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/libcares/lib/libcares.so.2.1.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/tools/build/v2/engine/boehm_gc/doc/README.solaris2 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/bin.v2/libs/test/build/gcc-4.8/release/threading-multi/libboost_prg_exec_monitor.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/bin.v2/libs/test/build/gcc-4.8/release/threading-multi/libboost_unit_test_framework.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/bin.v2/libs/regex/build/gcc-4.8/release/threading-multi/libboost_regex.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/bin.v2/libs/date_time/build/gcc-4.8/release/threading-multi/libboost_date_time.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/bin.v2/libs/thread/build/gcc-4.8/release/threading-multi/libboost_thread.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/bin.v2/libs/system/build/gcc-4.8/debug/threading-multi/libboost_system.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/bin.v2/libs/system/build/gcc-4.8/release/threading-multi/libboost_system.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/src/boost/bin.v2/libs/filesystem/build/gcc-4.8/release/threading-multi/libboost_filesystem.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/lib/libboost_system.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/lib/libboost_filesystem.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/lib/libboost_prg_exec_monitor.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/lib/libboost_regex.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/lib/libboost_unit_test_framework.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/lib/libboost_date_time.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/boost/lib/libboost_thread.so.1.55.0 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/broker-mqtt/src/broker-mqtt-build/lib/cpp/libmosquittopp.so.1.4.4 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/broker-mqtt/src/broker-mqtt-build/lib/libmosquitto.so.1.4.4 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/broker-mqtt/lib/libmosquittopp.so.1.4.4 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/broker-mqtt/lib/libmosquitto.so.1.4.4 /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/mongo-driver/src/mongo-driver/build/linux2/normal/libmongoclient.so /usr/local/iot/lib
-cp ${CMAKE_CURRENT_SOURCE_DIR}/build/Release/third_party/mongo-driver/lib/libmongoclient.so /usr/local/iot/lib
 
 mkdir /var/log/iot/
 cp ../../schema/* /etc/iot

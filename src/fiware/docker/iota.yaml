@@ -18,7 +18,8 @@ orion:
     links:
         - mongodb
     ports:
-        - "185.21.189.59:1026:1026"
+        - "1026:1026"
+    command: -dbhost mongodb
 
 iotacpp:
     image: telefonicaiot/iotacpp
