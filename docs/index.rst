@@ -24,6 +24,7 @@ Contents:
    weatherstation.rst
    raspberrypi-install.rst
    server-inrichting.rst
+   fiware.rst
    ideas.rst
    contact.rst
    links.rst

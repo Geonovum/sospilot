@@ -552,3 +552,10 @@ PROBLEEM: geen temperatuur in Orion Context Broker:
 http://stackoverflow.com/questions/32933813/fiware-no-observation-attributes-in-orion-cb-when-registered-sent-via-idas-ultr?sem=2
 
 5- show in Wirecloud Mashup
+
+
+------------
+try installing Orion CB in VPS
+See https://github.com/telefonicaid/fiware-orion/blob/develop/doc/manuals/admin/build_source.md
+
+git clone https://github.com/telefonicaid/fiware-orion
