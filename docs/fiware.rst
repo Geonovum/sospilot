@@ -10,12 +10,12 @@ extended to use FI-WARE
 The Plan
 ========
 
-# register at lab.fiware.org (justb4)
-# get connected to public services in Lab
-# basic Context Broker (Orion) interaction
-# publish temperatures to IDAS using UltraLight protocol
-# get temperatures from Orion CB
-# show in Wirecloud Mashup
+1. register at lab.fiware.org (justb4)
+2. get connected to public services in Lab
+3. basic Context Broker (Orion) interaction
+4. publish temperatures to IDAS using UltraLight protocol
+5. get temperatures from Orion CB
+6. show in Wirecloud Mashup
 
 Via lab.fiware.org
 ==================
@@ -207,11 +207,11 @@ Testing IoTAgent-Orion
 
 Simple scenario, using the UltraLight (UL2.0) IoT protocol.:
 
-#. create IoT service via IoTAgent (IDAS)
-#. create IoT device via IoTAgent (IDAS)
-#. observe new Entity in Orion
-#. send temperature via IDAS
-#. observe changed Entity via Orion
+1. create IoT service via IoTAgent (IDAS)
+2. create IoT device via IoTAgent (IDAS)
+3. observe new Entity in Orion
+4. send temperature via IDAS
+5. observe changed Entity via Orion
 
 See tutorial at: http://www.slideshare.net/FI-WARE/fiware-iotidasintroul20v2.
 
