@@ -640,7 +640,7 @@ sent to ``fiware-lab-help@lists.fiware.org`` :  ::
 
 	However the Widgets, Operators in WC have no means to add the 'Fiware-Service' Header.
 
-This problem was posed at StackOverflow : http://stackoverflow.com/questions/33452246/fiware-wirecloud-fiware-service-http-header-needed-for-orion-cb
+This problem was posted at StackOverflow : http://stackoverflow.com/questions/33452246/fiware-wirecloud-fiware-service-http-header-needed-for-orion-cb
 
 Installing FIWARE - from Source
 ===============================
