@@ -17,6 +17,11 @@ The Plan
 5. get temperatures from Orion CB
 6. show in Wirecloud Mashup
 
+FIWARE Docs
+===========
+
+http://fiware-iot-stack.readthedocs.org/en/latest/index.html
+
 Via lab.fiware.org
 ==================
 
@@ -213,7 +218,8 @@ Simple scenario, using the UltraLight (UL2.0) IoT protocol.:
 4. send temperature via IDAS
 5. observe changed Entity via Orion
 
-See tutorial at: http://www.slideshare.net/FI-WARE/fiware-iotidasintroul20v2.
+See tutorial at: http://www.slideshare.net/FI-WARE/fiware-iotidasintroul20v2. Documentation
+https://fiware-orion.readthedocs.org/en/develop (OCB).
 
 Sending commands from local system using FIWARE FIGWAY (python-IDAS4): https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4.
 These are a set of Python commands for most common REST services for both the OCB and IoTAgent/Manager.
@@ -537,6 +543,104 @@ an Observation to the IoTAgent. ::
       </contextResponseList>
     </queryContextResponse>
 
+    # Get Context Types, note: --header 'Fiware-Service: fiwareiot' needs to be present!!
+	$ curl sensors.geonovum.nl:1026/v1/contextTypes -S --header 'Accept: application/json' --header 'Fiware-Service: fiwareiot'
+	{
+	  "types" : [
+	    {
+	      "name" : "thing",
+	      "attributes" : [
+	        "temperature",
+	        "location",
+	        "TimeInstant"
+	      ]
+	    }
+	  ],
+	  "statusCode" : {
+	    "code" : "200",
+	    "reasonPhrase" : "OK"
+	  }
+	}
+
+	# Get Context Entities, note: --header 'Fiware-Service: fiwareiot' needs to be present!!
+	$ curl sensors.geonovum.nl:1026/v1/contextEntities -S --header 'Accept: application/json' --header 'Fiware-Service: fiwareiot'
+	{
+	  "contextResponses" : [
+	    {
+	      "contextElement" : {
+	        "type" : "thing",
+	        "isPattern" : "false",
+	        "id" : "WeatherOtterloEnt",
+	        "attributes" : [
+	          {
+	            "name" : "TimeInstant",
+	            "type" : "ISO8601",
+	            "value" : "2015-10-31T12:55:28.157330"
+	          },
+	          {
+	            "name" : "location",
+	            "type" : "string",
+	            "value" : "BosHut",
+	            "metadatas" : [
+	              {
+	                "name" : "TimeInstant",
+	                "type" : "ISO8601",
+	                "value" : "2015-10-31T12:55:28.157371"
+	              }
+	            ]
+	          },
+	          {
+	            "name" : "temperature",
+	            "type" : "int",
+	            "value" : "11",
+	            "metadatas" : [
+	              {
+	                "name" : "TimeInstant",
+	                "type" : "ISO8601",
+	                "value" : "2015-10-31T12:55:28.157330"
+	              }
+	            ]
+	          }
+	        ]
+	      },
+	      "statusCode" : {
+	        "code" : "200",
+	        "reasonPhrase" : "OK"
+	      }
+	    }
+	  ]
+	}
+
+Display Values with WireCloud
+-----------------------------
+
+WireCloud http://conwet.fi.upm.es/wirecloud/ is a MashUp framework within FIWARE with instance at FIWARE Lab: https://mashup.lab.fiware.org
+
+Here we can create Widgets to get data from the Orion CB. Trying simple the NGSI Browser, but did not succeed (help mail
+sent to ``fiware-lab-help@lists.fiware.org`` :  ::
+
+	Trying to connect to my OCB  which has entities created via IDAS. Both are of latest Docker version.
+	Works fine using the FIGWAY Python scripts.
+
+	But using any Mashup widget that does requests to the OCB like the NGSI Browser the widget remans blanc,
+	since the OCB sends back:
+
+	{
+	  "errorCode" : {
+	    "code" : "404",
+	    "reasonPhrase" : "No context element found"
+	  }
+	}
+
+	This reply is also received when querying via curl:
+	curl <my_ocb_host>:1026/v1/contextEntities -S --header 'Accept: application/json'
+
+	But if I add the header  --header 'Fiware-Service: fiwareiot' (which was specified when creating the IoT
+	service w IDAS) then I get expected responses from the OCB.
+
+	However the Widgets, Operators in WC have no means to add the 'Fiware-Service' Header.
+
+This problem was posed at StackOverflow : http://stackoverflow.com/questions/33452246/fiware-wirecloud-fiware-service-http-header-needed-for-orion-cb
 
 Installing FIWARE - from Source
 ===============================
@@ -764,7 +868,9 @@ Steps: ::
 	# very long build...lots of output...
     $ make install
 
-Create install scripts from RPM spec files.
+Create install scripts from RPM spec files.  Need these files
+https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/tree/develop/rpm/SOURCES
+See https://github.com/Geonovum/sospilot/tree/master/src/fiware/iotagent
 
 Running
 ~~~~~~~
@@ -806,5 +912,4 @@ Config JSON. ::
 	   ]
 	}
 
-Need these files
-https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/tree/develop/rpm/SOURCES
+Core dump...gave up.
