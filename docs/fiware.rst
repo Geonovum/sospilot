@@ -79,12 +79,15 @@ Docker-compose. https://docs.docker.com/compose/install. Easiest via ``pip``. ::
 
 	$ pip install docker-compose
 
+See also CLI utils for ``docker-compose``: https://docs.docker.com/v1.5/compose/cli/
+
 Docker utils.  ::
 
 	docker ps -a
 
 	# go into docker image named docker_iotacpp_1 to bash prompt
 	docker exec -it docker_iotacpp_1 bash
+
 
 Install FIWARE for IoT
 ----------------------
@@ -206,6 +209,10 @@ Now start. ::
 	# and from outside
 	curl -g -X GET http://sensors.geonovum.nl:8000/iot/about
 	Welcome to IoTAgents  identifier:IoTPlatform:8080  1.3.0 commit 128.g14ee433 in Oct 28 2015
+
+	# Get log output
+	# See https://docs.docker.com/v1.5/compose/cli
+	$ docker-compose -f iota.yaml logs
 
 Testing IoTAgent-Orion
 ----------------------
@@ -610,6 +617,119 @@ an Observation to the IoTAgent. ::
 	    }
 	  ]
 	}
+
+Testing with MQTT Client
+------------------------
+
+The IoTAgent also supports the MQTT protocol: http://mqtt.org
+
+*MQTT is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport.*
+
+We will use Mosquitto as MQTT-client first:
+
+*Mosquitto is an open source (BSD licensed) message broker that implements the MQ Telemetry Transport protocol*
+*versions 3.1 and 3.1.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model.*
+
+On Mac OSX install Mosquitto via HomeBrew: ::
+
+	$ brew install mosquitto
+	==> Installing dependencies for mosquitto: c-ares, libwebsockets
+	==> Installing mosquitto dependency: c-ares
+	==> Downloading https://homebrew.bintray.com/bottles/c-ares-1.10.0.mavericks.bottle.tar.gz
+	######################################################################## 100,0%
+	==> Pouring c-ares-1.10.0.mavericks.bottle.tar.gz
+	🍺  /usr/local/Cellar/c-ares/1.10.0: 57 files, 540K
+	==> Installing mosquitto dependency: libwebsockets
+	==> Downloading https://homebrew.bintray.com/bottles/libwebsockets-1.4.mavericks.bottle.tar.gz
+	######################################################################## 100,0%
+	==> Pouring libwebsockets-1.4.mavericks.bottle.tar.gz
+	🍺  /usr/local/Cellar/libwebsockets/1.4: 23 files, 3,3M
+	==> Installing mosquitto
+	==> Downloading https://homebrew.bintray.com/bottles/mosquitto-1.4.2.mavericks.bottle.tar.gz
+	######################################################################## 100,0%
+	==> Pouring mosquitto-1.4.2.mavericks.bottle.tar.gz
+	==> Caveats
+	mosquitto has been installed with a default configuration file.
+	You can make changes to the configuration by editing:
+	/usr/local/etc/mosquitto/mosquitto.conf
+
+	To have launchd start mosquitto at login:
+	ln -sfv /usr/local/opt/mosquitto/*.plist ~/Library/LaunchAgents
+	Then to load mosquitto now:
+	launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mosquitto.plist
+	Or, if you don't want/need launchctl, you can just run:
+	mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf
+	==> Summary
+	🍺  /usr/local/Cellar/mosquitto/1.4.2: 28 files, 700K
+
+Use ``mosquitto_pub`` as a commandline client http://mosquitto.org/man/mosquitto_pub-1.html for initial tests.  ::
+
+	$ mosquitto_pub -d -h sensors.geonovum.nl -p 1883 -t sensors/temperature -m "1266193804 32"
+	Client mosqpub/18773-sunda sending CONNECT
+	Client mosqpub/18773-sunda received CONNACK
+	Client mosqpub/18773-sunda sending PUBLISH (d0, q0, r0, m1, 'sensors/temperature', ... (13 bytes))
+	Client mosqpub/18773-sunda sending DISCONNECT
+
+Is received at server-end, but no further action to Orion CB or MongoDB seems to be invoked... ::
+
+	root@vps44500:~# tcpflow -c -i eth0 port 1883
+
+	tcpflow: listening on eth0
+	082.217.164.050.49330-185.021.189.059.01883: !MQIsdp<mosqpub/18756-sunda
+
+	185.021.189.059.01883-082.217.164.050.49330:
+
+	082.217.164.050.49330-185.021.189.059.01883: 0"sensors/temperature1266193804 32
+
+
+Inspect data in MongoDB
+-----------------------
+
+Within the ``mongodb`` Docker container we can inspect the persisted data in the Mongo shell
+: https://docs.mongodb.org/manual/reference/mongo-shell. ::
+
+	$ docker exec -it docker_mongodb_1 bash
+	root@43fd245b67ca:/# mongo
+	MongoDB shell version: 2.6.11
+	connecting to: test
+	Welcome to the MongoDB shell.
+	For interactive help, type "help".
+	For more comprehensive documentation, see
+		http://docs.mongodb.org/
+	Questions? Try the support group
+		http://groups.google.com/group/mongodb-user
+	> show dbs
+	admin            (empty)
+	iot              0.031GB
+	local            0.031GB
+	orion            0.031GB
+	orion-fiwareiot  0.031GB
+	> use iot
+	switched to db iot
+	> show collections
+	COMMAND
+	DEVICE
+	PROTOCOL
+	SERVICE
+	SERVICE_MGMT
+	system.indexes
+	> use orion
+	switched to db orion
+	> show collections
+	entities
+	system.indexes
+	> db.entities.find()
+	> use orion-fiwareiot
+	switched to db orion-fiwareiot
+	> db.entities.find()
+	{ "_id" : { "id" : "WeatherOtterloEnt", "type" : "thing", "servicePath" : "/" },
+	"attrNames" : [ "TimeInstant", "location", "temperature" ],
+	"attrs" : { "TimeInstant" : { "value" : "2015-10-31T20:41:28.654329", "type" : "ISO8601", "creDate" : 1446324088, "modDate" : 1446324088 },
+	"location" : { "value" : "BosHut", "type" : "string", "md" : [ { "name" : "TimeInstant", "type" : "ISO8601", "value" : "2015-10-31T20:41:28.654370" } ],
+	"creDate" : 1446324088, "modDate" : 1446324088 },
+	"temperature" : { "value" : "11", "type" : "int", "md" : [ { "name" : "TimeInstant", "type" : "ISO8601", "value" : "2015-10-31T20:41:28.654329" } ],
+	"creDate" : 1446324088, "modDate" : 1446324088 } }, "creDate" : 1446324088, "modDate" : 1446324088 }
+
 
 Display Values with WireCloud
 -----------------------------
