@@ -791,12 +791,12 @@ sent to ``fiware-lab-help@lists.fiware.org`` :  ::
 
 	However the Widgets, Operators in WC have no means to add the 'Fiware-Service' Header.
 
-This problem was posted at StackOverflow : http://stackoverflow.com/questions/33452246/fiware-wirecloud-fiware-service-http-header-needed-for-orion-cb
+This problem `was also posted at StackOverflow <http://stackoverflow.com/questions/33452246/fiware-wirecloud-fiware-service-http-header-needed-for-orion-cb>`_.
 
 A quick local solution is to manually add the HTTP header using the browser's Developer Tools to a WireCloud Widget JavaScript (usually ``main.js``)
-where the HTTP request to the Orion NGSI API is created. The WC NGSI connector supports adding extra HTTP headers as per the documentation:
- https://wirecloud.readthedocs.org/en/latest/development/ngsi_api/#ngsiconnection. See for example here below where the Chrome developer tools is used
-to modify the NGSIConnection :
+where the HTTP request to the Orion NGSI API is created. The WC NGSI connector supports adding extra HTTP headers
+as per the `NGSI documentation <https://wirecloud.readthedocs.org/en/latest/development/ngsi_api/#ngsiconnection>`_.
+See for example here below where the Chrome developer tools is used to modify the NGSIConnection :
 
 .. figure:: _static/fiware/wc-fwheader-hack.jpg
    :align: center
@@ -834,8 +834,6 @@ The wiring for these components was as depicted below.
    :align: center
 
    *First WireCloud Mashup: wiring view in editor*
-
-
 
 Installing FIWARE - from Source
 ===============================
