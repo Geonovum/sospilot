@@ -41,7 +41,7 @@ From bottom to top the setup is as follows:
 
 NGSI10 is a specification from the Open Mobile Alliance (OMA).
 The FI-WARE version of the OMA NGSI 10 interface is a
-`RESTful API via HTTP <https://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/FI-WARE_NGSI-10_Open_RESTful_API_Specification>`.
+`RESTful API via HTTP <https://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/FI-WARE_NGSI-10_Open_RESTful_API_Specification>`_.
 
 FIWARE Docs
 ===========
@@ -53,15 +53,15 @@ Via lab.fiware.org
 
 Registering at the international FIWARE Lab worked ok, but could not get
 the Orion CB with the IDAS IoTAgent working. The interaction between the two
-seemed to be broken. This was reported, see specifics here:
-http://stackoverflow.com/questions/32933813/fiware-no-observation-attributes-in-orion-cb-when-registered-sent-via-idas-ultr
+seemed to be broken. This was reported, see specifics here
+on `StackOverflow <http://stackoverflow.com/questions/32933813/fiware-no-observation-attributes-in-orion-cb-when-registered-sent-via-idas-ultr>`_:
 
-And appearantly by others as well.
 
-http://stackoverflow.com/questions/31051501/missing-attributes-on-orion-cb-entity-when-registering-device-through-idas
+And appearantly this
+issue `was found by others <http://stackoverflow.com/questions/31051501/missing-attributes-on-orion-cb-entity-when-registering-device-through-idas>`_ as well.
 
 After an unsuccessful attempt to compile and run the OCB and IoT Agent on Ubuntu 14.04-3
-it was decided to use Docker. This seems the best/recommended option anyway as CentOS is the primary
+it was decided to use Docker on the SOSPilot VPS. This seems the best/recommended option anyway as CentOS is the primary
 target platform for FIWARE. See next section.
 
 Installing FIWARE - with Docker
@@ -817,7 +817,7 @@ As the NGSI Browser Widget was fixed and a new version was available, a first te
 Temperature in POI on Map
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using the `NGSI Browser Widget <https://github.com/wirecloud-fiware/ngsi-browser-widget>` (fixed v1.0.1) with an
+Using the `NGSI Browser Widget <https://github.com/wirecloud-fiware/ngsi-browser-widget>`_ (fixed v1.0.1) with an
 NSGI Entity to POI Converter
 connected to a Map Widget
 the temperature could be made visible on a map. The result of the mashup is below.
