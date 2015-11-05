@@ -1,0 +1,9 @@
+
+# per line https://github.com/skywave/KV78Turbo-OVAPI/wiki/Line
+http://v0.ovapi.nl/line/GVB_51_1
+
+# zie https://github.com/skywave/KV78Turbo-OVAPI/wiki/TimingPointCode
+http://v0.ovapi.nl//tpc/30007428
+
+# meerdere TPCs
+http://v0.ovapi.nl/tpc/30007426,30007428

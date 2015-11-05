@@ -1,11 +1,10 @@
-.. _rio:
+.. _fiwareeval:
 
-====================
-FI-WARE - Evaluation
-====================
+===================
+FIWARE - Evaluation
+===================
 
-Starting in october 2015 the SOSPilot platform was
-extended to use FI-WARE
+Starting in october 2015 the SOSPilot platform was extended to use and deploy FIWARE.
 
 The Plan
 ========
@@ -16,6 +15,33 @@ The Plan
 4. publish temperatures to IDAS using UltraLight protocol
 5. get temperatures from Orion CB
 6. show in Wirecloud Mashup
+
+The architecture used for this setup is depicted below. This
+architecture emerged dynamically as described below.
+
+This setup is similar
+as in this `FIWARE presentation <http://www.slideshare.net/FI-WARE/fiware-iotidasintroul20v2>`_.
+
+.. figure:: _static/fiware/sospilot-fiware-arch1.jpg
+   :align: center
+
+   *Architecture for FIWARE within SOSPilot platform*
+
+From bottom to top the setup is as follows:
+
+* Sensors or manual input use the UltraLight 2.0 (UL2.0) protocol for managing services and devices and sending observations
+* A client library is used to facilitate using the UL2.0 protocol
+* The client may reside anywhere on the Internet
+* the server ``sensors.geonovum.nl`` hosts the FIWARE components ``Orion Context Broker`` and the ``IoTAgentCpp``
+* all persistence for these components is done in ``MongoDB``
+* the ``IoTAgentCpp`` translates requests from the UL2.0 clients to Orion CB NGSI requests
+* ``WireCloud`` (WC), the Mashup environment runs in the FIWARE Lab server at lab.fiware.org
+* WC communicates to (any) OCB using the NGSI10 protocol
+* within WC mashups are produced in order to view and interact with the sensor data
+
+NGSI10 is a specification from the Open Mobile Alliance (OMA).
+The FI-WARE version of the OMA NGSI 10 interface is a
+`RESTful API via HTTP <https://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/FI-WARE_NGSI-10_Open_RESTful_API_Specification>`.
 
 FIWARE Docs
 ===========
@@ -734,9 +760,14 @@ Within the ``mongodb`` Docker container we can inspect the persisted data in the
 Display Values with WireCloud
 -----------------------------
 
-WireCloud http://conwet.fi.upm.es/wirecloud/ is a MashUp framework within FIWARE with instance at FIWARE Lab: https://mashup.lab.fiware.org
+WireCloud http://conwet.fi.upm.es/wirecloud/ is a Mashup framework within FIWARE with instance at FIWARE Lab: https://mashup.lab.fiware.org
 
-Here we can create Widgets to get data from the Orion CB. Trying simple the NGSI Browser, but did not succeed (help mail
+Here we can create Widgets to get data from the Orion CB, so indirectly observations sent to the IoTAgent from our devices.
+
+First Steps
+~~~~~~~~~~~
+
+Trying simple the NGSI Browser, but did not succeed (help mail
 sent to ``fiware-lab-help@lists.fiware.org`` :  ::
 
 	Trying to connect to my OCB  which has entities created via IDAS. Both are of latest Docker version.
@@ -762,6 +793,50 @@ sent to ``fiware-lab-help@lists.fiware.org`` :  ::
 
 This problem was posted at StackOverflow : http://stackoverflow.com/questions/33452246/fiware-wirecloud-fiware-service-http-header-needed-for-orion-cb
 
+A quick local solution is to manually add the HTTP header using the browser's Developer Tools to a WireCloud Widget JavaScript (usually ``main.js``)
+where the HTTP request to the Orion NGSI API is created. The WC NGSI connector supports adding extra HTTP headers as per the documentation:
+ https://wirecloud.readthedocs.org/en/latest/development/ngsi_api/#ngsiconnection. See for example here below where the Chrome developer tools is used
+to modify the NGSIConnection :
+
+.. figure:: _static/fiware/wc-fwheader-hack.jpg
+   :align: center
+
+   *Quick Fix: modify the HTTP header locally in browser*
+
+Another possibility is to download the widget, modify its config.xml and main.js to support configuring the FIWARE-Service header.
+This worked as well, but the real fixes should be done within the component source code. The issue affects all WC components
+(Operators, Widgets) that interact with Orion NSGI. The following issues have been opened:
+
+* https://github.com/wirecloud-fiware/ngsi-browser-widget/issues/1  (fixed)
+* https://github.com/wirecloud-fiware/ngsi-source-operator/issues/3
+* https://github.com/wirecloud-fiware/ngsi-updater-widget/issues/1
+* https://github.com/wirecloud-fiware/ngsi-type-browse-widget/issues/1
+
+As the NGSI Browser Widget was fixed and a new version was available, a first test could be performed.
+
+Temperature in POI on Map
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using the `NGSI Browser Widget <https://github.com/wirecloud-fiware/ngsi-browser-widget>` (fixed v1.0.1) with an
+NSGI Entity to POI Converter
+connected to a Map Widget
+the temperature could be made visible on a map. The result of the mashup is below.
+
+.. figure:: _static/fiware/wc-geonovum-temp1.jpg
+   :align: center
+
+   *First WireCloud Mashup: show Temperature from sensor as POI*
+
+The wiring for these components was as depicted below.
+
+
+.. figure:: _static/fiware/wc-geonovum-temp1-wiring.jpg
+   :align: center
+
+   *First WireCloud Mashup: wiring view in editor*
+
+
+
 Installing FIWARE - from Source
 ===============================
 
@@ -780,8 +855,8 @@ but later found: https://github.com/telefonicaid/fiware-orion/blob/develop/scrip
 
 Install build deps. ::
 
-    apt-get  install cmake scons libmicrohttpd-dev libboost-all-dev
-    # what about libcurl-dev gcc-c++ ???
+	apt-get  install cmake scons libmicrohttpd-dev libboost-all-dev
+	# what about libcurl-dev gcc-c++ ?
 	apt-get -y install make cmake build-essential scons git libmicrohttpd-dev libboost-dev libboost-thread-dev libboost-filesystem-dev libboost-program-options-dev  libcurl4-gnutls-dev clang libcunit1-dev mongodb-server python python-flask python-jinja2 curl libxml2 netcat-openbsd mongodb valgrind libxslt1.1 libssl-dev libcrypto++-dev
 
 	Setting up libboost1.54-dev (1.54.0-4ubuntu3.1) ...
