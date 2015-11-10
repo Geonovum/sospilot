@@ -24,7 +24,7 @@ RUN \
 	curl https://codeload.github.com/telefonicaid/Rush/tar.gz/${RUSH_VERSION} > Rush-${RUSH_VERSION}.tar.gz  && \
 	tar xzvf Rush-${RUSH_VERSION}.tar.gz  && \
 	cd Rush-${RUSH_VERSION} && \
-	npm install --production && \
+	npm install --production
 	# set mongodb host as linked in docker-compose iota.yml
 	# export RUSH_GEN_MONGO=${MONGODB_HOST}
 	# bin/listener

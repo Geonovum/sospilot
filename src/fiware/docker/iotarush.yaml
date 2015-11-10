@@ -14,12 +14,11 @@ mongodb:
     command: --smallfiles
 
 orion:
-    image: fiware/orion
+    image: geonovum/orionrush
     links:
         - mongodb
     ports:
         - "1026:1026"
-    command: -dbhost mongodb -logDir /var/log/contextBroker
 
 iotacpp:
     image: telefonicaiot/iotacpp
