@@ -919,6 +919,10 @@ was created, ``iotarush.yaml`` :
 .. literalinclude:: ../src/fiware/docker/iotarush.yaml
     :language: yaml
 
+To restart all fresh the following script was created:
+
+.. literalinclude:: ../src/fiware/docker/restart.sh
+    :language: bash
 
 Installing FIWARE - from Source
 ===============================
