@@ -902,6 +902,23 @@ Now notifications are seen immediately on sending events from the UL20 client! S
 
    *Second WireCloud Mashup: direct notifications in Map (left) from UL20 client (right)*
 
+Finally a Dockerfile was created to include Rush (and Redis) as an extension of the ``fiware/orion``
+Docker file. This is the content of the ``geonovum/orionrush`` Dockerfile:
+
+.. literalinclude:: ../src/fiware/docker/orionrush/Dockerfile
+    :language: text
+
+The entry point was changed to :
+
+.. literalinclude:: ../src/fiware/docker/orionrush/docker-entrypoint.sh
+    :language: bash
+
+To run the entire Fiware suite with `IoTAgentCpp`, `OrionRush`, and `MongoDB`, a new docker-compose file
+was created, ``iotarush.yaml`` :
+
+.. literalinclude:: ../src/fiware/docker/iotarush.yaml
+    :language: yaml
+
 
 Installing FIWARE - from Source
 ===============================
