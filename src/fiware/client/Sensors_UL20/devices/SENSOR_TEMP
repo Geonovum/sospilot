@@ -1,0 +1,22 @@
+	{
+	 "devices": [
+	    { "device_id": "DEV_ID",
+	      "entity_name": "ENTITY_ID",
+	      "entity_type": "thing",
+	      "protocol": "PDI-IoTA-UltraLight",
+	      "timezone": "Europe/Amsterdam",
+	"attributes": [
+	        { "object_id": "otemp",
+	          "name": "temperature",
+	          "type": "int"
+	        } ],
+	 "static_attributes": [
+	        { "name": "att_name",
+	          "type": "string",
+	          "value": "value"
+	        }
+	       ]
+	      }
+	     ]
+	    }
+

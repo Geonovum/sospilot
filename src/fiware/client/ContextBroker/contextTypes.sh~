@@ -1,0 +1,2 @@
+(curl sensors.geonovum.nl:1026/v1/contextTypes -s -S --header 'Content-Type: application/json' \
+    --header 'Accept: application/json' -d @- | python -mjson.tool) 

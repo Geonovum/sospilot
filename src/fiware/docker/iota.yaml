@@ -19,7 +19,7 @@ orion:
         - mongodb
     ports:
         - "1026:1026"
-    command: -dbhost mongodb
+    command: -dbhost mongodb -rush localhost:5001 -logDir /var/log/contextBroker
 
 iotacpp:
     image: telefonicaiot/iotacpp

@@ -819,8 +819,7 @@ Temperature in POI on Map
 
 Using the `NGSI Browser Widget <https://github.com/wirecloud-fiware/ngsi-browser-widget>`_ (fixed v1.0.1) with an
 NSGI Entity to POI Converter
-connected to a Map Widget
-the temperature could be made visible on a map. The result of the mashup is below.
+connected to a Map Widget the temperature could be made visible on a map. The result of the mashup is below.
 
 .. figure:: _static/fiware/wc-geonovum-temp1.jpg
    :align: center
@@ -829,11 +828,81 @@ the temperature could be made visible on a map. The result of the mashup is belo
 
 The wiring for these components was as depicted below.
 
-
 .. figure:: _static/fiware/wc-geonovum-temp1-wiring.jpg
    :align: center
 
    *First WireCloud Mashup: wiring view in editor*
+
+Next attempt was to use NGSI Subscriptions such that the widgets receive real-time updates.
+Fro this the `NGSI Source Operator <https://github.com/wirecloud-fiware/ngsi-source-operator>`_
+can be applied i.s.o. the ``NGSI Browser Widget`` used above. The ``NGSI Source Operator`` will use
+NGSI10 Subscriptions to register at an Orion CB using a callback mechanism. The wiring is depicted below.
+
+.. figure:: _static/fiware/wc-geonovum-temp2-wiring.jpg
+   :align: center
+
+   *Second WireCloud Mashup: wiring view in editor*
+
+The ``NGSI Source Operator`` was first fixed via `issue 3  <https://github.com/wirecloud-fiware/ngsi-source-operator/issues/3>`_
+such that the ``Fiware-service`` HTTP-header could be applied. But since the Orion CB runs without HTTPS within
+a remote (Docker) service, callbacks via HTTPS did not work. Also using HTTP via proxy http://ngsiproxy.lab.fiware.org did not
+work because of browser security restrictions. These problems have been documented and discussed
+in `this issue <https://github.com/wirecloud-fiware/ngsi-source-operator/issues/4>`_. Polling mode may be another solution
+but possibly too strenous.
+
+Using an HTTPS middleman Relayer, `Rush <https://github.com/telefonicaid/fiware-orion/blob/develop/doc/manuals/admin/rush.md>`_,
+is suggested as a solution. This was tried first.  The final range of commands is: ::
+
+	# within docker_orion_1 running container
+
+	# Dependencies
+	cd /root
+	yum -y install npm
+	# yum -y install redis   (gave errors see below)
+	yum -y install wget
+	wget http://download.redis.io/releases/redis-2.8.3.tar.gz
+	tar xzvf redis-2.8.3.tar.gz
+	cd redis-2.8.3
+	make
+	make install
+	# /etc/init.d/redis start  (no daemon installed)
+	redis-server redis.conf &
+
+	# Rush
+	cd /root
+	curl https://codeload.github.com/telefonicaid/Rush/tar.gz/1.8.3 > Rush-1.8.3.tar.gz
+	tar xzvf Rush-1.8.3.tar.gz
+	cd Rush-1.8.3
+	npm install --production
+
+	# set mongodb host as linked in docker-compose iota.yml
+	export RUSH_GEN_MONGO=mongodb
+	bin/listener &
+	bin/consumer &
+
+NB `yum -y install redis` gave Redis 2.4 with errors (``Generic Server Error: Error: ERR unknown command 'evalsha'``).
+Redis should be higher than v2.4.
+Found the `solution here <http://answered.site/im-trying-to-show-an-entity-from-it-on-the-mapviewer-widget-of-the-fiware/1179190/>`_
+
+Activate `Rush` in Orion in `iota.yaml` by setting the ``orion`` entry to::
+
+	.
+	orion:
+	    image: fiware/orion
+	    links:
+	        - mongodb
+	    ports:
+	        - "1026:1026"
+	    command: -dbhost mongodb -rush localhost:5001 -logDir /var/log/contextBroker
+	.
+
+Now notifications are seen immediately on sending events from the UL20 client! See picture below:
+
+.. figure:: _static/fiware/wc-geonovum-temp2.jpg
+   :align: center
+
+   *Second WireCloud Mashup: direct notifications in Map (left) from UL20 client (right)*
+
 
 Installing FIWARE - from Source
 ===============================
