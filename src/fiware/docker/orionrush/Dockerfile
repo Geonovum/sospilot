@@ -2,35 +2,39 @@ FROM fiware/orion
 MAINTAINER Just van den Broecke for Geonovum  www.geonovum.nl
 
 ENV MONGODB_HOST mongodb
+ENV REDIS_VERSION 2.8.3
+ENV RUSH_VERSION 1.8.3
+ENV RUSH_LISTEN_PORT 5001
 
 WORKDIR /opt
 
 RUN \
-	# within docker_orion_1 running container
 	# Dependencies
-		yum -y install npm  && \
+	yum -y install npm  && \
 	# yum -y install redis   (gave errors see below)
 	yum -y install wget  && \
-	wget http://download.redis.io/releases/redis-2.8.3.tar.gz  && \
-	tar xzvf redis-2.8.3.tar.gz  && \
-	cd redis-2.8.3 && \
+	wget http://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz  && \
+	tar xzvf redis-${REDIS_VERSION}.tar.gz  && \
+	cd redis-${REDIS_VERSION} && \
 	make && \
 	make install && \
 	# /etc/init.d/redis start  (no daemon installed)
-	redis-server redis.conf & && \
 	# Rush
 	cd /opt && \
-	curl https://codeload.github.com/telefonicaid/Rush/tar.gz/1.8.3 > Rush-1.8.3.tar.gz  && \
-	tar xzvf Rush-1.8.3.tar.gz  && \
-	cd Rush-1.8.3 && \
+	curl https://codeload.github.com/telefonicaid/Rush/tar.gz/${RUSH_VERSION} > Rush-${RUSH_VERSION}.tar.gz  && \
+	tar xzvf Rush-${RUSH_VERSION}.tar.gz  && \
+	cd Rush-${RUSH_VERSION} && \
 	npm install --production && \
 	# set mongodb host as linked in docker-compose iota.yml
-	export RUSH_GEN_MONGO=${MONGODB_HOST} && \
-	bin/listener & && \
-	bin/consumer &
+	# export RUSH_GEN_MONGO=${MONGODB_HOST}
+	# bin/listener
+	# bin/consumer
 
 WORKDIR /
-ENTRYPOINT ["/usr/bin/contextBroker","-fg","-multiservice","-rush","localhost:5001","-logDir","/var/log/contextBroker"]
+COPY docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
 EXPOSE 1026
 
 
