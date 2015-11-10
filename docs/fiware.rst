@@ -834,7 +834,7 @@ The wiring for these components was as depicted below.
    *First WireCloud Mashup: wiring view in editor*
 
 Next attempt was to use NGSI Subscriptions such that the widgets receive real-time updates.
-Fro this the `NGSI Source Operator <https://github.com/wirecloud-fiware/ngsi-source-operator>`_
+For this the `NGSI Source Operator <https://github.com/wirecloud-fiware/ngsi-source-operator>`_
 can be applied i.s.o. the ``NGSI Browser Widget`` used above. The ``NGSI Source Operator`` will use
 NGSI10 Subscriptions to register at an Orion CB using a callback mechanism. The wiring is depicted below.
 
@@ -880,11 +880,10 @@ is suggested as a solution. This was tried first.  The final range of commands i
 	bin/listener &
 	bin/consumer &
 
-NB `yum -y install redis` gave Redis 2.4 with errors (``Generic Server Error: Error: ERR unknown command 'evalsha'``).
-Redis should be higher than v2.4.
-Found the `solution here <http://answered.site/im-trying-to-show-an-entity-from-it-on-the-mapviewer-widget-of-the-fiware/1179190/>`_
+NB `yum -y install redis` installed Redis 2.4 but gave recurring error: ``Generic Server Error: Error: ERR unknown command 'evalsha'``.
+Redis should be higher than v2.4 as stated in the `solution here <http://answered.site/im-trying-to-show-an-entity-from-it-on-the-mapviewer-widget-of-the-fiware/1179190/>`_
 
-Activate `Rush` in Orion in `iota.yaml` by setting the ``orion`` entry to::
+Activate `Rush` in Orion within `iota.yaml` by setting the ``orion`` entry (``command`` args) to::
 
 	.
 	orion:
