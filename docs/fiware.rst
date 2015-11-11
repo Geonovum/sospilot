@@ -241,6 +241,13 @@ Now start. ::
 	# See https://docs.docker.com/v1.5/compose/cli
 	$ docker-compose -f iota.yaml logs
 
+
+Testing the FIWARE Installation
+===============================
+
+Using test clients at See test clients at https://github.com/Geonovum/sospilot/tree/master/src/fiware/client
+and the `WireCloud Mashup <http://conwet.fi.upm.es/wirecloud>`_.
+
 Testing IoTAgent-Orion
 ----------------------
 
@@ -266,7 +273,7 @@ Prepare the right ``config.ini`` used by all Python commands:
     :language: text
 
 Create device template (called ``GEONOVUM_TEMP``) under
-https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/Sensors_UL20/devices ::
+https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/Sensors_UL20/devices :
 
 .. literalinclude:: ../src/fiware/client/UL20/devices/GEONOVUM_TEMP
     :language: text
