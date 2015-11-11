@@ -12,9 +12,9 @@ The Plan
 1. register at lab.fiware.org (justb4)
 2. get connected to public services in Lab
 3. basic Context Broker (Orion) interaction
-4. publish temperatures to IDAS using UltraLight protocol
+4. publish temperatures to IDAS using UltraLight adn MQTT protocol
 5. get temperatures from Orion CB
-6. show in Wirecloud Mashup
+6. show (in realtime) in Wirecloud Mashup
 
 The architecture used for this setup is depicted below. This
 architecture emerged dynamically as described below.
@@ -29,12 +29,13 @@ as in this `FIWARE presentation <http://www.slideshare.net/FI-WARE/fiware-iotida
 
 From bottom to top the setup is as follows:
 
-* Sensors or manual input use the UltraLight 2.0 (UL2.0) protocol for managing services and devices and sending observations
-* A client library is used to facilitate using the UL2.0 protocol
+* Sensors or manual input use the UltraLight 2.0 (UL2.0) and MQTT protocols for managing services and devices and sending observations
+* The `FIWARE IoTAgentCpp device API <http://fiware-iot-stack.readthedocs.org/en/latest/device_api/index.html>`_ is used
+* Client libraries are used to facilitate using the UL2.0 and MQTT protocols
 * The client may reside anywhere on the Internet
-* the server ``sensors.geonovum.nl`` hosts the FIWARE components ``Orion Context Broker`` and the ``IoTAgentCpp``
+* the server ``sensors.geonovum.nl`` hosts the FIWARE components ``Orion Context Broker`` (OCB) and the ``IoTAgentCpp``
 * all persistence for these components is done in ``MongoDB``
-* the ``IoTAgentCpp`` translates requests from the UL2.0 clients to Orion CB NGSI requests
+* the ``IoTAgentCpp`` translates requests from the UL2.0/MQTT clients to Orion CB NGSI requests
 * ``WireCloud`` (WC), the Mashup environment runs in the FIWARE Lab server at lab.fiware.org
 * WC communicates to (any) OCB using the NGSI10 protocol
 * within WC mashups are produced in order to view and interact with the sensor data

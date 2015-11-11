@@ -1,0 +1,36 @@
+	{
+	 "devices": [
+	    { "device_id": "DEV_ID",
+	      "entity_name": "ENTITY_ID",
+	      "entity_type": "thing",
+	      "protocol": "PDI-IoTA-MQTT-UltraLight",
+	      "timezone": "Europe/Amsterdam",
+	"attributes": [
+	        {
+	          "object_id": "temp",
+	          "name": "temperature",
+	          "type": "int"
+	        },
+            {
+	        "object_id": "pos",
+            "name": "position",
+            "type": "coords",
+            "metadatas": [
+                {
+                    "name": "location",
+                    "type": "string",
+                    "value": "WGS84"
+                }
+              ]
+            }
+	      ],
+	 "static_attributes": [
+	        { "name": "organization",
+	          "type": "string",
+	          "value": "Geonovum"
+	        }
+	       ]
+	      }
+	     ]
+	    }
+
