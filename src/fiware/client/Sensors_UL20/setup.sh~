@@ -1,3 +1,0 @@
-python CreateService.py fiwareiot 4jggokgpepnvsb2uv4s40d59ov 185.21.189.59 1026
-python RegisterDevice.py OTTERLO_TEMP NexusProDev WeatherOtterloEnt
-python SendObservation.py NexusProDev 'ot|11'
