@@ -252,85 +252,29 @@ Simple scenario, using the UltraLight (UL2.0) IoT protocol.:
 4. send temperature via IDAS
 5. observe changed Entity via Orion
 
+See test clients at https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/UL20
+
 See tutorial at: http://www.slideshare.net/FI-WARE/fiware-iotidasintroul20v2. Documentation
 https://fiware-orion.readthedocs.org/en/develop (OCB).
 
-Sending commands from local system using FIWARE FIGWAY (python-IDAS4): https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4.
+Sending commands from local system using FIWARE FIGWAY (python-IDAS4): https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/UL20.
 These are a set of Python commands for most common REST services for both the OCB and IoTAgent/Manager.
 
-Prepare the right ``config.ini`` used by all Python commands ::
+Prepare the right ``config.ini`` used by all Python commands:
 
-	[user]
-	# Please, configure here your username at FIWARE Cloud and a valid Oauth2.0 TOKEN for your user
-	# (you can use get_token.py to obtain a valid TOKEN).
-	username=(not required)
-	token=(not required here)
+.. literalinclude:: ../src/fiware/client/config.ini
+    :language: text
 
-	[contextbroker]
-	# host=130.206.80.40
-	host=sensors.geonovum.nl
-	port=1026
-	OAuth=no
-	# Here you need to specify the ContextBroker database you are querying.
-	# Leave it blank if you want the general database or the IDAS service if you are
-	# looking for IoT devices connected by you.
-	fiware_service=fiwareiot
-	# fiware_service=bus_auto
-	fiware-service-path=/
-
-	[idas]
-	host=sensors.geonovum.nl
-	# host=130.206.80.40
-	#adminport=5371
-	#ul20port=5371
-	adminport=8081
-	ul20port=8000
-	OAuth=no
-	# Here you need to configure the IDAS service your devices will be sending data to.
-	# By default the OpenIoT service is provided.
-	#
-	#fiware-service=fiwareiot
-	fiware-service=fiwareiot
-	# fiware-service=bus_auto
-	fiware-service-path=/
-	apikey=4jggokgpepnvsb2uv4s40d59ov
-
-	[local]
-	#Choose here your System type. Examples: RaspberryPI, MACOSX, Linux, ...
-	host_type=MACOSX
-	# Here please add a unique identifier for you. Suggestion: the 3 lower hexa bytes of your Ethernet MAC. E.g. 79:ed:af
-	# Also you may use your e-mail address.
-	host_id=a0:11:00
-
-Create device template (called ``OTTERLO_TEMP``) under
+Create device template (called ``GEONOVUM_TEMP``) under
 https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/Sensors_UL20/devices ::
 
-	{
-	 "devices": [
-	    { "device_id": "DEV_ID",
-	      "entity_name": "ENTITY_ID",
-	      "entity_type": "thing",
-	      "protocol": "PDI-IoTA-UltraLight",
-	      "timezone": "Europe/Amsterdam",
-	"attributes": [
-	        { "object_id": "ot",
-	          "name": "temperature",
-	          "type": "int"
-	        } ],
-	 "static_attributes": [
-	        { "name": "location",
-	          "type": "string",
-	          "value": "BosHut"
-	        }
-	       ]
-	      }
-	     ]
-	    }
-
+.. literalinclude:: ../src/fiware/client/UL20/devices/GEONOVUM_TEMP
+    :language: text
 
 Create service, then a device and send an observation using Python code under
-https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/Sensors_UL20 (IoTAgent with UL protocol) and
-https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/ContextBroker (OCB).
+https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/UL20 (IoTAgent with UL protocol) and
+https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/ContextBroker (OCB).
+
 Watch that the related Entity is created in the OCB and that it gets an attribute value when sending
 an Observation to the IoTAgent. ::
 
