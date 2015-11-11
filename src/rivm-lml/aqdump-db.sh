@@ -23,7 +23,7 @@ do
   ogr2ogr -f "ESRI Shapefile" ${outfile}  PG:"${pg}" -sql "$sql"
 
   outfile=${outdir}/lml/csv/lml-${comp}.csv
-  ogr2ogr -f CSV ${outfile}  PG:"host=localhost user=sensors dbname=sensors password=pgeosense" -sql "$sql" -lco GEOMETRY=AS_XY
+  ogr2ogr -f CSV ${outfile}  PG:"${pg}" -sql "$sql" -lco GEOMETRY=AS_XY
 done
 
 components="no2 co o3"
@@ -35,7 +35,7 @@ do
   ogr2ogr -f "ESRI Shapefile" ${outfile}  PG:"${pg}" -sql "$sql"
 
   outfile=${outdir}/smartemission/csv/smartem-${comp}.csv
-  ogr2ogr -f CSV ${outfile}  PG:"host=localhost user=sensors dbname=sensors password=pgeosense" -sql "$sql" -lco GEOMETRY=AS_XY
+  ogr2ogr -f CSV ${outfile}  PG:"${pg}" -sql "$sql" -lco GEOMETRY=AS_XY
 done
 
 pushd ${outdir}
