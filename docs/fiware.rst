@@ -12,7 +12,7 @@ The Plan
 1. register at lab.fiware.org (justb4)
 2. get connected to public services in Lab
 3. basic Context Broker (Orion) interaction
-4. publish temperatures to IDAS using UltraLight adn MQTT protocol
+4. publish temperatures to IDAS using UltraLight and MQTT protocols
 5. get temperatures from Orion CB
 6. show (in realtime) in Wirecloud Mashup
 
@@ -657,37 +657,16 @@ We will use Mosquitto as MQTT-client first:
 *Mosquitto is an open source (BSD licensed) message broker that implements the MQ Telemetry Transport protocol*
 *versions 3.1 and 3.1.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model.*
 
+See test clients at https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/MQTT
+
+Before observations can be sent a Service needs to be created and a Device(s) registered.
+
 On Mac OSX install Mosquitto via HomeBrew: ::
 
 	$ brew install mosquitto
 	==> Installing dependencies for mosquitto: c-ares, libwebsockets
 	==> Installing mosquitto dependency: c-ares
 	==> Downloading https://homebrew.bintray.com/bottles/c-ares-1.10.0.mavericks.bottle.tar.gz
-	######################################################################## 100,0%
-	==> Pouring c-ares-1.10.0.mavericks.bottle.tar.gz
-	🍺  /usr/local/Cellar/c-ares/1.10.0: 57 files, 540K
-	==> Installing mosquitto dependency: libwebsockets
-	==> Downloading https://homebrew.bintray.com/bottles/libwebsockets-1.4.mavericks.bottle.tar.gz
-	######################################################################## 100,0%
-	==> Pouring libwebsockets-1.4.mavericks.bottle.tar.gz
-	🍺  /usr/local/Cellar/libwebsockets/1.4: 23 files, 3,3M
-	==> Installing mosquitto
-	==> Downloading https://homebrew.bintray.com/bottles/mosquitto-1.4.2.mavericks.bottle.tar.gz
-	######################################################################## 100,0%
-	==> Pouring mosquitto-1.4.2.mavericks.bottle.tar.gz
-	==> Caveats
-	mosquitto has been installed with a default configuration file.
-	You can make changes to the configuration by editing:
-	/usr/local/etc/mosquitto/mosquitto.conf
-
-	To have launchd start mosquitto at login:
-	ln -sfv /usr/local/opt/mosquitto/*.plist ~/Library/LaunchAgents
-	Then to load mosquitto now:
-	launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mosquitto.plist
-	Or, if you don't want/need launchctl, you can just run:
-	mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf
-	==> Summary
-	🍺  /usr/local/Cellar/mosquitto/1.4.2: 28 files, 700K
 
 Use ``mosquitto_pub`` as a commandline client http://mosquitto.org/man/mosquitto_pub-1.html for initial tests.  ::
 
@@ -697,17 +676,31 @@ Use ``mosquitto_pub`` as a commandline client http://mosquitto.org/man/mosquitto
 	Client mosqpub/18773-sunda sending PUBLISH (d0, q0, r0, m1, 'sensors/temperature', ... (13 bytes))
 	Client mosqpub/18773-sunda sending DISCONNECT
 
-Is received at server-end, but no further action to Orion CB or MongoDB seems to be invoked... ::
+See ``setup.sh`` for full example with Service/Device creation and observation publication via MQTT :
 
-	root@vps44500:~# tcpflow -c -i eth0 port 1883
+.. literalinclude:: ../src/fiware/client/MQTT/setup.sh
+    :language: bash
 
-	tcpflow: listening on eth0
-	082.217.164.050.49330-185.021.189.059.01883: !MQIsdp<mosqpub/18756-sunda
+and a sample device file:
 
-	185.021.189.059.01883-082.217.164.050.49330:
+.. literalinclude:: ../src/fiware/client/MQTT/devices/GEONOVUM_MQTT_TEMP
+    :language: text
 
-	082.217.164.050.49330-185.021.189.059.01883: 0"sensors/temperature1266193804 32
+The Service creation and Device provisioning uses the Admin API
+of the IotAgentCpp server. MQTT is only used to send observations.
+See also http://fiware-iot-stack.readthedocs.org/en/latest/device_api/index.html
 
+The helper .py programs are ported from FIWARE FIGWAY Sensors_UL20
+code.
+
+**TWO VERY IMPORTANT DIFFERENCES WITH UL20:**
+
+* in the payload when creating the Service the following field needs to be set: ``"resource": "/iot/mqtt"`` otherwise the Device cannot be registered (*"protocol is not correct"* error).
+
+* Also in the Device Template (see here under devices/) the "protocol": ``"PDI-IoTA-MQTT-UltraLight"`` needs to be present.
+
+See also this issue:
+https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/issues/254
 
 Inspect data in MongoDB
 -----------------------
