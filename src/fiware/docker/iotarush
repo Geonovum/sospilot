@@ -1,0 +1,106 @@
+#!/bin/sh
+#
+# init.d script with LSB support for entire FIWARE stack via Docker.
+#
+# Copyright (c) 2015 Just van den Broecke for Geonovum - <just@justobjects.nl>
+#
+# This is free software; you may redistribute it and/or modify
+# it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2,
+# or (at your option) any later version.
+#
+# This is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License with
+# the Debian operating system, in /usr/share/common-licenses/GPL;  if
+# not, write to the Free Software Foundation, Inc., 59 Temple Place,
+# Suite 330, Boston, MA 02111-1307 USA
+#
+### BEGIN INIT INFO
+# Provides:          iotarush
+# Required-Start:    $network $local_fs $remote_fs
+# Required-Stop:     $network $local_fs $remote_fs
+# Should-Start:      $named
+# Should-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: IoT stack for FIWARE: IotAgent, Orion with MongoDB and Rush/Redis via Docker(-compose)
+# Description:       Manages run cycle for a set of Docker containers together providing a FIWARE IoT stack.
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+NAME=iotarush
+DESC=docker_composition
+# Docker-compose file
+CONF=/opt/geonovum/sospilot/git/src/fiware/docker/iotarush.yaml
+SERVICE_CONTAINERS="docker_iotacpp_1 docker_orion_1"
+
+. /lib/lsb/init-functions
+
+set -e
+
+purge_services() {
+	docker rm -v ${SERVICE_CONTAINERS}
+    return 0
+}
+
+purge_all() {
+	# Removes all containers including volume-data for mongodb!
+	docker rm -v $(docker ps -a -q -f status=exited)
+    return 0
+}
+
+start_containers() {
+	docker-compose -f ${CONF} up -d
+	docker ps
+    return 0
+}
+
+stop_containers() {
+	docker-compose -f ${CONF} stop
+	docker ps
+    return 0
+}
+
+case "$1" in
+  start)
+	log_daemon_msg "Starting $DESC" "$NAME"
+	start_containers
+	;;
+
+  stop)
+	 log_daemon_msg "Starting $DESC" "$NAME"
+	 stop_containers
+	 ;;
+	 
+  restart)
+        log_daemon_msg "Restarting $DESC" "$NAME"
+		$0 stop
+		purge_services
+		$0 start
+	;;
+	
+  status)
+        log_daemon_msg "Checking status of $DESC" "$NAME"
+        docker ps
+        ;;
+        
+  reinit)
+        log_warning_msg "Reinit of $NAME ; all mongodb data will be cleared!!!"
+		$0 stop
+		purge_all
+		$0 start
+        ;;
+
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart|reinit|status}" >&2
+	exit 1
+	;;
+esac
+
+exit 0
