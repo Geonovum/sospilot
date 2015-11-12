@@ -73,14 +73,14 @@ case "$1" in
 	;;
 
   stop)
-	 log_daemon_msg "Starting $DESC" "$NAME"
+	 log_daemon_msg "Stopping $DESC" "$NAME"
 	 stop_containers
+	 purge_services
 	 ;;
 	 
   restart)
         log_daemon_msg "Restarting $DESC" "$NAME"
 		$0 stop
-		purge_services
 		$0 start
 	;;
 	
@@ -91,7 +91,7 @@ case "$1" in
         
   reinit)
         log_warning_msg "Reinit of $NAME ; all mongodb data will be cleared!!!"
-		$0 stop
+		stop_containers
 		purge_all
 		$0 start
         ;;
