@@ -20,7 +20,7 @@ do
   outfile=${outdir}/lml/shape/lml-${comp}.shp
   sql="SELECT * FROM rivm_lml.v_measurements_$comp"
   pg="host=${PGHOST} user=${PGUSER} dbname=sensors password=${PGPASSWORD}"
-  ogr2ogr -f "ESRI Shapefile" ${outfile}  PG:"${pg}" -sql "$sql"
+  ogr2ogr -f "ESRI Shapefile" ${outfile}  PG:"${pg}" -sql "$sql" -fieldTypeToString DateTime
 
   outfile=${outdir}/lml/csv/lml-${comp}.csv
   ogr2ogr -f CSV ${outfile}  PG:"${pg}" -sql "$sql" -lco GEOMETRY=AS_XY
@@ -32,7 +32,7 @@ do
   outfile=${outdir}/smartemission/shape/smartem-${comp}.shp
   sql="SELECT * FROM smartem.v_measurements_$comp"
   pg="host=${PGHOST} user=${PGUSER} dbname=sensors password=${PGPASSWORD}"
-  ogr2ogr -f "ESRI Shapefile" ${outfile}  PG:"${pg}" -sql "$sql"
+  ogr2ogr -f "ESRI Shapefile" ${outfile}  PG:"${pg}" -sql "$sql" -fieldTypeToString DateTime
 
   outfile=${outdir}/smartemission/csv/smartem-${comp}.csv
   ogr2ogr -f CSV ${outfile}  PG:"${pg}" -sql "$sql" -lco GEOMETRY=AS_XY
