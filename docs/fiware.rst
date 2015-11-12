@@ -116,13 +116,14 @@ Docker utils.  ::
 	docker exec -it docker_iotacpp_1 bash
 
 
-Install FIWARE for IoT
-----------------------
+Install FIWARE with Docker
+--------------------------
 
 Installing FIWARE components to realize IoT setup: IoT Agent, Orion CB with MongoDB persistence.
 Intro: http://www.slideshare.net/dmoranj/iot-agents-introduction
 
-Docker compose for fiware-IoTAgent-Cplusplus: https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/tree/develop/docker
+Take docker-compose for fiware-IoTAgent-Cplusplus as starting point:
+https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/tree/develop/docker
 
 Steps. Follow: https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/blob/develop/docker/readme.md ::
 
@@ -150,18 +151,18 @@ Make two utilities, ``docker-pid`` and ``docker-ip`` in ``/opt/bin``.  ::
 But simpler is to follow: https://docs.docker.com/userguide/dockerlinks/ and even easier via ``docker-compose`` ``iota.yaml``:
 https://docs.docker.com/compose/yml. Use the ``ports`` property:
 "Expose ports. Either specify both ports (HOST:CONTAINER), or just the container port (a random host port will be chosen)."
-So our iota.yml becomes:
+So our ``iotarush.yml`` becomes:
 
-.. literalinclude:: ../src/fiware/docker/iota.yaml
+.. literalinclude:: ../src/fiware/docker/iotarush.yaml
     :language: yaml
 
 Now start. ::
 
 	# Start containers (-d iotacpp option not required?)
-	$ docker-compose -f iota.yaml up
+	$ docker-compose -f iotarush.yaml up
 
 	# Stopping
-	$ docker-compose -f iota.yaml stop
+	$ docker-compose -f iotarush.yaml stop
 
 	# check
 	$ docker images
@@ -239,8 +240,50 @@ Now start. ::
 
 	# Get log output
 	# See https://docs.docker.com/v1.5/compose/cli
-	$ docker-compose -f iota.yaml logs
+	$ docker-compose -f iotarush.yaml logs
 
+Finally a custom Dockerfile was created for OCB to include Rush (and Redis) as an extension of the ``fiware/orion``
+Docker file to support HTTPS notifications for OCB subscriptions (see WireCloud below).
+This is the content of the ``geonovum/orionrush`` Dockerfile:
+
+.. literalinclude:: ../src/fiware/docker/orionrush/Dockerfile
+    :language: text
+
+The entry point was changed to :
+
+.. literalinclude:: ../src/fiware/docker/orionrush/docker-entrypoint.sh
+    :language: bash
+
+To run the entire Fiware suite with `IoTAgentCpp`, `OrionRush`, and `MongoDB`, a new docker-compose file
+was created, ``iotarush.yaml`` :
+
+.. literalinclude:: ../src/fiware/docker/iotarush.yaml
+    :language: yaml
+
+To start/stop all fresh the following init.d script was created:
+
+.. literalinclude:: ../src/fiware/docker/iotarush
+    :language: bash
+
+Activating our ``iotarush`` init.d script and showing commands ::
+
+	$ cp iotarush /etc/init.d
+	$ update-rc.d iotarush  defaults
+
+	# Start
+	service iotarush start
+
+	# Status
+	service iotarush status
+
+	# Stop without loosing data
+	service iotarush stop
+
+	# Restart without loosing data
+	service iotarush restart
+
+	# Restart with purging all (mongodb) data
+	service iotarush reinit
 
 Testing the FIWARE Installation
 ===============================
@@ -847,27 +890,6 @@ Now notifications are seen immediately on sending events from the UL20 client! S
 
    *Second WireCloud Mashup: direct notifications in Map (left) from UL20 client (right)*
 
-Finally a Dockerfile was created to include Rush (and Redis) as an extension of the ``fiware/orion``
-Docker file. This is the content of the ``geonovum/orionrush`` Dockerfile:
-
-.. literalinclude:: ../src/fiware/docker/orionrush/Dockerfile
-    :language: text
-
-The entry point was changed to :
-
-.. literalinclude:: ../src/fiware/docker/orionrush/docker-entrypoint.sh
-    :language: bash
-
-To run the entire Fiware suite with `IoTAgentCpp`, `OrionRush`, and `MongoDB`, a new docker-compose file
-was created, ``iotarush.yaml`` :
-
-.. literalinclude:: ../src/fiware/docker/iotarush.yaml
-    :language: yaml
-
-To restart all fresh the following script was created:
-
-.. literalinclude:: ../src/fiware/docker/restart.sh
-    :language: bash
 
 Installing FIWARE - from Source
 ===============================
