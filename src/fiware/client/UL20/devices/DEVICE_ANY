@@ -1,0 +1,37 @@
+{
+ "devices": [
+    { "device_id": "DEV_ID",
+      "entity_name": "ENTITY_ID",
+      "entity_type": "thing",
+      "protocol": "PDI-IoTA-UltraLight",
+      "timezone": "Europe/Amsterdam",
+	  "attributes": [
+		        {
+		          "object_id": "ATTR_ID",
+		          "name": "ATTR_NAME",
+		          "type": "ATTR_TYPE"
+		        }
+		      ],
+	  "static_attributes": [
+        { "name": "name",
+          "type": "string",
+          "value": "ORG_NAME"
+        },
+        {
+        "name": "position",
+        "type": "coords",
+        "value": "LAT_LON",
+        "metadatas": [
+            {
+                "name": "location",
+                "type": "string",
+                "value": "WGS84"
+            }
+          ]
+        }
+
+       ]
+      }
+     ]
+}
+

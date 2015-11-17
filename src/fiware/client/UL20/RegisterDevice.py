@@ -30,6 +30,16 @@ if NUM_ARG==4:
    DEVICE_FILE=sys.argv[1]
    DEVICE_ID=sys.argv[2]
    ENTITY_ID=sys.argv[3]
+elif sys.argv[1] == 'DEVICE_ANY':
+    DEVICE_FILE=sys.argv[1]
+    DEVICE_ID=sys.argv[2]
+    ENTITY_ID=sys.argv[3]
+    ATTR_ID=sys.argv[4]
+    ATTR_NAME=sys.argv[5]
+    ATTR_TYPE=sys.argv[6]
+    ORG_NAME=sys.argv[7]
+    LAT_LON=sys.argv[8]
+
 else:
    print 'Usage: '+COMMAND+' [DEVICE_FILE] [DEVICE_ID] [ENTITY_ID]'
    print '  Where DEVICE_FILE is the name of the file in the devices folder containing the JSON description of a device model. See examples at .devices/ '
@@ -66,7 +76,14 @@ with open(FILE) as json_file:
 
 PAYLOAD_json["devices"][0]["device_id"]=DEVICE_ID
 PAYLOAD_json["devices"][0]["entity_name"]=ENTITY_ID
-    
+
+if DEVICE_FILE == 'DEVICE_ANY':
+    PAYLOAD_json["devices"][0]["attributes"][0]["object_id"]=ATTR_ID
+    PAYLOAD_json["devices"][0]["attributes"][0]["name"]=ATTR_NAME
+    PAYLOAD_json["devices"][0]["attributes"][0]["type"]=ATTR_TYPE
+    PAYLOAD_json["devices"][0]["static_attributes"][0]["value"]=ORG_NAME
+    PAYLOAD_json["devices"][0]["static_attributes"][1]["value"]=LAT_LON
+
 PAYLOAD = json.dumps(PAYLOAD_json, indent=4)
 
 HEADERS = {'content-type': 'application/json' , 'X-Auth-Token' : TOKEN, 'Fiware-Service' : FIWARE_SERVICE, 'Fiware-ServicePath' : FIWARE_SERVICE_PATH }
