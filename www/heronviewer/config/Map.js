@@ -1890,6 +1890,51 @@ Heron.options.map.layers = [
             opacity: 0.7
         }
     ),
+    /** NGSI10 Entity Layer from Fiware Orion Context Broker. */
+    new OpenLayers.Layer.Vector('Fiware Entities', {
+        strategies: [new OpenLayers.Strategy.Fixed()],
+        protocol: new OpenLayers.Protocol.NGSI10({
+            url: 'http://sensors.geonovum.nl:1026/v1/queryContext',
+            // url: 'http://orion.lab.fi-ware.org:1026/ngsi10/queryContext',
+            // data: {"entities": [{"isPattern": "true", "id": "b"}]},
+            // authToken: '<personal fiware auth token string>',
+            refreshMillis: 4000,
+            fiwareService: 'fiwareiot'
+        }),
+        styleMap: new OpenLayers.StyleMap({
+            "default": new OpenLayers.Style(null, {
+
+                rules: [new OpenLayers.Rule({
+                    title: 'Entity',
+                    symbolizer: {
+                        "Point": {
+                            fillColor: '#37f',
+                            fillOpacity: 0.8,
+                            graphicName: "circle",
+                            strokeColor: '#03c',
+                            strokeWidth: 2,
+                            graphicZIndex: 1,
+                            pointRadius: 5,
+                            label: "${label} ${temperature}C",
+                            fontColor: "#222222",
+                            fontSize: "12px",
+                            fontFamily: "Courier New, monospace",
+                            fontWeight: "bold",
+                            //labelAlign: "cm",
+                            labelXOffset: "12",
+                            labelYOffset: "12",
+                            // labelOutlineColor: "white",
+                            labelOutlineWidth: 2
+
+                        }
+                    }
+                })]
+            })
+        }),
+
+        projection: new OpenLayers.Projection("EPSG:4326")
+    }),
+
     Heron.options.worklayers.editor,
     Heron.options.worklayers.scratch
 ];
@@ -2098,6 +2143,11 @@ Heron.options.layertree.tree = [
         {nodeType: "gx_layer", layer: "Weather Stations", text: "Weather Stations (WMS)"},
         {nodeType: "gx_layer", layer: "Weather Observations", text: "Weather Observations (WMS Time)"},
         {nodeType: "gx_layer", layer: "Last Weather Observations", text: "Last Weather Observations (WMS)"}
+    ]
+    },
+    {
+        text: 'Fiware', expanded: true, children: [
+        {nodeType: "gx_layer", layer: "Fiware Entities", text: "Fiware Entities (Geonovum)"}
     ]
     },
     {

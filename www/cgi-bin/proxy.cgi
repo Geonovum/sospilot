@@ -64,23 +64,19 @@ try:
         print os.environ
 
     elif url.startswith("http://") or url.startswith("https://"):
-        if url.startswith("http://esdin.fgi.fi"):
-            username = 'esdin'
-            password = 'ec+08-11'
-
-            password_mgr = urllib2.HTTPPasswordMgrWithDefaultRealm()
-            # Add the username and password.
-            # If we knew the realm, we could use it instead of ''None''.
-            # top_level_url = url
-            password_mgr.add_password(None, url, username, password)
-            handler = urllib2.HTTPBasicAuthHandler(password_mgr)
-            # create "opener" (OpenerDirector instance)
-            opener = urllib2.build_opener(handler)
-            urllib2.install_opener(opener)
-
         if method == "POST":
             length = int(os.environ["CONTENT_LENGTH"])
             headers = {"Content-Type": os.environ["CONTENT_TYPE"]}
+
+            if os.environ.get("HTTP_ACCEPT"):
+                headers['Accept'] = os.environ["HTTP_ACCEPT"]
+            if os.environ.get("HTTP_FIWARE_SERVICE"):
+                headers['FIWARE-Service'] = os.environ["HTTP_FIWARE_SERVICE"]
+                if os.environ.get("HTTP_X_AUTH_TOKEN"):
+                    headers['X-FI-WARE-OAuth-Header-Name'] = 'X-Auth-Token'
+                    headers['X-FI-WARE-OAuth-Token'] = 'true'
+                    headers['X-Auth-Token'] = os.environ.get("HTTP_X_AUTH_TOKEN")
+
             body = sys.stdin.read(length)
             r = urllib2.Request(url, body, headers)
             y = urllib2.urlopen(r)
@@ -93,8 +89,12 @@ try:
             print "Content-Type: %s" % (i["Content-Type"])
         else:
             print "Content-Type: text/plain"
-        print
 
+        if i.has_key("Content-Disposition"):
+            print "Content-Disposition: %s" % (i["Content-Disposition"])
+
+        print
+        # print str(os.environ)
         print y.read()
 
         y.close()

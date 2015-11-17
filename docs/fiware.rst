@@ -116,14 +116,15 @@ Docker utils.  ::
 	docker exec -it docker_iotacpp_1 bash
 
 
-Install FIWARE with Docker
---------------------------
+Install FIWARE
+--------------
 
-Installing FIWARE components to realize IoT setup: IoT Agent, Orion CB with MongoDB persistence.
+Installing FIWARE Docker components to realize IoT setup: IoT Agent, Orion CB with MongoDB persistence.
 Intro: http://www.slideshare.net/dmoranj/iot-agents-introduction
 
 Take docker-compose for fiware-IoTAgent-Cplusplus as starting point:
-https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/tree/develop/docker
+https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/tree/develop/docker.  All our local development
+related to Docker can be found here: https://github.com/Geonovum/sospilot/tree/master/src/fiware/docker .
 
 Steps. Follow: https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/blob/develop/docker/readme.md ::
 
@@ -133,9 +134,6 @@ Steps. Follow: https://github.com/telefonicaid/fiware-IoTAgent-Cplusplus/blob/de
 
 	#
 	cd /opt/fiware/iotagent/iotacpp/docker
-
-	# Private docker config ?? (Gave problems)
-	cp -r iotacpp/docker .
 
 Networking from outside to docker containers. See http://blog.oddbit.com/2014/08/11/four-ways-to-connect-a-docker.
 Make two utilities, ``docker-pid`` and ``docker-ip`` in ``/opt/bin``.  ::
@@ -151,7 +149,7 @@ Make two utilities, ``docker-pid`` and ``docker-ip`` in ``/opt/bin``.  ::
 But simpler is to follow: https://docs.docker.com/userguide/dockerlinks/ and even easier via ``docker-compose`` ``iota.yaml``:
 https://docs.docker.com/compose/yml. Use the ``ports`` property:
 "Expose ports. Either specify both ports (HOST:CONTAINER), or just the container port (a random host port will be chosen)."
-So our ``iotarush.yml`` becomes:
+So our ``iotarush.yml`` (derived from iota.yaml)  becomes:
 
 .. literalinclude:: ../src/fiware/docker/iotarush.yaml
     :language: yaml
