@@ -300,28 +300,28 @@ Simple scenario, using the UltraLight (UL2.0) IoT protocol.:
 4. send temperature via IDAS
 5. observe changed Entity via Orion
 
-See test clients at https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/UL20
+See test clients at https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/python/UL20
 
 See tutorial at: http://www.slideshare.net/FI-WARE/fiware-iotidasintroul20v2. Documentation
 https://fiware-orion.readthedocs.org/en/develop (OCB).
 
-Sending commands from local system using FIWARE FIGWAY (python-IDAS4): https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/UL20.
+Sending commands from local system using FIWARE FIGWAY (python-IDAS4): https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/python/UL20.
 These are a set of Python commands for most common REST services for both the OCB and IoTAgent/Manager.
 
 Prepare the right ``config.ini`` used by all Python commands:
 
-.. literalinclude:: ../src/fiware/client/config.ini
+.. literalinclude:: ../src/fiware/client/python/config.ini
     :language: text
 
 Create device template (called ``GEONOVUM_TEMP``) under
 https://github.com/telefonicaid/fiware-figway/tree/master/python-IDAS4/Sensors_UL20/devices :
 
-.. literalinclude:: ../src/fiware/client/UL20/devices/GEONOVUM_TEMP
+.. literalinclude:: ../src/fiware/client/python/UL20/devices/GEONOVUM_TEMP
     :language: text
 
 Create service, then a device and send an observation using Python code under
-https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/UL20 (IoTAgent with UL protocol) and
-https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/ContextBroker (OCB).
+https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/python/UL20 (IoTAgent with UL protocol) and
+https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/python/ContextBroker (OCB).
 
 Watch that the related Entity is created in the OCB and that it gets an attribute value when sending
 an Observation to the IoTAgent. ::
@@ -649,7 +649,7 @@ We will use Mosquitto as MQTT-client first:
 *Mosquitto is an open source (BSD licensed) message broker that implements the MQ Telemetry Transport protocol*
 *versions 3.1 and 3.1.1. MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model.*
 
-See test clients at https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/MQTT
+See test clients at https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/python/MQTT
 
 Before observations can be sent a Service needs to be created and a Device(s) registered.
 
@@ -670,12 +670,12 @@ Use ``mosquitto_pub`` as a commandline client http://mosquitto.org/man/mosquitto
 
 See ``setup.sh`` for full example with Service/Device creation and observation publication via MQTT :
 
-.. literalinclude:: ../src/fiware/client/MQTT/setup.sh
+.. literalinclude:: ../src/fiware/client/python/MQTT/setup.sh
     :language: bash
 
 and a sample device file:
 
-.. literalinclude:: ../src/fiware/client/MQTT/devices/GEONOVUM_MQTT_TEMP
+.. literalinclude:: ../src/fiware/client/python/MQTT/devices/GEONOVUM_MQTT_TEMP
     :language: text
 
 The Service creation and Device provisioning uses the Admin API
