@@ -64,7 +64,7 @@ Heron.options.map.settings = {
     center: '155000,463000',
     xy_precision: 3,
     zoom: 3,
-    allOverlays: true,
+    allOverlays: false,
     theme: null,
     fractionalZoom: false,
 
@@ -213,6 +213,22 @@ Heron.options.map.layers = [
      * ==================================
      */
 
+    new OpenLayers.Layer.TMS("Map5 Relief Struct TMS",
+        Heron.scratch.urls.MAP5_TMS,
+        {
+            layername: 'relief_struct/EPSG28992',
+            type: "jpeg",
+            isBaseLayer: true,
+            transparent: false,
+            bgcolor: "0xffffff",
+            visibility: false,
+            singleTile: false,
+            serverResolutions: Heron.options.serverResolutions.zoom_0_16,
+            alpha: true,
+            opacity: 1.0,
+            attribution: "CC by CA <a href='http://opentopo.nl'>OpenTopo</a> <br/>Data <a href='http://www.openstreetmap.org/copyright'>ODbL</a> <a href='http://openstreetmap.org/'>OpenStreetMap</a> ",
+            transitionEffect: 'resize'
+        }),
 
     new OpenLayers.Layer.TMS("OpenBasisKaart OSM",
         Heron.scratch.urls.OPENBASISKAART_TMS,
@@ -222,7 +238,7 @@ Heron.options.map.layers = [
             isBaseLayer: true,
             transparent: true,
             bgcolor: "0xffffff",
-            visibility: true,
+            visibility: false,
             singleTile: false,
             serverResolutions: Heron.options.serverResolutions.zoom_0_13,
             alpha: true,
@@ -296,22 +312,6 @@ Heron.options.map.layers = [
             }
         }),
 
-    new OpenLayers.Layer.TMS("Map5 Relief Struct TMS",
-        Heron.scratch.urls.MAP5_TMS,
-        {
-            layername: 'relief_struct/EPSG28992',
-            type: "jpeg",
-            isBaseLayer: true,
-            transparent: false,
-            bgcolor: "0xffffff",
-            visibility: false,
-            singleTile: false,
-            serverResolutions: Heron.options.serverResolutions.zoom_0_16,
-            alpha: true,
-            opacity: 1.0,
-            attribution: "CC by CA <a href='http://opentopo.nl'>OpenTopo</a> <br/>Data <a href='http://www.openstreetmap.org/copyright'>ODbL</a> <a href='http://openstreetmap.org/'>OpenStreetMap</a> ",
-            transitionEffect: 'resize'
-        }),
 
     new OpenLayers.Layer.TMS("Map5 OpenLufo TMS",
         Heron.scratch.urls.MAP5_TMS,
@@ -321,7 +321,7 @@ Heron.options.map.layers = [
             isBaseLayer: true,
             transparent: false,
             bgcolor: "0xffffff",
-            visibility: false,
+            visibility: true,
             singleTile: false,
             serverResolutions: Heron.options.serverResolutions.zoom_0_16,
             alpha: true,
@@ -390,7 +390,7 @@ Heron.options.map.layers = [
             layername: 'luchtfoto_EPSG28992',
             type: 'jpeg',
             serverResolutions: Heron.options.serverResolutions.zoom_0_13,
-            isBaseLayer: false,
+            isBaseLayer: true,
             visibility: false
         }
     ),
@@ -495,7 +495,7 @@ Heron.options.map.layers = [
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "all_stations", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -517,7 +517,7 @@ Heron.options.map.layers = [
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "active_stations", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -1916,7 +1916,7 @@ Heron.options.map.layers = [
                             graphicZIndex: 1,
                             pointRadius: 5,
                             label: "${label} ${temperature}C",
-                            fontColor: "#222222",
+                            fontColor: "#cc0000",
                             fontSize: "12px",
                             fontFamily: "Courier New, monospace",
                             fontWeight: "bold",
@@ -1968,6 +1968,7 @@ Heron.options.layertree.tree = [
     {
         text: 'Sensoren', expanded: true, children: [
         {nodeType: "gx_layer", layer: "RIVM - All Stations", text: "RIVM AQ Stations (WMS)"},
+        {nodeType: "gx_layer", layer: "RIVM - Active Stations", text: "RIVM AQ LML Stations"},
         {nodeType: "gx_layer", layer: "RIVM - Active Stations (WFS)", text: "RIVM AQ Stations (WFS)"},
         {nodeType: "gx_layer", layer: "Zones and Agglomerations", text: "RIVM Zones and Agglomerations (WMS)"},
         {nodeType: "gx_layer", layer: "Smart Emission - Sensors", text: "Smart Emission - Sensors (WMS)"}
