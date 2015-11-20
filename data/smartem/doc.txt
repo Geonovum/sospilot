@@ -34,8 +34,8 @@ S.AudioPlus8			Octave +8 in dB(A)
 S.AudioPlus9			Octave +9 in dB(A)
 S.AudioPlus10			Octave +10 in dB(A)
 S.SatInfo				?
-S.Latitude				*100 + Fractional degrees
-S.Longitude				*10 + Fractional degrees
+S.Latitude				Zie onder
+S.Longitude				Zie onder
 
 ------------------------------------------------
 Update v3 18.11.15
@@ -117,3 +117,25 @@ P.11
 P.16
 P.17
 P.18
+
+----------- GPS data -------
+Voorbeeld uit SmartEmisssion data
+Zie https://github.com/Geonovum/sospilot/issues/22
+
+07/24/2015 07:27:36,S.Longitude,5914103
+07/24/2015 07:27:36,S.Latitude,53949937
+wordt
+
+Longitude: 5914103 --> 0x005a3df7
+0x05 --> 5 graden (n2 en n3),
+0xa3df7 --> 671223 (n4-n8) fractie --> 0.671223
+dus 5.671223 graden
+
+Latitude: 53949937 --> 0x033735f1
+0x33 --> 51 graden
+0x735f1 --> 472561 --> 0.472561
+dus 51.472561
+n0=0 klopt met East/North.
+5.671223, 51.472561
+
+komt precies uit in de Marshallstraat in Helmond bij Intemo, dus alles lijkt te kloppen!!
