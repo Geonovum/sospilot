@@ -31,7 +31,7 @@ From bottom to top the setup is as follows:
 
 * Sensors or manual input use the UltraLight 2.0 (UL2.0) and MQTT protocols for managing services and devices and sending observations
 * The `FIWARE IoTAgentCpp device API <http://fiware-iot-stack.readthedocs.org/en/latest/device_api/index.html>`_ is used
-* Client libraries are used to facilitate using the UL2.0 and MQTT protocols
+* Client libraries (`Python <https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/python>`_, `Arduino <https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/arduino>`_) are used to facilitate using the UL2.0 and MQTT protocols
 * The client may reside anywhere on the Internet
 * the server ``sensors.geonovum.nl`` hosts the FIWARE components ``Orion Context Broker`` (OCB) and the ``IoTAgentCpp``
 * all persistence for these components is done in ``MongoDB``
@@ -39,6 +39,7 @@ From bottom to top the setup is as follows:
 * ``WireCloud`` (WC), the Mashup environment runs in the FIWARE Lab server at lab.fiware.org
 * WC communicates to (any) OCB using the NGSI10 protocol
 * within WC mashups are produced in order to view and interact with the sensor data
+* by developing an `OpenLayers NGSI10 Vector Layer <https://github.com/heron-mc/heron-mc/blob/master/heron/lib/widgets/FiwareWidgets.js>`_, viewers like `HeronViewer <http://sensors.geonovum.nl/heronviewer/>`_ can show (real-time) sensor data
 
 NGSI10 is a specification from the Open Mobile Alliance (OMA).
 The FI-WARE version of the OMA NGSI 10 interface is a
@@ -888,6 +889,23 @@ Now notifications are seen immediately on sending events from the UL20 client! S
 
    *Second WireCloud Mashup: direct notifications in Map (left) from UL20 client (right)*
 
+Display with OpenLayers/Heron
+-----------------------------
+
+In order to facilitate viewing data in standard geo-web viewers, an
+`OpenLayers NGSI10 Vector Layer <https://github.com/heron-mc/heron-mc/blob/master/heron/lib/widgets/FiwareWidgets.js>`_
+component was developed. This allows
+viewers like the existing project `HeronViewer <http://sensors.geonovum.nl/heronviewer/>`_ to show (real-time)
+sensor data.
+
+Below is a screenshot of the HeronViewer showing in blue dots 2 "bot-sensors" and the CityGIS Dustduino-based
+sensor. All show a temperature in realtime.
+
+
+.. figure:: _static/fiware/heron-ngsi10-layer.jpg
+   :align: center
+
+   *NGSI10 OpenLayers Vector Layer (blue dots) in HeronViewer*
 
 Installing FIWARE - from Source
 ===============================
