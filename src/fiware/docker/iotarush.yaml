@@ -17,7 +17,6 @@ orion:
     image: geonovum/orionrush
     links:
         - mongodb
-        - sthcomet
     ports:
         - "1026:1026"
 
