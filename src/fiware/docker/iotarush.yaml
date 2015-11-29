@@ -20,6 +20,14 @@ orion:
     ports:
         - "1026:1026"
 
+sthcomet:
+    image: geonovum/sthcomet
+    links:
+        - mongodb
+        - orion
+    ports:
+        - "8666:8666"
+
 iotacpp:
     image: telefonicaiot/iotacpp
     links:

@@ -37,7 +37,7 @@ NAME=iotarush
 DESC=docker_composition
 # Docker-compose file
 CONF=/opt/geonovum/sospilot/git/src/fiware/docker/iotarush.yaml
-SERVICE_CONTAINERS="docker_iotacpp_1 docker_orion_1"
+SERVICE_CONTAINERS="docker_iotacpp_1 docker_orion_1 docker_sthcomet_1"
 
 . /lib/lsb/init-functions
 
