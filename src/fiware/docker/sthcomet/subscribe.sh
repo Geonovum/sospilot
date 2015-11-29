@@ -18,7 +18,7 @@ curl ${ORION_HOST}:${ORION_PORT}/v1/subscribeContext -s -S --header 'Content-Typ
     "attributes": [
         "temperature"
     ],
-    "reference": "sthcomet:8666/notify",
+    "reference": "http://docker_sthcomet_1:8666/notify",
     "duration": "P1M",
     "notifyConditions": [
         {

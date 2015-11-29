@@ -22,7 +22,7 @@ config.server = {
 config.database = {
   // The service to be used if not sent by the Orion Context Broker in the notifications.
   //  Default value: "orion".
-  defaultService: 'orion',
+  defaultService: 'fiwareiot',
   // The service path to be used if not sent by the Orion Context Broker in the notifications.
   //  Default value: "/".
   defaultServicePath: '/',
