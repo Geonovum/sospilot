@@ -22,6 +22,7 @@ orion:
 
 sthcomet:
     image: geonovum/sthcomet
+    log_driver: "syslog"
     links:
         - mongodb
         - orion

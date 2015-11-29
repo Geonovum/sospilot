@@ -13,4 +13,6 @@ RUN git fetch && git checkout master && npm install
 EXPOSE 8666
 
 WORKDIR /github/telefonicaid/IoT-STH
+COPY config.js /github/telefonicaid/IoT-STH
+
 CMD ["npm", "start"]
