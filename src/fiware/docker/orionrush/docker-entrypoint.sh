@@ -8,7 +8,7 @@ redis-server redis.conf > /var/log/redis.log 2>&1 &
 
 cd ${RUSH_HOME}
 export RUSH_GEN_MONGO=${MONGODB_HOST}
-cp /server.crt /server/csr .
+mv /server.key /server.crt /server.csr ${RUSH_HOME}/utils
 
 bin/listener > /var/log/rush-listener.log 2>&1 &
 bin/consumer > /var/log/rush-consumer.log 2>&1 &

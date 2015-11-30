@@ -33,6 +33,7 @@ RUN \
 WORKDIR /
 
 COPY docker-entrypoint.sh /
+COPY server.key /
 COPY server.crt /
 COPY server.csr /
 
