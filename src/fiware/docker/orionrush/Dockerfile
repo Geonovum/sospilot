@@ -31,7 +31,11 @@ RUN \
 	# bin/consumer
 
 WORKDIR /
+
 COPY docker-entrypoint.sh /
+COPY server.crt /
+COPY server.csr /
+
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 

@@ -5,8 +5,12 @@ ORION_PORT=1026
 STH_HOST=sensors.geonovum.nl
 STH_PORT=8666
 
-
-curl ${ORION_HOST}:${ORION_PORT}/v1/subscribeContext -s -S --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Fiware-Service: fiwareiot' --header 'Fiware-ServicePath: /' -d @- <<EOF
+#  --header 'Fiware-ServicePath: /'
+curl ${ORION_HOST}:${ORION_PORT}/v1/subscribeContext -s -S\
+ --header 'Content-Type: application/json' \
+ --header 'Accept: application/json' \
+ --header 'Fiware-Service: fiwareiot' \
+ -d @- <<EOF
 {
     "entities": [
         {
@@ -16,7 +20,7 @@ curl ${ORION_HOST}:${ORION_PORT}/v1/subscribeContext -s -S --header 'Content-Typ
         }
     ],
     "attributes": [],
-    "reference": "http://sensors.geonovum.nl:8666/notify",
+    "reference": "http://sensors.geonovum.nl:1028/notify",
     "duration": "P1M",
     "notifyConditions": [
         {
