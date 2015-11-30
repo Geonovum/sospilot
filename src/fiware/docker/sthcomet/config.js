@@ -6,7 +6,7 @@ var config = {};
 //--------------------------
 config.server = {
   // The host where the STH server will be started. Default value: "localhost".
-  host: 'localhost',
+  host: '0.0.0.0',
   // The port where the STH server will be listening. Default value: "8666".
   port: '8666',
   // A flag indicating if the empty results should be removed from the response.

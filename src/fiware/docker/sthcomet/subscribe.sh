@@ -15,17 +15,13 @@ curl ${ORION_HOST}:${ORION_PORT}/v1/subscribeContext -s -S --header 'Content-Typ
             "id": "NexusEnt1"
         }
     ],
-    "attributes": [
-        "temperature"
-    ],
-    "reference": "http://docker_sthcomet_1:8666/notify",
+    "attributes": [],
+    "reference": "http://sensors.geonovum.nl:8666/notify",
     "duration": "P1M",
     "notifyConditions": [
         {
             "type": "ONCHANGE",
-            "condValues": [
-                "temperature"
-            ]
+            "condValues": []
         }
     ],
     "throttling": "PT1S"
