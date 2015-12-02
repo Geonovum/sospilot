@@ -9,13 +9,6 @@ Starting in october 2015 the SOSPilot platform was extended to use and deploy FI
 The Plan
 ========
 
-1. register at lab.fiware.org (justb4)
-2. get connected to public services in Lab
-3. basic Context Broker (Orion) interaction
-4. publish temperatures to IDAS using UltraLight and MQTT protocols
-5. get temperatures from Orion CB
-6. show (in realtime) in Wirecloud Mashup
-
 The architecture used for this setup is depicted below. This
 architecture emerged dynamically as described below.
 
@@ -33,9 +26,11 @@ From bottom to top the setup is as follows:
 * The `FIWARE IoTAgentCpp device API <http://fiware-iot-stack.readthedocs.org/en/latest/device_api/index.html>`_ is used
 * Client libraries (`Python <https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/python>`_, `Arduino <https://github.com/Geonovum/sospilot/tree/master/src/fiware/client/arduino>`_) are used to facilitate using the UL2.0 and MQTT protocols
 * The client may reside anywhere on the Internet
-* the server ``sensors.geonovum.nl`` hosts the FIWARE components ``Orion Context Broker`` (OCB) and the ``IoTAgentCpp``
+* the server ``sensors.geonovum.nl`` hosts the FIWARE components ``Orion Context Broker`` (Orion CB or OCB), ``IoTAgentCpp`` and ``Short Term History (STH)``
 * all persistence for these components is done in ``MongoDB``
-* the ``IoTAgentCpp`` translates requests from the UL2.0/MQTT clients to Orion CB NGSI requests
+* ``IoTAgentCpp`` translates requests from the UL2.0/MQTT clients to Orion CB NGSI requests
+* ``OCB`` persists the *latest* values as Entities in MongoDB
+* ``Short Term History (STH aka STH Comet)`` subscribes to Orion CB NGSI Entity attribute change events and stores *Timeseries* in MongoDB
 * ``WireCloud`` (WC), the Mashup environment runs in the FIWARE Lab server at lab.fiware.org
 * WC communicates to (any) OCB using the NGSI10 protocol
 * within WC mashups are produced in order to view and interact with the sensor data
@@ -45,26 +40,45 @@ NGSI10 is a specification from the Open Mobile Alliance (OMA).
 The FI-WARE version of the OMA NGSI 10 interface is a
 `RESTful API via HTTP <https://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/FI-WARE_NGSI-10_Open_RESTful_API_Specification>`_.
 
+STH provides Timeseries storage and an API to request Timeseries data. See https://github.com/telefonicaid/fiware-sth-comet.
+
+The above setup provides APIs for a complete IoT platform:
+
+For data producers (sensors):
+
+* APIs for sensor-provisioning (via UL2.0)
+* APIs (UL2.0, MQTT) for sensors to send observations
+
+For data consumers:
+
+* API to request latest values (NGSI10 Query API)
+* API to subscribe to real-time updates (NGSI10 Publish-Subscribe API)
+* API to request historic timeseries data (STH API)
+
+
 FIWARE Docs
 ===========
 
-http://fiware-iot-stack.readthedocs.org/en/latest/index.html
+This document provides most of the details of the above components: http://fiware-iot-stack.readthedocs.org/en/latest/index.html
 
 Via lab.fiware.org
 ==================
+
+Initially it was attempted to realize the above architecture via the public FIWARE Lab platform but we found some isssues.
+In a later stage the above setup was realized within the Geonovum (Ubuntu/Linux) server VPS. Some info follows:
 
 Registering at the international FIWARE Lab worked ok, but could not get
 the Orion CB with the IDAS IoTAgent working. The interaction between the two
 seemed to be broken. This was reported, see specifics here
 on `StackOverflow <http://stackoverflow.com/questions/32933813/fiware-no-observation-attributes-in-orion-cb-when-registered-sent-via-idas-ultr>`_:
 
-
 And appearantly this
 issue `was found by others <http://stackoverflow.com/questions/31051501/missing-attributes-on-orion-cb-entity-when-registering-device-through-idas>`_ as well.
 
 After an unsuccessful attempt to compile and run the OCB and IoT Agent on Ubuntu 14.04-3
-it was decided to use Docker on the SOSPilot VPS. This seems the best/recommended option anyway as CentOS is the primary
-target platform for FIWARE. See next section.
+it was decided to use Docker on the Geonovum SOSPilot VPS (Ubuntu/Linux server VPS).
+Via Docker seems the best/recommended option anyway as CentOS is the primary
+target platform for FIWARE. See next sections.
 
 Installing FIWARE - with Docker
 ===============================
@@ -116,11 +130,10 @@ Docker utils.  ::
 	# go into docker image named docker_iotacpp_1 to bash prompt
 	docker exec -it docker_iotacpp_1 bash
 
-
 Install FIWARE
 --------------
 
-Installing FIWARE Docker components to realize IoT setup: IoT Agent, Orion CB with MongoDB persistence.
+Installing the FIWARE Docker components to realize IoT setup: IoT Agent, Orion CB, Short term History (STH) with MongoDB persistence.
 Intro: http://www.slideshare.net/dmoranj/iot-agents-introduction
 
 Take docker-compose for fiware-IoTAgent-Cplusplus as starting point:
@@ -166,17 +179,18 @@ Now start. ::
 	# check
 	$ docker images
 	REPOSITORY              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-	fiware/orion            latest              a5f228ae72c3        19 hours ago        277.1 MB
-	telefonicaiot/iotacpp   latest              583fbe68b08e        28 hours ago        2.092 GB
-	mongo                   2.6                 dd4b3c1d1e51        5 days ago          392.8 MB
-	ubuntu                  latest              1d073211c498        6 days ago          187.9 MB
-	hello-world             latest              0a6ba66e537a        2 weeks ago         960 B
+	geonovum/orionrush      latest              d097edbfaa4d        2 days ago          535.8 MB
+	geonovum/sthcomet       latest              778b09dbecc9        3 days ago          686.4 MB
+	fiware/orion            latest              a5f228ae72c3        5 weeks ago         277.1 MB
+	telefonicaiot/iotacpp   latest              583fbe68b08e        5 weeks ago         2.092 GB
+	mongo                   2.6                 dd4b3c1d1e51        5 weeks ago         392.8 MB
 
 	$ docker ps
-	CONTAINER ID        IMAGE                   COMMAND                  CREATED              STATUS              PORTS                                                                      NAMES
-	1c9dceec8ec8        telefonicaiot/iotacpp   "/docker-entrypoint.s"   6 seconds ago        Up 5 seconds        0.0.0.0:32772->1883/tcp, 0.0.0.0:8000->8080/tcp, 0.0.0.0:32771->8081/tcp   docker_iotacpp_1
-	7f463ea679b6        fiware/orion            "/usr/bin/contextBrok"   About a minute ago   Up 5 seconds        0.0.0.0:32770->1026/tcp                                                    docker_orion_1
-	41028cff906b        mongo:2.6               "/entrypoint.sh --sma"   29 hours ago         Up 6 seconds        27017/tcp                                                                  docker_mongodb_1
+	CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                                                                                      NAMES
+	d3e35f677462        telefonicaiot/iotacpp   "/docker-entrypoint.s"   47 hours ago        Up About an hour    185.21.189.59:1883->1883/tcp, 185.21.189.59:8081->8081/tcp, 185.21.189.59:8000->8080/tcp   docker_iotacpp_1
+	d60d467d4e18        geonovum/sthcomet       "npm start"              47 hours ago        Up About an hour    0.0.0.0:8666->8666/tcp                                                                     docker_sthcomet_1
+	425dd1179b71        geonovum/orionrush      "/docker-entrypoint.s"   47 hours ago        Up About an hour    0.0.0.0:1026->1026/tcp                                                                     docker_orion_1
+	ad755ed4d28f        mongo:2.6               "/entrypoint.sh --sma"   47 hours ago        Up About an hour    27017/tcp                                                                                  docker_mongodb_1
 
 	# get into a container with bash
 	docker exec -it docker_orion_1 bash
@@ -253,7 +267,7 @@ The entry point was changed to :
 .. literalinclude:: ../src/fiware/docker/orionrush/docker-entrypoint.sh
     :language: bash
 
-To run the entire Fiware suite with `IoTAgentCpp`, `OrionRush`, and `MongoDB`, a new docker-compose file
+To run the entire Fiware suite with `IoTAgentCpp`, `OrionRush`, `STH` and `MongoDB`, a new docker-compose file
 was created, ``iotarush.yaml`` :
 
 .. literalinclude:: ../src/fiware/docker/iotarush.yaml
@@ -717,6 +731,8 @@ Within the ``mongodb`` Docker container we can inspect the persisted data in the
 	local            0.031GB
 	orion            0.031GB
 	orion-fiwareiot  0.031GB
+	sth_fiwareiot    0.031GB
+
 	> use iot
 	switched to db iot
 	> show collections
@@ -743,6 +759,19 @@ Within the ``mongodb`` Docker container we can inspect the persisted data in the
 	"temperature" : { "value" : "11", "type" : "int", "md" : [ { "name" : "TimeInstant", "type" : "ISO8601", "value" : "2015-10-31T20:41:28.654329" } ],
 	"creDate" : 1446324088, "modDate" : 1446324088 } }, "creDate" : 1446324088, "modDate" : 1446324088 }
 
+	# timeseries storage
+	> use sth_fiwareiot
+	switched to db sth_fiwareiot
+	> show collections
+	sth_/_dust13ent_thing
+	sth_/_dust13ent_thing.aggr
+	sth_/_nexusent1_thing
+	sth_/_nexusent1_thing.aggr
+	sth_/_tempgeonovument_thing
+	sth_/_tempgeonovument_thing.aggr
+	sth_/_thing:dust13_thing
+	sth_/_thing:dust13_thing.aggr
+	system.indexes
 
 Display Values with WireCloud
 -----------------------------
@@ -906,6 +935,28 @@ sensor. All show a temperature in realtime.
    :align: center
 
    *NGSI10 OpenLayers Vector Layer (blue dots) in HeronViewer*
+
+Timeseries data from STH
+------------------------
+
+The Short Term History (STH) component stores timeseries data. This is achieved by  a ``subscribeContext`` on the
+Orion CB NGSI10 API. This has to be done explicitly. Documentation can be found here: https://github.com/telefonicaid/fiware-sth-comet
+
+In our setup we fire a ``curl`` script to trigger a generic subscription on the ``thing`` entity:
+
+.. literalinclude:: ../src/fiware/docker/sthcomet/subscribe.sh
+    :language: bash
+
+This triggers a flow of data from the Orion CB via the STH to MongoDB. Via the STH REST API we can request timeseries
+data. As we need to send Fiware-HTTP headers we can invoke the STH API using a (Chrome) REST client as follows:
+
+
+.. figure:: _static/fiware/sth-timeseries-rest.jpg
+   :align: center
+
+   *Request Timeseries Data from STH REST API*
+
+
 
 Installing FIWARE - from Source
 ===============================
