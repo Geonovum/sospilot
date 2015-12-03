@@ -1381,4 +1381,8 @@ Zie http://mapproxy.org/docs/latest/install.html. ::
     $ mapproxy-util --version
     # Mapproxy 1.6.0
 
+MongoDB Beheer
+--------------
 
+Met http://www.phpmoadmin.com, wel eerst PHP5 MongoDB driver installeren: `` apt-get install php5-mongo``. Verder
+is beheer URL afgeschermd.

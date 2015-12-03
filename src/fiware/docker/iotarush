@@ -37,7 +37,7 @@ NAME=iotarush
 DESC=docker_composition
 # Docker-compose file
 CONF=/opt/geonovum/sospilot/git/src/fiware/docker/iotarush.yaml
-SERVICE_CONTAINERS="docker_iotacpp_1 docker_orion_1 docker_sthcomet_1"
+SERVICE_CONTAINERS="docker_iotacpp_1 docker_orion_1 docker_sthcomet_1 docker_mongodb_1"
 
 . /lib/lsb/init-functions
 
@@ -75,7 +75,7 @@ case "$1" in
   stop)
 	 log_daemon_msg "Stopping $DESC" "$NAME"
 	 stop_containers
-	 purge_services
+	 purge_all
 	 ;;
 	 
   restart)
@@ -93,6 +93,7 @@ case "$1" in
         log_warning_msg "Reinit of $NAME ; all mongodb data will be cleared!!!"
 		stop_containers
 		purge_all
+		/bin/rm -rf /var/lib/mongodb_docker/*
 		$0 start
         ;;
 

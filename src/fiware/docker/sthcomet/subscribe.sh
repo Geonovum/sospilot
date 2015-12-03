@@ -67,7 +67,7 @@ curl ${ORION_HOST}:${ORION_PORT}/v1/subscribeContext -s -S\
     "notifyConditions": [
         {
             "type": "ONCHANGE",
-            "condValues": ["temperature"]
+            "condValues": ["temperature", "humidity", "pm10", "pm2_5"]
         }
     ],
     "throttling": "PT5S"

@@ -1,17 +1,33 @@
-mongodbdata:
-    image: mongo:2.6
-    volumes:
-        - /data/db
-    restart: "no"
-    command: /bin/echo "Data-only container for mongodb."
+#mongodbdata:
+#    image: mongo:2.6
+#    volumes:
+#        - /data/db
+#    restart: "no"
+#    command: /bin/echo "Data-only container for mongodb."
+
+#mongodb:
+#    image: mongo:2.6
+#    volumes_from:
+#        - mongodbdata
+#    expose:
+#        - "27017"
+#    command: --smallfiles
 
 mongodb:
     image: mongo:2.6
-    volumes_from:
-        - mongodbdata
+
+    # Port mapping: allow only access on local docker host
+    ports:
+      - "127.0.0.1:27017:27017"
     expose:
-        - "27017"
+      - "27017"
+
+    # Use storage on host file system
+    volumes:
+      - /var/lib/mongodb_docker:/data/db
     command: --smallfiles
+
+    # restart: always
 
 orion:
     image: geonovum/orionrush
