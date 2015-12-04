@@ -195,6 +195,8 @@ Heron.options.searchPanelConfig = {
 // See ToolbarBuilder.js : each string item points to a definition
 // in Heron.ToolbarBuilder.defs. Extra options and even an item create function
 // can be passed here as well.
+var sthURL = 'http://sensors.geonovum.nl:8666';
+var entityType = 'thing';
 Heron.options.map.toolbar = [
     {type: "scale"},
     /* Leave out: see http://code.google.com/p/geoext-viewer/issues/detail?id=116 */
@@ -214,8 +216,64 @@ Heron.options.map.toolbar = [
                 maxFeatures: 10,
 
                 // In case that the same layer would be requested more than once: discard the styles
-                discardStylesForDups: true
+                discardStylesForDups: true,
+
+                gridCellRenderers: [
+                    {
+                        // Example: supply your own function, parms as in ExtJS ColumnModel
+                        featureType: 'Fiware Entities',
+                        attrName: 'temperature',
+                        renderer: {
+                            // http://sensors.geonovum.nl:8666/STH/v1/contextEntities/type/thing/id/d/attributes/temperature?lastN
+                            fn: function (value, metaData, record, rowIndex, colIndex, store) {
+                                var args = '\'' + sthURL + '\', \'' + entityType + '\', \'' + record.data['id'] + '\', \'temperature\'';
+                                return value + ' &nbsp;&nbsp;<a href="#" onClick="sthShowTimeseries(' + args + ')">[Show timeseries]</a>';
+                            },
+                            options: {}
+                        }
+                    },
+                    {
+                        // Example: supply your own function, parms as in ExtJS ColumnModel
+                        featureType: 'Fiware Entities',
+                        attrName: 'humidity',
+                        renderer: {
+                            // http://sensors.geonovum.nl:8666/STH/v1/contextEntities/type/thing/id/d/attributes/temperature?lastN
+                            fn: function (value, metaData, record, rowIndex, colIndex, store) {
+                                var args = '\'' + sthURL + '\', \'' + entityType + '\', \'' + record.data['id'] + '\', \'humidity\'';
+                                return value + ' &nbsp;&nbsp;<a href="#" onClick="sthShowTimeseries(' + args + ')">[Show timeseries]</a>';
+                            },
+                            options: {}
+                        }
+                    },
+                    {
+                        // Example: supply your own function, parms as in ExtJS ColumnModel
+                        featureType: 'Fiware Entities',
+                        attrName: 'pm10',
+                        renderer: {
+                            // http://sensors.geonovum.nl:8666/STH/v1/contextEntities/type/thing/id/d/attributes/temperature?lastN
+                            fn: function (value, metaData, record, rowIndex, colIndex, store) {
+                                var args = '\'' + sthURL + '\', \'' + entityType + '\', \'' + record.data['id'] + '\', \'pm10\'';
+                                return value + ' &nbsp;&nbsp;<a href="#" onClick="sthShowTimeseries(' + args + ')">[Show timeseries]</a>';
+                            },
+                            options: {}
+                        }
+                    },
+                    {
+                        // Example: supply your own function, parms as in ExtJS ColumnModel
+                        featureType: 'Fiware Entities',
+                        attrName: 'pm2_5',
+                        renderer: {
+                            // http://sensors.geonovum.nl:8666/STH/v1/contextEntities/type/thing/id/d/attributes/temperature?lastN
+                            fn: function (value, metaData, record, rowIndex, colIndex, store) {
+                                var args = '\'' + sthURL + '\', \'' + entityType + '\', \'' + record.data['id'] + '\', \'pm2_5\'';
+                                return value + ' &nbsp;&nbsp;<a href="#" onClick="sthShowTimeseries(' + args + ')">[Show timeseries]</a>';
+                            },
+                            options: {}
+                        }
+                    }
+                ]
             }
+
         }
     }},
     {type: "-"} ,
