@@ -20,7 +20,7 @@ Presentation at RIVM on the SOSPilot project in particular LML to SOS and EU Air
 Workshop 17 dec 2015
 ====================
 
-In the context of the Smart Emission project a workshop was held at Geonovum
+In the context of the `Smart Emission project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission>` a workshop was held at Geonovum
 on Dec 17, 2015. The main subjects were:
 
 * presenting OGC standards in general (WMS, WFS, CSW) and in particular Sensor-related (SWE, SOS)
