@@ -26,6 +26,7 @@ Contents:
    server-inrichting.rst
    fiware.rst
    ideas.rst
+   dissemination.rst
    contact.rst
    links.rst
 
