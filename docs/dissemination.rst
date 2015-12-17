@@ -34,6 +34,7 @@ The agenda and presentation slides, all in PDF, can be found here:
 * `Agenda <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Agenda.pdf>`_
 * `OGC Standards+INSPIRE - Thijs Brentjens <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/ThijsBrentjens-OGC-services.pdf>`_
 * `OGC SWE/SOS - Just van den Broecke <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Just_OGC_School_SWE_SOS.pdf>`_
+* Visualisation in ArcGIS of LML data - Graduation Presentation - Freek Thuis (slides to follow)
 * `QGIS - Matthijs Kastelijns <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Matthijs_QGIS.pdf>`_
 * `Heron Viewer - Just van den Broecke <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Just_Heron_Intro_Workshop.pdf>`_
 
