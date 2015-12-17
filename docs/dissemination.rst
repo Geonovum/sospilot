@@ -14,7 +14,7 @@ Presentation 27 okt 2014
 
 Presentation at RIVM on the SOSPilot project in particular LML to SOS and EU Air Quality Reporting.
 
-* `Presentation Slides <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/presentation-27okt2014/sospilot-just-141027.pdf>`_
+* `SOSPilot Presentation Slides <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/presentation-27okt2014/sospilot-just-141027.pdf>`_
 
 
 Workshop 17 dec 2015
@@ -32,10 +32,10 @@ Slides
 The agenda and presentation slides, all in PDF, can be found here:
 
 * `Agenda <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Agenda.pdf>`_
-* `OGC Standards+INSPIRE (Thijs Brentjens) <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/ThijsBrentjens-OGC-services.pdf>`_
-* `OGC SWE/SOS (Just van den Broecke) <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Just_OGC_School_SWE_SOS.pdf>`_
-* `QGIS (Matthijs Kastelijns) <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Matthijs_QGIS.pdf>`_
-* `Heron Viewer (Just van den Broecke) <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Just_Heron_Intro_Workshop.pdf>`_
+* `OGC Standards+INSPIRE - Thijs Brentjens <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/ThijsBrentjens-OGC-services.pdf>`_
+* `OGC SWE/SOS - Just van den Broecke <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Just_OGC_School_SWE_SOS.pdf>`_
+* `QGIS - Matthijs Kastelijns <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Matthijs_QGIS.pdf>`_
+* `Heron Viewer - Just van den Broecke <https://github.com/Geonovum/sospilot/raw/master/docs/_static/dissemination/workshop-17dec2015/Just_Heron_Intro_Workshop.pdf>`_
 
 Links
 -----
