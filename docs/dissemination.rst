@@ -34,7 +34,7 @@ The agenda and presentation slides, all in PDF, can be found here:
 * `Agenda <_static/dissemination/workshop-17dec2015/Agenda.pdf>`_
 * `OGC Standards+INSPIRE - Thijs Brentjens <_static/dissemination/workshop-17dec2015/ThijsBrentjens-OGC-services.pdf>`_
 * `OGC SWE/SOS - Just van den Broecke <_static/dissemination/workshop-17dec2015/Just_OGC_School_SWE_SOS.pdf>`_
-* Visualisation in ArcGIS of LML data - Graduation Presentation - Freek Thuis (slides to follow)
+* `Visualisation in ArcGIS of LML data - Graduation Presentation - Freek Thuis <_static/dissemination/workshop-17dec2015/FreekThuis_Minor_Visualisatie.pdf>`_
 * `QGIS - Matthijs Kastelijns <_static/dissemination/workshop-17dec2015/Matthijs_QGIS.pdf>`_
 * `Heron Viewer - Just van den Broecke <_static/dissemination/workshop-17dec2015/Just_Heron_Intro_Workshop.pdf>`_
 
