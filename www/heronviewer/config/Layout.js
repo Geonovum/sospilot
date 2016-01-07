@@ -77,36 +77,17 @@ Heron.layout = {
             id: 'hr-menu-left-container',
             layout: 'accordion',
             region: "west",
-            width: 260,
+            width: 268,
             collapsible: true,
             border: false,
             items: [
                 {
-                    xtype: 'hr_activethemespanel',
-                    title: 'Active Layers',
-                    contextMenu: 'defaults',
-                    collapsed: true,
-
-                    hropts: {
-                        // Defines the custom components added with the standard layer node.
-                        showOpacity: true, // true - layer opacity icon / function
-                        showTools: false, // true - layer tools icon / function (not jet completed)
-                        showRemove: false        // true - layer remove icon / function
-                    }
-                },
-                {
-                    xtype: 'hr_layertreepanel',
-                    // Optional, use internal default if not set
-                    contextMenu: 'defaults',
-                    hropts: Heron.options.layertree,
-                    collapsed: false
-                },
-                {
                     xtype: 'hr_gxplayerpanel',
                     id: 'gxplayerpanel',
-                    collapsed: true,
-                    border: false,
-                    title: 'Add Layers from Catalogs',
+                    border: true,
+                    autoScroll: false,
+                    collapsed: false,
+                    title: 'Layer Management',
 //                    header: false,
 //                    width: 240,
                     tbar: [], // we will add buttons to "gxplayerpanel.bbar" later
@@ -129,7 +110,7 @@ Heron.layout = {
                         {
                             ptype: "gxp_addlayers",
                             actionTarget: "gxplayerpanel.tbar",
-//                            addActionText: __('Add layers'),
+                            // addActionText: __('Add layers'),
                             templatedLayerGrid: true,
                             layerGridWidth: 440,
                             layerGridHeight: 600,
@@ -153,13 +134,13 @@ Heron.layout = {
 //                            ptype: "gxp_removelayer",
 //                            actionTarget: "layertree.contextMenu"
 //                        },
-                        {
-                            ptype: "gxp_layerproperties",
-                            outputConfig: {defaults: {autoScroll: true}, width: 400, autoHeight: true},
-                            actionTarget: ["gxplayerpanel.tbar"]
-                            //                    actionTarget: ["layertree.contextMenu"]
-                            //                    outputTarget: "layertree"
-                        },
+//                        {
+//                            ptype: "gxp_layerproperties",
+//                            outputConfig: {defaults: {autoScroll: true}, width: 400, autoHeight: true},
+//                            actionTarget: ["gxplayerpanel.tbar"]
+//                            //                    actionTarget: ["layertree.contextMenu"]
+//                            //                    outputTarget: "layertree"
+//                        },
                         {
                             ptype: "gxp_styler",
                             outputConfig: {autoScroll: true, width: 320},
@@ -253,6 +234,31 @@ Heron.layout = {
                             fullMetadataUrlTpl: 'http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search?uuid={id}',
                             title: "Nationaal Georegister"
                         }
+                    },
+                    items: [
+                        {
+                            xtype: 'hr_layertreepanel',
+                            // Optional, use internal default if not set
+                            title: null,
+                            border: false,
+                            autoScroll: true,
+                            contextMenu: 'defaults',
+                            hropts: Heron.options.layertree,
+                            collapsed: false
+                        }
+                    ]
+                },
+                {
+                    xtype: 'hr_activethemespanel',
+                    title: 'Active Layers',
+                    contextMenu: 'defaults',
+                    collapsed: true,
+
+                    hropts: {
+                        // Defines the custom components added with the standard layer node.
+                        showOpacity: true, // true - layer opacity icon / function
+                        showTools: false, // true - layer tools icon / function (not jet completed)
+                        showRemove: false        // true - layer remove icon / function
                     }
                 },
                 {

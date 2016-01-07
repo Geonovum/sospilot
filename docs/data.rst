@@ -5,12 +5,12 @@ Data Management
 ===============
 
 This chapter describes all technical aspects related to data within the SOSPilot project. The "data"
-as mentioned here is all related to LML RIVM data, i.e. Dutch Air Quality Data.  In 2015 this setup was
+as mentioned here applied initially to LML RIVM data, i.e. Dutch Air Quality Data.  In 2015 this setup was
 also used to handle air quality data from the `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
 This is described in a separate chapter: :ref:`smartemission`.
 
-* obtaining raw source data: measurements, stations etc.
-* data transformation (ETL) for various (OWS) services, INSPIRE and E-reporting
+* obtaining raw source data: observations&measurements (O&M), metadata (stations etc).
+* data transformation (ETL) to target various (OWS) services, INSPIRE, E-reporting and custom services
 * tooling (databases and ETL-tools) for the above
 
 Source code for data management and ETL can be found in GitHub: https://github.com/Geonovum/sospilot/tree/master/src
@@ -20,23 +20,26 @@ Architecture
 
 Figure 1 sketches the overall SOSPilot architecture with emphasis on the flow of data (arrows).
 Circles depict harvesting/ETL processes. Server-instances are in rectangles. Datastores
-the "DB"-icons.
+are shown with "DB"-icons.
 
 .. figure:: _static/sospilot-arch0.jpg
    :align: center
 
    *Figure 1 - Overall Architecture*
 
-The main challenge/flow of data is from raw XML files with Air Quality data provided by the RIVM LML server.
-This server provides a directory of XML files with hourly measurements of the past month.
+The main challenge/flow of data is from `Raw Source APIs` such as raw XML files with Air Quality data provided by the RIVM LML server.
+In a later stage of the project this architecture was reused for other raw O&M sources such as
+the CityGIS Sensor REST API in the Smart Emission project (see :ref:`smartemission`).
+
+The RIVM LML file server provides a directory of XML files with hourly measurements of the past month.
 The big circle "ETL" embeds the data transformation processes and storage that is required to
-deliver OGC services for WMS, WFS and SOS and at a later stage (dashed rectangle)
-for EU IPR-complied E-reporting.
+deliver OGC services for WMS, WFS (via `GeoServer`) and SOS (via the `52 North SOS Server`)
+and other `Custom Services` at a later stage (dashed rectangle) such as EU IPR-compliant E-reporting.
 
 ETL Design
 ==========
 
-In this section the ETL is elaborated in more detail as depicted in the figure below.
+In this section the ETL as used for RIVM LML data is elaborated in more detail as depicted in the figure below.
 
 .. figure:: _static/sospilot-arch1.jpg
    :align: center

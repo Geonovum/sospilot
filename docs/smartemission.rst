@@ -173,26 +173,27 @@ ETL Design
 ==========
 
 In this section the ETL is elaborated in more detail as depicted in the figure below.
-Figure 3 sketches the approach for RIVM LML AQ data, but this same approach was used voor Smart Emission.
-Also here: for "RIVM LML File Server" one should read:
-"Raw Smart Emission Sample Data". Step 2 and Step 3 are identical, an advantage of the multi-step ETL process now pays back!
-Step 1 (File Harvester) was performed more manually, awaiting a similar automated approach.
+Figure 3 sketches the same approach as earlier used for for RIVM LML AQ data.
+Step 1 and Step 2 are (partly) different from the RIVM LML ETL.
+Step 3 is identical to the RIVM LML ETL, an advantage of the multi-step ETL process now pays back!
+The main difference/extension to RIVM LML ETL processing is that the Smart Emission raw O&M data is
+not yet validated (e.g. has outliers) and aggregated (e.g. no hourly averages).
 
-.. figure:: _static/sospilot-arch1.jpg
+.. figure:: _static/smartem/etl-arch-smartem-1.jpg
    :align: center
 
    *Figure 3 - Overall Architecture with ETL Steps*
 
 The ETL design comprises three main processing steps and three datastores. The three ETL Steps are:
 
-#. File Harvester: manually (for now) via FTP
-#. AQ ETL: transform this local source data to intermediate "Core AQ Data" in PostGIS
+#. O&M Harvester: fetch raw O&M data from CityGIS server via Sensor REST API
+#. Refine ETL: validate and aggregate the raw O&M data and transform to intermediate "Core AQ Data" in PostGIS
 #. SOS ETL: transform and publish "Core AQ Data" to the 52N SOS DB via SOS-Transactions (SOS-T)
 
 The detailed dataflow from source to destination is as follows:
 
-#. AQ raw (text) files are placed on the file system (awaiting automated approach)
-#. The AQ ETL process (``files2measurements``) reads these files Core AQ DB (Raw Measurements)
+#. raw O&M timeseries data is read by the `O&M Harvester`  via Sensor REST API
+#. `O&M Harvester` reads the timeseries response docs into the Raw O&M Data DB (Raw Measurements)
 #. The Core AQ DB contains measurements + stations in regular tables 1-1 with original data, including a Time column
 #. The Core AQ DB can be used for OWS (WMS/WFS) services via GeoServer (using VIEW by Measurements/Stations JOIN)
 #. The SOS ETL process transforms core AQ data to SOS Observations and publishes Observations using SOS-T ``InsertObservation``
@@ -200,7 +201,7 @@ The detailed dataflow from source to destination is as follows:
 #. Each process always knows its progress and where it needs to resume, even after it has been stopped (by storing a progress/checkpoint info)
 
 These last two ETL processes manage their ``last sync-time`` using a separate ``progress table`` within the database.
-The first (Harvester) only needs to check if a particular file (as they have a unique file name) has already been stored.
+The first, the `O&M Harvester`, only needs to check if a particular timeseries for a specific device has already been stored.
 
 Advantages of this approach:
 
