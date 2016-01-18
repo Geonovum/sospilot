@@ -14,6 +14,7 @@ GET http://base.url.nl/sensors/v1/devices
 
 { "devices":  ["/sensors/v1/devices/10", "/sensors/v1/devices/11"] }
 
+Example: see devices.json
 
 ===============================================================================
 2. Get metadata for device 10
@@ -31,6 +32,8 @@ GET http://base.url.nl/sensors/v1/devices/10
   ]
 }
 
+Example: see device.json
+
 ===============================================================================
 3. Get the available days of timeseries data for device 10
 ===============================================================================
@@ -45,6 +48,7 @@ GET http://base.url.nl/sensors/v1/devices/10/timeseries
     ]
 }
 
+Example: see timeseries.json
 
 ===============================================================================
 4. Get the available hours on a specific day for device 10
@@ -57,6 +61,7 @@ Notes
 - The date should include zero padding, so 1 januari 2016 should be encoded as 20160101 (yyyymmdd)
 - The hour numbers range from 1 to 24; 1 means from 0:00:00 until 0:59:59
 
+Example: see timeseries-hours.json
 
 ===============================================================================
 5. Get all sensor data on dec 22nd 2015 during 18:00-19:00 for device 10
@@ -78,6 +83,8 @@ Notes
 - The date should include zero padding, so 1 januari 2016 should be encoded as 20160101
 - The hour number ranges from 1 to 24; 1 means from 0:00:00 until 0:59:59
 
+Example: see timeseries-hour.json
+
 ===============================================================================
 6. Get the last sensor values for device 10
 ===============================================================================
@@ -85,6 +92,7 @@ GET http://base.url.nl/sensors/v1/devices/10/last
 
 { "id": 10, "time": "2015/12/22 18:34:56Z", "s_no2": 234.5, "s_co2": 123.4, ... }
 
+Example: see last.json
 
 ===============================================================================
 Postpone for now
