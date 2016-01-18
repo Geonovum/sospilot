@@ -1,0 +1,16 @@
+{
+  "id": "23",
+  "days": [
+    "/sensors/v1/devices/23/timeseries/20160108",
+    "/sensors/v1/devices/23/timeseries/20160109",
+    "/sensors/v1/devices/23/timeseries/20160110",
+    "/sensors/v1/devices/23/timeseries/20160111",
+    "/sensors/v1/devices/23/timeseries/20160112",
+    "/sensors/v1/devices/23/timeseries/20160113",
+    "/sensors/v1/devices/23/timeseries/20160114",
+    "/sensors/v1/devices/23/timeseries/20160115",
+    "/sensors/v1/devices/23/timeseries/20160116",
+    "/sensors/v1/devices/23/timeseries/20160117",
+    "/sensors/v1/devices/23/timeseries/20160118"
+  ]
+}

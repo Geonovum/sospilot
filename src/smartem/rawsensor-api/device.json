@@ -1,0 +1,646 @@
+{
+  "id": "23",
+  "timeseries": "/sensors/v1/devices/23/timeseries",
+  "last": "/sensors/v1/devices/23/last",
+  "outputs": [
+    {
+      "name": "s_temperatureunit",
+      "label": "Unit Temperature",
+      "chart": "True",
+      "unit": "milliKelvin"
+    },
+    {
+      "name": "s_temperatureambient",
+      "label": "Ambient Temperature",
+      "chart": "True",
+      "unit": "milliKelvin"
+    },
+    {
+      "name": "s_humidity",
+      "label": "Relative Humidity",
+      "chart": "True",
+      "unit": "%mRH"
+    },
+    {
+      "name": "s_lightsensortop",
+      "label": "Light Top",
+      "chart": "True",
+      "unit": "Lux"
+    },
+    {
+      "name": "s_lightsensorbottom",
+      "label": "Light Bottom",
+      "chart": "True",
+      "unit": "Lux"
+    },
+    {
+      "name": "s_barometer",
+      "label": "Air Pressure",
+      "chart": "True",
+      "unit": "Pascal"
+    },
+    {
+      "name": "s_altimeter",
+      "label": "Height",
+      "chart": "True",
+      "unit": "Meter"
+    },
+    {
+      "name": "s_co",
+      "label": "CO Concentration",
+      "chart": "True",
+      "unit": "ppb"
+    },
+    {
+      "name": "s_no2",
+      "label": "NO2 Concentration",
+      "chart": "True",
+      "unit": "ppb"
+    },
+    {
+      "name": "s_accelerox",
+      "label": "Acceleration in the X-axis",
+      "chart": "True",
+      "unit": "G"
+    },
+    {
+      "name": "s_acceleroy",
+      "label": "Acceleration in the Y-axis",
+      "chart": "True",
+      "unit": "G"
+    },
+    {
+      "name": "s_acceleroz",
+      "label": "Acceleration in the Z-axis",
+      "chart": "True",
+      "unit": "G"
+    },
+    {
+      "name": "s_lightsensorred",
+      "label": "Red Light",
+      "chart": "True",
+      "unit": "Lux"
+    },
+    {
+      "name": "s_lightsensorgreen",
+      "label": "Green Light",
+      "chart": "True",
+      "unit": "Lux"
+    },
+    {
+      "name": "s_lightsensorblue",
+      "label": "Blue Light",
+      "chart": "True",
+      "unit": "Lux"
+    },
+    {
+      "name": "s_rgbcolor",
+      "label": "RGB Light",
+      "chart": "False",
+      "unit": "RGB8"
+    },
+    {
+      "name": "s_bottomswitches",
+      "label": "Bottom Switches",
+      "chart": "False",
+      "unit": "?"
+    },
+    {
+      "name": "s_o3",
+      "label": "O3 Concentration",
+      "chart": "True",
+      "unit": "ppb"
+    },
+    {
+      "name": "s_co2",
+      "label": "CO2 Concentration",
+      "chart": "True",
+      "unit": "ppb"
+    },
+    {
+      "name": "s_externaltemp",
+      "label": "External Temperature",
+      "chart": "True",
+      "unit": "milliKelvin"
+    },
+    {
+      "name": "s_coresistance",
+      "label": "CO Resistance",
+      "chart": "True",
+      "unit": "Ohm"
+    },
+    {
+      "name": "s_no2resistance",
+      "label": "NO2 Resistance",
+      "chart": "True",
+      "unit": "Ohm"
+    },
+    {
+      "name": "s_o3resistance",
+      "label": "O3 Resistance",
+      "chart": "True",
+      "unit": "Ohm"
+    },
+    {
+      "name": "s_audiominus5",
+      "description": "Octave -5",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audiominus4",
+      "description": "Octave -4",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audiominus3",
+      "description": "Octave -3",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audiominus2",
+      "description": "Octave -2",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audiominus1",
+      "description": "Octave -1",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audio0",
+      "description": "Octave 0",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus1",
+      "description": "Octave +1",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus2",
+      "description": "Octave +2",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus3",
+      "description": "Octave +3",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus4",
+      "description": "Octave +4",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus5",
+      "description": "Octave +5",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus6",
+      "description": "Octave +6",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus7",
+      "description": "Octave +7",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus8",
+      "description": "Octave +8",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus9",
+      "description": "Octave +9",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_audioplus10",
+      "description": "Octave +10",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "s_satinfo",
+      "description": "?",
+      "chart": "False",
+      "unit": "?"
+    },
+    {
+      "name": "s_latitude",
+      "label": "Latitude",
+      "chart": "False",
+      "unit": "encoded latitude"
+    },
+    {
+      "name": "s_longitude",
+      "label": "Longitude",
+      "chart": "False",
+      "unit": "encoded longitude"
+    },
+    {
+      "name": "p_powerstate",
+      "label": "Powerstate",
+      "chart": "False"
+    },
+    {
+      "name": "p_batteryvoltage",
+      "label": "Battery Voltage",
+      "chart": "True",
+      "unit": "milliVolts"
+    },
+    {
+      "name": "p_batterytemperature",
+      "label": "Battery Temperature",
+      "chart": "True",
+      "unit": "milliKelvin"
+    },
+    {
+      "name": "p_batterygauge",
+      "label": "Battery Gauge",
+      "chart": "False",
+      "unit": "BFFF=Battery full,1FFF=Batteryfail,0000=No Battery Installed"
+    },
+    {
+      "name": "p_muxstatus",
+      "label": "Mux Status",
+      "chart": "False",
+      "unit": "0-7=channel,F=inhibited"
+    },
+    {
+      "name": "p_errorstatus",
+      "label": "Error Status",
+      "chart": "False",
+      "unit": "0=OK"
+    },
+    {
+      "name": "p_basetimer",
+      "label": "Base Timer",
+      "chart": "False",
+      "unit": "seconds"
+    },
+    {
+      "name": "p_sessionuptime",
+      "label": "Session Uptime",
+      "chart": "False",
+      "unit": "seconds"
+    },
+    {
+      "name": "p_totaluptime",
+      "label": "Total Uptime",
+      "chart": "False",
+      "unit": "minutes"
+    },
+    {
+      "name": "p_coheatermode",
+      "label": "CO Heater Mode",
+      "chart": "False",
+      "unit": "0/1"
+    },
+    {
+      "name": "p_coheater",
+      "label": "CO Heater",
+      "chart": "False",
+      "unit": "0/1"
+    },
+    {
+      "name": "p_no2heater",
+      "label": "NO2 Heater",
+      "chart": "False",
+      "unit": "0/1"
+    },
+    {
+      "name": "p_o3heater",
+      "label": "O3 Heater",
+      "chart": "False",
+      "unit": "0/1"
+    },
+    {
+      "name": "p_co2heater",
+      "label": "CO2 Heater",
+      "chart": "False",
+      "unit": "0/1"
+    },
+    {
+      "name": "p_unitserialnumber",
+      "label": "Unit Id",
+      "chart": "False",
+      "unit": "String"
+    },
+    {
+      "name": "p_temporarilyenabledebugleds",
+      "chart": "False",
+      "unit": "0/1"
+    },
+    {
+      "name": "p_temporarilyenablebasetimer",
+      "chart": "False",
+      "unit": "0/1"
+    },
+    {
+      "name": "t_audiominus5",
+      "description": "Max Octave -5",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audiominus4",
+      "description": "Max Octave -4",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audiominus3",
+      "description": "Max Octave -3",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audiominus2",
+      "description": "Max Octave -2",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audiominus1",
+      "description": "Max Octave -1",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audio0",
+      "description": "Max Octave 0",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus1",
+      "description": "Max Octave +1",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus2",
+      "description": "Max Octave +2",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus3",
+      "description": "Max Octave +3",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus4",
+      "description": "Max Octave +4",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus5",
+      "description": "Max Octave +5",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus6",
+      "description": "Max Octave +6",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus7",
+      "description": "Max Octave +7",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus8",
+      "description": "Max Octave +8",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus9",
+      "description": "Max Octave +9",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "t_audioplus10",
+      "description": "Max Octave +10",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audiominus5",
+      "description": "Min Octave -5",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audiominus4",
+      "description": "Min Octave -4",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audiominus3",
+      "description": "Min Octave -3",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audiominus2",
+      "description": "Min Octave -2",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audiominus1",
+      "description": "Min Octave -1",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audio0",
+      "description": "Min Octave 0",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus1",
+      "description": "Min Octave +1",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus2",
+      "description": "Min Octave +2",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus3",
+      "description": "Min Octave +3",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus4",
+      "description": "Min Octave +4",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus5",
+      "description": "Min Octave +5",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus6",
+      "description": "Min Octave +6",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus7",
+      "description": "Min Octave +7",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus8",
+      "description": "Min Octave +8",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus9",
+      "description": "Min Octave +9",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "u_audioplus10",
+      "description": "Min Octave +10",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audiominus5",
+      "description": "Average Octave -5",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audiominus4",
+      "description": "Average Octave -4",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audiominus3",
+      "description": "Average Octave -3",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audiominus2",
+      "description": "Average Octave -2",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audiominus1",
+      "description": "Average Octave -1",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audio0",
+      "description": "Average Octave 0",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus1",
+      "description": "Average Octave +1",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus2",
+      "description": "Average Octave +2",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus3",
+      "description": "Average Octave +3",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus4",
+      "description": "Average Octave +4",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus5",
+      "description": "Average Octave +5",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus6",
+      "description": "Average Octave +6",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus7",
+      "description": "Average Octave +7",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus8",
+      "description": "Average Octave +8",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus9",
+      "description": "Average Octave +9",
+      "chart": "False",
+      "unit": "dB(A)"
+    },
+    {
+      "name": "v_audioplus10",
+      "description": "Average Octave +10",
+      "chart": "False",
+      "unit": "dB(A)"
+    }
+  ]
+}

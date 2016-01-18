@@ -1,0 +1,95 @@
+===============================================================================
+Sensor REST API version 1.1
+===============================================================================
+Authors: Just van den Broecke en Robert Kieboom
+Date: 2015/1/18
+===============================================================================
+
+
+
+===============================================================================
+1. Get the list of available devices
+===============================================================================
+GET http://base.url.nl/sensors/v1/devices
+
+{ "devices":  ["/sensors/v1/devices/10", "/sensors/v1/devices/11"] }
+
+
+===============================================================================
+2. Get metadata for device 10
+===============================================================================
+GET http://base.url.nl/sensors/v1/devices/10
+
+{
+  "id": 10,
+  "name": "device name", // indien mogelijk ook "owner" en "contact"
+  "timeseries": "/sensors/v1/devices/10/timeseries",
+  "last" : "/sensors/v1/devices/10/last",
+  "outputs": [
+    { "name": "s_no2", "uom": "ppb", "description": "..." },
+    ...
+  ]
+}
+
+===============================================================================
+3. Get the available days of timeseries data for device 10
+===============================================================================
+GET http://base.url.nl/sensors/v1/devices/10/timeseries
+
+{
+    "id": 10,
+    "days": [
+        "/sensors/v1/devices/10/timeseries/20151222"
+        "/sensors/v1/devices/10/timeseries/20151223"
+        ...
+    ]
+}
+
+
+===============================================================================
+4. Get the available hours on a specific day for device 10
+===============================================================================
+GET http://base.url.nl/sensors/v1/devices/10/timeseries/20151222
+
+{ "id": 10, "date": "2015/12/22", "hours": [1,2,3,4,5,6,7] }
+
+Notes
+- The date should include zero padding, so 1 januari 2016 should be encoded as 20160101 (yyyymmdd)
+- The hour numbers range from 1 to 24; 1 means from 0:00:00 until 0:59:59
+
+
+===============================================================================
+5. Get all sensor data on dec 22nd 2015 during 18:00-19:00 for device 10
+===============================================================================
+GET http://base.url.nl/sensors/v1/devices/10/timeseries/20151222/19
+
+{
+  "id": 10,
+  "date": "2015/12/22",
+  "hour": 19,
+  "timeseries":
+  [
+    {"_id":"569014cb1b1580258cca9339", "time": "2015/12/22 18:34:56Z", "s_no2": 234.5, "s_co2": 123.4, ... },
+    ...
+  ]
+}
+
+Notes
+- The date should include zero padding, so 1 januari 2016 should be encoded as 20160101
+- The hour number ranges from 1 to 24; 1 means from 0:00:00 until 0:59:59
+
+===============================================================================
+6. Get the last sensor values for device 10
+===============================================================================
+GET http://base.url.nl/sensors/v1/devices/10/last
+
+{ "id": 10, "time": "2015/12/22 18:34:56Z", "s_no2": 234.5, "s_co2": 123.4, ... }
+
+
+===============================================================================
+Postpone for now
+===============================================================================
+- 1 URL for all current/last data of all devices
+  http://base.url.nl/sensors/v1/raw/devices/*/last
+===============================================================================
+
