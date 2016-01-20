@@ -139,3 +139,21 @@ n0=0 klopt met East/North.
 5.671223, 51.472561
 
 komt precies uit in de Marshallstraat in Helmond bij Intemo, dus alles lijkt te kloppen!!
+
+In TypeScript:
+
+/*
+        8 nibbles:
+        MSB                  LSB
+        n1 n2 n3 n4 n5 n6 n7 n8
+        n1: 0 of 8, 0=East/North, 8=West/South
+        n2 en n3: whole degrees (0-180)
+        n4-n8: fraction of degrees (max 999999)
+*/
+private convert(input: number): number {
+ var sign = input >> 28 ? -1 : +1;
+ var deg = (input >> 20) & 255;
+ var dec = input & 1048575;
+
+ return (deg + dec / 1000000) * sign;
+}

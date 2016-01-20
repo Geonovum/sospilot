@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# SensorRestInput: harvest raw timeseries from CityGIS Sensor REST API.
+# RawSensorInput: harvest raw timeseries from CityGIS Sensor REST API.
 # Use PostGIS DB to track progress of harvesting.
 #
 # Author:Just van den Broecke
@@ -11,11 +11,11 @@ from stetl.packet import FORMAT
 from stetl.postgis import PostGIS
 
 
-log = Util.get_log("SensorRestInput")
+log = Util.get_log("RawSensorInput")
 
-class SensorRestInput(HttpInput):
+class RawSensorInput(HttpInput):
     """
-    RIVM LML version for HttpInput: adds check for each file if it is already in DB.
+    Raw Sensor REST API (CityGIS) version for HttpInput: adds check for each file if it is already in DB.
     """
     def __init__(self, configdict, section, produces=FORMAT.record):
         HttpInput.__init__(self, configdict, section, produces)
