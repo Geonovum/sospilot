@@ -213,6 +213,21 @@ Heron.options.map.layers = [
      * ==================================
      */
 
+    /*
+     * Areal images PDOK.
+     */
+    new OpenLayers.Layer.TMS(
+        "Luchtfoto (PDOK)",
+        'http://geodata1.nationaalgeoregister.nl/luchtfoto/tms/',
+        {
+            layername: 'luchtfoto_EPSG28992',
+            type: 'jpeg',
+            serverResolutions: Heron.options.serverResolutions.zoom_0_13,
+            isBaseLayer: true,
+            visibility: true
+        }
+    ),
+
     new OpenLayers.Layer.TMS("Map5 Relief Struct TMS",
         Heron.scratch.urls.MAP5_TMS,
         {
@@ -321,7 +336,7 @@ Heron.options.map.layers = [
             isBaseLayer: true,
             transparent: false,
             bgcolor: "0xffffff",
-            visibility: true,
+            visibility: false,
             singleTile: false,
             serverResolutions: Heron.options.serverResolutions.zoom_0_16,
             alpha: true,
@@ -380,20 +395,6 @@ Heron.options.map.layers = [
     //        }
     //    }),
 
-    /*
-     * Areal images PDOK.
-     */
-    new OpenLayers.Layer.TMS(
-        "Luchtfoto (PDOK)",
-        'http://geodata1.nationaalgeoregister.nl/luchtfoto/tms/',
-        {
-            layername: 'luchtfoto_EPSG28992',
-            type: 'jpeg',
-            serverResolutions: Heron.options.serverResolutions.zoom_0_13,
-            isBaseLayer: true,
-            visibility: false
-        }
-    ),
 
     new OpenLayers.Layer.Image(
         "Blanco",
@@ -895,7 +896,7 @@ Heron.options.map.layers = [
      * SMARTEM: All Stations
      */
     new OpenLayers.Layer.WMS(
-        "Smart Emission - Sensors",
+        "Smart Emission - Stations",
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "stations_smartem", format: "image/png", transparent: true},
         {
@@ -987,7 +988,7 @@ Heron.options.map.layers = [
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_no2_smartem", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -1893,6 +1894,7 @@ Heron.options.map.layers = [
     /** NGSI10 Entity Layer from Fiware Orion Context Broker. */
     new OpenLayers.Layer.Vector('Fiware Entities', {
         strategies: [new OpenLayers.Strategy.Fixed()],
+        visibility: false,
         protocol: new OpenLayers.Protocol.NGSI10({
             url: 'http://sensors.geonovum.nl:1026/v1/queryContext',
             // url: 'http://orion.lab.fi-ware.org:1026/ngsi10/queryContext',
@@ -1971,7 +1973,7 @@ Heron.options.layertree.tree = [
         {nodeType: "gx_layer", layer: "RIVM - Active Stations", text: "RIVM AQ LML Stations"},
         {nodeType: "gx_layer", layer: "RIVM - Active Stations (WFS)", text: "RIVM AQ Stations (WFS)"},
         {nodeType: "gx_layer", layer: "Zones and Agglomerations", text: "RIVM Zones and Agglomerations (WMS)"},
-        {nodeType: "gx_layer", layer: "Smart Emission - Sensors", text: "Smart Emission - Sensors (WMS)"}
+        {nodeType: "gx_layer", layer: "Smart Emission - Stations", text: "Smart Emission - Stations (WMS)"}
     ]
     },
     {
@@ -1994,7 +1996,7 @@ Heron.options.layertree.tree = [
         ]
         },
         {
-            text: 'Nitrogen Dioxide (NO2) - WMS', expanded: false, children: [
+            text: 'Nitrogen Dioxide (NO2) - WMS', expanded: true, children: [
             {nodeType: "gx_layer", layer: "RIVM - Current NO2"},
             {nodeType: "gx_layer", layer: "Smart Emission - Current NO2"}
         ]
@@ -2023,8 +2025,9 @@ Heron.options.layertree.tree = [
         text: 'Chemische Componenten (Historie)', expanded: false, children: [
         {
             text: 'Carbon monoxide (CO)', expanded: false, children: [
-            {nodeType: "gx_layer", layer: "RIVM - History CO"},
-            {nodeType: "gx_layer", layer: "Smart Emission - History CO"}
+            {nodeType: "gx_layer", layer: "RIVM - History CO"}
+            //,
+            //{nodeType: "gx_layer", layer: "Smart Emission - History CO"}
         ]
         },
         {
@@ -2040,14 +2043,14 @@ Heron.options.layertree.tree = [
         {
             text: 'Nitrogen Dioxide (NO2) - WMS', expanded: true, children: [
             {nodeType: "gx_layer", layer: "RIVM - History NO2"},
-            {nodeType: "gx_layer", layer: "Smart Emission - History NO2"},
+            //{nodeType: "gx_layer", layer: "Smart Emission - History NO2"},
             {nodeType: "gx_layer", layer: "TEST - RIO APS NO2"}
         ]
         },
         {
             text: 'Ozone (O3) - WMS', expanded: true, children: [
             {nodeType: "gx_layer", layer: "RIVM - History O3"},
-            {nodeType: "gx_layer", layer: "Smart Emission - History O3"},
+            //{nodeType: "gx_layer", layer: "Smart Emission - History O3"},
             {nodeType: "gx_layer", layer: "TEST - RIO APS O3"}
         ]
         },
@@ -2147,7 +2150,7 @@ Heron.options.layertree.tree = [
     ]
     },
     {
-        text: 'Fiware', expanded: true, children: [
+        text: 'Fiware', expanded: false, children: [
         {nodeType: "gx_layer", layer: "Fiware Entities", text: "Fiware Entities (Geonovum)"}
     ]
     },
