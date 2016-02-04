@@ -280,46 +280,94 @@ This value is taken as the timestamp of the record.
 
 According to CityGIS the units are defined as follows. ::
 
-	S.TemperatureUnit		milliKelvin
-	S.TemperatureAmbient	milliKelvin
-	S.Humidity				%mRH
-	S.LightsensorTop		Lux
-	S.LightsensorBottom		Lux
-	S.Barometer				Pascal
-	S.Altimeter				Meter
-	S.CO					ppb
-	S.NO2					ppb
-	S.AcceleroX				2 ~ +2G (0x200 = midscale)
-	S.AcceleroY				2 ~ +2G (0x200 = midscale)
-	S.AcceleroZ				2 ~ +2G (0x200 = midscale)
-	S.LightsensorRed		Lux
-	S.LightsensorGreen		Lux
-	S.LightsensorBlue		Lux
-	S.RGBColor				8 bit R, 8 bit G, 8 bit B
-	S.BottomSwitches		?
-	S.O3					ppb
-	S.CO2					ppb
-	S.AudioMinus5			Octave -5 in dB(A)
-	S.AudioMinus4			Octave -4 in dB(A)
-	S.AudioMinus3			Octave -3 in dB(A)
-	S.AudioMinus2			Octave -2 in dB(A)
-	S.AudioMinus1			Octave -1 in dB(A)
-	S.Audio0				Octave 0 in dB(A)
-	S.AudioPlus1			Octave +1 in dB(A)
-	S.AudioPlus2			Octave +2 in dB(A)
-	S.AudioPlus3			Octave +3 in dB(A)
-	S.AudioPlus4			Octave +4 in dB(A)
-	S.AudioPlus5			Octave +5 in dB(A)
-	S.AudioPlus6			Octave +6 in dB(A)
-	S.AudioPlus7			Octave +7 in dB(A)
-	S.AudioPlus8			Octave +8 in dB(A)
-	S.AudioPlus9			Octave +9 in dB(A)
-	S.AudioPlus10			Octave +10 in dB(A)
-	S.SatInfo				?
-	S.Latitude				*100 + Fractional degrees
-	S.Longitude				*10 + Fractional degrees
+   S.TemperatureUnit		milliKelvin
+   S.TemperatureAmbient	milliKelvin
+   S.Humidity				%mRH
+   S.LightsensorTop		Lux
+   S.LightsensorBottom		Lux
+   S.Barometer				Pascal
+   S.Altimeter				Meter
+   S.CO					ppb
+   S.NO2					ppb
+   S.AcceleroX				2 ~ +2G (0x200 = midscale)
+   S.AcceleroY				2 ~ +2G (0x200 = midscale)
+   S.AcceleroZ				2 ~ +2G (0x200 = midscale)
+   S.LightsensorRed		Lux
+   S.LightsensorGreen		Lux
+   S.LightsensorBlue		Lux
+   S.RGBColor				8 bit R, 8 bit G, 8 bit B
+   S.BottomSwitches		?
+   S.O3					ppb
+   S.CO2					ppb
+   v3: S.ExternalTemp		milliKelvin
+   v3: S.COResistance		Ohm
+   v3: S.No2Resistance		Ohm
+   v3: S.O3Resistance		Ohm
+   S.AudioMinus5			Octave -5 in dB(A)
+   S.AudioMinus4			Octave -4 in dB(A)
+   S.AudioMinus3			Octave -3 in dB(A)
+   S.AudioMinus2			Octave -2 in dB(A)
+   S.AudioMinus1			Octave -1 in dB(A)
+   S.Audio0				Octave 0 in dB(A)
+   S.AudioPlus1			Octave +1 in dB(A)
+   S.AudioPlus2			Octave +2 in dB(A)
+   S.AudioPlus3			Octave +3 in dB(A)
+   S.AudioPlus4			Octave +4 in dB(A)
+   S.AudioPlus5			Octave +5 in dB(A)
+   S.AudioPlus6			Octave +6 in dB(A)
+   S.AudioPlus7			Octave +7 in dB(A)
+   S.AudioPlus8			Octave +8 in dB(A)
+   S.AudioPlus9			Octave +9 in dB(A)
+   S.AudioPlus10			Octave +10 in dB(A)
+   S.SatInfo
+   S.Latitude				nibbles: n1:0=East/North, 8=West/South; n2&n3: whole degrees (0-180); n4-n8: degree fraction (max 999999)
+   S.Longitude				nibbles: n1:0=East/North, 8=West/South; n2&n3: whole degrees (0-180); n4-n8: degree fraction (max 999999)
 
-As stated above: this step, acquiring/harvesting files, is done via FTP.
+   P.Powerstate					Power State
+   P.BatteryVoltage				Battery Voltage (milliVolts)
+   P.BatteryTemperature			Battery Temperature (milliKelvin)
+   P.BatteryGauge					Get Battery Gauge, BFFF = Battery full, 1FFF = Battery fail, 0000 = No Battery Installed
+   P.MuxStatus						Mux Status (0-7=channel,F=inhibited)
+   P.ErrorStatus					Error Status (0=OK)
+   P.BaseTimer						BaseTimer (seconds)
+   P.SessionUptime					Session Uptime (seconds)
+   P.TotalUptime					Total Uptime (minutes)
+   v3: P.COHeaterMode				CO heater mode
+   P.COHeater						Powerstate CO heater (0/1)
+   P.NO2Heater						Powerstate NO2 heater (0/1)
+   P.O3Heater						Powerstate O3 heater (0/1)
+   v3: P.CO2Heater					Powerstate CO2 heater (0/1)
+   P.UnitSerialnumber				Serialnumber of unit
+   P.TemporarilyEnableDebugLeds	Debug leds (0/1)
+   P.TemporarilyEnableBaseTimer	Enable BaseTime (0/1)
+   P.ControllerReset				WIFI reset
+   P.FirmwareUpdate				Firmware update, reboot to bootloader
+
+   Unknown at this moment (decimal):
+   P.11
+   P.16
+   P.17
+   P.18
+
+Conversion for latitude/longitude: ::
+
+   /*
+               8 nibbles:
+               MSB                  LSB
+               n1 n2 n3 n4 n5 n6 n7 n8
+               n1: 0 of 8, 0=East/North, 8=West/South
+               n2 en n3: whole degrees (0-180)
+               n4-n8: fraction of degrees (max 999999)
+   */
+   private convert(input: number): number {
+       var sign = input >> 28 ? -1 : +1;
+       var deg = (input >> 20) & 255;
+       var dec = input & 1048575;
+
+       return (deg + dec / 1000000) * sign;
+   }
+
+As stated above: this step, acquiring/harvesting files, was initially done via FTP.
 
 ETL Step 2 - Raw Measurements
 -----------------------------

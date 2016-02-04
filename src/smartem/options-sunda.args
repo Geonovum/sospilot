@@ -1,11 +1,14 @@
 # Host-specific settings - Just's macbook
 
+raw_device_url=http://whale.citygis.nl/sensors/v1
+
 pg_host=localhost
 pg_user=postgres
 pg_password=postgres
 pg_port=5432
 pg_database=sensors
 pg_schema=smartem
+pg_schema_rt=smartem_rt
 
 sos_host=sensors.geonovum.nl
 sos_port=80

@@ -1,0 +1,1637 @@
+[
+  {
+    "properties": {
+      "id": 1027,
+      "label": "40AB01 - ANTWERPEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.328800746521485,
+        51.28076093033467,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1028,
+      "label": "40AB02 - BERENDRECHT"
+    },
+    "geometry": {
+      "coordinates": [
+        4.320772990123678,
+        51.34047473468224,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1030,
+      "label": "40AL01 - LINKEROEVER"
+    },
+    "geometry": {
+      "coordinates": [
+        4.384176201992604,
+        51.23594145802103,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1031,
+      "label": "40AL02 - BEVEREN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.23378603592549,
+        51.304268002324086,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1032,
+      "label": "40AL03 - BEVEREN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.2004139024733425,
+        51.25371207889571,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1034,
+      "label": "40AL05 - BEVEREN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.277842897811193,
+        51.26286494096863,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1044,
+      "label": "40GK06 - GENK"
+    },
+    "geometry": {
+      "coordinates": [
+        5.469566955653654,
+        50.92763949654357,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1045,
+      "label": "40GK09 - GENK"
+    },
+    "geometry": {
+      "coordinates": [
+        5.49173522097833,
+        50.934378882152025,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1048,
+      "label": "40HB23 - HOBOKEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.339957879729796,
+        51.1700452778959,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1058,
+      "label": "40LD01 - LAAKDAL"
+    },
+    "geometry": {
+      "coordinates": [
+        5.003813649438513,
+        51.10972359591983,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1059,
+      "label": "40LD02 - LAAKDAL"
+    },
+    "geometry": {
+      "coordinates": [
+        5.0204951326028056,
+        51.12013161960038,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1062,
+      "label": "40MN01 - MENEN"
+    },
+    "geometry": {
+      "coordinates": [
+        3.108601636140242,
+        50.79321590792331,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1066,
+      "label": "40OB01 - OOSTROZEBEK"
+    },
+    "geometry": {
+      "coordinates": [
+        3.3063444168218337,
+        50.91697536075491,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1714,
+      "label": "40OB02 - WIELSBEKE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.375169877705813,
+        50.91469989824569,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1071,
+      "label": "40R801 - BORGERHOUT"
+    },
+    "geometry": {
+      "coordinates": [
+        4.430773332865335,
+        51.20940980337123,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1161,
+      "label": "40R833 - STABROEK"
+    },
+    "geometry": {
+      "coordinates": [
+        4.361213157927746,
+        51.327406127081574,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1070,
+      "label": "40RL01 - ROESELARE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.12011520232101,
+        50.95292415578557,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1719,
+      "label": "40SA04 - Hoevenen"
+    },
+    "geometry": {
+      "coordinates": [
+        4.402820488221657,
+        51.313676163025455,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1073,
+      "label": "40SZ01 - STEENOKKERZ"
+    },
+    "geometry": {
+      "coordinates": [
+        4.503135472527078,
+        50.91432341770829,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1074,
+      "label": "40SZ02 - STEENOKKERZ"
+    },
+    "geometry": {
+      "coordinates": [
+        4.511136453539578,
+        50.912767706261675,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1089,
+      "label": "40TS21 - TESSENDERLO"
+    },
+    "geometry": {
+      "coordinates": [
+        5.106485131733738,
+        51.065454722119995,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1095,
+      "label": "40WZ02 - MOL"
+    },
+    "geometry": {
+      "coordinates": [
+        5.220482072996424,
+        51.1925478988663,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1107,
+      "label": "40ZL01 - ZELZATE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.807356019807785,
+        51.2028884998475,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1110,
+      "label": "41B004 - STE.CATHERI"
+    },
+    "geometry": {
+      "coordinates": [
+        4.347540517602077,
+        50.85055776051243,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1112,
+      "label": "41B006 - PARL.EUROPE"
+    },
+    "geometry": {
+      "coordinates": [
+        4.373341197855533,
+        50.83837841934125,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1711,
+      "label": "41B008 - Brussel (Beliardstraat)"
+    },
+    "geometry": {
+      "coordinates": [
+        4.375101972946155,
+        50.84053579892573,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1113,
+      "label": "41B011 - BERCHEM S.A"
+    },
+    "geometry": {
+      "coordinates": [
+        4.287289728487266,
+        50.857777797320146,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1116,
+      "label": "41MEU1 - MEUDON"
+    },
+    "geometry": {
+      "coordinates": [
+        4.3916704654846885,
+        50.89484780317897,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1117,
+      "label": "41N043 - HAREN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.381916082147075,
+        50.883307048563324,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1118,
+      "label": "41R001 - MOLENBEEK"
+    },
+    "geometry": {
+      "coordinates": [
+        4.332772831608211,
+        50.8494127067704,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1119,
+      "label": "41R002 - IXELLES"
+    },
+    "geometry": {
+      "coordinates": [
+        4.383671711935253,
+        50.82487510738298,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1122,
+      "label": "41R012 - UCCLE"
+    },
+    "geometry": {
+      "coordinates": [
+        4.357491891473815,
+        50.79637886245367,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1124,
+      "label": "41WOL1 - WOL.ST.L."
+    },
+    "geometry": {
+      "coordinates": [
+        4.424656306951782,
+        50.85632548758378,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1127,
+      "label": "42M802 - ANTWERPEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.423351288874053,
+        51.26073698032209,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1132,
+      "label": "42N016 - DESSEL"
+    },
+    "geometry": {
+      "coordinates": [
+        5.162927112669919,
+        51.233399751102034,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1136,
+      "label": "42N027 - BREE"
+    },
+    "geometry": {
+      "coordinates": [
+        5.605605179924863,
+        51.13346441917528,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1137,
+      "label": "42N035 - AARSCHOT"
+    },
+    "geometry": {
+      "coordinates": [
+        4.836568305212791,
+        50.977288782475995,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1138,
+      "label": "42N040 - ST.P.LEEUWG"
+    },
+    "geometry": {
+      "coordinates": [
+        4.224148022507917,
+        50.7678846913905,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1139,
+      "label": "42N041 - ST.P.LEEUWH"
+    },
+    "geometry": {
+      "coordinates": [
+        4.223142493207307,
+        50.76757780938049,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1140,
+      "label": "42N045 - HASSELT"
+    },
+    "geometry": {
+      "coordinates": [
+        5.367325990004875,
+        50.93945947627086,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1141,
+      "label": "42N046 - GELLIK"
+    },
+    "geometry": {
+      "coordinates": [
+        5.61782015286658,
+        50.88204653991555,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1142,
+      "label": "42N054 - WALSHOUTEM"
+    },
+    "geometry": {
+      "coordinates": [
+        5.1021077234305325,
+        50.711453584728154,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1143,
+      "label": "42R010 - ST.STEVENSW"
+    },
+    "geometry": {
+      "coordinates": [
+        4.427379884304826,
+        50.86485513503179,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1146,
+      "label": "42R020 - VILVOORDE"
+    },
+    "geometry": {
+      "coordinates": [
+        4.4356732542075665,
+        50.941134373389076,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1147,
+      "label": "42R801 - BORGERHOUT"
+    },
+    "geometry": {
+      "coordinates": [
+        4.430773332865335,
+        51.20940980337123,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1148,
+      "label": "42R802 - BORGERHOUT"
+    },
+    "geometry": {
+      "coordinates": [
+        4.4307445169709485,
+        51.209266004026645,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1149,
+      "label": "42R811 - SCHOTEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.490313951437762,
+        51.25185070723545,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1153,
+      "label": "42R815 - ZWIJNDRECHT"
+    },
+    "geometry": {
+      "coordinates": [
+        4.331159257846051,
+        51.21444605542715,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1155,
+      "label": "42R820 - KAPELLEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.443762737410088,
+        51.320164068546006,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1156,
+      "label": "42R821 - BEVEREN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.249267938060937,
+        51.215246731213306,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1157,
+      "label": "42R822 - ANTWERPEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.340232726267421,
+        51.264037029169906,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1158,
+      "label": "42R830 - DOEL"
+    },
+    "geometry": {
+      "coordinates": [
+        4.2615868485405155,
+        51.317975852163066,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1159,
+      "label": "42R831 - BERENDRECHT"
+    },
+    "geometry": {
+      "coordinates": [
+        4.338662617454492,
+        51.348542541149634,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1710,
+      "label": "42R834 - Boom"
+    },
+    "geometry": {
+      "coordinates": [
+        4.37905621373377,
+        51.09174728565064,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1162,
+      "label": "42R841 - MECHELEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.468273298019945,
+        51.00227324188754,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1163,
+      "label": "42R891 - ANTWERPEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.384312325988676,
+        51.25555390359908,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1164,
+      "label": "42R892 - KALLO"
+    },
+    "geometry": {
+      "coordinates": [
+        4.277843052716327,
+        51.26278404690535,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1165,
+      "label": "42R893 - ANTWERPEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.3847230952044045,
+        51.281125316636164,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1166,
+      "label": "42R894 - ANTWERPEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.348448486106361,
+        51.283246381291086,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1168,
+      "label": "42R897 - ANTWERPEN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.341057252688654,
+        51.24985374269493,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1170,
+      "label": "43H201 - LIEGE"
+    },
+    "geometry": {
+      "coordinates": [
+        5.5464110085259755,
+        50.62473923749001,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1171,
+      "label": "43M204 - ANGLEUR"
+    },
+    "geometry": {
+      "coordinates": [
+        5.6100962628166045,
+        50.61167040180888,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1173,
+      "label": "43N060 - HAVINNES"
+    },
+    "geometry": {
+      "coordinates": [
+        3.456582431464841,
+        50.61646534351792,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1174,
+      "label": "43N063 - CORROY L.G."
+    },
+    "geometry": {
+      "coordinates": [
+        4.667239178007942,
+        50.65518642718018,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1176,
+      "label": "43N066 - EUPEN"
+    },
+    "geometry": {
+      "coordinates": [
+        6.0012730813606385,
+        50.628608131262865,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1177,
+      "label": "43N067 - MEMBACH"
+    },
+    "geometry": {
+      "coordinates": [
+        5.991697183632146,
+        50.61202539419906,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1178,
+      "label": "43N070 - MONS"
+    },
+    "geometry": {
+      "coordinates": [
+        3.938669863971859,
+        50.46493922715397,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1179,
+      "label": "43N073 - VEZIN"
+    },
+    "geometry": {
+      "coordinates": [
+        4.987372881615698,
+        50.50246377536034,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1180,
+      "label": "43N085 - VIELSALM"
+    },
+    "geometry": {
+      "coordinates": [
+        6.000681056163052,
+        50.30295568067042,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1181,
+      "label": "43N093 - SINSIN"
+    },
+    "geometry": {
+      "coordinates": [
+        5.234117495551344,
+        50.27422502948455,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1182,
+      "label": "43N100 - DOURBES"
+    },
+    "geometry": {
+      "coordinates": [
+        4.5937151363327136,
+        50.09543069946103,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1183,
+      "label": "43N113 - SAINT-ODE"
+    },
+    "geometry": {
+      "coordinates": [
+        5.591964126529964,
+        50.02677667113093,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1184,
+      "label": "43N121 - OFFAGNE"
+    },
+    "geometry": {
+      "coordinates": [
+        5.201336865704334,
+        49.87687597374649,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1185,
+      "label": "43N132 - HABAY-LA-N."
+    },
+    "geometry": {
+      "coordinates": [
+        5.62934507784547,
+        49.71902884008304,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1190,
+      "label": "43R221 - LIEGE"
+    },
+    "geometry": {
+      "coordinates": [
+        5.626781651896404,
+        50.65819212194334,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1191,
+      "label": "43R222 - SERAING"
+    },
+    "geometry": {
+      "coordinates": [
+        5.569169530878802,
+        50.61316017917033,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1192,
+      "label": "43R223 - JEMEPPE"
+    },
+    "geometry": {
+      "coordinates": [
+        5.515351751441901,
+        50.62041853392709,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1195,
+      "label": "43R240 - ENGIS"
+    },
+    "geometry": {
+      "coordinates": [
+        5.3963937195286675,
+        50.58336195024436,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1196,
+      "label": "44M702 - ERTVELDE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.7610933349898583,
+        51.16577027927976,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1198,
+      "label": "44M705 - ROESELARE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.151361029367506,
+        50.94510612402099,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1200,
+      "label": "44N012 - MOERKERKE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.3614939869373877,
+        51.254320575687466,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1202,
+      "label": "44N029 - HOUTEM"
+    },
+    "geometry": {
+      "coordinates": [
+        2.581285273499176,
+        51.01602687157289,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1205,
+      "label": "44N051 - IDEGEM"
+    },
+    "geometry": {
+      "coordinates": [
+        3.929248575768813,
+        50.7986626907343,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1206,
+      "label": "44N052 - ZWEVEGEM"
+    },
+    "geometry": {
+      "coordinates": [
+        3.321452920380108,
+        50.814620787643214,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1207,
+      "label": "44R701 - GENT"
+    },
+    "geometry": {
+      "coordinates": [
+        3.7282544050240585,
+        51.05807875873328,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1715,
+      "label": "44R702 - Gent (G.Carlierlaan)"
+    },
+    "geometry": {
+      "coordinates": [
+        3.7339276949920204,
+        51.040436462520994,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1208,
+      "label": "44R710 - DESTELBERGE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.7742183710031907,
+        51.061024753611086,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1210,
+      "label": "44R721 - WONDELGEM"
+    },
+    "geometry": {
+      "coordinates": [
+        3.715075653512805,
+        51.08870476409703,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1212,
+      "label": "44R731 - EVERGEM"
+    },
+    "geometry": {
+      "coordinates": [
+        3.738460349983397,
+        51.12443756110966,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1213,
+      "label": "44R740 - ST.KRUIS-WI"
+    },
+    "geometry": {
+      "coordinates": [
+        3.807691163894316,
+        51.14988316084379,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1214,
+      "label": "44R750 - ZELZATE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.8218756686368165,
+        51.19581034614816,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1217,
+      "label": "45R501 - CHARLEROI"
+    },
+    "geometry": {
+      "coordinates": [
+        4.4511246411250545,
+        50.40905868556234,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1218,
+      "label": "45R502 - LODELINSART"
+    },
+    "geometry": {
+      "coordinates": [
+        4.457633666960066,
+        50.42874262981557,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1219,
+      "label": "45R510 - CHATELINEAU"
+    },
+    "geometry": {
+      "coordinates": [
+        4.520082696235321,
+        50.41618061738218,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1220,
+      "label": "45R511 - MARCINELLE"
+    },
+    "geometry": {
+      "coordinates": [
+        4.42365348276216,
+        50.37733932443557,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1221,
+      "label": "45R512 - MARCHIENNE"
+    },
+    "geometry": {
+      "coordinates": [
+        4.394850276971763,
+        50.40755741365582,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1231,
+      "label": "47E007 - Sint-Pieters-Leeuw"
+    },
+    "geometry": {
+      "coordinates": [
+        4.251582058965422,
+        50.795045815360474,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1232,
+      "label": "47E008 - Grimbergen"
+    },
+    "geometry": {
+      "coordinates": [
+        4.394872738450364,
+        50.92584236010066,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1233,
+      "label": "47E009 - Zemst"
+    },
+    "geometry": {
+      "coordinates": [
+        4.4343694710428085,
+        50.95466394705793,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1234,
+      "label": "47E013 - Vorst"
+    },
+    "geometry": {
+      "coordinates": [
+        4.327337849927232,
+        50.811448108728854,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1236,
+      "label": "47E702 - ELSEGEM"
+    },
+    "geometry": {
+      "coordinates": [
+        3.530697559080052,
+        50.813747590748605,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1237,
+      "label": "47E703 - OOSTEEKLO"
+    },
+    "geometry": {
+      "coordinates": [
+        3.6862521230719167,
+        51.19006407956373,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1239,
+      "label": "47E714 - DUDZELE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.247582769386584,
+        51.27871022911717,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1240,
+      "label": "47E715 - ZUIENKERKE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.1739433323770148,
+        51.245611122073264,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1241,
+      "label": "47E716 - MARIAKERKE"
+    },
+    "geometry": {
+      "coordinates": [
+        3.6817694969938635,
+        51.06673493118095,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1242,
+      "label": "47E804 - KALLO"
+    },
+    "geometry": {
+      "coordinates": [
+        4.306113201290856,
+        51.281137918397214,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1249,
+      "label": "47E811 - DIEPENBEEK"
+    },
+    "geometry": {
+      "coordinates": [
+        5.417150871369041,
+        50.89668083612687,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1250,
+      "label": "47E812 - GENK"
+    },
+    "geometry": {
+      "coordinates": [
+        5.536686256347378,
+        50.967725750433395,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  },
+  {
+    "properties": {
+      "id": 1716,
+      "label": "47E814 - Ham"
+    },
+    "geometry": {
+      "coordinates": [
+        5.128666679782511,
+        51.08193474620067,
+        "NaN"
+      ],
+      "type": "Point"
+    },
+    "type": "Feature"
+  }
+]
