@@ -19,3 +19,5 @@ SOSPILOT=/opt/geonovum/sospilot/git
 # Run weather: PostgreSQL 2 SOS
 */6 * * * * cd $SOSPILOT/src/weather/pg2sos; ./pg2sos.sh >> /var/log/sospilot/weather_pg2sos.log 2>&1
 
+# Run last measurements Smartemission
+*/3 * * * * cd $SOSPILOT/src/smartem; ./last.sh > /var/log/sospilot/smartem_last.log 2>&1
