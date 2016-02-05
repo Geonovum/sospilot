@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'page-head.html' %}
+<body>
+<div class="container">
+    <h1>SOSRest API</h1>
+
+    <p>Dit is de SOS REST API Emulator voor SmartEmission.</p>
+    <h2>URLs</h2>
+    <p>
+        Twee services zijn aktief:
+    </p>
+    <ul>
+        <li>Stations: <a href="{{ url_for('stations') }}">{{ url_for('stations') }} </a></li>
+        <li>Timeseries per station: </li>
+    </ul>
+
+</div>
+
+</body>
+</html>
