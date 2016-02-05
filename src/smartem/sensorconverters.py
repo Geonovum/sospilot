@@ -106,7 +106,7 @@ def ppb_co2_to_ugm3(input):
 
 
 def ppb_co2_to_ppm(input):
-    return float(input)/1000.0
+    return input/1000
 
 def ppb_no2_to_ugm3(input):
     return ppb_to_ugm3('no2', input)
