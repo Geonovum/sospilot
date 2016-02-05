@@ -56,3 +56,22 @@ CREATE VIEW smartem_rt.v_last_measurements_O3 AS
   SELECT device_id, device_name, id, label, unit,
     name, value_raw, time AT TIME ZONE 'GMT' AS sample_time, value as sample_value, point, gid, unique_id
   FROM smartem_rt.last_device_output WHERE name = 's_o3' ORDER BY device_id, gid DESC;
+
+DROP VIEW IF EXISTS smartem_rt.v_last_measurements_temperature;
+CREATE VIEW smartem_rt.v_last_measurements_temperature AS
+  SELECT device_id, device_name, id, label, unit,
+    name, value_raw, time AT TIME ZONE 'GMT' AS sample_time, value as sample_value, point, gid, unique_id
+  FROM smartem_rt.last_device_output WHERE name = 's_temperatureambient' ORDER BY device_id, gid DESC;
+
+DROP VIEW IF EXISTS smartem_rt.v_last_measurements_humidity;
+CREATE VIEW smartem_rt.v_last_measurements_humidity AS
+  SELECT device_id, device_name, id, label, unit,
+    name, value_raw, time AT TIME ZONE 'GMT' AS sample_time, value as sample_value, point, gid, unique_id
+  FROM smartem_rt.last_device_output WHERE name = 's_humidity' ORDER BY device_id, gid DESC;
+
+DROP VIEW IF EXISTS smartem_rt.v_last_measurements_barometer;
+CREATE VIEW smartem_rt.v_last_measurements_barometer AS
+  SELECT device_id, device_name, id, label, unit,
+    name, value_raw, time AT TIME ZONE 'GMT' AS sample_time, value as sample_value, point, gid, unique_id
+  FROM smartem_rt.last_device_output WHERE name = 's_barometer' ORDER BY device_id, gid DESC;
+

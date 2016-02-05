@@ -280,17 +280,17 @@
                     </PointSymbolizer>
                 </Rule>
                 <Rule>
-                    <Name>101 - 150 ug/m3</Name>
-                    <Title>  101 - 150 ug/m3</Title>
+                    <Name>201 - 270 ug/m3</Name>
+                    <Title>  201 - 270 ug/m3</Title>
                     <ogc:Filter>
                         <ogc:And>
                             <ogc:PropertyIsGreaterThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>100.5</ogc:Literal>
+                                <ogc:Literal>200.5</ogc:Literal>
                             </ogc:PropertyIsGreaterThan>
                             <ogc:PropertyIsLessThan>
                                 <ogc:PropertyName>sample_value</ogc:PropertyName>
-                                <ogc:Literal>150.5</ogc:Literal>
+                                <ogc:Literal>270.5</ogc:Literal>
                             </ogc:PropertyIsLessThan>
                         </ogc:And>
                     </ogc:Filter>
