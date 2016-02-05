@@ -33,7 +33,7 @@ class RawSensorLastInput(HttpInput):
                 'name': 's_co2',
                 'id': 2,
                 'label': 'CO2',
-                'unit': 'ug/m3'
+                'unit': 'ppm'
             },
             {
                 'name': 's_no2',

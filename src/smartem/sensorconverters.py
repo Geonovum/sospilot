@@ -105,6 +105,9 @@ def ppb_co2_to_ugm3(input):
     return ppb_to_ugm3('co2', input)
 
 
+def ppb_co2_to_ppm(input):
+    return float(input)/1000.0
+
 def ppb_no2_to_ugm3(input):
     return ppb_to_ugm3('no2', input)
 
@@ -162,7 +165,7 @@ def convert_timestamp(iso_str):
 
 CONVERTERS = {
     's_co': ppb_co_to_ugm3,
-    's_co2': ppb_co2_to_ugm3,
+    's_co2': ppb_co2_to_ppm,
     's_no2': ppb_no2_to_ugm3,
     's_o3': ppb_o3_to_ugm3,
     's_temperatureambient': convert_temperature,
