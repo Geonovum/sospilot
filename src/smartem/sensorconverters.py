@@ -120,17 +120,18 @@ def convert_temperature(input):
     if input == 0:
         return None
 
-    return round(float(input)/1000.0 - 273.1)
+    return int(round(float(input)/1000.0 - 273.1))
 
 
 def convert_barometer(input):
-    result = input / 100
+    result = float(input) / 100.0
     if result > 2000:
         return None
+    return int(round(result))
 
 
 def convert_humidity(input):
-    return input / 1000
+    return int(round(float(input) / 1000.0))
 
 # Lat or longitude conversion
 # 8 nibbles:
