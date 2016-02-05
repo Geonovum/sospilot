@@ -60,13 +60,20 @@ def stations():
     response.headers["Content-Type"] = "application/json"
     return response
 
-
+# /api/v1/timeseries?station=1027&expanded=true
 @app.route('/api/v1/timeseries')
 @nocache
 def timeseries(package=None):
-    timeseries = []
+    timeseries_list = []
+    station = request.args.get('station', None)
+    if station:
+        db = PostGIS(config)
+        timeseries_list = db.do_query('SELECT * from v_last_measurements WHERE device_id = %s' % station, 'v_last_measurements')
 
-    return render_template('timeseries.json', timeseries=timeseries)
+    json_doc = render_template('timeseries.json', timeseries=timeseries_list)
+    response = make_response(json_doc)
+    response.headers["Content-Type"] = "application/json"
+    return response
 
 if __name__ == '__main__':
     # Run as main via python index.py

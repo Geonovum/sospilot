@@ -30,7 +30,15 @@ CREATE INDEX last_device_output_geom_idx ON smartem_rt.last_device_output USING 
 
 DROP VIEW IF EXISTS smartem_rt.stations CASCADE;
 CREATE VIEW smartem_rt.stations AS
-  SELECT DISTINCT on (d.device_id) d.gid, d.device_id, d.device_name, d.point, d.altitude, d.time AT TIME ZONE 'GMT' as last_update FROM smartem_rt.last_device_output as d order by d.device_id;
+  SELECT DISTINCT on (d.device_id) d.gid, d.device_id, d.device_name, d.point, d.altitude, d.time AT TIME ZONE 'GMT' as last_update, ST_X(point) as lon, ST_Y(point) as lat  FROM smartem_rt.last_device_output as d order by d.device_id;
+
+-- Laatste Metingen
+DROP VIEW IF EXISTS smartem_rt.v_last_measurements;
+CREATE VIEW smartem_rt.v_last_measurements AS
+  SELECT device_id, device_name, id, label, unit,
+    name, value_raw, time AT TIME ZONE 'GMT' AS sample_time, value as sample_value, point, gid, unique_id,
+    ST_X(point) as lon, ST_Y(point) as lat, EXTRACT(epoch from time AT TIME ZONE 'GMT' ) AS timestamp
+  FROM smartem_rt.last_device_output ORDER BY device_id, gid DESC;
 
 -- Laatste Metingen per Component
 DROP VIEW IF EXISTS smartem_rt.v_last_measurements_CO;
