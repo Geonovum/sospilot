@@ -5,14 +5,15 @@
 <div class="container">
     <h1>SOSRest API</h1>
 
-    <p>Dit is de SOS REST API Emulator voor SmartEmission.</p>
-    <h2>URLs</h2>
+    <p>Dit is de SOS REST API Emulator voor SmartEmission.<br/>
+        Deze serveert de laatste sensor-metingen uit de Raw Sensor API via een geëmuleerde 52N SOS REST API. </p>
+    <h2>Service URLs</h2>
     <p>
         Twee services zijn aktief:
     </p>
     <ul>
         <li>Stations: <a href="{{ url_for('stations') }}">{{ url_for('stations') }} </a></li>
-        <li>Timeseries per station: </li>
+        <li>Laatste metingen per station (bijv station 23): <a href="{{ url_for('timeseries') }}?station=23&expanded=true">{{ url_for('timeseries') }}?station=23&expanded=true</a> </li>
     </ul>
 
 </div>

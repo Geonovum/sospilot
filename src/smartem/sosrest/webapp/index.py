@@ -1,30 +1,19 @@
-import sys
+import os, sys
 from functools import wraps, update_wrapper
 from datetime import datetime
 from flask import Flask, render_template, session, redirect, url_for, escape, request, make_response
-from postgis import PostGIS
 
 if __name__ != '__main__':
     # When run with WSGI in Apache we need path extension to find Python modules relative to index.py
-    sys.path.insert(0, '/var/www/smartemission.nl/sosemu')
+    sys.path.insert(0, os.path.dirname(__file__))
 
-try:
-    from configparser import ConfigParser
-except ImportError:
-    from ConfigParser import ConfigParser  # ver. < 3.0
+from postgis import PostGIS
+from config import config
 
 app = Flask(__name__)
 app.debug = True
 application = app
 
-config = {
-    'database': 'sensors',
-    'host': 'localhost',
-    'port': '5432',
-    'schema': 'smartem_rt',
-    'user': 'postgres',
-    'password': 'postgres'
-}
 
 # Wrapper to disable any kind of caching for all pages
 # See http://arusahni.net/blog/2014/03/flask-nocache.html
@@ -40,13 +29,20 @@ def nocache(view):
 
     return update_wrapper(no_cache, view)
 
+# Shorthand to create proper JSON HTTP response
+def make_json_response(json_doc):
+    response = make_response(json_doc)
+    response.headers["Content-Type"] = "application/json"
+    return response
 
+# Documentation
 @app.route('/')
 @nocache
 def home():
     return render_template('home.html')
 
 
+# Get list of all stations with locations
 @app.route('/api/v1/stations')
 @nocache
 def stations():
@@ -54,13 +50,13 @@ def stations():
     db = PostGIS(config)
     stations_list = db.do_query('SELECT * from stations', 'stations')
 
-    # Construct the response: JSON doc via Jinja2 template with JSOn content type
+    # Construct the response: JSON doc via Jinja2 template with JSON content type
     json_doc = render_template('stations.json', stations=stations_list)
-    response = make_response(json_doc)
-    response.headers["Content-Type"] = "application/json"
-    return response
+    return make_json_response(json_doc)
 
-# /api/v1/timeseries?station=1027&expanded=true
+
+# Get last values for single station
+# Example: /api/v1/timeseries?station=23&expanded=true
 @app.route('/api/v1/timeseries')
 @nocache
 def timeseries(package=None):
@@ -70,10 +66,9 @@ def timeseries(package=None):
         db = PostGIS(config)
         timeseries_list = db.do_query('SELECT * from v_last_measurements WHERE device_id = %s' % station, 'v_last_measurements')
 
+    # Construct the response: JSON doc via Jinja2 template with JSON content type
     json_doc = render_template('timeseries.json', timeseries=timeseries_list)
-    response = make_response(json_doc)
-    response.headers["Content-Type"] = "application/json"
-    return response
+    return make_json_response(json_doc)
 
 if __name__ == '__main__':
     # Run as main via python index.py

@@ -38,7 +38,7 @@ CREATE VIEW smartem_rt.v_last_measurements AS
   SELECT device_id, device_name, id, label, unit,
     name, value_raw, time AT TIME ZONE 'GMT' AS sample_time, value as sample_value, point, gid, unique_id,
     ST_X(point) as lon, ST_Y(point) as lat, EXTRACT(epoch from time AT TIME ZONE 'GMT' ) AS timestamp
-  FROM smartem_rt.last_device_output ORDER BY device_id, gid DESC;
+  FROM smartem_rt.last_device_output ORDER BY id ASC;
 
 -- Laatste Metingen per Component
 DROP VIEW IF EXISTS smartem_rt.v_last_measurements_CO;

@@ -34,7 +34,7 @@
       },
       "offering": {
         "id": "{{ timeserie['id'] }}",
-        "label": "{{ timeserie['id'] }} - Unknown device - procedure"
+        "label": "{{ timeserie['id'] }} - src={{ timeserie['name'] }} - src_value={{ timeserie['value_raw'] }}  - offering"
       },
       "feature": {
         "id": "{{ timeserie['device_id'] }}",
@@ -42,7 +42,7 @@
       },
       "procedure": {
         "id": "{{ timeserie['id'] }}",
-        "label": "{{ timeserie['id'] }} - Unknown device - procedure"
+        "label": "{{ timeserie['id'] }} - on {{ timeserie['sample_time'] }} - procedure"
       },
       "phenomenon": {
         "id": "{{ timeserie['id'] }}",

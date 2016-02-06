@@ -1,5 +1,3 @@
 #/bin/bash
 
-sudo rsync -vr ./ /var/www/dashboard
-sudo rm /var/www/dashboard/*.pyc
-sudo chown -R gis:gis /var/www/dashboard
+rsync -e ssh -alzvx --exclude "*.pyc" --exclude "config.py" ./ sadmin@api.smartemission.nl:/var/www/api.smartemission.nl/sosemu/
