@@ -4,9 +4,9 @@
 #
 # Author: Just van den Broecke
 #
-from util import Util
+from util import get_log
 
-log = Util.get_log("postgis")
+log = get_log("postgis")
 
 try:
     import psycopg2
