@@ -1,18 +1,18 @@
 [
-  {% for timeserie in timeseries %}
+  {% for last_value in last_values %}
   {
-    "id": "{{ timeserie['id'] }}",
-    "label": "{{ timeserie['label'] }} - {{ timeserie['device_name'] }}",
-    "uom": "{{ timeserie['unit'] }}",
+    "id": "{{ last_value['id'] }}",
+    "label": "{{ last_value['label'] }} - {{ last_value['device_name'] }}",
+    "uom": "{{ last_value['unit'] }}",
     "station": {
       "properties": {
-        "id": {{ timeserie['device_id'] }},
-        "label": "{{ timeserie['device_name'] }}"
+        "id": {{ last_value['device_id'] }},
+        "label": "{{ last_value['device_name'] }}"
       },
       "geometry": {
         "coordinates": [
-          {{ timeserie['lon'] }},
-          {{ timeserie['lat'] }}
+          {{ last_value['lon'] }},
+          {{ last_value['lat'] }}
         ],
         "type": "Point"
       },
@@ -20,12 +20,12 @@
     },
     "referenceValues": [],
     "firstValue": {
-      "timestamp": {{ timeserie['timestamp'] }},
-      "value": {{ timeserie['sample_value'] }}
+      "timestamp": {{ last_value['timestamp'] }},
+      "value": {{ last_value['sample_value'] }}
     },
     "lastValue": {
-      "timestamp": {{ timeserie['timestamp'] }},
-      "value": {{ timeserie['sample_value'] }}
+      "timestamp": {{ last_value['timestamp'] }},
+      "value": {{ last_value['sample_value'] }}
     },
     "parameters": {
       "service": {
@@ -33,24 +33,24 @@
         "label": "Smart Emission: timeseries-api (SOS 2.0)"
       },
       "offering": {
-        "id": "{{ timeserie['id'] }}",
-        "label": "{{ timeserie['id'] }} - src={{ timeserie['name'] }} - src_value={{ timeserie['value_raw'] }}  - offering"
+        "id": "{{ last_value['id'] }}",
+        "label": "{{ last_value['id'] }} - src={{ last_value['name'] }} - src_value={{ last_value['value_raw'] }}  - offering"
       },
       "feature": {
-        "id": "{{ timeserie['device_id'] }}",
-        "label": "{{ timeserie['device_name'] }}"
+        "id": "{{ last_value['device_id'] }}",
+        "label": "{{ last_value['device_name'] }}"
       },
       "procedure": {
-        "id": "{{ timeserie['id'] }}",
-        "label": "{{ timeserie['id'] }} - on {{ timeserie['sample_time'] }} - procedure"
+        "id": "{{ last_value['id'] }}",
+        "label": "{{ last_value['id'] }} - on {{ last_value['sample_time'] }} - procedure"
       },
       "phenomenon": {
-        "id": "{{ timeserie['id'] }}",
-        "label": "{{ timeserie['label'] }}"
+        "id": "{{ last_value['id'] }}",
+        "label": "{{ last_value['label'] }}"
       },
       "category": {
-        "id": "{{ timeserie['id'] }}",
-        "label": "{{ timeserie['label'] }}"
+        "id": "{{ last_value['id'] }}",
+        "label": "{{ last_value['label'] }}"
       }
     },
     "statusIntervals": []
