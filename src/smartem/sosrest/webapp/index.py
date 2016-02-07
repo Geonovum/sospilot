@@ -1,10 +1,10 @@
 import os, sys
 from functools import wraps, update_wrapper
 from datetime import datetime
-from flask import Flask, render_template, session, redirect, url_for, escape, request, make_response
+from flask import Flask, render_template, request, make_response
 
 if __name__ != '__main__':
-    # When run with WSGI in Apache we need path extension to find Python modules relative to index.py
+    # When run with WSGI in Apache we need to extend the PYTHONPATH to find Python modules relative to index.py
     sys.path.insert(0, os.path.dirname(__file__))
 
 from postgis import PostGIS
@@ -53,14 +53,15 @@ def make_json_response(json_doc):
     response.headers["Content-Type"] = "application/json"
     return response
 
-# Documentation
+
+# Home page
 @app.route('/')
 @nocache
 def home():
     return render_template('home.html')
 
 
-# Get list of all stations with locations (as JSON)
+# Get list of all stations with locations (as JSON or HTML)
 @app.route('/api/v1/stations')
 @nocache
 def stations():
@@ -77,7 +78,7 @@ def stations():
         return make_json_response(json_doc)
 
 
-# Get last values for single station  (as JSON)
+# Get last values for single station  (as JSON or HTML)
 # Example: /api/v1/timeseries?station=23&expanded=true
 @app.route('/api/v1/timeseries')
 @nocache

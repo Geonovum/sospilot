@@ -6,7 +6,8 @@
     <h1>SOSRest API</h1>
 
     <p>Dit is de SOS REST API Emulator voor SmartEmission.<br/>
-        Deze serveert de laatste sensor-metingen uit de Raw Sensor API via een geëmuleerde 52N SOS REST API. </p>
+        Deze serveert de laatste sensor-metingen uit de Raw Sensor API via een
+        geëmuleerde <a href="http://sensorweb.demo.52north.org/sensorwebclient-webapp-stable/api-doc/index.html">52N SOS REST API</a>. </p>
     <h2>Specificatie URLs</h2>
     <p>
         Twee services zijn aktief, deze geven JSON-responses terug:
@@ -28,6 +29,11 @@
                 href="{{ url_for('timeseries') }}?station=23&format=html">{{ url_for('timeseries') }}?station=23&format=html</a>
         </li>
     </ul>
+    <h2>Web Applicatie</h2>
+    <p>
+        Deze web applicatie is geschreven in Python met het lichtgewicht <a href="http://flask.pocoo.org/">Flask web-framework</a>. Zie ook de
+        <a href="https://github.com/Geonovum/sospilot/tree/master/src/smartem/sosrest/webapp">webapp code in GitHub</a>.
+    </p>
 </div>
 
 </body>

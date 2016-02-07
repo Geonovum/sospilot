@@ -47,7 +47,7 @@ class PostGIS:
 
         return self.e
 
-    # Do the whole thing: connecting, query, and conversion to array of dicts (records)
+    # Do the whole thing: connecting, query, and conversion of result to array of dicts (records)
     def do_query(self, query_str, table):
         self.connect()
     
@@ -68,8 +68,6 @@ class PostGIS:
         return records
 
     def get_column_names(self, table, schema='public'):
-        column_names = []
-
         self.cursor.execute("select column_name from information_schema.columns where table_schema = '%s' and table_name='%s'" % (schema, table))
         column_names = [row[0] for row in self.cursor]
         return column_names
