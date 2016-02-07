@@ -9,7 +9,7 @@
         Deze serveert de laatste sensor-metingen uit de Raw Sensor API via een geëmuleerde 52N SOS REST API. </p>
     <h2>Specificatie URLs</h2>
     <p>
-        Twee services zijn aktief:
+        Twee services zijn aktief, deze geven JSON-responses terug:
     </p>
     <ul>
         <li>Stations: <a href="{{ url_for('stations') }}">{{ url_for('stations') }} </a></li>
@@ -17,36 +17,17 @@
                 href="{{ url_for('timeseries') }}?station=23&expanded=true">{{ url_for('timeseries') }}?station=23&expanded=true</a>
         </li>
     </ul>
-    <h2>Stations</h2>
+    <h2>HTML Rendering</h2>
     <p>
-        Hieronder alle stations met tijd van laatste update.
+        Deze API kan ook met HTML responses ipv JSON bevraagd worden, via de optionele <code>format=html</code>
+        query parameter. Hieronder de voorbeelden van hierboven als HTML.
     </p>
-    <table class="table table-bordered table-condensed table-responsive table-striped">
-        <thead>
-        <tr>
-            <th>Station Id</th>
-            <th>Station Naam</th>
-            <th>Laatste Update</th>
-            <th>Laatste Observaties</th>
-        </tr>
-        </thead>
-        {% for station in stations %}
-            <tr>
-                <td>
-                    {{ station['device_id'] }}
-                </td>
-                <td>
-                    {{ station['device_name'] }}
-                </td>
-                <td>
-                    {{ station['last_update'] }}
-                </td>
-                <td>
-                    <a href="{{ url_for('last_updates') }}?station={{ station['device_id'] }}">Observaties &gt;&gt;</a>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
+    <ul>
+        <li>Stations: <a href="{{ url_for('stations') }}?format=html">{{ url_for('stations') }}?format=html</a></li>
+        <li>Laatste metingen per station (bijv station 23): <a
+                href="{{ url_for('timeseries') }}?station=23&format=html">{{ url_for('timeseries') }}?station=23&format=html</a>
+        </li>
+    </ul>
 </div>
 
 </body>

@@ -57,20 +57,8 @@ def make_json_response(json_doc):
 @app.route('/')
 @nocache
 def home():
-    # Fetch stations from DB
-    stations_list = get_stations()
-    return render_template('home.html', stations=stations_list)
+    return render_template('home.html')
 
-# Get last values for single station (as html)
-# Example: /last_updates?station=23&expanded=true
-@app.route('/last_updates')
-@nocache
-def last_updates(station=None):
-    # Get last values, all or for single station if 'station=' arg in query string
-    last_values = get_last_values(request.args.get('station', None))
-
-    # Construct the response: JSON doc via Jinja2 template with JSON content type
-    return render_template('last_updates.html', last_values=last_values)
 
 # Get list of all stations with locations (as JSON)
 @app.route('/api/v1/stations')
@@ -79,9 +67,14 @@ def stations():
     # Fetch stations from DB
     stations_list = get_stations()
 
-    # Construct the response: JSON doc via Jinja2 template with JSON content type
-    json_doc = render_template('stations.json', stations=stations_list)
-    return make_json_response(json_doc)
+    # Determine response format: JSON (default) or HTML
+    format = request.args.get('format', 'json')
+    if format == 'html':
+        return render_template('stations.html', stations=stations_list)
+    else:
+        # Construct JSON response: JSON doc via Jinja2 template with JSON content type
+        json_doc = render_template('stations.json', stations=stations_list)
+        return make_json_response(json_doc)
 
 
 # Get last values for single station  (as JSON)
@@ -92,9 +85,14 @@ def timeseries(package=None):
     # Get last values, all or for single station if 'station=' arg in query string
     last_values = get_last_values(request.args.get('station', None))
 
-    # Construct the response: JSON doc via Jinja2 template with JSON content type
-    json_doc = render_template('timeseries.json', last_values=last_values)
-    return make_json_response(json_doc)
+    # Determine response format: JSON (default) or HTML
+    format = request.args.get('format', 'json')
+    if format == 'html':
+        return render_template('timeseries.html', last_values=last_values)
+    else:
+        # Construct JSON response: JSON doc via Jinja2 template with JSON content type
+        json_doc = render_template('timeseries.json', last_values=last_values)
+        return make_json_response(json_doc)
 
 if __name__ == '__main__':
     # Run as main via python index.py

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'page-head.html' %}
+<body>
+<div class="container">
+    <h1>Stations</h1>
+    <p>
+        Hieronder alle stations met tijd van laatste update. Klik op de Observaties om deze te zien.
+    </p>
+    <table class="table table-bordered table-condensed table-responsive table-striped">
+        <thead>
+        <tr>
+            <th>Station Id</th>
+            <th>Station Naam</th>
+            <th>Laatste Update</th>
+            <th>Laatste Observaties</th>
+        </tr>
+        </thead>
+        {% for station in stations %}
+            <tr>
+                <td>
+                    {{ station['device_id'] }}
+                </td>
+                <td>
+                    {{ station['device_name'] }}
+                </td>
+                <td>
+                    {{ station['last_update'] }}
+                </td>
+                <td>
+                    <a href="{{ url_for('timeseries') }}?station={{ station['device_id'] }}&format=html">Observaties &gt;&gt;</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p>
+    <a href="{{ url_for('home') }}">Terug naar thuis pagina &gt;&gt;</a>
+    </p>
+</div>
+
+</body>
+</html>
