@@ -1,7 +1,0 @@
-API calls for simple SOS REST:
-
-# get stations
-http://geo.irceline.be/sos/api/v1/stations
-
-# Get timeseries for station
-http://geo.irceline.be/sos/api/v1/timeseries?station=1027&expanded=true
