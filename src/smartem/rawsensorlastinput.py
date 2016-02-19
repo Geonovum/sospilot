@@ -295,6 +295,10 @@ class RawSensorLastInput(HttpInput):
                 if record['value'] is None:
                     continue
 
+                if name == 't_audiolevel':
+                    record['value_raw'] = json_obj['t_audiomax']
+
+
                 result.append(record)
 
             # print(str(record))
