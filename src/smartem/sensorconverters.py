@@ -97,40 +97,40 @@ def ppb_to_ugm3(component, input):
     return ppb_to_ugm3_factor[component] * float(input)
 
 
-def ppb_co_to_ugm3(input):
+def ppb_co_to_ugm3(input, json_obj, name):
     return ppb_to_ugm3('co', input)
 
 
-def ppb_co2_to_ugm3(input):
+def ppb_co2_to_ugm3(input, json_obj, name):
     return ppb_to_ugm3('co2', input)
 
 
-def ppb_co2_to_ppm(input):
+def ppb_co2_to_ppm(input, json_obj, name):
     return input/1000
 
-def ppb_no2_to_ugm3(input):
+def ppb_no2_to_ugm3(input, json_obj, name):
     return ppb_to_ugm3('no2', input)
 
 
-def ppb_o3_to_ugm3(input):
+def ppb_o3_to_ugm3(input, json_obj, name):
     return ppb_to_ugm3('o3', input)
 
 
-def convert_temperature(input):
+def convert_temperature(input, json_obj, name):
     if input == 0:
         return None
 
     return int(round(float(input)/1000.0 - 273.1))
 
 
-def convert_barometer(input):
+def convert_barometer(input, json_obj, name):
     result = float(input) / 100.0
     if result > 2000:
         return None
     return int(round(result))
 
 
-def convert_humidity(input):
+def convert_humidity(input, json_obj, name):
     return int(round(float(input) / 1000.0))
 
 # Lat or longitude conversion
@@ -140,7 +140,7 @@ def convert_humidity(input):
 # n1: 0 of 8, 0=East/North, 8=West/South
 # n2 en n3: whole degrees (0-180)
 # n4-n8: fraction of degrees (max 999999)
-def convert_coord(input):
+def convert_coord(input, json_obj, name):
     sign = 1.0
     if input >> 28:
         sign = -1.0
@@ -152,8 +152,9 @@ def convert_coord(input):
         result = None
     return result
 
+
 # https://aboutsimon.com/blog/2013/06/06/Datetime-hell-Time-zone-aware-to-UNIX-timestamp.html
-def convert_timestamp(iso_str):
+def convert_timestamp(iso_str, json_obj, name):
     # iso_str : '2016-02-03T16:47:51.3844629Z'
     iso_str = iso_str.split('.')[0] + 'GMT'
     # timestamp = timegm(
@@ -163,6 +164,34 @@ def convert_timestamp(iso_str):
     # print '-> %s' % datetime.utcfromtimestamp(timestamp).isoformat()
     return datetime.strptime(iso_str, '%Y-%m-%dT%H:%M:%SGMT')
 
+def convert_none(value, json_obj, name):
+    return value
+
+def convert_audio_max(value, json_obj, name):
+    if name in ['t_audiomax', 't_audiomax_band']:
+        return value
+
+    max = 0
+    band = 0
+    candidate = value & 255
+    if candidate < 255 and candidate > max:
+        max = candidate
+    candidate = (value >> 8) & 255
+    if candidate < 255 and candidate > max:
+        max = candidate
+        band = 1
+    candidate = (value >> 16) & 255
+    if candidate < 255 and candidate > max:
+        max = candidate
+        band = 2
+
+    # Assign max to virtual sensors if max also there max
+    if 't_audiomax' not in json_obj or max > json_obj['t_audiomax']:
+        json_obj['t_audiomax'] = max
+        json_obj['t_audiomax_octave'] = band
+        json_obj['t_audiomax_octband'] = band
+
+    return max
 
 CONVERTERS = {
     's_co': ppb_co_to_ugm3,
@@ -174,5 +203,14 @@ CONVERTERS = {
     's_humidity': convert_humidity,
     's_latitude': convert_coord,
     's_longitude': convert_coord,
-    'time': convert_timestamp
+    'time': convert_timestamp,
+    't_audio0': convert_audio_max,
+    't_audioplus1': convert_audio_max,
+    't_audioplus2': convert_audio_max,
+    't_audiomax': convert_none,
+    't_audiomax_octave': convert_none,
+    't_audiomax_octband': convert_none
 }
+
+def convert(json_obj, name):
+    return CONVERTERS[name](json_obj[name], json_obj, name)

@@ -8,7 +8,7 @@ import json
 from stetl.util import Util
 from stetl.inputs.httpinput import HttpInput
 from stetl.packet import FORMAT
-from sensorconverters import CONVERTERS
+from sensorconverters import convert
 
 log = Util.get_log("RawSensorLastInput")
 
@@ -64,7 +64,46 @@ class RawSensorLastInput(HttpInput):
                 'id': 7,
                 'label': 'Luchtvochtigheid',
                 'unit': 'Procent'
+            },
+            {
+                'name': 't_audio0',
+                'id': 8,
+                'label': 'Audio 0-40Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus1',
+                'id': 9,
+                'label': 'Audio 40-80Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus2',
+                'id': 10,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audiomax',
+                'id': 11,
+                'label': 'Audio Maxvalue',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audiomax_octave',
+                'id': 12,
+                'label': 'Audio Maxvalue Octave',
+                'unit': 'int'
+            },
+            {
+                'name': 't_audiomax_octband',
+                'id': 13,
+                'label': 'Audio Maxvalue Band',
+                'unit': 'int'
             }
+
+
+
         ]
 
     def init(self):
@@ -172,12 +211,12 @@ class RawSensorLastInput(HttpInput):
         base_record['device_name'] = 'station %d' % base_record['device_id']
 
         # Unix timestamp
-        base_record['time'] = CONVERTERS['time'](json_obj['time'])
+        base_record['time'] = convert(json_obj, 'time')
 
         # Point location
         if 's_longitude' in json_obj and 's_latitude' in json_obj:
-            lon = CONVERTERS['s_longitude'](json_obj['s_longitude'])
-            lat = CONVERTERS['s_latitude'](json_obj['s_latitude'])
+            lon = convert(json_obj, 's_longitude')
+            lat = convert(json_obj, 's_latitude')
             if lon is None or lat is None:
                 return []
             base_record['point'] = 'SRID=4326;POINT(%f %f)' % (lon, lat)
@@ -200,7 +239,7 @@ class RawSensorLastInput(HttpInput):
                 record['label'] = output['label']
                 record['unit'] = output['unit']
                 record['value_raw'] = json_obj[name]
-                record['value'] = CONVERTERS[name](json_obj[name])
+                record['value'] = convert(json_obj, name)
 
                 if record['value'] is None:
                     continue
