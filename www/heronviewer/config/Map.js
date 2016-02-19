@@ -1010,7 +1010,7 @@ Heron.options.map.layers = [
         Heron.scratch.urls.SOSPILOT_OWS,
         {layers: "last_measurements_no2_smartem", format: "image/png", transparent: true},
         {
-            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -1121,6 +1121,28 @@ Heron.options.map.layers = [
         {layers: "last_measurements_humidity_smartem", format: "image/png", transparent: true},
         {
             isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
+            metadata: {
+                wfs: {
+                    protocol: 'fromWMSLayer',
+                    outputFormat: 'GML2',
+                    featurePrefix: 'sensors',
+                    featureNS: 'http://sensors.geonovum.nl',
+                    downloadFormats: Heron.options.wfs.downloadFormats
+                }
+            }
+        }
+    ),
+
+    /*
+     * Smart Emission: Meteo: Current Audio/Noise Level
+     */
+    new OpenLayers.Layer.WMS(
+        "Smart Emission - Last Audio Level",
+        Heron.scratch.urls.SOSPILOT_OWS,
+        {layers: "last_measurements_au_level_smartem", format: "image/png", transparent: true},
+        {
+            isBaseLayer: false, singleTile: true, visibility: true, alpha: true,
             featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize',
             metadata: {
                 wfs: {
@@ -2241,6 +2263,11 @@ Heron.options.layertree.tree = [
         {nodeType: "gx_layer", layer: "Smart Emission - Last Temperature"},
         {nodeType: "gx_layer", layer: "Smart Emission - Last Barometer"},
         {nodeType: "gx_layer", layer: "Smart Emission - Last Humidity"}
+    ]
+    },
+    {
+        text: 'Smart Emission - Audio', expanded: true, children: [
+        {nodeType: "gx_layer", layer: "Smart Emission - Last Audio Level"}
     ]
     },
     {
