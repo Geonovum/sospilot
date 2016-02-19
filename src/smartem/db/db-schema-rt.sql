@@ -87,5 +87,5 @@ DROP VIEW IF EXISTS smartem_rt.v_last_measurements_audio_max;
 CREATE VIEW smartem_rt.v_last_measurements_audio_max AS
   SELECT device_id, device_name, id, label, unit,
     name, value_raw, time AT TIME ZONE 'GMT' AS sample_time, value as sample_value, point, gid, unique_id
-  FROM smartem_rt.last_device_output WHERE name = 't_audiomax' ORDER BY device_id, gid DESC;
+  FROM smartem_rt.last_device_output WHERE name = 't_audiomax' OR name = 't_audiolevel' ORDER BY device_id, gid DESC;
 

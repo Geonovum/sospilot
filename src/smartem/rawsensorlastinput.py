@@ -86,49 +86,49 @@ class RawSensorLastInput(HttpInput):
             {
                 'name': 't_audioplus3',
                 'id': 11,
-                'label': 'Audio 80-160Hz',
+                'label': 'Audio 160-315Hz',
                 'unit': 'dB(A)'
             },
             {
                 'name': 't_audioplus4',
                 'id': 12,
-                'label': 'Audio 80-160Hz',
+                'label': 'Audio 315-630Hz',
                 'unit': 'dB(A)'
             },
             {
                 'name': 't_audioplus5',
                 'id': 13,
-                'label': 'Audio 80-160Hz',
+                'label': 'Audio 630Hz-1.25kHz',
                 'unit': 'dB(A)'
             },
             {
                 'name': 't_audioplus6',
                 'id': 14,
-                'label': 'Audio 80-160Hz',
+                'label': 'Audio 1.25-2.5kHz',
                 'unit': 'dB(A)'
             },
             {
                 'name': 't_audioplus7',
                 'id': 15,
-                'label': 'Audio 80-160Hz',
+                'label': 'Audio 2.5-5kHz',
                 'unit': 'dB(A)'
             },
             {
                 'name': 't_audioplus8',
                 'id': 16,
-                'label': 'Audio 80-160Hz',
+                'label': 'Audio 5-10kHz',
                 'unit': 'dB(A)'
             },
             {
                 'name': 't_audioplus9',
                 'id': 17,
-                'label': 'Audio 80-160Hz',
+                'label': 'Audio 10-20kHz',
                 'unit': 'dB(A)'
             },
             {
                 'name': 't_audioplus10',
                 'id': 18,
-                'label': 'Audio 80-160Hz',
+                'label': 'Audio 20-25kHz',
                 'unit': 'dB(A)'
             },
             {
@@ -146,12 +146,15 @@ class RawSensorLastInput(HttpInput):
             {
                 'name': 't_audiomax_octband',
                 'id': 21,
-                'label': 'Audio Maxvalue Band',
+                'label': 'Audio Maxvalue Band in Octave',
+                'unit': 'int'
+            },
+            {
+                'name': 't_audiolevel',
+                'id': 22,
+                'label': 'Audio/Noise Level 1-5',
                 'unit': 'int'
             }
-
-
-
         ]
 
     def init(self):

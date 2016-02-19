@@ -1,6 +1,7 @@
 import time
 from calendar import timegm
 from datetime import datetime
+import re
 
 # According to CityGIS the units are defined as follows. ::
 #
@@ -167,6 +168,28 @@ def convert_timestamp(iso_str, json_obj, name):
 def convert_none(value, json_obj, name):
     return value
 
+# From https://www.teachengineering.org/view_activity.php?url=collection/nyu_/activities/nyu_noise/nyu_noise_activity1.xml
+# level dB(A)
+#  1     0-20  zero to quiet room
+#  2     20-40 up to average residence
+#  3     40-80 up to noisy class, alarm clock, police whistle
+#  4     80-90 truck with muffler
+#  5     90-up severe: pneumatic drill, artillery,
+def convert_audio_level(value, json_obj, name):
+    max = json_obj['t_audiomax']
+
+    levels = [0,20,40,80,90]
+    level = 0
+    for dB in levels:
+        if max > dB:
+            level += 1
+            continue
+        else:
+            break
+
+    json_obj['t_audiolevel'] = level
+    return level
+
 def convert_audio_max(value, json_obj, name):
     if name in ['t_audiomax', 't_audiomax_band']:
         return value
@@ -188,8 +211,9 @@ def convert_audio_max(value, json_obj, name):
     # Assign max to virtual sensors if max also there max
     if 't_audiomax' not in json_obj or max > json_obj['t_audiomax']:
         json_obj['t_audiomax'] = max
-        json_obj['t_audiomax_octave'] = band
+        json_obj['t_audiomax_octave'] = int(re.findall(r'\d+', name)[0])
         json_obj['t_audiomax_octband'] = band
+        json_obj['t_audiolevel'] = convert_audio_level(value, json_obj, name)
 
     return max
 
@@ -217,7 +241,8 @@ CONVERTERS = {
     't_audioplus10': convert_audio_max,
     't_audiomax': convert_none,
     't_audiomax_octave': convert_none,
-    't_audiomax_octband': convert_none
+    't_audiomax_octband': convert_none,
+    't_audiolevel': convert_none
 }
 
 def convert(json_obj, name):
