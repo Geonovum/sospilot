@@ -84,20 +84,68 @@ class RawSensorLastInput(HttpInput):
                 'unit': 'dB(A)'
             },
             {
-                'name': 't_audiomax',
+                'name': 't_audioplus3',
                 'id': 11,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus4',
+                'id': 12,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus5',
+                'id': 13,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus6',
+                'id': 14,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus7',
+                'id': 15,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus8',
+                'id': 16,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus9',
+                'id': 17,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audioplus10',
+                'id': 18,
+                'label': 'Audio 80-160Hz',
+                'unit': 'dB(A)'
+            },
+            {
+                'name': 't_audiomax',
+                'id': 19,
                 'label': 'Audio Maxvalue',
                 'unit': 'dB(A)'
             },
             {
                 'name': 't_audiomax_octave',
-                'id': 12,
+                'id': 20,
                 'label': 'Audio Maxvalue Octave',
                 'unit': 'int'
             },
             {
                 'name': 't_audiomax_octband',
-                'id': 13,
+                'id': 21,
                 'label': 'Audio Maxvalue Band',
                 'unit': 'int'
             }
