@@ -5,6 +5,8 @@
 # Author:Just van den Broecke
 
 import json
+import time
+from datetime import datetime, timedelta
 from stetl.util import Util
 from stetl.inputs.httpinput import HttpInput
 from stetl.packet import FORMAT
@@ -260,9 +262,18 @@ class RawSensorLastInput(HttpInput):
         base_record = {}
         base_record['device_id'] = json_obj['p_unitserialnumber']
         base_record['device_name'] = 'station %d' % base_record['device_id']
+        base_record['value_stale'] = 0
 
         # Unix timestamp
         base_record['time'] = convert(json_obj, 'time')
+        utc_then = datetime.utcnow() - timedelta(hours=4)
+
+        tstamp_sample = time.mktime(base_record['time'].timetuple())
+        tstamp_then = time.mktime(utc_then.timetuple())
+        if tstamp_sample < tstamp_then:
+            base_record['value_stale'] = 1
+
+        # print 't=' + str() + ' then=' + str(time.mktime(utc_then.timetuple()))
 
         # Point location
         if 's_longitude' in json_obj and 's_latitude' in json_obj:
@@ -277,7 +288,7 @@ class RawSensorLastInput(HttpInput):
 
         base_record['altitude'] = 0
         if 's_altimeter' in json_obj:
-             base_record['altitude'] = json_obj['s_altimeter']
+            base_record['altitude'] = json_obj['s_altimeter']
 
         result = []
         for output in self.outputs:
@@ -298,8 +309,7 @@ class RawSensorLastInput(HttpInput):
                 if name == 't_audiolevel':
                     record['value_raw'] = json_obj['t_audiomax']
 
-
                 result.append(record)
 
-            # print(str(record))
+                # print(str(record))
         return result

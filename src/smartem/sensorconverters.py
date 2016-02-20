@@ -121,7 +121,11 @@ def convert_temperature(input, json_obj, name):
     if input == 0:
         return None
 
-    return int(round(float(input)/1000.0 - 273.1))
+    tempC = int(round(float(input)/1000.0 - 273.1))
+    if tempC > 100:
+        return None
+
+    return tempC
 
 
 def convert_barometer(input, json_obj, name):
@@ -132,7 +136,10 @@ def convert_barometer(input, json_obj, name):
 
 
 def convert_humidity(input, json_obj, name):
-    return int(round(float(input) / 1000.0))
+    humPercent = int(round(float(input) / 1000.0))
+    if humPercent > 100:
+        return None
+    return humPercent
 
 # Lat or longitude conversion
 # 8 nibbles:
@@ -175,47 +182,47 @@ def convert_none(value, json_obj, name):
 #  3     40-80 up to noisy class, alarm clock, police whistle
 #  4     80-90 truck with muffler
 #  5     90-up severe: pneumatic drill, artillery,
-def convert_audio_level(value, json_obj, name):
-    max = json_obj['t_audiomax']
+def calc_audio_level(max_db):
+    levels = [0, 20, 40, 80, 90]
+    level_num = 1
+    for i in range(0, len(levels)-1):
+        if max_db > levels[i]:
+            level_num = i + 1
 
-    levels = [0,20,40,80,90]
-    level = 0
-    for dB in levels:
-        if max > dB:
-            level += 1
-            continue
-        else:
-            break
+    return level_num
 
-    json_obj['t_audiolevel'] = level
-    return level
-
+# Converts audio var and populates virtual max value vars
 def convert_audio_max(value, json_obj, name):
-    if name in ['t_audiomax', 't_audiomax_band']:
-        return value
+    # For each audio observation:
+    # decode into 3 bands (0,1,2)
+    # determine max of these  bands
+    # determine if this is greater than current t_audiomax
+    # determine audio_level (1-5) from current t_audiomax
 
-    max = 0
-    band = 0
-    candidate = value & 255
-    if candidate < 255 and candidate > max:
-        max = candidate
-    candidate = (value >> 8) & 255
-    if candidate < 255 and candidate > max:
-        max = candidate
-        band = 1
-    candidate = (value >> 16) & 255
-    if candidate < 255 and candidate > max:
-        max = candidate
-        band = 2
+    # Extract values for bands 0-2
+    bands = [value & 255, (value >> 8) & 255, (value >> 16) & 255]
 
-    # Assign max to virtual sensors if max also there max
-    if 't_audiomax' not in json_obj or max > json_obj['t_audiomax']:
-        json_obj['t_audiomax'] = max
+    band_max = 0
+    band_num = 0
+    for i in range(0, len(bands)-1):
+        if band_max < bands[i] < 255:
+            band_max = bands[i]
+            band_num = i
+
+    if band_max == 0:
+        return None
+
+    # Assign band max value to virtual sensors if these are not yet present
+    # or band_max value greater than current max
+    if 't_audiomax' not in json_obj or band_max > json_obj['t_audiomax']:
+        json_obj['t_audiomax'] = band_max
+        # Determine octave nr from var name
         json_obj['t_audiomax_octave'] = int(re.findall(r'\d+', name)[0])
-        json_obj['t_audiomax_octband'] = band
-        json_obj['t_audiolevel'] = convert_audio_level(value, json_obj, name)
+        json_obj['t_audiomax_octband'] = band_num
+        json_obj['t_audiolevel'] = calc_audio_level(band_max)
 
-    return max
+
+    return band_max
 
 CONVERTERS = {
     's_co': ppb_co_to_ugm3,
@@ -239,6 +246,7 @@ CONVERTERS = {
     't_audioplus8': convert_audio_max,
     't_audioplus9': convert_audio_max,
     't_audioplus10': convert_audio_max,
+    # These are assigned already in t_audioplusN conversions
     't_audiomax': convert_none,
     't_audiomax_octave': convert_none,
     't_audiomax_octband': convert_none,
