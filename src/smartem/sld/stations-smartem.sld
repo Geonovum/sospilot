@@ -16,13 +16,21 @@
             <!-- A FeatureTypeStyle for rendering points -->
             <FeatureTypeStyle>
                 <Rule>
-                    <Name>SmartEm Stations</Name>
+                    <Name>SmartEm Stations (Aktief)</Name>
+                    <Title>SmartEm Stations (Aktief)</Title>
+
+                    <ogc:Filter>
+                        <ogc:PropertyIsEqualTo>
+                            <ogc:PropertyName>value_stale</ogc:PropertyName>
+                            <ogc:Literal>0</ogc:Literal>
+                        </ogc:PropertyIsEqualTo>
+                    </ogc:Filter>
                     <PointSymbolizer>
                         <Graphic>
                             <Mark>
                                 <WellKnownName>triangle</WellKnownName>
                                 <Fill>
-                                    <CssParameter name="fill">#FF0066</CssParameter>
+                                    <CssParameter name="fill">#00FF66</CssParameter>
                                     <CssParameter name="fill-opacity">0.6</CssParameter>
                                 </Fill>
                                 <Stroke>
@@ -33,7 +41,35 @@
                             <Size>12</Size>
                         </Graphic>
                     </PointSymbolizer>
-                </Rule>
+                 </Rule>
+
+                <Rule>
+                     <Name>SmartEm Stations (Inactief)</Name>
+                     <Title>SmartEm Stations (Inactief)</Title>
+
+                     <ogc:Filter>
+                         <ogc:PropertyIsEqualTo>
+                             <ogc:PropertyName>value_stale</ogc:PropertyName>
+                             <ogc:Literal>1</ogc:Literal>
+                         </ogc:PropertyIsEqualTo>
+                     </ogc:Filter>
+                     <PointSymbolizer>
+                         <Graphic>
+                             <Mark>
+                                 <WellKnownName>triangle</WellKnownName>
+                                 <Fill>
+                                     <CssParameter name="fill">#FF0000</CssParameter>
+                                     <CssParameter name="fill-opacity">0.6</CssParameter>
+                                 </Fill>
+                                 <Stroke>
+                                     <CssParameter name="stroke">#660033</CssParameter>
+                                     <CssParameter name="stroke-width">1</CssParameter>
+                                 </Stroke>
+                             </Mark>
+                             <Size>12</Size>
+                         </Graphic>
+                     </PointSymbolizer>
+                  </Rule>
 
             </FeatureTypeStyle>
 

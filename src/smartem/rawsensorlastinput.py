@@ -24,6 +24,7 @@ class RawSensorLastInput(HttpInput):
         HttpInput.__init__(self, configdict, section, produces)
         self.device_ids = []
         self.base_url = self.url
+        # Outputs to be gathered, with some metadata
         self.outputs = [
             {
                 'name': 's_co',
@@ -133,6 +134,7 @@ class RawSensorLastInput(HttpInput):
                 'label': 'Audio 20-25kHz',
                 'unit': 'dB(A)'
             },
+            # Virtual outputs, i.e. added here for ease of interpretation
             {
                 'name': 't_audiomax',
                 'id': 19,
@@ -204,6 +206,7 @@ class RawSensorLastInput(HttpInput):
 
         return json_obj
 
+    # Convert observations to array of records, one for each designated (see self.outputs) output
     def format_data(self, data):
 
         # Convert/split response into an array of device_output records
@@ -237,43 +240,41 @@ class RawSensorLastInput(HttpInput):
         #
         # -- Map this to
         # CREATE TABLE smartem_rt.device_output (
-        #   gid serial,
-        #   insert_time timestamp default current_timestamp,
-        #   device_id integer,
-        #   device_name character varying (32),
-        #   id integer,
-        #   name character varying,
-        #   label character varying,
-        #   unit  character varying,
-        #   time timestamp,
-        #   value_raw integer,
-        #   value real,
-        #   altitude integer default 0,
-        #   point geometry(Point,4326),
-        #   PRIMARY KEY (gid)
+        # gid serial,
+        # unique_id character varying (16),
+        # insert_time timestamp default current_timestamp,
+        # device_id integer,
+        # device_name character varying (32),
+        # id integer,
+        # name character varying,
+        # label character varying,
+        # unit  character varying,
+        # time timestamp,
+        # value_raw integer,
+        # value_stale integer,
+        # value real,
+        # altitude integer default 0,
+        # point geometry(Point,4326),
+        # PRIMARY KEY (gid)
         # );
-
 
         # Parse JSON from data string fetched by base method read()
         json_obj = self.parse_json_str(data)
-        # print str(json_obj)
 
         # Base data for all records
         base_record = {}
         base_record['device_id'] = json_obj['p_unitserialnumber']
         base_record['device_name'] = 'station %d' % base_record['device_id']
-        base_record['value_stale'] = 0
 
-        # Unix timestamp
+        # Unix timestamp to calculate "stale state (0/1)" i.e. if a station has been
+        # active over the last N hours (now 2). We keep all last values but flag inactive stations.
         base_record['time'] = convert(json_obj, 'time')
-        utc_then = datetime.utcnow() - timedelta(hours=4)
-
+        utc_then = datetime.utcnow() - timedelta(hours=2)
         tstamp_sample = time.mktime(base_record['time'].timetuple())
         tstamp_then = time.mktime(utc_then.timetuple())
+        base_record['value_stale'] = 0
         if tstamp_sample < tstamp_then:
             base_record['value_stale'] = 1
-
-        # print 't=' + str() + ' then=' + str(time.mktime(utc_then.timetuple()))
 
         # Point location
         if 's_longitude' in json_obj and 's_latitude' in json_obj:
@@ -283,15 +284,19 @@ class RawSensorLastInput(HttpInput):
                 return []
             base_record['point'] = 'SRID=4326;POINT(%f %f)' % (lon, lat)
 
+        # No use without a location
         if 'point' not in base_record:
             return []
 
+        # GPS height. TODO use air pressure
         base_record['altitude'] = 0
         if 's_altimeter' in json_obj:
             base_record['altitude'] = json_obj['s_altimeter']
 
+        # Gather result as array of records, one for each output-observation
         result = []
         for output in self.outputs:
+            # First all common attrs (device_id, time, staleness etc)
             record = base_record.copy()
             name = output['name']
             if name in json_obj:
@@ -307,9 +312,9 @@ class RawSensorLastInput(HttpInput):
                     continue
 
                 if name == 't_audiolevel':
+                    # highest dB value
                     record['value_raw'] = json_obj['t_audiomax']
 
                 result.append(record)
 
-                # print(str(record))
         return result
