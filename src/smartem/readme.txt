@@ -1,3 +1,12 @@
+THIS DIRECTORY IS OBSOLETE !!!
+
+See all the current ETL and other code in the SmartEmission dedicated GitHub repo:
+
+https://github.com/Geonovum/smartemission
+
+By time the ETL will be moved from here.
+
+
 Sources for ETL of Smart Emission project Nijmegen.
 
 Uses host-specific variables for databases, passwords etc.
