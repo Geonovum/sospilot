@@ -3,6 +3,7 @@
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 SOSPILOT=/opt/geonovum/sospilot/git
+SMARTEM=/opt/geonovum/smartemission/git
 
 # Run ETL step 1-3: Harvester, Files2Measurements and Measurements2SOS every half hour
 # m  h dom mon dow user command
@@ -20,4 +21,4 @@ SOSPILOT=/opt/geonovum/sospilot/git
 */6 * * * * cd $SOSPILOT/src/weather/pg2sos; ./pg2sos.sh >> /var/log/sospilot/weather_pg2sos.log 2>&1
 
 # Run last measurements Smartemission
-*/3 * * * * cd $SOSPILOT/src/smartem; ./last.sh > /var/log/sospilot/smartem_last.log 2>&1
+*/3 * * * * cd $SMARTEM/etl; ./last.sh > /var/log/smartem/smartem_last.log 2>&1
