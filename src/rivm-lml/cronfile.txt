@@ -22,3 +22,7 @@ SMARTEM=/opt/geonovum/smartemission/git
 
 # Run last measurements Smartemission
 */3 * * * * cd $SMARTEM/etl; ./last.sh > /var/log/smartem/smartem_last.log 2>&1
+
+# refresh smartem website
+*/4 * * * * /opt/geonovum/smartemission/git/www/bin/refresh-site.sh
+
