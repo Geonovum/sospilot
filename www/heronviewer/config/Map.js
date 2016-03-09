@@ -120,7 +120,8 @@ Heron.scratch.urls = {
     MAP5_WMS: 'http://s.map5.nl/map/gast/service?',
     OPENBASISKAART_TMS: 'http://openbasiskaart.nl/mapcache/tms/',
     RO_WMS: 'http://afnemers.ruimtelijkeplannen.nl/afnemers/services?',
-    KNMI_ACT_10MIN: 'https://data.knmi.nl/wms/cgi-bin/wms.cgi?%26source%3D%2FActuele10mindataKNMIstations%2F1%2Fnoversion%2F2014%2F11%2F04%2FKMDS__OPER_P___10M_OBS_L2%2Enc%26'
+    // KNMI_ACT_10MIN: 'https://data.knmi.nl/wms/cgi-bin/wms.cgi?%26source%3D%2FActuele10mindataKNMIstations%2F1%2Fnoversion%2F2014%2F11%2F04%2FKMDS__OPER_P___10M_OBS_L2%2Enc%26',
+    KNMI_INSPIRE_WMS: 'http://geoservices.knmi.nl/cgi-bin/inspireviewservice.cgi?DATASET=urn:xkdc:ds:nl.knmi::Actuele10mindataKNMIstations/1/'
 };
 
 Heron.PDOK.urls = {
@@ -425,7 +426,7 @@ Heron.options.map.layers = [
      */
     new OpenLayers.Layer.WMS(
         "KNMI - Current Temperatures",
-        Heron.scratch.urls.KNMI_ACT_10MIN,
+        Heron.scratch.urls.KNMI_INSPIRE_WMS,
         {layers: "ta", format: "image/png", transparent: true},
         {
             isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
@@ -438,7 +439,7 @@ Heron.options.map.layers = [
      */
     new OpenLayers.Layer.WMS(
         "KNMI - Current Wind Forces",
-        Heron.scratch.urls.KNMI_ACT_10MIN,
+        Heron.scratch.urls.KNMI_INSPIRE_WMS,
         {layers: "ff", format: "image/png", transparent: true},
         {
             isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
@@ -451,7 +452,7 @@ Heron.options.map.layers = [
      */
     new OpenLayers.Layer.WMS(
         "KNMI - Current Wind Directions",
-        Heron.scratch.urls.KNMI_ACT_10MIN,
+        Heron.scratch.urls.KNMI_INSPIRE_WMS,
         {layers: "dd", format: "image/png", transparent: true},
         {
             isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
@@ -464,7 +465,7 @@ Heron.options.map.layers = [
      */
     new OpenLayers.Layer.WMS(
         "KNMI - Current Air Pressures",
-        Heron.scratch.urls.KNMI_ACT_10MIN,
+        Heron.scratch.urls.KNMI_INSPIRE_WMS,
         {layers: "pp", format: "image/png", transparent: true},
         {
             isBaseLayer: false, singleTile: true, visibility: false, alpha: true,

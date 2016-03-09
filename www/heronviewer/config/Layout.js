@@ -175,7 +175,13 @@ Heron.layout = {
                             title: 'RIVM INSPIRE WMS',
                             owsPreviewStrategies: ['getlegendgraphic']  // or 'no preview available' if empty array
                         },
-
+                        knmi_inspire_wms: {
+                            ptype: "gxp_wmssource",
+                            url: 'http://geoservices.knmi.nl/cgi-bin/inspireviewservice.cgi?DATASET=urn:xkdc:ds:nl.knmi::Actuele10mindataKNMIstations/1/',
+                            version: "1.1.1",
+                            title: 'KNMI INSPIRE WMS',
+                            owsPreviewStrategies: ['getlegendgraphic']  // or 'no preview available' if empty array
+                        },
                         //geonovum_sospilot_wms: {
                         //    ptype: "gxp_wmssource",
                         //    url: 'http://sensors.geonovum.nl/gs/sensors/wms?',
