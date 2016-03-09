@@ -460,6 +460,20 @@ Heron.options.map.layers = [
         }
     ),
 
+
+    /*
+     * KNMI: Actual Wind Vectors (Forces+Directions)
+     */
+    new OpenLayers.Layer.WMS(
+        "KNMI - Current Wind Vectors",
+        Heron.scratch.urls.KNMI_INSPIRE_WMS,
+        {layers: "ff_dd", format: "image/png", transparent: true},
+        {
+            isBaseLayer: false, singleTile: true, visibility: false, alpha: true,
+            featureInfoFormat: "application/vnd.ogc.gml", transitionEffect: 'resize'
+        }
+    ),
+
     /*
      * KNMI: Actual Air Pressures
      */
@@ -2288,6 +2302,7 @@ Heron.options.layertree.tree = [
         {nodeType: "gx_layer", layer: "KNMI - Current Temperatures"},
         {nodeType: "gx_layer", layer: "KNMI - Current Wind Forces"},
         {nodeType: "gx_layer", layer: "KNMI - Current Wind Directions"},
+        {nodeType: "gx_layer", layer: "KNMI - Current Wind Vectors"},
         {nodeType: "gx_layer", layer: "KNMI - Current Air Pressures"},
         {nodeType: "gx_layer", layer: "KNMI - Rain Radar (Color)"}
     ]
