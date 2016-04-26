@@ -20,8 +20,6 @@ SMARTEM=/opt/geonovum/smartemission/git
 # Run weather: PostgreSQL 2 SOS
 */6 * * * * cd $SOSPILOT/src/weather/pg2sos; ./pg2sos.sh >> /var/log/sospilot/weather_pg2sos.log 2>&1
 
-# Run last measurements Smartemission
-*/3 * * * * cd $SMARTEM/etl; ./last.vps.sh > /var/log/smartem/smartem_last.log 2>&1
 
 # refresh smartem website
 # */4 * * * * /opt/geonovum/smartemission/git/www/bin/refresh-site.sh
