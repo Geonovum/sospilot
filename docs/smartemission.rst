@@ -4,6 +4,11 @@
 Smart Emission Project
 ======================
 
+**NB The Smart Emission Project now (May 2016) has its own resources: website, GitHub etc.**
+**The info below is left here for historic reasons and not accurate anymore!!**
+**Please visit http://smartemission.nl for all links to docs, GitHub etc**
+
+
 In september 2015 the SOSPilot platform was
 extended to handle air quality data from
 the `Smart Emission (Nijmegen) project <http://www.ru.nl/gpm/onderzoek/research-projects/smart-emission/>`_.
