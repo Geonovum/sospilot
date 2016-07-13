@@ -622,7 +622,7 @@ te verwachten updates. Install vanuit GitHub versie onder ``/opt/stetl/git`` (al
 
     $ mkdir /opt/stetl
     $ cd /opt/stetl
-    $ git clone https://github.com/justb4/stetl.git git
+    $ git clone https://github.com/geopython/stetl.git git
     $ cd git
     $ python setup.py install  (als root)
 
