@@ -129,6 +129,7 @@ shows O3 at July 27, 2015, 10:00. Pink-purple-bordered circles denote Smart Emis
 SOS Web-Client
 --------------
 
+
 The SOS Web Client by 52North: http://sensors.geonovum.nl/jsclient accesses the SOS directly via the map and charts.
 
 .. figure:: _static/smartem/jsclient-no2.jpg
@@ -148,6 +149,7 @@ SOS-REST API
 ------------
 
 Easiest is looking at results via the `SOS REST API <http://sensorweb.demo.52north.org/sensorwebclient-webapp-stable/api-doc>`_.
+
 The following are examples:
 
 * http://sensors.geonovum.nl/sos/api/v1/stations REST API, Stations

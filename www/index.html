@@ -74,7 +74,7 @@
     <div class="container">
         <h1>SOSPilot</h1>
 
-        <p>Home of the RIVM/Geonovum SOSPilot project</p>
+        <p>Home of the RIVM/Geonovum SOSPilot project (2014-2015)</p>
 
     </div>
 </div>
@@ -87,7 +87,18 @@
             <!-- Documentation
             ================================================== -->
             <div class="bs-docs-section">
-                <p>The main goal of this project is to take raw Air Quality Measurements from the
+                <p>
+                    <strong>31.08.2017: This project ran in 2014-2015. More recent info is in the follow-up project
+                    <a href="http://data.smartemission.nl">Smart Emission</a>.
+                        Web services
+                and data have been archived.
+                    The information on and documentation via
+                        this website is kept for reference. Only the <a href="weewx">Geonovum Weather Station</a> is
+                        still active.
+                </strong>
+                </p>
+
+                <p>The main goal of this project was to take raw Air Quality Measurements from the
                     <a href="http://www.rivm.nl/">Dutch RIVM</a>
                 <a href="http://www.lml.rivm.nl/">Landelijk Meetnet Luchtkwaliteit</a>
                     and publish this data using various public standards in
@@ -95,9 +106,9 @@
                     <a href="http://www.eionet.europa.eu/aqportal">Eionet</a>. For this purpose a technical
                     platform, "SOSPilot" has been developed. This website provides links to various
                     elements of the SOSPilot platform. In addition, a weather station has been added to the platform.
-                    In 2015, Air Quality, Meteo and Audio data from the
-                    <a href="http://smartemission.nl">Smart Emission project</a>
-                    (via <a href="http://citygis.nl/">CityGIS.nl</a>) was added to the platform.
+                    In 2015 and further, much of the technology and ideas
+                    from the SOSPilot project have been applied within the
+                    <a href="http://smartemission.nl">Smart Emission project</a>.
                 </p>
                 <h1 id="doc-index" class="page-header">Documentation</h1>
                 <p>
@@ -110,7 +121,7 @@
                              <td>
                                  Find all technical documentation on <a href="http://sospilot.readthedocs.org">http://sospilot.readthedocs.org</a>.<br/>
                                  Software architecture, transformation (ETL), web services (WMS, WFS, SOS) and various clients apps.
-                                 Details for the Smart Emission project can be found <a href="http://sospilot.readthedocs.org/en/latest/smartemission.html">in this chapter</a>.
+                                 Details for the Smart Emission project can be found at <a href="http://data.smartemission.nl">data.smartemission.nl</a>.
                              </td>
                          </tr>
                          <tr>
@@ -156,24 +167,33 @@
             <div class="bs-docs-section">
                 <h1 id="clients" class="page-header">Clients - Air Quality (AQ) Data</h1>
                 <p>
-                    Below are various web-clients that connect to the AQ Web Services. Click on an image to launch a client.
+                    Below are various web-clients that connect to the AQ Web Services.
+                    Click on an image to launch a client.
+                    <strong>These clients have been discontinued. Find the same web-clients
+                    on the <a href="http://data.smartemission.nl">Smart Emission</a> website
+                        and for the <a href="http://inspire.rivm.nl/sos/eaq/#map">SOS Viewer via RIVM</a>.
+                    The links below direct there.
+                    </strong>
                 </p>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tr>
-                            <td><a href="heronviewer"><img src="media/heronviewer-200.jpg"/></a>  </td>
-                            <td><a href="heronviewer">HeronViewer - Web-based viewer for WMS and WFS </a> - Raw measurments data viewing and
+                            <td><a href="http://data.smartemission.nl/heron/"><img src="media/heronviewer-200.jpg"/></a>  </td>
+                            <td><a href="http://data.smartemission.nl/heron/">HeronViewer - Web-based viewer for WMS and WFS </a> -
+                                Raw measurements data viewing and
                             searching via WMS and WFS. Both last measured values per component and station and
                             time-series via a timeslider using WMS-Time. This viewer is built with the
                                 <a href="http://heron-mc.org">Heron Mapping Client (Heron MC)</a>.
                             </td>
                         </tr>
                         <tr>
-                            <td><a href="jsclient#map"><img src="media/jsclient-200.jpg"/></a></td>
-                            <td><a href="jsclient#map">This SOS-client app</a>
-                                uses the <a href="https://github.com/52North/js-sensorweb-client/">js-sensorweb-client</a>.
-                                This is a modern HTML5/responsive design app and the most user-friendly.
-                                It uses the REST API from the SOS service (see Web Services below) directly.
+                            <td><a href="http://inspire.rivm.nl/sos/eaq/#map"><img src="media/jsclient-200.jpg"/></a></td>
+                            <td><a href="http://inspire.rivm.nl/sos/eaq/#map">SOS-viewer</a>
+                                created with the 52North
+                                <a href="https://github.com/52North/js-sensorweb-client/">js-sensorweb-client</a>.
+                                It uses the REST API from the SOS service, here the RIVM SOS, to
+                                show RIVM LML Air Quality data.
+                                One can also download CSV timeseries (click (I) Info button).
                             </td>
                         </tr>
                         <!--  <tr>
@@ -277,14 +297,16 @@
             <div class="bs-docs-section">
                 <h1 id="services" class="page-header">Web Services</h1>
                 <p>
-                    Services for OGC WMS, WFS, SOS etc
 
                 </p>
                 <h3 id="services-sos">52North SOS server</h3>
                 <p>
-                    Version: 20140521-SNAPSHOT with later patches from 52N<br/>
+                    <strong>Services for OGC SOS have been discontinued as the project was finished.
+                        SOS requests will be redirected to the
+                         <a href="http://inspire.rivm.nl/sos/eaq/service?service=SOS&version=1.0.0&request=GetCapabilities">RIVM SOS</a> which
+                        AQ data from the same LML stations.</strong>
                 </p>
-                <ul>
+                <!-- <ul>
                     <li>
                         Base URL: <a href="http://sensors.geonovum.nl/sos">http://sensors.geonovum.nl/sos</a>
                     </li>
@@ -358,10 +380,10 @@
                      <li>
                          <a href="http://sensors.geonovum.nl/sos/api/v1/timeseries/260/getData?timespan=2015-07-21TZ/2015-07-28TZ">REST API, Time Series Data: http://sensors.geonovum.nl/sos/api/v1/timeseries/260/getData?timespan=2015-07-21TZ/2015-07-28TZ</a>
                      </li>
-                </ul>
+                </ul> -->
                 <!--<hr class="bs-docs-separator">-->
 
-                <h3 id="services-wmswfs">GeoServer</h3>
+                <!-- <h3 id="services-wmswfs">GeoServer</h3>
 
                 <ul>
                     <li>
@@ -376,7 +398,7 @@
                             GetCapabilities</a>
                     </li>
 
-                </ul>
+                </ul>     -->
 
 
                 <!--<div class="table-responsive">-->
@@ -422,7 +444,9 @@
             ================================================== -->
             <div class="bs-docs-section">
                  <h1 id="development" class="page-header">Development</h1>
-                 <p>All development (tasks/issues, source code etc) takes place via Github.</p>
+                 <p>All development (tasks/issues, source code etc) took place via Github.
+                 This repository is still available for reference.
+                 </p>
 
                 <p>
                     Project home: <a href="https://github.com/Geonovum/sospilot">https://github.com/Geonovum/sospilot</a>.

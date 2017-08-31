@@ -550,6 +550,7 @@ combined with NO2 (Nitrogen Dioxide) and PM10 (Particulate Matter up to 10 micro
    *Figure 9 - Weather Data SOS Data integrated in 52N JS Client*
 
 Test with SOS requests:
+**NB The SOS is not active anymore**
 
 * Station: `DescribeSensor <http://sensors.geonovum.nl/sos/service?service=SOS&version=2.0.0&request=DescribeSensor&procedure=http://sensors/weather/procedure/33&procedureDescriptionFormat=http://www.opengis.net/sensorML/1.0.1>`_
 * Temperature observations: `GetObservation <http://sensors.geonovum.nl/sos/service?service=SOS&version=2.0.0&request=GetObservation&offering=http://sensors/weather/offering/33&observedProperty=http://sensors/weather/obsProperty/outtemp>`_

@@ -6,7 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../istSOS" />
-    <content url="file://$MODULE_DIR$/../smartem" />
+    <content url="file://$MODULE_DIR$/../smartem">
+      <sourceFolder url="file://$MODULE_DIR$/../smartem/git" isTestSource="false" />
+    </content>
     <content url="file://$USER_HOME$/research/weather/weewx">
       <sourceFolder url="file://$USER_HOME$/research/weather/weewx/bin" isTestSource="false" />
     </content>
@@ -14,7 +16,7 @@
       <sourceFolder url="file://$USER_HOME$/research/weather/weewxinst/bin" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="Python 2.7.6 (/usr/local/bin/python)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7.12 (Homebrew /usr/local)" jdkType="Python SDK" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

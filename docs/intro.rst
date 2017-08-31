@@ -7,6 +7,10 @@ Intro
 This is the main (technical) documentation for the SOS Pilot Project by Geonovum and RIVM.
 It can always be found at `sospilot.readthedocs.org <http://sospilot.readthedocs.org/>`_.
 
+The project ran in the period 2014-2015 and is now (2017) archived. Website
+and documentation are kept for reference. See http://data.smartemission.nl for
+the follow-up project Smart Emission.
+
 The home page for the SOSPilot project is http://sensors.geonovum.nl
 
 The project GitHub repository is at https://github.com/Geonovum/sospilot.
