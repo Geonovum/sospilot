@@ -34,6 +34,9 @@ CREATE TABLE rivm_lml.measurements (
 DROP INDEX IF EXISTS sample_id_idx;
 CREATE UNIQUE INDEX sample_id_idx ON rivm_lml.measurements USING btree (sample_id) ;
 
+DROP INDEX IF EXISTS measurements_sample_time_idx;
+CREATE INDEX measurements_sample_time_idx ON rivm_lml.measurements(sample_time);
+
 -- ETL progress tabel, houdt bij voor ieder ETL proces ("worker") wat het
 -- laatst verwerkte record id is van hun bron tabel.
 DROP TABLE IF EXISTS rivm_lml.etl_progress CASCADE;
