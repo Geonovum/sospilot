@@ -16,6 +16,6 @@ was added. Read also about this project in a dedicated chapter in the
 documentation: [sospilot.readthedocs.org/en/latest/smartemission.html](http://sospilot.readthedocs.org/en/latest/smartemission.html)
 
 The Smart Emission project now has a GitHub repo of its own at
-[github.com/Geonovum/smartemission](https://github.com/Geonovum/smartemission). In time all SE-resources
+[github.com/smartemission/smartemission](https://github.com/smartemission/smartemission). The SE-resources of sospilot
 will move there.
 
