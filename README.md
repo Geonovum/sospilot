@@ -1,5 +1,6 @@
 sospilot
 ========
+This repository is archived.
 
 Sensor Observation Service (SOS) and data management for Air Quality data from RIVM The Netherlands.
 In this project Air Quality data provided by Het Rijksinstituut voor Volksgezondheid en Milieu (RIVM)
@@ -17,5 +18,5 @@ documentation: [sospilot.readthedocs.org/en/latest/smartemission.html](http://so
 
 The Smart Emission project now has a GitHub repo of its own at
 [github.com/smartemission/smartemission](https://github.com/smartemission/smartemission). The SE-resources of sospilot
-will move there.
+have been moved there.
 
